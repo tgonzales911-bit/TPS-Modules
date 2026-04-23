@@ -70,9 +70,9 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 .fw-card-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px;}
 .fw-cat-badge,.fw-type-badge,.fw-mod-badge{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:20px;}
 .fw-cat-badge{background:var(--navy);color:var(--gold);}
-.fw-type-badge{background:rgba(201,168,76,0.12);color:var(--gold3);}
-.fw-mod-badge{background:var(--offwhite);color:var(--gray);border:1px solid var(--light);}
-.fw-adv-badge{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;background:rgba(74,37,112,0.1);color:rgba(160,120,210,0.9);border:1px solid rgba(74,37,112,0.25);border-radius:20px;}
+.fw-type-badge{background:rgba(201,168,76,0.22);color:#5A3F08;border:1px solid rgba(201,168,76,0.4);}
+.fw-mod-badge{background:#3A5070;color:#E8F0F8;border:1px solid #4A6080;}
+.fw-adv-badge{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;background:rgba(74,37,112,0.18);color:rgba(180,140,230,1);border:1px solid rgba(74,37,112,0.4);border-radius:20px;}
 .fw-card-title{font-family:'EB Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:3px;}
 .fw-card-summary{font-size:0.82rem;color:var(--mid);line-height:1.45;}
 .fw-expand-icon{position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-size:0.65rem;color:var(--gold);transition:transform 0.2s;}
@@ -147,8 +147,14 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 .fi-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:4px;}
 .fi-layer{border:1px solid;padding:0.6rem 0.85rem;margin-bottom:3px;}
 .fi-l{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
-.fi-t{font-family:'EB Garamond',serif;font-size:0.95rem;font-weight:700;color:var(--cream);margin-bottom:2px;}
-.fi-d{font-size:0.78rem;color:rgba(184,216,232,0.6);line-height:1.4;}
+.fi-t{font-family:'EB Garamond',serif;font-size:0.95rem;font-weight:700;margin-bottom:2px;}
+.fi-d{font-size:0.78rem;line-height:1.4;}
+.fi-above .fi-layer .fi-t{color:var(--navy);}
+.fi-above .fi-layer .fi-d{color:var(--mid);}
+.fi-above .fi-layer .fi-l{color:var(--gold3);}
+.fi-below .fi-layer .fi-t{color:var(--cream);}
+.fi-below .fi-layer .fi-d{color:rgba(200,220,240,0.85);}
+.fi-below .fi-layer .fi-l{color:var(--gold);}
 .fw-simple{margin-top:0.85rem;}
 .fw-simple p{font-size:0.88rem;color:var(--mid);line-height:1.65;margin-bottom:0.75rem;}
 .fw-apply{background:var(--offwhite);border:1px solid var(--light);padding:0.85rem 1rem;}
@@ -486,11 +492,11 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
       
     </div>
     <div class="fw-card-title">T·C·H·O·E·D·S</div>
-    <div class="fw-card-summary">Seven-element leadership philosophy — Trust, Competence, Humility, Ownership, Empathy, Development, Service</div>
+    <div class="fw-card-summary">Seven-element leadership philosophy — Trust, Courage, Humility, Ownership, Empathy, Dedication, Service</div>
     <div class="fw-expand-icon" id="icon-tchoesd">▼</div>
   </div>
   <div class="fw-card-content" id="content-tchoesd" style="display:none">
-    <div class="fw-acro"><div class="fa-row"><span class="fa-l">T</span><div><div class="fa-w">Trust</div><div class="fa-d">The currency of leadership. Built through consistency and follow-through under pressure.</div></div></div><div class="fa-row"><span class="fa-l">C</span><div><div class="fa-w">Competence</div><div class="fa-d">Technical and tactical proficiency. The floor of credibility.</div></div></div><div class="fa-row"><span class="fa-l">H</span><div><div class="fa-w">Humility</div><div class="fa-d">The willingness to be wrong, to learn, and to give credit.</div></div></div><div class="fa-row"><span class="fa-l">O</span><div><div class="fa-w">Ownership</div><div class="fa-d">I for failures. WE for achievements.</div></div></div><div class="fa-row"><span class="fa-l">E</span><div><div class="fa-w">Empathy</div><div class="fa-d">The capacity to understand the experience of those you lead.</div></div></div><div class="fa-row"><span class="fa-l">D</span><div><div class="fa-w">Development</div><div class="fa-d">Your job is to make people better — not just to solve problems.</div></div></div><div class="fa-row"><span class="fa-l">S</span><div><div class="fa-w">Service</div><div class="fa-d">Leadership as identity — to citizens, partners, and each other.</div></div></div></div>
+    <div class="fw-acro"><div class="fa-row"><span class="fa-l">T</span><div><div class="fa-w">Trust</div><div class="fa-d">The currency of leadership. Built through consistency and follow-through under pressure.</div></div></div><div class="fa-row"><span class="fa-l">C</span><div><div class="fa-w">Courage</div><div class="fa-d">The willingness to have difficult conversations, make hard decisions, and hold the line under pressure.</div></div></div><div class="fa-row"><span class="fa-l">H</span><div><div class="fa-w">Humility</div><div class="fa-d">The willingness to be wrong, to learn, and to give credit.</div></div></div><div class="fa-row"><span class="fa-l">O</span><div><div class="fa-w">Ownership</div><div class="fa-d">I for failures. WE for achievements. No excuses leadership.</div></div></div><div class="fa-row"><span class="fa-l">E</span><div><div class="fa-w">Empathy</div><div class="fa-d">The capacity to understand the experience of those you lead — not agreement, understanding.</div></div></div><div class="fa-row"><span class="fa-l">D</span><div><div class="fa-w">Dedication</div><div class="fa-d">Work ethic, resilience, and commitment to the mission and the people.</div></div></div><div class="fa-row"><span class="fa-l">S</span><div><div class="fa-w">Service</div><div class="fa-d">Leadership as identity — to citizens, partners, and each other.</div></div></div></div>
   </div>
 </div>
 <div class="fw-card" data-id="bank-leadership" data-cat="Leadership" data-type="Model" data-mod="m8" data-tier="standard" data-search="bank of leadership leadership model m8 leadership as equity building — deposits and withdrawals on a relational account">
