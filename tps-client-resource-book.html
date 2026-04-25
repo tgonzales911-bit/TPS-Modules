@@ -88,12 +88,34 @@ strong{color:var(--navy);font-weight:600;}
 .tracker-cell{background:white;border:1px solid #DDD8CE;padding:0.75rem 0.5rem;text-align:center;}
 .tc-week{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold3);margin-bottom:6px;}
 .tc-boxes{display:flex;flex-direction:column;gap:4px;}
-.tc-box{border:1px solid var(--light);height:24px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--gray);}
+.tc-box{border:1px solid var(--light);height:28px;display:flex;align-items:center;justify-content:center;font-size:0.72rem;color:var(--mid);}
+.tc-score-input{width:36px;border:none;border-bottom:1px solid var(--gold);text-align:center;font-family:'EB Garamond',serif;font-size:0.9rem;font-weight:700;color:var(--navy);background:transparent;outline:none;}
 .checklist{display:flex;flex-direction:column;gap:4px;margin:1.5rem 0;}
-.cl-item{display:grid;grid-template-columns:28px 1fr;gap:0.65rem;padding:0.65rem;background:white;border:1px solid #DDD8CE;align-items:start;}
-.cl-box{width:20px;height:20px;border:2px solid var(--gold);flex-shrink:0;margin-top:2px;}
+.cl-item{display:grid;grid-template-columns:28px 1fr;gap:0.65rem;padding:0.65rem;background:white;border:1px solid #DDD8CE;align-items:start;cursor:pointer;transition:background 0.15s;}
+.cl-item:hover{background:var(--offwhite);}
+.cl-item.checked{background:rgba(26,92,58,0.05);border-color:rgba(26,92,58,0.2);}
+.cl-checkbox{width:20px;height:20px;border:2px solid var(--gold);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.cl-item.checked .cl-checkbox{background:var(--gold);border-color:var(--gold);}
+.cl-check-icon{display:none;font-size:0.75rem;color:var(--navy);font-weight:800;}
+.cl-item.checked .cl-check-icon{display:block;}
 .cl-text{font-size:0.85rem;color:var(--mid);line-height:1.5;}
+.cl-item.checked .cl-text{color:var(--gray);text-decoration:line-through;}
 .cl-category{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold3);margin-bottom:2px;}
+.print-bar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;margin-bottom:1rem;border-bottom:2px solid var(--light);}
+.print-btn{background:var(--navy);color:var(--gold);border:none;padding:10px 24px;font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.print-btn:hover{background:var(--navy2);}
+.reset-btn{background:transparent;color:var(--gray);border:1px solid var(--light);padding:10px 18px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;}
+.reset-btn:hover{border-color:var(--gold);color:var(--gold);}
+.progress-summary{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);}
+.progress-summary span{color:var(--gold);font-weight:700;}
+@media print{
+  .top-nav,.progress-bar,.nav-bar,.print-bar{display:none!important;}
+  body{background:white;color:#000;}
+  .section-view{display:block!important;}
+  .section-hero{background:#0C2340;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .cl-item{break-inside:avoid;}
+  .tracker-cell{break-inside:avoid;}
+}
 .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2.5rem;border-top:1px solid var(--light);background:white;}
 .nb-btn{background:transparent;border:1px solid #DDD8CE;padding:9px 22px;font-family:'Cinzel',serif;font-size:8.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--mid);transition:all 0.2s;}
 .nb-btn:hover{border-color:var(--gold);color:var(--gold);}
@@ -695,70 +717,96 @@ strong{color:var(--navy);font-weight:600;}
 <p class="sh-sub">Track your development across six weeks and complete the assessment day preparation checklist.</p>
 </div></div>
 <div class="content-wrap">
+<div class="print-bar">
+<div class="progress-summary">Checklist progress: <span id="check-count">0</span> of <span id="check-total">0</span> complete</div>
+<div style="display:flex;gap:8px;">
+<button class="reset-btn" onclick="resetAll()">Reset All</button>
+<button class="print-btn" onclick="window.print()">◆ Print / Save as PDF</button>
+</div>
+</div>
+
 <h2>Six-Week Progress Tracker</h2>
-<p>After each coaching session, rate yourself on each of the four dimensions using the 1–5 scale. Track your scores across all six sessions to see your development arc. Share this tracker with your coach at each session.</p>
+<p>After each coaching session enter your score for each dimension (1–5). Your scores save automatically and persist between visits. Share this tracker with your coach at each session.</p>
 
 <div class="tracker-grid">
 <div class="tracker-cell"><div class="tc-week">Session 1</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s1-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s1-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s1-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s1-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 <div class="tracker-cell"><div class="tc-week">Session 2</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s2-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s2-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s2-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s2-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 <div class="tracker-cell"><div class="tc-week">Session 3</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s3-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s3-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s3-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s3-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 <div class="tracker-cell"><div class="tc-week">Session 4</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s4-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s4-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s4-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s4-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 <div class="tracker-cell"><div class="tc-week">Session 5</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s5-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s5-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s5-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s5-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 <div class="tracker-cell"><div class="tc-week">Session 6</div><div class="tc-boxes">
-<div class="tc-box">SJ: __/5</div><div class="tc-box">IS: __/5</div><div class="tc-box">OC: __/5</div><div class="tc-box">WC: __/5</div>
+<div class="tc-box">SJ: <input class="tc-score-input" type="number" min="1" max="5" id="s6-sj" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">IS: <input class="tc-score-input" type="number" min="1" max="5" id="s6-is" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">OC: <input class="tc-score-input" type="number" min="1" max="5" id="s6-oc" placeholder="–" onchange="saveScore(this)"></div>
+<div class="tc-box">WC: <input class="tc-score-input" type="number" min="1" max="5" id="s6-wc" placeholder="–" onchange="saveScore(this)"></div>
 </div></div>
 </div>
 
 <h2>Framework Mastery Checklist</h2>
-<p>Check each framework when you can apply it correctly in a live practice rep without being prompted. Target: all items checked by Session 4.</p>
-<div class="checklist">
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Supervisory</div><div class="cl-text">3 U's Diagnostic — I name the correct U and match my intervention to the diagnosis automatically</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Supervisory</div><div class="cl-text">Skill/Will Matrix — I correctly place the scenario character in the right quadrant and explain the leadership response</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Conflict</div><div class="cl-text">Glasl Escalation Ladder — I identify the phase before naming any intervention</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Conflict</div><div class="cl-text">IBR — I explicitly separate positions from interests in my language</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Leadership</div><div class="cl-text">T·C·H·O·E·D·S — I name the specific element being tested, not T·C·H·O·E·D·S generally</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Leadership</div><div class="cl-text">Bank of Leadership — I use deposit/withdrawal language naturally in my response close</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Structure</div><div class="cl-text">STAR-P — My Action section is consistently hitting 50% of total response time</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Structure</div><div class="cl-text">Five-Paragraph Formula — My purpose statement is always the first sentence of every written response</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-category">Closing</div><div class="cl-text">I close every response with a named TPS framework as my leadership principle</div></div></div>
+<p>Click each item when you can apply it correctly in a live practice rep without being prompted. Your progress saves automatically. Target: all items checked by Session 4.</p>
+<div class="checklist" id="fw-checklist">
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw1"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Supervisory</div><div class="cl-text">3 U's Diagnostic — I name the correct U and match my intervention to the diagnosis automatically</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw2"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Supervisory</div><div class="cl-text">Skill/Will Matrix — I correctly place the scenario character in the right quadrant and explain the leadership response</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw3"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Conflict</div><div class="cl-text">Glasl Escalation Ladder — I identify the phase before naming any intervention</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw4"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Conflict</div><div class="cl-text">IBR — I explicitly separate positions from interests in my language</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw5"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Leadership</div><div class="cl-text">T·C·H·O·E·D·S — I name the specific element being tested, not T·C·H·O·E·D·S generally</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw6"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Leadership</div><div class="cl-text">Bank of Leadership — I use deposit/withdrawal language naturally in my response close</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw7"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Structure</div><div class="cl-text">STAR-P — My Action section is consistently hitting 50% of total response time</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw8"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Structure</div><div class="cl-text">Five-Paragraph Formula — My purpose statement is always the first sentence of every written response</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="fw9"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-category">Closing</div><div class="cl-text">I close every response with a named TPS framework as my leadership principle</div></div></div>
 </div>
 
 <h2>Assessment Day Preparation Checklist</h2>
 
 <h3>Two Weeks Out</h3>
 <div class="checklist">
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Review your bucket vulnerability map — run at least 2 reps in each of your three most vulnerable buckets</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Complete one full mock assessment — all exercise types in a single sitting</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Review your closing principle library — all three principles, practiced out loud until natural</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Review your leadership identity statement — can you say it without notes?</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t1"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Review your bucket vulnerability map — run at least 2 reps in each of your three most vulnerable buckets</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t2"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Complete one full mock assessment — all exercise types in a single sitting</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t3"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Review your closing principle library — all three principles, practiced out loud until natural</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t4"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Review your leadership identity statement — can you say it without notes?</div></div></div>
 </div>
 
 <h3>One Week Out</h3>
 <div class="checklist">
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Light practice only — 1–2 sessions maximum. You are confirming strength, not building new skills</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Review the nine buckets and primary frameworks one final time</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Prepare your materials — notebook, pens, any permitted reference materials</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Confirm assessment location, time, parking, and dress requirements</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t5"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Light practice only — 1–2 sessions maximum. You are confirming strength, not building new skills</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t6"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Review the nine buckets and primary frameworks one final time</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t7"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Prepare your materials — notebook, pens, any permitted reference materials</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t8"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Confirm assessment location, time, parking, and dress requirements</div></div></div>
 </div>
 
 <h3>Assessment Day</h3>
 <div class="checklist">
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Arrive 30 minutes early — never rushed</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Before each exercise — take one breath, say your identity statement to yourself: "I am the kind of [rank] who..."</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Read every scenario twice before you begin responding</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Diagnose before you act — name the bucket and primary framework internally before your first word</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">Close every response with your leadership principle — do not skip it even if time is short</div></div></div>
-<div class="cl-item"><div class="cl-box"></div><div><div class="cl-text">After the assessment — do not debrief with other candidates. What they experienced is not what you experienced.</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t9"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Arrive 30 minutes early — never rushed</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t10"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Before each exercise — take one breath, say your identity statement to yourself: "I am the kind of [rank] who..."</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t11"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Read every scenario twice before you begin responding</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t12"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Diagnose before you act — name the bucket and primary framework internally before your first word</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t13"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">Close every response with your leadership principle — do not skip it even if time is short</div></div></div>
+<div class="cl-item" onclick="toggleCheck(this)" data-id="t14"><div class="cl-checkbox"><span class="cl-check-icon">✓</span></div><div><div class="cl-text">After the assessment — do not debrief with other candidates. What they experienced is not what you experienced.</div></div></div>
 </div>
 
 <div class="callout callout-navy"><span class="callout-label">The Final Reminder</span>
@@ -782,11 +830,54 @@ function toggleFw(id){
   body.classList.toggle('open',!open);
   icon.classList.toggle('open',!open);
 }
+function toggleCheck(el){
+  const id=el.dataset.id;
+  const checked=el.classList.toggle('checked');
+  const saved=JSON.parse(localStorage.getItem('tps_checks')||'{}');
+  saved[id]=checked;
+  localStorage.setItem('tps_checks',JSON.stringify(saved));
+  updateProgress();
+}
+function saveScore(input){
+  const scores=JSON.parse(localStorage.getItem('tps_scores')||'{}');
+  scores[input.id]=input.value;
+  localStorage.setItem('tps_scores',JSON.stringify(scores));
+}
+function updateProgress(){
+  const items=document.querySelectorAll('.cl-item[data-id]');
+  const checked=document.querySelectorAll('.cl-item[data-id].checked');
+  const countEl=document.getElementById('check-count');
+  const totalEl=document.getElementById('check-total');
+  if(countEl)countEl.textContent=checked.length;
+  if(totalEl)totalEl.textContent=items.length;
+}
+function resetAll(){
+  if(!confirm('Reset all checkboxes and scores? This cannot be undone.'))return;
+  localStorage.removeItem('tps_checks');
+  localStorage.removeItem('tps_scores');
+  document.querySelectorAll('.cl-item[data-id]').forEach(el=>el.classList.remove('checked'));
+  document.querySelectorAll('.tc-score-input').forEach(inp=>inp.value='');
+  updateProgress();
+}
+function loadSaved(){
+  const checks=JSON.parse(localStorage.getItem('tps_checks')||'{}');
+  Object.entries(checks).forEach(([id,checked])=>{
+    const el=document.querySelector(`.cl-item[data-id="${id}"]`);
+    if(el&&checked)el.classList.add('checked');
+  });
+  const scores=JSON.parse(localStorage.getItem('tps_scores')||'{}');
+  Object.entries(scores).forEach(([id,val])=>{
+    const inp=document.getElementById(id);
+    if(inp)inp.value=val;
+  });
+  updateProgress();
+}
 window.addEventListener('scroll',()=>{
   const s=document.documentElement.scrollTop;
   const h=document.documentElement.scrollHeight-window.innerHeight;
   if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
 });
+document.addEventListener('DOMContentLoaded',loadSaved);
 </script>
 </body>
 </html>
