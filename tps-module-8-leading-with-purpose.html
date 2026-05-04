@@ -193,6 +193,434 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
   .bank-ledger{grid-template-columns:1fr;}
   .nav-pills{display:none;}
 }
+
+.infographic-wrap {
+  background:#0C2340;
+  border:1px solid rgba(201,168,76,0.15);
+  border-left:4px solid #C9A84C;
+  margin:2rem 0;
+  overflow:hidden;
+  font-family:'Crimson Pro',Georgia,serif;
+}
+.ig-header {
+  background:rgba(201,168,76,0.06);
+  padding:1rem 1.25rem 0.85rem;
+  border-bottom:1px solid rgba(201,168,76,0.12);
+}
+.ig-eyebrow {
+  font-family:'Cinzel',serif;
+  font-size:7.5px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#C9A84C;
+  display:block;
+  margin-bottom:4px;
+}
+.ig-title {
+  font-family:'EB Garamond',serif;
+  font-size:1.25rem;
+  font-weight:700;
+  color:#F5F0E8;
+  margin-bottom:3px;
+}
+.ig-sub {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+}
+/* Stage grid */
+.ig-stage-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-stage {
+  background:#0C2340;
+  padding:1rem;
+}
+.ig-stage-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.8rem;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.ig-stage-name {
+  font-family:'Cinzel',serif;
+  font-size:8.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.ig-stage-desc {
+  font-size:0.8rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:8px;
+}
+.ig-stage-leader {
+  font-size:0.75rem;
+  padding:5px 8px;
+  line-height:1.4;
+  font-style:italic;
+}
+/* Pyramid */
+.ig-pyramid {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.ig-pyr-row {
+  display:grid;
+  grid-template-columns:32px 1fr;
+  gap:0.75rem;
+  padding:0.85rem 1rem;
+  align-items:start;
+}
+.ig-pyr-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.4rem;
+  font-weight:800;
+  text-align:center;
+  padding-top:2px;
+}
+.ig-pyr-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  font-weight:700;
+}
+.ig-pyr-desc {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:4px;
+}
+.ig-pyr-signal {
+  font-size:0.75rem;
+  color:rgba(143,168,192,0.55);
+  font-style:italic;
+}
+/* Levels */
+.ig-levels {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.ig-level {
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:0.75rem;
+  padding:0.85rem 0.85rem;
+  align-items:start;
+}
+.ig-level-badge {
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cinzel',serif;
+  font-size:9px;
+  font-weight:700;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.ig-level-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  font-weight:700;
+}
+.ig-level-desc {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:4px;
+}
+.ig-level-eg {
+  font-size:0.75rem;
+  color:rgba(143,168,192,0.55);
+  font-style:italic;
+}
+/* Callout */
+.ig-callout {
+  margin:0.5rem 1.25rem 1rem;
+  padding:0.85rem 1rem;
+  background:rgba(201,168,76,0.07);
+  border-left:3px solid #C9A84C;
+  font-size:0.82rem;
+  color:#6B4F10;
+  line-height:1.6;
+  font-style:italic;
+}
+/* Compare columns */
+.ig-compare {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+  margin:0;
+}
+.ig-compare-col {
+  background:#0C2340;
+  padding:1.1rem;
+}
+.ig-compare-header {
+  font-family:'Cinzel',serif;
+  font-size:8.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.ig-compare-sub {
+  font-size:0.78rem;
+  font-style:italic;
+  margin-bottom:10px;
+  line-height:1.4;
+}
+.ig-compare-items {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:10px;
+}
+.ig-compare-item {
+  font-size:0.8rem;
+  color:#F5F0E8;
+  padding:4px 0;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  line-height:1.4;
+}
+.ig-compare-result {
+  font-size:0.78rem;
+  font-weight:600;
+  padding:8px 10px;
+  border:1px solid;
+  margin-top:6px;
+  line-height:1.4;
+}
+/* Covey */
+.ig-covey {
+  padding:1rem 1.25rem;
+}
+.ig-covey-outer {
+  padding:1rem;
+  margin-bottom:8px;
+  border-radius:0;
+}
+.ig-covey-middle {
+  padding:0.85rem;
+  margin:0.75rem 0;
+}
+.ig-covey-inner {
+  padding:0.75rem;
+  margin:0.65rem 0;
+}
+.ig-covey-label {
+  font-family:'Cinzel',serif;
+  font-size:7.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.ig-covey-items {
+  font-size:0.8rem;
+  line-height:1.5;
+}
+.ig-covey-paradox {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:8px;
+}
+.ig-covey-side {
+  padding:0.65rem 0.85rem;
+  background:rgba(255,255,255,0.03);
+}
+/* Blooms */
+.ig-blooms {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.ig-blooms-row {
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:0.75rem;
+  padding:0.75rem;
+  align-items:start;
+}
+.ig-blooms-level {
+  font-family:'Cinzel',serif;
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-align:center;
+  line-height:1.3;
+}
+.ig-blooms-level span {
+  display:block;
+  font-size:8px;
+  font-family:'Crimson Pro',Georgia,serif;
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:0;
+  text-transform:none;
+}
+.ig-blooms-name {
+  font-size:0.85rem;
+  font-weight:600;
+  margin-bottom:3px;
+  color:#F5F0E8;
+}
+.ig-blooms-signal {
+  font-size:0.75rem;
+  color:#8FA8C0;
+  line-height:1.4;
+}
+/* Four dims */
+.ig-dims {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-dim-card {
+  background:#0C2340;
+  padding:1rem;
+}
+.ig-dim-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.5rem;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.ig-dim-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#F5F0E8;
+  margin-bottom:6px;
+  font-weight:700;
+}
+.ig-dim-desc {
+  font-size:0.78rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+.ig-dim-key {
+  font-size:0.75rem;
+  font-style:italic;
+  font-weight:600;
+}
+/* Lang upgrade */
+.ig-lang-upgrade {
+  padding:0.75rem 1.25rem;
+}
+.ig-lang-header {
+  display:grid;
+  grid-template-columns:1fr 32px 1fr;
+  gap:8px;
+  margin-bottom:6px;
+}
+.ig-lang-col-header {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:6px 0;
+}
+.ig-lang-row {
+  display:grid;
+  grid-template-columns:1fr 32px 1fr;
+  gap:8px;
+  margin-bottom:4px;
+  align-items:center;
+}
+.ig-lang-external {
+  background:rgba(139,26,26,0.08);
+  border:1px solid rgba(232,112,112,0.15);
+  padding:8px 10px;
+  font-size:0.82rem;
+  color:#F5F0E8;
+  font-style:italic;
+  line-height:1.4;
+}
+.ig-lang-arrow {
+  text-align:center;
+  color:#C9A84C;
+  font-size:1rem;
+  font-weight:700;
+}
+.ig-lang-internal {
+  background:rgba(26,92,58,0.08);
+  border:1px solid rgba(58,156,90,0.2);
+  padding:8px 10px;
+  font-size:0.82rem;
+  color:#F5F0E8;
+  font-weight:600;
+  line-height:1.4;
+}
+/* Bucket grid */
+.ig-bucket-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-bucket {
+  background:#0C2340;
+  padding:0.85rem 1rem;
+}
+.ig-bucket-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.3rem;
+  font-weight:800;
+  color:#C9A84C;
+  margin-bottom:3px;
+}
+.ig-bucket-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#F5F0E8;
+  margin-bottom:5px;
+  font-weight:700;
+}
+.ig-bucket-fw {
+  font-size:0.78rem;
+  color:#8FA8C0;
+  line-height:1.4;
+  margin-bottom:4px;
+}
+.ig-bucket-close {
+  font-size:0.73rem;
+  color:#6B4F10;
+  font-style:italic;
+}
+@media(max-width:700px){
+  .ig-stage-grid,.ig-dims,.ig-bucket-grid{grid-template-columns:1fr 1fr;}
+  .ig-compare{grid-template-columns:1fr;}
+  .ig-covey-paradox{grid-template-columns:1fr;}
+  .ig-lang-row,.ig-lang-header{grid-template-columns:1fr;}
+  .ig-lang-arrow{display:none;}
+}
+
 </style>
 </head>
 <body>
@@ -256,6 +684,43 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 <p>The problem is the word <strong>"I."</strong></p>
 
 <h2>There Is No I — There Is Only WE</h2>
+<div class="infographic-wrap">
+<div class="ig-header">
+<span class="ig-eyebrow">◆ TPS FRAMEWORK</span>
+<div class="ig-title">Internal vs External Locus of Control</div>
+<div class="ig-sub">Where you locate the cause of your outcomes determines everything about how you develop.</div>
+</div>
+<div class="ig-compare">
+<div class="ig-compare-col" style="border-top:3px solid #E87070;">
+  <div class="ig-compare-header" style="color:#E87070;">EXTERNAL LOCUS</div>
+  <div class="ig-compare-sub" style="color:#8FA8C0;">Outcomes are determined by external forces</div>
+  <div class="ig-compare-items">
+    <div class="ig-compare-item">After poor assessment: "The process was unfair"</div>
+    <div class="ig-compare-item">Team underperforms: "That crew has always been difficult"</div>
+    <div class="ig-compare-item">Homework incomplete: "The shift schedule didn't allow it"</div>
+    <div class="ig-compare-item">Language pattern: "I would try to..." "I would see if..."</div>
+  </div>
+  <div class="ig-compare-result" style="background:rgba(139,26,26,0.08);border-color:#E87070;color:#E87070;">
+    Result: Energy spent on what cannot change. Development stalls.
+  </div>
+</div>
+<div class="ig-compare-col" style="border-top:3px solid #3A9C5A;">
+  <div class="ig-compare-header" style="color:#3A9C5A;">INTERNAL LOCUS</div>
+  <div class="ig-compare-sub" style="color:#8FA8C0;">Outcomes are primarily within your agency</div>
+  <div class="ig-compare-items">
+    <div class="ig-compare-item">After poor assessment: "What specifically can I develop?"</div>
+    <div class="ig-compare-item">Team underperforms: "What leadership investment have I made?"</div>
+    <div class="ig-compare-item">Homework incomplete: "What would I do differently with my time?"</div>
+    <div class="ig-compare-item">Language pattern: "My first action is..." "I am responsible for..."</div>
+  </div>
+  <div class="ig-compare-result" style="background:rgba(26,92,58,0.08);border-color:#3A9C5A;color:#3A9C5A;">
+    Result: Energy focused on what can change. Development accelerates.
+  </div>
+</div>
+</div>
+<div class="ig-callout">Internal locus does not mean believing you control everything. It means your first question is always: "What can I do differently?" — not "Why did this happen to me?"</div>
+</div>
+
 
 <p>When you step into a leadership role, you are no longer the individual contributor. You are the representative of the team. The way your language reflects that shift — or fails to — is observable in every interaction you have. Assessors hear it. Your crew hears it. The people above you hear it.</p>
 
@@ -278,6 +743,43 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 </div>
 
 <h2>The First National Bank of Leadership</h2>
+<div class="infographic-wrap">
+<div class="ig-header">
+<span class="ig-eyebrow">◆ TPS FRAMEWORK</span>
+<div class="ig-title">Two Types of Trust — The Distinction That Scores 4/5</div>
+<div class="ig-sub">Predictability-based trust is necessary. Vulnerability-based trust is what makes teams perform.</div>
+</div>
+<div class="ig-compare">
+<div class="ig-compare-col" style="border-top:3px solid #C9A84C;">
+  <div class="ig-compare-header" style="color:#6B4F10;">PREDICTABILITY-BASED TRUST</div>
+  <div class="ig-compare-sub" style="color:#8FA8C0;">"I trust you because you consistently do what you say"</div>
+  <div class="ig-compare-items">
+    <div class="ig-compare-item">Built through reliability and follow-through</div>
+    <div class="ig-compare-item">Required for basic team function</div>
+    <div class="ig-compare-item">Can exist without psychological safety</div>
+    <div class="ig-compare-item">3/5 candidates describe this as "building trust"</div>
+  </div>
+  <div class="ig-compare-result" style="background:rgba(201,168,76,0.08);border-color:#C9A84C;color:#6B4F10;">
+    Necessary — but not sufficient for high performance.
+  </div>
+</div>
+<div class="ig-compare-col" style="border-top:3px solid #3A9C5A;">
+  <div class="ig-compare-header" style="color:#3A9C5A;">VULNERABILITY-BASED TRUST</div>
+  <div class="ig-compare-sub" style="color:#8FA8C0;">"I trust you enough to admit I don't know, I made a mistake, I need help"</div>
+  <div class="ig-compare-items">
+    <div class="ig-compare-item">Built by the leader going first — modeling vulnerability</div>
+    <div class="ig-compare-item">Enables productive conflict (Storming → Norming)</div>
+    <div class="ig-compare-item">Foundation of Lencioni's entire pyramid</div>
+    <div class="ig-compare-item">4/5 candidates name this distinction explicitly</div>
+  </div>
+  <div class="ig-compare-result" style="background:rgba(26,92,58,0.08);border-color:#3A9C5A;color:#3A9C5A;">
+    The foundational condition. Without it nothing above it holds.
+  </div>
+</div>
+</div>
+<div class="ig-callout">The leader who goes first — who admits their own mistakes openly — makes the most powerful team trust deposit available. It signals: vulnerability is safe here.</div>
+</div>
+
 
 <p>Now that your language is right, let's talk about what leadership actually is — not the title, not the badge, not the rank. Leadership, at its most fundamental level, is the building of <strong>equity</strong>. We call it the First National Bank of Leadership, and we want you to think about your career inside this metaphor from this point forward.</p>
 

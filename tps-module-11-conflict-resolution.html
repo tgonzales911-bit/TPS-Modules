@@ -233,6 +233,434 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 .doc-footer-text{font-size:0.75rem;color:#4A5A6A;text-align:right;line-height:1.5;}
 .doc-footer-text strong{color:var(--gold);font-weight:500;}
 @media(max-width:900px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{display:none;}.lesson-main{padding:2rem 1.5rem;}.module-hero{padding:3rem 1.5rem 2.5rem;}.tkm-grid,.ibr-grid,.scenario-grid{grid-template-columns:1fr;}.tkm-accom{grid-column:1;}.nav-pills{display:none;}}
+
+.infographic-wrap {
+  background:#0C2340;
+  border:1px solid rgba(201,168,76,0.15);
+  border-left:4px solid #C9A84C;
+  margin:2rem 0;
+  overflow:hidden;
+  font-family:'Crimson Pro',Georgia,serif;
+}
+.ig-header {
+  background:rgba(201,168,76,0.06);
+  padding:1rem 1.25rem 0.85rem;
+  border-bottom:1px solid rgba(201,168,76,0.12);
+}
+.ig-eyebrow {
+  font-family:'Cinzel',serif;
+  font-size:7.5px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#C9A84C;
+  display:block;
+  margin-bottom:4px;
+}
+.ig-title {
+  font-family:'EB Garamond',serif;
+  font-size:1.25rem;
+  font-weight:700;
+  color:#F5F0E8;
+  margin-bottom:3px;
+}
+.ig-sub {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+}
+/* Stage grid */
+.ig-stage-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-stage {
+  background:#0C2340;
+  padding:1rem;
+}
+.ig-stage-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.8rem;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.ig-stage-name {
+  font-family:'Cinzel',serif;
+  font-size:8.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.ig-stage-desc {
+  font-size:0.8rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:8px;
+}
+.ig-stage-leader {
+  font-size:0.75rem;
+  padding:5px 8px;
+  line-height:1.4;
+  font-style:italic;
+}
+/* Pyramid */
+.ig-pyramid {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.ig-pyr-row {
+  display:grid;
+  grid-template-columns:32px 1fr;
+  gap:0.75rem;
+  padding:0.85rem 1rem;
+  align-items:start;
+}
+.ig-pyr-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.4rem;
+  font-weight:800;
+  text-align:center;
+  padding-top:2px;
+}
+.ig-pyr-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  font-weight:700;
+}
+.ig-pyr-desc {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:4px;
+}
+.ig-pyr-signal {
+  font-size:0.75rem;
+  color:rgba(143,168,192,0.55);
+  font-style:italic;
+}
+/* Levels */
+.ig-levels {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.ig-level {
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:0.75rem;
+  padding:0.85rem 0.85rem;
+  align-items:start;
+}
+.ig-level-badge {
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cinzel',serif;
+  font-size:9px;
+  font-weight:700;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.ig-level-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  font-weight:700;
+}
+.ig-level-desc {
+  font-size:0.82rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:4px;
+}
+.ig-level-eg {
+  font-size:0.75rem;
+  color:rgba(143,168,192,0.55);
+  font-style:italic;
+}
+/* Callout */
+.ig-callout {
+  margin:0.5rem 1.25rem 1rem;
+  padding:0.85rem 1rem;
+  background:rgba(201,168,76,0.07);
+  border-left:3px solid #C9A84C;
+  font-size:0.82rem;
+  color:#6B4F10;
+  line-height:1.6;
+  font-style:italic;
+}
+/* Compare columns */
+.ig-compare {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+  margin:0;
+}
+.ig-compare-col {
+  background:#0C2340;
+  padding:1.1rem;
+}
+.ig-compare-header {
+  font-family:'Cinzel',serif;
+  font-size:8.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.ig-compare-sub {
+  font-size:0.78rem;
+  font-style:italic;
+  margin-bottom:10px;
+  line-height:1.4;
+}
+.ig-compare-items {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:10px;
+}
+.ig-compare-item {
+  font-size:0.8rem;
+  color:#F5F0E8;
+  padding:4px 0;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  line-height:1.4;
+}
+.ig-compare-result {
+  font-size:0.78rem;
+  font-weight:600;
+  padding:8px 10px;
+  border:1px solid;
+  margin-top:6px;
+  line-height:1.4;
+}
+/* Covey */
+.ig-covey {
+  padding:1rem 1.25rem;
+}
+.ig-covey-outer {
+  padding:1rem;
+  margin-bottom:8px;
+  border-radius:0;
+}
+.ig-covey-middle {
+  padding:0.85rem;
+  margin:0.75rem 0;
+}
+.ig-covey-inner {
+  padding:0.75rem;
+  margin:0.65rem 0;
+}
+.ig-covey-label {
+  font-family:'Cinzel',serif;
+  font-size:7.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.ig-covey-items {
+  font-size:0.8rem;
+  line-height:1.5;
+}
+.ig-covey-paradox {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:8px;
+}
+.ig-covey-side {
+  padding:0.65rem 0.85rem;
+  background:rgba(255,255,255,0.03);
+}
+/* Blooms */
+.ig-blooms {
+  padding:0.75rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.ig-blooms-row {
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:0.75rem;
+  padding:0.75rem;
+  align-items:start;
+}
+.ig-blooms-level {
+  font-family:'Cinzel',serif;
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-align:center;
+  line-height:1.3;
+}
+.ig-blooms-level span {
+  display:block;
+  font-size:8px;
+  font-family:'Crimson Pro',Georgia,serif;
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:0;
+  text-transform:none;
+}
+.ig-blooms-name {
+  font-size:0.85rem;
+  font-weight:600;
+  margin-bottom:3px;
+  color:#F5F0E8;
+}
+.ig-blooms-signal {
+  font-size:0.75rem;
+  color:#8FA8C0;
+  line-height:1.4;
+}
+/* Four dims */
+.ig-dims {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-dim-card {
+  background:#0C2340;
+  padding:1rem;
+}
+.ig-dim-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.5rem;
+  font-weight:800;
+  margin-bottom:4px;
+}
+.ig-dim-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#F5F0E8;
+  margin-bottom:6px;
+  font-weight:700;
+}
+.ig-dim-desc {
+  font-size:0.78rem;
+  color:#8FA8C0;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+.ig-dim-key {
+  font-size:0.75rem;
+  font-style:italic;
+  font-weight:600;
+}
+/* Lang upgrade */
+.ig-lang-upgrade {
+  padding:0.75rem 1.25rem;
+}
+.ig-lang-header {
+  display:grid;
+  grid-template-columns:1fr 32px 1fr;
+  gap:8px;
+  margin-bottom:6px;
+}
+.ig-lang-col-header {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:6px 0;
+}
+.ig-lang-row {
+  display:grid;
+  grid-template-columns:1fr 32px 1fr;
+  gap:8px;
+  margin-bottom:4px;
+  align-items:center;
+}
+.ig-lang-external {
+  background:rgba(139,26,26,0.08);
+  border:1px solid rgba(232,112,112,0.15);
+  padding:8px 10px;
+  font-size:0.82rem;
+  color:#F5F0E8;
+  font-style:italic;
+  line-height:1.4;
+}
+.ig-lang-arrow {
+  text-align:center;
+  color:#C9A84C;
+  font-size:1rem;
+  font-weight:700;
+}
+.ig-lang-internal {
+  background:rgba(26,92,58,0.08);
+  border:1px solid rgba(58,156,90,0.2);
+  padding:8px 10px;
+  font-size:0.82rem;
+  color:#F5F0E8;
+  font-weight:600;
+  line-height:1.4;
+}
+/* Bucket grid */
+.ig-bucket-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(201,168,76,0.08);
+}
+.ig-bucket {
+  background:#0C2340;
+  padding:0.85rem 1rem;
+}
+.ig-bucket-num {
+  font-family:'EB Garamond',serif;
+  font-size:1.3rem;
+  font-weight:800;
+  color:#C9A84C;
+  margin-bottom:3px;
+}
+.ig-bucket-name {
+  font-family:'Cinzel',serif;
+  font-size:8px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#F5F0E8;
+  margin-bottom:5px;
+  font-weight:700;
+}
+.ig-bucket-fw {
+  font-size:0.78rem;
+  color:#8FA8C0;
+  line-height:1.4;
+  margin-bottom:4px;
+}
+.ig-bucket-close {
+  font-size:0.73rem;
+  color:#6B4F10;
+  font-style:italic;
+}
+@media(max-width:700px){
+  .ig-stage-grid,.ig-dims,.ig-bucket-grid{grid-template-columns:1fr 1fr;}
+  .ig-compare{grid-template-columns:1fr;}
+  .ig-covey-paradox{grid-template-columns:1fr;}
+  .ig-lang-row,.ig-lang-header{grid-template-columns:1fr;}
+  .ig-lang-arrow{display:none;}
+}
+
 </style>
 </head>
 <body>
@@ -287,6 +715,57 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 <p>Friedrich Glasl, an Austrian organizational theorist, mapped nine stages of conflict escalation arranged in three zones. The zones determine everything: who intervenes, how they intervene, what a successful outcome looks like, and what interventions are available. Most company officers have never been taught this distinction — they have one or two conflict approaches and apply them to every situation regardless of the level. The result is that they consistently over- or under-respond, and the conflict either escalates unnecessarily or gets pushed below the surface where it compounds.</p>
 
 <h2>The Three Zones — The Most Important Conflict Diagnostic Available</h2>
+<div class="infographic-wrap">
+<div class="ig-header">
+<span class="ig-eyebrow">◆ TPS FRAMEWORK</span>
+<div class="ig-title">Lencioni's Five Dysfunctions of a Team</div>
+<div class="ig-sub">Work from the bottom up — you cannot fix Dysfunction 4 without first building Trust.</div>
+</div>
+<div class="ig-pyramid">
+<div class="ig-pyr-row" style="background:rgba(232,112,112,0.12);border-left:4px solid #E87070;">
+  <div class="ig-pyr-num" style="color:#E87070;">5</div>
+  <div>
+    <div class="ig-pyr-name" style="color:#E87070;">INATTENTION TO RESULTS</div>
+    <div class="ig-pyr-desc">Individual goals trump collective outcomes. The scoreboard is personal, not shared.</div>
+    <div class="ig-pyr-signal">Fire service signal: crews protecting their stats instead of their community outcomes.</div>
+  </div>
+</div>
+<div class="ig-pyr-row" style="background:rgba(201,100,40,0.1);border-left:4px solid #E8A070;">
+  <div class="ig-pyr-num" style="color:#E8A070;">4</div>
+  <div>
+    <div class="ig-pyr-name" style="color:#E8A070;">AVOIDANCE OF ACCOUNTABILITY</div>
+    <div class="ig-pyr-desc">Nobody calls out peers on behavior that harms the team. Everyone sees it. Nobody says anything.</div>
+    <div class="ig-pyr-signal">Fire service signal: crew watches a member cut corners on safety checks and stays silent.</div>
+  </div>
+</div>
+<div class="ig-pyr-row" style="background:rgba(201,168,76,0.08);border-left:4px solid #C9A84C;">
+  <div class="ig-pyr-num" style="color:#C9A84C;">3</div>
+  <div>
+    <div class="ig-pyr-name" style="color:#6B4F10;">LACK OF COMMITMENT</div>
+    <div class="ig-pyr-desc">Ambiguous buy-in. Decisions get revisited. Nods in meetings, no execution after.</div>
+    <div class="ig-pyr-signal">Fire service signal: policy changes announced but never actually implemented.</div>
+  </div>
+</div>
+<div class="ig-pyr-row" style="background:rgba(26,74,124,0.12);border-left:4px solid #6090C0;">
+  <div class="ig-pyr-num" style="color:#6090C0;">2</div>
+  <div>
+    <div class="ig-pyr-name" style="color:#6090C0;">FEAR OF CONFLICT</div>
+    <div class="ig-pyr-desc">Team avoids productive debate. Meetings are polite and inconclusive. Real conversations happen in the parking lot.</div>
+    <div class="ig-pyr-signal">Fire service signal: debrief where everyone says "it went fine" and nobody names what went wrong.</div>
+  </div>
+</div>
+<div class="ig-pyr-row" style="background:rgba(12,35,64,0.08);border-left:4px solid #0C2340;">
+  <div class="ig-pyr-num" style="color:#0C2340;">1</div>
+  <div>
+    <div class="ig-pyr-name" style="color:#0C2340;">ABSENCE OF TRUST — THE ROOT</div>
+    <div class="ig-pyr-desc">Nobody admits mistakes, weaknesses, or uncertainty. Everyone performs competence at the expense of genuine connection.</div>
+    <div class="ig-pyr-signal">Fire service signal: crew where nobody admits they don't know something because the culture punishes vulnerability.</div>
+  </div>
+</div>
+</div>
+<div class="ig-callout">The diagnostic: work backward from the visible symptom. Dysfunction 4 without addressing Dysfunction 1 produces resentment — not accountability.</div>
+</div>
+
 
 <div class="escalation-ladder">
   <div class="el-row el-green">
@@ -527,6 +1006,40 @@ body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:va
 <p>A position is what someone says they want. An interest is why they want it. The position is the stated demand. The interest is the need, concern, fear, or aspiration that produced the demand. When two parties negotiate between their positions, they are arguing over incompatible outcomes in a zero-sum game — one party's gain is the other's loss. When two parties explore their underlying interests, they almost always discover that the interests are compatible, complementary, or at minimum not mutually exclusive — and that there are multiple solutions that could satisfy both parties' interests that neither party thought of because they were too busy arguing over their positions.</p>
 
 <h2>The IBR Framework — People, Interests, Options, Criteria</h2>
+<div class="infographic-wrap">
+<div class="ig-header">
+<span class="ig-eyebrow">◆ TPS FRAMEWORK</span>
+<div class="ig-title">The Four Assessment Dimensions — What Every Assessor Scores</div>
+<div class="ig-sub">Every exercise. Every scenario. Every rank. The same four dimensions — every time.</div>
+</div>
+<div class="ig-dims">
+<div class="ig-dim-card" style="border-top:3px solid #C9A84C;">
+  <div class="ig-dim-num" style="color:#C9A84C;">01</div>
+  <div class="ig-dim-name">Supervisory Judgment</div>
+  <div class="ig-dim-desc">Diagnose before acting. 3 U's → Skill/Will → named principle close. Most heavily weighted.</div>
+  <div class="ig-dim-key" style="color:#6B4F10;">Key: Name the U before any action word.</div>
+</div>
+<div class="ig-dim-card" style="border-top:3px solid #6090C0;">
+  <div class="ig-dim-num" style="color:#6090C0;">02</div>
+  <div class="ig-dim-name">Interpersonal Skills</div>
+  <div class="ig-dim-desc">Bias awareness. Glasl phase identification. Positions vs interests. De-escalation with framework.</div>
+  <div class="ig-dim-key" style="color:#6090C0;">Key: Name the bias check explicitly.</div>
+</div>
+<div class="ig-dim-card" style="border-top:3px solid #3A9C5A;">
+  <div class="ig-dim-num" style="color:#3A9C5A;">03</div>
+  <div class="ig-dim-name">Oral Communication</div>
+  <div class="ig-dim-desc">STAR-P structure. 50% of time in Action. Named TPS framework as closing principle.</div>
+  <div class="ig-dim-key" style="color:#3A9C5A;">Key: Stay in Action until you hit 50%.</div>
+</div>
+<div class="ig-dim-card" style="border-top:3px solid #E87070;">
+  <div class="ig-dim-num" style="color:#E87070;">04</div>
+  <div class="ig-dim-name">Written Communication</div>
+  <div class="ig-dim-desc">Five-Paragraph Formula. Purpose statement in ¶1. Analysis depth in ¶3. Specific decisions in ¶4.</div>
+  <div class="ig-dim-key" style="color:#E87070;">Key: Purpose statement first — always.</div>
+</div>
+</div>
+</div>
+
 
 <div class="ibr-grid">
   <div class="ibr-card ibr-p">
