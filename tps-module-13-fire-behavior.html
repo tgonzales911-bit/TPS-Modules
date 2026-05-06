@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chapter 11 — Fire Behavior + Tactical Decision-Making | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0C2340;--navy2:#1A3A5C;--gold:#C9A84C;--gold2:#FAF3E0;--gold3:#6B4F10;--cream:#F5F0E8;--offwhite:#F9F6F0;--light:#EAE5DC;--mid:#445566;--gray:#7A8A9A;--red:#B22222;--red-light:#FFF0F0;--green:#1A5C3A;--green-light:#EAF3DE;--teal:#006B6B;--teal-light:#E0F4F4;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--navy);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(12,35,64,0.98);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,76,0.2);height:64px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:12px;flex:1;}
+.nav-brand{font-family:'Cinzel',serif;font-size:11px;letter-spacing:1.5px;color:var(--cream);line-height:1.3;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2px;}
+.nav-pills{display:flex;gap:5px;flex:2;justify-content:center;overflow-x:auto;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#8FA8C0;padding:6px 11px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:none;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.05);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);}
+.progress-bar{position:fixed;top:64px;left:0;height:3px;background:linear-gradient(90deg,var(--navy2),var(--gold));z-index:199;width:0%;transition:width 0.3s;}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:var(--navy);padding:4.5rem 3rem 3.5rem;margin-top:64px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 60px,rgba(201,168,76,0.015) 60px,rgba(201,168,76,0.015) 61px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--navy2),var(--gold));}
+.mh-inner{max-width:900px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:800;color:var(--cream);line-height:1.1;margin-bottom:0.75rem;}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.05rem;color:#8FA8C0;max-width:700px;line-height:1.7;margin-bottom:2rem;}
+.mh-badges{display:flex;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap;}
+.mh-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:3px;}
+.badge-blue{background:rgba(30,80,180,0.12);color:#4A7FD0;border:1px solid rgba(30,80,180,0.25);}
+.badge-nfpa{background:rgba(100,160,220,0.15);color:#6090C0;border:1px solid rgba(100,160,220,0.3);}
+.mh-thread{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1rem 1.5rem;margin-bottom:2rem;max-width:700px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.mh-thread-text{font-size:0.92rem;color:var(--cream);line-height:1.65;}
+.mh-lesson-nav{display:flex;gap:8px;flex-wrap:wrap;}
+.mh-lesson-btn{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:6px;cursor:pointer;transition:all 0.2s;border:1px solid rgba(201,168,76,0.25);background:transparent;color:#8FA8C0;}
+.mh-lesson-btn:hover{background:rgba(255,255,255,0.05);color:var(--cream);}
+.mh-lesson-btn.active{background:rgba(201,168,76,0.12);color:var(--gold);border-color:rgba(201,168,76,0.4);}
+.lesson-container{display:grid;grid-template-columns:1fr 310px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);}
+.lesson-sidebar{padding:2rem 1.75rem;background:var(--offwhite);position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold3);margin-bottom:0.6rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:0.6rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--navy);margin:3rem 0 0.9rem;padding-bottom:0.5rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.65rem;}
+.lesson-main p{margin-bottom:1.25rem;color:#2A3D50;line-height:1.82;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.25rem 1.5rem;color:#2A3D50;}
+.lesson-main li{margin-bottom:0.6rem;line-height:1.72;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.4rem 1.6rem;margin:2rem 0;}
+.callout-gold{background:var(--gold2);border-left:4px solid var(--gold);}.callout-gold p{color:var(--gold3);font-size:0.97rem;line-height:1.75;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);}.callout-navy p{color:#C8D8E8;font-size:0.95rem;line-height:1.75;}
+.callout-red{background:var(--red-light);border-left:4px solid var(--red);}.callout-red p{color:#6B1A1A;font-size:0.97rem;line-height:1.75;}
+.callout-green{background:var(--green-light);border-left:4px solid var(--green);}.callout-green p{color:#1A3D2A;font-size:0.97rem;line-height:1.75;}
+.callout-teal{background:var(--teal-light);border-left:4px solid var(--teal);}.callout-teal p{color:#003A3A;font-size:0.97rem;line-height:1.75;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.5rem;display:block;}
+.callout-gold .callout-label{color:var(--gold3);}.callout-navy .callout-label{color:var(--gold);}.callout-red .callout-label{color:var(--red);}.callout-green .callout-label{color:var(--green);}.callout-teal .callout-label{color:var(--teal);}
+.framework-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+.fw-card{background:white;border:1px solid #DDD8CE;padding:1.25rem;border-radius:8px;}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold3);margin-bottom:6px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.fw-card-desc{font-size:0.9rem;color:var(--mid);line-height:1.6;}
+.acro-grid{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;border:1px solid #DDD8CE;border-radius:8px;overflow:hidden;}
+.acro-row{display:grid;grid-template-columns:52px 1fr;gap:0;border-bottom:1px solid #DDD8CE;}
+.acro-row:last-child{border-bottom:none;}
+.acro-letter{background:var(--navy);color:var(--gold);font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.acro-content{padding:0.9rem 1.1rem;background:white;}
+.acro-word{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold3);margin-bottom:3px;}
+.acro-desc{font-size:0.85rem;color:var(--mid);line-height:1.55;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold3);margin-bottom:0.65rem;margin-top:1.5rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #DDD8CE;border-radius:8px;padding:0.9rem 1rem;margin-bottom:8px;font-size:0.9rem;color:var(--mid);line-height:1.55;}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:3px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.score-compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+.sc-card{padding:1.25rem;border-radius:8px;}
+.sc-card.miss{background:var(--red-light);border:1px solid #F0C0C0;}
+.sc-card.hit{background:var(--green-light);border:1px solid #9DCCA8;}
+.sc-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:0.75rem;}
+.sc-card.miss .sc-title{color:var(--red);}.sc-card.hit .sc-title{color:var(--green);}
+.sc-body{font-size:0.87rem;line-height:1.6;}
+.sc-card.miss .sc-body{color:#6B1A1A;}.sc-card.hit .sc-body{color:#1A3D2A;}
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:3px solid var(--gold);background:var(--navy);gap:1rem;}
+.lnb-btn{background:rgba(255,255,255,0.08);border:2px solid rgba(201,168,76,0.4);padding:14px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--cream);transition:all 0.2s;white-space:nowrap;}
+.lnb-btn:hover{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled,.lnb-btn[disabled]{opacity:0.25;cursor:not-allowed;background:transparent;}
+.lnb-btn:disabled:hover,.lnb-btn[disabled]:hover{background:transparent;border-color:rgba(201,168,76,0.4);color:var(--cream);}
+.lnb-btn.primary{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:800;}
+.lnb-btn.primary:hover{background:#E0BC60;border-color:#E0BC60;}
+.lnb-info{text-align:center;flex:1;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--cream);}
+.lnb-num{font-size:0.85rem;color:var(--gold);font-family:'Cinzel',serif;letter-spacing:1px;}
+@media(max-width:900px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1rem 1.5rem;flex-wrap:wrap;}.framework-grid,.score-compare{grid-template-columns:1fr;}.nav-pills{display:none;}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-left"><div class="nav-brand">The Promotional Standard<span>Lieutenant Track · Chapter 11</span></div></div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Modern Fire Behavior</button>
+    <button class="nav-pill" onclick="showLesson(1)">Reading the Fire</button>
+    <button class="nav-pill" onclick="showLesson(2)">Tactical Decision-Making</button>
+    <button class="nav-pill" onclick="showLesson(3)">Flow Path + Ventilation</button>
+    <button class="nav-pill" onclick="showLesson(4)">Crew Resource Management</button>
+    <button class="nav-pill" onclick="showLesson(5)">AC Application</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+<div class="module-hero">
+  <div class="mh-inner">
+    <div class="mh-eyebrow">Chapter 11 · Lieutenant Track · Fire Officer I</div>
+    <h1 class="mh-title">Fire Behavior<br><em>+ Tactical Decision-Making</em></h1>
+    <p class="mh-sub">Modern fire behavior and the ventilation-controlled fire environment, reading fire indicators as a company officer, tactical decision-making under uncertainty, flow path and ventilation-controlled fire dynamics, and crew resource management — the fire behavior and tactical judgment curriculum for the Lieutenant who leads crews into hostile environments.</p>
+    <div class="mh-badges">
+      <span class="mh-badge badge-blue">Lieutenant Track</span>
+      <span class="mh-badge badge-nfpa">NFPA 1021 · FO I</span>
+    </div>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Before You Begin</div>
+      <div class="mh-thread-text">Module 25 covers ICS and incident command structure. This module covers the fire behavior knowledge and tactical judgment that informs the decisions inside that structure. The two are complementary — the company officer who understands both the organizational system and the fire behavior science is making better tactical decisions than the one who knows only one.</div>
+    </div>
+    <div class="mh-lesson-nav">
+      <button class="mh-lesson-btn active" onclick="showLesson(0)">1. Modern Fire Behavior</button>
+      <button class="mh-lesson-btn" onclick="showLesson(1)">2. Reading the Fire</button>
+      <button class="mh-lesson-btn" onclick="showLesson(2)">3. Tactical Decision-Making</button>
+      <button class="mh-lesson-btn" onclick="showLesson(3)">4. Flow Path + Ventilation</button>
+      <button class="mh-lesson-btn" onclick="showLesson(4)">5. Crew Resource Management</button>
+      <button class="mh-lesson-btn" onclick="showLesson(5)">6. AC Application</button>
+    </div>
+  </div>
+</div>
+<main>
+
+<!-- LESSON 1 -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 1 of 6</div>
+    <h1 class="lh-title">Modern Fire Behavior —<br><em>What Changed and Why It Matters</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">🔥 UL/NIST Research · Fuel Load · Ventilation</span></div>
+  </div>
+  <p>The fire behavior environment that today's company officers operate in is fundamentally different from the environment of twenty years ago — and many of the tactical assumptions built on the older environment are no longer valid. The UL Firefighter Safety Research Institute (FSRI) and NIST research programs have produced evidence that changed how the best departments train, deploy, and make tactical decisions. Understanding this research is not optional for the company officer — it is a survival competency.</p>
+  <h2>The Fuel Load Revolution</h2>
+  <p>Contemporary residential construction is filled with synthetic polymer-based materials — foam furniture cushions, synthetic carpeting and textiles, plastic fixtures, composite wood products — that burn hotter, faster, and with significantly higher heat release rates than the natural materials that dominated residential interiors 30 years ago. NIST research demonstrates that time to flashover in modern furnished rooms has decreased from approximately 17–29 minutes (legacy fuel loads) to less than 3–4 minutes. This is not an incremental change — it is a different fire environment.</p>
+  <div class="framework-grid">
+    <div class="fw-card">
+      <div class="fw-card-label">Legacy Fuel Load</div>
+      <div class="fw-card-title">Natural Materials, Slower Progression</div>
+      <div class="fw-card-desc">Wood furniture, cotton textiles, paper — organic materials with moderate heat release rates. Time to flashover: 17–29 minutes in research simulations. Historically provided meaningful time for interior attack and victim search.</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-card-label">Modern Fuel Load</div>
+      <div class="fw-card-title">Synthetic Materials, Rapid Progression</div>
+      <div class="fw-card-desc">Polyurethane foam, synthetic textiles, plastic composites — petrochemical-derived materials with heat release rates 2–4× higher than organic equivalents. Time to flashover: under 4 minutes. Fundamentally different survivability window for victims and responders.</div>
+    </div>
+  </div>
+  <h2>Ventilation-Controlled vs Fuel-Controlled Fires</h2>
+  <p>One of the most important conceptual shifts in modern fire behavior training is the recognition that most residential fires encountered by responding companies — after some period of development — are <em>ventilation-controlled</em> rather than fuel-controlled. This distinction has profound tactical implications.</p>
+  <div class="acro-grid">
+    <div class="acro-row">
+      <div class="acro-letter">FC</div>
+      <div class="acro-content">
+        <div class="acro-word">Fuel-Controlled Fire — Burning to Capacity</div>
+        <div class="acro-desc">A fire that is limited by the available fuel, not by available oxygen. Early in fire development, before significant heat buildup and oxygen depletion, fires are typically fuel-controlled. Adding ventilation to a fuel-controlled fire has limited effect on fire growth rate. Most fires at the very early stage of development are fuel-controlled.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">VC</div>
+      <div class="acro-content">
+        <div class="acro-word">Ventilation-Controlled Fire — Oxygen-Starved and Ready to React</div>
+        <div class="acro-desc">A fire that has consumed the available oxygen in its compartment and is now limited by air supply. The fire is hot, the structure is filled with unburned fuel gases, and it is waiting for oxygen. When oxygen is introduced — by opening a door, breaking a window, or making an entry — the fire responds immediately and dramatically. This is the fire environment that most companies encounter when arriving at a working residential structure fire.</div>
+      </div>
+    </div>
+  </div>
+  <div class="callout callout-red">
+    <span class="callout-label">The Tactical Implication — Why This Matters for Entry Decisions</span>
+    <p>In a ventilation-controlled fire environment, every opening created — every door opened, every window broken, every entry point made — is an oxygen introduction event. The company officer who opens the front door without understanding the fire's ventilation status may be introducing the oxygen that converts a contained, oxygen-starved fire into a rapid fire progression event that endangers the crew and eliminates any remaining victim survival window. Coordinated fire attack — water on the fire before or simultaneous with ventilation — is the research-supported tactical approach for ventilation-controlled environments. "Doors control fires" is one of the most operationally important findings from the UL research.</p>
+  </div>
+  <h2>Lightweight Construction — The Structural Failure Factor</h2>
+  <p>Modern lightweight wood truss construction — engineered wood I-joists, parallel chord trusses, metal plate connectors — provides efficient structural performance under normal load conditions but fails catastrophically and early under fire load. Lightweight truss failure can occur in as little as 5–10 minutes of fire involvement, compared to legacy dimensional lumber that may provide 15–20 minutes. The company officer who cannot distinguish between legacy construction and lightweight truss construction is making entry and bailout decisions without critical information.</p>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Fuel Load Change</span>
+  <div class="sbar-card">Legacy: 17–29 min to flashover. Modern: under 4 min. Synthetic polymer materials = 2–4× higher heat release rate. Fundamentally different survivability window.</div>
+  <span class="sbar-label">Fuel vs Ventilation Controlled</span>
+  <div class="sbar-card"><strong>Fuel-Controlled</strong>Early development. Limited by fuel. Ventilation has limited effect.</div>
+  <div class="sbar-card"><strong>Ventilation-Controlled</strong>What companies usually find. Oxygen-starved, loaded with unburned gases. Every opening = oxygen event. Doors control fires.</div>
+  <span class="sbar-label">Lightweight Construction</span>
+  <div class="sbar-card">Truss failure: 5–10 min under fire load (vs 15–20 min for dimensional lumber). Construction type identification is a tactical survival skill.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Previous</button>
+  <div class="lnb-info"><div class="lnb-name">Modern Fire Behavior</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Next: Reading the Fire →</button>
+</div>
+</div>
+
+<!-- LESSON 2 -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 2 of 6</div>
+    <h1 class="lh-title">Reading the Fire —<br><em>Size-Up Indicators for the Company Officer</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">👁️ Smoke Indicators · Thermal · Decision Data</span></div>
+  </div>
+  <p>Reading the fire — interpreting the observable indicators that reveal the fire's location, stage of development, ventilation status, and likely near-term behavior — is the company officer's most critical arriving competency. The indicators are visible on approach and on arrival. The officer who reads them accurately makes better entry, attack, ventilation, and bailout decisions. The one who doesn't is making those same decisions with less information.</p>
+  <h2>The Four Smoke Indicators</h2>
+  <div class="acro-grid">
+    <div class="acro-row">
+      <div class="acro-letter">VOL</div>
+      <div class="acro-content">
+        <div class="acro-word">Volume — How Much Smoke</div>
+        <div class="acro-desc">High smoke volume indicates significant fire involvement, large fuel load, or fire in a large compartment. Low volume may indicate early-stage fire or a smoldering fire not yet in open burning. Volume alone doesn't indicate fire stage — it must be interpreted with other indicators. Rapidly increasing volume on arrival signals accelerating fire development.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">VEL</div>
+      <div class="acro-content">
+        <div class="acro-word">Velocity — How Fast the Smoke Is Moving</div>
+        <div class="acro-desc">Smoke velocity reveals pressure differential — a high-pressure fire producing fast-moving, pulsing smoke. Lazy, slow smoke typically indicates a smoldering or oxygen-starved fire. Smoke that is being actively pushed out under pressure suggests a well-developed fire in a contained space — which is often a ventilation-controlled environment with significant stored energy. Bi-directional flow at an opening (smoke out high, air in low) indicates the opening is a supply point for an oxygen-limited fire.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">DEN</div>
+      <div class="acro-content">
+        <div class="acro-word">Density — How Thick the Smoke Is</div>
+        <div class="acro-desc">Dense, black smoke typically indicates petroleum-based materials burning — modern fuel loads. Thick, black, rolling smoke is a sign of significant fire involvement with synthetic fuel. Thin, grey or white smoke often indicates smoldering organic material or early-stage fire. Density combined with velocity provides the most informative picture of fire stage and energy state.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">CLR</div>
+      <div class="acro-content">
+        <div class="acro-word">Color — What's Burning</div>
+        <div class="acro-desc">Black smoke: petroleum products, synthetic materials, rubber. Grey smoke: wood, paper, smoldering materials. White smoke: water vapor (cooling or suppression in progress), or burning materials with high moisture content. Yellow/brown smoke: nitrocellulose materials, some fertilizers, or fire gas-rich environment approaching explosive range. Color provides fuel type indicators and, in the case of yellow-brown smoke, a serious warning about toxic and potentially explosive fire gas concentrations.</div>
+      </div>
+    </div>
+  </div>
+  <h2>Thermal Indicators — What Heat Tells You</h2>
+  <p>Thermal imaging cameras and physical heat indicators provide information the visible spectrum cannot. The company officer reads thermal indicators to assess fire location, extension, and the structural temperature environment before and during interior operations:</p>
+  <ul>
+    <li><strong>Door temperature before entry.</strong> The back-of-hand door test — touching the door with the back of the hand before opening — provides a rapid heat indicator. A hot door in a residential structure indicates significant fire on the other side. The thermal camera provides a more accurate picture.</li>
+    <li><strong>Ceiling and upper wall temperatures.</strong> In the thermal camera view, hot ceilings and upper walls with cooler floors indicate a thermal layering environment that may support limited interior operations. Uniform high temperatures (hot floor to ceiling) indicate an environment approaching untenable conditions throughout.</li>
+    <li><strong>Fire location identification.</strong> The thermal camera can identify fire location through walls and floors — critical for determining the seat of a hidden fire, confirming fire has extended beyond the room of origin, and checking for fire extension in concealed spaces.</li>
+  </ul>
+  <div class="callout callout-gold">
+    <span class="callout-label">The 360-Degree Size-Up Principle</span>
+    <p>The company officer who sizes up only the front of a structure is making entry and attack decisions with incomplete information. The 360-degree size-up — circling the structure before committing to an attack approach — provides: confirmation of the actual fire location (which may not be the side of origin report), identification of victims visible at windows, assessment of construction type and structural integrity, identification of hazards (propane tanks, utility lines, overhead hazards), and confirmation of access for ladder placement. The 30–60 seconds invested in a 360 has saved more lives than it has cost in delay.</p>
+  </div>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Four Smoke Indicators</span>
+  <div class="sbar-card"><strong>Volume</strong>How much. Rapid increase = accelerating development.</div>
+  <div class="sbar-card"><strong>Velocity</strong>How fast. Fast/pulsing = high pressure, significant fire. Bi-directional flow = supply point for oxygen-limited fire.</div>
+  <div class="sbar-card"><strong>Density</strong>How thick. Dense black = synthetic petroleum-based fuel load.</div>
+  <div class="sbar-card"><strong>Color</strong>What's burning. Black = synthetics. Yellow-brown = toxic/explosive fire gas warning.</div>
+  <span class="sbar-label">Thermal Indicators</span>
+  <div class="sbar-card">Door temp before entry · ceiling/floor temperature layering vs uniform (untenable) · fire location through walls. TIC is not optional equipment.</div>
+  <span class="sbar-label">360-Degree Principle</span>
+  <div class="sbar-card">Front-only size-up = incomplete information. 30–60 seconds for a complete 360 provides: actual fire location · victims visible · construction type · hazards · ladder access.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Modern Fire Behavior</button>
+  <div class="lnb-info"><div class="lnb-name">Reading the Fire</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Next: Tactical Decision-Making →</button>
+</div>
+</div>
+
+<!-- LESSON 3 -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 3 of 6</div>
+    <h1 class="lh-title">Tactical Decision-Making —<br><em>Under Uncertainty, Under Pressure</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">🧭 NDM · OODA · Offensive vs Defensive</span></div>
+  </div>
+  <p>Tactical decision-making at emergency incidents is not done in controlled conditions with complete information and unlimited time. It is done under time pressure, with incomplete information, in dynamic and potentially life-threatening environments. The company officer who understands how expert decision-making actually works — and who has developed the mental models and situational awareness that support quality decisions under pressure — performs better than the one relying only on procedure.</p>
+  <h2>Naturalistic Decision-Making — How Experienced Officers Actually Decide</h2>
+  <p>Gary Klein's research on naturalistic decision-making (NDM) found that experienced emergency responders rarely make decisions by generating multiple options and systematically comparing them. Instead, they use pattern recognition — matching current conditions to stored patterns from prior experience — to identify a single course of action that seems workable, then mentally simulate it to check for problems. This Recognition-Primed Decision (RPD) model describes how expert company officers actually function at incidents.</p>
+  <div class="framework-grid">
+    <div class="fw-card">
+      <div class="fw-card-label">Pattern Recognition</div>
+      <div class="fw-card-title">The Expert's Primary Tool</div>
+      <div class="fw-card-desc">The experienced company officer arriving at a working structure fire is comparing what they observe (smoke indicators, construction type, occupant reports, fire location) against a mental library of prior incidents. When the current pattern matches a stored pattern, the associated tactical response activates. This is fast, effective, and appropriate for conditions that match prior experience.</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-card-label">Mental Simulation</div>
+      <div class="fw-card-title">The Validation Check</div>
+      <div class="fw-card-desc">Before committing to a course of action, the experienced officer runs a rapid mental simulation: "If I do X, what happens?" If the simulation runs smoothly, they proceed. If it reveals a problem, they modify or try an alternative. This is not slow deliberation — it is a rapid mental check that typically takes seconds, not minutes.</div>
+    </div>
+  </div>
+  <h2>The Offensive-Defensive Decision — The Most Consequential Tactical Judgment</h2>
+  <p>The decision to conduct offensive interior operations or to operate defensively is the most consequential tactical judgment the company officer makes at a structural fire. It cannot be delegated, and it cannot be made by default — defaulting to offensive operations because "that's what we do" is not a tactical decision.</p>
+  <div class="acro-grid">
+    <div class="acro-row">
+      <div class="acro-letter">OFF</div>
+      <div class="acro-content">
+        <div class="acro-word">Offensive Mode — Conditions That Support Interior Attack</div>
+        <div class="acro-desc">Offensive interior attack is appropriate when: the structure can support interior operations (not compromised lightweight construction under fire), there are known or presumed victims who may be viable, the fire is manageable with available resources, and the thermal environment in the access path is survivable. The officer who enters without assessing these conditions is not operating offensively — they are operating unknowingly.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">DEF</div>
+      <div class="acro-content">
+        <div class="acro-word">Defensive Mode — Conditions That Require Exterior Operations</div>
+        <div class="acro-desc">Defensive exterior operations are required when: structural integrity is compromised (lightweight construction with significant fire involvement), the fire has progressed beyond interior containment possibility, the thermal environment is untenable throughout, or victim viability is extremely unlikely given fire progression. The decision to go defensive is not failure — it is the most important safety decision a company officer makes, and it requires the same active judgment that the offensive decision requires.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">TRN</div>
+      <div class="acro-content">
+        <div class="acro-word">Transitional Attack — The Research-Supported Hybrid</div>
+        <div class="acro-desc">UL FSRI research validated transitional attack as an effective option in ventilation-controlled fire environments: apply water through an exterior opening (window or door) before entry to reduce thermal energy, knock down the fire gas layer, and convert the ventilation-controlled environment to a safer interior attack environment. Transitional attack reduces the oxygen-introduction event's impact and provides a more survivable interior environment for entry. It is not a replacement for interior attack — it is a setup for it.</div>
+      </div>
+    </div>
+  </div>
+  <div class="callout callout-gold">
+    <span class="callout-label">The OODA Loop at the Company Level</span>
+    <p>Colonel John Boyd's Observe-Orient-Decide-Act (OODA) loop describes the decision cycle that determines tactical advantage. The company officer who cycles through OODA faster — who observes more accurately, orients their mental model more correctly, decides more efficiently, and acts more effectively — is making better tactical decisions under time pressure. The key insight: the Orient phase, where observations are processed through prior knowledge and experience, is where tactical expertise lives. Training and experience build the mental models that make orientation accurate and fast.</p>
+  </div>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Naturalistic Decision-Making</span>
+  <div class="sbar-card">Pattern recognition + mental simulation. Not: generate options, compare systematically. Expert fire officers match patterns, simulate the chosen course, modify if simulation fails.</div>
+  <span class="sbar-label">Offensive vs Defensive</span>
+  <div class="sbar-card"><strong>Offensive</strong>Structural integrity + viable victims + manageable fire + survivable access. All four assessed — not assumed.</div>
+  <div class="sbar-card"><strong>Defensive</strong>Required when structural integrity compromised, fire beyond interior containment, untenable environment, victim non-viability. Active decision — not default.</div>
+  <div class="sbar-card"><strong>Transitional Attack</strong>Water exterior before entry in VC environments. Reduces thermal energy and oxygen-introduction impact. Setup for interior attack.</div>
+  <span class="sbar-label">OODA at Company Level</span>
+  <div class="sbar-card">Observe · Orient · Decide · Act. Orient phase = where expertise lives. Training and experience build the mental models that make orientation accurate and fast.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Reading the Fire</button>
+  <div class="lnb-info"><div class="lnb-name">Tactical Decision-Making</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Next: Flow Path + Ventilation →</button>
+</div>
+</div>
+
+<!-- LESSON 4 -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 4 of 6</div>
+    <h1 class="lh-title">Flow Path + Ventilation —<br><em>Coordinating the Most Consequential Variable</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">🌬️ Flow Path · Coordinated Ventilation · PPV</span></div>
+  </div>
+  <p>Flow path — the movement of gases from high pressure (the fire) to low pressure (the exhaust point) — is the single most consequential variable in modern fireground tactical decision-making, according to UL FSRI research. The fire will move gases along the flow path. Anyone in the flow path is in danger. The company officer who understands and controls flow path is managing the most critical tactical variable at a residential structure fire.</p>
+  <h2>Flow Path Fundamentals</h2>
+  <p>When a fire is burning in an enclosed compartment, gases move from the hot, high-pressure fire area toward any available lower-pressure exhaust point. When a door is opened to a burning compartment, two things happen simultaneously: air flows in at the bottom (the intake), and hot fire gases flow out at the top (the exhaust). The space between the intake and exhaust — the flow path — is the most dangerous zone on the fireground because it carries hot gases, unburned fuel, and flames toward any exhaust point.</p>
+  <div class="acro-grid">
+    <div class="acro-row">
+      <div class="acro-letter">UNI</div>
+      <div class="acro-content">
+        <div class="acro-word">Unidirectional Flow Path — Single Exhaust Point</div>
+        <div class="acro-desc">When a compartment has one opening, gases flow in at the bottom and out at the top of the same opening (bi-directional flow visible at the opening). This is a relatively contained fire environment — the flow path stays at the opening. Interior conditions may be survivable if the hot gas layer is above working height.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">BID</div>
+      <div class="acro-content">
+        <div class="acro-word">Bidirectional / Ventilated Flow Path — Two or More Openings</div>
+        <div class="acro-desc">When a second opening is created (a door is opened on the other side of the structure, a window is broken for ventilation), hot gases begin flowing from the fire toward the new exhaust point. Anyone between the fire and the new exhaust point — which is often the entry team — is now in the flow path. This is the mechanism that has contributed to multiple firefighter fatalities and near-misses when ventilation was opened without coordinating with the attack team.</div>
+      </div>
+    </div>
+  </div>
+  <h2>Coordinated Ventilation — The Non-Negotiable Tactical Principle</h2>
+  <p>Coordinated ventilation means that ventilation openings are created in coordination with water application — not before, not independently. The principle: do not create a flow path that draws fire toward the attack team without having water ready to intercept that flow. In practice:</p>
+  <ul>
+    <li><strong>Ventilation before attack increases fire spread and endangers the attack team.</strong> The classic "vent-enter-search" model creates the flow path condition before there is water to manage it.</li>
+    <li><strong>Attack before ventilation in a ventilation-controlled environment can stall the fire</strong> — but smoke conditions worsen rapidly if venting is delayed too long.</li>
+    <li><strong>Coordinated simultaneous attack and ventilation</strong> — water on the fire at the same time exhaust ventilation is opened — is the research-supported approach for ventilation-controlled residential fires.</li>
+  </ul>
+  <div class="callout callout-red">
+    <span class="callout-label">The Freelance Ventilation Problem</span>
+    <p>One of the most dangerous fireground dynamics is ventilation performed independently without coordination with the attack team. The crew member who breaks a window "to improve visibility" or the truck company that opens the roof before the engine crew has water on the fire has created a flow path that moves fire gases toward whoever is between the fire and the new opening. This freelancing has contributed to multiple LODDs. The company officer enforces coordination discipline — no ventilation without communication with the attack team regarding water status.</p>
+  </div>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Flow Path</span>
+  <div class="sbar-card">High pressure (fire) → low pressure (exhaust). Gases move along this path. Anyone in the flow path is in danger. Control the flow path = control the most critical fireground variable.</div>
+  <span class="sbar-label">Unidirectional vs Bidirectional</span>
+  <div class="sbar-card"><strong>One opening</strong>Bi-directional flow at that opening. Relatively contained.</div>
+  <div class="sbar-card"><strong>Two openings</strong>Flow path established between fire and new exhaust. Attack team may be in that path. This is the deadly scenario.</div>
+  <span class="sbar-label">Coordinated Ventilation</span>
+  <div class="sbar-card">Water on the fire at the same time exhaust opens. Do not create flow path without water ready to intercept it. No freelance ventilation — ever. Communication between vent crew and attack crew is non-negotiable.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Tactical Decision-Making</button>
+  <div class="lnb-info"><div class="lnb-name">Flow Path + Ventilation</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Next: Crew Resource Management →</button>
+</div>
+</div>
+
+<!-- LESSON 5 -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 5 of 6</div>
+    <h1 class="lh-title">Crew Resource Management —<br><em>Human Factors on the Fireground</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">🤝 CRM · Situational Awareness · Error Prevention</span></div>
+  </div>
+  <p>Crew Resource Management (CRM) — adapted from aviation safety research — addresses the human factors that contribute to error in high-stakes, time-compressed environments. The fireground is one of those environments. Research on firefighter fatalities and near-misses consistently identifies human factors — communication failures, situational awareness breakdown, authority gradient problems, and task fixation — as contributing causes. CRM provides the framework for managing these factors at the company level.</p>
+  <h2>The Five CRM Principles for the Company Officer</h2>
+  <div class="acro-grid">
+    <div class="acro-row">
+      <div class="acro-letter">SA</div>
+      <div class="acro-content">
+        <div class="acro-word">Situational Awareness — Knowing What's Happening Around You</div>
+        <div class="acro-desc">Mica Endsley's three-level SA model: perception (what am I observing?), comprehension (what does it mean?), and projection (what is likely to happen next?). Task fixation — becoming so focused on a single task that awareness of the broader environment is lost — is the most common SA failure on the fireground. The company officer who is dragging line and stops periodically to reassess the thermal environment, smoke conditions, and crew status is maintaining SA. The one who focuses only on the line advancement is losing it.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">COM</div>
+      <div class="acro-content">
+        <div class="acro-word">Communication — Closed-Loop and Assertive</div>
+        <div class="acro-desc">Closed-loop communication — the recipient confirms the message by repeating it — reduces misunderstanding in high-noise environments. Assertive communication — the willingness to speak up about safety concerns regardless of authority gradient — prevents the authority gradient problem where crew members don't correct a senior officer's error because of hierarchy. The company officer who creates a culture of assertive communication — who explicitly welcomes corrections and safety calls from any crew member — is reducing error risk through communication design.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">TWO</div>
+      <div class="acro-content">
+        <div class="acro-word">Two-In Two-Out — The Regulatory and Tactical Standard</div>
+        <div class="acro-desc">OSHA's two-in-two-out rule (29 CFR 1910.134) requires that when two or more firefighters enter an immediately dangerous to life and health (IDLH) atmosphere, at least two personnel must remain outside for rescue purposes before the first two enter. This is not just a regulatory requirement — it is the minimum CRM system for interior firefighting. The two crew members entering maintain accountability to each other; the two outside maintain accountability to the interior team. The company officer ensures this system is in place before interior operations begin.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">PAR</div>
+      <div class="acro-content">
+        <div class="acro-word">Personnel Accountability — Knowing Where Everyone Is</div>
+        <div class="acro-desc">Firefighter accountability systems — passport systems, electronic accountability, PAR checks — provide the company officer with a current inventory of who is inside the structure and where. PAR (Personnel Accountability Report) checks at defined intervals — when conditions change, at set time benchmarks, or when ordered by command — confirm crew status. The company officer who cannot account for all personnel at any given moment has lost a critical safety system.</div>
+      </div>
+    </div>
+    <div class="acro-row">
+      <div class="acro-letter">BRT</div>
+      <div class="acro-content">
+        <div class="acro-word">Briefings and Debriefings — Before and After</div>
+        <div class="acro-desc">Pre-incident briefings establish shared mental models — everyone on the crew understands the plan, the hazards, and the emergency procedures before entering. Post-incident debriefings identify what went well, what didn't, and what needs to change. The company officer who consistently conducts both is building the crew's CRM culture through repetition.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">CRM Five Principles</span>
+  <div class="sbar-card"><strong>Situational Awareness</strong>Perception → Comprehension → Projection. Task fixation is the most common SA failure. Periodic reassessment.</div>
+  <div class="sbar-card"><strong>Communication</strong>Closed-loop + assertive. Welcome corrections from any crew member. Authority gradient kills people.</div>
+  <div class="sbar-card"><strong>Two-In Two-Out</strong>OSHA 1910.134. Minimum CRM system for IDLH. Two in + two outside = mutual accountability.</div>
+  <div class="sbar-card"><strong>Personnel Accountability</strong>PAR checks at intervals and when conditions change. Cannot account for all personnel = lost safety system.</div>
+  <div class="sbar-card"><strong>Briefings + Debriefings</strong>Shared mental model before · what changed after. Builds CRM culture through repetition.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Flow Path + Ventilation</button>
+  <div class="lnb-info"><div class="lnb-name">Crew Resource Management</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Next: AC Application →</button>
+</div>
+</div>
+
+<!-- LESSON 6 -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+  <div class="lesson-header">
+    <div class="lh-eyebrow">Chapter 11 · Lesson 6 of 6 · Assessment Application</div>
+    <h1 class="lh-title">Assessment Center Application —<br><em>Fire Behavior in Oral Board Scenarios</em></h1>
+    <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">🎯 Scoring + Scenario Practice</span></div>
+  </div>
+  <p>Fire behavior and tactical decision-making most often appear in assessment center scenarios as part of supervisory judgment or leadership philosophy questions — not as standalone technical assessments. The 5/5 response integrates fire behavior knowledge with leadership values, demonstrating that the candidate is not just technically competent but understands how technical knowledge connects to crew safety and leadership responsibility.</p>
+  <h2>Practice Scenario — Veteran Firefighter Wants to Make Entry</h2>
+  <div class="callout callout-navy">
+    <span class="callout-label">Oral Board Prompt</span>
+    <p>"You arrive as the first-due Lieutenant on a residential structure fire. Smoke conditions are heavy black, high velocity, and bi-directional at the front door — indicators consistent with a ventilation-controlled fire environment. Your most experienced firefighter, a 15-year veteran, tells you the neighbor reported an elderly resident was last seen inside and urges you to make entry immediately. How do you respond?"</p>
+  </div>
+  <div class="score-compare">
+    <div class="sc-card miss">
+      <div class="sc-title">3/5 Response</div>
+      <div class="sc-body">"I would size up the structure, confirm we have the right building, and make entry with my team. Life safety is our priority and we have a reported victim. I would ensure we have water on the line and maintain communication with my crew throughout the operation."</div>
+    </div>
+    <div class="sc-card hit">
+      <div class="sc-title">5/5 Response</div>
+      <div class="sc-body">"The smoke conditions I'm observing — high-velocity, dense black, bi-directional flow at the front door — are the indicators of a ventilation-controlled fire with significant stored thermal energy. Opening that door for entry without water ready is an oxygen-introduction event in a loaded fire environment.<br><br>My response to the veteran: 'I hear you, and I want to get in there too. We do this right — water on the fire before we open that door.' I'm not debating it; I'm directing it. The 30-second difference between entry without water and entry after transitional attack is not what determines whether that victim is viable — the fire progression during our response time determined that. What it does determine is whether my crew comes home.<br><br>Specific actions: I'm ordering a transitional water application through a window — knock down the fire and reduce thermal energy — before the front door is opened for entry. Simultaneously I'm completing the 360, confirming two-in two-out, and requesting additional resources for the search given the reportedoccupant. The entry happens — right behind the water.<br><br>On the veteran's input: I value his experience and I'm taking the report seriously. But his urgency cannot override my responsibility for the crew's safety. A good officer doesn't choose between victim rescue and crew safety — they find the approach that protects both. Transitional attack is that approach in this environment."</div>
+    </div>
+  </div>
+  <div class="callout callout-gold">
+    <span class="callout-label">Chapter 11 Complete</span>
+    <p>Modern fire behavior knowledge is not supplemental to tactical leadership — it is the foundation of it. The company officer who understands why ventilation-controlled fires behave the way they do, who reads fire indicators accurately, who coordinates ventilation discipline, and who maintains crew situational awareness is not just a safer officer — they are a more effective one. The science and the leadership are the same discipline.</p>
+  </div>
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5/5 Pattern</span>
+  <div class="sbar-card">Names specific indicators and their meaning · transitional attack before entry · doesn't debate the veteran but directs clearly · explains why timing doesn't determine victim viability · explicitly names crew safety as the reason · "good officer doesn't choose — they find both."</div>
+  <span class="sbar-label">3/5 Gap</span>
+  <div class="sbar-card">"Life safety is our priority" without fire behavior analysis = instinct, not judgment. Doesn't name indicators, doesn't address VC fire dynamics, doesn't explain the transitional attack rationale.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Crew Resource Management</button>
+  <div class="lnb-info"><div class="lnb-name">AC Application</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Module Complete ✓</button>
+</div>
+</div>
+
+</main>
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+const mbs=document.querySelectorAll('.mh-lesson-btn');
+function showLesson(n){ls.forEach(l=>l.classList.remove('active'));ps.forEach(p=>p.classList.remove('active'));mbs.forEach(m=>m.classList.remove('active'));if(ls[n])ls[n].classList.add('active');if(ps[n])ps[n].classList.add('active');if(mbs[n])mbs[n].classList.add('active');cur=n;window.scrollTo({top:0,behavior:'smooth'});document.getElementById('prog').style.width='0%';}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{const s=document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-window.innerHeight;if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>
