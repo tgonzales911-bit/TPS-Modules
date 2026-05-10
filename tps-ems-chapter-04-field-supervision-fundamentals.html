@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 4 — Field Supervision Fundamentals | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* ICS CHART */
+.ics-chart{padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:1px;}
+.ics-row{display:grid;align-items:stretch;}
+.ics-command{background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);padding:0.9rem 1.25rem;text-align:center;margin-bottom:1px;}
+.ics-command-title{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.ics-command-desc{font-size:0.88rem;color:var(--on-dark-2);margin-top:4px;}
+.ics-sections{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:1px;}
+.ics-section{background:rgba(42,96,144,0.15);border:1px solid var(--ems-border);padding:0.85rem 0.9rem;text-align:center;}
+.ics-section-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ems-text);font-weight:700;margin-bottom:4px;}
+.ics-section-desc{font-size:0.82rem;color:var(--on-dark-3);line-height:1.5;}
+.ics-ops{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:1px;}
+.ics-branch{background:rgba(26,92,58,0.15);border:1px solid rgba(26,92,58,0.3);padding:0.85rem 0.9rem;text-align:center;}
+.ics-branch-ems{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);}
+.ics-branch-title{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#60D090;font-weight:700;margin-bottom:4px;}
+.ics-branch-title-ems{color:var(--gold);}
+.ics-branch-desc{font-size:0.82rem;color:var(--on-dark-3);line-height:1.5;}
+.ics-ems-sub{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:1px;}
+.ics-ems-cell{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.18);padding:0.8rem;text-align:center;}
+.ics-ems-cell-title{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:3px;}
+.ics-ems-cell-desc{font-size:0.8rem;color:var(--on-dark-2);line-height:1.45;}
+/* PDCA */
+.pdca-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.pdca-cell{background:var(--navy-deep);padding:1.3rem 1.4rem;}
+.pdca-letter{font-family:'EB Garamond',serif;font-size:2.8rem;font-weight:800;line-height:1;margin-bottom:4px;}
+.pdca-word{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:7px;}
+.pdca-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.pdca-ems{font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:6px;}
+/* START TRIAGE */
+.triage-grid{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.triage-row{display:grid;grid-template-columns:90px 1fr;gap:1px;}
+.triage-tag{padding:1rem;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;}
+.triage-content{background:var(--navy-deep);padding:1rem 1.25rem;}
+.triage-name{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.triage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.fw-grid,.fw-grid-3,.pdca-grid,.ics-sections,.ics-ops,.ics-ems-sub{grid-template-columns:1fr;}.triage-row{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}.level-key-grid{grid-template-columns:auto 1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">ICS / NIMS</button>
+    <button class="nav-pill" onclick="showLesson(1)">Scene Command</button>
+    <button class="nav-pill" onclick="showLesson(2)">System Status</button>
+    <button class="nav-pill" onclick="showLesson(3)">Resource Management</button>
+    <button class="nav-pill" onclick="showLesson(4)">MCI Operations</button>
+    <button class="nav-pill" onclick="showLesson(5)">Admin &amp; PDCA</button>
+    <button class="nav-pill" onclick="showLesson(6)">Active Shooter · NFPA 3000</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 4 · NEMSMA Pillar 4</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · Task Management</div>
+    <h1 class="mh-title"><em>Field Supervision</em><br>Fundamentals</h1>
+    <p class="mh-sub">The Supervising EMS Officer's operational world — command architecture, scene leadership, system status management, resource accountability, MCI operations, and the problem-solving framework that runs underneath all of it. This is where leadership values meet operational execution.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Seven lessons. ICS/NIMS — the command architecture every EMS officer operates within. Scene Command — size-up, establishing command, transferring command. System Status Management — the deployment science behind EMS response. Resource Management — accountability from unit to mutual aid. MCI Operations — START, SALT, and RAMP triage, treatment and transport at the supervising level. Administrative Responsibilities and the PDCA problem-solving framework. NFPA 3000 Active Shooter/Hostile Event Response — the Rescue Group Supervisor role and Rescue Task Force deployment.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — ICS/NIMS ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 1 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">ICS / NIMS —<br><em>The Command Architecture</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Task Management</span><span class="lh-meta-item">Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>The Incident Command System is not an EMS invention. It was developed in the 1970s after catastrophic multi-agency wildfire responses exposed the organizational failures that happen when multiple agencies respond to the same incident without a shared command structure. Every public safety discipline in the United States now operates within ICS. NIMS — the National Incident Management System — is the federal framework that codifies ICS as the national standard.</p>
+
+<p>For EMS officers, ICS literacy is non-negotiable for two reasons. First, every significant EMS incident — and every MCI — operates within an ICS structure. An EMS officer who cannot function within that structure is an operational liability at the scene, regardless of their clinical skill. Second, oral board assessors at every level probe ICS knowledge directly. Bucket 13 — Situational / Scene questions almost always embed an ICS element. The candidate who can name their position, describe their span of control, and articulate how they would coordinate within a unified command structure separates themselves immediately.</p>
+
+<!-- LEVEL KEY — First S/M/E usage in this chapter -->
+<div class="level-key">
+  <span class="level-key-label">Level Key — How to Read NEMSMA Competency Descriptions</span>
+  <p class="level-key-intro">Throughout this chapter, NEMSMA competencies are described at three officer levels. The following shorthand is used throughout:</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Front-line supervisor. Direct oversight of EMS crews in the field. Also known as: EMS Lieutenant, Field Supervisor, Shift Supervisor.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Middle management. Division or organizational component leadership. Also known as: EMS Captain, Operations Manager, Division Chief.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Senior leadership. Organization-wide strategy and direction. Also known as: EMS Chief, Director, Deputy Chief.</span>
+  </div>
+  <div class="level-key-note">This chapter is primarily Supervising Officer content — it is the operational foundation on which Managing and Executive competencies are built. All three levels are addressed where they differ.</div>
+</div>
+
+<h2>The Five ICS Sections — EMS Officer Roles</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ICS STRUCTURE — EMS OFFICER POSITIONS</span>
+    <div class="ig-title">The Five ICS Sections and Where EMS Officers Operate</div>
+    <div class="ig-sub">EMS officers operate primarily within Operations — specifically within the EMS Branch. At larger incidents and at Managing/Executive levels, EMS officers may fill Command and General Staff positions.</div>
+  </div>
+  <div class="ics-chart">
+    <div class="ics-command">
+      <div class="ics-command-title">Incident Command</div>
+      <div class="ics-command-desc" style="color:var(--on-dark-2);">Incident Commander (IC) · Public Information Officer (PIO) · Safety Officer · Liaison Officer. <strong style="color:var(--gold);">E-level EMS officers</strong> may serve as IC on EMS-primary incidents. <strong style="color:var(--gold);">M-level officers</strong> may serve as Safety or Liaison.</div>
+    </div>
+    <div class="ics-sections">
+      <div class="ics-section" style="border-top:3px solid var(--gold);">
+        <div class="ics-section-title" style="color:var(--gold);">Operations</div>
+        <div class="ics-section-desc">Where EMS Branch lives. <strong style="color:var(--ems-text);">Primary S/M</strong> assignment. Tactical field operations.</div>
+      </div>
+      <div class="ics-section">
+        <div class="ics-section-title">Planning</div>
+        <div class="ics-section-desc">Situation status, resource tracking, IAP development. <strong style="color:var(--ems-text);">M-level</strong> may serve as Planning Section Chief on EMS incidents.</div>
+      </div>
+      <div class="ics-section">
+        <div class="ics-section-title">Logistics</div>
+        <div class="ics-section-desc">Supply, facilities, communications, medical support for responders. EMS officers may manage Medical Unit for responder rehab.</div>
+      </div>
+      <div class="ics-section">
+        <div class="ics-section-title">Finance / Admin</div>
+        <div class="ics-section-desc">Cost tracking, procurement, time recording. <strong style="color:#E87070;">E-level</strong> accountability for post-incident financial documentation.</div>
+      </div>
+    </div>
+    <div style="padding:6px 0 0;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding-left:2px;margin-top:4px;">Operations Section → EMS Branch</div>
+    <div class="ics-ops" style="margin-top:2px;">
+      <div class="ics-branch">
+        <div class="ics-branch-title">Fire Branch</div>
+        <div class="ics-branch-desc" style="font-size:0.82rem;color:var(--on-dark-3);">Suppression, rescue, extrication operations under Operations Section Chief</div>
+      </div>
+      <div class="ics-branch ics-branch-ems">
+        <div class="ics-branch-title ics-branch-title-ems">EMS Branch ◆</div>
+        <div class="ics-branch-desc" style="font-size:0.82rem;color:var(--on-dark-2);">EMS Branch Director (M/E) oversees all EMS operations. Triage, Treatment, and Transport Groups/Divisions report here.</div>
+      </div>
+      <div class="ics-branch">
+        <div class="ics-branch-title">Law Branch</div>
+        <div class="ics-branch-desc" style="font-size:0.82rem;color:var(--on-dark-3);">Law enforcement operations, perimeter, scene security</div>
+      </div>
+    </div>
+    <div style="padding:6px 0 0;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding-left:2px;margin-top:4px;">EMS Branch → Three Groups</div>
+    <div class="ics-ems-sub" style="margin-top:2px;">
+      <div class="ics-ems-cell">
+        <div class="ics-ems-cell-title">Triage Group</div>
+        <div class="ics-ems-cell-desc">Primary patient assessment and tagging. START/JumpSTART triage. Feeds patient count and acuity to Treatment.</div>
+      </div>
+      <div class="ics-ems-cell">
+        <div class="ics-ems-cell-title">Treatment Group</div>
+        <div class="ics-ems-cell-desc">Immediate, Delayed, Minor treatment areas. Advanced interventions before transport. Medical Officer coordinates clinical decisions.</div>
+      </div>
+      <div class="ics-ems-cell">
+        <div class="ics-ems-cell-title">Transport Group</div>
+        <div class="ics-ems-cell-desc">Ambulance staging, hospital destination coordination, patient tracking, transport documentation, radio communications to receiving facilities.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common ICS failure in EMS oral boards is not knowing the positions — it is describing a response that bypasses the ICS structure. An officer who says "I would call the hospital directly" in a unified command scenario is demonstrating ICS non-compliance. All external communications flow through the designated positions in the command structure.</div>
+</div>
+
+<h2>The Six ICS Principles — Know Them Cold</h2>
+<p>Every oral board candidate should be able to name and briefly define the six foundational principles of ICS without hesitation. These are the knowledge-level requirements that underpin every scenario-based (Bucket 13 — Situational / Scene) ICS question.</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 1</div>
+    <div class="fw-card-title">Unity of Command</div>
+    <div class="fw-card-desc">Every individual reports to exactly one supervisor. No split loyalties. No conflicting instructions. The single most important principle for reducing communication failure on complex scenes.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 2</div>
+    <div class="fw-card-title">Span of Control</div>
+    <div class="fw-card-desc">One supervisor manages 3–7 subordinates. The ideal is five. When span exceeds seven, performance degrades and communication fails. Expanding the ICS structure (adding supervisory positions) maintains appropriate span.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 3</div>
+    <div class="fw-card-title">Unified Command</div>
+    <div class="fw-card-desc">When multiple agencies with jurisdictional authority share a scene, they establish a Unified Command — a shared command structure that allows coordinated action without any single agency relinquishing authority.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 4</div>
+    <div class="fw-card-title">Modular Organization</div>
+    <div class="fw-card-desc">ICS expands and contracts based on incident complexity. Only the sections needed are activated. A single-unit EMS response has no sections — just the IC. A major MCI activates all five sections.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 5</div>
+    <div class="fw-card-title">Common Terminology</div>
+    <div class="fw-card-desc">All agencies use the same position titles, facility names, and resource designations. This eliminates confusion when multiple agencies are working the same incident. ICS terminology is not negotiable at a multi-agency scene.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Principle 6</div>
+    <div class="fw-card-title">Integrated Communications</div>
+    <div class="fw-card-desc">A communications plan is established at the beginning of every incident. EMS units communicate on designated EMS tactical channels. The EMS Branch communicates with Command on the command channel. No freelancing on undesignated channels.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Oral Board ICS Response Formula</span>
+  <p>When a Bucket 13 — Situational / Scene question involves a multi-agency or complex incident, name three things explicitly: your ICS position, your span of control, and your communications plan. "Upon arrival, I would establish/assume [position]. My span of control is [X units/personnel]. I would communicate with Command on [channel] and with my resources on [EMS tactical channel]." This three-part formula signals ICS fluency in under thirty seconds.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">ICS Sections</span>
+  <div class="sbar-card"><strong>Command</strong>IC + PIO + Safety + Liaison. E-level may serve as IC on EMS-primary incidents.</div>
+  <div class="sbar-card accent-gold"><strong>Operations ◆ EMS Home</strong>EMS Branch lives here. Primary S/M assignment.</div>
+  <div class="sbar-card"><strong>Planning</strong>Situation status + IAP. M-level may lead on EMS incidents.</div>
+  <div class="sbar-card"><strong>Logistics</strong>Supply, facilities, responder Medical Unit.</div>
+  <div class="sbar-card"><strong>Finance / Admin</strong>Post-incident cost accountability.</div>
+  <span class="sbar-label">EMS Branch Groups</span>
+  <div class="sbar-card accent-ems"><strong>Triage</strong>Assessment + tagging. START/JumpSTART. Feeds Treatment.</div>
+  <div class="sbar-card accent-ems"><strong>Treatment</strong>Immediate, Delayed, Minor areas. Clinical interventions before transport.</div>
+  <div class="sbar-card accent-ems"><strong>Transport</strong>Staging, hospital coordination, patient tracking, documentation.</div>
+  <span class="sbar-label">6 ICS Principles</span>
+  <div class="sbar-card"><strong>Unity of Command</strong>One supervisor per person. No split loyalties.</div>
+  <div class="sbar-card"><strong>Span of Control</strong>3–7 per supervisor. Ideal is five.</div>
+  <div class="sbar-card"><strong>Unified Command</strong>Multi-agency authority. Shared structure.</div>
+  <div class="sbar-card"><strong>Modular Organization</strong>Expands and contracts with incident complexity.</div>
+  <div class="sbar-card"><strong>Common Terminology</strong>Same position titles, facility names, resource designations.</div>
+  <div class="sbar-card"><strong>Integrated Comms</strong>Communications plan at incident start. No freelancing.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 3</button>
+  <div class="lnb-info"><div class="lnb-name">ICS / NIMS — The Command Architecture</div><div class="lnb-num">Lesson 1 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Scene Command →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — SCENE COMMAND ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 2 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Scene Command at<br><em>the Supervising Level</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Task Management</span><span class="lh-meta-item">Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>Scene command at the Supervising EMS Officer level is different from patient care. The Supervising Officer who arrives on scene and defaults to clinical work — intubating, starting lines, running a code — is abandoning command. In EMS culture, this is called "getting sucked into the patient." It is the single most common scene management failure for newly promoted supervisors, and it is exactly what assessors probe for in Bucket 13 — Situational / Scene scenarios.</p>
+
+<p>The job of the scene commander is to see the whole incident, not to provide direct patient care. That is what the crews are for. The supervisor provides clinical oversight, manages resources, coordinates communications, and ensures the ICS structure is functioning — while remaining available to make command decisions as the scene evolves.</p>
+
+<h2>The Scene Command Sequence — Every Response</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SCENE COMMAND SEQUENCE — SUPERVISING OFFICER</span>
+    <div class="ig-title">Seven Steps from Arrival to Established Command</div>
+    <div class="ig-sub">This sequence applies to every response where the Supervising EMS Officer is assuming or establishing command. In oral boards, walk through these steps explicitly — it signals systematic command thinking, not just clinical reaction.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">01</div>
+      <div>
+        <div class="ig-acro-word">Arrival Report — Announce Your Presence and Position</div>
+        <div class="ig-acro-desc">Before leaving the vehicle, transmit an arrival report. State your unit, your location, your initial scene conditions, and whether you are assuming command. "EMS Supervisor 1 on scene at [address]. I have a working structure fire with reported entrapment. EMS Supervisor 1 is assuming EMS Command." This establishes your position in the ICS structure and puts Dispatch and responding units on notice.</div>
+        <div class="ig-acro-ems">Oral board application: "My first action upon arrival would be to transmit an arrival report and establish my command position before making patient contact."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">02</div>
+      <div>
+        <div class="ig-acro-word">Size-Up — 360-Degree Assessment Before Action</div>
+        <div class="ig-acro-desc">Conduct a rapid 360-degree size-up of the scene. Number of patients, mechanism of injury/illness, scene safety hazards, resources needed versus resources on scene. The COAL WAS WEALTH mnemonic captures the full size-up framework (Construction, Occupancy, Apparatus, Life safety, Water, Auxiliary appliances, Street conditions, Weather, Exposures, Area, Location, Time, Height). In EMS, the size-up drives the initial resource request and triage category estimate.</div>
+        <div class="ig-acro-ems">A supervisor who skips the size-up and begins patient care immediately has lost situational awareness of the whole scene. The first patient you touch is the last thing you see.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">03</div>
+      <div>
+        <div class="ig-acro-word">Initial Resource Request — Ask Before You Need</div>
+        <div class="ig-acro-desc">Based on the size-up, request additional resources before the scene demands them. An MCI with 8 patients requires more units than you have — request mutual aid now, not after your on-scene units are committed to patients. Resource requests go through the ICS structure: EMS Branch to Operations to Command or directly to Dispatch per your agency protocol.</div>
+        <div class="ig-acro-ems">The most common resource management failure: waiting until units are overwhelmed before requesting help. By then, the response time gap already exists.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">04</div>
+      <div>
+        <div class="ig-acro-word">Establish/Confirm ICS Position — Name Your Role</div>
+        <div class="ig-acro-desc">Explicitly state your ICS position. If you are the first EMS resource, you are the EMS Branch Director until relieved or until a higher-ranking officer arrives and assumes the position. If you are arriving into an established incident, check in with the IC or Operations Section Chief and receive your assignment before beginning operations. Never self-deploy to a task without checking in through the ICS structure.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">05</div>
+      <div>
+        <div class="ig-acro-word">Assign Resources — Delegate to Your Span</div>
+        <div class="ig-acro-desc">Assign responding units to Triage, Treatment, or Transport roles within the EMS Branch structure. Maintain span of control — no more than seven direct reports. As units arrive, assign them rather than accumulating resources without roles. An uncommitted resource is a wasted resource. Every unit on scene should have a task and a supervisor.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">06</div>
+      <div>
+        <div class="ig-acro-word">Maintain Command Position — Do Not Enter Patient Care</div>
+        <div class="ig-acro-desc">This is the discipline failure point. The Supervising Officer who "goes hands-on" loses command. Your role is to observe, coordinate, and communicate — not to intubate or start IVs. If clinical oversight requires you to be closer, move to observe and redirect — not to provide direct care. Your crew can provide direct care. Only you can maintain command.</div>
+        <div class="ig-acro-ems">In oral boards: "I would maintain my command position and resist the pull to get into direct patient care — that is what my crew is trained for. My job is to see the whole picture."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">07</div>
+      <div>
+        <div class="ig-acro-word">Transfer Command — Formal, Verbal, Face-to-Face</div>
+        <div class="ig-acro-desc">When a higher-ranking officer arrives and assumes EMS Branch or incident command, transfer is formal, verbal, and face-to-face. Provide a brief size-up: number of patients, current triage categories, resources committed, resources staged, hospital notifications made, outstanding issues. Receive acknowledgment of transfer before releasing command. Document the transfer time and who assumed command.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">In every Bucket 13 — Situational / Scene oral board scenario, walk through this sequence explicitly — even in abbreviated form. "My arrival report, my size-up, my initial resource request, my ICS position" establishes command competence in the first thirty seconds of your response. Assessors who hear that sequence know they are listening to an officer — not a provider who happened to get promoted.</div>
+</div>
+
+<h2>Transferring vs. Delegating Command</h2>
+<p>These are two different actions and assessors distinguish between them. <strong>Transferring command</strong> means you are passing the IC or Branch Director role to another officer — permanently, until they transfer it again. <strong>Delegating</strong> means you are assigning specific tasks while retaining overall command. A Supervising Officer who tells their crew to set up Treatment while they manage Triage is delegating. The same officer who briefs an incoming battalion chief and hands them command is transferring.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Bucket 13 — Situational / Scene</span>
+  <p>You are the first EMS supervisor to arrive at a reported vehicle versus pedestrians incident — four patients down, bystanders performing CPR on two of them, a school bus stopped at the scene with children visible, and a fuel spill in the roadway. Walk through the seven-step scene command sequence out loud. Name your ICS position, your resource request, and your span of control. Target: 90 seconds.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Scene Command Sequence</span>
+  <div class="sbar-card accent-gold"><strong>01 — Arrival Report</strong>Unit · location · conditions · "assuming EMS Command." Before leaving the vehicle.</div>
+  <div class="sbar-card accent-gold"><strong>02 — Size-Up</strong>360 degrees. Patients, mechanism, hazards, resources needed. COAL WAS WEALTH.</div>
+  <div class="sbar-card accent-gold"><strong>03 — Resource Request</strong>Before you need it. Not after units are committed. Mutual aid early.</div>
+  <div class="sbar-card accent-gold"><strong>04 — ICS Position</strong>Name your role. Check in before beginning operations in an established incident.</div>
+  <div class="sbar-card accent-gold"><strong>05 — Assign Resources</strong>Triage, Treatment, Transport. Every unit has a task and a supervisor.</div>
+  <div class="sbar-card accent-gold"><strong>06 — Hold Command</strong>Do not go hands-on. See the whole scene. This is the discipline point.</div>
+  <div class="sbar-card accent-gold"><strong>07 — Transfer Command</strong>Formal · verbal · face-to-face. Full brief. Document time and recipient.</div>
+  <span class="sbar-label">The Critical Distinction</span>
+  <div class="sbar-card accent-red"><strong>The Provider Trap</strong>"Getting sucked into the patient" — going hands-on and losing command. The #1 failure for newly promoted supervisors. Assessors probe for it directly.</div>
+  <span class="sbar-label">Transfer vs. Delegate</span>
+  <div class="sbar-card"><strong>Transfer</strong>Permanently pass IC/Branch role to another officer. Formal brief. Documented.</div>
+  <div class="sbar-card"><strong>Delegate</strong>Assign tasks while retaining command. You are still the Branch Director.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← ICS / NIMS</button>
+  <div class="lnb-info"><div class="lnb-name">Scene Command at the Supervising Level</div><div class="lnb-num">Lesson 2 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">System Status →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — SYSTEM STATUS MANAGEMENT ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 3 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">System Status Management —<br><em>The Deployment Science of EMS</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Task Management · EMS-Specific</span><span class="lh-meta-item">Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>System Status Management (SSM) is uniquely EMS. No fire or law enforcement equivalent exists at this level of operational deployment science. SSM is the methodology by which EMS systems deploy units dynamically — positioning ambulances not where calls have already happened, but where demand modeling predicts they will be needed. It replaces static posting ("Unit 3 is always at Station 4") with demand-driven repositioning based on call volume data, time of day, geography, and unit availability.</p>
+
+<p>For a Supervising EMS Officer, SSM is a daily operational reality. For a Managing Officer, it is a resource planning tool. For an Executive Officer, it is a system-design decision with community access and response-time compliance implications. Understanding SSM at all three levels is an EMS-specific competency with no fire track equivalent — and assessors use it to probe whether candidates actually understand how EMS systems operate.</p>
+
+<h2>SSM Fundamentals — What the Supervising Officer Must Know</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SYSTEM STATUS MANAGEMENT — CORE CONCEPTS</span>
+    <div class="ig-title">How EMS Deployment Science Works</div>
+    <div class="ig-sub">SSM is data-driven, dynamic, and continuous. It requires Supervising Officers to understand demand modeling, posting compliance, and unit coverage gaps in real time.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Core Concept 1</div>
+      <div class="ig-fw-title">Dynamic Deployment</div>
+      <div class="ig-fw-desc">Units are not assigned fixed posts — they are repositioned continuously based on system demand. As calls are dispatched and units commit, remaining units move to maintain coverage across the response area. The SSM plan defines the posting locations; the supervisor ensures compliance and makes real-time adjustments when the plan cannot be followed.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Core Concept 2</div>
+      <div class="ig-fw-title">Demand Modeling</div>
+      <div class="ig-fw-desc">Historical call data is analyzed to predict where and when EMS demand will occur by time of day, day of week, season, and geography. Posting plans are built from this data. A strong Supervising Officer understands their system's demand peaks — and knows which posting locations become critical during those windows.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Core Concept 3</div>
+      <div class="ig-fw-title">Response Time Compliance</div>
+      <div class="ig-fw-desc">Most EMS systems have contractual or regulatory response time requirements — often a defined percentage of calls reached within a specified time (e.g., 90% of Priority 1 calls within 8 minutes). SSM is designed to maximize that compliance. The Supervising Officer who allows units to drift from their posts is creating response time risk that will appear in the system's compliance data.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Core Concept 4</div>
+      <div class="ig-fw-title">Coverage Gap Management</div>
+      <div class="ig-fw-desc">When multiple units are committed to calls simultaneously, coverage gaps open in the response area. The Supervising Officer's role is to identify these gaps, reposition available units to maintain minimum coverage, and request mutual aid or additional resources when coverage falls below acceptable thresholds. Coverage gaps are the Supervising Officer's watch — not Dispatch's alone.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-fw-label">Core Concept 5 — Managing/Executive Level</div>
+      <div class="ig-fw-title">SSM Plan Design and Performance Metrics</div>
+      <div class="ig-fw-desc"><strong style="color:var(--gold);">M-level:</strong> Analyzes call volume data, identifies posting location gaps, proposes SSM plan revisions to improve response time performance. Reviews unit compliance data with SSM posting requirements. <strong style="color:#E87070;">E-level:</strong> Designs or approves the SSM plan. Sets response time performance standards. Ensures SSM technology (CAD integration, mobile data terminals) is current and accurate. Reports compliance data to governing boards and regulatory authorities.</div>
+    </div>
+  </div>
+  <div class="ig-callout">In Bucket 9 — Resource Management oral board questions, SSM demonstrates that you understand how EMS resources are managed as a system — not just dispatched as individual units. "I ensure my unit complies with our SSM posting requirements so that system coverage is maintained when other units are committed" is a stronger response than "I stay at my station between calls."</div>
+</div>
+
+<h2>The Supervising Officer's SSM Accountability</h2>
+<p>On a standard shift, the Supervising Officer's SSM responsibilities are practical and continuous:</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">During the Shift</div>
+    <div class="fw-card-title">Maintain Posting Compliance</div>
+    <div class="fw-card-desc">Know where your units are posted and whether they are in compliance with the SSM plan. When a unit goes out of service (meal break, equipment issue, hospital turn-around delay), identify the coverage gap it creates and reposition as available. Document deviations from the SSM plan with reason.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">At Coverage Threshold</div>
+    <div class="fw-card-title">Request Mutual Aid Early</div>
+    <div class="fw-card-desc">When your coverage drops below the agency's minimum unit threshold — typically defined in the SSM plan — initiate mutual aid requests immediately. Do not wait until a call comes in with no unit to dispatch. The request goes before the need, not in response to it.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">After the Shift</div>
+    <div class="fw-card-title">Review and Report</div>
+    <div class="fw-card-desc">Review any periods where SSM compliance was not maintained. Document the reason. If a systemic issue (chronic unit shortage at a particular time window, recurrent hospital delay at a specific facility) is driving non-compliance, escalate it to your Managing Officer with the supporting data.</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">Why SSM Matters in Oral Boards</span>
+  <p>SSM is a competency separator. Most candidates from fire-based backgrounds have limited or no SSM exposure. Candidates who can define dynamic deployment, describe their role in coverage gap management, and connect SSM compliance to patient access and response time outcomes demonstrate EMS-specific operational depth that fire-track-only preparation does not produce. If you work in an SSM system, use your operational experience. If you do not, learn the concepts well enough to speak to them intelligently.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5 SSM Core Concepts</span>
+  <div class="sbar-card"><strong>Dynamic Deployment</strong>Units reposition continuously. Not fixed posts. SSM plan defines where.</div>
+  <div class="sbar-card"><strong>Demand Modeling</strong>Historical data drives posting locations. Know your peak windows.</div>
+  <div class="sbar-card accent-ems"><strong>Response Time Compliance</strong>Contractual/regulatory requirement. Your posting compliance directly affects data.</div>
+  <div class="sbar-card"><strong>Coverage Gap Management</strong>Your watch — not just Dispatch. Identify gaps. Reposition. Request mutual aid.</div>
+  <div class="sbar-card accent-ems"><strong>SSM Plan Design</strong>M = analyze and propose. E = design, approve, and report to governing boards.</div>
+  <span class="sbar-label">Shift Accountability</span>
+  <div class="sbar-card"><strong>During Shift</strong>Know where units are. Document SSM deviations with reason.</div>
+  <div class="sbar-card"><strong>At Threshold</strong>Request mutual aid before the call comes in with no unit to send.</div>
+  <div class="sbar-card"><strong>After Shift</strong>Identify systemic issues. Escalate with data to Managing Officer.</div>
+  <span class="sbar-label">Oral Board Signal</span>
+  <div class="sbar-card accent-gold"><strong>Differentiator</strong>Fire-background candidates rarely have SSM depth. This is a competency separator. Know it cold.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Scene Command</button>
+  <div class="lnb-info"><div class="lnb-name">System Status Management</div><div class="lnb-num">Lesson 3 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Resource Management →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — RESOURCE MANAGEMENT ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 4 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Resource Management —<br><em>Accountability from Unit to Mutual Aid</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Task Management</span><span class="lh-meta-item">Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>Resource management in EMS spans a much wider range than most candidates realize going into assessment centers. It is not just about dispatching units. It encompasses equipment readiness, supply chain accountability, vehicle maintenance tracking, narcotics accountability, mutual aid protocols, and the administrative documentation that proves all of it. The Supervising Officer who has mastered resource management is visible in two places: on the scene where resources are deployed efficiently, and in the paperwork where accountability is documented accurately.</p>
+
+<h2>The Five Resource Management Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA RESOURCE MANAGEMENT — PILLAR 4</span>
+    <div class="ig-title">Five Areas of Accountability at the Supervising Level</div>
+    <div class="ig-sub">Resource management scales from unit-level accountability at Supervising to organizational system design at Managing and Executive.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Area 1</div>
+      <div class="ig-map-title">Unit Readiness</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Ensures all units under supervision are equipment-complete, drug-stocked, and mechanically operational at the start of every shift. Documents any deficiency and initiates replacement through the supply chain. A unit that is not ready at shift start is an officer readiness failure — not just a crew failure.<br><strong style="color:var(--gold);">M/E:</strong> Develops standards for unit readiness checks and ensures compliance across the fleet.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Area 2</div>
+      <div class="ig-map-title">Narcotics Accountability</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Ensures controlled substance accountability is maintained — shift-to-shift count verification, waste documentation, discrepancy reporting. Narcotics accountability failures are not administrative errors — they are potential criminal events and patient safety issues. The Supervising Officer who signs off on count sheets without physically verifying them is creating serious liability.<br><strong style="color:var(--gold);">M/E:</strong> Designs and audits the controlled substance accountability system.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Area 3</div>
+      <div class="ig-map-title">Mutual Aid Management</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Initiates mutual aid requests through the correct channel when coverage falls below threshold. Documents mutual aid activation and ensures arriving mutual aid units are integrated into the ICS structure and SSM plan. Tracks mutual aid unit availability while on scene.<br><strong style="color:var(--gold);">M/E:</strong> Negotiates mutual aid agreements, designs mutual aid activation thresholds, and builds the inter-agency relationships that make mutual aid reliable when needed.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Area 4</div>
+      <div class="ig-map-title">Vehicle Maintenance Accountability</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Documents mechanical deficiencies found at shift inspection. Initiates out-of-service documentation when a unit is unsafe for operations. Does not pressure crews to operate unsafe apparatus to maintain coverage — that creates a worker safety and patient safety liability that exceeds any coverage gap.<br><strong style="color:var(--gold);">M/E:</strong> Manages fleet replacement schedules, capital planning for apparatus, and preventive maintenance programs.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-map-label">Area 5</div>
+      <div class="ig-map-title">Supply Chain and Expendable Management</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Ensures crews replenish supplies at hospital supply rooms or agency supply depots per protocol. Tracks high-usage expendables (IV supplies, oxygen, airway equipment) and escalates supply shortages that could compromise patient care.<br><strong style="color:var(--gold);">M:</strong> Manages supply par levels, vendor relationships, and supply budget for the division.<br><strong style="color:#E87070;">E:</strong> Negotiates agency-level supply contracts, ensures supply chain resilience, and plans for surge capacity during mass casualty or public health events.</div>
+    </div>
+  </div>
+</div>
+
+<h3>Resource Management in Bucket 9 — Resource Management Scenarios</h3>
+<p>When a Bucket 9 — Resource Management scenario appears, assessors are looking for three things: your understanding of what resources you are accountable for, your process for identifying and reporting deficiencies, and your ability to maintain coverage and safety simultaneously. The 4/5 response names all three and connects them to a patient safety or crew safety principle in the close.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Narcotics Accountability Non-Negotiable</span>
+  <p>Narcotics accountability is the one resource management area where "I didn't verify personally" is not an acceptable answer at any level. A Supervising Officer who signs controlled substance count sheets without witnessing the count is creating documentation fraud exposure for themselves and the agency. The answer in any oral board scenario involving narcotics discrepancy: "My first action is to immediately isolate the documentation, secure the remaining controlled substances, notify my supervisor, and initiate a formal investigation — I do not attempt to resolve a narcotics discrepancy informally or at the crew level."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5 Resource Areas</span>
+  <div class="sbar-card accent-gold"><strong>Unit Readiness</strong>Equipment-complete, drug-stocked, mechanically operational at shift start. Officer's accountability, not just crew's.</div>
+  <div class="sbar-card accent-red"><strong>Narcotics Accountability</strong>Physical verification — not paper sign-off. Discrepancy = immediate isolation + supervisor notification + formal investigation. Non-negotiable.</div>
+  <div class="sbar-card"><strong>Mutual Aid</strong>Request before threshold is breached. Integrate into ICS and SSM upon arrival.</div>
+  <div class="sbar-card"><strong>Vehicle Maintenance</strong>Document deficiencies. Never pressure crews to operate unsafe apparatus.</div>
+  <div class="sbar-card"><strong>Supply Chain</strong>Replenish per protocol. Escalate shortages that affect patient care capability.</div>
+  <span class="sbar-label">Oral Board Signals</span>
+  <div class="sbar-card"><strong>3-Part Response</strong>What you're accountable for → your deficiency process → coverage/safety maintained simultaneously.</div>
+  <div class="sbar-card accent-ems"><strong>The Close</strong>Connect every resource management decision to patient safety or crew safety. That is the officer frame — not just operational compliance.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← System Status</button>
+  <div class="lnb-info"><div class="lnb-name">Resource Management</div><div class="lnb-num">Lesson 4 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">MCI Operations →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — MCI OPERATIONS ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 5 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">MCI Operations —<br><em>EMS at the Supervising Level</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">📘 Task Management · EMS-Critical</span><span class="lh-meta-item">Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>Mass Casualty Incidents are the Bucket 13 — Situational / Scene scenario type that most directly separates EMS promotional candidates from fire promotional candidates. Fire officers are trained for command at structure fires. EMS officers are trained for clinical triage and patient movement at multi-patient events. The two disciplines merge in unified command — and the EMS officer who understands both the ICS structure and the clinical triage model is the one who functions effectively in that environment.</p>
+
+<p>MCI competency at the Supervising EMS Officer level centers on three elements: knowing the START triage algorithm cold, understanding the Triage/Treatment/Transport organizational model, and knowing how to function within the EMS Branch of the ICS structure while maintaining clinical quality across all patients simultaneously.</p>
+
+<h2>MCI Triage Systems — Three Methodologies EMS Officers Must Know</h2>
+<p>EMS officers operating in assessment centers — and in the field — will encounter three primary MCI triage methodologies. Oral board assessors for Managing and Executive positions increasingly expect candidates to know more than START, because real-world MCI operations use different systems depending on jurisdiction, incident type, and system design. The officer who can name and distinguish all three demonstrates clinical leadership depth that most candidates lack.</p>
+
+<h3>START Triage — Simple Triage and Rapid Treatment</h3>
+<p>The foundational algorithm. Built for speed — 30 to 60 seconds per patient. Strict "tag and move" discipline — no treatment during triage.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ START TRIAGE — SIMPLE TRIAGE AND RAPID TREATMENT</span>
+    <div class="ig-title">Four Categories · Physiological Assessment · Tag and Move</div>
+    <div class="ig-sub">The original MCI triage standard. Prioritizes speed and simplicity. Assessment sequence: Respirations → Perfusion → Mental Status. Strict no-treatment rule during triage phase.</div>
+  </div>
+  <div class="triage-grid">
+    <div class="triage-row">
+      <div class="triage-tag" style="background:rgba(178,34,34,0.25);color:#E87070;border:1px solid rgba(178,34,34,0.4);">RED<br><span style="font-size:8px;letter-spacing:1px;">Immediate</span></div>
+      <div class="triage-content">
+        <div class="triage-name">Immediate — Life-Threatening but Survivable with Intervention</div>
+        <div class="triage-desc">Respirations present only after repositioning airway, OR respiratory rate &gt;30/min, OR radial pulse absent (capillary refill &gt;2 sec), OR unable to follow simple commands. Receives care first. These patients die without intervention but are salvageable.</div>
+      </div>
+    </div>
+    <div class="triage-row">
+      <div class="triage-tag" style="background:rgba(201,168,76,0.2);color:var(--gold);border:1px solid rgba(201,168,76,0.4);">YELLOW<br><span style="font-size:8px;letter-spacing:1px;">Delayed</span></div>
+      <div class="triage-content">
+        <div class="triage-name">Delayed — Serious but Not Immediately Life-Threatening</div>
+        <div class="triage-desc">Respirations &lt;30/min, radial pulse present, follows simple commands. Serious injuries that can wait. Receives care after all Immediate patients are stabilized or transported.</div>
+      </div>
+    </div>
+    <div class="triage-row">
+      <div class="triage-tag" style="background:rgba(26,92,58,0.25);color:#60D090;border:1px solid rgba(26,92,58,0.4);">GREEN<br><span style="font-size:8px;letter-spacing:1px;">Minor</span></div>
+      <div class="triage-content">
+        <div class="triage-name">Minor — Walking Wounded</div>
+        <div class="triage-desc">Ambulatory. Direct to Minor Treatment Area. Monitor for delayed deterioration. Do not consume primary responder attention — move to the next patient immediately.</div>
+      </div>
+    </div>
+    <div class="triage-row">
+      <div class="triage-tag" style="background:rgba(40,40,40,0.4);color:#90A0B0;border:1px solid rgba(100,100,100,0.3);">BLACK<br><span style="font-size:8px;letter-spacing:1px;">Expectant</span></div>
+      <div class="triage-content">
+        <div class="triage-name">Expectant — Unsurvivable or Resource-Disproportionate</div>
+        <div class="triage-desc">No respirations after airway repositioning, OR injuries incompatible with survival given available resources. Moved to Expectant area, monitored. Receives care only after all salvageable patients are treated. The hardest decision in EMS command — and the most important principle of mass casualty medicine.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">START's strict no-treatment rule is both its strength and its most frequently debated limitation. A patient in respiratory arrest might be saved with an airway maneuver that takes fifteen seconds — but performing it during START triage means fifteen seconds not spent assessing the next three patients. The system accepts this tradeoff in the name of speed. SALT addresses it differently.</div>
+</div>
+
+<h3>SALT Triage — Sort, Assess, Lifesaving Interventions, Treatment/Transport</h3>
+<p>Developed with CDC and CHEMM support and endorsed by NAEMSP, ACEP, and the American College of Surgeons Committee on Trauma. SALT was designed to address the most significant limitation of START: its prohibition on any intervention during the triage phase. SALT allows brief, high-impact lifesaving interventions — hemorrhage control, airway positioning, autoinjector antidotes — during triage without abandoning the speed principle.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SALT TRIAGE — SORT, ASSESS, LIFESAVING INTERVENTIONS, TREATMENT/TRANSPORT</span>
+    <div class="ig-title">CDC/NAEMSP-Endorsed System · Allows Brief LSIs During Triage</div>
+    <div class="ig-sub">SALT adds a Lifesaving Interventions step that START does not have. This is the key distinction assessors test. S = Sort · A = Assess · L = Lifesaving Interventions · T = Treatment/Transport.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">S</div>
+      <div>
+        <div class="ig-acro-word">Sort — Global Sorting by Mobility First</div>
+        <div class="ig-acro-desc">Before individual assessment begins, SALT sorts the patient group by mobility. Command: "If you can walk, move to [designated area]." Walking patients = Minimal (Green). Next: "If you can wave or move your hands, stay still." Patients who respond but cannot walk are assessed before those who are still and unresponsive. This global sorting step prioritizes patients with the highest survivability potential before any individual assessment begins.</div>
+        <div class="ig-acro-ems">Key difference from START: START begins individual assessment immediately. SALT performs a group-level sort first, which is faster when patient counts are high.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">A</div>
+      <div>
+        <div class="ig-acro-word">Assess — Brief Individual Assessment</div>
+        <div class="ig-acro-desc">Individual patient assessment follows the same physiological parameters as START: respiratory rate, pulse, mental status. The assessment informs the LSI decision and the final treatment/transport category. SALT's assessment is rapid — the goal is the same 30–60 second per patient standard as START.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">L</div>
+      <div>
+        <div class="ig-acro-word">Lifesaving Interventions — Brief, High-Impact, Then Move</div>
+        <div class="ig-acro-desc">SALT explicitly permits five brief lifesaving interventions during triage — none of which should take more than 15–30 seconds per patient: (1) control of major/life-threatening hemorrhage, (2) opening the airway (repositioning, suction, NPA), (3) two rescue breaths for pediatric patients only, (4) autoinjector antidotes (nerve agent/opioid exposure), (5) needle decompression for tension pneumothorax. These are the interventions most likely to convert a Black patient to Red — and most likely to be immediately survivable without them.</div>
+        <div class="ig-acro-ems">This is SALT's defining feature. It treats the START prohibition as unnecessarily rigid for interventions that take seconds and can save a life. The 15-second tourniquet application that prevents exsanguination does not meaningfully delay the rest of the triage cycle.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">T</div>
+      <div>
+        <div class="ig-acro-word">Treatment/Transport — Same Four Categories, Different Criteria</div>
+        <div class="ig-acro-desc">SALT uses the same four color categories as START: Immediate (Red), Delayed (Yellow), Minimal (Green), Expectant (Black). The key difference: SALT adds a category pathway based on LSI response. A patient who is Expectant by physiological criteria but responds to an LSI (e.g., airway repositioning restores respirations) is re-categorized as Immediate. START would have tagged that patient Black and moved on. SALT catches more salvageable patients at the cost of slightly more triage time per patient.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral board responses, naming the distinction between START and SALT signals current clinical leadership knowledge. "START prohibits any intervention during triage for speed. SALT permits brief lifesaving interventions because the clinical evidence supports their value — a tourniquet applied in 15 seconds that prevents exsanguination does not meaningfully slow the triage cycle." That is a 4/5 answer. Describing only START is a 3/5 answer.</div>
+</div>
+
+<h3>RAMP Triage — Rapid Assessment, Movement, and Priority</h3>
+<p>RAMP was developed for high-acuity, time-compressed MCI environments — particularly those involving hemorrhagic trauma from active shooter and hostile event incidents. Where START and SALT are designed for any mass casualty event, RAMP was built with the physiological reality of penetrating trauma in mind: the leading cause of preventable death in active shooter events is uncontrolled hemorrhage, and the triage system should reflect that priority.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ RAMP TRIAGE — RAPID ASSESSMENT, MOVEMENT, AND PRIORITY</span>
+    <div class="ig-title">Hemorrhage-First · Tactical Environment · ASHER Context</div>
+    <div class="ig-sub">Designed for penetrating trauma MCI — particularly active shooter and hostile event incidents. RAMP prioritizes hemorrhage assessment and control earlier than START or SALT. R = Respirations · A = Alert/Ability to follow commands · M = Major bleeding control · P = Priority designation.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;">
+      <div class="ig-map-label">R — Respirations</div>
+      <div class="ig-map-title">Airway and Breathing Assessment</div>
+      <div class="ig-map-desc">Assess respiratory status as the initial physiological screen — consistent with START and SALT. No respirations after brief airway repositioning = Expectant. Present and within acceptable range = proceed to next step. RAMP uses the same respiratory threshold as START (&lt;30/min for adequate).</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">A — Alert / Ability</div>
+      <div class="ig-map-title">Neurological Status and Command Following</div>
+      <div class="ig-map-desc">Assess level of consciousness and ability to follow simple commands. Alert and follows commands = better prognosis and potential for self-extraction or assisted movement. RAMP's Alert assessment directly informs the Movement step — patients who can follow commands may be able to self-extricate to a Casualty Collection Point, which is critical in Warm Zone environments.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">M — Major Bleeding</div>
+      <div class="ig-map-title">Hemorrhage Control — First Responder Intervention</div>
+      <div class="ig-map-desc">RAMP's defining step. Unlike START (no intervention) and SALT (brief LSI permitted), RAMP explicitly builds hemorrhage control into the triage assessment sequence for penetrating trauma events. Visible major hemorrhage receives immediate tourniquet application or wound packing before priority designation. The clinical rationale: in active shooter events, hemorrhage kills faster than airway compromise — the triage model should match the mechanism.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">P — Priority</div>
+      <div class="ig-map-title">Designation and Movement to CCP</div>
+      <div class="ig-map-desc">Final priority designation follows RAMP assessment. Same four categories as START and SALT. The movement component directs patients to the appropriate Casualty Collection Point (CCP) for their zone — CCP-Warm in the Warm Zone for immediate extraction, CCP-Cold in the Cold Zone for full treatment. RAMP's P step connects triage to the NFPA 3000 zone architecture covered in Lesson 7.</div>
+    </div>
+  </div>
+  <div class="ig-callout">When to use which system: START for any-mechanism MCI where speed and simplicity drive survival. SALT where LSIs during triage will meaningfully change outcomes and the patient volume allows brief interventions. RAMP for active shooter and penetrating trauma events where hemorrhage control is the primary life threat and patient movement to a Casualty Collection Point is the priority. Oral board candidates who understand when each system is appropriate — not just what each acronym stands for — are demonstrating Managing Officer-level clinical leadership thinking.</div>
+</div>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ TRIAGE SYSTEM COMPARISON</span>
+    <div class="ig-title">START vs. SALT vs. RAMP — Key Distinctions</div>
+    <div class="ig-sub">Know the differences. Assessors at Managing and Executive levels ask which system you would use and why — not just what the acronym stands for.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">START</div>
+      <div class="ig-fw-title">Best For: Any-Mechanism MCI</div>
+      <div class="ig-fw-desc"><strong style="color:var(--on-dark-1);">Sequence:</strong> Respirations → Perfusion → Mental Status<br><strong style="color:var(--on-dark-1);">Interventions during triage:</strong> None (reposition airway only)<br><strong style="color:var(--on-dark-1);">Speed:</strong> Fastest<br><strong style="color:var(--on-dark-1);">Strength:</strong> Simple, universally trained, interoperable across agencies<br><strong style="color:var(--on-dark-1);">Limitation:</strong> May tag as Expectant patients who would survive a brief LSI</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">SALT</div>
+      <div class="ig-fw-title">Best For: Mixed-Mechanism MCI + Pediatric Patients</div>
+      <div class="ig-fw-desc"><strong style="color:var(--on-dark-1);">Sequence:</strong> Global Sort → Assess → LSI → Treatment/Transport<br><strong style="color:var(--on-dark-1);">Interventions during triage:</strong> 5 brief LSIs permitted<br><strong style="color:var(--on-dark-1);">Speed:</strong> Slightly slower than START per patient<br><strong style="color:var(--on-dark-1);">Strength:</strong> Rescues more borderline patients; pediatric rescue breaths included<br><strong style="color:var(--on-dark-1);">Limitation:</strong> Requires more training; inter-agency variability in LSI execution</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">RAMP</div>
+      <div class="ig-fw-title">Best For: Active Shooter / Penetrating Trauma MCI</div>
+      <div class="ig-fw-desc"><strong style="color:var(--on-dark-1);">Sequence:</strong> Respirations → Alert → Major Bleeding → Priority<br><strong style="color:var(--on-dark-1);">Interventions during triage:</strong> Hemorrhage control built into sequence<br><strong style="color:var(--on-dark-1);">Speed:</strong> Moderate (hemorrhage control adds time)<br><strong style="color:var(--on-dark-1);">Strength:</strong> Matches mechanism; connects directly to NFPA 3000 CCP architecture<br><strong style="color:var(--on-dark-1);">Limitation:</strong> Less interoperable — requires agency-specific training and adoption</div>
+    </div>
+  </div>
+</div>
+
+<h2>The EMS Branch at MCI — Supervising Officer Roles</h2>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Triage Group Leader</div>
+    <div class="fw-card-title">Count, Tag, Move — Do Not Treat</div>
+    <div class="fw-card-desc">The Triage Group Leader directs triage personnel in rapid patient assessment and tagging. The critical discipline: triage personnel do not stop to treat — they assess, tag, and move to the next patient. Treatment is the Treatment Group's job. A triage crew that stops to treat a Red patient while three more patients have not been assessed yet has broken the MCI model.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Treatment Group Leader</div>
+    <div class="fw-card-title">Three Areas, Prioritized Resources</div>
+    <div class="fw-card-desc">The Treatment Group Leader organizes the treatment area into Immediate (Red), Delayed (Yellow), and Minor (Green) sections. Resources are allocated by priority: ALS crews to Immediate, BLS to Delayed, and self-care to Minor. The Treatment Group Leader communicates patient status and resource needs to the EMS Branch Director.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Transport Group Leader</div>
+    <div class="fw-card-title">Destination, Sequence, Documentation</div>
+    <div class="fw-card-desc">The Transport Group Leader manages ambulance staging, coordinates hospital destination selection (distributing critical patients across multiple receiving facilities rather than overwhelming a single hospital), and documents every patient loaded, every unit dispatched, and every receiving facility. This documentation becomes the patient tracking record for the incident.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — MCI Bucket 13 — Situational / Scene</span>
+  <p>You are the first EMS supervisor on scene of a multi-vehicle crash on the interstate. You have five patients — visible injuries ranging from walking wounded to one patient in full arrest. You have two ALS units on scene and four more responding. Provide your arrival report, your START triage category estimate, your initial ICS position, your resource request, and your EMS Branch organization. 90 seconds, out loud.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">START Triage</span>
+  <div class="sbar-card accent-red"><strong>Red — Immediate</strong>Airway requires repositioning, or RR &gt;30, or no radial pulse, or altered mental status. Treatable. First priority.</div>
+  <div class="sbar-card accent-gold"><strong>Yellow — Delayed</strong>RR &lt;30, radial pulse present, follows commands. Serious but not dying now.</div>
+  <div class="sbar-card accent-green"><strong>Green — Minor</strong>Ambulatory. Direct to Minor Treatment Area.</div>
+  <div class="sbar-card"><strong>Black — Expectant</strong>No respirations after airway. Unsurvivable given resources. Hardest decision in EMS command.</div>
+  <span class="sbar-label">SALT vs. START</span>
+  <div class="sbar-card accent-ems"><strong>Key Difference</strong>SALT allows 5 brief LSIs during triage — hemorrhage control, airway, rescue breaths (peds), antidotes, needle decompression. START does not. SALT catches more borderline patients.</div>
+  <div class="sbar-card"><strong>Global Sort First</strong>SALT begins with a group sort by mobility before individual assessment. Walk / Wave / Still. Faster for high patient counts.</div>
+  <span class="sbar-label">RAMP Triage</span>
+  <div class="sbar-card accent-ems"><strong>Built for ASHER</strong>Respirations → Alert → Major Bleeding → Priority. Hemorrhage control is built into the sequence — matches penetrating trauma mechanism.</div>
+  <div class="sbar-card"><strong>CCP Connection</strong>RAMP's Priority step directs to CCP-Warm or CCP-Cold — connects directly to NFPA 3000 zone architecture in Lesson 7.</div>
+  <span class="sbar-label">When to Use Which</span>
+  <div class="sbar-card"><strong>START</strong>Any-mechanism MCI. Fastest. Most interoperable.</div>
+  <div class="sbar-card"><strong>SALT</strong>Mixed-mechanism + pediatric. LSIs improve outcomes.</div>
+  <div class="sbar-card"><strong>RAMP</strong>Active shooter / penetrating trauma. Hemorrhage-first logic.</div>
+  <span class="sbar-label">EMS Branch Roles</span>
+  <div class="sbar-card accent-ems"><strong>Triage Group Leader</strong>Count, tag, move. No treatment in the triage cycle. Feeds patient count to Treatment.</div>
+  <div class="sbar-card accent-ems"><strong>Treatment Group Leader</strong>Three areas (Immediate/Delayed/Minor). ALS to Red, BLS to Yellow. Reports status to EMS Branch.</div>
+  <div class="sbar-card accent-ems"><strong>Transport Group Leader</strong>Staging, destination selection (distribute — don't overwhelm one hospital), patient tracking documentation.</div>
+  <span class="sbar-label">Critical Discipline</span>
+  <div class="sbar-card accent-red"><strong>Triage Does Not Treat</strong>Assess, tag, move. Treatment is Treatment Group's job. Breaking this rule collapses the MCI model.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Resource Management</button>
+  <div class="lnb-info"><div class="lnb-name">MCI Operations — EMS at the Supervising Level</div><div class="lnb-num">Lesson 5 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Admin &amp; PDCA →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — ADMINISTRATIVE RESPONSIBILITIES + PDCA ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 6 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Administrative Responsibilities<br><em>&amp; the PDCA Framework</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Task Management · All Levels</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>The administrative dimension of EMS supervision is where many officer candidates underestimate their role. Shift reports, incident documentation, personnel records, equipment logs, scheduling paperwork — these are not clerical tasks. They are the evidentiary foundation of every personnel action, every resource accountability audit, and every quality improvement review your organization conducts. An officer who treats documentation as optional or secondary is an officer whose decisions cannot be defended when challenged.</p>
+
+<p>This lesson covers the Supervising Officer's core administrative responsibilities and introduces the PDCA framework — the systematic problem-solving cycle that is the primary tool for administrative and operational improvement at all three officer levels.</p>
+
+<h2>The PDCA Framework — New in EMS Track</h2>
+<p>PDCA stands for Plan, Do, Check, Act. It is the foundational continuous improvement model used in healthcare quality management, organizational problem-solving, and operational process improvement. In EMS, PDCA runs underneath every quality initiative, every protocol change, every operational adjustment, and every administrative system improvement. Managing and Executive officers use it to design programs. Supervising Officers use it to solve shift-level problems.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PDCA FRAMEWORK — NEW IN EMS TRACK</span>
+    <div class="ig-title">Plan · Do · Check · Act</div>
+    <div class="ig-sub">The continuous improvement cycle for EMS operational and administrative problem-solving. Use in Bucket 1 — Personnel Performance, Bucket 9 — Resource Management, and Bucket 11 — Clinical Quality responses at all three officer levels.</div>
+  </div>
+  <div class="pdca-grid">
+    <div class="pdca-cell">
+      <div class="pdca-letter" style="color:var(--ems-text);">P</div>
+      <div class="pdca-word">Plan — Define the Problem and Design the Intervention</div>
+      <div class="pdca-desc">Identify the specific problem with data, not assumption. Define a measurable target outcome. Design the intervention — what will change, for whom, by when, and how it will be measured. A PDCA cycle that skips the Plan step is a reaction, not an improvement. The Plan step is where root cause analysis lives — do not design an intervention until you know what is actually causing the problem.</div>
+      <div class="pdca-ems">EMS application: "Before I address this documentation error pattern, I need to understand what is driving it — inadequate training, insufficient time, unclear expectations, or equipment issues. That root cause determines my intervention."</div>
+    </div>
+    <div class="pdca-cell">
+      <div class="pdca-letter" style="color:var(--gold);">D</div>
+      <div class="pdca-word">Do — Implement the Intervention on a Defined Scale</div>
+      <div class="pdca-desc">Implement the planned intervention — but on a defined, manageable scale first. A PDCA cycle is not a full-system rollout on first attempt. It is a controlled test. Start with the unit, the shift, or the small group where the problem is most visible. Collect data during implementation. The Do step is not completion — it is the beginning of the learning cycle.</div>
+      <div class="pdca-ems">EMS application: "I will implement the revised documentation protocol with Unit 3's crew on day shift for two weeks and track their PCR completion times and error rates before expanding to other units."</div>
+    </div>
+    <div class="pdca-cell">
+      <div class="pdca-letter" style="color:#60D090;">C</div>
+      <div class="pdca-word">Check — Measure Outcomes Against the Plan</div>
+      <div class="pdca-desc">Collect and analyze data from the Do phase. Did the intervention produce the intended outcome? By how much? Were there unintended consequences? Was the problem actually what the Plan identified — or did the data reveal a different root cause? The Check step is where the learning happens. An officer who implements without checking has spent resources without gaining knowledge.</div>
+      <div class="pdca-ems">EMS application: "After two weeks, I compare Unit 3's error rates to baseline. If rates dropped, I understand what worked. If they didn't, I revisit the root cause — my Plan phase assumption may have been wrong."</div>
+    </div>
+    <div class="pdca-cell">
+      <div class="pdca-letter" style="color:#E87070;">A</div>
+      <div class="pdca-word">Act — Standardize, Expand, or Redesign</div>
+      <div class="pdca-desc">Based on the Check results: if the intervention worked, standardize it and expand to the full scale. If it did not work, redesign — return to Plan with the new knowledge from the Check phase. If it partially worked, adjust and run another cycle. The Act step either closes the PDCA loop (standardize) or restarts it (redesign). PDCA is not linear — it is cyclical. The goal is continuous improvement, not one-time correction.</div>
+      <div class="pdca-ems">EMS application: "Based on the data, I will recommend expanding the revised documentation protocol to all units in my division — or revising it before expansion if the Check data shows a gap in my original approach."</div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral board responses, naming PDCA explicitly moves a 3/5 response to 4/5. "My approach to this problem follows the PDCA cycle — I would begin with a root cause analysis before designing any intervention, implement on a controlled scale, measure outcomes against the baseline, and then standardize what works." That is S-level performance: applying a named systematic framework to demonstrate analytical thinking.</div>
+</div>
+
+<h2>Core Administrative Responsibilities — Shift Level</h2>
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Shift Documentation</div>
+    <div class="fw-card-title">The Evidentiary Record</div>
+    <div class="fw-card-desc">Shift logs, incident reports, personnel notes, equipment checks, narcotics counts — all must be accurate, complete, and timely. "If it isn't documented, it didn't happen" is not just a legal principle — it is the operational truth in every personnel action, every liability claim, and every QA review. An officer who allows documentation shortcuts is creating future exposure for their crews, their organization, and themselves.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Scheduling Accountability</div>
+    <div class="fw-card-title">Staffing Standards and Compliance</div>
+    <div class="fw-card-desc">The Supervising Officer ensures the shift is properly staffed, that certification requirements are current for all personnel on duty, and that overtime and leave documentation meets agency and labor agreement standards. Staffing errors that affect coverage are officer-level failures, not HR failures.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Incident Reporting</div>
+    <div class="fw-card-title">Near Miss, Injury, Patient Complaint</div>
+    <div class="fw-card-desc">Near miss reports, worker injury documentation, patient complaint intake, and clinical incident reports are time-sensitive. Most agencies have 24–72 hour reporting windows for these events. A Supervising Officer who delays incident reporting — even with good intentions of "letting things settle" — is creating a just-culture violation and a potential legal exposure.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Next — Lesson 7</span>
+  <p>The final lesson in this chapter covers the most specialized operational content in the EMS officer track: NFPA 3000 Active Shooter/Hostile Event Response. You will learn the zone architecture, the Rescue Group Supervisor role, Rescue Task Force composition and deployment, TECC clinical protocols, and the Casualty Collection Point model that connects to the RAMP triage system covered in this lesson.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">PDCA Framework</span>
+  <div class="sbar-card accent-ems"><strong>P — Plan</strong>Define problem with data. Root cause analysis first. Measurable target outcome.</div>
+  <div class="sbar-card accent-ems"><strong>D — Do</strong>Implement on controlled scale. Data collection begins. Not a full rollout.</div>
+  <div class="sbar-card accent-ems"><strong>C — Check</strong>Measure outcomes vs. plan. Learning happens here. Did it work? Why or why not?</div>
+  <div class="sbar-card accent-ems"><strong>A — Act</strong>Standardize and expand (if worked) OR redesign and repeat (if not). PDCA is cyclical.</div>
+  <span class="sbar-label">Oral Board Application</span>
+  <div class="sbar-card accent-gold"><strong>3/5 → 4/5 Move</strong>Name PDCA explicitly. "My approach follows the PDCA cycle — root cause analysis before any intervention." Use in Bucket 1, Bucket 9, and Bucket 11 — Clinical Quality.</div>
+  <span class="sbar-label">Admin Responsibilities</span>
+  <div class="sbar-card"><strong>Shift Documentation</strong>Accurate · complete · timely. The evidentiary record for every future action.</div>
+  <div class="sbar-card"><strong>Scheduling</strong>Staffing, certifications, overtime, leave. Officer failure if coverage is affected.</div>
+  <div class="sbar-card accent-red"><strong>Incident Reporting</strong>Time-sensitive. 24–72 hr windows. Delayed reporting = just-culture violation + legal exposure.</div>
+  <span class="sbar-label">Next Chapter</span>
+  <div class="sbar-card accent-ems"><strong>EMS Chapter 5</strong>EMS Personnel Leadership — the 3 U's Diagnostic, provider burnout, CALM applied to EMS conversations.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← MCI Operations</button>
+  <div class="lnb-info"><div class="lnb-name">Administrative Responsibilities &amp; PDCA</div><div class="lnb-num">Lesson 6 of 7</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Active Shooter · NFPA 3000 →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 7 — NFPA 3000 / ACTIVE SHOOTER ======================== -->
+<div class="lesson-view" id="lesson-6">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 4 · Lesson 7 of 7</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">NFPA 3000 —<br><em>Active Shooter Response &amp; the RGS Role</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 18 min</span><span class="lh-meta-item">📘 Task Management · ASHER</span><span class="lh-meta-item">Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>Active Shooter and Hostile Event Response (ASHER) represents the most tactically demanding environment an EMS officer will ever command. NFPA 3000 — the Standard for an Active Shooter/Hostile Event Response Program, first published in 2018 — provides the organizational, operational, and training framework that governs how EMS integrates with law enforcement and fire in these events. For the EMS officer who may be designated a Rescue Group Supervisor (RGS), knowing this framework is not optional background knowledge. It is the operational architecture you will execute under fire.</p>
+
+<p>This lesson covers the zone model, the Rescue Task Force composition and deployment sequence, the RGS command responsibilities, TECC clinical protocols, and the Casualty Collection Point structure that connects ASHER operations to the triage systems covered in Lesson 5.</p>
+
+<h2>The NFPA 3000 Zone Architecture</h2>
+<p>NFPA 3000 defines three operational zones that govern where each discipline operates and what clinical care is appropriate. Zone designation is dynamic — as law enforcement neutralizes and secures areas, zones shift. The RGS tracks these shifts continuously and adjusts RTF positioning accordingly.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NFPA 3000 — OPERATIONAL ZONES</span>
+    <div class="ig-title">Hot Zone · Warm Zone · Cold Zone</div>
+    <div class="ig-sub">Zone boundaries are established by law enforcement and communicated to the EMS Branch. They shift as the incident is resolved. The RGS must track zone boundaries in real time — RTF safety depends on accurate zone intelligence.</div>
+  </div>
+  <div class="ig-stage-grid">
+    <div class="ig-stage" style="border-top:3px solid #E87070;">
+      <div class="ig-stage-num" style="color:#E87070;">HOT</div>
+      <div class="ig-stage-name" style="color:#E87070;">Hot Zone — Active Threat</div>
+      <div class="ig-stage-desc">Active shooter or threat present. <strong style="color:var(--on-dark-1);">Law enforcement only.</strong> No EMS entry under any circumstances. Patients in the Hot Zone cannot be reached until the threat is addressed. The officer who sends an RTF into the Hot Zone has created a multiple-casualty event from a single-casualty event. The RGS maintains the hard boundary.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid var(--gold);">
+      <div class="ig-stage-num" style="color:var(--gold);">WARM</div>
+      <div class="ig-stage-name" style="color:var(--gold);">Warm Zone — Threat Mitigated</div>
+      <div class="ig-stage-desc">Threat is addressed but scene is not fully secured. <strong style="color:var(--on-dark-1);">Rescue Task Force operates here</strong> — escorted by law enforcement. RTFs perform hemorrhage control, airway management, and patient extraction. TECC protocols govern clinical care in this zone. CCP-Warm (Casualty Collection Point — Warm) is established at the Warm/Cold boundary for patient handoff to Cold Zone treatment crews.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #60D090;">
+      <div class="ig-stage-num" style="color:#60D090;">COLD</div>
+      <div class="ig-stage-name" style="color:#60D090;">Cold Zone — Secure</div>
+      <div class="ig-stage-desc">Scene secured. Full EMS treatment operations. Traditional ALS/BLS care resumes. CCP-Cold is established here — the handoff point from extraction teams. Treatment Group Leader manages patient care in the Cold Zone. Transport to receiving facilities is coordinated from here. This is where SALT/START categories are formally confirmed and hospital notifications are made.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The single most important thing an RGS does is maintain zone discipline — no RTF moves into a zone without law enforcement confirmation of zone status. "We think it's clear" is not the same as "law enforcement has confirmed Warm designation." The RGS holds the RTF at the Cold/Warm boundary until they have that confirmation. Every time. Without exception.</div>
+</div>
+
+<h2>The Rescue Task Force — Composition and Deployment</h2>
+<p>The Rescue Task Force is a joint law enforcement / EMS team specifically designed to operate in the Warm Zone. It is not a traditional EMS crew with a police escort. It is a deliberate, trained, integrated team with defined roles, communication protocols, and clinical limitations matched to the tactical environment.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ RESCUE TASK FORCE — COMPOSITION AND MISSION</span>
+    <div class="ig-title">RTF Structure · Warm Zone Operations · Clinical Scope</div>
+    <div class="ig-sub">RTF composition varies by jurisdiction — the model below reflects the standard NFPA 3000 / FEMA framework. Know your agency's specific RTF protocol — configurations differ.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid #6090C0;">
+      <div class="ig-fw-label">Law Enforcement Component</div>
+      <div class="ig-fw-title">2–4 Officers — Security and Movement</div>
+      <div class="ig-fw-desc">Provides tactical security for the RTF as it moves through the Warm Zone. Establishes a security perimeter around the treatment location while EMS personnel render care. Controls the RTF's route of ingress and egress. The law enforcement component does not render patient care — their sole mission is RTF security. The RTF does not move without them.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">EMS Component</div>
+      <div class="ig-fw-title">2 Providers (Paramedic-Level Preferred) — Hemorrhage Control and Extraction</div>
+      <div class="ig-fw-desc">Renders TECC-based care in the Warm Zone. Primary interventions: massive hemorrhage control (tourniquet, wound packing), airway management (NPA, positioning), needle decompression for tension pneumothorax. EMS personnel carry minimal equipment — only what fits in a trauma bag. No large equipment, no stretcher deployment inside the Warm Zone. Patients are extracted to CCP-Warm for further care.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">RTF Equipment Standard</div>
+      <div class="ig-fw-title">MARCH Protocol Supplies</div>
+      <div class="ig-fw-desc"><strong style="color:var(--on-dark-1);">M</strong> — Massive hemorrhage: tourniquets (CAT, SOFTT-W), hemostatic gauze, pressure bandages<br><strong style="color:var(--on-dark-1);">A</strong> — Airway: NPA + lube, BVM, suction (manual)<br><strong style="color:var(--on-dark-1);">R</strong> — Respirations: needle decompression (14ga), chest seal (vented)<br><strong style="color:var(--on-dark-1);">C</strong> — Circulation: IV access (IO if needed), fluid if weight allows<br><strong style="color:var(--on-dark-1);">H</strong> — Hypothermia: space blanket, evacuation packaging</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Clinical Scope in Warm Zone</div>
+      <div class="ig-fw-title">TECC-Based — Limited, High-Impact</div>
+      <div class="ig-fw-desc">TECC (Tactical Emergency Casualty Care) is the civilian adaptation of TCCC (Tactical Combat Casualty Care). In the Warm Zone, interventions are limited to those that address immediately life-threatening hemorrhage, airway compromise, and tension pneumothorax. No prolonged ALS procedures. The clinical mission is: <em>control the bleeding, open the airway, decompress the chest, move the patient to Cold Zone for definitive care.</em></div>
+    </div>
+  </div>
+  <div class="ig-callout">The RTF's clinical discipline is as important as its tactical discipline. An EMS provider who begins a full ALS workup in the Warm Zone — IV lines, monitor, 12-lead — is creating dwell time that increases risk for the entire RTF. The Warm Zone is not a treatment area. It is an extraction area. The goal is: stop the immediate kill threat and move.</div>
+</div>
+
+<h2>The Rescue Group Supervisor — Command Responsibilities</h2>
+<p>The Rescue Group Supervisor (RGS) is the EMS officer position in the NFPA 3000 ICS structure that manages all RTF operations within the EMS Branch. The RGS does not embed with an RTF — they manage all RTFs from a command position at the Warm/Cold boundary, maintaining situational awareness of all teams in the Warm Zone simultaneously.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ RESCUE GROUP SUPERVISOR — RGS COMMAND ROLE</span>
+    <div class="ig-title">What the RGS Manages · Where the RGS Operates · How the RGS Communicates</div>
+    <div class="ig-sub">The RGS is the critical link between law enforcement tactical operations and EMS patient care operations. This position requires officers who understand both disciplines.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">What the RGS Manages</div>
+      <div class="ig-map-title">All RTFs · Zone Boundaries · CCP-Warm</div>
+      <div class="ig-map-desc">The RGS tracks the location and status of all deployed RTFs in the Warm Zone. Manages RTF staging and sequencing — only the RTF that is currently needed in the Warm Zone is deployed; additional RTFs stage in the Cold Zone awaiting assignment. Manages CCP-Warm operations including patient handoff to Cold Zone treatment crews. Maintains patient accountability across all RTFs.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Where the RGS Operates</div>
+      <div class="ig-map-title">Warm/Cold Boundary — Not the Warm Zone</div>
+      <div class="ig-map-desc">The RGS positions at the Warm/Cold boundary — inside the Cold Zone with line of sight or radio contact with the Warm Zone. The RGS does not enter the Warm Zone. From this position the RGS can manage multiple RTFs, coordinate with the law enforcement Rescue Task Force Coordinator, communicate with the EMS Branch Director, and track patient movement from Warm Zone extraction to CCP-Warm to Cold Zone treatment.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">RGS Communications</div>
+      <div class="ig-map-title">Three-Channel Discipline</div>
+      <div class="ig-map-desc"><strong style="color:var(--on-dark-1);">RTF channel:</strong> Direct communication with each deployed RTF for real-time status updates and extraction coordination.<br><strong style="color:var(--on-dark-1);">EMS Branch channel:</strong> Reports to EMS Branch Director — patient count, category, extraction status, resource needs.<br><strong style="color:var(--on-dark-1);">Law enforcement liaison:</strong> Coordinate with the LE Rescue Task Force Coordinator for zone boundary updates, RTF security assignments, and threat status changes. The RGS is the translator between tactical and medical operations.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;">
+      <div class="ig-map-label">RGS Critical Decisions</div>
+      <div class="ig-map-title">Hold · Deploy · Extract · Abort</div>
+      <div class="ig-map-desc"><strong style="color:var(--on-dark-1);">Hold:</strong> RTF staged at Cold Zone boundary — zone not confirmed Warm. Hold until LE confirmation.<br><strong style="color:var(--on-dark-1);">Deploy:</strong> Send RTF into Warm Zone with LE escort upon zone confirmation and patient location identification.<br><strong style="color:var(--on-dark-1);">Extract:</strong> Order patient movement to CCP-Warm. Time extraction to avoid extended Warm Zone dwell.<br><strong style="color:var(--on-dark-1);">Abort:</strong> Immediate RTF withdrawal if zone status changes — threat re-engagement, new active shooter location, LE tactical change. The abort call is the RGS's most critical decision. Hesitation costs lives.</div>
+    </div>
+  </div>
+</div>
+
+<h2>RTF Deployment Sequence — Step by Step</h2>
+<p>The RTF deployment sequence must be automatic for any officer serving as RGS. In oral board Bucket 13 — Situational / Scene scenarios involving active shooter events, walking through this sequence demonstrates both ICS fluency and ASHER-specific operational knowledge — a combination very few candidates demonstrate.</p>
+
+<div class="fw-grid-3" style="margin-top:1.75rem;">
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 1 — Staging</div>
+    <div class="fw-card-title">Assemble in Cold Zone</div>
+    <div class="fw-card-desc">RTF assembles at RGS staging location in Cold Zone. Equipment check — every team member verifies MARCH supplies are complete and accessible. Radio check on RTF channel. LE officers confirm weapons status. Briefing from RGS: patient location (if known), zone boundary, entry/exit route, abort signal/word.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 2 — Insertion</div>
+    <div class="fw-card-title">Warm Zone Entry with LE Escort</div>
+    <div class="fw-card-desc">LE component moves first — security overwatch. EMS follows. Movement is deliberate, not sprinting. RTF does not separate — the team moves as a unit. Entry only after RGS has confirmed zone designation with LE Rescue Task Force Coordinator. Time of entry transmitted to RGS on RTF channel.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 3 — Care and Extraction</div>
+    <div class="fw-card-title">TECC, Rapid Assessment, Move</div>
+    <div class="fw-card-desc">LE establishes security perimeter. EMS applies RAMP triage. MARCH interventions for immediate threats only. No prolonged procedures. Ambulate patients who can walk toward CCP-Warm. Carry/drag non-ambulatory patients to extraction point. Total Warm Zone dwell time target: under 10 minutes per patient contact.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 4 — CCP-Warm Handoff</div>
+    <div class="fw-card-title">Transfer to Cold Zone Treatment</div>
+    <div class="fw-card-desc">RTF delivers patients to CCP-Warm at the Warm/Cold boundary. Brief verbal report to receiving Cold Zone crew: mechanism, injuries found, interventions performed. Patient accountability document (tag number, triage category, interventions) transfers with patient. RTF returns to staging for reassignment or debrief.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 5 — Restage or Redeploy</div>
+    <div class="fw-card-title">RGS Decision Point</div>
+    <div class="fw-card-desc">After extraction, RGS assesses: are there more patients in the Warm Zone? Is zone status still confirmed? Are resources available to redeploy? If yes to all three, RGS deploys the next staged RTF (not the same team, which needs equipment restock). Continuous cycling continues until all patients are extracted or zone status changes.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Phase 6 — Termination</div>
+    <div class="fw-card-title">Zone Secured → Full EMS Operations</div>
+    <div class="fw-card-desc">When law enforcement declares the scene secure (Cold Zone expanded to cover the full scene), RTF operations stand down. Full EMS treatment and transport operations resume under standard ICS structure. RGS reports final patient count, triage categories, and resources committed to EMS Branch Director. Documentation of all RTF deployments, extraction times, and patient dispositions.</div>
+  </div>
+</div>
+
+<h2>TECC — Tactical Emergency Casualty Care</h2>
+<p>TECC is the clinical framework for EMS operations in the Warm Zone. It is the civilian adaptation of TCCC (Tactical Combat Casualty Care) and is the training standard required for RTF EMS personnel under NFPA 3000. The MARCH protocol is its primary clinical sequence.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">TECC MARCH Protocol — Warm Zone Clinical Priorities</span>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">M — Massive Hemorrhage:</strong> <span style="color:var(--on-dark-2);">Tourniquet application to extremity hemorrhage. Wound packing with hemostatic gauze for junctional wounds. This is the first priority — hemorrhage is the leading cause of preventable death in penetrating trauma events.</span></p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">A — Airway:</strong> <span style="color:var(--on-dark-2);">Unconscious patient — NPA insertion, position for drainage. No advanced airway in the Warm Zone unless trained and can be done in under 60 seconds.</span></p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">R — Respirations:</strong> <span style="color:var(--on-dark-2);">Penetrating chest trauma — seal open wounds with vented chest seal. Tension pneumothorax signs — needle decompression second ICS, MCL, 2nd intercostal space.</span></p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">C — Circulation:</strong> <span style="color:var(--on-dark-2);">IV/IO access if achievable without prolonged dwell. Hypothermia prevention begins here — do not expose wounds unnecessarily.</span></p>
+  <p style="margin-bottom:0;"><strong style="color:var(--gold);">H — Hypothermia / Head:</strong> <span style="color:var(--on-dark-2);">Package for extraction. Space blanket. Monitor for deterioration during movement to CCP-Warm.</span></p>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 4 Complete — What You Now Know</span>
+  <p>Seven lessons. You understand the full ICS structure and your positions within it. Scene command from arrival to transfer. SSM as deployment science. Resource accountability from narcotics to mutual aid. Three MCI triage systems and when to use each. PDCA for every improvement cycle. And now: NFPA 3000 zone architecture, RTF composition and deployment, the RGS command role, and TECC clinical protocols. Chapter 5 develops EMS Personnel Leadership — the 3 U's Diagnostic, CALM in personnel conversations, and provider burnout as an officer-level responsibility.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, billing regulations, and labor laws vary by state, jurisdiction, and agency. Always consult your agency's policies, medical director, legal counsel, and applicable state and federal regulations before making operational decisions. NFPA 3000 implementation varies by jurisdiction and agency. RTF deployment protocols, zone designations, and TECC clinical scopes are subject to local medical direction, law enforcement policy, and mutual aid agreement terms. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">NFPA 3000 Zones</span>
+  <div class="sbar-card accent-red"><strong>Hot Zone</strong>Active threat. Law enforcement only. Zero EMS entry. Hard boundary — no exceptions.</div>
+  <div class="sbar-card accent-gold"><strong>Warm Zone</strong>Threat mitigated. RTF operates here with LE escort. TECC-based care. CCP-Warm at boundary.</div>
+  <div class="sbar-card accent-green"><strong>Cold Zone</strong>Scene secured. Full ALS/BLS treatment. CCP-Cold. Hospital coordination. Transport operations.</div>
+  <span class="sbar-label">RTF Composition</span>
+  <div class="sbar-card"><strong>LE Component</strong>2–4 officers. Security overwatch. RTF does not move without them.</div>
+  <div class="sbar-card accent-ems"><strong>EMS Component</strong>2 paramedic-level providers. TECC/MARCH care. Minimal equipment. Extract — don't treat in place.</div>
+  <span class="sbar-label">RGS Responsibilities</span>
+  <div class="sbar-card accent-gold"><strong>Position</strong>Warm/Cold boundary. Not in the Warm Zone. Manages all RTFs from Cold Zone.</div>
+  <div class="sbar-card"><strong>Three Channels</strong>RTF direct · EMS Branch up · LE Coordinator lateral.</div>
+  <div class="sbar-card accent-red"><strong>Abort Call</strong>Most critical RGS decision. Zone status changes = immediate RTF withdrawal. No hesitation.</div>
+  <span class="sbar-label">TECC / MARCH</span>
+  <div class="sbar-card"><strong>M</strong>Massive hemorrhage first — tourniquet, wound packing.</div>
+  <div class="sbar-card"><strong>A R C H</strong>Airway · Respirations · Circulation · Hypothermia. In that order. Limited scope. Move fast.</div>
+  <span class="sbar-label">Triage Connection</span>
+  <div class="sbar-card accent-ems"><strong>RAMP in Warm Zone</strong>Respirations → Alert → Major Bleeding → Priority. RAMP's CCP handoff step connects directly to the CCP-Warm structure here.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Admin &amp; PDCA</button>
+  <div class="lnb-info"><div class="lnb-name">NFPA 3000 — Active Shooter Response &amp; the RGS Role</div><div class="lnb-num">Lesson 7 of 7</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 4 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

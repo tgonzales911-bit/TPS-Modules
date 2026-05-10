@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 2 — Self Attributes | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   Copy this entire <style> block to every new chapter.
+   Content changes. Design does not.
+   ============================================================ */
+:root {
+  --navy:#0C2340; --navy2:#0F2A4A; --navy-deep:#071828;
+  --gold:#C9A84C; --gold-light:#E4C97A; --gold-dim:#8B6914;
+  --cream:#F5F0E8; --cream2:#EDE4D0; --offwhite:#F9F6F0; --light:#EAE5DC;
+  --on-dark-1:#F0E8D8; --on-dark-2:#C8DCF0; --on-dark-3:#98B8D0; --on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42; --on-light-2:#3A5068; --on-light-3:#6A7A8A;
+  --ems:#1A4A6B; --ems2:#2A6090; --ems-bg:rgba(42,96,144,0.12); --ems-border:rgba(42,96,144,0.35); --ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.acro-grid{display:flex;flex-direction:column;gap:0;margin:1.75rem 0;border:1px solid #D8D2C8;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);}
+.acro-row{display:grid;grid-template-columns:56px 1fr;gap:0;border-bottom:1px solid #D8D2C8;}
+.acro-row:last-child{border-bottom:none;}
+.acro-letter{background:var(--navy);color:var(--gold);font-family:'EB Garamond',serif;font-size:2rem;font-weight:800;display:flex;align-items:center;justify-content:center;}
+.acro-content{padding:1rem 1.25rem;background:white;}
+.acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:5px;}
+.acro-desc{font-size:0.9rem;color:var(--on-light-2);line-height:1.6;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+/* Compare */
+.ig-compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-compare-col{background:var(--navy-deep);padding:1.25rem;}
+.ig-compare-header{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:5px;}
+.ig-compare-sub{font-size:0.88rem;font-style:italic;margin-bottom:12px;line-height:1.45;}
+.ig-compare-items{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.ig-compare-item{font-size:0.9rem;color:var(--on-dark-1);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);line-height:1.5;}
+.ig-compare-result{font-size:0.87rem;font-weight:600;padding:9px 11px;border:1px solid;margin-top:8px;line-height:1.45;}
+/* Three-column compare */
+.ig-compare-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+/* Stage grid */
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Acro inside IG */
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:4px;}
+/* Mapping grid */
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Confidence spectrum 3-col */
+.conf-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.conf-col{background:var(--navy-deep);padding:1.25rem;}
+.conf-header{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:5px;}
+.conf-sub{font-size:0.88rem;font-style:italic;margin-bottom:10px;line-height:1.4;}
+.conf-item{font-size:0.9rem;color:var(--on-dark-1);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);line-height:1.5;}
+.conf-result{font-size:0.87rem;font-weight:600;padding:9px 11px;border:1px solid;margin-top:10px;line-height:1.45;}
+/* LESSON NAV BAR */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+/* LEGAL DISCLAIMER */
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+/* ============================================================
+   LEVEL KEY — LOCKED STANDARD COMPONENT
+   Add once per chapter file, on the first lesson that uses
+   S / M / E level shorthand notation.
+   S = Supervising EMS Officer
+   M = Managing EMS Officer
+   E = Executive EMS Officer
+   ============================================================ */
+.level-key {
+  background:var(--navy);
+  border:1px solid rgba(201,168,76,0.2);
+  border-left:4px solid var(--gold);
+  padding:1.25rem 1.5rem;
+  margin:0 0 2.25rem;
+  box-shadow:0 2px 12px rgba(0,0,0,0.2);
+}
+.level-key-label {
+  font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;
+}
+.level-key-intro {
+  font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;
+}
+.level-key-grid {
+  display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;
+}
+.level-key-badge {
+  font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;
+  padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;
+}
+.level-key-desc { font-size:0.92rem;color:var(--on-dark-1);line-height:1.5; }
+.level-key-desc strong { font-weight:600; }
+.level-key-note {
+  font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;
+  padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);
+}
+
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-compare,.ig-compare-3,.conf-grid,.ig-map-grid,.ig-stage-grid{grid-template-columns:1fr;}.fw-grid{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider" style="width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Mindset Shift</button>
+    <button class="nav-pill" onclick="showLesson(1)">T·C·H·O·E·D·S in EMS</button>
+    <button class="nav-pill" onclick="showLesson(2)">Work Habits &amp; Attitudes</button>
+    <button class="nav-pill" onclick="showLesson(3)">Stress Management</button>
+    <button class="nav-pill" onclick="showLesson(4)">Self-Insight</button>
+    <button class="nav-pill" onclick="showLesson(5)">Continuous Learning</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 2 · NEMSMA Pillar 2</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · Self Attributes</div>
+    <h1 class="mh-title"><em>Self Attributes</em> —<br>The Internal Architecture</h1>
+    <p class="mh-sub">Before you can lead a crew, manage a division, or direct an organization — you have to lead yourself. The NEMSMA Pillar 2 competencies define exactly what that looks like at every level. The TPS T·C·H·O·E·D·S values are the foundation underneath all of it.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The mindset shift from provider to officer. T·C·H·O·E·D·S mapped to NEMSMA Pillar 2. Work habits, work attitudes, stress management, self-insight, and continuous learning — the five sub-sections of the Self Attributes pillar built into practical coaching content.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — MINDSET SHIFT ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 1 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">From Provider to Officer —<br><em>The Mindset Shift</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 12 min</span><span class="lh-meta-item">📘 Identity</span><span class="lh-meta-item">Self Attributes</span></div>
+</div>
+
+<p>The most common reason EMS promotional candidates underperform in assessment centers has nothing to do with clinical knowledge, operational experience, or intelligence. It is this: <strong>they walk into the assessment center still thinking like a provider.</strong></p>
+
+<p>This is not a criticism. Being an exceptional clinician is what earns you the right to pursue promotion. But the moment you sit down in front of assessors, your clinical identity becomes context — not currency. The assessors are not evaluating how well you run a code. They are evaluating how well you would lead the people who run codes.</p>
+
+<p>That is a fundamentally different question. And it requires a fundamentally different identity.</p>
+
+<h2>What Providers Think. What Officers Think.</h2>
+<p>The provider identity is built around personal clinical performance. Every call is a direct personal responsibility. Success means excellent patient care on your shift, by your hands. The feedback loop is immediate — the patient either improves or doesn't. The radius of accountability is you, your partner, and your patient.</p>
+
+<p>The officer identity is built around the performance of others. Your success is measured by the quality of decisions your crew makes when you are not on scene. The feedback loop is delayed — you see it in QA data, in patient outcome reports, in the patterns that emerge over months. The radius of accountability is everyone you supervise, and every patient they touch.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE IDENTITY SHIFT</span>
+    <div class="ig-title">Provider Thinking vs. Officer Thinking</div>
+    <div class="ig-sub">The assessment center is scoring the right column. Your preparation must develop that identity — not just review clinical protocols.</div>
+  </div>
+  <div class="ig-compare">
+    <div class="ig-compare-col" style="border-top:3px solid var(--ems2);">
+      <div class="ig-compare-header" style="color:var(--ems-text);">Provider Identity</div>
+      <div class="ig-compare-sub" style="color:var(--on-dark-3);">First-person clinical excellence. The "I" frame.</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">"How do I perform on this call?"</div>
+        <div class="ig-compare-item">"What is the best clinical intervention?"</div>
+        <div class="ig-compare-item">"I need to fix this problem directly."</div>
+        <div class="ig-compare-item">"My partner needs to do it my way."</div>
+        <div class="ig-compare-item">"Success = excellent patient outcome."</div>
+        <div class="ig-compare-item">"Feedback is about my performance."</div>
+        <div class="ig-compare-item">"I am accountable for my patients."</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(42,96,144,0.12);border-color:var(--ems2);color:var(--ems-text);">The foundation. Required to get here. Not sufficient to lead.</div>
+    </div>
+    <div class="ig-compare-col" style="border-top:3px solid var(--gold);background:#0A1E34;">
+      <div class="ig-compare-header" style="color:var(--gold);">Officer Identity</div>
+      <div class="ig-compare-sub" style="color:#B09840;">Third-person organizational performance. The "We" frame.</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">"How does my crew perform on every call?"</div>
+        <div class="ig-compare-item">"What conditions produce excellent clinical decisions?"</div>
+        <div class="ig-compare-item">"How do I develop others to solve problems?"</div>
+        <div class="ig-compare-item">"My job is to produce better clinicians."</div>
+        <div class="ig-compare-item">"Success = crew excellence I helped build."</div>
+        <div class="ig-compare-item">"Feedback is about system performance."</div>
+        <div class="ig-compare-item">"I am accountable for everyone I supervise."</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold);">What assessors are scoring. What this chapter develops.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most dangerous candidate in an EMS oral board is the one who gives technically correct clinical answers to leadership questions. They demonstrate strong provider identity — which scores exactly zero on leadership competency dimensions.</div>
+</div>
+
+<h2>The Identity Trap in Assessment Centers</h2>
+<p>The identity trap shows up in predictable ways. A Supervising Officer candidate is asked: "One of your paramedics has been receiving patient complaints about communication. How do you handle it?" The provider-identity answer focuses on what the supervisor personally would say to the patient. The officer-identity answer focuses on how the supervisor would diagnose the paramedic's performance issue, what conversation they would have, what development plan they would create, and how they would measure improvement.</p>
+
+<p>Same question. Completely different frame. The assessors are scoring the second frame.</p>
+
+<h3>The Three Shifts That Define Officer Identity</h3>
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">From Doing to Enabling</div>
+    <div class="fw-card-title">You Produce Performance Through Others</div>
+    <div class="fw-card-desc">Your clinical skill is still relevant — it gives you credibility and pattern recognition. But the job is developing the clinical skill of others, not demonstrating your own.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">From Reacting to Anticipating</div>
+    <div class="fw-card-title">You See the System, Not Just the Call</div>
+    <div class="fw-card-desc">Providers react to what is in front of them. Officers anticipate what patterns will emerge. You are thinking about next week's shift, not just tonight's call.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">From Personal to Systemic</div>
+    <div class="fw-card-title">You Own the Culture, Not Just the Outcome</div>
+    <div class="fw-card-desc">When something goes wrong, your first question as an officer is not "who did this?" — it is "what conditions allowed this to happen, and what is my role in changing them?"</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Identity Audit — Run This Before Every Practice Session</span>
+  <p>Before you answer any oral board question in practice, ask yourself: "Am I answering as a provider or as an officer?" If your answer is about what you personally would do at the scene — you are in provider mode. If your answer is about how you would lead, develop, or create conditions for others — you are in officer mode. The shift is not instinctive. It must be practiced until it becomes automatic.</p>
+</div>
+
+<h2>Why This Connects to NEMSMA Pillar 2</h2>
+<p>NEMSMA Pillar 2 — Self Attributes — is the internal foundation of officer identity. Work habits, work attitudes, stress management, self-insight, and continuous learning are not soft skills. They are the architecture of a leader who can sustain officer-identity thinking under operational pressure, through shift fatigue, through difficult personnel situations, through organizational change. You cannot lead others from a self that has not been developed. That is what this chapter builds.</p>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Chapter 2 Overview</span>
+  <div class="sbar-card"><strong>Lesson 1</strong>From Provider to Officer — the mindset shift</div>
+  <div class="sbar-card"><strong>Lesson 2</strong>T·C·H·O·E·D·S mapped to NEMSMA Pillar 2</div>
+  <div class="sbar-card"><strong>Lesson 3</strong>Work Habits and Work Attitudes</div>
+  <div class="sbar-card"><strong>Lesson 4</strong>Stress Management under clinical pressure</div>
+  <div class="sbar-card"><strong>Lesson 5</strong>Self-Insight — confidence without arrogance</div>
+  <div class="sbar-card"><strong>Lesson 6</strong>Continuous Learning — the perpetual student</div>
+  <span class="sbar-label">The Core Insight</span>
+  <div class="sbar-card accent-gold"><strong>The Identity Trap</strong>Technically correct clinical answers to leadership questions score zero on leadership competency dimensions.</div>
+  <span class="sbar-label">The Three Shifts</span>
+  <div class="sbar-card accent-ems"><strong>Doing → Enabling</strong>Performance through others, not personal performance.</div>
+  <div class="sbar-card accent-ems"><strong>Reacting → Anticipating</strong>See the system, not just the call.</div>
+  <div class="sbar-card accent-ems"><strong>Personal → Systemic</strong>Own the culture, not just the outcome.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 1</button>
+  <div class="lnb-info"><div class="lnb-name">From Provider to Officer — The Mindset Shift</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">T·C·H·O·E·D·S in EMS →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — TCHOEDS IN EMS ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 2 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">T·C·H·O·E·D·S<br><em>in the EMS Context</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Framework Mapping</span><span class="lh-meta-item">Pillar 2</span></div>
+</div>
+
+<p>The T·C·H·O·E·D·S values framework is the moral architecture of TPS. It defines what a leader is before it defines what a leader does. In the fire track, T·C·H·O·E·D·S is applied to supervisory judgment, conflict resolution, and leadership philosophy questions. In the EMS track, the same values apply — but they operate in a distinctly different clinical and organizational environment.</p>
+
+<p>NEMSMA Pillar 2 — Self Attributes — provides the competency language that maps precisely onto T·C·H·O·E·D·S. Every value in the TPS framework connects to a specific NEMSMA competency cluster. Understanding that connection gives you two vocabularies for the same leadership truth: the TPS language for oral board responses, and the NEMSMA language for credentialing and assessment contexts.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ FRAMEWORK MAPPING — T·C·H·O·E·D·S × NEMSMA PILLAR 2</span>
+    <div class="ig-title">Seven Values · Seven Competency Clusters</div>
+    <div class="ig-sub">Each TPS value maps to a specific NEMSMA Pillar 2 competency. Two vocabularies — one leadership truth.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">T</div>
+      <div>
+        <div class="ig-acro-word">Trust — Work Ethic + Honesty</div>
+        <div class="ig-acro-desc">NEMSMA Pillar 2 defines Work Ethic as demonstrating and living an ethical work model — treating all direct reports fairly and honestly while ensuring customer needs are met professionally. Trust is built through consistent ethical behavior, not through statements about values. Assessors evaluate Trust by watching whether your stated principles match the actions in your scenario responses.</div>
+        <div class="ig-acro-ems">EMS context: Trust includes clinical integrity — the paramedic who cuts documentation corners breaks more than a rule. They break patient trust and system trust simultaneously.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">C</div>
+      <div>
+        <div class="ig-acro-word">Courage — Work Attitudes + Courage of Convictions</div>
+        <div class="ig-acro-desc">NEMSMA defines Initiative as taking action without prompting and Persistence as demonstrating persistence during daily duties. Courage in the EMS leadership context means following through with unpopular decisions when ethically appropriate — addressing a senior paramedic's performance issue, delivering difficult feedback, standing behind a policy that protects patients even when crews resist it.</div>
+        <div class="ig-acro-ems">EMS context: Clinical courage includes refusing to validate poor patient care even when it creates friction with experienced providers. Officer courage includes documenting and addressing it systematically.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">H</div>
+      <div>
+        <div class="ig-acro-word">Humility — Self-Insight + Suspending Judgment</div>
+        <div class="ig-acro-desc">NEMSMA's Self-Insight cluster includes Self-Awareness, Self-Reliance, Humility, and Suspending Judgment. The overconfidence failure mode for humility in EMS leadership is the officer who assumes clinical expertise translates automatically into leadership authority. Humility is what allows an officer to say "this crew member knows something I don't, and I need to understand it before I respond."</div>
+        <div class="ig-acro-ems">EMS context: A 20-year paramedic who just got promoted must lead crews who have more field experience. Humility is the difference between earning their respect and demanding it.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">O</div>
+      <div>
+        <div class="ig-acro-word">Ownership — Work Habits + Goal Orientation</div>
+        <div class="ig-acro-desc">NEMSMA's Work Habits competency defines Organization Skills as organizing workflow to execute duties while ensuring all assigned tasks are completed in a timely manner. Ownership in the officer context means accepting personal responsibility for outcomes — even when others caused the problem. "My crew's documentation errors are my training failure, not just their performance failure." Ownership is the language of the Confidence column.</div>
+        <div class="ig-acro-ems">EMS context: Ownership at the Managing level includes QA/QI outcomes — if your unit's ROSC rates are below benchmark, that is an officer problem, not just a crew problem.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">E</div>
+      <div>
+        <div class="ig-acro-word">Empathy — Stress Management + Interpersonal Awareness</div>
+        <div class="ig-acro-desc">NEMSMA's Stress Management cluster includes Self Control, Stress Tolerance, Personal Resiliency, Work/Life Balance, and Adaptability. Empathy in EMS leadership is not sentimentality — it is operational. An officer who cannot recognize the signs of provider fatigue, compassion fatigue, or critical incident stress in their crew is missing data that will predict performance failures before they happen.</div>
+        <div class="ig-acro-ems">EMS context: EMS providers carry a clinical trauma burden that most other professions do not. Empathy is the operational skill that allows an officer to notice this before it becomes a patient safety issue.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">D</div>
+      <div>
+        <div class="ig-acro-word">Dedication — Work Habits + Time Management</div>
+        <div class="ig-acro-desc">NEMSMA defines Time Management as planning and structuring time effectively and efficiently, concentrating on the most important priorities, and attending to a broad range of activities. Dedication at the officer level is demonstrated through sustained attention — not heroic effort on dramatic calls, but consistent quality on every administrative task, every crew conversation, every piece of documentation when nobody is watching.</div>
+        <div class="ig-acro-ems">EMS context: The most dedicated EMS officers are rarely noticed during MCIs. They are noticed through the quality of their crews' preparation before the MCI happens.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">S</div>
+      <div>
+        <div class="ig-acro-word">Service — Learning + Servant Leadership</div>
+        <div class="ig-acro-desc">NEMSMA's Learning cluster includes Learning Strategies, Intellectual Curiosity, Continuous Learning, and Seeking Feedback. Service in the EMS officer context is active investment in the profession's growth — not just your agency's performance metrics. An EMS officer who attends state conferences, contributes to protocol development, and mentors junior officers is practicing institutional service that extends beyond their shift.</div>
+        <div class="ig-acro-ems">EMS context: Servant leadership in EMS means your first question on every shift is "what does my crew need from me today?" — not "what do I need my crew to deliver today?"</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">When you use T·C·H·O·E·D·S in an oral board response, you are using the TPS vocabulary. When an assessor reading NEMSMA competencies evaluates you, they are using the NEMSMA vocabulary. These map to the same behaviors. Knowing both vocabularies means you perform well in both contexts.</div>
+</div>
+
+<h2>Using T·C·H·O·E·D·S in EMS Oral Board Responses</h2>
+<p>The framework is used in the Deliver step of L·E·A·D — as your closing principle. After you have Labeled the bucket, Engaged the facts, and Applied the specific EMS framework, you close by anchoring in a T·C·H·O·E·D·S value that is most relevant to the scenario.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Personnel Performance Issue</div>
+    <div class="fw-card-title">Close with Ownership</div>
+    <div class="fw-card-desc">"Ultimately, this is an Ownership question. My crew member's performance reflects my leadership investment. My job is to find out what I missed and correct it — not just document what they did wrong."</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Difficult Policy to Enforce</div>
+    <div class="fw-card-title">Close with Courage</div>
+    <div class="fw-card-desc">"I will enforce this policy consistently because Courage means following through when it is uncomfortable. If I believe it serves patient safety, my discomfort with the conversation is irrelevant."</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">QA/Clinical Feedback</div>
+    <div class="fw-card-title">Close with Trust</div>
+    <div class="fw-card-desc">"Everything I do in the QI process comes back to Trust — trust with my providers that feedback is fair, and trust with our patients that we hold ourselves accountable to a standard."</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Crew Wellbeing Issue</div>
+    <div class="fw-card-title">Close with Empathy</div>
+    <div class="fw-card-desc">"An EMS officer who cannot see provider fatigue before it becomes a patient safety issue is missing the most important clinical data on their unit. Empathy is not optional — it is operational."</div>
+  </div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">T·C·H·O·E·D·S → NEMSMA Map</span>
+  <div class="sbar-card accent-gold"><strong>T — Trust</strong>Work Ethic + Honesty. Consistent ethical behavior in clinical and leadership contexts.</div>
+  <div class="sbar-card accent-gold"><strong>C — Courage</strong>Work Attitudes + Courage of Convictions. Unpopular decisions. Difficult feedback.</div>
+  <div class="sbar-card accent-gold"><strong>H — Humility</strong>Self-Insight + Suspending Judgment. Clinical expertise ≠ leadership authority.</div>
+  <div class="sbar-card accent-gold"><strong>O — Ownership</strong>Work Habits + Goal Orientation. Crew outcomes are officer outcomes.</div>
+  <div class="sbar-card accent-gold"><strong>E — Empathy</strong>Stress Management + Interpersonal Awareness. Operational, not sentimental.</div>
+  <div class="sbar-card accent-gold"><strong>D — Dedication</strong>Work Habits + Time Management. Sustained attention, not heroic effort.</div>
+  <div class="sbar-card accent-gold"><strong>S — Service</strong>Learning + Servant Leadership. "What does my crew need from me today?"</div>
+  <span class="sbar-label">In Oral Boards</span>
+  <div class="sbar-card"><strong>Use in the Deliver Step</strong>Close with the T·C·H·O·E·D·S value most relevant to the scenario after applying the EMS-specific framework.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Mindset Shift</button>
+  <div class="lnb-info"><div class="lnb-name">T·C·H·O·E·D·S in the EMS Context</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Work Habits &amp; Attitudes →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — WORK HABITS & ATTITUDES ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 3 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">Work Habits<br><em>&amp; Work Attitudes</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Pillar 2 · Sub-sections 1 &amp; 2</span></div>
+</div>
+
+<p>NEMSMA Pillar 2 opens with two foundational sub-sections: Work Habits and Work Attitudes. These are not personality traits — they are observable behavioral patterns that assessors probe directly in oral board scenarios. Understanding what each competency looks like at the Confidence column — and how to name it in a response — is the practical value of this lesson.</p>
+
+<!-- LEVEL KEY — LOCKED STANDARD COMPONENT -->
+<div class="level-key">
+  <span class="level-key-label">Level Key — How to Read NEMSMA Competency Descriptions</span>
+  <p class="level-key-intro">Throughout this chapter and the rest of this track, NEMSMA competencies are described at three officer levels. Each infographic uses the following shorthand — refer back here any time you need a reminder:</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Front-line supervisor. Direct oversight of EMS crews. Also known as: EMS Lieutenant, Field Supervisor, Shift Supervisor.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Middle management. Division, program, or organizational component leadership. Also known as: EMS Captain, Operations Manager, Division Chief.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Senior leadership. Organization-wide strategy, direction, and accountability. Also known as: EMS Chief, Director, Deputy Chief.</span>
+  </div>
+  <div class="level-key-note">Competencies are cumulative — each level builds on the one before it. Your preparation focus is the level you are testing for. Understanding all three levels helps you demonstrate the correct scope — neither above nor below your target rank.</div>
+</div>
+
+<h2>Work Habits — The Four Competencies</h2>
+<p>NEMSMA defines four Work Habits competencies that every EMS officer is evaluated against. Each has a clear Confidence Spectrum expression at all three levels.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Time Management</div>
+    <div class="fw-card-title">Structured Time, Right Priorities</div>
+    <div class="fw-card-desc">Supervising: Plans and structures time effectively, concentrates effort on the most important priorities, multitasks well. Managing: Places high value on time, makes quality time for important tasks. Executive: Expert use of time — discriminates between urgent and important, considers short-, medium-, and long-term simultaneously.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Goal Orientation</div>
+    <div class="fw-card-title">Specific, Challenging, Prioritized Goals</div>
+    <div class="fw-card-desc">Supervising: Understands setting and attaining specific goals, analyzes them by importance and deadline. Managing: Understands the importance of goal-setting for the whole organization. Executive: Mastery of all goal-setting processes — evaluating, prioritizing, attaining — with the future direction of EMS in mind.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Organization Skills</div>
+    <div class="fw-card-title">Workflow That Executes</div>
+    <div class="fw-card-desc">All three levels: Organizes workflow to execute duties effectively while ensuring all assigned tasks are completed in a timely manner. At each level, the scope of what must be organized expands — from personal tasks to division-wide processes to organizational systems.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Work Ethic</div>
+    <div class="fw-card-title">Ethical Work Model — Lived, Not Stated</div>
+    <div class="fw-card-desc">Supervising: Treats all direct reports fairly and honestly. Managing: Adds keeping overall needs of the management team and organization in mind. Executive: Adds leading the entire team with the organization's needs at the center. Work Ethic is demonstrated — not claimed.</div>
+  </div>
+</div>
+
+<h2>Work Attitudes — The Five Competencies</h2>
+<p>Where Work Habits are structural, Work Attitudes are energetic. NEMSMA defines five attitudinal qualities that scale from personal behavior at Supervising to organizational culture at Executive.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ WORK ATTITUDES — NEMSMA PILLAR 2</span>
+    <div class="ig-title">Five Attitudinal Competencies — How They Scale by Level</div>
+    <div class="ig-sub">At Supervising: personal behavior. At Managing: role model demonstration. At Executive: organizational culture.</div>
+  </div>
+  <div class="ig-stage-grid">
+    <div class="ig-stage" style="border-top:3px solid var(--gold);">
+      <div class="ig-stage-num" style="color:var(--gold);">01</div>
+      <div class="ig-stage-name" style="color:var(--on-dark-1);">Initiative</div>
+      <div class="ig-stage-desc">S: Completes the job without prompting. M: Seeks opportunities to improve the organization. E: Seeks opportunities to improve organizational strength and stability.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid var(--ems2);">
+      <div class="ig-stage-num" style="color:var(--ems-text);">02</div>
+      <div class="ig-stage-name" style="color:var(--on-dark-1);">Effort</div>
+      <div class="ig-stage-desc">S: Exerts maximum effort, role model for the staff supervised. M: Role model for the entire organization. E: Demonstrates to the entire organization that maximum effort improves and expands success.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #E87070;">
+      <div class="ig-stage-num" style="color:#E87070;">03</div>
+      <div class="ig-stage-name" style="color:var(--on-dark-1);">Persistence</div>
+      <div class="ig-stage-desc">S: Demonstrates persistence during daily duties. M: Role model illustrating why persistence matters in managing projects. E: Demonstrates how persistence in the workplace produces organizational improvements.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #60C080;">
+      <div class="ig-stage-num" style="color:#60C080;">04</div>
+      <div class="ig-stage-name" style="color:var(--on-dark-1);">Energy</div>
+      <div class="ig-stage-desc">S: Always brings high energy to job performance. M: Role model demonstrating that high energy produces better job performance. E: Demonstrates to the entire organization that energy in performance produces improvements.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-stage-num" style="color:#D0A0E0;">05</div>
+      <div class="ig-stage-name" style="color:var(--on-dark-1);">Optimism</div>
+      <div class="ig-stage-desc">S: Maintains an optimistic demeanor during daily job performance. M: Maintains a high level of optimism and shows how it produces better performance. E: Demonstrates how maintaining an optimistic demeanor benefits the organization.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Notice the pattern: every Work Attitude competency scales the same way. At Supervising it is personal. At Managing it is exemplary — you model it for others. At Executive it is cultural — you build systems and environments where the entire organization exhibits it. When you answer a Work Attitudes question, your response must match the level you are testing for.</div>
+</div>
+
+<h2>The Confidence Spectrum for Work Habits</h2>
+<p>The NEMSMA document provides explicit Confidence Spectrum examples for Work Habits. These are directly usable as CLEAR scoring anchors.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CONFIDENCE SPECTRUM — WORK HABITS</span>
+    <div class="ig-title">What Assessors Are Looking For</div>
+    <div class="ig-sub">These examples come directly from NEMSMA's documented competency framework.</div>
+  </div>
+  <div class="conf-grid">
+    <div class="conf-col" style="border-top:3px solid #E87070;">
+      <div class="conf-header" style="color:#E87070;">⚠ Limited Confidence</div>
+      <div class="conf-sub" style="color:#D08060;">Work habits that undermine performance</div>
+      <div class="conf-item"><strong>Supervisor:</strong> Manages time ineffectively, has trouble completing tasks on schedule and/or with expected quality.</div>
+      <div class="conf-item"><strong>Manager:</strong> Unable to set priorities and goals to manage workflow. Affects work quality and timelines.</div>
+      <div class="conf-item"><strong>Executive:</strong> Does not prioritize creation of timetables or set obtainable goals. Customer needs not met.</div>
+      <div class="conf-result" style="background:rgba(139,26,26,0.12);border-color:#E87070;color:#E87070;">Assessor: Reactive. Disorganized. Not ready for the role's demands.</div>
+    </div>
+    <div class="conf-col" style="border-top:3px solid var(--gold);background:#0A1E34;">
+      <div class="conf-header" style="color:var(--gold);">✓ Confidence — Target</div>
+      <div class="conf-sub" style="color:#B09840;">Work habits that build organizational trust</div>
+      <div class="conf-item"><strong>Supervisor:</strong> Handles assignments efficiently, completes work punctually with consistent expected quality.</div>
+      <div class="conf-item"><strong>Manager:</strong> Sets priorities and goals for the betterment of the organization. Provides high quality results in a timely, efficient manner.</div>
+      <div class="conf-item"><strong>Executive:</strong> Sets timely, obtainable goals keeping the future of the industry and organization in mind. Customer needs are met.</div>
+      <div class="conf-result" style="background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold);">Assessor: Reliable. Organized. Builds trust through consistent delivery.</div>
+    </div>
+    <div class="conf-col" style="border-top:3px solid #6090C0;">
+      <div class="conf-header" style="color:#88AAD0;">⚠ Overconfidence</div>
+      <div class="conf-sub" style="color:#7090B0;">Work habits that create friction and missed quality</div>
+      <div class="conf-item"><strong>Supervisor:</strong> Completes assignments early but meets only minimum quality standards — rushes through projects.</div>
+      <div class="conf-item"><strong>Manager:</strong> Believes personal goals should be the company's priorities. Always resists delegating important projects.</div>
+      <div class="conf-item"><strong>Executive:</strong> Sets unrealistic goals. Does not listen to input from other leaders about customer needs or new directions.</div>
+      <div class="conf-result" style="background:rgba(40,60,120,0.2);border-color:#6090C0;color:#88AAD0;">Assessor: Speed over quality. Control over collaboration. Leadership friction.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Oral Board Application</span>
+  <p>When a scenario asks about how you manage your responsibilities, prioritize competing demands, or respond to someone on your team who is missing deadlines — you are in the Work Habits bucket. The Confidence column response names the behavior explicitly: "I organize my workflow to ensure that the highest-priority items receive dedicated time, and I build in checkpoints to ensure nothing falls through. That is how I keep my crew's trust that what I commit to gets done."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Work Habits — 4 Competencies</span>
+  <div class="sbar-card"><strong>Time Management</strong>Structured priorities. Right things at the right time.</div>
+  <div class="sbar-card"><strong>Goal Orientation</strong>Specific, challenging, deadline-driven. Scales by level.</div>
+  <div class="sbar-card"><strong>Organization Skills</strong>Workflow execution. All tasks completed in time.</div>
+  <div class="sbar-card"><strong>Work Ethic</strong>Lived, not stated. Fair and honest with direct reports.</div>
+  <span class="sbar-label">Work Attitudes — 5 Competencies</span>
+  <div class="sbar-card"><strong>Initiative</strong>S: completes without prompting. M: seeks improvement. E: builds stability.</div>
+  <div class="sbar-card"><strong>Effort</strong>S: personal model. M: org model. E: cultural demonstration.</div>
+  <div class="sbar-card"><strong>Persistence</strong>Daily duties → project management → org improvements.</div>
+  <div class="sbar-card"><strong>Energy</strong>Personal → exemplary → organizational culture of energy.</div>
+  <div class="sbar-card"><strong>Optimism</strong>Realistic optimism. Not cheerleading — productive attitude.</div>
+  <span class="sbar-label">Key Principle</span>
+  <div class="sbar-card accent-gold"><strong>The Scale Rule</strong>Every Work Attitude scales the same: Personal at S · Exemplary at M · Cultural at E. Match your answer to your level.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← T·C·H·O·E·D·S in EMS</button>
+  <div class="lnb-info"><div class="lnb-name">Work Habits &amp; Work Attitudes</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Stress Management →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — STRESS MANAGEMENT ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 4 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">Stress Management —<br><em>Self-Control Under Pressure</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Pillar 2 · Sub-section 3</span><span class="lh-meta-item">EMS-Critical</span></div>
+</div>
+
+<p>No profession normalizes stress the way EMS does. The culture of toughness — the "shake it off and get back on the truck" mentality — is both a survival mechanism and an organizational liability. EMS officers who have absorbed this culture too deeply make one of the most common oral board errors: treating stress management as a weakness to manage privately, rather than a leadership competency to demonstrate professionally.</p>
+
+<p>NEMSMA is explicit: Stress Management is a Pillar 2 Self Attributes competency with specific behavioral expectations at every level. Assessors probe it directly. The officer who handles stress management well does not just survive difficult environments — they actively shape how their entire crew processes stress. That is a leadership function, not a personal coping strategy.</p>
+
+<h2>The Five Stress Management Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA STRESS MANAGEMENT — PILLAR 2</span>
+    <div class="ig-title">Five Competencies · Three Levels · One Standard</div>
+    <div class="ig-sub">Each competency expands from personal practice to organizational policy as level increases.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Self Control</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Displays self control during performance of duties.<br><strong style="color:var(--gold);">M:</strong> Exhibits self control and demonstrates the benefits of maintaining it to the organization.<br><strong style="color:#E87070;">E:</strong> Demonstrates how acting with self control benefits the entire organization.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Stress Tolerance</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Aware of daily stressors affecting staff performance.<br><strong style="color:var(--gold);">M:</strong> Maintains awareness of employees' stress levels, ensures they have tools to manage. Praises in public, disciplines in private.<br><strong style="color:#E87070;">E:</strong> Ensures all staff act in ways representing organizational goals and mission.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Personal Resiliency</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates and educates staff on personal resilience for peak performance.<br><strong style="color:var(--gold);">M:</strong> Researches and develops processes to ensure staff are personally resilient.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops best practices to foster and maintain resilience throughout.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Work/Life Balance</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Educates staff on the importance of strong work/life balance for peak performance.<br><strong style="color:var(--gold);">M:</strong> Researches and develops processes to ensure staff maintain a strong work/life balance.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops best practices to guarantee work/life balance throughout.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-map-label">Competency 5</div>
+      <div class="ig-map-title">Adaptability</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of keeping up with continual changes in healthcare and educates staff to adapt.<br><strong style="color:var(--gold);">M:</strong> Researches and develops processes to educate staff that adaptability ensures peak performance.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops a culture of adaptability — emphasizing that this benefits the entire organization.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The pattern is consistent across all five competencies: personal practice → teaching to others → building organizational systems. A Supervising Officer who answers a stress management question with only personal coping strategies is demonstrating Limited Confidence — they are not yet thinking like an officer who shapes crew culture.</div>
+</div>
+
+<h2>The EMS-Specific Stress Landscape</h2>
+<p>EMS providers carry a clinical trauma burden that most other professions do not. Pediatric calls, mass casualty events, frequent exposure to death and suffering in community members they may know personally — the cumulative weight of this exposure is documented, serious, and directly related to provider performance and retention. An EMS officer who treats this as a personal problem each provider must manage alone is failing a critical leadership function.</p>
+
+<p>The officer's role in stress management operates on three timelines:</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Before the Call — Prospective</div>
+    <div class="fw-card-title">Culture and Preparation</div>
+    <div class="fw-card-desc">Does your crew have the psychological tools before they need them? Peer support programs, CISM resources, psychological safety in your unit culture — these are created before the difficult call, not after.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">After the Call — Retrospective</div>
+    <div class="fw-card-title">Recognition and Response</div>
+    <div class="fw-card-desc">Can you recognize the signs of acute stress response, compassion fatigue, and critical incident stress in your crew members? Do you know when to refer, when to debrief, and when to give someone a break?</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Over Time — Systemic</div>
+    <div class="fw-card-title">Organizational Design</div>
+    <div class="fw-card-desc">At the Managing and Executive level, this becomes policy: scheduling that prevents chronic fatigue, EAP programs, fitness resources, wellness initiatives. Stress management becomes a budget line, not just a conversation.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Overconfidence Trap in Stress Management</span>
+  <p>The most common overconfidence failure in stress management is the officer who believes everyone should be able to handle stress the same way they do — and who cannot understand why a crew member struggles with something the officer finds manageable. NEMSMA is explicit: overconfidence here means the officer does not understand others who have problems coping and cannot educate them to maintain high performance. Self-tolerance is not the same as organizational stress leadership.</p>
+</div>
+
+<h3>Connecting to Empathy in T·C·H·O·E·D·S</h3>
+<p>Stress management is where the E in T·C·H·O·E·D·S becomes operational. Empathy is not sympathy — it is the perceptual skill that allows an officer to notice what a crew member is carrying before it becomes a patient safety issue. An EMS officer who sees the clinical early warning signs of stress in a provider (increased call avoidance, declining documentation quality, behavioral changes) and responds with leadership intervention rather than disciplinary response is demonstrating the highest level of this competency.</p>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5 Stress Mgmt Competencies</span>
+  <div class="sbar-card"><strong>Self Control</strong>Personal → demonstrated benefits → organizational demonstration.</div>
+  <div class="sbar-card"><strong>Stress Tolerance</strong>Aware of stressors → tools for crew → aligned with mission.</div>
+  <div class="sbar-card"><strong>Personal Resiliency</strong>Educate → develop processes → organizational best practices.</div>
+  <div class="sbar-card"><strong>Work/Life Balance</strong>Educate → develop processes → organizational guarantee.</div>
+  <div class="sbar-card"><strong>Adaptability</strong>Demonstrate → processes → culture of adaptability.</div>
+  <span class="sbar-label">EMS Context</span>
+  <div class="sbar-card accent-ems"><strong>Three Timelines</strong>Before the call (prospective) · After the call (retrospective) · Over time (systemic policy).</div>
+  <span class="sbar-label">Overconfidence Warning</span>
+  <div class="sbar-card accent-red"><strong>Self-Tolerance ≠ Leadership</strong>Handling stress personally does not mean you understand how to lead others through it. These are different skills.</div>
+  <span class="sbar-label">TCHOEDS Link</span>
+  <div class="sbar-card accent-gold"><strong>E — Empathy</strong>Stress management is where Empathy becomes operational — perceptual, not sentimental.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Work Habits &amp; Attitudes</button>
+  <div class="lnb-info"><div class="lnb-name">Stress Management — Self-Control Under Pressure</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Self-Insight →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — SELF-INSIGHT ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 5 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">Self-Insight —<br><em>Confidence Without Arrogance</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Pillar 2 · Sub-section 4</span></div>
+</div>
+
+<p>Self-insight is the competency cluster where the Humility value in T·C·H·O·E·D·S lives. NEMSMA defines five specific components: Self-Confidence, Self-Awareness, Self-Reliance, Humility, and Suspending Judgment. Each one has a precise Confidence Spectrum expression that assessors are trained to recognize.</p>
+
+<p>The challenge in EMS promotion is that the candidates most likely to succeed have earned their positions through demonstrated clinical excellence — which requires a particular kind of self-assurance. That same self-assurance, unexamined, becomes the arrogance that derails leadership performance. The self-insight cluster is where candidates must learn to hold both simultaneously: the confidence that earned them the seat and the humility that makes them worthy of it.</p>
+
+<h2>The Five Self-Insight Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SELF-INSIGHT — NEMSMA PILLAR 2</span>
+    <div class="ig-title">Five Components · The Internal Architecture of Self-Knowledge</div>
+    <div class="ig-sub">Each competency has a specific Confidence Spectrum expression. The center column is the target at every level.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">SC</div>
+      <div>
+        <div class="ig-acro-word">Self-Confidence — Not Arrogance</div>
+        <div class="ig-acro-desc">All three levels: Demonstrates the importance of maintaining a self-confident approach to operations and ensures self-confidence is not perceived as arrogance. The Limited Confidence failure is lacking certainty in decisions. The Overconfidence failure is assuming your own strengths are the only relevant ones and only seeking projects that match them.</div>
+        <div class="ig-acro-ems">In oral boards: "I will" language demonstrates self-confidence. Starting every statement with "I think maybe" or deflecting with "that would really depend on the situation" is Limited Confidence. "I know best in all situations" is Overconfidence.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">SA</div>
+      <div>
+        <div class="ig-acro-word">Self-Awareness — Knowing How You Land</div>
+        <div class="ig-acro-desc">All three levels: Understands the importance of maintaining self-awareness. At Managing: researches and develops processes to educate staff about self-awareness. At Executive: ensures the organization maintains a self-aware staff. Self-awareness means knowing how you appear to and interact with others — particularly in high-stress EMS environments where interpersonal friction can compromise clinical safety.</div>
+        <div class="ig-acro-ems">EMS context: An officer who raises their voice in front of crews, who does not know their communication style reads as dismissive, or who is unaware of how shift dynamics affect their decision-making is failing this competency operationally.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">SR</div>
+      <div>
+        <div class="ig-acro-word">Self-Reliance — Functional Independence</div>
+        <div class="ig-acro-desc">All levels: Demonstrates maintenance of self-reliance and educates staff about its benefits. Self-reliance is the competency that prevents unnecessary upward delegation — the Limited Confidence failure of asking your manager to handle what is within your authority. At Executive level, self-reliance means being able to make organizational decisions without requiring external validation for every action.</div>
+        <div class="ig-acro-ems">In oral boards: "I would escalate this immediately to my supervisor" for a problem that clearly falls within the candidate's authority is a self-reliance failure. Know your authority. Use it.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">HU</div>
+      <div>
+        <div class="ig-acro-word">Humility — Earned, Not Performed</div>
+        <div class="ig-acro-desc">All levels: Demonstrates the importance of maintaining humility and educates staff about its benefits. The Overconfidence failure in humility is the Managing Officer who teaches humility by discussing their own humbleness — essentially performing humility rather than practicing it. True humility is demonstrated in how quickly you give credit to others, how readily you acknowledge gaps in your knowledge, and how genuinely you listen before forming judgments.</div>
+        <div class="ig-acro-ems">EMS context: Humility includes clinical humility — the recognition that the paramedic with 15 years of field experience may have better situational knowledge than the new Lieutenant on their first command. Acknowledging this openly is a strength, not a weakness.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">SJ</div>
+      <div>
+        <div class="ig-acro-word">Suspending Judgment — Information Before Conclusion</div>
+        <div class="ig-acro-desc">All levels: Demonstrates the importance of maintaining a non-judgmental attitude during operations and educates staff about its benefits. Suspending Judgment is the competency most directly tested in conflict and personnel scenarios. The Limited Confidence failure is being reactionary and quick to judge. The Overconfidence failure is so committed to non-judgment that noncompliance goes unaddressed. The Confidence column gathers information before concluding, then acts decisively.</div>
+        <div class="ig-acro-ems">In oral boards: "My first step is to gather the facts and understand the full picture before I take any action" — followed by a specific action plan — is the Suspending Judgment Confidence column. "I would need much more information before I could possibly respond to this situation" without any action plan is Limited Confidence.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most valuable self-insight competency in EMS oral boards is Suspending Judgment. Almost every personnel, conflict, and performance scenario tests whether you gather information before acting or react to the surface presentation of the situation. Build the habit of naming this explicitly: "Before I take any action, my first step is to understand what actually happened and why."</div>
+</div>
+
+<h2>Self-Insight in the CLEAR Scoring Model</h2>
+<p>When a candidate receives a C (Commend) in CLEAR feedback, it often comes from strong self-insight: a response that names the candidate's own uncertainty appropriately without using it as an excuse for inaction, or a response that demonstrates awareness of how their position affects others. When a candidate receives an L (Limitation) for overconfidence, self-insight is almost always the underlying failure — they answered before gathering, concluded before investigating, or directed before understanding.</p>
+
+<div class="callout callout-ems">
+  <span class="callout-label">The Self-Insight Practice Technique</span>
+  <p>After every practice session, ask yourself three questions: First, was there any moment where I stated a conclusion before gathering the relevant facts? Second, was there any moment where I deferred action to avoid owning the decision? Third, did my response give me all the credit — or did it reflect awareness that others contributed to the situation? These three questions audit all five self-insight competencies in sixty seconds.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Five Self-Insight Competencies</span>
+  <div class="sbar-card"><strong>Self-Confidence</strong>Certainty without arrogance. "I will" language. Not performative.</div>
+  <div class="sbar-card"><strong>Self-Awareness</strong>Know how you land. Communication style. Impact on others.</div>
+  <div class="sbar-card"><strong>Self-Reliance</strong>Use your authority. Don't escalate what's yours to resolve.</div>
+  <div class="sbar-card"><strong>Humility</strong>Earned, not performed. Give credit. Acknowledge gaps genuinely.</div>
+  <div class="sbar-card"><strong>Suspending Judgment</strong>Information before conclusion, then decisive action. The most-tested competency in personnel scenarios.</div>
+  <span class="sbar-label">In Oral Boards</span>
+  <div class="sbar-card accent-gold"><strong>The Key Move</strong>"Before I take any action, my first step is to understand what actually happened and why." — Then provide a specific action plan. This is Suspending Judgment in the Confidence column.</div>
+  <span class="sbar-label">CLEAR Link</span>
+  <div class="sbar-card"><strong>Overconfidence L's</strong>Almost always a self-insight failure — concluded before investigating, directed before understanding.</div>
+  <span class="sbar-label">TCHOEDS Link</span>
+  <div class="sbar-card accent-gold"><strong>H — Humility</strong>The entire Self-Insight cluster lives under Humility. Clinical expertise ≠ automatic leadership authority.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Stress Management</button>
+  <div class="lnb-info"><div class="lnb-name">Self-Insight — Confidence Without Arrogance</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Continuous Learning →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — CONTINUOUS LEARNING ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 2 · Lesson 6 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 2</div>
+  <h1 class="lh-title">Continuous Learning —<br><em>The Perpetual Student</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 12 min</span><span class="lh-meta-item">📘 Pillar 2 · Sub-section 5</span></div>
+</div>
+
+<p>EMS is the youngest public safety discipline and one of the fastest-evolving. Clinical protocols that were standard five years ago are now contraindicated. Management frameworks that drove EMS operations for decades are being replaced. Technology is changing dispatch, documentation, and quality monitoring in ways that compress the traditional learning cycle. An EMS officer who treats their education as complete at promotion is not just behind — they are a liability to the clinical quality of their organization.</p>
+
+<p>NEMSMA defines four Learning competencies under Pillar 2 Self Attributes. Taken together, they describe not just what an officer should learn, but <em>how</em> they should build learning into the culture of their unit, division, and organization.</p>
+
+<h2>The Four Learning Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ LEARNING — NEMSMA PILLAR 2</span>
+    <div class="ig-title">Four Competencies · Personal to Organizational</div>
+    <div class="ig-sub">Learning scales the same way as every other Pillar 2 competency — personal practice at Supervising, organizational systems at Executive.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Learning Strategies</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of developing good learning strategies and educates staff about their benefits.<br><strong style="color:var(--gold);">M:</strong> Researches and develops processes to ensure staff uses effective learning strategies.<br><strong style="color:#E87070;">E:</strong> Ensures the organization maintains specific learning strategies that benefit the organization as a whole.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Intellectual Curiosity</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of intellectual curiosity and educates staff about its benefits.<br><strong style="color:var(--gold);">M:</strong> Reinforces that strong intellectual curiosity allows continuous personal growth and ensures organizational peak performance.<br><strong style="color:#E87070;">E:</strong> Ensures the organization and its personnel maintain a strong level of intellectual curiosity so the organization continues to develop.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Continuous Learning</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of continuous learning, educates staff about its benefits, and takes advantage of learning opportunities during daily operations.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff participates in continuous learning activities so the organization achieves peak operational performance.<br><strong style="color:#E87070;">E:</strong> Ensures the organization sets standards that allow and require continuous learning.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Seeking Feedback</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of seeking feedback and desires positive and constructive feedback regarding personal performance in order to continuously grow as a leader.<br><strong style="color:var(--gold);">M:</strong> Assures feedback is actively sought throughout the organization, ensuring peak organizational performance.<br><strong style="color:#E87070;">E:</strong> Develops an organizational culture where staff seeks and has the opportunity to provide feedback designed to help the organization develop and grow.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The Seeking Feedback competency is the one most directly tested in oral boards because it is the most visible signal of self-awareness. An officer who says "I actively seek feedback from my crew and from my supervisors on my leadership performance" is demonstrating every component of the Learning sub-section simultaneously — humility, intellectual curiosity, continuous improvement, and organizational investment.</div>
+</div>
+
+<h2>The Overconfidence Trap in Learning</h2>
+<p>NEMSMA is unusually specific about overconfidence failures in the Learning cluster. The Executive overconfidence failure is setting standards for continuous learning so high that staff does not have time to properly implement, develop, and collect feedback — resulting in incomplete lessons that are not clearly beneficial. This is important: more learning is not always better learning. An organization flooded with training mandates that cannot be absorbed produces compliance without competence.</p>
+
+<p>The officer who values learning correctly sets the pace at which new knowledge can actually be integrated — not the pace at which it can be introduced. That is the difference between organizational development and organizational noise.</p>
+
+<h2>Connecting Learning to Service in T·C·H·O·E·D·S</h2>
+<p>The S — Service value in T·C·H·O·E·D·S finds its NEMSMA expression in the Learning cluster, particularly Continuous Learning and Seeking Feedback. The EMS officer who attends state conferences, reads peer-reviewed EMS management literature, seeks mentorship from more experienced officers, and actively invites performance feedback from their crew is practicing institutional service — investing in the profession's knowledge base, not just consuming it.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">The Learning Officer — What It Sounds Like in an Oral Board</span>
+  <p>"My approach to continuous learning is both personal and organizational. Personally, I seek regular feedback from my crew, my supervisor, and from QA/QI data about my unit's performance. For my team, I build learning into our shift culture — case reviews, protocol updates, skill refreshers. I believe an officer who stops learning stops leading. The clinical environment changes too fast for static knowledge to serve our patients."</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, billing regulations, and labor laws vary by state, jurisdiction, and agency. Always consult your agency's policies, medical director, legal counsel, and applicable state and federal regulations before making operational decisions. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Learning Competencies</span>
+  <div class="sbar-card"><strong>Learning Strategies</strong>Develop good strategies → staff processes → organizational systems.</div>
+  <div class="sbar-card"><strong>Intellectual Curiosity</strong>Personal curiosity → staff reinforcement → organizational culture.</div>
+  <div class="sbar-card"><strong>Continuous Learning</strong>Demonstrate → staff processes → organizational standards and requirements.</div>
+  <div class="sbar-card"><strong>Seeking Feedback</strong>Desire feedback personally → ensure it's sought org-wide → build a feedback culture.</div>
+  <span class="sbar-label">Overconfidence Warning</span>
+  <div class="sbar-card accent-red"><strong>Too Much, Too Fast</strong>More training mandates ≠ more learning. Set the pace at which new knowledge can actually be integrated — not just introduced.</div>
+  <span class="sbar-label">TCHOEDS Link</span>
+  <div class="sbar-card accent-gold"><strong>S — Service</strong>Seeking Feedback + Continuous Learning is institutional Service — investing in the profession's knowledge base.</div>
+  <span class="sbar-label">Next Chapter</span>
+  <div class="sbar-card accent-ems"><strong>EMS Chapter 3</strong>Leading Others — Communications, Motivating Others, and the 13 Question Buckets in EMS context.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Self-Insight</button>
+  <div class="lnb-info"><div class="lnb-name">Continuous Learning — The Perpetual Student</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 2 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

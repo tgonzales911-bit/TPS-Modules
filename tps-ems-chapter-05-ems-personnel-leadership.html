@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 5 — EMS Personnel Leadership | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* 3 U's diagnostic */
+.three-u-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.three-u-col{background:var(--navy-deep);padding:1.4rem;}
+.three-u-letter{font-family:'EB Garamond',serif;font-size:3.5rem;font-weight:800;line-height:1;margin-bottom:6px;}
+.three-u-word{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.three-u-def{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;margin-bottom:10px;}
+.three-u-signal{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-dark-3);margin-bottom:5px;}
+.three-u-signal-item{font-size:0.85rem;color:var(--on-dark-2);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);line-height:1.45;}
+.three-u-intervention{margin-top:10px;padding:8px 10px;border:1px solid;font-size:0.85rem;font-weight:600;text-align:center;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+/* Discipline ladder */
+.disc-ladder{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.disc-rung{display:grid;grid-template-columns:120px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.disc-level{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.disc-level-num{font-family:'EB Garamond',serif;font-size:1.6rem;font-weight:800;line-height:1;}
+.disc-level-name{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;font-weight:700;}
+.disc-content{background:var(--navy-deep);padding:1rem 1.25rem;}
+.disc-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:5px;}
+.disc-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.three-u-grid,.fw-grid,.fw-grid-3{grid-template-columns:1fr;}.disc-rung{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">The 3 U's</button>
+    <button class="nav-pill" onclick="showLesson(1)">Unable</button>
+    <button class="nav-pill" onclick="showLesson(2)">Unwilling</button>
+    <button class="nav-pill" onclick="showLesson(3)">Unaware</button>
+    <button class="nav-pill" onclick="showLesson(4)">Provider Burnout</button>
+    <button class="nav-pill" onclick="showLesson(5)">Progressive Discipline</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 5 · NEMSMA Pillars 2 &amp; 3</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · Personnel Leadership</div>
+    <h1 class="mh-title"><em>EMS Personnel</em><br>Leadership</h1>
+    <p class="mh-sub">Most personnel performance failures are misdiagnosed before they are mismanaged. The 3 U's Diagnostic tells you which problem you are actually solving — before you choose the tool to solve it. That single shift in thinking separates reactive supervision from deliberate leadership.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The 3 U's Diagnostic — Unable, Unaware, Unwilling — and why the diagnosis must precede the intervention. The Unable provider: clinical gaps, training failures, and Just Culture. The Unwilling provider: motivational breakdown and the CALM conversation. The Unaware provider: Drift, the Mirror framework, and the Unaware-to-Unwilling shift. Provider burnout and compassion fatigue as officer-level responsibilities. Progressive discipline: the ladder, the SIMPLE documentation standard, and the Four Types of Justice applied.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — THE 3 U'S DIAGNOSTIC ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 1 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillars 2 &amp; 3</div>
+  <h1 class="lh-title">The 3 U's Diagnostic —<br><em>Diagnose Before You Intervene</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 New Framework</span><span class="lh-meta-item">Bucket 1 — Personnel Performance</span></div>
+</div>
+
+<p>The most common personnel leadership failure is not using the wrong intervention. It is using the right intervention on the wrong diagnosis. An officer who sends an underperforming paramedic to remedial training when the actual problem is inadequate supervision has just spent organizational resources on a problem that training cannot fix. An officer who writes a counseling memo for a provider who is failing because their truck is chronically under-stocked has applied discipline to a system failure. Both actions are wrong — not because the tools are bad, but because the diagnosis was wrong.</p>
+
+<p>The 3 U's Diagnostic is the framework that prevents this error. Before any intervention, the EMS officer asks: is this provider <strong>Unable</strong>, <strong>Unaware</strong>, or <strong>Unwilling</strong>? Each answer leads to a completely different response. All three answers can be true simultaneously — but usually one is primary, and identifying the primary driver determines where to start.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE 3 U'S DIAGNOSTIC — TPS EMS FRAMEWORK</span>
+    <div class="ig-title">Unable · Unaware · Unwilling</div>
+    <div class="ig-sub">Three root causes. Three completely different interventions. Diagnose first — then choose the tool. Applying the wrong intervention to the correct problem is still a failure.</div>
+  </div>
+  <div class="three-u-grid">
+    <div class="three-u-col" style="border-top:3px solid var(--ems2);">
+      <div class="three-u-letter" style="color:var(--ems-text);">U1</div>
+      <div class="three-u-word" style="color:var(--ems-text);">Unable</div>
+      <div class="three-u-def">The provider lacks the knowledge, skill, or clinical competency to meet the performance standard. This is not a character problem. It is a training or development gap — which may be the provider's, the organization's, or both.</div>
+      <div class="three-u-signal">Signals</div>
+      <div class="three-u-signal-item">Inconsistent clinical performance — works some times, fails others</div>
+      <div class="three-u-signal-item">Errors concentrated in specific procedure types or patient presentations</div>
+      <div class="three-u-signal-item">Provider expresses uncertainty or asks frequently for guidance</div>
+      <div class="three-u-signal-item">New promotion, new protocol, or new equipment introduced recently</div>
+      <div class="three-u-signal-item">Errors occur even when provider is clearly trying their best</div>
+      <div class="three-u-intervention" style="background:rgba(42,96,144,0.15);border-color:var(--ems-border);color:var(--ems-text);">Intervention: Training · Coaching · Development Plan · Skills Remediation</div>
+    </div>
+    <div class="three-u-col" style="border-top:3px solid var(--gold);">
+      <div class="three-u-letter" style="color:var(--gold);">U2</div>
+      <div class="three-u-word" style="color:var(--gold);">Unwilling</div>
+      <div class="three-u-def">The provider has the capability to meet the performance standard but chooses not to. This is a motivation, attitude, or accountability problem. The provider demonstrates competence selectively — when they want to, not consistently because they are committed to it.</div>
+      <div class="three-u-signal">Signals</div>
+      <div class="three-u-signal-item">Capable performance when motivated, poor performance otherwise</div>
+      <div class="three-u-signal-item">Shortcuts on documentation, protocols, or safety procedures</div>
+      <div class="three-u-signal-item">Attitude issues — resistance, contempt, passive non-compliance</div>
+      <div class="three-u-signal-item">Peer comparison shows the gap: others in same conditions are performing</div>
+      <div class="three-u-signal-item">Provider can explain correct procedure but does not follow it</div>
+      <div class="three-u-intervention" style="background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.3);color:var(--gold);">Intervention: CALM Conversation · HARD Goals · Accountability · Discipline if Required</div>
+    </div>
+    <div class="three-u-col" style="border-top:3px solid #60C080;">
+      <div class="three-u-letter" style="color:#60C080;">U3</div>
+      <div class="three-u-word" style="color:#60C080;">Unaware</div>
+      <div class="three-u-def">The provider doesn't know they have a performance problem. They may be unaware of the standard, unaware of their own gap, or unaware of the impact their behavior is having. The most common mechanism is <strong style="color:var(--on-dark-1);">Drift</strong> — gradual departure from standard over time, so incremental that the provider normalizes the lower performance without noticing.</div>
+      <div class="three-u-signal">Signals</div>
+      <div class="three-u-signal-item">Genuine surprise or confusion when feedback is given — not defensiveness</div>
+      <div class="three-u-signal-item">"I didn't know that was happening" or "I thought I was doing it right"</div>
+      <div class="three-u-signal-item">Pattern developed gradually — the gap wasn't always present</div>
+      <div class="three-u-signal-item">Performance looks like drift: slight, incremental, normalized by the provider</div>
+      <div class="three-u-signal-item">Peer comparison reveals the gap — provider appears unaware others work differently</div>
+      <div class="three-u-intervention" style="background:rgba(26,92,58,0.15);border-color:rgba(26,92,58,0.3);color:#60C080;">Intervention: Mirror the Gap · Clear Feedback · Clarify the Standard · Structured Check-ins</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most dangerous misdiagnosis: treating Unaware as Unwilling. When a provider who genuinely does not know they have a performance gap is confronted with an accountability conversation framed as willful non-compliance, the message they receive is "you knew and chose not to fix it" — which is false, unfair, and will destroy their trust in the officer permanently. Unaware providers need a mirror, not a warning. Give them the feedback clearly and watch what happens. If they improve, the diagnosis was correct. If the gap persists after they clearly understand it — the diagnosis has shifted to Unwilling.</div>
+</div>
+
+<h2>Applying the 3 U's in Oral Board Responses</h2>
+<p>The 3 U's Diagnostic is your Apply step for every Bucket 1 — Personnel Performance and Bucket 3 — Subordinate Counseling scenario. Before you describe your intervention, name the diagnostic step. This moves your response from 3/5 to 4/5 immediately.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">3/5 Response Pattern</div>
+    <div class="fw-card-title">Jumps Straight to Action</div>
+    <div class="fw-card-desc">"I would sit down with the paramedic and explain that their documentation needs to improve. I would give them a verbal warning and set a timeline for improvement." This response describes action without diagnosis. It skips the most important question: why is the documentation failing?</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">4/5 Response Pattern</div>
+    <div class="fw-card-title">Diagnoses Before Acting</div>
+    <div class="fw-card-desc">"Before I take any action, I need to determine which of three root causes is driving this documentation failure. Is this provider <strong>Unable</strong> — lacking the skill or knowledge? <strong>Unaware</strong> — capable but not knowing they have a gap, perhaps because it developed through drift? Or <strong>Unwilling</strong> — fully aware of the standard but choosing not to meet it? Each diagnosis leads to a completely different intervention. Getting this right before acting is the officer's job."</div>
+  </div>
+</div>
+
+<h2>The 3 U's and Just Culture</h2>
+<p>The 3 U's Diagnostic maps directly to the Just Culture framework covered in Chapter 3. Just Culture distinguishes between system failures and individual choices. The 3 U's framework makes that distinction operational:</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Unable → Just Culture</div>
+    <div class="fw-card-title">System or Human Error</div>
+    <div class="fw-card-desc">Unable failures are usually system errors (inadequate training, unclear protocols) or human errors (honest mistakes in complex situations). Just Culture addresses these with system redesign and coaching — not discipline.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Unwilling → Just Culture</div>
+    <div class="fw-card-title">At-Risk or Reckless Behavior</div>
+    <div class="fw-card-desc">Unwilling failures range from at-risk behavior (shortcuts that feel acceptable but aren't) to reckless behavior (conscious disregard for risk). Just Culture addresses these on a spectrum from coaching conversations to formal discipline depending on severity and pattern.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Unaware → Just Culture</div>
+    <div class="fw-card-title">Behavioral Drift / Feedback Gap</div>
+    <div class="fw-card-desc">Unaware failures are typically behavioral drift — gradual departure from standard without conscious intent. Just Culture addresses these with clear feedback, mirroring the gap, and clarifying the standard. No discipline until the provider has been clearly told the gap exists. An Unaware provider cannot be held accountable for a standard they genuinely did not know they were missing.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The L·E·A·D Integration — 3 U's as the Apply Step</span>
+  <p>Label the bucket (Bucket 1 — Personnel Performance). Engage by gathering facts — what specifically is happening, when, and under what conditions? Apply the 3 U's Diagnostic — name which U is primary before selecting an intervention. Deliver by closing with the principle most relevant to the diagnosis: "My responsibility as an officer is to diagnose the root cause before I choose the intervention — because every tool in my leadership arsenal works on the right problem and fails on the wrong one."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">The 3 U's Diagnostic</span>
+  <div class="sbar-card accent-ems"><strong>U1 — Unable</strong>Lacks knowledge, skill, or competency. Intervention: Training · Coaching · Development Plan.</div>
+  <div class="sbar-card accent-gold"><strong>U2 — Unwilling</strong>Has capability, chooses not to use it. Intervention: CALM conversation · HARD Goals · Accountability · Discipline.</div>
+  <div class="sbar-card accent-green"><strong>U3 — Unaware</strong>Doesn't know they have a gap. Often through Drift — gradual departure from standard. Intervention: Mirror the gap · Clear feedback · Clarify the standard.</div>
+  <span class="sbar-label">The Critical Warning</span>
+  <div class="sbar-card accent-red"><strong>Unaware ≠ Unwilling</strong>Confronting an Unaware provider as if they're Unwilling destroys trust. Give them the mirror first. If improvement follows — Unaware confirmed. If it doesn't — the diagnosis has shifted.</div>
+  <span class="sbar-label">Oral Board Application</span>
+  <div class="sbar-card"><strong>4/5 Move</strong>Name the diagnostic step before describing the intervention. "Before I take any action, I need to determine which of three root causes is driving this." This is the Apply step in L·E·A·D.</div>
+  <span class="sbar-label">Just Culture Mapping</span>
+  <div class="sbar-card"><strong>Unable</strong>System / human error → coaching + redesign.</div>
+  <div class="sbar-card"><strong>Unwilling</strong>At-risk to reckless → spectrum from conversation to discipline.</div>
+  <div class="sbar-card"><strong>Unaware</strong>Behavioral drift → feedback + mirror the gap. No discipline until standard is clearly communicated.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 4</button>
+  <div class="lnb-info"><div class="lnb-name">The 3 U's Diagnostic</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Unable Provider →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — THE UNABLE PROVIDER ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 2 of 6</div>
+  <div class="lh-track">EMS Officer Track · Personnel Leadership</div>
+  <h1 class="lh-title">The Unable Provider —<br><em>When the Gap Is Knowledge or Skill</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Pillar 3 · Development</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 8 — Mentoring &amp; Development</span></div>
+</div>
+
+<p>The Unable provider is not a bad paramedic. They are a paramedic who has encountered a gap between what the situation requires and what their current training or experience has prepared them for. In EMS, these gaps are predictable: protocol changes that outpace remediation training, new equipment deployed before competency validation, new providers whose field training did not cover system-specific expectations, and experienced providers who have drifted from established standards over time. The EMS officer who can identify an Unable failure pattern — rather than reacting to it as an attitude problem — is practicing the highest form of personnel leadership.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — How to Read NEMSMA Competency Descriptions</span>
+  <p class="level-key-intro">NEMSMA competencies in this chapter are described at three officer levels. The following shorthand applies throughout:</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Front-line supervisor. Direct oversight of EMS crews. EMS Lieutenant, Field Supervisor, Shift Supervisor.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Middle management. Division or program leadership. EMS Captain, Operations Manager, Division Chief.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Senior leadership. Organization-wide accountability. EMS Chief, Director, Deputy Chief.</span>
+  </div>
+  <div class="level-key-note">Personnel leadership is primarily Supervising and Managing Officer content. Executive-level responses are noted where they differ in scope.</div>
+</div>
+
+<h2>Identifying the Unable Pattern</h2>
+<p>Unable failures have a distinctive pattern that differentiates them from Unwilling failures. The key questions:</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Unable Signal</div>
+    <div class="fw-card-title">Effort + Inconsistency</div>
+    <div class="fw-card-desc">The provider is clearly trying. The failures are not from lack of effort — they are from lack of skill or knowledge. Performance is inconsistent: they get it right in some conditions and wrong in others. The inconsistency pattern reveals the specific gap — and points directly to the training intervention needed.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Unwilling Signal (by contrast)</div>
+    <div class="fw-card-title">Capability + Consistency of Failure</div>
+    <div class="fw-card-desc">The provider can perform correctly — you have observed it. But they do not perform correctly consistently. The failures occur when motivation or accountability is absent. An Unwilling provider's errors do not cluster around specific skill gaps — they cluster around conditions where they are unobserved or where the standard feels optional.</div>
+  </div>
+</div>
+
+<h2>The Unable Response Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ RESPONDING TO UNABLE FAILURES — NEMSMA PILLAR 3</span>
+    <div class="ig-title">Four Steps from Identification to Validated Competency</div>
+    <div class="ig-sub">The Unable response is always a development response — never a disciplinary response unless the provider continues to fail after adequate development resources have been provided.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">01</div>
+      <div>
+        <div class="ig-acro-word">Identify the Specific Gap — Not the General Pattern</div>
+        <div class="ig-acro-desc">Name the specific knowledge or skill gap, not just the outcome. "Your cardiac arrest protocols are below standard" is an outcome observation. "Your medication calculation accuracy on code calls is inconsistent — specifically in high-stress situations where you are working without a partner confirming doses" is a specific gap that points directly to an intervention. The more specific the gap identification, the more targeted and effective the development response.</div>
+        <div class="ig-acro-ems">Use QA/QI data, observed incidents, and direct conversation with the provider. Ask them: "In what situations do you feel least confident?" Providers who are Unable can usually tell you exactly where they struggle.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">02</div>
+      <div>
+        <div class="ig-acro-word">Build a Targeted Development Plan — SMART + HARD</div>
+        <div class="ig-acro-desc">Design a development plan that addresses the specific gap identified. Use SMART structure (specific competency, measurable outcome, attainable target, relevant to their role, time-bound) and HARD motivation (Heartfelt connection to patient outcomes, Animated vision of competent performance, Required standard, Difficult enough to drive real growth). The development plan is documented and shared with the provider so expectations are clear.</div>
+        <div class="ig-acro-ems">The development plan is not punishment. It is an organizational investment in a provider's capability. Frame it that way explicitly: "I am building this plan with you because I believe you can get there, and because your patients deserve it."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">03</div>
+      <div>
+        <div class="ig-acro-word">Provide Adequate Resources and Time</div>
+        <div class="ig-acro-desc">The organizational obligation: ensure the provider has what they need to develop. This means protected training time, access to simulation or skills labs, a competent coach or preceptor, and a clear timeline that is realistic. An Unable provider who is given a development goal without resources or time is being set up for failure — and when they fail, the organization has created an unjust discipline action.</div>
+        <div class="ig-acro-ems">S: Provide coaching and ride-along observation. M: Ensure training resources are available and the training plan is organizationally supported. E: Ensure the system invests in ongoing competency validation before gaps become critical.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">04</div>
+      <div>
+        <div class="ig-acro-word">Validate Competency — Objectively, Not Subjectively</div>
+        <div class="ig-acro-desc">At the end of the development period, competency is validated through observable performance — not a conversation about improvement. Skills check-offs, case review, observed calls, or objective data from QA/QI. If the provider has met the target, document the achievement and close the development plan. If they have not, reassess: was the gap still Unable (needs more development time or a different approach)? Has it shifted to Unwilling (they now have the capability and are choosing not to apply it)? Or does the failure reveal that the provider was never clearly shown the standard — meaning the real diagnosis was Unaware all along?</div>
+        <div class="ig-acro-ems">The competency validation step protects both the provider and the organization. It is the point at which the distinction between Unable and Unwilling becomes legally and ethically significant.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The Unable-to-Unwilling shift is the most important transition to recognize in personnel leadership. A provider who was genuinely Unable, received adequate development resources, and still fails to meet the standard has crossed into Unwilling territory — they now have the capability and are choosing not to apply it. The moment this shift occurs, the intervention changes completely. The officer who keeps providing training to a provider who has crossed into Unwilling is enabling, not developing.</div>
+</div>
+
+<h2>Unable and Just Culture — When the System Created the Gap</h2>
+<p>Before concluding that an individual provider is Unable, an EMS officer must examine the organizational context. Sometimes "Unable" is a provider-level diagnosis. Often it is a system-level diagnosis in which the provider is simply the visible symptom. The questions to ask:</p>
+
+<ul>
+  <li>Was this provider adequately trained on the specific protocol, equipment, or procedure that failed?</li>
+  <li>Is this failure pattern appearing across multiple providers — suggesting a training system gap rather than an individual gap?</li>
+  <li>Has the protocol or equipment changed recently without corresponding training?</li>
+  <li>Does this provider's field training record show adequate exposure to this specific situation?</li>
+</ul>
+
+<p>When the answer to any of these questions is "no," the EMS officer has identified a system failure masquerading as an individual failure. The correct response is PDCA applied to the training system — not a development plan applied to an individual who was set up to fail.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Bucket 1 — Personnel Performance (Unable Diagnosis)</span>
+  <p>Three months ago your agency deployed a new cardiac monitoring system. Since then, your most experienced paramedic — 14 years on the job — has had five QA flags for incomplete 12-lead acquisition and interpretation documentation. In previous years, they had zero documentation flags. Using L·E·A·D: Label the bucket. Apply the 3 U's Diagnostic. Name which U is most likely primary. Describe your response. Target: 90 seconds, out loud.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Unable vs. Unwilling</span>
+  <div class="sbar-card accent-ems"><strong>Unable Signal</strong>Effort present + inconsistent performance. Errors cluster around specific skill/knowledge gaps.</div>
+  <div class="sbar-card accent-gold"><strong>Unwilling Signal</strong>Capability demonstrated + consistent failure when unobserved or unaccountable.</div>
+  <span class="sbar-label">The 4-Step Response</span>
+  <div class="sbar-card"><strong>01 — Identify the Gap</strong>Specific, not general. Use data + conversation. "Where do you feel least confident?"</div>
+  <div class="sbar-card"><strong>02 — Development Plan</strong>SMART structure + HARD motivation. Documented. Shared with provider.</div>
+  <div class="sbar-card"><strong>03 — Provide Resources</strong>Protected time, coach/preceptor, simulation. No resources = setup for failure.</div>
+  <div class="sbar-card"><strong>04 — Validate Competency</strong>Observable performance — not a conversation. Skills check-off, case review, QA data.</div>
+  <span class="sbar-label">The Critical Shift</span>
+  <div class="sbar-card accent-red"><strong>Unable → Unwilling</strong>Once adequate resources are provided and the gap persists, the diagnosis changes. Training an Unwilling provider is enabling — not developing.</div>
+  <span class="sbar-label">System Check First</span>
+  <div class="sbar-card accent-ems"><strong>Was the system adequate?</strong>New protocol, new equipment, inadequate field training? If no: PDCA the system, not the individual.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← The 3 U's</button>
+  <div class="lnb-info"><div class="lnb-name">The Unable Provider</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Unwilling Provider →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — THE UNWILLING PROVIDER ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 3 of 6</div>
+  <div class="lh-track">EMS Officer Track · Personnel Leadership</div>
+  <h1 class="lh-title">The Unwilling Provider —<br><em>Motivation, Accountability, and the Hard Conversation</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Pillar 3 · HR Management</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 3 — Subordinate Counseling</span></div>
+</div>
+
+<p>The Unwilling provider is the most emotionally demanding personnel situation an EMS officer faces. Unlike the Unable provider — where the path forward is development and support — the Unwilling situation requires the officer to have a direct accountability conversation with someone who has the capability to perform but is choosing not to. That conversation is uncomfortable. It requires Courage from T·C·H·O·E·D·S in its most operational form.</p>
+
+<p>The most common reason EMS officers avoid this conversation is not cruelty — it is conflict avoidance rooted in a desire to preserve the relationship. The irony is that avoiding the accountability conversation damages the relationship far more than having it. Crews watch their officers. When an officer fails to address an Unwilling provider, the crew receives a clear signal: standards are negotiable, effort is optional, and the officer values comfort over accountability.</p>
+
+<h2>The Spectrum of Unwilling Behavior</h2>
+<p>Unwilling failures exist on a spectrum from low-stakes drift to serious patient safety risk. The EMS officer's response must be calibrated to where on that spectrum the behavior falls.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE UNWILLING SPECTRUM — CALIBRATING YOUR RESPONSE</span>
+    <div class="ig-title">Four Stages of Unwilling Behavior and the Appropriate Officer Response</div>
+    <div class="ig-sub">Not all Unwilling behavior requires the same response. The stage determines the tool. Miscalibration in either direction — too soft or too aggressive — is a leadership failure.</div>
+  </div>
+  <div class="ig-stage-grid">
+    <div class="ig-stage" style="border-top:3px solid var(--gold);">
+      <div class="ig-stage-num" style="color:var(--gold);">1</div>
+      <div class="ig-stage-name" style="color:var(--gold);">Drift</div>
+      <div class="ig-stage-desc">Minor, pattern-level shortcuts. Documentation slightly late. Non-urgent protocols slightly inconsistent. No patient harm. Officer response: informal coaching conversation. Direct, specific, immediately after observation. One conversation is usually sufficient at this stage if delivered with clarity and follow-through.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-stage-num" style="color:#D0A0E0;">2</div>
+      <div class="ig-stage-name" style="color:#D0A0E0);">Pattern</div>
+      <div class="ig-stage-desc">Same drift behavior persisting after informal coaching. The provider has been told; the behavior continues. Officer response: formal verbal counseling using CALM, documented in writing. Clear behavioral expectations set. A specific, measurable improvement timeline. This stage requires paperwork even if nothing goes on the official personnel record yet.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #E87070;">
+      <div class="ig-stage-num" style="color:#E87070;">3</div>
+      <div class="ig-stage-name" style="color:#E87070;">Escalation</div>
+      <div class="ig-stage-desc">Pattern persists after formal counseling, or a more serious single incident occurs — protocol non-compliance with patient impact, insubordination, or safety violation. Officer response: formal written warning through progressive discipline process. Supervisor involvement. HR notification. Documentation that supports formal action if behavior continues.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #B22222;grid-column:1/-1;">
+      <div class="ig-stage-num" style="color:#E87070;">4</div>
+      <div class="ig-stage-name" style="color:#E87070;">Serious Misconduct or Clinical Safety Failure</div>
+      <div class="ig-stage-desc">Reckless patient care, deliberate protocol violation, substance use, fraud, harassment, or any behavior that poses immediate safety risk. Officer response: immediately remove from patient care if required for safety, notify supervisor immediately, initiate formal investigation. Do not attempt to resolve Stage 4 behavior at the supervisor level alone. This belongs in formal HR, risk management, and potentially law enforcement channels. Document everything from the moment of discovery.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common officer miscalibration: treating Stage 2 behavior like Stage 1. A pattern that persists after informal coaching is no longer informal — it requires formal documentation even if the officer is not ready to escalate. The documentation at Stage 2 is what makes Stage 3 and Stage 4 actions defensible if they become necessary.</div>
+</div>
+
+<h2>CALM Applied to the Unwilling Conversation</h2>
+<p>The CALM framework (Clarify · Ask · Listen · Manage) introduced in Chapter 3 finds its most demanding application in Unwilling personnel conversations. The temptation in an Unwilling conversation is to skip Clarify and Ask — to go directly to the problem statement and the consequence. Resist that temptation. CALM is more important, not less, when the emotional temperature is elevated.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CALM IN THE UNWILLING CONVERSATION</span>
+    <div class="ig-title">Clarify · Ask · Listen · Manage — Applied to Accountability</div>
+    <div class="ig-sub">CALM is not softness. It is structured accountability. The officer who follows CALM in an Unwilling conversation is more effective — and more legally defensible — than the officer who confronts reactively.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">C — Clarify</div>
+      <div class="ig-map-title">Set the Purpose Without Ambiguity</div>
+      <div class="ig-map-desc">"The reason for this meeting is [specific behavior or pattern]. I need you to understand that this is a serious conversation, not an informal check-in." The provider needs to know this is not a casual discussion. Clarifying the purpose also protects the officer — it establishes that the provider was made aware the conversation was a formal accountability interaction, which matters if the situation escalates to formal discipline.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">A — Ask</div>
+      <div class="ig-map-title">Listen for the U Before You Respond</div>
+      <div class="ig-map-desc">"Walk me through what happened from your perspective." "Is there anything about this situation I should understand that I may not be aware of?" You are asking because there is a chance your diagnosis is wrong — and discovering that the supposed "Unwilling" provider is actually Unaware (genuinely didn't know the gap existed, or that their behavior had drifted) before you deliver an accountability message will save you from a significant leadership error. Ask first. Every time.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">L — Listen</div>
+      <div class="ig-map-title">Hear What They Actually Say — Not What You Expected</div>
+      <div class="ig-map-desc">The officer who walks into an Unwilling conversation with the response already prepared and uses the Ask step only as a formality is not actually listening. Listen for the signal that changes your diagnosis: a genuine Unaware response ("I didn't know that was the standard — no one had shown me"), a systemic factor that shifts the assessment, or confirmation of willful non-compliance. Active listening here is both ethical and strategic.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;">
+      <div class="ig-map-label">M — Manage</div>
+      <div class="ig-map-title">Clear Expectations + Accountability + Support</div>
+      <div class="ig-map-desc">The Manage step in an Unwilling conversation has three non-negotiable elements: the specific behavioral expectation going forward (not "do better" — the exact standard), the consequence if the behavior continues (named explicitly — not implied), and the support available (what you will do to help them succeed). All three in the same conversation. An accountability message without support is punitive. Support without accountability is permissive. The Confidence column holds both.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Courage Principle — Why Officers Avoid This Conversation</span>
+  <p>The officer who avoids the Unwilling conversation is choosing their own comfort over their crew's professional culture. Every day that passes without the accountability conversation is a day the crew watches the standard erode. The provider who is Unwilling knows it. Their peers know it. The question everyone is watching is whether the officer knows it — and whether they have the Courage to act on it. In T·C·H·O·E·D·S, Courage means following through with difficult decisions when it is right to do so, even when it is uncomfortable. This is that moment.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Unwilling Spectrum</span>
+  <div class="sbar-card"><strong>Stage 1 — Drift</strong>Minor shortcuts. Informal coaching conversation. One clear message delivered directly.</div>
+  <div class="sbar-card"><strong>Stage 2 — Pattern</strong>Drift persisting after coaching. Formal verbal counseling + written documentation. Even if nothing goes on official record yet.</div>
+  <div class="sbar-card accent-red"><strong>Stage 3 — Escalation</strong>Pattern after formal counseling, or serious single incident. Written warning + supervisor + HR notification.</div>
+  <div class="sbar-card accent-red"><strong>Stage 4 — Serious</strong>Safety risk, reckless care, fraud, harassment. Remove from care if needed. Notify supervisor immediately. Formal investigation. Do not handle alone.</div>
+  <span class="sbar-label">CALM Applied Here</span>
+  <div class="sbar-card accent-gold"><strong>C — Clarify</strong>"This is a serious conversation, not an informal check-in." Sets the formal frame.</div>
+  <div class="sbar-card accent-gold"><strong>A — Ask</strong>Last chance to catch a misdiagnosis. "I didn't know that was happening" = Unaware, not Unwilling. The intervention changes completely.</div>
+  <div class="sbar-card accent-gold"><strong>L — Listen</strong>For what changes your diagnosis, not just confirmation of what you expected.</div>
+  <div class="sbar-card accent-gold"><strong>M — Manage</strong>Specific expectation + named consequence + offered support. All three. Always.</div>
+  <span class="sbar-label">The Core Principle</span>
+  <div class="sbar-card"><strong>Courage in Action</strong>Crews watch officers avoid hard conversations. That avoidance signals standards are negotiable. Courage here is the non-negotiable.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← The Unable Provider</button>
+  <div class="lnb-info"><div class="lnb-name">The Unwilling Provider</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Unaware Provider →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — THE UNAWARE PROVIDER ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 4 of 6</div>
+  <div class="lh-track">EMS Officer Track · Personnel Leadership</div>
+  <h1 class="lh-title">The Unaware Provider —<br><em>Feedback, Mirrors, and Drift</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Pillar 3 · Developing Others</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 8 — Mentoring &amp; Development</span></div>
+</div>
+
+<p>The Unaware provider is the most overlooked personnel situation in EMS supervision — because from a distance, they can look like either Unable or Unwilling. Their performance has a gap. They are not meeting the standard. But the root cause is neither skill deficit nor conscious non-compliance. It is a simple, fixable absence of information: <strong>they do not know the gap exists.</strong></p>
+
+<p>The most common mechanism is Drift. Over weeks and months, a provider's performance gradually departs from the standard — protocol sequencing gets shortened, documentation becomes less thorough, patient communication becomes more perfunctory. The changes are incremental. Each one individually seems minor. The provider normalizes each step downward until the accumulated drift is significant — but at no single point did they make a conscious decision to perform below standard. They simply never received a mirror that showed them what they looked like from the outside.</p>
+
+<h2>Understanding Drift — The Unaware Mechanism</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ DRIFT — THE UNAWARE MECHANISM</span>
+    <div class="ig-title">How Performance Departs From Standard Without Conscious Choice</div>
+    <div class="ig-sub">Drift is invisible to the person drifting. It requires an external observer — the officer — to detect and name it before it becomes a clinical or professional liability.</div>
+  </div>
+  <div class="ig-stage-grid">
+    <div class="ig-stage" style="border-top:3px solid var(--gold);">
+      <div class="ig-stage-num" style="color:var(--gold);">1</div>
+      <div class="ig-stage-name" style="color:var(--gold);">The First Shortcut</div>
+      <div class="ig-stage-desc">A minor deviation from the standard occurs — often under pressure, time constraint, or fatigue. No consequence follows. The shortcut worked, so the brain files it as acceptable. Not a decision to underperform — a gap that wasn't caught.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-stage-num" style="color:#D0A0E0;">2</div>
+      <div class="ig-stage-name" style="color:#D0A0E0;">Normalization</div>
+      <div class="ig-stage-desc">The shortcut is repeated. It becomes the provider's new baseline — not a deviation they are conscious of choosing, but the way they have come to do the work. The original standard is still known. It simply no longer feels actively violated because the lower level has been normalized.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid #E87070;">
+      <div class="ig-stage-num" style="color:#E87070;">3</div>
+      <div class="ig-stage-name" style="color:#E87070;">Compounding Gap</div>
+      <div class="ig-stage-desc">Additional shortcuts layer on. The gap widens, but each increment is small enough that the provider still does not experience themselves as failing. QA data begins to flag the pattern. Peer comparison reveals the gap. The provider remains genuinely unaware of how far they have drifted.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Drift is particularly prevalent in experienced providers — not because experience makes people careless, but because experience reduces conscious attention devoted to routine tasks. The most experienced providers are often the ones who have drifted the most — and no one expects them to need feedback. The officer who assumes "they've been here ten years, they know the standard" is allowing Drift to compound unchecked.</div>
+</div>
+
+<h2>The Mirror — The Primary Intervention for Unaware</h2>
+<p>The intervention for an Unaware provider is not a counseling memo. It is not a verbal warning. It is a mirror — clear, specific, data-backed feedback that shows the provider what the officer sees. The goal is not accountability; it is awareness. Once a provider is aware of the gap, most will close it on their own. The officer's job is to make the gap visible.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE MIRROR FRAMEWORK — GIVING FEEDBACK TO UNAWARE PROVIDERS</span>
+    <div class="ig-title">Four Elements of Feedback That Creates Awareness</div>
+    <div class="ig-sub">The mirror is not a complaint. It is specific, kind, data-backed, and forward-looking. The officer who delivers a good mirror is practicing the highest form of Developing Others.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Element 1</div>
+      <div class="ig-map-title">The Specific Observation — Not the General Pattern</div>
+      <div class="ig-map-desc">"On Tuesday's cardiac call at 1430, your medication dose calculation took approximately four minutes and required three attempts before you reached the correct dose. The standard is one confirmed calculation in under 90 seconds." This is a mirror. Contrast: "Your drug calculations are slow." That is an evaluation — it produces defensiveness, not awareness. The specific observation is dateable, describable, and not disputable.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Element 2</div>
+      <div class="ig-map-title">The Standard — Named Explicitly</div>
+      <div class="ig-map-desc">State the standard clearly and specifically. Reference the protocol or competency document by name where possible. The Unaware provider may not know the standard exists, may know it in principle but not be monitoring their own performance against it, or may have been operating under a different standard from a previous agency. Making the standard explicit removes all ambiguity and gives the provider something concrete to measure themselves against going forward.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Element 3</div>
+      <div class="ig-map-title">The Impact — Why It Matters</div>
+      <div class="ig-map-desc">Connect the performance gap to its clinical or operational consequence. "Four minutes for a medication calculation on a time-sensitive cardiac call is patient safety risk — those are four minutes in which the intervention is delayed." The Unaware provider who understands the consequence of the gap is more motivated to close it than one who has only been told they are below standard. Impact connects the feedback to the reason the standard exists.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Element 4</div>
+      <div class="ig-map-title">The Forward Look — What Success Looks Like</div>
+      <div class="ig-map-desc">"I want you to practice the calculation sequence on each shift until it's automatic. I'll check in with you in two weeks. If you need a simulation session or a study partner, I will set that up." The forward look gives the provider a clear path from awareness to competence. Without it, feedback is a diagnosis without a prescription. It also distinguishes this interaction from discipline — this is development, not punishment.</div>
+    </div>
+  </div>
+</div>
+
+<h2>The Unaware-to-Unwilling Shift</h2>
+<p>The mirror is both the intervention and the diagnostic test. When an Unaware provider receives clear, specific feedback and the gap closes — the diagnosis was correct. When the gap persists after clear feedback has been given — the diagnosis has changed. A provider who now <em>knows</em> the gap exists and continues to underperform has shifted from Unaware to Unwilling. At that point the intervention changes completely: the CALM accountability conversation, formal counseling, and if necessary, progressive discipline.</p>
+
+<p>The officer who keeps giving mirrors to a provider who has shifted to Unwilling is enabling the behavior while providing cover for it. The mirror was appropriate. When it stopped working, the tool needed to change.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">Drift Prevention — The Officer's Proactive Role</span>
+  <p>The best intervention for Drift is catching it early — before it compounds. Officers who build regular structured observation, QA data review, and direct feedback into their supervisory rhythm surface Drift when the gap is still small. A provider who receives a clear mirror at Stage 1 Drift rarely reaches Stage 3. The officer who waits until QA flags a pattern has allowed the gap to compound for months — and the feedback conversation becomes significantly harder. Structured observation is not micromanagement. It is the officer doing their job before the problem becomes serious.</p>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Bucket 1 — Personnel Performance (Unaware Diagnosis)</span>
+  <p>Your paramedic of eight years has zero QA flags in six years with the agency. In the past ninety days, three PCRs have been returned for incomplete vital sign documentation — post-intervention vitals present but not time-stamped. In conversation, she seems genuinely surprised and says she wasn't aware there was an issue. Using L·E·A·D: Label the bucket. Apply the 3 U's Diagnostic — Unable, Unaware, or Unwilling? Deliver the mirror feedback to her using the four elements. Target: 90 seconds out loud.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Drift — The 3 Stages</span>
+  <div class="sbar-card"><strong>Stage 1 — First Shortcut</strong>One deviation. No consequence. Filed as acceptable. The start of drift.</div>
+  <div class="sbar-card"><strong>Stage 2 — Normalization</strong>Shortcut becomes baseline. New standard is now the provider's working reality.</div>
+  <div class="sbar-card accent-red"><strong>Stage 3 — Compounding</strong>Multiple shortcuts layered. QA flags the pattern. Provider still genuinely unaware of the full gap.</div>
+  <span class="sbar-label">The Mirror — 4 Elements</span>
+  <div class="sbar-card accent-gold"><strong>Specific Observation</strong>Dateable, describable, not disputable. "On Tuesday at 1430" not "your documentation is poor."</div>
+  <div class="sbar-card accent-gold"><strong>The Standard</strong>Name it explicitly. Reference the protocol. No ambiguity about what correct looks like.</div>
+  <div class="sbar-card accent-gold"><strong>The Impact</strong>Connect the gap to clinical consequence. Awareness without consequence = academic feedback.</div>
+  <div class="sbar-card accent-gold"><strong>The Forward Look</strong>Path from awareness to competence. Resources + timeline + check-in. Development, not discipline.</div>
+  <span class="sbar-label">The Diagnostic Test</span>
+  <div class="sbar-card accent-red"><strong>Mirror → No Change = Unwilling</strong>A provider who knows the gap and continues is no longer Unaware. The intervention must change. Giving more mirrors to an Unwilling provider is enabling.</div>
+  <span class="sbar-label">Prevention</span>
+  <div class="sbar-card accent-ems"><strong>Catch Drift Early</strong>Structured observation + regular QA review. Stage 1 Drift is a 10-min conversation. Stage 3 is a formal process. The officer's choice is when to intervene.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← The Unwilling Provider</button>
+  <div class="lnb-info"><div class="lnb-name">The Unaware Provider</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Provider Burnout →</button>
+</div>
+</div>
+
+
+<!-- ======================== LESSON 5 — PROVIDER BURNOUT ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 5 of 6</div>
+  <div class="lh-track">EMS Officer Track · Personnel Leadership</div>
+  <h1 class="lh-title">Provider Burnout —<br><em>The Officer's Operational Responsibility</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Pillar 2 · Stress Management Applied</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 6 — Safety &amp; Risk</span></div>
+</div>
+
+<p>Provider burnout, compassion fatigue, and critical incident stress are not soft topics. They are patient safety issues. An EMS provider who is functionally impaired by occupational trauma will make clinical decisions differently than a provider at full capacity — and the difference will appear in patient care before it appears in a personnel file. The EMS officer who recognizes burnout early and intervenes effectively is protecting not just the provider, but every patient that provider serves.</p>
+
+<p>This is where the Empathy value in T·C·H·O·E·D·S becomes most operational. Empathy in EMS leadership is the perceptual skill that allows an officer to notice what a crew member is carrying before it becomes visible in performance data. That requires the officer to know what to look for — and to create a crew culture where it is safe to be struggling.</p>
+
+<h2>Three Conditions — Distinct but Related</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ BURNOUT · COMPASSION FATIGUE · CRITICAL INCIDENT STRESS</span>
+    <div class="ig-title">Three Distinct Conditions — Three Different Officer Responses</div>
+    <div class="ig-sub">Understanding the distinction matters. The intervention for acute critical incident stress is different from the intervention for chronic burnout. An officer who treats all three the same is likely to miss the right response for each.</div>
+  </div>
+  <div class="ig-stage-grid">
+    <div class="ig-stage" style="border-top:3px solid #E87070;">
+      <div class="ig-stage-num" style="color:#E87070;">BI</div>
+      <div class="ig-stage-name" style="color:#E87070;">Burnout</div>
+      <div class="ig-stage-desc"><strong style="color:var(--on-dark-1);">What it is:</strong> Chronic exhaustion and disengagement from work over time. Not caused by a single incident — caused by accumulated organizational stress, inadequate recovery, and loss of meaning. <strong style="color:var(--on-dark-1);">Signs:</strong> Increasing cynicism about the job, emotional distance from patients, declining documentation quality, increased errors of omission, withdrawal from peers, chronic tardiness or absenteeism. <strong style="color:var(--on-dark-1);">EMS context:</strong> High call volume systems with inadequate staffing are burnout incubators.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid var(--gold);">
+      <div class="ig-stage-num" style="color:var(--gold);">CF</div>
+      <div class="ig-stage-name" style="color:var(--gold);">Compassion Fatigue</div>
+      <div class="ig-stage-desc"><strong style="color:var(--on-dark-1);">What it is:</strong> Emotional and physical exhaustion from the cost of caring. Specific to helping professions. Cumulative secondary traumatic stress from repeatedly witnessing and absorbing others' suffering. <strong style="color:var(--on-dark-1);">Signs:</strong> Emotional numbing, difficulty empathizing with patients, intrusive thoughts about past calls, hypervigilance outside of work, relationship strain. <strong style="color:var(--on-dark-1);">EMS context:</strong> Particularly common after clusters of pediatric calls, mass casualty events, or prolonged exposure to community trauma.</div>
+    </div>
+    <div class="ig-stage" style="border-top:3px solid var(--ems2);">
+      <div class="ig-stage-num" style="color:var(--ems-text);">CIS</div>
+      <div class="ig-stage-name" style="color:var(--ems-text);">Critical Incident Stress</div>
+      <div class="ig-stage-desc"><strong style="color:var(--on-dark-1);">What it is:</strong> Acute stress response to a specific traumatic incident. Triggered by a single call — typically pediatric cardiac arrest, MCI, line-of-duty death, or a call involving personal connection to the patient. <strong style="color:var(--on-dark-1);">Signs:</strong> Intrusive recall, physical symptoms (sleep disturbance, appetite change), hyperarousal, emotional volatility immediately after the incident. <strong style="color:var(--on-dark-1);">EMS context:</strong> The most immediately recognizable condition — and the one most EMS agencies have a formal CISM response for.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The distinction that matters most operationally: Burnout and Compassion Fatigue develop over weeks and months — the officer who notices them early has time to intervene before they become patient safety issues. Critical Incident Stress is acute — the officer who recognizes it must respond within hours, not days. The intervention timeline is entirely different.</div>
+</div>
+
+<h2>The Officer's Three-Timeline Response</h2>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Immediate — After a Traumatic Call</div>
+    <div class="fw-card-title">Check In. Not Later — Now.</div>
+    <div class="fw-card-desc">After a traumatic call — pediatric code, MCI, crew exposure to violence — the officer checks in with every crew member before the shift ends. Not a formal debrief: a brief, genuine human check-in. "That was a hard call. How are you doing?" The officer who says "good job" and moves on has missed the moment. The immediate check-in is the most important intervention in the entire burnout prevention timeline.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Short-Term — 24–72 Hours</div>
+    <div class="fw-card-title">CISM Activation if Indicated</div>
+    <div class="fw-card-desc">If crew members show signs of acute CIS — sleep disturbance, intrusive recall, significant emotional change — activate the agency's CISM (Critical Incident Stress Management) resources. Most EMS agencies have a peer support team or access to an EAP counselor. This is a resource offer, not a mandate. The officer makes the resource visible and accessible — they do not force utilization.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Ongoing — Pattern Recognition</div>
+    <div class="fw-card-title">Watch the Patterns. Name What You See.</div>
+    <div class="fw-card-desc">Over weeks and months, the officer watches for the behavioral signals of emerging burnout and compassion fatigue. When the pattern becomes visible — the cynicism, the emotional distance, the declining documentation — the officer names it directly and privately. "I've noticed some changes in how you're engaging with calls. I'm not writing a counseling memo — I'm asking if you're okay and what you need." That conversation, delivered with care, changes outcomes.</div>
+  </div>
+</div>
+
+<h2>Connecting Burnout to the 3 U's</h2>
+<p>Provider burnout and compassion fatigue frequently present as an <strong>Unaware</strong> diagnosis first — the provider does not recognize how significantly their performance and engagement have changed until someone mirrors it back to them. Over time, if the organizational conditions driving the burnout are not addressed, it can shift to involve system-level failures as well. The distinction matters because it prevents the most common and most damaging response: treating burnout as Unwilling. The provider who is emotionally depleted does not look motivated. But that depletion is the occupational consequence of years of engagement with human suffering — and that is not a character failure. It is an organizational one.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">The Crew Culture Requirement — Creating Space for Struggling</span>
+  <p>No intervention works in a crew culture where struggling is equated with weakness. The EMS officer who creates crew culture does this before any individual needs support: they model appropriate vulnerability, they speak openly about difficult calls without dramatizing them, and they make it clear that asking for help is professional behavior — not a failure. A crew that watches their officer treat a struggling colleague with respect and resources is a crew that will come forward when they are struggling. A crew that watches their officer dismiss or discipline the struggling colleague will hide until the problem is a crisis.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">3 Conditions — Distinct</span>
+  <div class="sbar-card accent-red"><strong>Burnout</strong>Chronic. Organizational stress + inadequate recovery. Cynicism, withdrawal, declining quality. Weeks/months to develop.</div>
+  <div class="sbar-card accent-gold"><strong>Compassion Fatigue</strong>Cumulative. Cost of caring in helping professions. Numbing, intrusive thoughts, hypervigilance. Call clusters accelerate it.</div>
+  <div class="sbar-card accent-ems"><strong>Critical Incident Stress</strong>Acute. Single traumatic event. Intrusive recall, physical symptoms, volatility. Hours, not days, to respond.</div>
+  <span class="sbar-label">Three-Timeline Response</span>
+  <div class="sbar-card"><strong>Immediate</strong>"That was a hard call. How are you doing?" Not later — before shift ends. The most important intervention.</div>
+  <div class="sbar-card"><strong>24–72 Hours</strong>CISM activation if indicated. Resource offer, not mandate. Make it visible and accessible.</div>
+  <div class="sbar-card"><strong>Ongoing</strong>Pattern recognition. Name what you see privately: "I'm not writing a memo — I'm asking if you're okay."</div>
+  <span class="sbar-label">3 U's Connection</span>
+  <div class="sbar-card accent-red"><strong>Burnout → Often Unaware First</strong>Provider doesn't see how much they've changed. Give them the mirror. If organizational conditions are driving it — that's a system problem too. Never treat as Unwilling.</div>
+  <span class="sbar-label">TCHOEDS Link</span>
+  <div class="sbar-card accent-gold"><strong>E — Empathy</strong>Noticing what a crew member carries before it shows in performance data. This is where Empathy becomes operational leadership.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← The Unaware Provider</button>
+  <div class="lnb-info"><div class="lnb-name">Provider Burnout — The Officer's Operational Responsibility</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Progressive Discipline →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — PROGRESSIVE DISCIPLINE ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 5 · Lesson 6 of 6</div>
+  <div class="lh-track">EMS Officer Track · Personnel Leadership</div>
+  <h1 class="lh-title">Progressive Discipline —<br><em>The Ladder, the Documentation, and the Standard</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Pillar 3 · HR Management</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 3 — Subordinate Counseling · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>Progressive discipline is the formal accountability system that converts the informal coaching and counseling described in previous lessons into defensible organizational action. It exists to protect three parties simultaneously: the provider being held accountable (through due process and consistency), the officer applying discipline (through documented procedure compliance), and the organization (through legal defensibility and equal treatment). An EMS officer who understands progressive discipline correctly sees it not as a punishment system but as a structured fairness system.</p>
+
+<p>The most important word in "progressive discipline" is progressive. Each step builds on the prior one. Each step is documented. Each step gives the provider explicit notice of the standard, the failure, and the consequence of continued non-compliance. An organization that skips steps — jumping from informal coaching to suspension without documented intermediary steps — has created an unjust process that will not survive a grievance or legal challenge.</p>
+
+<h2>The Progressive Discipline Ladder</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PROGRESSIVE DISCIPLINE LADDER</span>
+    <div class="ig-title">Four Rungs · Each Building on the Prior · All Documented</div>
+    <div class="ig-sub">The 3 U's Diagnostic determines whether discipline is appropriate at all. This ladder governs how it is applied when it is. Just Culture determines whether discipline is warranted — progressive discipline determines how it is administered.</div>
+  </div>
+  <div class="disc-ladder">
+    <div class="disc-rung">
+      <div class="disc-level" style="background:rgba(201,168,76,0.08);border-right:1px solid rgba(201,168,76,0.15);">
+        <div class="disc-level-num" style="color:var(--gold);">1</div>
+        <div class="disc-level-name" style="color:var(--gold);">Verbal Counseling</div>
+      </div>
+      <div class="disc-content">
+        <div class="disc-title">The Standard — The Failure — The Expectation Going Forward</div>
+        <div class="disc-desc">A direct conversation that names the specific behavior, states the standard that was not met, and establishes the expectation going forward. Not a casual check-in — a formal accountability interaction. Even though this step is "verbal," it must be documented in the officer's notes. If the behavior continues, the documentation of this conversation is the foundation for the next step. Most providers respond at Step 1 when the conversation is delivered clearly and with respect. Most officers underdeliver Step 1 by being too indirect — and then wonder why nothing changes.</div>
+      </div>
+    </div>
+    <div class="disc-rung">
+      <div class="disc-level" style="background:rgba(42,96,144,0.1);border-right:1px solid rgba(42,96,144,0.2);">
+        <div class="disc-level-num" style="color:var(--ems-text);">2</div>
+        <div class="disc-level-name" style="color:var(--ems-text);">Written Warning</div>
+      </div>
+      <div class="disc-content">
+        <div class="disc-title">Formal Document — Provider Signature — Supervisory File</div>
+        <div class="disc-desc">A written document that formally states: the specific behavior or pattern, the dates and incidents involved, the standard that was not met, the prior Step 1 conversation that was held (date and summary), the expectation going forward, and the consequence if the behavior continues. The provider signs acknowledgment of receipt — not agreement, but receipt. This document goes into the supervisory file (and the official personnel file in many agencies). It is the foundation for Step 3 and any future action. Four Types of Justice apply here: Distributive (is this proportionate?), Procedural (did I follow policy?), Informational (does the provider understand why?), and Interpersonal (was the process respectful?).</div>
+      </div>
+    </div>
+    <div class="disc-rung">
+      <div class="disc-level" style="background:rgba(178,34,34,0.1);border-right:1px solid rgba(178,34,34,0.2);">
+        <div class="disc-level-num" style="color:#E87070;">3</div>
+        <div class="disc-level-name" style="color:#E87070;">Suspension</div>
+      </div>
+      <div class="disc-content">
+        <div class="disc-title">Time Off Without Pay — HR Involvement — Mandatory Review Before Return</div>
+        <div class="disc-desc">Suspension signals that the organization considers the matter serious enough to impose financial consequence. It is not used for first offenses unless the severity warrants bypassing earlier steps. Suspension requires HR involvement and is documented formally. Many agencies require a return-to-work meeting before the provider resumes duties — this meeting reviews expectations and documents the provider's understanding. At this stage, the supervising officer is no longer the decision-maker alone — suspension is a management-level action. The officer's role is to provide accurate, complete documentation and recommendations to the Managing Officer who will authorize the action.</div>
+      </div>
+    </div>
+    <div class="disc-rung">
+      <div class="disc-level" style="background:rgba(100,20,20,0.15);border-right:1px solid rgba(178,34,34,0.2);">
+        <div class="disc-level-num" style="color:#E87070;">4</div>
+        <div class="disc-level-name" style="color:#E87070;">Termination</div>
+      </div>
+      <div class="disc-content">
+        <div class="disc-title">End of Employment — Executive Level — Legal Review</div>
+        <div class="disc-desc">Termination is an executive-level decision with legal review. The Supervising Officer does not make termination decisions — they provide documentation that supports the decision. The documentation trail from Steps 1, 2, and 3 is what makes termination defensible or indefensible. An organization that terminates without adequate prior documentation faces grievance, arbitration, and wrongful termination exposure. The EMS officer's role in reaching this point is to have documented accurately and consistently at every prior step — not to be the person who decides termination is warranted.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The documentation standard at every step: Specific behavior (not character), Dates and times, Witnesses where relevant, Standard that was violated (by policy reference where possible), Prior notice given, Expectation going forward, and Provider's response. The acronym is SIMPLE: Specific · Incident-linked · Measurable · Policy-referenced · Leveled (consistent with step) · Expectation-forward. An officer who documents to SIMPLE standard has created a defensible record at every rung of the ladder.</div>
+</div>
+
+<h2>The Four Types of Justice Applied to Discipline</h2>
+<p>Every progressive discipline action should be evaluated against all Four Types of Justice before it is delivered. This is the Apply step in L·E·A·D for Bucket 3 — Subordinate Counseling scenarios.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Distributive Justice</div>
+    <div class="fw-card-title">Is This Outcome Proportional?</div>
+    <div class="fw-card-desc">Does this consequence match the severity of the behavior, and is it consistent with how similar behaviors have been addressed for other providers? Inconsistency is the most common discipline failure — and the one most likely to generate a grievance. The officer who disciplines differently based on personal relationships, seniority, or likability has created a Distributive Justice failure regardless of the behavior's validity.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Procedural Justice</div>
+    <div class="fw-card-title">Did I Follow the Process?</div>
+    <div class="fw-card-desc">Was the progressive discipline sequence followed? Was the provider given prior notice? Did I document each step? Did I involve HR at the appropriate step? Procedural failures can invalidate technically correct discipline actions. An officer who skipped Step 1 documentation before issuing a Step 2 written warning has created a procedural defect that the provider or union can challenge successfully.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Informational Justice</div>
+    <div class="fw-card-title">Does the Provider Understand Why?</div>
+    <div class="fw-card-desc">Is the standard clear? Does the provider know what they did wrong, why it matters, and what success looks like going forward? Informational Justice failures occur when discipline is delivered without adequate explanation — when the provider leaves the meeting understanding they were disciplined but not understanding what they need to do differently. That is not accountability; it is punishment without development.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Interpersonal Justice</div>
+    <div class="fw-card-title">Was the Process Respectful?</div>
+    <div class="fw-card-desc">Was the provider treated with dignity throughout? Was the meeting private, prepared, and professional? Was the conversation focused on behavior, not character? Interpersonal Justice failures do not always invalidate the discipline — but they damage the relationship, the crew culture, and the organization's reputation with every provider who hears about how the conversation was handled. Discipline can be delivered firmly and respectfully simultaneously. This is not an either/or.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 5 Complete — The Personnel Leadership Foundation</span>
+  <p>You now have the complete personnel leadership architecture: the 3 U's Diagnostic (Unable · Unaware · Unwilling) to identify which problem you are actually solving, the four-step Unable response, the Drift and Mirror framework for Unaware providers, the CALM-structured Unwilling accountability conversation, provider burnout recognition and the three-timeline intervention, and the progressive discipline ladder with the SIMPLE documentation standard. These tools — applied in the right sequence, with the right diagnosis — represent the highest form of day-to-day EMS officer leadership. Chapter 6 moves to EMS Scene Leadership: ICS in complex fire-EMS integration, Medical Command, and the Supervising Officer's role in community paramedicine programs.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, billing regulations, and labor laws vary by state, jurisdiction, and agency. Progressive discipline policies, documentation requirements, and HR procedures vary significantly by organization, jurisdiction, and applicable labor agreements. Always consult your agency's HR policies, labor counsel, and applicable collective bargaining agreements before initiating any formal personnel action. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Progressive Discipline Ladder</span>
+  <div class="sbar-card accent-gold"><strong>Step 1 — Verbal Counseling</strong>Direct, specific, respectful. Document in your notes even though it's verbal. Most providers respond here if delivered clearly.</div>
+  <div class="sbar-card accent-ems"><strong>Step 2 — Written Warning</strong>Formal document. Behavior + dates + standard + prior notice + expectation + consequence. Provider signs receipt. Supervisory file.</div>
+  <div class="sbar-card accent-red"><strong>Step 3 — Suspension</strong>Financial consequence. HR involvement. Mandatory. Return-to-work meeting. Officer provides documentation — not the final decision-maker.</div>
+  <div class="sbar-card accent-red"><strong>Step 4 — Termination</strong>Executive level. Legal review. Officer's role: complete, accurate documentation from every prior step. That record is what makes it defensible.</div>
+  <span class="sbar-label">SIMPLE Documentation</span>
+  <div class="sbar-card"><strong>S·I·M·P·L·E</strong>Specific · Incident-linked · Measurable · Policy-referenced · Leveled · Expectation-forward. Document to this standard at every step.</div>
+  <span class="sbar-label">4 Types of Justice</span>
+  <div class="sbar-card"><strong>Distributive</strong>Proportional and consistent? Same standard for all?</div>
+  <div class="sbar-card"><strong>Procedural</strong>Correct sequence followed? Prior notice documented?</div>
+  <div class="sbar-card"><strong>Informational</strong>Does the provider understand the standard, the failure, and what success looks like?</div>
+  <div class="sbar-card"><strong>Interpersonal</strong>Private, prepared, behavior-focused, and respectful. Firm and respectful are not opposites.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Provider Burnout</button>
+  <div class="lnb-info"><div class="lnb-name">Progressive Discipline</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 5 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

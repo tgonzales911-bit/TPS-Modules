@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 1 — The EMS Officer System | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ALL FUTURE EMS CHAPTER BUILDS USE THESE EXACT STANDARDS.
+   ============================================================ */
+
+/* --- COLOR SYSTEM --- */
+:root {
+  --navy:        #0C2340;
+  --navy2:       #0F2A4A;
+  --navy-deep:   #071828;
+  --gold:        #C9A84C;
+  --gold-light:  #E4C97A;
+  --gold-dim:    #8B6914;
+  --cream:       #F5F0E8;
+  --cream2:      #EDE4D0;
+  --offwhite:    #F9F6F0;
+  --light:       #EAE5DC;
+  /* TEXT ON DARK — contrast-safe */
+  --on-dark-1:   #F0E8D8;   /* primary — bright cream */
+  --on-dark-2:   #C8DCF0;   /* secondary — bright blue-white */
+  --on-dark-3:   #98B8D0;   /* tertiary — mid blue */
+  --on-dark-4:   #6A90A8;   /* muted — use sparingly */
+  /* TEXT ON LIGHT */
+  --on-light-1:  #1A2E42;
+  --on-light-2:  #3A5068;
+  --on-light-3:  #6A7A8A;
+  /* EMS ACCENT */
+  --ems:         #1A4A6B;
+  --ems2:        #2A6090;
+  --ems-bg:      rgba(42,96,144,0.12);
+  --ems-border:  rgba(42,96,144,0.35);
+  --ems-text:    #80C0E8;
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Crimson Pro',Georgia,serif;
+  background:var(--offwhite);
+  color:var(--on-light-1);
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* ============ TOP NAV ============ */
+.top-nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  background:rgba(7,24,40,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,168,76,0.25);
+  height:68px;
+  display:flex; align-items:center; padding:0 2rem; gap:1rem;
+}
+.nav-left { display:flex; align-items:center; gap:14px; flex:1; min-width:0; }
+.nav-brand { font-family:'Cinzel',serif; font-size:12px; letter-spacing:1.8px; color:var(--cream); line-height:1.3; white-space:nowrap; }
+.nav-brand span { display:block; font-size:8px; color:var(--gold); letter-spacing:2.5px; }
+.nav-divider { width:1px; height:28px; background:rgba(201,168,76,0.2); flex-shrink:0; }
+.nav-ems-badge {
+  font-family:'Cinzel',serif; font-size:8px; letter-spacing:2px; text-transform:uppercase;
+  background:var(--ems-bg); border:1px solid var(--ems-border);
+  color:var(--ems-text); padding:5px 11px; border-radius:4px; white-space:nowrap; flex-shrink:0;
+}
+.nav-pills { display:flex; gap:4px; flex:2; justify-content:center; overflow-x:auto; scrollbar-width:none; }
+.nav-pills::-webkit-scrollbar { display:none; }
+.nav-pill {
+  font-family:'Cinzel',serif; font-size:8px; letter-spacing:1.2px; text-transform:uppercase;
+  color:var(--on-dark-4); padding:7px 13px; border-radius:20px; cursor:pointer;
+  transition:all 0.2s; border:1px solid transparent; background:transparent; white-space:nowrap;
+}
+.nav-pill:hover { color:var(--cream); background:rgba(255,255,255,0.06); }
+.nav-pill.active { color:var(--gold); background:rgba(201,168,76,0.12); border-color:rgba(201,168,76,0.3); }
+
+/* ============ PROGRESS BAR ============ */
+.progress-bar {
+  position:fixed; top:68px; left:0; height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  z-index:199; width:0%; transition:width 0.15s;
+  box-shadow:0 0 8px rgba(201,168,76,0.5);
+}
+
+.lesson-view { display:none; }
+.lesson-view.active { display:block; }
+
+/* ============ MODULE HERO ============ */
+.module-hero {
+  background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);
+  padding:5rem 3rem 4rem;
+  margin-top:68px;
+  position:relative; overflow:hidden;
+  border-bottom:3px solid var(--gold);
+}
+.module-hero::before {
+  content:''; position:absolute; inset:0;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);
+}
+.module-hero::after { content:''; position:absolute; left:0; top:0; bottom:0; width:5px; background:linear-gradient(180deg,var(--gold),var(--gold-dim)); }
+.hero-glow { position:absolute; right:-100px; top:-100px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%); pointer-events:none; }
+.mh-inner { max-width:920px; position:relative; z-index:2; }
+.mh-eyebrow { font-family:'Cinzel',serif; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+.mh-track-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:2.5px; text-transform:uppercase;
+  background:var(--ems-bg); border:1px solid var(--ems-border);
+  color:var(--ems-text); padding:5px 12px; border-radius:4px; margin-bottom:1.25rem;
+}
+.mh-title {
+  font-family:'EB Garamond',serif;
+  font-size:clamp(2.4rem,4.5vw,3.8rem);
+  font-weight:800; color:var(--cream); line-height:1.08; margin-bottom:0.85rem;
+  text-shadow:0 2px 20px rgba(0,0,0,0.5);
+}
+.mh-title em { font-style:italic; color:var(--gold); }
+.mh-sub { font-size:1.1rem; color:var(--on-dark-2); max-width:680px; line-height:1.75; margin-bottom:2rem; }
+.mh-thread { background:rgba(201,168,76,0.07); border:1px solid rgba(201,168,76,0.2); border-left:4px solid var(--gold); padding:1.1rem 1.6rem; max-width:680px; }
+.mh-thread-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+.mh-thread-text { font-size:0.95rem; color:var(--cream2); line-height:1.7; }
+
+/* ============ LESSON LAYOUT ============ */
+.lesson-container { display:grid; grid-template-columns:1fr 320px; gap:0; }
+.lesson-main { padding:3rem 3.5rem; border-right:1px solid var(--light); min-height:70vh; }
+.lesson-sidebar { padding:2rem 1.75rem; background:#F7F3EC; position:sticky; top:68px; height:calc(100vh - 68px); overflow-y:auto; }
+
+/* ============ LESSON HEADER ============ */
+.lesson-header { margin-bottom:2.5rem; padding-bottom:1.75rem; border-bottom:2px solid var(--light); }
+.lh-eyebrow { font-family:'Cinzel',serif; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+.lh-track {
+  font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--ems-text); background:var(--ems-bg); border:1px solid var(--ems-border);
+  padding:3px 9px; border-radius:3px; display:inline-block; margin-bottom:0.65rem;
+}
+.lh-title { font-family:'EB Garamond',serif; font-size:clamp(1.9rem,3vw,2.55rem); font-weight:800; color:var(--navy); line-height:1.12; margin-bottom:0.65rem; }
+.lh-title em { font-style:italic; color:var(--gold); }
+.lh-meta { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:0.25rem; }
+.lh-meta-item { font-family:'Cinzel',serif; font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--on-light-3); }
+
+/* ============ TYPOGRAPHY ============ */
+.lesson-main h2 { font-family:'EB Garamond',serif; font-size:1.75rem; font-weight:700; color:var(--navy); margin:3rem 0 1rem; padding-bottom:0.6rem; border-bottom:2px solid var(--light); }
+.lesson-main h3 { font-family:'EB Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--navy); margin:2.25rem 0 0.75rem; }
+.lesson-main p { margin-bottom:1.35rem; color:var(--on-light-1); line-height:1.85; font-size:1rem; }
+.lesson-main ul,.lesson-main ol { margin:0 0 1.35rem 1.6rem; color:var(--on-light-1); }
+.lesson-main li { margin-bottom:0.65rem; line-height:1.75; }
+.lesson-main strong { color:var(--navy); font-weight:600; }
+
+/* ============ CALLOUTS ============ */
+.callout { padding:1.5rem 1.75rem; margin:2.25rem 0; }
+.callout-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:0.6rem; display:block; }
+.callout-gold { background:#FBF5E4; border-left:4px solid var(--gold); }
+.callout-gold .callout-label { color:var(--gold-dim); }
+.callout-gold p { color:#4A3A10; font-size:1rem; line-height:1.8; }
+.callout-navy { background:var(--navy); border-left:4px solid var(--gold); box-shadow:0 2px 16px rgba(0,0,0,0.25); }
+.callout-navy .callout-label { color:var(--gold); }
+.callout-navy p { color:var(--on-dark-1); font-size:1rem; line-height:1.8; }
+.callout-ems { background:rgba(26,74,107,0.07); border-left:4px solid var(--ems2); }
+.callout-ems .callout-label { color:var(--ems2); }
+.callout-ems p { color:var(--on-light-1); font-size:1rem; line-height:1.8; }
+
+/* ============ ACRO GRID ============ */
+.acro-grid { display:flex; flex-direction:column; gap:0; margin:1.75rem 0; border:1px solid #D8D2C8; border-radius:8px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,0.07); }
+.acro-row { display:grid; grid-template-columns:56px 1fr; gap:0; border-bottom:1px solid #D8D2C8; }
+.acro-row:last-child { border-bottom:none; }
+.acro-letter { background:var(--navy); color:var(--gold); font-family:'EB Garamond',serif; font-size:2rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+.acro-content { padding:1rem 1.25rem; background:white; }
+.acro-word { font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dim); margin-bottom:5px; }
+.acro-desc { font-size:0.9rem; color:var(--on-light-2); line-height:1.6; }
+
+/* ============ SIDEBAR ============ */
+.sbar-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold-dim); margin-bottom:0.7rem; margin-top:1.75rem; display:block; }
+.sbar-label:first-child { margin-top:0; }
+.sbar-card { background:white; border:1px solid #D8D2C8; border-radius:8px; padding:0.95rem 1.1rem; margin-bottom:8px; font-size:0.88rem; color:var(--on-light-2); line-height:1.6; box-shadow:0 1px 4px rgba(0,0,0,0.04); }
+.sbar-card strong { color:var(--navy); display:block; margin-bottom:4px; font-family:'Cinzel',serif; font-size:8px; letter-spacing:1.5px; text-transform:uppercase; }
+.sbar-card.accent-ems { border-left:3px solid var(--ems2); }
+.sbar-card.accent-gold { border-left:3px solid var(--gold); }
+.sbar-card.accent-red { border-left:3px solid #B22222; }
+.sbar-card.accent-green { border-left:3px solid #1A7A4A; }
+
+/* ============ FW GRID ============ */
+.fw-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.75rem 0; }
+.fw-card { background:white; border:1px solid #D8D2C8; padding:1.35rem; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.05); }
+.fw-card-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dim); margin-bottom:7px; }
+.fw-card-title { font-family:'EB Garamond',serif; font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:7px; }
+.fw-card-desc { font-size:0.88rem; color:var(--on-light-2); line-height:1.65; }
+
+/* ============ INFOGRAPHIC SYSTEM ============
+   ALL TEXT ON DARK BACKGROUNDS:
+   Primary text:   var(--on-dark-1) = #F0E8D8
+   Secondary text: var(--on-dark-2) = #C8DCF0  ← REPLACES old #8FA8C0
+   Tertiary text:  var(--on-dark-3) = #98B8D0
+   Min font size on dark: 0.88rem
+   ============================================= */
+.infographic-wrap {
+  background:var(--navy-deep);
+  border:1px solid rgba(201,168,76,0.2);
+  border-left:4px solid var(--gold);
+  margin:2.25rem 0; overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.3);
+}
+.ig-header { background:rgba(201,168,76,0.07); padding:1.1rem 1.4rem 1rem; border-bottom:1px solid rgba(201,168,76,0.15); }
+.ig-eyebrow { font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:5px; }
+.ig-title { font-family:'EB Garamond',serif; font-size:1.3rem; font-weight:700; color:var(--cream); margin-bottom:4px; }
+.ig-sub { font-size:0.92rem; color:var(--on-dark-2); line-height:1.55; }
+.ig-callout { margin:0.6rem 1.4rem 1.1rem; padding:0.9rem 1.1rem; background:rgba(201,168,76,0.08); border-left:3px solid var(--gold); font-size:0.9rem; color:#C0A030; line-height:1.65; font-style:italic; }
+
+/* Levels */
+.ig-levels { padding:0.75rem 1.25rem; display:flex; flex-direction:column; gap:4px; }
+.ig-level { display:grid; grid-template-columns:48px 1fr; gap:1rem; padding:1.1rem; align-items:start; }
+.ig-level-badge { width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-family:'Cinzel',serif; font-size:11px; font-weight:700; border-radius:50%; flex-shrink:0; }
+.ig-level-name { font-family:'Cinzel',serif; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:5px; font-weight:700; }
+.ig-level-desc { font-size:0.92rem; color:var(--on-dark-2); line-height:1.65; margin-bottom:5px; }
+.ig-level-eg { font-size:0.85rem; color:var(--on-dark-3); font-style:italic; }
+
+/* Compare / Confidence Spectrum */
+.ig-compare { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:rgba(201,168,76,0.08); }
+.ig-compare-col { background:var(--navy-deep); padding:1.25rem; }
+.ig-compare-header { font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; font-weight:700; margin-bottom:5px; }
+.ig-compare-sub { font-size:0.88rem; font-style:italic; margin-bottom:12px; line-height:1.45; }
+.ig-compare-items { display:flex; flex-direction:column; gap:5px; margin-bottom:12px; }
+.ig-compare-item { font-size:0.9rem; color:var(--on-dark-1); padding:5px 0; border-bottom:1px solid rgba(255,255,255,0.05); line-height:1.5; }
+.ig-compare-result { font-size:0.87rem; font-weight:600; padding:9px 11px; border:1px solid; margin-top:8px; line-height:1.45; }
+
+/* Pillar rows */
+.ig-pillar-row { display:grid; grid-template-columns:42px 1fr 100px; gap:1rem; padding:1rem 1.4rem; border-bottom:1px solid rgba(201,168,76,0.07); align-items:center; }
+.ig-pillar-row:last-child { border-bottom:none; }
+.ig-pillar-num { font-family:'EB Garamond',serif; font-size:1.7rem; font-weight:800; color:var(--gold); text-align:center; }
+.ig-pillar-name { font-family:'Cinzel',serif; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--on-dark-1); font-weight:700; margin-bottom:4px; }
+.ig-pillar-sub { font-size:0.9rem; color:var(--on-dark-2); line-height:1.55; }
+.ig-pillar-type { font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:1px; text-transform:uppercase; text-align:center; padding:4px 7px; border-radius:3px; line-height:1.5; }
+.ig-pillar-type.core { background:rgba(42,96,144,0.2); color:var(--ems-text); border:1px solid var(--ems-border); }
+.ig-pillar-type.ops { background:rgba(26,92,58,0.2); color:#60D090; border:1px solid rgba(26,92,58,0.3); }
+.ig-pillar-type.both { background:rgba(201,168,76,0.12); color:var(--gold); border:1px solid rgba(201,168,76,0.25); }
+.ig-pillar-type.entry { background:rgba(100,120,140,0.15); color:var(--on-dark-3); border:1px solid rgba(100,120,140,0.25); }
+
+/* Acro inside IG */
+.ig-acro { padding:0.75rem 1.25rem; display:flex; flex-direction:column; gap:2px; }
+.ig-acro-row { display:grid; grid-template-columns:44px 1fr; gap:0.85rem; padding:0.9rem; border-bottom:1px solid rgba(201,168,76,0.08); align-items:start; }
+.ig-acro-row:last-child { border-bottom:none; }
+.ig-acro-letter { font-family:'EB Garamond',serif; font-size:2.2rem; font-weight:800; color:var(--gold); text-align:center; line-height:1; }
+.ig-acro-word { font-family:'Cinzel',serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--on-dark-1); font-weight:700; margin-bottom:4px; }
+.ig-acro-desc { font-size:0.92rem; color:var(--on-dark-2); line-height:1.65; }
+
+/* FW grid inside IG */
+.ig-fw-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(201,168,76,0.08); }
+.ig-fw-card { background:var(--navy-deep); padding:1.1rem; }
+.ig-fw-label { font-family:'Cinzel',serif; font-size:8px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+.ig-fw-title { font-family:'EB Garamond',serif; font-size:1.05rem; font-weight:700; color:var(--on-dark-1); margin-bottom:5px; }
+.ig-fw-desc { font-size:0.9rem; color:var(--on-dark-2); line-height:1.6; }
+
+/* ============ LESSON NAV BAR — PREMIUM ============ */
+.lesson-nav-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.5rem 3rem;
+  border-top:2px solid var(--light);
+  background:white;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.07);
+}
+.lnb-btn {
+  background:transparent; border:1.5px solid #C8C0B0;
+  padding:12px 28px; font-family:'Cinzel',serif; font-size:9px; font-weight:600;
+  letter-spacing:1.5px; text-transform:uppercase;
+  cursor:pointer; border-radius:6px; color:var(--on-light-2);
+  transition:all 0.2s; min-width:160px;
+}
+.lnb-btn:hover:not(:disabled) { border-color:var(--gold); color:var(--gold); }
+.lnb-btn:disabled { opacity:0.35; cursor:default; }
+.lnb-btn.primary {
+  background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);
+  color:var(--gold); border-color:var(--navy);
+  box-shadow:0 3px 12px rgba(12,35,64,0.3);
+}
+.lnb-btn.primary:hover { background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%); }
+.lnb-btn.complete {
+  background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);
+  color:#80E0A0; border-color:#1A5C3A; cursor:default;
+  box-shadow:0 3px 12px rgba(26,92,58,0.3);
+}
+.lnb-info { text-align:center; }
+.lnb-name { font-family:'EB Garamond',serif; font-size:1rem; font-weight:600; color:var(--navy); }
+.lnb-num { font-size:0.78rem; color:var(--on-light-3); margin-top:2px; }
+
+/* ============ LEGAL DISCLAIMER ============
+   REQUIRED ON EVERY CHAPTER'S FINAL LESSON.
+   ============================================ */
+.legal-disclaimer {
+  margin:3rem 0 0; padding:1.25rem 1.5rem;
+  background:#F0EBE1; border:1px solid #D8D0C4; border-top:3px solid var(--light);
+}
+.legal-disclaimer-label { font-family:'Cinzel',serif; font-size:7.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--on-light-3); margin-bottom:0.5rem; display:block; }
+.legal-disclaimer p { font-size:0.8rem !important; color:var(--on-light-3) !important; line-height:1.65 !important; margin-bottom:0 !important; font-style:italic; }
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:960px) {
+  .lesson-container { grid-template-columns:1fr; }
+  .lesson-sidebar { position:relative; height:auto; }
+  .lesson-main { padding:2rem 1.5rem; }
+  .lesson-nav-bar { padding:1.25rem 1.5rem; }
+  .lnb-btn { min-width:120px; padding:10px 18px; }
+}
+@media(max-width:700px) {
+  .ig-compare { grid-template-columns:1fr; }
+  .fw-grid { grid-template-columns:1fr; }
+  .ig-fw-grid { grid-template-columns:1fr; }
+  .module-hero { padding:4rem 1.5rem 3rem; }
+  .ig-pillar-row { grid-template-columns:38px 1fr; }
+  .ig-pillar-type { display:none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Welcome</button>
+    <button class="nav-pill" onclick="showLesson(1)">Three Levels</button>
+    <button class="nav-pill" onclick="showLesson(2)">Confidence Spectrum</button>
+    <button class="nav-pill" onclick="showLesson(3)">L·E·A·D in EMS</button>
+    <button class="nav-pill" onclick="showLesson(4)">Seven Pillars</button>
+    <button class="nav-pill" onclick="showLesson(5)">First Assignment</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 1 · Foundation</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · NEMSMA Seven Pillars</div>
+    <h1 class="mh-title">The <em>EMS Officer</em><br>System</h1>
+    <p class="mh-sub">Everything in this track is built on one premise: EMS promotional candidates are assessed the same way fire candidates are — and nobody has built a system to prepare them for it. Until now.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. This chapter establishes the full foundation for the EMS Officer Track — who it is for, how it works, how assessors score every response, and the master frameworks that drive performance across every exercise type. Read them in order.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — WELCOME ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 1 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">Welcome to the<br><em>EMS Officer Track</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 10 min</span><span class="lh-meta-item">📘 Foundation</span><span class="lh-meta-item">NEMSMA Pillar 1</span></div>
+</div>
+
+<p>The fire service has had structured promotional preparation for decades. Assessment centers, oral board coaching, written exercise training — a whole industry built around helping firefighters become officers. EMS has built the same assessment infrastructure. Nobody built the preparation system to match it.</p>
+
+<p>That is the gap this track fills.</p>
+
+<p><strong>Whether you are a paramedic preparing for your first supervisory promotion, a managing officer studying for an executive position, or an EMS professional pursuing NEMSMA credentialing</strong> — you are being evaluated on the same fundamental dimensions that assessors have scored for years. Leadership judgment. Interpersonal awareness. Communication under pressure. Written analysis. The scenarios change. The scoring architecture does not.</p>
+
+<h2>What This Track Is</h2>
+<p>The TPS EMS Officer Track is a structured developmental program built on the NEMSMA Seven Pillars of National EMS Officer Competencies — the definitive national standard for EMS leadership at all three levels. Every lesson connects to a specific NEMSMA competency. Every framework you learn applies directly to assessment center performance. Every piece of content was built to be used, not just read.</p>
+
+<p>This is not a textbook summary of EMS management theory. It is a preparation system. The distinction matters. A textbook tells you what good EMS officers do. This system develops you into a candidate who can demonstrate that understanding under pressure, in front of assessors, on the day it counts.</p>
+
+<div class="callout callout-ems">
+  <span class="callout-label">Who This Track Is For</span>
+  <p>EMS professionals pursuing promotion at any level — Supervising, Managing, or Executive. Fire-based EMS officers preparing for hybrid EMS promotion. NEMSMA credentialing candidates. Any EMS leader who wants to develop deliberately rather than just accumulate experience and hope it translates when it matters.</p>
+</div>
+
+<h2>What Is Different About EMS Oral Boards</h2>
+<p>EMS promotional assessments include the same exercise types as fire assessments — oral boards, in-basket exercises, written exercises, role plays, presentations. What differs is the content domain and competency emphasis. EMS assessors weight clinical performance leadership, quality management, and community health outcomes more heavily. Personnel management, budget, and logistics scenarios are filtered through an EMS operational lens.</p>
+
+<p>Most importantly, EMS assessors are looking for something almost no preparation program names explicitly: <strong>the difference between under-confidence and over-confidence in a leadership response.</strong> That concept — the Confidence Spectrum — is the core insight of this chapter. You will encounter it in Lesson 3. It will change how you answer every question from that point forward.</p>
+
+<h2>The TPS Framework Foundation</h2>
+<p>If you have completed the TPS Fire Officer curriculum, you already have the foundation. The master framework — <strong>L·E·A·D</strong> (Label · Engage · Apply · Deliver) — applies unchanged. T·C·H·O·E·D·S applies unchanged. CLEAR applies unchanged. The 13 Question Buckets apply with EMS-specific scenarios in every category.</p>
+
+<p>What is new is the content domain: seven new EMS-specific frameworks, operational clinical performance knowledge, quality improvement systems, and the regulatory and community environment unique to EMS. All of it built on the same architecture you already know.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Before You Go Further</span>
+  <p>Identify which level you are preparing for: Supervising EMS Officer, Managing EMS Officer, or Executive EMS Officer. Write it down now. Every lesson addresses all three levels, but your attention should be calibrated to the level you are actually pursuing. The level is not just context — it is the filter through which every response you give should pass.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Chapter 1 Overview</span>
+  <div class="sbar-card"><strong>Lesson 1</strong>Welcome — who this track is for and what makes it different</div>
+  <div class="sbar-card"><strong>Lesson 2</strong>The Three Levels of EMS Leadership</div>
+  <div class="sbar-card"><strong>Lesson 3</strong>The Confidence Spectrum — how assessors score every competency</div>
+  <div class="sbar-card"><strong>Lesson 4</strong>L·E·A·D in the EMS context</div>
+  <div class="sbar-card"><strong>Lesson 5</strong>The Seven Pillars — your curriculum map</div>
+  <div class="sbar-card"><strong>Lesson 6</strong>Your first EMS assignment</div>
+  <span class="sbar-label">The Core Insight</span>
+  <div class="sbar-card accent-ems"><strong>The Gap</strong>EMS has the same assessment infrastructure as fire. No one built the preparation system to match it — until now.</div>
+  <span class="sbar-label">Core TPS Frameworks</span>
+  <div class="sbar-card accent-gold"><strong>L·E·A·D</strong>Label · Engage · Apply · Deliver. Unchanged from fire track.</div>
+  <div class="sbar-card accent-gold"><strong>T·C·H·O·E·D·S</strong>Trust · Courage · Humility · Ownership · Empathy · Dedication · Service</div>
+  <div class="sbar-card accent-gold"><strong>CLEAR</strong>Commend · Limitations · Examples · Adjust · Rank</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Previous</button>
+  <div class="lnb-info"><div class="lnb-name">Welcome to the EMS Officer Track</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Three Levels →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — THREE LEVELS ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 2 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">The Three Levels of<br><em>EMS Leadership</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 12 min</span><span class="lh-meta-item">📘 Architecture</span><span class="lh-meta-item">NEMSMA Pillar 1</span></div>
+</div>
+
+<p>The National EMS Management Association defines three levels of EMS officer leadership. Every competency, every oral board expectation, and every assessment rubric in this track maps to one of these three levels. Understanding where you sit — and what changes as you move up — is the first architectural decision of your preparation.</p>
+
+<p>These levels are not arbitrary titles. They describe fundamentally different scopes of responsibility, different decision-making authority, and different ways assessors probe your judgment. The same question asked of a Supervising Officer and an Executive Officer expects a different answer — not in values, but in scope, complexity, and system-level thinking.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA OFFICER STRUCTURE</span>
+    <div class="ig-title">The Three Levels of EMS Officer Leadership</div>
+    <div class="ig-sub">Competencies are cumulative. Each level builds on the one before it.</div>
+  </div>
+  <div class="ig-levels">
+    <div class="ig-level" style="background:rgba(42,96,144,0.09);border-left:3px solid var(--ems2);">
+      <div class="ig-level-badge" style="background:rgba(42,96,144,0.2);border:2px solid var(--ems2);color:var(--ems-text);">S</div>
+      <div>
+        <div class="ig-level-name" style="color:var(--ems-text);">Supervising EMS Officer</div>
+        <div class="ig-level-desc">Front-line supervisor. Direct supervision of EMTs and paramedics in the field. Responsible for daily schedules, unit assignment, resource assurance, and initial incident command at smaller emergencies.</div>
+        <div class="ig-level-eg">Also known as: Field Supervisor · EMS Lieutenant · Shift Supervisor</div>
+      </div>
+    </div>
+    <div class="ig-level" style="background:rgba(201,168,76,0.07);border-left:3px solid var(--gold);">
+      <div class="ig-level-badge" style="background:rgba(201,168,76,0.15);border:2px solid var(--gold);color:var(--gold);">M</div>
+      <div>
+        <div class="ig-level-name" style="color:var(--gold);">Managing EMS Officer</div>
+        <div class="ig-level-desc">Middle management. Manages major organizational components — administration, clinical affairs, HR, finance, quality management. Plans, directs, and coordinates subordinate supervisors, EMTs, and paramedics. Responds to MCIs in unified command. Develops educational programs, deployment plans, and system status management.</div>
+        <div class="ig-level-eg">Also known as: EMS Coordinator · Operations Manager · EMS Captain · Division Chief</div>
+      </div>
+    </div>
+    <div class="ig-level" style="background:rgba(178,34,34,0.07);border-left:3px solid #B22222;">
+      <div class="ig-level-badge" style="background:rgba(178,34,34,0.15);border:2px solid #B22222;color:#E87070;">E</div>
+      <div>
+        <div class="ig-level-name" style="color:#E87070;">Executive EMS Officer</div>
+        <div class="ig-level-desc">Senior management. General management and top-level leadership of the entire EMS organization. Reports to Board of Directors (private/nonprofit) or serves as department head (governmental). Drives strategic direction, overall operational performance, and organizational future. Responds to MCIs in command or general staff positions.</div>
+        <div class="ig-level-eg">Also known as: Deputy Chief · Director · Chief of Department · EMS Chief</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The level is the filter. Every response you give in an assessment center must pass through the question: "Is this the answer of a Supervising, Managing, or Executive Officer?" Then: "Is that the level I'm actually testing for?"</div>
+</div>
+
+<h2>The Radius of Responsibility</h2>
+<p>The most important distinction between levels is <strong>the radius of your accountability</strong>. Values stay the same at every level. What expands is the scope of who and what you are responsible for.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Supervising Officer</div>
+    <div class="fw-card-title">Your Crew · Your Shift · Your Scene</div>
+    <div class="fw-card-desc">Accountable for people directly under your supervision. Your daily operations. Your incident scene. Feedback to individual crew members. The radius is your unit.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Managing Officer</div>
+    <div class="fw-card-title">Your Division · Your Programs · Your Supervisors</div>
+    <div class="fw-card-desc">Accountable for entire operational components. Your supervisors' performance. Your programs' effectiveness. Your division's data. The radius is your organizational unit.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Executive Officer</div>
+    <div class="fw-card-title">The Organization · The Community · The Future</div>
+    <div class="fw-card-desc">Accountable for the whole — every employee, every system, every external relationship. The radius is the entire organization and its place in the community it serves.</div>
+  </div>
+</div>
+
+<h3>How Level Affects Oral Board Scoring</h3>
+<p>Assessors calibrate expectations to the level being tested. A Supervising Officer who answers with Executive-level complexity — referencing board governance, long-range strategic planning, community political relationships — is demonstrating scope violation and poor role clarity. A Managing Officer answering with only Supervising-level thinking is demonstrating limited confidence in thinking systemically.</p>
+
+<p>The target: demonstrate mastery of <em>your level</em>, awareness of the level below, and appropriate aspiration toward the level above. Never skip a level in either direction.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Level Check — Run Before Every Response</span>
+  <p>"Is this the answer of a Supervising, Managing, or Executive Officer?" Then: "Is that the level I'm actually testing for?" If the answers differ, recalibrate before you speak. The most common single reason candidates underperform is answering below their target level — not lack of knowledge, but failure to own the scope of the role they are seeking.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">The Three Levels</span>
+  <div class="sbar-card accent-ems"><strong>S — Supervising</strong>Your crew · your shift · your scene. Field supervisor accountability.</div>
+  <div class="sbar-card accent-gold"><strong>M — Managing</strong>Your division · your programs · your supervisors. Systems-level.</div>
+  <div class="sbar-card accent-red"><strong>E — Executive</strong>The organization · the community · the future. Strategic accountability.</div>
+  <span class="sbar-label">The Core Rule</span>
+  <div class="sbar-card"><strong>Never Skip a Level</strong>Mastery of your level + awareness below + appropriate aspiration above. Scope violation in either direction is a failure score.</div>
+  <span class="sbar-label">Fire Track Parallel</span>
+  <div class="sbar-card"><strong>S = Company Officer</strong>M = Battalion Chief · E = Chief Officer. Same architecture, different domain.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Welcome</button>
+  <div class="lnb-info"><div class="lnb-name">The Three Levels of EMS Leadership</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Confidence Spectrum →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — CONFIDENCE SPECTRUM ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 3 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">The<br><em>Confidence Spectrum</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Core Framework — New</span><span class="lh-meta-item">NEMSMA All Pillars</span></div>
+</div>
+
+<p>This is the most important lesson in Chapter 1. What you learn here will change how you analyze every response for the rest of this program. It is not a scoring rubric. It is the insight underneath the rubric — the reason candidates fail who are otherwise well-prepared.</p>
+
+<p>Most candidates think they fail oral boards because they didn't know enough. In most cases, they failed because they landed in the wrong column on the Confidence Spectrum.</p>
+
+<h2>What the Confidence Spectrum Is</h2>
+<p>The NEMSMA Seven Pillars defines every competency with three behavioral descriptors side by side. The left column describes an officer with <strong>Limited Confidence</strong>. The center is the target — an officer with <strong>Confidence</strong>. The right column describes an officer with <strong>Overconfidence</strong>.</p>
+
+<p>Assessors are trained to place your response in one of these three columns. They are not just checking whether you know what to do. They are observing <em>how you hold that knowledge</em> — whether you hold it with appropriate certainty and appropriate humility simultaneously.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA CONFIDENCE SPECTRUM — CORE FRAMEWORK</span>
+    <div class="ig-title">How Assessors Score Every Competency</div>
+    <div class="ig-sub">Three columns. One target. Most candidates miss the center from both directions.</div>
+  </div>
+  <div class="ig-compare">
+    <div class="ig-compare-col" style="border-top:3px solid #E87070;">
+      <div class="ig-compare-header" style="color:#E87070;">⚠ Limited Confidence</div>
+      <div class="ig-compare-sub" style="color:#D08060;">Under-performance through avoidance, inaction, or inability to own the role</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Waits for others to take initiative</div>
+        <div class="ig-compare-item">Defers decisions upward unnecessarily</div>
+        <div class="ig-compare-item">Fails to address obvious problems</div>
+        <div class="ig-compare-item">Language: "I would try to..." / "I might..."</div>
+        <div class="ig-compare-item">Misses or understates the scope</div>
+        <div class="ig-compare-item">Avoids conflict at cost of resolution</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(139,26,26,0.12);border-color:#E87070;color:#E87070;">Assessor: Not ready for this level.</div>
+    </div>
+    <div class="ig-compare-col" style="border-top:3px solid var(--gold);background:#0A1E34;">
+      <div class="ig-compare-header" style="color:var(--gold);">✓ Confidence — TARGET</div>
+      <div class="ig-compare-sub" style="color:#B09840;">Appropriate certainty + appropriate humility at the right scope</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Acts decisively at the correct level</div>
+        <div class="ig-compare-item">Involves others without abdicating</div>
+        <div class="ig-compare-item">Addresses problems directly and fairly</div>
+        <div class="ig-compare-item">Language: "My first action..." / "I will..."</div>
+        <div class="ig-compare-item">Correctly scopes to the level</div>
+        <div class="ig-compare-item">Resolves conflict with process + respect</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold);">Assessor: Ready. This is what this level looks like.</div>
+    </div>
+    <div class="ig-compare-col" style="border-top:3px solid #6090C0;">
+      <div class="ig-compare-header" style="color:#88AAD0;">⚠ Overconfidence</div>
+      <div class="ig-compare-sub" style="color:#7090B0;">Over-performance through scope violation, control, or dismissal of process</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Takes over responsibilities above the level</div>
+        <div class="ig-compare-item">Micromanages — delegates nothing</div>
+        <div class="ig-compare-item">Unilateral decisions without input</div>
+        <div class="ig-compare-item">Language: "I will make sure everyone..." </div>
+        <div class="ig-compare-item">Inflates routine issues to major ones</div>
+        <div class="ig-compare-item">Dismisses process for personal judgment</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(40,60,120,0.2);border-color:#6090C0;color:#88AAD0;">Assessor: Leadership liability at this level.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The Confidence Spectrum recalibrates by level — it does not change. What looks confident at Supervising looks under-confident at Executive. What looks confident at Executive looks overconfident at Supervising. The center column shifts with the level.</div>
+</div>
+
+<h2>The Language Test</h2>
+<p>Run this diagnostic on every response before you deliver it. Count your certainty words: <em>"I will," "My first action is," "I am responsible for."</em> Count your qualification words: <em>"I might," "I would try to," "It depends."</em></p>
+
+<p>A <strong>3-to-1 ratio</strong> of certainty to qualifications is the target. Too many certainty words without nuance is overconfidence. Too many qualifications without commitment is limited confidence.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Language Test — Run This Every Rep</span>
+  <p>"I will" — not "I would try to." "My responsibility" — not "someone should probably." "My first action is" — not "one thing that could be done." Three certainty words for every qualification. This single habit moves most candidates from a 3 to a 4 before they learn a single new framework.</p>
+</div>
+
+<h3>Common Confidence Failures by Level</h3>
+<p><strong>Supervising Officers most often land in Limited Confidence.</strong> Still processing the shift from peer to supervisor. Defaulting to deference rather than ownership. The fix: commit to the language of the role. "My crew. My shift. My responsibility. My first action is..."</p>
+
+<p><strong>Managing Officers swing between both failure columns.</strong> Overconfident in technical EMS expertise. Under-confident when questions require political navigation or strategic thinking. The fix: calibrate scope — neither taking on what belongs to the Executive nor deflecting what belongs to Managing.</p>
+
+<p><strong>Executive Officers most often land in Overconfidence.</strong> Experienced, decisive, accustomed to being the authority. The failure mode is unilateral decision-making, dismissing process, or operating outside the chain of command. The fix: demonstrate that the best leaders build systems and develop people rather than solving every problem personally.</p>
+
+<h2>How This Integrates with CLEAR</h2>
+<p>The Confidence Spectrum plugs directly into the CLEAR coaching model. When you receive feedback, the <strong>L (Limitations)</strong> component names which direction you drifted — Limited or Overconfident. The <strong>A (Adjust)</strong> component describes what the center-column response sounds like for that scenario. Naming the failure mode is the first step to correcting it.</p>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">The Three Columns</span>
+  <div class="sbar-card accent-red"><strong>Limited Confidence</strong>Avoidance · deferral · uncertainty. Assessor: Not ready.</div>
+  <div class="sbar-card accent-gold"><strong>Confidence ← Target</strong>Decisive + humble · owns the level · right scope. Assessor: Ready.</div>
+  <div class="sbar-card" style="border-left:3px solid #6090C0;"><strong>Overconfidence</strong>Control · scope violation · dismisses process. Assessor: Liability.</div>
+  <span class="sbar-label">The Language Test</span>
+  <div class="sbar-card"><strong>3:1 Rule</strong>Three certainty words for every qualification. "I will" not "I might." "My responsibility" not "someone should."</div>
+  <span class="sbar-label">By Level</span>
+  <div class="sbar-card"><strong>S — Typically Under</strong>Fix: "My crew. My shift. My responsibility."</div>
+  <div class="sbar-card"><strong>M — Swings Both Ways</strong>Fix: Calibrate scope. Neither above nor below.</div>
+  <div class="sbar-card"><strong>E — Typically Over</strong>Fix: Build systems. Develop people. Don't solve everything personally.</div>
+  <span class="sbar-label">CLEAR Connection</span>
+  <div class="sbar-card accent-gold"><strong>L = Limitations</strong>Names the drift direction — Limited or Over. <strong>A = Adjust</strong> describes the center-column target.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Three Levels</button>
+  <div class="lnb-info"><div class="lnb-name">The Confidence Spectrum</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">L·E·A·D in EMS →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — L·E·A·D ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 4 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">L·E·A·D in<br><em>the EMS Context</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Master Framework</span><span class="lh-meta-item">All Pillars</span></div>
+</div>
+
+<p>The master framework does not change. Every exercise type. Every rank. Every question. L·E·A·D is the sequence that runs in your mind in the ten seconds before your first word — in a fire oral board and in an EMS oral board. The four steps are identical. What changes is what you encounter at each step when the domain is EMS.</p>
+
+<div class="callout callout-navy" style="margin:1.5rem 0;">
+  <span class="callout-label">The Master Framework — Unchanged</span>
+  <p style="font-family:'EB Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--gold);letter-spacing:3px;margin-bottom:0.4rem;">L · E · A · D</p>
+  <p style="font-size:1rem;color:var(--on-dark-1);">Label · Engage · Apply · Deliver — ten seconds, every question, every rank.</p>
+</div>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ L·E·A·D — EMS APPLICATION</span>
+    <div class="ig-title">The Master Framework in EMS Assessment Centers</div>
+    <div class="ig-sub">Four steps. Ten seconds. The difference between knowing and performing under pressure.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">L</div>
+      <div>
+        <div class="ig-acro-word">Label — Bucket + Primary EMS Framework</div>
+        <div class="ig-acro-desc">Before your first word, name two things internally: which of the 13 question buckets this scenario falls into, and which primary EMS framework applies. Personnel issue → Confidence Spectrum + 3 U's Diagnostic. Quality concern → PDCA + Just Culture. Budget question → Financial Ethics model. Community inquiry → Civic Responsibility framework. Getting the label right takes ten seconds and determines everything that follows.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">E</div>
+      <div>
+        <div class="ig-acro-word">Engage — Gather, Clarify, Assess Before Acting</div>
+        <div class="ig-acro-desc">Don't rush to action. Demonstrate that you assess before you act. In EMS scenarios: clarify the clinical facts if relevant, identify who is involved, confirm what you know versus what you're assuming. The Supervising Officer engages the immediate situation. The Managing Officer engages the system. The Executive Officer engages the stakeholders. What you engage depends on your level.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">A</div>
+      <div>
+        <div class="ig-acro-word">Apply — Name the Framework. This Is the 4/5 Move.</div>
+        <div class="ig-acro-desc">This is where TPS separates 4/5 responses from 3/5 responses. Name the framework explicitly. "I would apply Just Culture principles here, beginning with a root cause analysis before any disciplinary consideration." "The PDCA cycle tells me my next step is to check whether the intervention produced the intended outcome." Named frameworks signal an officer who thinks systematically — not just reactively.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">D</div>
+      <div>
+        <div class="ig-acro-word">Deliver — Close with a Leadership Principle</div>
+        <div class="ig-acro-desc">End every response with a closing principle anchored in leadership values. In the EMS context, connect your close to patient outcomes, crew development, or organizational excellence. "Ultimately, everything I do as an EMS officer comes back to patient outcomes. My crew's performance is my performance. That is the standard I hold." The close signals you see the human dimension, not just the operational one.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common mistake: skipping L and jumping to D — delivering an answer that sounds like leadership without labeling the bucket, engaging the specific facts, or applying a named framework. It sounds confident on the surface. Assessors hear it as rehearsed but not analytical. Run all four steps every time.</div>
+</div>
+
+<h2>EMS-Specific Framework Recognition</h2>
+<p>The 13 Question Buckets apply in full. What changes is the framework you reach for in the Apply step. When the domain is EMS:</p>
+
+<div class="ig-fw-grid">
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Personnel / Clinical Error</div>
+    <div class="ig-fw-title">Just Culture + PDCA</div>
+    <div class="ig-fw-desc">Root cause first. System failure or individual negligence? PDCA to address the system. Discipline only where Just Culture framework warrants it.</div>
+  </div>
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Quality / Outcomes</div>
+    <div class="ig-fw-title">Prospective / Concurrent / Retrospective QM</div>
+    <div class="ig-fw-desc">Name the phase. Before, during, or after the care event? Apply PDCA to the improvement cycle. Reference national benchmarks where applicable.</div>
+  </div>
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Conflict / Fairness</div>
+    <div class="ig-fw-title">Four Types of Justice</div>
+    <div class="ig-fw-desc">Distributive · Interpersonal · Informational · Procedural. Name which type is at stake. Demonstrate you understand the difference between them.</div>
+  </div>
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Vision / Change</div>
+    <div class="ig-fw-title">SWOT + Managing Change Model</div>
+    <div class="ig-fw-desc">Name the strategic analysis tool. Connect internal Strengths/Weaknesses to external Opportunities/Threats. Tie to long-term organizational direction.</div>
+  </div>
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Goals / Motivation</div>
+    <div class="ig-fw-title">HARD + SMART Goals</div>
+    <div class="ig-fw-desc">SMART for structure. HARD (Heartfelt · Animated · Required · Difficult) for motivation. Name both. Use them differently for different performance situations.</div>
+  </div>
+  <div class="ig-fw-card">
+    <div class="ig-fw-label">Budget / Resources</div>
+    <div class="ig-fw-title">Financial Ethics + Stewardship</div>
+    <div class="ig-fw-desc">Frame resource decisions in mission fidelity and patient outcome impact. Connect financial decisions to clinical and operational performance metrics.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Run L·E·A·D Right Now</span>
+  <p>A paramedic on your crew has received two patient complaints in thirty days. Both involve communication — patients felt they weren't informed about what was happening during transport. Before answering: Label the bucket. Identify what to Engage. Name the framework to Apply. Plan your Delivery close. Then speak your answer out loud. Time yourself. Target 90–120 seconds.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">L·E·A·D — Unchanged</span>
+  <div class="sbar-card accent-gold"><strong>L — Label</strong>Bucket + primary EMS framework. Before word one. Ten seconds.</div>
+  <div class="sbar-card accent-gold"><strong>E — Engage</strong>Gather facts. Don't rush to action. Level determines what you engage.</div>
+  <div class="sbar-card accent-gold"><strong>A — Apply</strong>Name the framework. The 4/5 separator. Say it explicitly.</div>
+  <div class="sbar-card accent-gold"><strong>D — Deliver</strong>Close with leadership principle. Connect to patient outcomes.</div>
+  <span class="sbar-label">EMS Framework Map</span>
+  <div class="sbar-card accent-ems"><strong>Personnel/Clinical</strong>Just Culture → PDCA</div>
+  <div class="sbar-card accent-ems"><strong>Quality/Outcomes</strong>Prospective / Concurrent / Retrospective QM</div>
+  <div class="sbar-card accent-ems"><strong>Conflict/Fairness</strong>Four Types of Justice</div>
+  <div class="sbar-card accent-ems"><strong>Vision/Change</strong>SWOT + Managing Change</div>
+  <div class="sbar-card accent-ems"><strong>Goals/Motivation</strong>HARD + SMART Goals</div>
+  <div class="sbar-card accent-ems"><strong>Budget/Resources</strong>Financial Ethics + Stewardship</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Confidence Spectrum</button>
+  <div class="lnb-info"><div class="lnb-name">L·E·A·D in the EMS Context</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The Seven Pillars →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — SEVEN PILLARS ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 5 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">The Seven Pillars —<br><em>Your Curriculum Map</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 12 min</span><span class="lh-meta-item">📘 Architecture</span><span class="lh-meta-item">NEMSMA Framework</span></div>
+</div>
+
+<p>The NEMSMA Seven Pillars of National EMS Officer Competencies are the architecture of this entire track. Every chapter, every lesson, every framework maps to one of these seven pillars. Understanding the map before you go deeper is not academic orientation — it is strategic curriculum awareness that helps you prioritize where to invest your preparation time.</p>
+
+<p>The seven pillars divide into two categories. NEMSMA calls them Core Leadership Knowledge and Operational Tasks and Skills. In practice: the content you already know from general leadership experience, and the content that is uniquely EMS.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA SEVEN PILLARS — YOUR CURRICULUM SPINE</span>
+    <div class="ig-title">All Seven Pillars — Your Complete Learning Map</div>
+    <div class="ig-sub">Blue = Core Leadership Knowledge · Green = Operational Tasks &amp; Skills · Gold = Both</div>
+  </div>
+  <div style="padding:0.25rem 0.5rem;">
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">1</div>
+      <div><div class="ig-pillar-name">Prerequisites</div><div class="ig-pillar-sub">Clinical certification, academic credentials, and operational experience at each level. Entry criteria — context for everything else.</div></div>
+      <div class="ig-pillar-type entry">Entry Criteria</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">2</div>
+      <div><div class="ig-pillar-name">Self Attributes</div><div class="ig-pillar-sub">Work Habits · Work Attitudes · Stress Management · Self-Insight · Learning. The internal architecture of a leader. Highest crossover with T·C·H·O·E·D·S values.</div></div>
+      <div class="ig-pillar-type core">Core Leadership</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">3</div>
+      <div><div class="ig-pillar-name">Leading Others</div><div class="ig-pillar-sub">Communications · Interpersonal Awareness · Motivating Others · Developing Others · Influencing · Human Resources. Maps directly to the 13 Question Buckets.</div></div>
+      <div class="ig-pillar-type core">Core Leadership</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">4</div>
+      <div><div class="ig-pillar-name">Task Management</div><div class="ig-pillar-sub">Executing Tasks · Solving Problems · Managing Resources · Enhancing Performance · Emergency Service Delivery · Administration · Logistics. Heavy EMS operational content — ICS roles, budget, fleet, supply chain.</div></div>
+      <div class="ig-pillar-type both">Both</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">5</div>
+      <div><div class="ig-pillar-name">Innovation</div><div class="ig-pillar-sub">Creativity · Enterprising · Integrating Perspectives · Forecasting · Managing Change. SWOT analysis, change management spectrum, the well-rounded EMS leader.</div></div>
+      <div class="ig-pillar-type core">Core Leadership</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">6</div>
+      <div><div class="ig-pillar-name">Social Responsibility</div><div class="ig-pillar-sub">Civic Responsibility · Social Knowledge · Ethical Processes · Leading Ethically · Integrity · Health &amp; Safety · Community Relations. Just Culture, Four Types of Justice, Servant Leadership.</div></div>
+      <div class="ig-pillar-type both">Both</div>
+    </div>
+    <div class="ig-pillar-row">
+      <div class="ig-pillar-num">7</div>
+      <div><div class="ig-pillar-name">Clinical Performance</div><div class="ig-pillar-sub">Quality and Performance Management · Education and Learning Systems. The most EMS-specific content in the framework. QA/QI/CQI, HIPAA, Medical Director relationship, PCR quality, adult learning principles. No fire track parallel exists.</div></div>
+      <div class="ig-pillar-type ops">EMS Operational</div>
+    </div>
+  </div>
+  <div class="ig-callout">Pillars 2, 3, and 5 are Core Leadership Knowledge — if you've completed fire track content, these will feel like reinforcement with new EMS scenarios. Pillars 4, 6, and 7 contain significant EMS-specific operational content. Pillar 7 is entirely new — no fire track equivalent exists.</div>
+</div>
+
+<h2>The T-K-S System — How NEMSMA Defines Competency</h2>
+<p>Throughout the operational pillars, competencies are tagged with three markers. Understanding what each means helps you prepare at the right depth.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">T — Task</div>
+    <div class="fw-card-title">What You Will Do</div>
+    <div class="fw-card-desc">The job performance requirement. A specific behavioral outcome. Assessors probe Task with scenario-based questions: "What would you do when..." Action-oriented and observable.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">K — Knowledge</div>
+    <div class="fw-card-title">What You Must Know</div>
+    <div class="fw-card-desc">The cognitive foundation. Employment law, clinical protocols, budget principles, ICS structure. Assessors probe Knowledge with "Tell me about..." or "Walk me through how..."</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">S — Skill</div>
+    <div class="fw-card-title">How You Demonstrate It</div>
+    <div class="fw-card-desc">Applied ability to execute task using knowledge. Communication, analytical, interpersonal skill. Assessors probe Skill by observing <em>how</em> you answer. This is where L·E·A·D lives.</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">The Practical Implication</span>
+  <p>Knowing something for a multiple-choice question is K-level performance. Applying it correctly in a scenario is T-level. Doing it in a way that demonstrates your thinking process, your framework application, and your leadership values simultaneously — in real time, under pressure — is S-level performance. Assessment centers score at the S level. That is what TPS develops.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">The Seven Pillars</span>
+  <div class="sbar-card"><strong>1 — Prerequisites</strong>Entry criteria. Not a lesson track.</div>
+  <div class="sbar-card accent-ems"><strong>2 — Self Attributes</strong>Core Leadership. T·C·H·O·E·D·S crossover.</div>
+  <div class="sbar-card accent-ems"><strong>3 — Leading Others</strong>Core Leadership. 13 Buckets map here.</div>
+  <div class="sbar-card accent-gold"><strong>4 — Task Management</strong>Both. ICS, budget, logistics, fleet.</div>
+  <div class="sbar-card accent-ems"><strong>5 — Innovation</strong>Core Leadership. SWOT + change.</div>
+  <div class="sbar-card accent-gold"><strong>6 — Social Responsibility</strong>Both. Just Culture + Four Types of Justice.</div>
+  <div class="sbar-card accent-green"><strong>7 — Clinical Performance</strong>EMS Operational only. QA/QI, HIPAA, Medical Director. No fire parallel.</div>
+  <span class="sbar-label">T-K-S System</span>
+  <div class="sbar-card"><strong>T = Task</strong>What you do — scenario-based.</div>
+  <div class="sbar-card"><strong>K = Knowledge</strong>What you know — content-based.</div>
+  <div class="sbar-card"><strong>S = Skill</strong>How you demonstrate. Where L·E·A·D lives. Where you're scored.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← L·E·A·D in EMS</button>
+  <div class="lnb-info"><div class="lnb-name">The Seven Pillars — Your Curriculum Map</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Your First Assignment →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — FIRST ASSIGNMENT ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 1 · Lesson 6 of 6</div>
+  <div class="lh-track">EMS Officer Track</div>
+  <h1 class="lh-title">Your First<br><em>EMS Assignment</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 10 min</span><span class="lh-meta-item">📘 Action</span></div>
+</div>
+
+<p>Before you move to Chapter 2, complete these five things. They are not optional. They establish the conditions that make everything that follows develop you rather than just inform you.</p>
+
+<h2>Assignment 1 — Identify Your Level and Target</h2>
+<p>Write down two things: your current level (Supervising, Managing, or Executive) and the specific promotion you are preparing for. Everything in this curriculum is keyed to a target level. Without a clear target, you are reading — not preparing.</p>
+
+<h2>Assignment 2 — Write Down Your Assessment Date</h2>
+<p>If you have a confirmed date, write it and put it somewhere visible every day. If you do not, write the earliest possible date you could test. The preparation window is real. The count is running whether you track it or not.</p>
+
+<h2>Assignment 3 — Place Yourself on the Confidence Spectrum</h2>
+<p>Think about your last high-stakes leadership conversation — a difficult crew interaction, a challenging patient family situation, a personnel issue you had to address. Where did your response land? Write "L" for Limited, "C" for Confident, or "O" for Overconfident. Be honest. If you don't know, that is also useful data — it means you haven't been watching yourself with this lens. You will be now.</p>
+
+<h2>Assignment 4 — Record Your Baseline EMS Answer</h2>
+<p>Set a timer for 90 seconds. Answer this question out loud, on camera or audio:</p>
+<p><em>"Describe your philosophy for managing crew performance when a clinical issue has patient safety implications."</em></p>
+<p>Do not prepare. Do not think first. Just answer from wherever you are right now. Save the recording. You will return to it at the end of this chapter sequence. What you hear will tell you more than any reading can about where you are starting from.</p>
+
+<h2>Assignment 5 — Identify Your Weakest Pillar</h2>
+<p>Review the seven pillars from Lesson 5. Which one makes you most uncomfortable to answer in front of assessors? For most Supervising Officers it is Task Management or Clinical Performance. For Managing Officers it is often Innovation or Executive-level Social Responsibility. For Executive candidates it is frequently the deep operational detail of Pillar 7. Write it down. That pillar gets extra attention as you move through the curriculum.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 1 Complete</span>
+  <p>You now understand the structure of EMS leadership, how assessors use the Confidence Spectrum to score every response, how L·E·A·D applies in the EMS context, and what the seven pillars contain. Chapter 2 develops the Self Attributes track — mapping T·C·H·O·E·D·S directly to NEMSMA Pillar 2 competencies with new framework depth for EMS leaders.</p>
+</div>
+
+<!-- LEGAL DISCLAIMER — REQUIRED ON EVERY CHAPTER'S FINAL LESSON -->
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, billing regulations, and labor laws vary by state, jurisdiction, and agency. Always consult your agency's policies, medical director, legal counsel, and applicable state and federal regulations before making operational decisions. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Your Five Assignments</span>
+  <div class="sbar-card"><strong>1</strong>Identify your level and specific target promotion</div>
+  <div class="sbar-card"><strong>2</strong>Write down your assessment date — put it somewhere visible</div>
+  <div class="sbar-card"><strong>3</strong>Place yourself on the Confidence Spectrum — L, C, or O</div>
+  <div class="sbar-card"><strong>4</strong>Record your 90-second baseline answer — save it</div>
+  <div class="sbar-card"><strong>5</strong>Identify your weakest pillar from the seven</div>
+  <span class="sbar-label">Next Up</span>
+  <div class="sbar-card accent-ems"><strong>EMS Chapter 2</strong>Self Attributes — T·C·H·O·E·D·S mapped to NEMSMA Pillar 2</div>
+  <span class="sbar-label">New Frameworks Coming</span>
+  <div class="sbar-card"><strong>PDCA</strong>Plan · Do · Check · Act</div>
+  <div class="sbar-card"><strong>Just Culture</strong>Accountability without blame</div>
+  <div class="sbar-card"><strong>Four Types of Justice</strong>Distributive · Interpersonal · Informational · Procedural</div>
+  <div class="sbar-card"><strong>SWOT for EMS</strong>Strategic forecasting at Managing and Executive levels</div>
+  <div class="sbar-card"><strong>HARD Goals</strong>Heartfelt · Animated · Required · Difficult</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Seven Pillars</button>
+  <div class="lnb-info"><div class="lnb-name">Your First EMS Assignment</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 1 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur = 0;
+const ls = document.querySelectorAll('.lesson-view');
+const ps = document.querySelectorAll('.nav-pill');
+function showLesson(i) {
+  ls.forEach(l => l.classList.remove('active'));
+  ps.forEach(p => p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur = i;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('prog').style.width = '0%';
+}
+function nextLesson() { if (cur < ls.length - 1) showLesson(cur + 1); }
+function prevLesson() { if (cur > 0) showLesson(cur - 1); }
+window.addEventListener('scroll', () => {
+  const s = document.documentElement.scrollTop;
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  if (h > 0) document.getElementById('prog').style.width = Math.min(100, (s / h * 100)) + '%';
+});
+document.addEventListener('DOMContentLoaded', () => showLesson(0));
+</script>
+</body>
+</html>

@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 8 — Budget Development &amp; Financial Leadership | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Budget bar chart */
+.budget-bars{padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:10px;}
+.budget-bar-row{display:grid;grid-template-columns:160px 1fr 56px;gap:0.75rem;align-items:center;}
+.budget-bar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--on-dark-2);text-align:right;line-height:1.3;}
+.budget-bar-track{background:rgba(255,255,255,0.06);border-radius:3px;height:22px;position:relative;overflow:hidden;}
+.budget-bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1px;color:var(--navy-deep);font-weight:700;}
+.budget-bar-pct{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--gold);text-align:right;}
+/* Revenue sources */
+.revenue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.revenue-cell{background:var(--navy-deep);padding:1.1rem;text-align:center;}
+.revenue-pct{font-family:'EB Garamond',serif;font-size:2.4rem;font-weight:800;margin-bottom:4px;}
+.revenue-source{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.revenue-desc{font-size:0.85rem;color:var(--on-dark-2);line-height:1.5;}
+/* Cost-per-call */
+.cpc-formula{padding:1.4rem;display:flex;flex-direction:column;gap:4px;}
+.cpc-row{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;padding:0.75rem;border-bottom:1px solid rgba(201,168,76,0.08);}
+.cpc-row:last-child{border-bottom:none;}
+.cpc-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);}
+.cpc-op{font-family:'EB Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:800;text-align:center;}
+.cpc-value{font-size:0.9rem;color:var(--on-dark-2);}
+/* Budget defense */
+.defense-grid{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.defense-row{display:grid;grid-template-columns:80px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.defense-num{padding:1rem;display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:2rem;font-weight:800;color:var(--gold);}
+.defense-content{background:var(--navy-deep);padding:1rem 1.25rem;}
+.defense-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:5px;}
+.defense-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.defense-example{font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.fw-grid,.fw-grid-3,.revenue-grid{grid-template-columns:1fr;}.defense-row{grid-template-columns:1fr;}.budget-bar-row{grid-template-columns:100px 1fr 44px;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Budget Foundations</button>
+    <button class="nav-pill" onclick="showLesson(1)">Operating Budget</button>
+    <button class="nav-pill" onclick="showLesson(2)">Capital Planning</button>
+    <button class="nav-pill" onclick="showLesson(3)">Revenue &amp; Reimbursement</button>
+    <button class="nav-pill" onclick="showLesson(4)">Budget Defense</button>
+    <button class="nav-pill" onclick="showLesson(5)">Financial Ethics</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 8 · NEMSMA Pillars 4 &amp; 6 · Phase 2</div>
+    <div class="mh-track-badge">◆ Managing Officer Track · Financial Leadership</div>
+    <h1 class="mh-title"><em>Budget Development</em><br>&amp; Financial Leadership</h1>
+    <p class="mh-sub">The Managing Officer who says "I don't handle the budget, that's above me" has just told every assessor in the room they are still thinking like a Supervising Officer. Budget accountability is not a senior leadership perk — it is a core Managing Officer responsibility. This chapter builds it from the ground up.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. Budget foundations — structure, cycle, and the Managing Officer's role. Building the operating budget — personnel, overtime, supplies, and the justification narrative. Capital planning — fleet replacement, life-cycle cost analysis, and the capital justification. EMS revenue and reimbursement — how EMS agencies generate revenue and the cost-per-call metric. Budget defense and advocacy — presenting to leadership and elected officials. Financial ethics and stewardship — the officer's fiduciary responsibility.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — BUDGET FOUNDATIONS ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 1 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Budget Foundations —<br><em>Structure, Cycle, and Accountability</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Task Management · Administration</span><span class="lh-meta-item">Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>The budget is not a constraint placed on the Managing Officer by the organization. It is the Managing Officer's primary tool for translating strategic priorities into operational reality. Money follows strategy — or at least, it should. The officer who understands their budget deeply enough to manage it, advocate for it, and defend it is the officer who can actually execute their strategic plan. The one who sees the budget as someone else's domain is limited to operating within whatever resources happen to arrive without ever shaping what those resources look like.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Managing Officer Budget Context</span>
+  <p class="level-key-intro">Budget accountability scales significantly across officer levels. This chapter focuses on Managing Officer content with Executive scope noted.</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Budget awareness. Knows what resources are available on their shift. Reports expenditure variances to the Managing Officer.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer ◆ Primary Level This Chapter</strong> — Budget ownership. Builds, monitors, defends, and manages the divisional operating and capital budget. Reports variances with explanation to Executive leadership.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Budget strategy. Sets organizational budget direction, approves divisional submissions, presents the organizational budget to boards and elected officials.</span>
+  </div>
+  <div class="level-key-note">A Managing Officer oral board candidate who says "budget isn't my area" is answering as a Supervising Officer. Own the budget. Know it by line item. Be ready to defend every one.</div>
+</div>
+
+<h2>Two Budget Types — Know Both</h2>
+<p>Every EMS organization maintains two distinct budget documents. Managing Officers must understand and be accountable for both — they operate on different timelines, use different approval processes, and track different categories of expenditure.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Operating Budget</div>
+    <div class="fw-card-title">Day-to-Day Expenditures — Annual Cycle</div>
+    <div class="fw-card-desc">Covers all recurring expenses required to operate the division for one fiscal year. Personnel costs (salaries, overtime, benefits, fringe), supplies and expendables, vehicle maintenance and fuel, equipment repair, contract services, training, and administrative costs. The operating budget is submitted annually, approved through the budget cycle, and monitored monthly for variance. This is the Managing Officer's primary financial accountability document.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Capital Budget</div>
+    <div class="fw-card-title">Major Investments — Multi-Year Cycle</div>
+    <div class="fw-card-desc">Covers major investments with useful lives typically exceeding one year and above a defined dollar threshold (commonly $5,000–$25,000 depending on the agency). Vehicles (ambulances, supervisor vehicles), major equipment (cardiac monitors, power stretchers), building improvements, and technology infrastructure. Capital budget requests are typically planned 3–5 years ahead on a capital improvement plan (CIP) and submitted through a separate approval process from operating.</div>
+  </div>
+</div>
+
+<h2>The Budget Cycle — Six Phases</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE EMS BUDGET CYCLE</span>
+    <div class="ig-title">Six Phases — Annual Operating Cycle</div>
+    <div class="ig-sub">Most EMS agencies operate on a fiscal year that may or may not align with the calendar year. Understanding where your organization is in the cycle determines what budget activities are currently relevant — and what the Managing Officer should be working on now.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">01</div>
+      <div>
+        <div class="ig-acro-word">Environmental Review — What Changed?</div>
+        <div class="ig-acro-desc">6–8 months before fiscal year start. Review the previous year's actual expenditures against budget. Identify variances and their causes. Review SWOT and PESTLE for factors affecting next year's cost drivers — workforce shortage increasing overtime? Fuel costs rising? New program requiring staffing additions? This review is the foundation for the submission. Submitting a budget without understanding why last year's actuals differed from projections guarantees the same variances repeat.</div>
+        <div class="ig-acro-ems">Managing Officer action: Pull actuals by line item. Compare to prior year budget. Write a variance explanation for any line that exceeded budget by more than 5%. This documentation becomes your submission narrative.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">02</div>
+      <div>
+        <div class="ig-acro-word">Budget Development — Build and Justify</div>
+        <div class="ig-acro-desc">4–6 months before fiscal year start. Build the next year's budget submission using prior year actuals as the baseline, adjusted for known changes: cost-of-living adjustments, approved new positions, known contract renewals, planned equipment needs. Every increase over prior year requires a written justification. The justification is not optional — it is what turns a budget request into a budget approval.</div>
+        <div class="ig-acro-ems">The justification standard: connect every dollar request to an operational need and a patient outcome impact. "Personnel costs increase by $142,000 due to contract COLA of 3.5% and two new full-time paramedic positions required to meet response time compliance in the Northwest quadrant based on 18-month call volume trend."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">03</div>
+      <div>
+        <div class="ig-acro-word">Submission and Review — Internal Negotiation</div>
+        <div class="ig-acro-desc">3–4 months before fiscal year start. The division budget is submitted to Executive leadership (or the Finance department in governmental agencies). Expect questions, requests for justification, and potential cuts. The Managing Officer who is well-prepared for this review — who has the data, the rationale, and the mission connection — recovers far more of their requested budget than the one who submits numbers without narrative.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">04</div>
+      <div>
+        <div class="ig-acro-word">Approval — Governing Authority Action</div>
+        <div class="ig-acro-desc">In governmental agencies, budget approval may require city council, county commission, or board action. The Executive Officer presents the budget; the Managing Officer provides the divisional data. Some Managing Officers present directly to governing bodies. This is the Bucket 5 — Community &amp; Public competency in its financial form: translating clinical and operational needs into language that resonates with elected officials and board members who are not EMS experts.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">05</div>
+      <div>
+        <div class="ig-acro-word">Execution and Monthly Monitoring — Track Actuals</div>
+        <div class="ig-acro-desc">Throughout the fiscal year. Once the budget is approved, the Managing Officer monitors actual expenditures against budget on a monthly basis. Variance analysis — line items above or below projection — is the primary financial management tool. Early identification of unfavorable variances (spending ahead of pace) allows corrective action before a budget overrun. Early identification of favorable variances (spending below pace) may create opportunities for reallocation.</div>
+        <div class="ig-acro-ems">Managing Officer monthly standard: review actuals by line item, calculate year-to-date variance percentage, identify any line trending to overrun, document the cause, and report to Executive leadership with a corrective plan where overrun is projected.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">06</div>
+      <div>
+        <div class="ig-acro-word">Year-End Close and Analysis — Feed the Next Cycle</div>
+        <div class="ig-acro-desc">At fiscal year end. Close out the year, document final actuals versus budget, and write the year-end variance analysis that will feed Phase 1 of the next cycle. The year-end analysis is also the data source for the next budget development process — it answers the question "what did we actually spend, and why did it differ from what we predicted?" A Managing Officer who completes this analysis with rigor builds a progressively more accurate budget each year.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>The Typical EMS Budget Breakdown</h2>
+<p>Understanding how EMS dollars are typically distributed across major cost categories is essential for Managing Officers — both to set realistic budget expectations and to know where the largest levers are for financial management.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ TYPICAL EMS OPERATING BUDGET — COST DISTRIBUTION</span>
+    <div class="ig-title">Where EMS Dollars Go — Approximate Industry Benchmarks</div>
+    <div class="ig-sub">These percentages reflect typical EMS system patterns and vary by agency type, geography, and service model. Personnel consistently represents the dominant cost driver in all EMS systems.</div>
+  </div>
+  <div class="budget-bars">
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Personnel — Salaries &amp; Wages</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:60%;background:linear-gradient(90deg,var(--ems2),var(--ems));color:var(--on-dark-1);">Salaries &amp; Wages</div></div>
+      <div class="budget-bar-pct">60%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Personnel — Benefits &amp; Fringe</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:20%;background:linear-gradient(90deg,#1A3A5C,var(--ems));color:var(--on-dark-1);">Benefits</div></div>
+      <div class="budget-bar-pct">20%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Vehicle Operations</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:7%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));color:#071828;">Vehicle</div></div>
+      <div class="budget-bar-pct">7%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Supplies &amp; Expendables</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:5%;background:linear-gradient(90deg,#1A5C3A,#226644);color:var(--on-dark-1);">Supplies</div></div>
+      <div class="budget-bar-pct">5%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Equipment Maintenance</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:3%;background:rgba(201,168,76,0.4);color:#071828;">Equip</div></div>
+      <div class="budget-bar-pct">3%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Training &amp; Development</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:2%;background:rgba(208,160,224,0.6);color:#071828;">Train</div></div>
+      <div class="budget-bar-pct">2%</div>
+    </div>
+    <div class="budget-bar-row">
+      <div class="budget-bar-label">Administrative &amp; Other</div>
+      <div class="budget-bar-track"><div class="budget-bar-fill" style="width:3%;background:rgba(100,120,140,0.5);color:var(--on-dark-1);">Admin</div></div>
+      <div class="budget-bar-pct">3%</div>
+    </div>
+  </div>
+  <div class="ig-callout">The 80% rule: Personnel (salaries + benefits) represents approximately 80% of most EMS operating budgets. This means personnel decisions are budget decisions. Hiring, overtime management, benefits negotiations, and workforce retention are not just HR functions — they are the primary drivers of budget performance. A Managing Officer who separates personnel management from financial management is working with incomplete information on both.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Two Budget Types</span>
+  <div class="sbar-card accent-gold"><strong>Operating Budget</strong>Annual · recurring expenses · personnel + supplies + vehicle + maintenance. The Managing Officer's primary financial document.</div>
+  <div class="sbar-card accent-ems"><strong>Capital Budget</strong>Multi-year · major investments · vehicles + major equipment + facilities. Separate approval process. 3–5 year CIP planning.</div>
+  <span class="sbar-label">Budget Cycle — 6 Phases</span>
+  <div class="sbar-card"><strong>01 Environmental Review</strong>Pull actuals. Write variance explanations. 6–8 months out.</div>
+  <div class="sbar-card"><strong>02 Development</strong>Prior year actuals + adjustments + written justification for every increase.</div>
+  <div class="sbar-card"><strong>03 Submission + Review</strong>Internal negotiation. Data + rationale + mission connection = recovered budget.</div>
+  <div class="sbar-card"><strong>04 Approval</strong>Governing authority. Translate clinical needs to community value.</div>
+  <div class="sbar-card accent-gold"><strong>05 Execution + Monitoring</strong>Monthly actuals vs. budget. Variance analysis. Corrective plan where overrun is projected.</div>
+  <div class="sbar-card"><strong>06 Year-End Close</strong>Final actuals. Variance analysis. Feeds the next cycle.</div>
+  <span class="sbar-label">The 80% Rule</span>
+  <div class="sbar-card accent-red"><strong>Personnel = 80%</strong>Salaries + benefits dominate every EMS budget. Personnel decisions ARE budget decisions. Manage them together.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 7</button>
+  <div class="lnb-info"><div class="lnb-name">Budget Foundations</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Operating Budget →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — OPERATING BUDGET ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 2 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Building the Operating Budget —<br><em>Personnel, Overtime, and Justification</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Task Management · Administration</span><span class="lh-meta-item">Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>Building an operating budget is not data entry — it is strategic analysis expressed in financial terms. Every line item is a claim about what the division needs to fulfill its mission. Every justification is an argument for why that claim is valid. The Managing Officer who builds their budget with this framing writes documents that survive budget reviews. The one who fills in last year's numbers and adds a percentage does not.</p>
+
+<h2>Personnel — The Budget-Building Priority</h2>
+<p>Because personnel represents 80% of the operating budget, building the personnel section accurately and defensibly is the single highest-leverage budget development activity. It requires three inputs: the staffing plan, the compensation schedule, and the benefits and fringe rate.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PERSONNEL BUDGET DEVELOPMENT — FOUR COMPONENTS</span>
+    <div class="ig-title">Building the Largest Budget Line Accurately</div>
+    <div class="ig-sub">Personnel budget errors compound across a full fiscal year. An underestimated overtime projection can produce a six-figure overrun. Each component requires specific data — not estimates carried forward from prior years without analysis.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Component 1 — Base Salaries</div>
+      <div class="ig-fw-title">Staffing Plan × Compensation Schedule</div>
+      <div class="ig-fw-desc">Total base salary cost = number of FTE positions × annual salary per position by role. Use the current compensation schedule — not last year's rates if a contract COLA or step increase is pending. Account for any approved new positions in the plan year. Account for any vacancies being filled — budget at the filled rate, not the current vacant rate, if you plan to fill them.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Component 2 — Overtime</div>
+      <div class="ig-fw-title">The Most Variable and Most Under-Budgeted Line</div>
+      <div class="ig-fw-desc">Overtime is the budget line that most commonly blows up an EMS operating budget — because it is driven by factors that are genuinely difficult to predict: call volume spikes, FMLA leave patterns, injury leave, mandatory overtime from vacancies, and special events. Build overtime from actuals (last 3 years average is the baseline) adjusted for known changes. Vacancy reduction reduces overtime. New staff hiring also temporarily increases overtime during training periods.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Component 3 — Benefits and Fringe Rate</div>
+      <div class="ig-fw-title">The Hidden Personnel Multiplier</div>
+      <div class="ig-fw-desc">Benefits and fringe costs (health insurance, retirement contributions, FICA, workers' compensation, unemployment) typically add 25–45% to base salary costs — making total compensation significantly higher than base salary alone. Every new position request must include the fully-loaded cost (base + benefits + fringe), not just the salary. Presenting only the salary when requesting new positions and then experiencing a benefits overrun is a credibility failure with Finance.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Component 4 — Training and Overtime for Training</div>
+      <div class="ig-fw-title">The Budget Line Most Commonly Cut — and Why That Matters</div>
+      <div class="ig-fw-desc">Training costs include direct training expenses (course fees, materials, simulation lab time) and the overtime generated when providers attend training off-shift. This line is frequently the first cut in budget reductions because it does not create an immediate operational gap. Document the patient safety and compliance cost of inadequate training investment. Budget cuts to training become QA failures 12 months later.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The overtime projection is the single most politically sensitive line in an EMS operating budget. Finance departments and governing boards associate high overtime with poor staffing management rather than with the systemic call volume and workforce shortage drivers that actually cause it. The Managing Officer who presents an overtime projection without data — without the 3-year actuals trend, the vacancy impact analysis, and the call volume correlation — will lose that line item in the budget review every time. Show the data. Own the number. Explain what drives it.</div>
+</div>
+
+<h2>Non-Personnel Lines — Building with Data</h2>
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Supplies and Expendables</div>
+    <div class="fw-card-title">Volume-Driven + Inflation-Adjusted</div>
+    <div class="fw-card-desc">Supply costs are driven by call volume and unit price inflation. Build from actuals using cost-per-call for major supply categories (IV supplies, oxygen, airway equipment, medications, cardiac monitoring supplies). Apply projected inflation and call volume change. If a new program (MIH-CP, alternative destination) will change supply utilization, model it separately and note it in the justification.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Vehicle Operations</div>
+    <div class="fw-card-title">Fuel + Maintenance + Mileage-Based Projections</div>
+    <div class="fw-card-desc">Fuel costs: fleet size × average annual mileage per unit × expected fuel cost per gallon (use current contracted rate or market estimate with a contingency). Maintenance: actuals by unit adjusted for fleet age. Older fleets cost more to maintain — this is where capital budget investment in fleet replacement connects directly to operating budget savings over time.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Contract Services</div>
+    <div class="fw-card-title">Known Contracts + Renewal Rates</div>
+    <div class="fw-card-desc">ePCR / CAD licensing fees, medical waste disposal contracts, communication system maintenance, billing service contracts, uniforms contracts. These are largely predictable from existing contracts. Review renewal dates — contracts expiring in the budget year may require rebidding, which can produce rate changes. Document each contract line with the contract renewal date and the basis for the projected cost.</div>
+  </div>
+</div>
+
+<h2>The Justification Narrative — What Makes a Budget Request Survive</h2>
+<p>The justification narrative is the written explanation that accompanies every budget line that represents a change from prior year. It is the most important document the Managing Officer produces in the budget process — and the one most commonly written as an afterthought.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Justification Standard — Three Elements Every Narrative Must Include</span>
+  <p style="margin-bottom:0.65rem;"><strong style="color:var(--gold);">1. What it is and why it costs what it costs:</strong> <span style="color:var(--on-dark-2);">"Personnel overtime is projected at $284,000 for the plan year, based on a three-year actual average of $261,000 adjusted for a projected 8% call volume increase in Q2 and Q3 based on demographic growth data and the opening of the new residential development in the Northeast quadrant."</span></p>
+  <p style="margin-bottom:0.65rem;"><strong style="color:var(--gold);">2. What happens if it is not funded:</strong> <span style="color:var(--on-dark-2);">"Reducing overtime funding below this level will require mandatory minimum staffing reductions on high-volume shifts, producing response time compliance failures in the Northeast quadrant that currently runs at 91% compliance against a 90% contract requirement."</span></p>
+  <p style="margin-bottom:0;"><strong style="color:var(--gold);">3. The alternative if the request is denied:</strong> <span style="color:var(--on-dark-2);">"If the overtime request cannot be fully funded, the minimum viable amount to maintain contract compliance is $248,000. Below that threshold I recommend an emergency staffing review with Executive leadership before the budget is finalized."</span></p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Personnel Budget — 4 Components</span>
+  <div class="sbar-card accent-gold"><strong>Base Salaries</strong>FTE × compensation schedule. Use current rates with pending COLAs. Budget vacancies at filled rate if being filled.</div>
+  <div class="sbar-card accent-red"><strong>Overtime</strong>Most variable + most under-budgeted. 3-year actual average baseline. Adjust for vacancy, call volume, FMLA patterns. Show the data.</div>
+  <div class="sbar-card"><strong>Benefits and Fringe</strong>25–45% multiplier on base salary. Always present fully-loaded cost for new positions. Never salary-only.</div>
+  <div class="sbar-card accent-ems"><strong>Training Overtime</strong>First cut, last protected. Document the QA cost of not funding it. Budget cuts become QA failures 12 months later.</div>
+  <span class="sbar-label">Non-Personnel Key Points</span>
+  <div class="sbar-card"><strong>Supplies</strong>Cost-per-call × projected volume + inflation. New programs modeled separately.</div>
+  <div class="sbar-card"><strong>Vehicle Operations</strong>Fuel: fleet × mileage × projected price. Maintenance: actuals + fleet age factor.</div>
+  <div class="sbar-card"><strong>Contracts</strong>Review renewal dates. Expiring contracts = potential rate change. Document each line.</div>
+  <span class="sbar-label">Justification Standard</span>
+  <div class="sbar-card accent-gold"><strong>3 Elements</strong>What it is and why it costs what it costs → What happens if unfunded → The alternative if denied. All three. Every increase.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Budget Foundations</button>
+  <div class="lnb-info"><div class="lnb-name">Building the Operating Budget</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Capital Planning →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — CAPITAL PLANNING ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 3 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Capital Planning —<br><em>Fleet, Equipment, and Life-Cycle Cost</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Task Management · Logistics</span><span class="lh-meta-item">Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>Capital planning is where the Managing Officer's budget work extends beyond the current fiscal year. Ambulances have 5–10 year useful lives. Cardiac monitors last 7–10 years. Power cots and loading systems last 5–8 years. The Managing Officer who is only managing this year's operating budget while the fleet ages toward failure is building a future capital crisis. The one who maintains a 5-year Capital Improvement Plan — and builds it into the organizational budget cycle — prevents capital emergencies by planning for them years in advance.</p>
+
+<h2>The Capital Improvement Plan — Structure and Purpose</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE 5-YEAR CAPITAL IMPROVEMENT PLAN — EMS</span>
+    <div class="ig-title">Planning Capital Investments Before They Become Emergencies</div>
+    <div class="ig-sub">The CIP is a rolling 5-year projection of major capital investments. It is updated annually. The first year becomes the capital budget submission. Years 2–5 are early warning and planning documentation.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">CIP Component 1 — Fleet Inventory and Age Analysis</div>
+      <div class="ig-map-title">Know What You Have and When It Will Fail</div>
+      <div class="ig-map-desc">Every vehicle in the fleet is tracked by: unit number, year of manufacture, mileage as of plan date, maintenance cost history over prior 3 years, and projected replacement year based on agency replacement standards. Most EMS agencies replace ambulances at 150,000–200,000 miles or 8–12 years, whichever comes first. The fleet age analysis reveals which vehicles are approaching replacement — and when the replacement costs will hit.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">CIP Component 2 — Major Equipment Inventory</div>
+      <div class="ig-map-title">Monitor, Cot, Radio, Defibrillator Cycles</div>
+      <div class="ig-map-desc">Cardiac monitors, power stretchers, power load systems, AEDs, radios, and other major equipment are tracked similarly to vehicles — by acquisition date, expected service life, and projected replacement year. Technology refresh cycles for monitors and radios are driven as much by software obsolescence and manufacturer end-of-support as by physical wear. Map the replacement dates across the fleet to identify years with heavy capital load.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">CIP Component 3 — Cost Projections with Inflation</div>
+      <div class="ig-map-title">Tomorrow's Price, Not Today's</div>
+      <div class="ig-map-desc">Capital costs are projected at the year of purchase, not today's price. Ambulance remount costs historically inflate at 3–5% annually. Apply manufacturer cost trend data where available. An ambulance remount priced at $180,000 today will cost approximately $200,000 in three years at 3.5% annual inflation. Submitting a capital request at today's price for a vehicle that will be purchased in year 3 is a budgeting error.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">CIP Component 4 — Replacement vs. Repair Decision Framework</div>
+      <div class="ig-map-title">The Life-Cycle Cost Analysis</div>
+      <div class="ig-map-desc">When a vehicle or major piece of equipment requires significant repair, the Managing Officer must perform a life-cycle cost analysis: does the total projected remaining maintenance cost over the vehicle's remaining useful life exceed the cost of replacement? The general rule: when a single repair event costs more than 25–30% of the replacement value of the asset, replacement is typically more cost-effective than repair. Document this analysis before approving major repair expenditures.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common capital planning failure in EMS is deferred replacement — allowing vehicles and equipment to age past their optimal replacement window because capital funds are unavailable or were deferred in prior budget cycles. Each year of deferral reduces the asset's residual value, increases maintenance costs in the operating budget, and raises the probability of operational failure. The Managing Officer who allows the fleet to age past replacement standards while failing to advocate for capital investment in the CIP process is creating a future operational crisis.</div>
+</div>
+
+<h2>Writing a Capital Justification That Gets Approved</h2>
+<p>Capital requests compete with every other capital need in the organization and with every other agency's capital requests in governmental budget processes. A capital justification that reads as a wish list gets cut. One that demonstrates operational necessity, financial analysis, and mission impact gets funded.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">The Operational Case</div>
+    <div class="fw-card-title">Why This Purchase Is Necessary</div>
+    <div class="fw-card-desc">Current age and mileage. Maintenance cost history for the last 3 years. Number of out-of-service events in the last 12 months. Protocol compliance limitations created by current equipment. Response time impacts from reliability failures. "Unit 7 has been out of service 14 times in the last 12 months for a total of 67 unit-days, creating coverage gaps that required SSM repostings and one mutual aid activation."</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">The Financial Case</div>
+    <div class="fw-card-title">Why Replacement Is More Cost-Effective Than Continuation</div>
+    <div class="fw-card-desc">Total maintenance cost over the last 3 years vs. projected annual maintenance for a replaced unit. Life-cycle cost comparison: remaining useful life maintenance estimate vs. new unit cost minus residual value. "Over the last 3 years, Unit 7 has accumulated $38,400 in maintenance costs. At the current maintenance trajectory, the next 3 years will cost an estimated $52,000. A replacement unit costs $185,000 but has projected maintenance of $8,000 over its first 3 years."</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">Fleet Replacement vs. Remount vs. New Build</span>
+  <p>Managing Officers have three options when a vehicle reaches end of useful life. A <strong>remount</strong> takes the existing module (the patient care compartment) and mounts it on a new chassis — typically 40–60% of the cost of a new build when the module is still serviceable. A <strong>new build</strong> builds an entirely new vehicle from chassis up — the highest cost option but appropriate when the module has also exceeded its service life. A <strong>used unit</strong> from a reputable fleet can provide a lower-cost option when the capital budget is constrained, but comes with a higher maintenance risk and may carry unknown service history. The Managing Officer should understand all three options and present the cost-benefit analysis for each when making a capital request.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">The 5-Year CIP</span>
+  <div class="sbar-card accent-gold"><strong>Fleet Inventory</strong>Unit · year · mileage · maintenance history · projected replacement year. Every vehicle tracked.</div>
+  <div class="sbar-card accent-ems"><strong>Major Equipment</strong>Monitors · cots · radios · AEDs. Track acquisition date + expected service life + tech refresh cycles.</div>
+  <div class="sbar-card"><strong>Projected Costs</strong>At year of purchase — not today's price. 3–5% annual inflation on ambulance costs.</div>
+  <div class="sbar-card accent-red"><strong>Replace vs. Repair</strong>Single repair &gt;25–30% of replacement value → replacement is typically more cost-effective. Document the life-cycle analysis.</div>
+  <span class="sbar-label">Capital Justification</span>
+  <div class="sbar-card"><strong>Operational Case</strong>Age · mileage · out-of-service events · maintenance cost history · protocol limitations.</div>
+  <div class="sbar-card accent-gold"><strong>Financial Case</strong>3-year maintenance actuals vs. projected future costs vs. replacement cost - residual value. Show the math.</div>
+  <span class="sbar-label">Fleet Options</span>
+  <div class="sbar-card"><strong>Remount</strong>New chassis + existing module. 40–60% of new build cost. When module is serviceable.</div>
+  <div class="sbar-card"><strong>New Build</strong>Full replacement. Highest cost. Required when module is also beyond service life.</div>
+  <div class="sbar-card"><strong>Used Unit</strong>Lower cost · higher maintenance risk · unknown service history. Use only with full due diligence.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Operating Budget</button>
+  <div class="lnb-info"><div class="lnb-name">Capital Planning — Fleet, Equipment, and Life-Cycle Cost</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Revenue &amp; Reimbursement →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — REVENUE AND REIMBURSEMENT ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 4 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Revenue &amp; Reimbursement —<br><em>How EMS Pays for Itself</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Task Management · Financial Management</span><span class="lh-meta-item">Bucket 9 — Resource Management · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>EMS is funded through a combination of tax revenue, transport billing, and grants — in proportions that vary dramatically by agency type. Government EMS systems are primarily tax-supported but rely on transport billing for supplemental revenue. Private EMS systems live and die by billing performance. Hospital-based systems navigate a complex intersection of transport billing and hospital cost-center accounting. The Managing Officer who understands their agency's revenue model — and their role in protecting it — is managing the financial sustainability of the organization, not just the current year's expenses.</p>
+
+<h2>EMS Revenue Sources — The Three Streams</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS REVENUE SOURCES — THREE PRIMARY STREAMS</span>
+    <div class="ig-title">Where EMS Revenue Comes From</div>
+    <div class="ig-sub">Revenue mix varies significantly by agency type (government, private, hospital-based) and by state Medicaid reimbursement rates. These approximate distributions reflect typical patterns — actual distributions vary widely.</div>
+  </div>
+  <div class="revenue-grid">
+    <div class="revenue-cell" style="border-top:3px solid var(--ems2);">
+      <div class="revenue-pct" style="color:var(--ems-text);">40–60%</div>
+      <div class="revenue-source" style="color:var(--ems-text);">Tax or Subsidy Revenue</div>
+      <div class="revenue-desc">Government appropriations, fire department EMS budget subsidies, or hospital cost-center allocations. Most government EMS agencies depend on this as the primary funding source, with transport billing as supplemental. Private agencies may have little or no subsidy.</div>
+    </div>
+    <div class="revenue-cell" style="border-top:3px solid var(--gold);">
+      <div class="revenue-pct" style="color:var(--gold);">30–50%</div>
+      <div class="revenue-source" style="color:var(--gold);">Transport Billing</div>
+      <div class="revenue-desc">Medicare, Medicaid, commercial insurance, and self-pay transport billing. The most variable and operationally controllable revenue stream. Collection rate, payer mix, and billing compliance directly affect this number.</div>
+    </div>
+    <div class="revenue-cell" style="border-top:3px solid #60C080;">
+      <div class="revenue-pct" style="color:#60C080;">5–15%</div>
+      <div class="revenue-source" style="color:#60C080);">Grants and Other</div>
+      <div class="revenue-desc">Federal grants (FEMA, HRSA, ASPR), state grants, hospital partnership funding, MIH-CP program revenue, subscription/membership programs, and special event billing. The most growth-oriented revenue stream for Managing Officer-level innovation.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Transport Billing — The Managing Officer's Revenue Accountability</h2>
+<p>Transport billing is the revenue stream most directly affected by the Managing Officer's operational decisions. Billing performance depends on documentation quality (the PCR is the billing record), transport level determination accuracy (ALS1 vs. ALS2 vs. BLS transport level drives reimbursement rate), and billing compliance. Managing Officers who improve PCR documentation quality improve billing performance directly.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Medicare Transport Billing</div>
+    <div class="fw-card-title">Medical Necessity + Level of Care</div>
+    <div class="fw-card-desc">Medicare reimburses EMS transport based on two criteria: medical necessity (the patient's condition required emergency transport) and level of care provided (BLS, ALS-1, ALS-2, or specialty). The PCR must document the clinical findings that support both criteria. Medicare denials for "lack of medical necessity" are almost entirely documentation failures — the care was medically necessary but the PCR did not document why. This is a Managing Officer QI responsibility.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Medicaid Transport Billing</div>
+    <div class="fw-card-title">State Variation + Prior Authorization Complexity</div>
+    <div class="fw-card-desc">Medicaid reimbursement rates are set by each state and vary dramatically — from near-Medicare rates in some states to rates that do not cover the cost of the call in others. Some state Medicaid programs require prior authorization for non-emergency transports. Managing Officers must understand their state's Medicaid EMS reimbursement rules and ensure billing staff and providers understand the documentation requirements specific to Medicaid.</div>
+  </div>
+</div>
+
+<h2>Cost-Per-Call — The Primary EMS Financial Metric</h2>
+<p>Cost-per-call is the single most important financial metric for EMS financial management. It expresses the total operating cost of running the EMS system on a per-transport or per-incident basis, allowing comparison across time periods, across similar systems, and across different operational models.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ COST-PER-CALL — CALCULATION AND APPLICATION</span>
+    <div class="ig-title">The Primary EMS Financial Management Metric</div>
+    <div class="ig-sub">Cost-per-call is used for budget forecasting, reimbursement adequacy analysis, operational efficiency benchmarking, and capital investment justification. A Managing Officer who cannot calculate and interpret their system's cost-per-call is missing the foundational financial metric of EMS management.</div>
+  </div>
+  <div class="cpc-formula">
+    <div class="cpc-row">
+      <div class="cpc-label">Total Operating Costs for Period</div>
+      <div class="cpc-op">÷</div>
+      <div class="cpc-label">Total Incidents or Transports for Period</div>
+    </div>
+    <div class="cpc-row" style="background:rgba(201,168,76,0.06);">
+      <div class="cpc-label" style="color:var(--gold);font-weight:700;">= Cost Per Call</div>
+      <div class="cpc-op">=</div>
+      <div class="cpc-value" style="color:var(--on-dark-1);">The fully-loaded cost of each call or transport at current operational scale</div>
+    </div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Use 1 — Budget Forecasting</div>
+      <div class="ig-fw-title">Project Costs from Call Volume</div>
+      <div class="ig-fw-desc">If current cost-per-call is $850 and projected call volume next year is 12,000 calls, the projected operating cost is $10.2M. This allows revenue requirement modeling: does expected reimbursement cover $10.2M? If not, what is the funding gap that must be covered by tax revenue or grants?</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Use 2 — Reimbursement Adequacy</div>
+      <div class="ig-fw-title">Is Your Revenue Covering Your Costs?</div>
+      <div class="ig-fw-desc">Compare cost-per-call to average revenue per transport. If average Medicare reimbursement is $650 per transport and cost-per-call is $850, the subsidy required from tax revenue per Medicare transport is $200. This analysis makes visible the public subsidy embedded in EMS provision — and is the data behind budget advocacy to elected officials.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Use 3 — Operational Benchmarking</div>
+      <div class="ig-fw-title">Compare Across Time and Peers</div>
+      <div class="ig-fw-desc">Comparing your cost-per-call year-over-year reveals cost trends. Comparing to peer systems reveals relative efficiency. NAEMSP and state EMS associations publish benchmarking data. A cost-per-call significantly above peer benchmarks warrants a cost driver analysis — what is your system spending more on, and is it justified by better outcomes or higher service standards?</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Use 4 — Capital Investment Justification</div>
+      <div class="ig-fw-title">New Resources Reduce Per-Call Cost</div>
+      <div class="ig-fw-desc">Additional units reduce overtime per call. Technology investments reduce documentation time per call. Fleet replacement reduces maintenance cost per call. Connecting capital investment requests to their projected impact on cost-per-call is one of the strongest financial arguments for capital spending — it frames the investment as cost reduction rather than cost addition.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common cost-per-call error: using it only as a point-in-time calculation rather than as a trend. A cost-per-call of $875 this year is significant only in comparison to $810 last year (a concerning 8% increase), $875 two years ago (flat, which might be acceptable), or $640 at a peer agency (potentially indicating an efficiency gap). Always present cost-per-call as a trend, not a snapshot.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">3 Revenue Streams</span>
+  <div class="sbar-card accent-ems"><strong>Tax / Subsidy</strong>40–60% of most government EMS. Primary funding source. Not operationally controlled by Managing Officer.</div>
+  <div class="sbar-card accent-gold"><strong>Transport Billing</strong>30–50%. Most controllable. PCR quality + level determination accuracy + billing compliance drive this number directly.</div>
+  <div class="sbar-card accent-green"><strong>Grants and Other</strong>5–15%. Most growth-oriented. MIH-CP, hospital partnerships, federal grants, subscriptions. Managing Officer's innovation revenue lever.</div>
+  <span class="sbar-label">Transport Billing Points</span>
+  <div class="sbar-card accent-red"><strong>Medicare Denials</strong>Almost entirely documentation failures. Medical necessity was real — PCR didn't document why. QI problem = revenue problem.</div>
+  <div class="sbar-card"><strong>Medicaid</strong>State-specific rates and prior authorization rules. Know your state's requirements.</div>
+  <span class="sbar-label">Cost-Per-Call</span>
+  <div class="sbar-card accent-gold"><strong>Formula</strong>Total operating costs ÷ total incidents/transports = cost per call.</div>
+  <div class="sbar-card"><strong>4 Uses</strong>Budget forecasting · reimbursement adequacy · operational benchmarking · capital investment justification.</div>
+  <div class="sbar-card accent-red"><strong>Always Use as Trend</strong>$875/call means nothing alone. $875 vs. $810 last year = 8% increase that needs explanation.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Capital Planning</button>
+  <div class="lnb-info"><div class="lnb-name">Revenue &amp; Reimbursement</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Budget Defense →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — BUDGET DEFENSE ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 5 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Budget Defense —<br><em>Advocacy, Data, and Difficult Reductions</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Task Management · Administration</span><span class="lh-meta-item">Bucket 9 — Resource Management · Bucket 5 — Community &amp; Public</span></div>
+</div>
+
+<p>Budget defense is the oral board scenario type that most directly tests whether a Managing Officer candidate has completed the identity shift from tactical to strategic accountability. It is also the scenario where candidates most commonly make the same two mistakes: either they become defensive and emotional about cuts ("we can't possibly do this without that money"), or they passively accept cuts without analysis ("whatever works for the organization"). Neither response serves the patients the budget is designed to protect.</p>
+
+<p>The Confidence column response to a budget defense scenario is analytical, data-driven, and mission-focused. The Managing Officer who presents budget reductions with clear priority-based analysis — naming specifically what gets cut, what the operational and patient impact is, and what the thresholds are below which mission integrity is compromised — is demonstrating exactly the level of financial leadership the Managing Officer role requires.</p>
+
+<h2>The Budget Defense Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE BUDGET DEFENSE FRAMEWORK</span>
+    <div class="ig-title">Five Steps from Request to Defended Decision</div>
+    <div class="ig-sub">Budget defense is not a single conversation — it is a process. Each step builds the analytical foundation that makes the final position credible and defensible, regardless of the outcome.</div>
+  </div>
+  <div class="defense-grid">
+    <div class="defense-row">
+      <div class="defense-num">1</div>
+      <div class="defense-content">
+        <div class="defense-title">Know Your Numbers Cold Before You Enter the Room</div>
+        <div class="defense-desc">Every line item in your budget should be explainable from memory: what it is, why it costs what it costs, and what happens if it is reduced or eliminated. The Managing Officer who has to look up answers in a budget defense meeting has already signaled that they do not own their budget. Know the five largest cost drivers, the three lines that have the most variance from prior year, and the two lines that are most likely to be challenged.</div>
+        <div class="defense-example">Preparation standard: Before any budget meeting, review the top 10 lines by dollar amount and the 5 lines with the largest year-over-year variance. Be able to explain each from memory.</div>
+      </div>
+    </div>
+    <div class="defense-row">
+      <div class="defense-num">2</div>
+      <div class="defense-content">
+        <div class="defense-title">Lead with Mission, Not Money</div>
+        <div class="defense-desc">Budget requests that lead with dollar amounts invite immediate scrutiny of the number. Budget requests that lead with patient outcomes and community impact invite scrutiny of whether those outcomes are worth the cost — a far more favorable frame. "We are requesting $284,000 in overtime funding" invites "why is your overtime so high?" "To maintain the response time compliance that covers 94% of the Northeast quadrant — where we had three cardiac arrest calls last month — we need the overtime capacity that $284,000 funds" invites "what happens if those three patients don't get a timely response?"</div>
+        <div class="defense-example">The mission frame: connect every significant budget line to the patient outcome it funds. Elected officials and boards make budget decisions based on community impact, not operational necessity alone.</div>
+      </div>
+    </div>
+    <div class="defense-row">
+      <div class="defense-num">3</div>
+      <div class="defense-content">
+        <div class="defense-title">Present Alternatives, Not Just the Request</div>
+        <div class="defense-desc">When a budget request is challenged, the Managing Officer who has already analyzed the alternatives — and can present them with their operational and financial implications — demonstrates proactive leadership rather than reactive defense. "If the full request cannot be funded, there are three alternatives at different cost points. Option A reduces overtime by $42,000 but requires adjusting SSM posting in the Northwest quadrant, which projects a 4% response time compliance reduction. Option B reduces the training budget by $18,000, which defers two continuing education programs. Option C defers one capital equipment purchase from Year 1 of the CIP to Year 2."</div>
+        <div class="defense-example">The alternatives framing gives decision-makers choices rather than forcing a binary accept/reject decision. Officers who present alternatives are more likely to recover the elements of their budget that are most mission-critical.</div>
+      </div>
+    </div>
+    <div class="defense-row">
+      <div class="defense-num">4</div>
+      <div class="defense-content">
+        <div class="defense-title">Name the Threshold — Where Mission Integrity Breaks</div>
+        <div class="defense-desc">Every budget has a threshold below which mission integrity is compromised — where the operational impact of additional cuts crosses from difficult to unacceptable. The Managing Officer has a professional obligation to name that threshold explicitly and clearly. "I can manage additional reductions up to $75,000 through operational adjustments. Below that, I am not able to maintain response time compliance in the Northeast quadrant, and I want to be explicit about that so the organization can make an informed decision." This is Courage — following through with difficult information when it is right to do so.</div>
+      </div>
+    </div>
+    <div class="defense-row">
+      <div class="defense-num">5</div>
+      <div class="defense-content">
+        <div class="defense-title">Accept the Decision and Execute — Professionally</div>
+        <div class="defense-desc">Budget decisions are ultimately made by people with authority above the Managing Officer. Once the decision is made — even if it is not the outcome the officer advocated for — the professional response is to accept it, execute it faithfully, and document the operational impact for next year's budget advocacy. The Managing Officer who continues to relitigate a decided budget cuts, or who passive-aggressively underfunds the organization's priorities in retaliation, is failing in both Dedication and Trust from T·C·H·O·E·D·S.</div>
+        <div class="defense-example">The closing principle: "I presented the best case I could for the resources the mission requires. The decision has been made. My job now is to deliver the best possible patient care with the resources I have — and to document clearly what I could not deliver, so next year's budget conversation starts with facts."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Priority-Based vs. Across-the-Board Cuts</h2>
+<p>When budget reductions are required, the Managing Officer has a professional obligation to implement them thoughtfully — not through an equal-percentage cut across all lines. Priority-based cuts protect the highest-mission-impact functions while accepting reductions in lower-priority areas. Across-the-board cuts are administratively simple and deeply operationally damaging.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Bucket 9 — Resource Management (Budget Defense)</span>
+  <p>You have been notified that your division's budget will be reduced by 8% from your submitted request. Your submitted operating budget was $4.2M. Using the Budget Defense Framework: identify the lines you would protect at all costs, the lines where you would accept reductions, the threshold below which mission integrity is compromised, and the operational documentation you would create to accompany the cuts. Prepare a 90-second oral board response that presents your approach, names the trade-offs, and closes with a T·C·H·O·E·D·S principle.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Budget Defense Framework</span>
+  <div class="sbar-card accent-gold"><strong>1. Know Your Numbers Cold</strong>Top 10 lines by dollar. Top 5 variances. Explain each from memory. Not having to look things up signals ownership.</div>
+  <div class="sbar-card accent-gold"><strong>2. Lead with Mission</strong>Patient outcomes first. "To maintain response time compliance..." not "we need $284,000 for overtime." The frame determines the conversation.</div>
+  <div class="sbar-card accent-gold"><strong>3. Present Alternatives</strong>3 options at different cost points with operational impact described. Choices &gt; binary decisions. Recover what matters most.</div>
+  <div class="sbar-card accent-red"><strong>4. Name the Threshold</strong>"Below $X I cannot maintain compliance in [area]." That is Courage. Make the decision-makers make an informed choice.</div>
+  <div class="sbar-card accent-gold"><strong>5. Accept and Execute</strong>Decision made = professional execution. Document operational impacts. Fight next year with facts from this year.</div>
+  <span class="sbar-label">Cut Philosophy</span>
+  <div class="sbar-card accent-red"><strong>Never Across-the-Board</strong>Equal % cuts = administratively lazy + operationally damaging. Protect highest mission-impact lines. Accept cuts in lower-priority areas.</div>
+  <span class="sbar-label">TCHOEDS in Finance</span>
+  <div class="sbar-card"><strong>Courage</strong>Naming the threshold. Telling leadership what breaks below a certain level.</div>
+  <div class="sbar-card"><strong>Dedication + Trust</strong>Executing the decided budget faithfully. Not relitigating. Not retaliating.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Revenue &amp; Reimbursement</button>
+  <div class="lnb-info"><div class="lnb-name">Budget Defense — Advocacy, Data, and Difficult Reductions</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Financial Ethics →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — FINANCIAL ETHICS ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 8 · Lesson 6 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillars 4 &amp; 6</div>
+  <h1 class="lh-title">Financial Ethics —<br><em>Stewardship, Compliance, and the Fiduciary Standard</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Ethical Processes · Pillar 6</span><span class="lh-meta-item">Bucket 4 — Policy &amp; Ethics · Bucket 9 — Resource Management</span></div>
+</div>
+
+<p>Financial ethics in EMS leadership is not primarily about avoiding obvious fraud. It is about maintaining the fiduciary standard — the obligation to use organizational resources exclusively in service of the organization's mission and its stakeholders, not in service of the officer's convenience, relationships, or preferences. Every financial decision a Managing Officer makes with public or organizational funds carries this obligation. The officer who understands this standard applies it consistently. The one who does not creates organizational liability that far exceeds the value of any individual financial decision.</p>
+
+<h2>The Four Financial Ethics Risk Areas in EMS</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ FINANCIAL ETHICS — FOUR RISK AREAS</span>
+    <div class="ig-title">Where EMS Financial Ethics Failures Most Commonly Occur</div>
+    <div class="ig-sub">Each risk area involves situations where the correct ethical choice may not be immediately obvious — and where the pressure to make a pragmatic or relationship-based decision can erode the fiduciary standard incrementally.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">Risk Area 1</div>
+      <div class="ig-fw-title">Billing Compliance — The False Claims Act</div>
+      <div class="ig-fw-desc">Medicare and Medicaid billing is governed by the False Claims Act. Billing for services not rendered, billing at a higher level of service than was documented (upcoding), and systematic patterns of over-claiming are federal violations with severe civil and criminal penalties. The Managing Officer who knows that billing anomalies exist in their system and does not report them is creating personal liability. The False Claims Act includes a "knowledge" standard — willful ignorance of billing irregularities is not a defense.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Risk Area 2</div>
+      <div class="ig-fw-title">Procurement Ethics — Competitive Bidding and Conflicts of Interest</div>
+      <div class="ig-fw-desc">Procurement above defined dollar thresholds typically requires competitive bidding in governmental agencies. The Managing Officer who bypasses competitive bidding — for convenience, because a vendor relationship is valued, or because the preferred vendor is a personal contact — has created a procurement ethics violation regardless of whether the price is competitive. Conflicts of interest — personal financial relationships with vendors seeking agency business — must be disclosed and recused from. No exception for "good deals."</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Risk Area 3</div>
+      <div class="ig-fw-title">Grant Management — Compliance and Restricted Use</div>
+      <div class="ig-fw-desc">Grants are awarded for specific purposes with specific compliance requirements. Using grant funds outside their authorized purpose — even for genuinely good operational reasons — is a grant compliance violation that can require repayment with interest and penalties, and can permanently damage the agency's relationship with the grantor. The Managing Officer who oversees grant-funded programs must ensure that expenditures remain within the scope of the grant agreement, that required reports are filed accurately and on time, and that any scope changes are pre-approved by the grantor.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Risk Area 4</div>
+      <div class="ig-fw-title">Expense Reporting and Discretionary Spending</div>
+      <div class="ig-fw-desc">Travel reimbursement, conference expenses, training expenditures, and other discretionary spending are subject to the same fiduciary standard as any other organizational expenditure. The Managing Officer who submits expense reports for personal expenses, over-claims mileage or per diem, or uses agency credit cards for personal purchases is committing financial misconduct regardless of the dollar amount. Small violations erode the fiduciary culture and establish precedent. The standard is not "did I get caught?" — it is "does this pass the front page test?"</div>
+    </div>
+  </div>
+  <div class="ig-callout">The front page test: before making any financial decision with organizational funds, ask "would I be comfortable seeing this decision reported in tomorrow's newspaper?" If the answer is no, reconsider the decision. This simple heuristic applies to every procurement, every expense, every billing authorization, and every grant expenditure. The Managing Officer who builds this into their decision-making culture — and models it explicitly for their supervisors — is building the financial ethics foundation that NEMSMA Pillar 6 describes.</div>
+</div>
+
+<h2>Just Culture Applied to Financial Errors</h2>
+<p>Not every financial irregularity is fraud. The 3 U's Diagnostic applies to financial performance errors as directly as it applies to clinical performance errors. A billing error from inadequate documentation training is an Unable failure — address it with training. A pattern of expense report over-claiming after the officer was clearly told the policy is an Unwilling failure — address it with progressive discipline. An inadvertent grant expenditure outside scope from an unclear grant agreement is an Unaware failure — address it with clarification, remediation, and process improvement.</p>
+
+<p>The Just Culture principle protects the organization from over-reacting to honest mistakes while ensuring that intentional misconduct is addressed with appropriate seriousness. The Managing Officer who applies this distinction consistently creates a culture where financial errors are reported and corrected — rather than hidden because staff fear disproportionate consequences for honest mistakes.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Financial Ethics Closing Principle</span>
+  <p>The Managing Officer's fiduciary standard is not "did this benefit the organization?" It is "did this serve the organization's mission, follow all applicable rules, and survive scrutiny by any reasonable outside observer?" These are three different tests — and a decision can pass the first while failing the second or third. Public funds and organizational resources are held in trust for the patients and communities EMS serves. That trust is not transferable, not negotiable, and not subject to exceptions for convenience or relationship. It is the foundation of organizational credibility — and the Managing Officer who protects it is protecting something worth far more than any individual financial decision.</p>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 8 Complete — The Financial Leadership Foundation</span>
+  <p>You now have the complete financial leadership architecture for Managing Officer accountability: the budget cycle and the two budget types, building the operating budget with accurate personnel projection and defensible justification, capital planning with the 5-year CIP and life-cycle cost analysis, EMS revenue and the cost-per-call metric, the five-step budget defense framework, and the fiduciary standard and four financial ethics risk areas. Chapter 9 continues the Managing Officer Track with EMS Quality Management — QA/QI systems design, the prospective/concurrent/retrospective QM model, performance dashboards, and the Managing Officer's accountability to the Medical Director for clinical outcomes.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, financial, or clinical advice. EMS budget structures, reimbursement rates, grant requirements, procurement regulations, and billing compliance rules vary significantly by state, jurisdiction, agency type, and governing authority. The False Claims Act, state procurement statutes, and applicable labor laws govern financial obligations in ways that vary by circumstance. Always consult your agency's Finance department, legal counsel, compliance officer, and applicable regulations before making financial decisions. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction or agency type.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Financial Ethics Risk Areas</span>
+  <div class="sbar-card accent-red"><strong>Billing Compliance</strong>False Claims Act. Upcoding = federal violation. Willful ignorance = not a defense. Report billing anomalies — don't absorb them.</div>
+  <div class="sbar-card accent-gold"><strong>Procurement Ethics</strong>Competitive bidding for threshold purchases. Conflicts of interest = disclose and recuse. "Good deals" don't bypass process.</div>
+  <div class="sbar-card accent-ems"><strong>Grant Management</strong>Funds are restricted. Scope changes require pre-approval. Reports must be accurate and timely. Misuse = repayment + penalties + relationship damage.</div>
+  <div class="sbar-card"><strong>Expense Reporting</strong>Personal expenses ≠ organizational expenses. The dollar amount doesn't matter. Small violations erode culture and establish precedent.</div>
+  <span class="sbar-label">The Tests</span>
+  <div class="sbar-card accent-gold"><strong>The Front Page Test</strong>"Would I be comfortable seeing this in tomorrow's newspaper?" Apply to every financial decision. Not "did I get caught?" — that's not the standard.</div>
+  <div class="sbar-card"><strong>The Fiduciary Standard</strong>Mission service + rules compliance + reasonable scrutiny survival. All three. Not just "it benefits the organization."</div>
+  <span class="sbar-label">Just Culture in Finance</span>
+  <div class="sbar-card"><strong>Apply the 3 U's</strong>Billing error from training gap = Unable. Pattern of over-claiming after clear policy briefing = Unwilling. Inadvertent grant scope error = Unaware. Right diagnosis → right response.</div>
+  <span class="sbar-label">Next Chapter</span>
+  <div class="sbar-card accent-ems"><strong>Chapter 9</strong>EMS Quality Management — QA/QI systems design, prospective/concurrent/retrospective QM model, performance dashboards, Medical Director accountability.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Budget Defense</button>
+  <div class="lnb-info"><div class="lnb-name">Financial Ethics and Stewardship</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 8 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

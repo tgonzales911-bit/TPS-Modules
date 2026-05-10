@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 3 — Leading Others | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.conf-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.conf-col{background:var(--navy-deep);padding:1.25rem;}
+.conf-header{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:5px;}
+.conf-sub{font-size:0.88rem;font-style:italic;margin-bottom:10px;line-height:1.4;}
+.conf-item{font-size:0.9rem;color:var(--on-dark-1);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);line-height:1.5;}
+.conf-result{font-size:0.87rem;font-weight:600;padding:9px 11px;border:1px solid;margin-top:10px;line-height:1.45;}
+/* Bucket grid */
+.bucket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);margin:0;}
+.bucket-cell{background:var(--navy-deep);padding:1rem 1.1rem;}
+.bucket-num{font-family:'EB Garamond',serif;font-size:1.5rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px;}
+.bucket-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-dark-1);margin-bottom:5px;font-weight:700;}
+.bucket-desc{font-size:0.88rem;color:var(--on-dark-2);line-height:1.55;}
+.bucket-tag{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1px;text-transform:uppercase;display:inline-block;padding:2px 7px;border-radius:3px;margin-top:6px;}
+/* HARD goals */
+.hard-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.hard-cell{background:var(--navy-deep);padding:1.2rem 1.4rem;}
+.hard-letter{font-family:'EB Garamond',serif;font-size:2.6rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px;}
+.hard-word{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:6px;}
+.hard-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.hard-ems{font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:6px;}
+/* CALM */
+.calm-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.calm-cell{background:var(--navy-deep);padding:1.2rem 1.4rem;}
+.calm-letter{font-family:'EB Garamond',serif;font-size:2.6rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px;}
+.calm-word{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:6px;}
+.calm-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.conf-grid,.bucket-grid,.hard-grid,.calm-grid,.ig-map-grid,.ig-fw-grid{grid-template-columns:1fr;}.fw-grid,.fw-grid-3{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider" style="width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Communications</button>
+    <button class="nav-pill" onclick="showLesson(1)">Interpersonal Awareness</button>
+    <button class="nav-pill" onclick="showLesson(2)">Motivating Others</button>
+    <button class="nav-pill" onclick="showLesson(3)">Developing Others</button>
+    <button class="nav-pill" onclick="showLesson(4)">Influencing</button>
+    <button class="nav-pill" onclick="showLesson(5)">HR Management</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 3 · NEMSMA Pillar 3</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · Leading Others</div>
+    <h1 class="mh-title"><em>Leading Others</em> —<br>The 13 Buckets in EMS</h1>
+    <p class="mh-sub">Every leadership question in an EMS oral board falls into one of thirteen categories. This chapter maps them to NEMSMA Pillar 3, introduces the HARD Goals and CALM frameworks, and builds the practical response architecture for the highest-frequency question types assessors use.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. Communications — the primary tool. Interpersonal Awareness — reading the room. Motivating Others — HARD Goals and what drives EMS providers. Developing Others — the coaching cycle. Influencing — leading without authority. HR Management — legal foundations and personnel leadership. The 13 Question Buckets run throughout.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — COMMUNICATIONS ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 1 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Communications —<br><em>The Officer's Primary Tool</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 1</span><span class="lh-meta-item">13 Buckets</span></div>
+</div>
+
+<p>If there is one competency that separates good EMS leaders from great ones — one that assessors name more frequently than any other when they debrief candidates after assessment centers — it is communication. Not clinical communication, which most experienced paramedics have mastered. Leadership communication: the ability to deliver a message clearly, read an audience accurately, navigate high-stakes conversations without creating damage, and write with the precision that administrative documentation demands.</p>
+
+<p>NEMSMA Pillar 3 opens with Communications because it is the delivery vehicle for every other leadership competency. You can have perfect judgment, deep clinical knowledge, and strong values — and still fail an assessment center because you cannot communicate those things clearly under pressure.</p>
+
+<h2>The Five Communication Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA COMMUNICATIONS — PILLAR 3</span>
+    <div class="ig-title">Five Competencies · Oral, Written, and Adaptive</div>
+    <div class="ig-sub">Each competency scales from personal skill at Supervising to organizational standard-setting at Executive.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Oral Communication</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Speaks clearly and concisely to complete assigned duties professionally.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff communicates clearly and concisely, completing all duties professionally.<br><strong style="color:#E87070;">E:</strong> Ensures the organization sets a standard for clear, concise professional oral communication throughout.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Written Communication</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Writes clearly and concisely to complete assigned duties professionally.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff writes clearly and concisely, completing all duties professionally.<br><strong style="color:#E87070;">E:</strong> Sets organizational standards for written communication that prevent documentation failure.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Listening Skills</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates good listening skills during job performance.<br><strong style="color:var(--gold);">M:</strong> Demonstrates the importance of strong listening skills and educates staff about their benefits.<br><strong style="color:#E87070;">E:</strong> Ensures the organization sets a standard for excellent listening skills throughout the agency.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Presentation Skills</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates professional presentation skills when required.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff uses professional presentation skills when required.<br><strong style="color:#E87070;">E:</strong> Ensures the organization sets standards for professional presentations to internal and external audiences.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-map-label">Competency 5</div>
+      <div class="ig-map-title">Adaptive Communication</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Adapts communication style to the individual or group being addressed to get the best results.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff adapts communication style effectively across situations and audiences.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops a standard for adaptive communication that strengthens all external and internal relationships.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Adaptive Communication is the most-scored competency in oral board role plays and conflict scenarios. Assessors are watching whether you change your approach based on who you are talking to — a struggling paramedic, an upset family member, a medical director, a city council member. One register for all audiences is a leadership limitation.</div>
+</div>
+
+<h2>The 13 Question Buckets — Communications Buckets</h2>
+<p>Several of the 13 Question Buckets map directly to communication competencies. These are the highest-frequency buckets in EMS oral boards because personnel leadership and interpersonal situations are where EMS officers spend the majority of their non-operational time.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE 13 QUESTION BUCKETS — EMS APPLICATION</span>
+    <div class="ig-title">All 13 Buckets · EMS Context</div>
+    <div class="ig-sub">Every oral board scenario falls into one of these categories. Label the bucket before you answer. This is the L in L·E·A·D.</div>
+  </div>
+  <div class="bucket-grid">
+    <div class="bucket-cell"><div class="bucket-num">01</div><div class="bucket-name">Personnel Performance</div><div class="bucket-desc">Underperformance, behavioral issues, documentation problems, clinical errors. The most common EMS oral board bucket.</div><div class="bucket-tag" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);">High Freq</div></div>
+    <div class="bucket-cell"><div class="bucket-num">02</div><div class="bucket-name">Interpersonal Conflict</div><div class="bucket-desc">Crew tension, personality clash, inter-agency friction, management conflict. Requires CALM framework.</div><div class="bucket-tag" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);">High Freq</div></div>
+    <div class="bucket-cell"><div class="bucket-num">03</div><div class="bucket-name">Subordinate Counseling</div><div class="bucket-desc">Progressive discipline, corrective conversations, performance improvement plans. CLEAR framework applies.</div><div class="bucket-tag" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);">High Freq</div></div>
+    <div class="bucket-cell"><div class="bucket-num">04</div><div class="bucket-name">Policy &amp; Ethics</div><div class="bucket-desc">Policy violations, ethical dilemmas, gray-area decisions. Requires Just Culture and ethical framework application.</div><div class="bucket-tag" style="background:rgba(42,96,144,0.2);color:var(--ems-text);border:1px solid var(--ems-border);">EMS-Specific</div></div>
+    <div class="bucket-cell"><div class="bucket-num">05</div><div class="bucket-name">Community &amp; Public</div><div class="bucket-desc">Patient complaints, media inquiries, community relations, political visibility. Civic Responsibility framework.</div><div class="bucket-tag" style="background:rgba(42,96,144,0.2);color:var(--ems-text);border:1px solid var(--ems-border);">EMS-Specific</div></div>
+    <div class="bucket-cell"><div class="bucket-num">06</div><div class="bucket-name">Safety &amp; Risk</div><div class="bucket-desc">Scene safety violations, occupational health, near misses, worker's comp patterns. Safety culture leadership.</div><div class="bucket-tag" style="background:rgba(42,96,144,0.2);color:var(--ems-text);border:1px solid var(--ems-border);">EMS-Specific</div></div>
+    <div class="bucket-cell"><div class="bucket-num">07</div><div class="bucket-name">Goal Setting &amp; Vision</div><div class="bucket-desc">Unit goals, divisional metrics, organizational direction. HARD + SMART Goals framework.</div><div class="bucket-tag" style="background:rgba(26,92,58,0.15);color:#60D090;border:1px solid rgba(26,92,58,0.3);">Framework</div></div>
+    <div class="bucket-cell"><div class="bucket-num">08</div><div class="bucket-name">Mentoring &amp; Development</div><div class="bucket-desc">Career development, coaching conversations, succession planning. Coaching Cycle framework.</div><div class="bucket-tag" style="background:rgba(26,92,58,0.15);color:#60D090;border:1px solid rgba(26,92,58,0.3);">Framework</div></div>
+    <div class="bucket-cell"><div class="bucket-num">09</div><div class="bucket-name">Resource Management</div><div class="bucket-desc">Budget constraints, equipment needs, staffing challenges, mutual aid. ICS and financial stewardship.</div><div class="bucket-tag" style="background:rgba(42,96,144,0.2);color:var(--ems-text);border:1px solid var(--ems-border);">EMS-Specific</div></div>
+    <div class="bucket-cell"><div class="bucket-num">10</div><div class="bucket-name">Change Management</div><div class="bucket-desc">New protocols, system changes, organizational restructure, merger/acquisition. SWOT + Change spectrum.</div><div class="bucket-tag" style="background:rgba(26,92,58,0.15);color:#60D090;border:1px solid rgba(26,92,58,0.3);">Framework</div></div>
+    <div class="bucket-cell"><div class="bucket-num">11</div><div class="bucket-name">Clinical Quality</div><div class="bucket-desc">QA/QI findings, protocol compliance, patient outcome data, medical director relationship. Pillar 7 content.</div><div class="bucket-tag" style="background:rgba(178,34,34,0.12);color:#E87070;border:1px solid rgba(178,34,34,0.25);">Pillar 7</div></div>
+    <div class="bucket-cell"><div class="bucket-num">12</div><div class="bucket-name">Leadership Philosophy</div><div class="bucket-desc">"What kind of leader are you?" questions. Values-anchored responses. T·C·H·O·E·D·S as closing principle.</div><div class="bucket-tag" style="background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);">High Freq</div></div>
+    <div class="bucket-cell"><div class="bucket-num">13</div><div class="bucket-name">Situational / Scene</div><div class="bucket-desc">MCI, complex incident, command scenarios. ICS/NIMS structure + span of control + unified command.</div><div class="bucket-tag" style="background:rgba(42,96,144,0.2);color:var(--ems-text);border:1px solid var(--ems-border);">EMS-Specific</div></div>
+  </div>
+  <div class="ig-callout">Bucket 1 — Personnel Performance, Bucket 2 — Interpersonal Conflict, Bucket 3 — Subordinate Counseling, and Bucket 12 — Leadership Philosophy are the highest-frequency buckets in EMS supervising and managing officer oral boards. If you only have two weeks to prepare, start there. Bucket 11 — Clinical Quality and Bucket 13 — Situational / Scene are the highest EMS-specific risk for candidates who come from fire-based systems with limited EMS clinical leadership experience.</div>
+</div>
+
+<h2>The CALM Framework — EMS Conflict Communication</h2>
+<p>The CALM framework is the TPS communication structure for high-stakes conversations — personnel conflicts, crew disputes, difficult feedback sessions, anything where the emotional temperature is elevated and the standard leadership communication approach risks escalation rather than resolution.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CALM FRAMEWORK — TPS COMMUNICATION TOOL</span>
+    <div class="ig-title">Clarify · Ask · Listen · Manage</div>
+    <div class="ig-sub">Four steps for high-stakes conversations. Applies to Bucket 1 — Personnel Performance, Bucket 2 — Interpersonal Conflict, and Bucket 3 — Subordinate Counseling — and any scenario where emotion is elevated before facts are clear.</div>
+  </div>
+  <div class="calm-grid">
+    <div class="calm-cell">
+      <div class="calm-letter">C</div>
+      <div class="calm-word">Clarify — Set the Purpose</div>
+      <div class="calm-desc">Begin by clearly establishing why this conversation is happening and what it is designed to accomplish. Not an accusation — a purpose statement. "I need to talk with you because I have a concern about what happened during yesterday's shift, and I want to understand it fully before we discuss next steps." Clarify removes ambiguity and signals that this is a purposeful leadership conversation, not a reactive confrontation.</div>
+      <div style="font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;">EMS context: Before any disciplinary or feedback conversation — clarify the purpose and separate the conversation from the clinical incident. Don't run this in the bay right after a difficult call.</div>
+    </div>
+    <div class="calm-cell">
+      <div class="calm-letter">A</div>
+      <div class="calm-word">Ask — Gather Before Concluding</div>
+      <div class="calm-desc">Ask specific, open-ended questions before stating any conclusions or positions. "Walk me through what happened from your perspective." "What was going through your mind at that point?" "Is there anything I should know about that situation that I might not be aware of?" This is Suspending Judgment in action — the officer who Asks before concluding demonstrates the Self-Insight competency in real time.</div>
+      <div style="font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;">The most common CALM failure: skipping Ask entirely and going straight to conclusions. Assessors notice immediately. "You told me what you were going to do, but you never asked what actually happened."</div>
+    </div>
+    <div class="calm-cell">
+      <div class="calm-letter">L</div>
+      <div class="calm-word">Listen — Actively and Without Defensiveness</div>
+      <div class="calm-desc">Listening in CALM is not passive. It is active confirmation that you have heard — restatement, acknowledgment, and clarification of what was said before moving to your response. "So what I'm hearing is that you felt the protocol was unclear in that situation and made the best decision you could with the information available. Is that right?" Active listening signals that the officer can hold difficult information without immediately filtering it through defensive conclusions.</div>
+      <div style="font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;">EMS context: Providers who feel genuinely heard in a difficult feedback conversation are dramatically more likely to accept the feedback and act on it. Providers who feel processed skip the listening entirely.</div>
+    </div>
+    <div class="calm-cell">
+      <div class="calm-letter">M</div>
+      <div class="calm-word">Manage — Lead to Resolution</div>
+      <div class="calm-desc">After Clarifying purpose, Asking for perspective, and Listening actively — Manage the outcome. This is where the officer's leadership judgment enters: what action is appropriate, what expectations are being set, what support is being offered, what accountability looks like. "Based on what we've discussed, here is what I need from you going forward, here is the support I will provide, and here is how we will follow up." Manage closes the loop with clarity, not ambiguity.</div>
+      <div style="font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;">The Manage step must include both accountability AND support. All accountability without support is punitive. All support without accountability is permissive. The Confidence column holds both.</div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral board responses: name the framework. "My approach to this conversation would follow the CALM model — I would begin by Clarifying the purpose of the meeting so the employee knows this is a support conversation as much as a corrective one..." Naming CALM signals structured thinking. It moves your response from 3/5 to 4/5.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5 Communication Competencies</span>
+  <div class="sbar-card"><strong>Oral Communication</strong>Clear and concise. Scales from personal to organizational standard.</div>
+  <div class="sbar-card"><strong>Written Communication</strong>Professional documentation. EMS PCR quality = officer quality.</div>
+  <div class="sbar-card"><strong>Listening Skills</strong>Active, not passive. Demonstrated, then taught.</div>
+  <div class="sbar-card"><strong>Presentation Skills</strong>Internal briefings to elected officials. Scales with level.</div>
+  <div class="sbar-card"><strong>Adaptive Communication</strong>Most-scored in role plays. One register for all audiences = limitation.</div>
+  <span class="sbar-label">CALM Framework</span>
+  <div class="sbar-card accent-gold"><strong>C — Clarify</strong>Set the purpose before the conversation starts.</div>
+  <div class="sbar-card accent-gold"><strong>A — Ask</strong>Open questions before conclusions. Suspend judgment.</div>
+  <div class="sbar-card accent-gold"><strong>L — Listen</strong>Restate. Acknowledge. Confirm. Active listening.</div>
+  <div class="sbar-card accent-gold"><strong>M — Manage</strong>Accountability AND support. Close with clarity.</div>
+  <span class="sbar-label">High-Frequency Buckets</span>
+  <div class="sbar-card"><strong>Buckets 1, 2, 3, 12</strong>Bucket 1 — Personnel Performance · Bucket 2 — Interpersonal Conflict · Bucket 3 — Subordinate Counseling · Bucket 12 — Leadership Philosophy. Master these first.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 2</button>
+  <div class="lnb-info"><div class="lnb-name">Communications — The Officer's Primary Tool</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Interpersonal Awareness →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — INTERPERSONAL AWARENESS ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 2 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Interpersonal Awareness —<br><em>Reading the Room</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 2</span><span class="lh-meta-item">Buckets 2, 5, 12</span></div>
+</div>
+
+<p>Interpersonal Awareness is the perceptual engine underneath every other Leading Others competency. You cannot motivate someone whose emotional state you cannot read. You cannot develop someone whose resistance you cannot understand. You cannot influence someone whose concerns you have not identified. Interpersonal Awareness is not a soft skill — it is the operational intelligence that makes every other leadership tool effective.</p>
+
+<p>In the EMS environment, interpersonal awareness is complicated by the clinical culture. Providers are trained to depersonalize — to manage their emotional responses to difficult calls in real time. The same skill that protects them on scene can mask distress from their supervisors off scene. The EMS officer who reads only the surface is missing the signal.</p>
+
+<h2>The Four Interpersonal Awareness Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA INTERPERSONAL AWARENESS — PILLAR 3</span>
+    <div class="ig-title">Four Competencies · The Perceptual Foundation of Leadership</div>
+    <div class="ig-sub">These competencies cannot be faked in assessment centers. Assessors probe them through role plays and scenario follow-up questions specifically designed to reveal whether you actually observe people — or just manage processes.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Awareness of Others</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates an understanding of others and educates staff to understand how actions affect others.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff maintains awareness of how their actions affect others.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops a culture of interpersonal awareness and responsibility for how actions affect others.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Empathy</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of empathy in the workplace and educates staff about its benefits.<br><strong style="color:var(--gold);">M:</strong> Demonstrates a strong empathetic approach to all work interactions and develops processes to ensure staff does the same.<br><strong style="color:#E87070;">E:</strong> Ensures the organization fosters a culture of empathy in all work interactions.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Service Orientation</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates a strong service-oriented mindset toward staff and customers and educates staff about its importance.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure staff maintains a strong service-oriented mindset toward their staff and customers.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops a strong service orientation throughout — defining "customer" broadly to include patients, families, community members, and agency personnel.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Political Acumen</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Understands the political environment of the organization and uses this understanding to navigate complex interpersonal situations.<br><strong style="color:var(--gold);">M:</strong> Demonstrates strong political acumen, educates staff about its importance, and navigates organizational complexity effectively.<br><strong style="color:#E87070;">E:</strong> Demonstrates expert political acumen — understands the external political environment and navigates inter-agency, governmental, and community relationships strategically.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Political Acumen is the competency EMS candidates most underestimate. Every EMS agency operates within a political environment — medical directors, hospital systems, fire departments, county government, private ownership, union contracts. The officer who navigates this landscape skillfully does not avoid it. They understand who holds influence, how decisions actually get made, and how to build coalitions that serve patient care.</div>
+</div>
+
+<h2>Interpersonal Awareness in the Confidence Spectrum</h2>
+<p>The NEMSMA document provides specific Confidence Spectrum language for this cluster that is directly usable in CLEAR feedback:</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CONFIDENCE SPECTRUM — INTERPERSONAL AWARENESS</span>
+    <div class="ig-title">What Assessors Are Looking For</div>
+    <div class="ig-sub">These behavioral anchors come directly from NEMSMA's documented competency framework.</div>
+  </div>
+  <div class="conf-grid">
+    <div class="conf-col" style="border-top:3px solid #E87070;">
+      <div class="conf-header" style="color:#E87070;">⚠ Limited Confidence</div>
+      <div class="conf-sub" style="color:#D08060;">Unaware of how personal behavior affects others</div>
+      <div class="conf-item">Does not consider how decisions affect staff morale and organizational culture.</div>
+      <div class="conf-item">Rarely demonstrates empathy — focuses only on task completion.</div>
+      <div class="conf-item">Views "customer service" as relevant only to patient interactions.</div>
+      <div class="conf-item">Oblivious to political dynamics — creates unnecessary friction.</div>
+      <div class="conf-result" style="background:rgba(139,26,26,0.12);border-color:#E87070;color:#E87070;">Assessor: Task-focused to the exclusion of people. Leadership blind spot.</div>
+    </div>
+    <div class="conf-col" style="border-top:3px solid var(--gold);background:#0A1E34;">
+      <div class="conf-header" style="color:var(--gold);">✓ Confidence — Target</div>
+      <div class="conf-sub" style="color:#B09840;">Observant, empathetic, strategically aware</div>
+      <div class="conf-item">Actively considers how decisions will land with different personalities and positions.</div>
+      <div class="conf-item">Demonstrates genuine empathy — distinguishes between performance issues and personal distress.</div>
+      <div class="conf-item">Treats staff, patients, and community members with equal service orientation.</div>
+      <div class="conf-item">Reads the political landscape accurately and uses it to advance patient care goals.</div>
+      <div class="conf-result" style="background:rgba(201,168,76,0.12);border-color:var(--gold);color:var(--gold);">Assessor: Perceptive. Reads people and systems accurately. High interpersonal IQ.</div>
+    </div>
+    <div class="conf-col" style="border-top:3px solid #6090C0;">
+      <div class="conf-header" style="color:#88AAD0;">⚠ Overconfidence</div>
+      <div class="conf-sub" style="color:#7090B0;">Reads too much into situations — creates problems that don't exist</div>
+      <div class="conf-item">Over-personalizes interpersonal situations — assumes conflict where there is none.</div>
+      <div class="conf-item">Empathy crosses into over-involvement — staff's personal problems become organizational problems.</div>
+      <div class="conf-item">Service orientation becomes deferential — avoids all accountability to preserve relationships.</div>
+      <div class="conf-item">Political acumen becomes manipulation — uses interpersonal awareness for personal advantage.</div>
+      <div class="conf-result" style="background:rgba(40,60,120,0.2);border-color:#6090C0;color:#88AAD0;">Assessor: Interpersonally reactive. Creates drama rather than resolving it.</div>
+    </div>
+  </div>
+</div>
+
+<h2>The EMS-Specific Interpersonal Environment</h2>
+<p>EMS operates at the intersection of multiple organizational cultures simultaneously. Fire departments, hospitals, county governments, private operators, volunteer agencies — each has its own norms, its own unwritten rules, and its own informal power structure. The EMS officer who navigates this environment skillfully understands something most candidates miss: <strong>in EMS, you are almost always operating in someone else's house.</strong></p>
+
+<p>On scene, you are in the hospital's clinical environment. In budget meetings, you are in municipal government's financial environment. In protocol discussions, you are in the medical director's clinical authority environment. Interpersonal awareness in EMS is partly about reading your own crew — and partly about reading every external environment your organization intersects with.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Role Play Diagnostic — What Interpersonal Awareness Looks Like Live</span>
+  <p>In an assessment center role play, interpersonal awareness is visible within the first sixty seconds. Did you notice the assessor's emotional state before launching into your prepared response? Did you adapt when they gave you non-verbal cues that your approach wasn't landing? Did you ask a follow-up question when something felt off? The candidate who demonstrates interpersonal awareness in role plays is the one who treats the assessor-actor as a real person, not a scenario prompt to respond to.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Interpersonal Competencies</span>
+  <div class="sbar-card"><strong>Awareness of Others</strong>Actions affect others. Teach it. Build the culture.</div>
+  <div class="sbar-card"><strong>Empathy</strong>Operational, not sentimental. Clinical detachment masks distress.</div>
+  <div class="sbar-card"><strong>Service Orientation</strong>Patient + staff + community + agency. Broad definition of "customer."</div>
+  <div class="sbar-card"><strong>Political Acumen</strong>Most underestimated. Navigate — don't avoid — the political landscape.</div>
+  <span class="sbar-label">EMS Context</span>
+  <div class="sbar-card accent-ems"><strong>Operating in Others' Houses</strong>Hospital. Municipality. Medical director. Fire department. Each has its own culture. Read all of them.</div>
+  <span class="sbar-label">Role Play Signal</span>
+  <div class="sbar-card accent-gold"><strong>The 60-Second Test</strong>Did you read the assessor's emotional state before launching in? Adapt when cues said it wasn't landing? That is interpersonal awareness visible in real time.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Communications</button>
+  <div class="lnb-info"><div class="lnb-name">Interpersonal Awareness — Reading the Room</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Motivating Others →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — MOTIVATING OTHERS ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 3 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Motivating Others —<br><em>HARD Goals + What Drives EMS Providers</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 3</span><span class="lh-meta-item">Bucket 7 — Goal Setting &amp; Vision</span></div>
+</div>
+
+<p>Most EMS officers know the SMART goal framework. Specific, Measurable, Attainable, Relevant, Time-Bound — it is the standard goal-setting architecture taught in virtually every leadership program. SMART goals are necessary. They are not sufficient. An officer who can write a SMART goal but cannot make a provider <em>care</em> about achieving it has the structure without the fuel.</p>
+
+<p>The HARD Goals framework answers the question SMART does not: <strong>what makes a goal worth pursuing?</strong> SMART describes the architecture of a goal. HARD describes the motivational charge that powers someone to pursue it under difficulty, through fatigue, past the point where it would be easier to stop. EMS leaders who master both frameworks have the complete motivational toolkit.</p>
+
+<h2>HARD Goals — The Motivational Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ HARD GOALS FRAMEWORK — NEW IN EMS TRACK</span>
+    <div class="ig-title">Heartfelt · Animated · Required · Difficult</div>
+    <div class="ig-sub">The motivational architecture underneath every SMART goal. Use in Bucket 7 — Goal Setting &amp; Vision and Bucket 8 — Mentoring &amp; Development oral board responses.</div>
+  </div>
+  <div class="hard-grid">
+    <div class="hard-cell">
+      <div class="hard-letter">H</div>
+      <div class="hard-word">Heartfelt — Connected to What Matters</div>
+      <div class="hard-desc">A Heartfelt goal is one the provider is personally invested in achieving — not just assigned to pursue. It connects to their values, their identity as a clinician, or their care for the patients they serve. An EMS officer who can help a provider see why a goal matters personally — not just professionally — has engaged the deepest motivational driver.</div>
+      <div class="hard-ems">EMS application: "I want you to bring your ROSC rate above the national benchmark because you told me you became a paramedic to save lives. The data says you're already close. Let's close that gap together."</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter">A</div>
+      <div class="hard-word">Animated — Vivid and Compelling</div>
+      <div class="hard-desc">An Animated goal is one the provider can see clearly. They can visualize what success looks like, what it feels like, what the outcome produces. Vague goals ("improve your patient communication") produce vague effort. Animated goals ("by next quarter, your patient complaints are zero and your satisfaction scores are in the top 20% of the unit") produce concrete behavioral change.</div>
+      <div class="hard-ems">EMS application: Help providers visualize the specific outcome — the family that calls to thank their crew, the cardiac arrest that goes home from the hospital, the shift that runs without a single documentation error.</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter">R</div>
+      <div class="hard-word">Required — Non-Negotiable Standard</div>
+      <div class="hard-desc">A Required goal communicates that this is not optional — it is the standard the organization, the medical director, and the patients depend on. Required framing removes the mental option of deciding whether to pursue the goal and replaces it with the question of how to pursue it. This is not punitive framing — it is honest framing about what professional performance requires.</div>
+      <div class="hard-ems">EMS application: "Protocol compliance is not a preference — it is the foundation of every patient interaction we have. Here is what getting there looks like and how I will support you."</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter">D</div>
+      <div class="hard-word">Difficult — Worthy of the Effort</div>
+      <div class="hard-desc">HARD Goals are not easy. They are challenging enough to require genuine growth. NEMSMA research shows that people are more motivated by goals that stretch them than by goals that only confirm existing competence. A Difficult goal signals trust — the officer is telling the provider: "I believe you are capable of more than you are currently doing." That message is itself motivating.</div>
+      <div class="hard-ems">EMS application: "I am setting this standard because I know what you are capable of. Easy goals don't develop you. This one will."</div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral board responses, name both frameworks explicitly. "I would set goals for this provider using both the SMART and HARD frameworks. SMART ensures the goal has structure and measurability. HARD ensures the provider has a genuine reason to pursue it beyond compliance. A goal that is SMART but not HARD produces technical compliance — not development."</div>
+</div>
+
+<h2>SMART + HARD — The Complete Goal-Setting Response</h2>
+<p>When a Bucket 7 — Goal Setting &amp; Vision or Bucket 8 — Mentoring &amp; Development question arises in an oral board, the 4/5 response uses both frameworks and names them. The 3/5 response describes the behavior of good goal-setting without the framework vocabulary. The 2/5 response gives a generic answer about "clear expectations" and "follow-up."</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">SMART Framework</div>
+    <div class="fw-card-title">The Architecture</div>
+    <div class="fw-card-desc"><strong>Specific:</strong> Named behavior, not category. <strong>Measurable:</strong> Data-anchored. <strong>Attainable:</strong> Challenging but achievable. <strong>Relevant:</strong> Connected to mission. <strong>Time-Bound:</strong> Deadline-driven. Without SMART structure, a HARD goal is an aspiration without a plan.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">HARD Framework</div>
+    <div class="fw-card-title">The Fuel</div>
+    <div class="fw-card-desc"><strong>Heartfelt:</strong> Why does this matter to you? <strong>Animated:</strong> Can you see what success looks like? <strong>Required:</strong> This is the professional standard. <strong>Difficult:</strong> I believe you can do more. Without HARD motivation, a SMART goal produces compliance — not commitment.</div>
+  </div>
+</div>
+
+<h2>The NEMSMA Motivating Others Competencies</h2>
+<p>NEMSMA defines Motivating Others through five specific competency statements that scale from personal modeling at Supervising to organizational culture design at Executive:</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ MOTIVATING OTHERS — NEMSMA PILLAR 3</span>
+    <div class="ig-title">Five Competencies · Personal to Organizational Motivation</div>
+    <div class="ig-sub">The officer who motivates only with their own enthusiasm has a Supervising-level tool. The officer who builds motivating systems has a Managing and Executive-level tool.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Acknowledging Contributions</div>
+      <div class="ig-map-title">Praise in Public — Feedback in Private</div>
+      <div class="ig-map-desc">All levels: Demonstrates the importance of acknowledging staff's contributions and educates staff about the benefits of such acknowledgment. S: Personal practice. M: Develops recognition processes for the organization. E: Builds recognition culture system-wide.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Encouragement</div>
+      <div class="ig-map-title">Sustained Positive Reinforcement</div>
+      <div class="ig-map-desc">All levels: Demonstrates the importance of encouragement and educates staff on why encouragement builds sustained performance. Limited Confidence failure: encourages only top performers. Overconfidence failure: encourages without discrimination — blurs the line between developing performance and accepting mediocrity.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Inspiring Others</div>
+      <div class="ig-map-title">Vision Beyond the Shift</div>
+      <div class="ig-map-desc">S: Demonstrates an inspiring approach to leadership and educates staff on why this matters. M: Develops a process to ensure staff is consistently inspired. E: Ensures the organization develops an inspiring mission and culture that generates intrinsic motivation across all personnel.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Providing Purpose</div>
+      <div class="ig-map-title">Mission Over Task</div>
+      <div class="ig-map-desc">All levels: Demonstrates the importance of a purposeful approach to work and educates staff on its benefits. EMS officers who can connect individual tasks — documentation, equipment checks, continuing education — to patient outcomes and community impact are practicing Providing Purpose at its highest level.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-map-label">Removing Obstacles</div>
+      <div class="ig-map-title">Systemic Support — Not Just Encouragement</div>
+      <div class="ig-map-desc">S: Identifies and removes workplace obstacles affecting staff performance. M: Identifies and resolves obstacles to performance across the division. E: Ensures the organization proactively identifies and removes systemic obstacles that prevent personnel from achieving peak performance. This is the most Executive-level motivational competency — and the one most often missed in Managing Officer oral board responses.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Practice Prompt — Bucket 7 — Goal Setting &amp; Vision with HARD + SMART</span>
+  <p>Your unit's average patient refusal rate is 18% — significantly above the agency benchmark of 12%. You suspect this reflects both documentation habits and provider confidence with patient assessment conversations. Using L·E·A·D: Label the bucket (Bucket 7 — Goal Setting &amp; Vision + Bucket 11 — Clinical Quality). Apply SMART and HARD frameworks. Close with T·C·H·O·E·D·S. Target: 120 seconds out loud.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">HARD Goals Framework</span>
+  <div class="sbar-card accent-gold"><strong>H — Heartfelt</strong>Connected to personal values. Why does this matter to you?</div>
+  <div class="sbar-card accent-gold"><strong>A — Animated</strong>Vivid and visible. Can you see what success looks like?</div>
+  <div class="sbar-card accent-gold"><strong>R — Required</strong>Non-negotiable professional standard. Removes the option of not pursuing it.</div>
+  <div class="sbar-card accent-gold"><strong>D — Difficult</strong>Worthy of the effort. "I believe you can do more than you're doing."</div>
+  <span class="sbar-label">The Complete Tool</span>
+  <div class="sbar-card"><strong>SMART = Architecture</strong>Structure + measurability + timeline.</div>
+  <div class="sbar-card"><strong>HARD = Fuel</strong>Motivation + meaning + commitment. SMART without HARD = compliance. HARD without SMART = aspiration.</div>
+  <span class="sbar-label">5 Motivating Competencies</span>
+  <div class="sbar-card"><strong>Acknowledging Contributions</strong>Public praise. Recognition system at M/E.</div>
+  <div class="sbar-card"><strong>Encouragement</strong>Sustained. Not indiscriminate.</div>
+  <div class="sbar-card"><strong>Inspiring Others</strong>Vision beyond the shift.</div>
+  <div class="sbar-card"><strong>Providing Purpose</strong>Task to mission. Documentation to patient life.</div>
+  <div class="sbar-card accent-ems"><strong>Removing Obstacles</strong>Most Executive-level tool. Often missed at Managing OB.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Interpersonal Awareness</button>
+  <div class="lnb-info"><div class="lnb-name">Motivating Others — HARD Goals</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Developing Others →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — DEVELOPING OTHERS ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 4 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Developing Others —<br><em>The Coaching Cycle in EMS</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 4</span><span class="lh-meta-item">Bucket 8 — Mentoring &amp; Development</span></div>
+</div>
+
+<p>Developing Others is the competency that most directly separates the provider identity from the officer identity. Providers develop themselves. Officers develop others. This is the core of what the promotion is asking you to do — and it is the most commonly underperformed competency in EMS oral boards because candidates confuse describing good development with demonstrating the thinking of an officer who actually does it.</p>
+
+<h2>The Four Developing Others Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA DEVELOPING OTHERS — PILLAR 3</span>
+    <div class="ig-title">Four Competencies · The Coaching Officer</div>
+    <div class="ig-sub">Development is not training. Training is event-based. Development is ongoing, relationship-based, and outcome-accountable.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Coaching</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Provides coaching and mentoring to staff as needed, developing them to exceed expectations. Identifies opportunities for staff to grow in experience, knowledge, and skills.<br><strong style="color:var(--gold);">M:</strong> Develops processes for coaching and mentoring throughout the organization.<br><strong style="color:#E87070;">E:</strong> Ensures the organization maintains high standards of coaching and mentoring as a core cultural value.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Staff Development</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Develops a training and development plan for all staff under supervision. Provides training and development to all staff while ensuring standards are maintained.<br><strong style="color:var(--gold);">M:</strong> Develops processes to ensure all staff receive individualized training and development plans.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops and maintains a comprehensive, individualized approach to staff development.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Succession Planning</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Develops and mentors staff to prepare them for future leadership roles within the organization.<br><strong style="color:var(--gold);">M:</strong> Develops a process to prepare staff for supervisory and management positions.<br><strong style="color:#E87070;">E:</strong> Ensures the organization maintains a systematic succession plan to prepare staff for all levels of management and leadership.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Delegating</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Understands and practices effective delegation — assigns duties to staff to allow them to develop new skills and competencies.<br><strong style="color:var(--gold);">M:</strong> Delegates effectively and develops processes to ensure supervisors delegate appropriately.<br><strong style="color:#E87070;">E:</strong> Ensures the organization develops a culture of effective delegation as a primary development tool.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Delegation is the development competency most often described as "giving work away." Officers with limited confidence on this competency say: "I like to handle things myself to make sure they're done right." Assessors hear: "I don't trust my crew, I haven't developed them, and I am a bottleneck." Delegation is the most direct behavioral signal of whether you have made the provider-to-officer identity shift.</div>
+</div>
+
+<h2>The Coaching Conversation — Applied to EMS</h2>
+<p>Coaching in the EMS context happens in three distinct settings, each requiring a slightly different approach. The officer who understands these distinctions and can describe them explicitly in an oral board is demonstrating S-level competency — skill application, not just knowledge recall.</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Post-Call Coaching</div>
+    <div class="fw-card-title">Real-Time, Specific, Brief</div>
+    <div class="fw-card-desc">Immediate feedback connected to a specific call or interaction. Three elements: name the specific behavior, name the impact, name the development expectation. Maximum five minutes. Done privately, never in front of crew or patients.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Scheduled 1:1 Coaching</div>
+    <div class="fw-card-title">Developmental, Pattern-Focused</div>
+    <div class="fw-card-desc">Recurring conversation connected to a development plan. Addresses performance patterns, not single incidents. SMART + HARD goal review. The officer brings data; the employee brings self-assessment. Together they build the next development cycle.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Informal Coaching</div>
+    <div class="fw-card-title">Opportunistic, Culture-Building</div>
+    <div class="fw-card-desc">Station conversations, ride-alongs, case reviews during downtime. The officer who uses these moments intentionally — turning a quiet shift into a mentoring opportunity — is developing crew capability at zero additional cost to the organization.</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">The Succession Planning Question — Executive-Level Application</span>
+  <p>Executive Officer candidates frequently receive a question about succession planning — either directly ("What is your approach to developing your organization's next generation of leaders?") or embedded in a scenario. The 4/5 response names three elements: a formal succession planning process with identified high-potential employees, an individualized development pathway for each one, and a leadership pipeline that ensures continuity across all supervisory and management positions. The close: "The best organizational leaders I have seen are the ones who are making themselves replaceable. My job is to develop officers who are ready to do what I do — and then move the organization forward past where I could take it alone."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Developing Competencies</span>
+  <div class="sbar-card"><strong>Coaching</strong>Ongoing, relationship-based, outcome-accountable. Not event training.</div>
+  <div class="sbar-card"><strong>Staff Development</strong>Individualized plans. Every person gets a development trajectory.</div>
+  <div class="sbar-card"><strong>Succession Planning</strong>Developing your own replacement. The highest form of organizational service.</div>
+  <div class="sbar-card"><strong>Delegating</strong>Development tool, not task management. Overconfidence = hoarding. Limited = bottleneck.</div>
+  <span class="sbar-label">Three Coaching Settings</span>
+  <div class="sbar-card accent-ems"><strong>Post-Call</strong>Real-time, specific, 5 min max. Specific behavior → impact → expectation.</div>
+  <div class="sbar-card accent-ems"><strong>Scheduled 1:1</strong>Pattern-focused. Officer brings data; employee brings self-assessment.</div>
+  <div class="sbar-card accent-ems"><strong>Informal</strong>Opportunistic. Turns downtime into development. Zero organizational cost.</div>
+  <span class="sbar-label">The Key Signal</span>
+  <div class="sbar-card accent-gold"><strong>Delegation Test</strong>"I like to handle things myself to make sure they're done right" = provider identity + limited confidence. Name your delegation practice explicitly.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Motivating Others</button>
+  <div class="lnb-info"><div class="lnb-name">Developing Others — The Coaching Cycle</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Influencing →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — INFLUENCING ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 5 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Influencing —<br><em>Leading Without Formal Authority</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 5</span><span class="lh-meta-item">Bucket 10 — Change Management · Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>EMS officers operate in one of the most complex authority environments in public safety. On scene, the highest medical authority is the medical director — not the chief. In inter-agency responses, NIMS protocols govern who is actually in command. In budget negotiations, elected officials or private owners hold the financial authority. At the hospital, clinical staff and administration hold their own hierarchy. An EMS officer who can only lead within their formal chain of command will be ineffective in most of the situations that actually matter.</p>
+
+<p>Influencing is the competency that closes that gap. It is the ability to move people toward outcomes you care about without relying on positional authority to make them comply.</p>
+
+<h2>The Four Influencing Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA INFLUENCING — PILLAR 3</span>
+    <div class="ig-title">Four Competencies · Credibility-Based Leadership</div>
+    <div class="ig-sub">The officer with high Influencing skill does not need to invoke authority. Their credibility, communication, and coalition-building do the work.</div>
+  </div>
+  <div class="ig-map-grid">
+    <div class="ig-map-cell" style="border-left:3px solid var(--gold);">
+      <div class="ig-map-label">Competency 1</div>
+      <div class="ig-map-title">Persuasion</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates effective persuasion techniques and educates staff on their importance.<br><strong style="color:var(--gold);">M:</strong> Demonstrates advanced persuasion skills and develops processes to ensure staff uses effective persuasion in their leadership roles.<br><strong style="color:#E87070;">E:</strong> Ensures the organization values and develops persuasion skills to build strategic partnerships and advance organizational goals.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid var(--ems2);">
+      <div class="ig-map-label">Competency 2</div>
+      <div class="ig-map-title">Negotiation</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates effective negotiation skills and educates staff on their importance.<br><strong style="color:var(--gold);">M:</strong> Demonstrates effective negotiation and develops processes to ensure staff uses negotiation appropriately when needed.<br><strong style="color:#E87070;">E:</strong> Ensures the organization values and develops negotiation skills — particularly in contract negotiations, mutual aid agreements, and inter-agency partnerships.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #60C080;">
+      <div class="ig-map-label">Competency 3</div>
+      <div class="ig-map-title">Coalition Building</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Understands the importance of coalition building and educates staff about its benefits.<br><strong style="color:var(--gold);">M:</strong> Develops processes to build coalitions within and outside the organization.<br><strong style="color:#E87070;">E:</strong> Ensures the organization maintains active coalitions with key stakeholders — hospitals, fire departments, county government, community health partners — to advance patient care goals.</div>
+    </div>
+    <div class="ig-map-cell" style="border-left:3px solid #D0A0E0;">
+      <div class="ig-map-label">Competency 4</div>
+      <div class="ig-map-title">Networking</div>
+      <div class="ig-map-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates the importance of networking and educates staff about its benefits for professional development.<br><strong style="color:var(--gold);">M:</strong> Builds and maintains a professional network and develops processes to ensure staff does the same.<br><strong style="color:#E87070;">E:</strong> Ensures the organization builds and maintains a comprehensive network of professional relationships that advances the mission and positions the agency as a leader in the EMS field.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Coalition Building is the most EMS-specific influencing competency. EMS agencies are rarely standalone — they operate within a system of hospitals, fire departments, county EMS offices, state EMS bureaus, and community health organizations. The Executive EMS Officer who has built genuine coalitions across this landscape can accomplish in a phone call what others could not accomplish through formal authority in months.</div>
+</div>
+
+<h2>Influence in Practice — EMS-Specific Scenarios</h2>
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Protocol Change</div>
+    <div class="fw-card-title">Medical Director Coalition</div>
+    <div class="fw-card-desc">EMS officers cannot unilaterally change clinical protocols. Protocol change requires medical director buy-in, often hospital system alignment, and sometimes state EMS bureau approval. The officer who presents data-driven proposals, builds clinical credibility over time, and demonstrates the outcomes case is practicing Influencing at its highest level.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Budget Defense</div>
+    <div class="fw-card-title">Elected Official Persuasion</div>
+    <div class="fw-card-desc">When budget requests go before city council, county commissioners, or a board of directors, the EMS officer is leading without any operational authority over the decision-makers. Persuasion here means translating clinical necessity into community impact language — connecting ambulance replacement to response time data to patient outcomes to constituent satisfaction.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Inter-Agency Operations</div>
+    <div class="fw-card-title">Unified Command Influence</div>
+    <div class="fw-card-desc">In unified command with a fire department IC, the EMS branch director has no authority over fire resources. Influence means presenting the medical dimension of the scene so clearly and compellingly that fire resources are allocated in alignment with patient care priorities — not because the EMS officer ordered it.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Resistant Senior Crew</div>
+    <div class="fw-card-title">Peer Credibility + Persuasion</div>
+    <div class="fw-card-desc">The newly promoted EMS lieutenant leading a crew of senior paramedics has nominal authority and zero earned credibility. Influencing through demonstrated clinical knowledge, consistent fairness, and genuine investment in crew success is the only path that actually works. Invoking formal authority too early here damages the relationship permanently.</div>
+  </div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Influencing Competencies</span>
+  <div class="sbar-card"><strong>Persuasion</strong>Data-driven, values-connected. Not manipulation — honest case-making.</div>
+  <div class="sbar-card"><strong>Negotiation</strong>Contracts, mutual aid, personnel disputes. Win-win framing.</div>
+  <div class="sbar-card accent-ems"><strong>Coalition Building</strong>Most EMS-specific. Hospitals, fire, county, state. Relationship capital built over time.</div>
+  <div class="sbar-card"><strong>Networking</strong>Professional connections advance the mission. Not self-promotion — organizational investment.</div>
+  <span class="sbar-label">EMS-Specific Contexts</span>
+  <div class="sbar-card"><strong>Protocol Change</strong>Medical director coalition. Data + clinical credibility.</div>
+  <div class="sbar-card"><strong>Budget Defense</strong>Translate clinical to community. Patient outcomes → constituent value.</div>
+  <div class="sbar-card"><strong>Unified Command</strong>Present the medical dimension so compellingly it shapes resource decisions.</div>
+  <div class="sbar-card"><strong>Resistant Senior Crew</strong>Formal authority invoked too early = permanent damage. Credibility first.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Developing Others</button>
+  <div class="lnb-info"><div class="lnb-name">Influencing — Leading Without Formal Authority</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">HR Management →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — HR MANAGEMENT ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 3 · Lesson 6 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Human Resources —<br><em>Legal Foundations + Personnel Leadership</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Pillar 3 · Sub-section 6</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 3 — Subordinate Counseling · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>Human Resources Management is the competency cluster that most directly exposes the gap between officers who know leadership principles and officers who can actually implement them within the legal and organizational constraints that govern the employment relationship. In EMS, this gap has direct patient safety implications: an officer who cannot navigate progressive discipline effectively, manage leave policies legally, or conduct an investigation without contaminating it is an organizational liability regardless of their clinical excellence.</p>
+
+<p>NEMSMA is explicit that HR knowledge at the Managing and Executive levels includes substantial legal literacy — employment law, labor relations, EEO compliance, and the procedural requirements that turn leadership intentions into defensible organizational actions.</p>
+
+<h2>The Five HR Management Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA HR MANAGEMENT — PILLAR 3</span>
+    <div class="ig-title">Five Competencies · From Supervision to Employment Law</div>
+    <div class="ig-sub">HR Management scales from personnel supervision at Supervising to organizational policy and legal compliance at Executive.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Competency 1</div>
+      <div class="ig-fw-title">Personnel Management</div>
+      <div class="ig-fw-desc"><strong>S:</strong> Manages direct reports professionally and fairly — scheduling, performance tracking, corrective action. <strong>M:</strong> Develops processes to ensure all supervisors manage personnel professionally and consistently. <strong>E:</strong> Ensures the organization maintains comprehensive personnel management standards that protect employees and the organization.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Competency 2</div>
+      <div class="ig-fw-title">Labor Relations</div>
+      <div class="ig-fw-desc"><strong>S:</strong> Understands and complies with labor contracts and union agreements where applicable. <strong>M:</strong> Demonstrates understanding of labor relations and ensures supervisory compliance. <strong>E:</strong> Manages the organization's relationship with labor representation at the strategic level — contract negotiations, grievance processes, partnership development.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Competency 3</div>
+      <div class="ig-fw-title">Employment Law</div>
+      <div class="ig-fw-desc"><strong>S:</strong> Understands basic employment law as it applies to supervisory decisions. <strong>M:</strong> Understands employment law broadly and ensures supervisors receive training to maintain compliance. <strong>E:</strong> Ensures the organization maintains comprehensive employment law compliance and proactively addresses legal risk before incidents occur.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Competency 4</div>
+      <div class="ig-fw-title">EEO Compliance</div>
+      <div class="ig-fw-desc"><strong>S:</strong> Understands and complies with EEO requirements in all supervisory decisions. <strong>M:</strong> Ensures EEO compliance throughout the division and trains supervisors on requirements. <strong>E:</strong> Builds organizational culture that values diversity and inclusion as both legal requirements and operational assets — ensuring EEO compliance is embedded in hiring, promotion, and performance management systems.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;grid-column:1/-1;">
+      <div class="ig-fw-label">Competency 5</div>
+      <div class="ig-fw-title">Discipline and Accountability</div>
+      <div class="ig-fw-desc"><strong>S:</strong> Applies progressive discipline consistently and documentably — verbal counseling, written warning, suspension, termination — according to agency policy and Just Culture principles. <strong>M:</strong> Develops processes to ensure all supervisors apply discipline consistently, legally, and documentably. <strong>E:</strong> Ensures the organization maintains a progressive discipline system that is fair, legally defensible, and aligned with Just Culture principles that distinguish between system failures and individual negligence.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common HR failure in EMS oral boards is not illegal behavior — it is inconsistency. Officers who apply discipline differently to different employees based on personal relationships, seniority, or likability are creating equal employment liability even when no individual action is discriminatory. Consistent, documented, policy-aligned discipline is the standard. Name it that way in your responses.</div>
+</div>
+
+<h2>The Four Types of Justice — Fairness in HR Decisions</h2>
+<p>When HR scenarios arise in oral boards, the officer who can name the type of fairness at stake — and speak to it explicitly — is demonstrating S-level performance. The Four Types of Justice provide the analytical framework for any fairness or discipline question.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ FOUR TYPES OF JUSTICE — EMS HR FRAMEWORK</span>
+    <div class="ig-title">The Fairness Architecture in Personnel Decisions</div>
+    <div class="ig-sub">Name the type of justice at stake before describing your response. This is the A (Apply) step in L·E·A·D for any Bucket 1 — Personnel Performance, Bucket 3 — Subordinate Counseling, or Bucket 4 — Policy &amp; Ethics question.</div>
+  </div>
+  <div class="hard-grid">
+    <div class="hard-cell">
+      <div class="hard-letter" style="font-size:1.8rem;">DJ</div>
+      <div class="hard-word">Distributive Justice — Are Outcomes Fair?</div>
+      <div class="hard-desc">The degree to which outcomes are perceived as fair relative to what was invested or relative to what others in similar situations received. When employees believe discipline was disproportionate — "why did they get suspended and I only got a warning for the same thing?" — they are raising a Distributive Justice concern.</div>
+      <div class="hard-ems">In oral boards: "My response addresses the Distributive Justice dimension — I need to ensure that the consequence is proportional to the behavior and consistent with how similar situations have been handled."</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter" style="font-size:1.8rem;">IJ</div>
+      <div class="hard-word">Interpersonal Justice — Were They Treated With Respect?</div>
+      <div class="hard-desc">The degree to which people feel they were treated with dignity and respect during a process. An employee can accept a negative outcome if they felt heard, respected, and treated with professionalism throughout. An employee who receives a technically correct discipline with dismissiveness or disrespect experiences Interpersonal Justice failure regardless of the outcome's accuracy.</div>
+      <div class="hard-ems">In oral boards: "The Interpersonal Justice dimension requires that regardless of the outcome of this process, this employee is treated with dignity and professionalism throughout. That is not negotiable."</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter" style="font-size:1.8rem;">InfoJ</div>
+      <div class="hard-word">Informational Justice — Were They Told Why?</div>
+      <div class="hard-desc">The degree to which people receive adequate explanations for decisions that affect them. Employees who receive corrective action or policy changes without understanding the reasoning behind them experience Informational Justice failure. Transparency about why a decision was made — even when the decision is negative — dramatically increases perceived fairness.</div>
+      <div class="hard-ems">In oral boards: "The Informational Justice element means I need to clearly explain what the performance standard is, how this behavior fell below it, and what the reasoning behind the corrective action is."</div>
+    </div>
+    <div class="hard-cell">
+      <div class="hard-letter" style="font-size:1.8rem;">PJ</div>
+      <div class="hard-word">Procedural Justice — Was the Process Fair?</div>
+      <div class="hard-desc">The degree to which the process used to reach a decision was fair, consistent, and unbiased. Employees may accept outcomes they disagree with if they believe the process was fair. This is why consistent application of progressive discipline policy is so important — the process is the protection, for the employee and the organization simultaneously.</div>
+      <div class="hard-ems">In oral boards: "The Procedural Justice element requires that I follow agency policy consistently — same process, same documentation, same standards — regardless of the individual involved or the personal relationships at stake."</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The HR Response Template — Bucket 1 — Personnel Performance, Bucket 3 — Subordinate Counseling, and Bucket 4 — Policy &amp; Ethics</span>
+  <p>Label: Personnel Performance / Counseling / Policy. Engage: What happened, who is involved, what is the history? Apply: Progressive discipline framework + relevant Justice type + Just Culture analysis (system failure or individual negligence?). Deliver: "Every personnel decision I make is grounded in consistency, documentation, and respect for the person being held accountable. My job is to be fair — not to be liked." Close with Courage or Ownership from T·C·H·O·E·D·S.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, billing regulations, and labor laws vary by state, jurisdiction, and agency. Always consult your agency's policies, medical director, legal counsel, and applicable state and federal regulations before making operational decisions. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5 HR Competencies</span>
+  <div class="sbar-card"><strong>Personnel Management</strong>Professional, fair, consistent, documented.</div>
+  <div class="sbar-card"><strong>Labor Relations</strong>Union contracts. Grievance process. Strategic partnership at E.</div>
+  <div class="sbar-card"><strong>Employment Law</strong>Know enough to avoid liability. Know when to involve HR or counsel.</div>
+  <div class="sbar-card"><strong>EEO Compliance</strong>Legal requirement + operational asset. Embedded in all people decisions.</div>
+  <div class="sbar-card"><strong>Discipline &amp; Accountability</strong>Progressive. Consistent. Documented. Just Culture aligned.</div>
+  <span class="sbar-label">Four Types of Justice</span>
+  <div class="sbar-card accent-gold"><strong>Distributive</strong>Is the outcome proportional and consistent?</div>
+  <div class="sbar-card accent-gold"><strong>Interpersonal</strong>Were they treated with dignity throughout?</div>
+  <div class="sbar-card accent-gold"><strong>Informational</strong>Did they understand why the decision was made?</div>
+  <div class="sbar-card accent-gold"><strong>Procedural</strong>Was the process fair, consistent, and policy-aligned?</div>
+  <span class="sbar-label">Next Up</span>
+  <div class="sbar-card accent-ems"><strong>Chapter 4</strong>Field Supervision Fundamentals — ICS/NIMS, MCI command, system status management.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Influencing</button>
+  <div class="lnb-info"><div class="lnb-name">HR Management — Legal Foundations + Personnel Leadership</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 3 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

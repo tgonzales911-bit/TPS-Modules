@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 10 — Labor Relations, HR Strategy &amp; Workforce Management | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Grievance ladder */
+.grievance-ladder{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.grievance-step{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.grievance-num{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.grievance-num-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.grievance-num-val{font-family:'EB Garamond',serif;font-size:1.6rem;font-weight:800;line-height:1;}
+.grievance-content{background:var(--navy-deep);padding:1rem 1.25rem;}
+.grievance-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.grievance-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.grievance-officer{font-size:0.83rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* FLSA calc */
+.flsa-block{padding:1.25rem 1.4rem;}
+.flsa-row{display:grid;grid-template-columns:1fr auto 1fr;gap:0.75rem;align-items:center;padding:0.7rem 0;border-bottom:1px solid rgba(201,168,76,0.08);}
+.flsa-row:last-child{border-bottom:none;padding-top:1rem;}
+.flsa-label{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-dark-2);}
+.flsa-op{font-family:'EB Garamond',serif;font-size:1.6rem;color:var(--gold);font-weight:800;text-align:center;}
+.flsa-value{font-size:0.9rem;color:var(--on-dark-1);}
+/* Retention compare */
+.retention-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.retention-col{background:var(--navy-deep);padding:1.25rem;}
+.retention-header{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+.retention-item{font-size:0.9rem;color:var(--on-dark-2);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);line-height:1.5;}
+.retention-item:last-child{border-bottom:none;}
+/* Pipeline */
+.pipeline-grid{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.pipeline-row{display:grid;grid-template-columns:100px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.pipeline-stage{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.pipeline-stage-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.pipeline-stage-name{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:800;line-height:1.1;}
+.pipeline-content{background:var(--navy-deep);padding:0.95rem 1.25rem;}
+.pipeline-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.pipeline-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+.pipeline-officer{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:4px;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-fw-grid,.ig-map-grid,.fw-grid,.fw-grid-3,.retention-grid{grid-template-columns:1fr;}.grievance-step,.pipeline-row{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Labor Relations Fundamentals</button>
+    <button class="nav-pill" onclick="showLesson(1)">The CBA</button>
+    <button class="nav-pill" onclick="showLesson(2)">Grievance &amp; Arbitration</button>
+    <button class="nav-pill" onclick="showLesson(3)">HR Strategy</button>
+    <button class="nav-pill" onclick="showLesson(4)">Workforce Pipeline</button>
+    <button class="nav-pill" onclick="showLesson(5)">Retention Strategy</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 10 · NEMSMA Pillars 3 &amp; 4 · Phase 2</div>
+    <div class="mh-track-badge">◆ Managing Officer Track · Workforce Leadership</div>
+    <h1 class="mh-title"><em>Labor Relations,</em><br>HR Strategy &amp; Workforce Management</h1>
+    <p class="mh-sub">The quality systems from Chapter 9 are only as strong as the workforce that executes them. Managing Officers who understand labor law, collective bargaining, and workforce strategy protect their organizations from legal exposure, retain the people they invest in, and build pipelines that don't leave them vulnerable when key personnel leave.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. Labor relations fundamentals — the EMS employment landscape, FLSA and the 7(k) exemption for public safety overtime. The Collective Bargaining Agreement — what it governs, how to read it, and the past practice trap. The grievance process from informal resolution to arbitration — and the Managing Officer's role at each step. HR strategy — hiring, onboarding, performance management, and protected class navigation. Workforce pipeline and succession planning — building the bench before it's empty. Retention strategy at the Managing Officer level — the levers that actually reduce turnover.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — LABOR RELATIONS FUNDAMENTALS ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 1 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Labor Relations Fundamentals —<br><em>The EMS Employment Landscape</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Leading Others · HR Management</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>EMS is one of the most legally complex employment environments in public safety. Providers may be government employees or private-sector employees. They may work under collective bargaining agreements or as at-will employees. They may be covered by FLSA public safety exemptions or by standard overtime rules. They operate under medical director authority and organizational HR authority simultaneously. The Managing Officer who does not understand this landscape will eventually make an employment decision that creates significant legal exposure — not from malicious intent, but from incomplete knowledge of the rules governing the relationship.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Labor Relations Context</span>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Follows the CBA and HR policies. Escalates labor relations questions to the Managing Officer. Does not make independent interpretations of contract language.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer ◆ Primary Level This Chapter</strong> — Manages within the CBA. Handles Step 1 and Step 2 grievances. Makes disciplinary decisions within policy. Consults HR for complex situations. Understands FLSA obligations for their workforce.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Negotiates or participates in CBA negotiation. Manages Step 3 and arbitration-level grievances. Sets HR strategy and workforce policy.</span>
+  </div>
+  <div class="level-key-note">Labor law varies significantly by state — what applies in a right-to-work state may not apply in a state with strong public employee collective bargaining rights. Always consult HR and legal counsel before acting on specific labor law questions.</div>
+</div>
+
+<h2>The EMS Employment Landscape — Four Environments</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS EMPLOYMENT ENVIRONMENTS — FOUR TYPES</span>
+    <div class="ig-title">Who Your Providers Are, Who They Work For, and What Rules Apply</div>
+    <div class="ig-sub">The Managing Officer's labor relations obligations depend entirely on which employment environment they operate in. Know yours before you make any disciplinary, scheduling, or compensation decision.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Environment 1</div>
+      <div class="ig-fw-title">Government EMS — Unionized</div>
+      <div class="ig-fw-desc">Municipal or county EMS agencies where providers are government employees represented by a union (IAFF, AFSCME, Teamsters, independent EMS locals). Employment governed by the Collective Bargaining Agreement + civil service rules + applicable state public employment relations law. Most complex environment. The CBA is the operating document. <strong style="color:var(--on-dark-1);">Managing Officer rule:</strong> You cannot take any action the CBA does not authorize. When in doubt, consult HR before acting.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Environment 2</div>
+      <div class="ig-fw-title">Government EMS — Non-Unionized</div>
+      <div class="ig-fw-desc">Government employees without union representation. Governed by civil service rules, personnel policy manual, and applicable state and federal employment law. More flexibility than unionized environment but still significantly constrained compared to at-will employment. Progressive discipline and due process requirements apply even without a CBA. <strong style="color:var(--on-dark-1);">Managing Officer rule:</strong> Follow the personnel policy manual exactly. Deviating from written policy creates liability regardless of the merits.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Environment 3</div>
+      <div class="ig-fw-title">Private EMS — Unionized</div>
+      <div class="ig-fw-desc">Private ambulance or hospital-based EMS where providers have organized under the NLRA (National Labor Relations Act) rather than state public employment law. Similar CBA structure to government union environment but under federal NLRA jurisdiction. Unfair Labor Practice (ULP) charges filed with the NLRB rather than state PERB. <strong style="color:var(--on-dark-1);">Managing Officer rule:</strong> NLRA protects employees' right to organize and engage in concerted protected activity. Interfering with these rights — even informally — is an Unfair Labor Practice.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Environment 4</div>
+      <div class="ig-fw-title">Private EMS — At-Will</div>
+      <div class="ig-fw-desc">Private agency employees without union representation. At-will employment means either party can terminate the relationship without cause — subject to anti-discrimination laws, contractual exceptions, and implied contract doctrines. Greatest management flexibility but still governed by FLSA, Title VII, ADA, FMLA, and state employment law. <strong style="color:var(--on-dark-1);">Managing Officer rule:</strong> At-will does not mean act arbitrarily. Employment decisions that can be shown to be discriminatory, retaliatory, or in violation of protected class status create liability regardless of at-will doctrine.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most dangerous Managing Officer assumption: that the employment environment you grew up in as a provider is the same one you are now managing within. Officers promoted from within may have seen labor relations handled informally for years without consequence — and then discover, as a Managing Officer, that the informal practices constitute CBA violations, past practice doctrines, or Unfair Labor Practices. Learn the rules of your environment from HR before your first disciplinary action.</div>
+</div>
+
+<h2>FLSA and the 7(k) Exemption — Public Safety Overtime</h2>
+<p>The Fair Labor Standards Act governs overtime pay for most U.S. employees. For public safety employees — including EMS providers — Section 7(k) of the FLSA creates a specific exemption that allows overtime to be calculated over a work period of 7 to 28 days rather than the standard 40-hour workweek. This is critical for Managing Officers because it directly affects overtime liability calculations, scheduling decisions, and budget projections.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ FLSA SECTION 7(k) — PUBLIC SAFETY OVERTIME EXEMPTION</span>
+    <div class="ig-title">How EMS Overtime Is Calculated Under the 7(k) Exemption</div>
+    <div class="ig-sub">The 7(k) exemption applies to public agencies employing firefighters or law enforcement officers — and by extension, EMS providers employed by qualifying public agencies. Private EMS agencies typically do not qualify. Consult your agency's legal counsel to confirm applicability.</div>
+  </div>
+  <div class="flsa-block">
+    <div class="flsa-row">
+      <div class="flsa-label">Standard FLSA Overtime Threshold</div>
+      <div class="flsa-op">=</div>
+      <div class="flsa-value" style="color:var(--on-dark-1);">40 hours per 7-day workweek. Overtime paid at 1.5× for all hours over 40 in each 7-day period.</div>
+    </div>
+    <div class="flsa-row">
+      <div class="flsa-label">7(k) Work Period Options</div>
+      <div class="flsa-op">→</div>
+      <div class="flsa-value" style="color:var(--on-dark-1);">7 to 28 days. Agency selects the work period. Must be established in advance and applied consistently. Most common for EMS: 14-day or 28-day work periods.</div>
+    </div>
+    <div class="flsa-row">
+      <div class="flsa-label">14-Day Work Period Overtime Threshold</div>
+      <div class="flsa-op">=</div>
+      <div class="flsa-value" style="color:var(--ems-text);font-weight:600;">80 hours per 14-day period before overtime applies. (40 hrs/week × 2 = 80 hrs standard; 7(k) threshold for EMS is also 80 hrs in 14-day period)</div>
+    </div>
+    <div class="flsa-row">
+      <div class="flsa-label">28-Day Work Period Overtime Threshold</div>
+      <div class="flsa-op">=</div>
+      <div class="flsa-value" style="color:var(--gold);font-weight:600;">212 hours per 28-day period before overtime applies for law enforcement (171 hrs for firefighters). EMS threshold varies — confirm with legal counsel and your agency's established work period.</div>
+    </div>
+    <div class="flsa-row" style="background:rgba(201,168,76,0.06);">
+      <div class="flsa-label" style="color:var(--gold);">Managing Officer Implication</div>
+      <div class="flsa-op" style="color:var(--gold);">→</div>
+      <div class="flsa-value" style="color:var(--on-dark-1);">Scheduling decisions that inadvertently push hours over the applicable 7(k) threshold trigger overtime liability. Managing Officers must track scheduled and actual hours against the correct threshold for their work period — not against a 40-hour/week assumption.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The 7(k) exemption does not eliminate overtime — it changes the threshold at which it is triggered. And it does not override CBA overtime provisions that are more generous to employees than the FLSA minimum. If the CBA defines overtime at a lower threshold than 7(k), the CBA governs. The FLSA is a floor, not a ceiling. Managing Officers operating under both a CBA and a 7(k) work period must know both.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Employment Environments</span>
+  <div class="sbar-card accent-ems"><strong>Government Unionized</strong>CBA + civil service + state public employment law. Most complex. No action the CBA doesn't authorize.</div>
+  <div class="sbar-card accent-gold"><strong>Government Non-Union</strong>Personnel policy + civil service + employment law. Follow written policy exactly — deviating creates liability.</div>
+  <div class="sbar-card accent-green"><strong>Private Unionized</strong>NLRA jurisdiction. ULP charges go to NLRB. Concerted protected activity — don't interfere.</div>
+  <div class="sbar-card"><strong>Private At-Will</strong>Most flexibility but not arbitrary. Discriminatory or retaliatory decisions create liability regardless of at-will doctrine.</div>
+  <span class="sbar-label">FLSA 7(k) Key Points</span>
+  <div class="sbar-card accent-gold"><strong>What It Does</strong>Moves the overtime threshold from 40 hrs/7-day week to a longer work period threshold. 14-day and 28-day most common in EMS.</div>
+  <div class="sbar-card accent-red"><strong>What It Doesn't Do</strong>Doesn't eliminate overtime. Doesn't override a CBA with a more generous threshold. The CBA is the floor where it exceeds FLSA.</div>
+  <div class="sbar-card"><strong>Managing Officer Risk</strong>Scheduling over the 7(k) threshold without tracking it triggers retroactive overtime liability. Know your work period and threshold before scheduling.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 9</button>
+  <div class="lnb-info"><div class="lnb-name">Labor Relations Fundamentals</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">The CBA →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — THE CBA ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 2 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">The Collective Bargaining Agreement —<br><em>Working Within the Contract</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Leading Others · HR Management</span><span class="lh-meta-item">Bucket 4 — Policy &amp; Ethics · Bucket 1 — Personnel Performance</span></div>
+</div>
+
+<p>The Collective Bargaining Agreement is simultaneously the Managing Officer's operating manual and their legal constraint. It defines what you can do, what you must do, and what you are prohibited from doing in virtually every significant employment decision: scheduling, overtime assignment, discipline, seniority, promotion, leave, and working conditions. The Managing Officer who has not read their CBA — who manages by intuition and prior experience — is a liability to their organization regardless of how good their intentions are.</p>
+
+<h2>What the CBA Governs — The Six Core Provisions</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ COLLECTIVE BARGAINING AGREEMENT — SIX CORE PROVISION AREAS</span>
+    <div class="ig-title">What the Contract Controls and Why Managing Officers Must Know It</div>
+    <div class="ig-sub">CBA violations — even unintentional ones — create grievances, arbitration exposure, and remedies that can include back pay, reinstatement, and disciplinary reversal. Knowing the contract is not optional for Managing Officers in unionized environments.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">01</div>
+      <div>
+        <div class="ig-acro-word">Wages, Benefits, and Compensation</div>
+        <div class="ig-acro-desc">Salary scales, step increases, longevity pay, shift differentials, holiday pay, and overtime premium rates. The CBA may define overtime as anything over 8 hours in a shift — a threshold far lower than the FLSA 7(k) threshold. The more employee-favorable provision governs. Managing Officers who calculate overtime against FLSA thresholds when the CBA sets a lower threshold will generate sustained grievances.</div>
+        <div class="ig-acro-ems">Know your CBA's overtime trigger. It may not be 40 hours.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">02</div>
+      <div>
+        <div class="ig-acro-word">Hours of Work and Scheduling</div>
+        <div class="ig-acro-desc">Shift lengths, rotation schedules, minimum staffing requirements, scheduling change notice requirements, and call-back provisions. Many CBAs require a minimum number of hours' notice before a schedule change or a specific process for mandatory overtime assignment — often by inverse seniority (least senior available employee first). Scheduling in violation of these provisions is the most common source of non-disciplinary grievances.</div>
+        <div class="ig-acro-ems">Before changing anyone's schedule, check the contract for notice requirements and scheduling change procedures. What feels like a simple operational adjustment may require a process the CBA defines explicitly.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">03</div>
+      <div>
+        <div class="ig-acro-word">Discipline and Discharge</div>
+        <div class="ig-acro-desc">Most CBAs require "just cause" for disciplinary action and define a progressive discipline ladder. Disciplinary actions that skip steps in the progression, are disproportionate to the infraction, or lack adequate documentation and notice are subject to grievance and likely reversal at arbitration. "Just cause" is typically evaluated against a seven-factor standard — and arbitrators take it seriously even when the underlying conduct was genuinely problematic.</div>
+        <div class="ig-acro-ems">The just cause standard: Was the employee on notice? Was the rule reasonable? Was the investigation adequate? Was the evidence sufficient? Was the penalty consistent with past practice? Was progressive discipline followed? Were mitigating factors considered? Document against all seven before any significant disciplinary action.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">04</div>
+      <div>
+        <div class="ig-acro-word">Seniority Rights</div>
+        <div class="ig-acro-desc">Seniority typically governs shift preference, vacation selection, layoff order, and recall order. In some CBAs, seniority affects overtime assignment sequence and promotional preference. The Managing Officer who assigns shift preferences by personal preference rather than seniority has created a grievance regardless of which employee is preferred. Seniority provisions must be applied mechanically — not interpreted.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">05</div>
+      <div>
+        <div class="ig-acro-word">Grievance and Arbitration Procedure</div>
+        <div class="ig-acro-desc">The CBA defines the process for raising and resolving disputes about contract interpretation or alleged violations. This is covered in detail in Lesson 3. Key Managing Officer obligation: grievance timelines are contractual. A grievance not responded to within the CBA's defined timeframe is typically granted by default — even if the underlying grievance had no merit.</div>
+        <div class="ig-acro-ems">Grievance response deadlines are non-negotiable contract obligations. Calendar them the moment you receive a grievance.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">06</div>
+      <div>
+        <div class="ig-acro-word">Management Rights Clause</div>
+        <div class="ig-acro-desc">Most CBAs include a management rights clause that explicitly reserves certain decisions to management — typically the right to direct the workforce, determine staffing levels, establish work standards, and introduce new technology. This clause defines the space where management can act unilaterally. Understanding its scope — and its limits — is what distinguishes Managing Officers who know their authority from those who either over-reach or unnecessarily defer.</div>
+        <div class="ig-acro-ems">Read your management rights clause carefully. It is the section that tells you what you can do without negotiating or consulting the union. Acting outside this clause — or failing to act within it — both create problems.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Past Practice Doctrine — The Unwritten Rule That Can Trap You</h2>
+<p>Past practice doctrine is one of the most important and least understood labor relations concepts for Managing Officers. It holds that an established pattern of conduct — even one not written in the CBA — can become a binding condition of employment if it has been applied consistently, knowingly, and without objection over a sufficient period of time.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">How Past Practice Develops</div>
+    <div class="fw-card-title">When Informal Accommodation Becomes Obligation</div>
+    <div class="fw-card-desc">A supervisor allows providers to leave ten minutes early at shift end when the unit is restocked and paperwork is complete. This happens consistently for three years across multiple supervisors. No one objects. When a new Managing Officer ends this practice, the union files a grievance — and wins — based on established past practice. The CBA says nothing about early departure. The conduct created the right.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">How to Protect Against It</div>
+    <div class="fw-card-title">Document, Notify, and Reserve Rights</div>
+    <div class="fw-card-desc">When allowing an accommodation that is not in the CBA: document that it is a one-time or temporary accommodation, not an establishment of practice. Notify the union in writing if a significant accommodation is made. When inheriting a supervisory position: ask HR to identify any informal practices that have been established. Do not rely on predecessor conduct as guidance without verifying its CBA alignment. Change established practices through the contract negotiation process — not through unilateral management action.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The CBA Reading Rule — Before You Act, Read the Article</span>
+  <p>Before making any significant management decision involving a unionized employee — discipline, schedule change, overtime assignment, leave denial, work assignment modification — identify the relevant CBA article and read it. Not from memory. From the document. The Managing Officer who says "I know the contract" and acts from memory will eventually make a decision the contract does not authorize. The one who reads the relevant article before acting builds a defensible record and avoids grievances that reverse their decisions months later at arbitration.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">6 CBA Provision Areas</span>
+  <div class="sbar-card accent-gold"><strong>Wages and Overtime</strong>CBA may set overtime trigger below FLSA 7(k). More favorable provision governs. Know your CBA threshold — not just FLSA.</div>
+  <div class="sbar-card accent-ems"><strong>Scheduling</strong>Notice requirements, change procedures, mandatory OT sequence (often inverse seniority). Simplest-seeming changes may require a defined process.</div>
+  <div class="sbar-card accent-red"><strong>Discipline — Just Cause</strong>Seven-factor standard. Skipping progressive steps = reversal at arbitration. Document against all seven before acting.</div>
+  <div class="sbar-card"><strong>Seniority Rights</strong>Apply mechanically — not by preference. Shift bids, vacation, layoff order. Not a management judgment call where the CBA speaks.</div>
+  <div class="sbar-card accent-red"><strong>Grievance Timelines</strong>Contractual deadlines. Miss them = grievance granted by default regardless of merit. Calendar immediately on receipt.</div>
+  <div class="sbar-card accent-gold"><strong>Management Rights Clause</strong>What you CAN do without negotiating. Know the scope and limits. Neither over-reach nor unnecessarily defer.</div>
+  <span class="sbar-label">Past Practice Doctrine</span>
+  <div class="sbar-card accent-red"><strong>The Trap</strong>Consistent informal accommodations become binding obligations. Three years of "we always do it this way" = a grievance when you stop.</div>
+  <div class="sbar-card"><strong>The Protection</strong>Document accommodations as one-time. Notify union in writing for significant ones. Change practices through negotiation — not unilateral action.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Labor Relations Fundamentals</button>
+  <div class="lnb-info"><div class="lnb-name">The Collective Bargaining Agreement</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Grievance &amp; Arbitration →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — GRIEVANCE AND ARBITRATION ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 3 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Grievance &amp; Arbitration —<br><em>The Dispute Resolution Ladder</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Leading Others · HR Management</span><span class="lh-meta-item">Bucket 4 — Policy &amp; Ethics · Bucket 2 — Interpersonal Conflict</span></div>
+</div>
+
+<p>A grievance is a formal claim that the employer has violated a specific provision of the Collective Bargaining Agreement. It is not a complaint, a disagreement, or an expression of dissatisfaction. It is a legal assertion — and it triggers a defined contractual process with specific timelines, response requirements, and potential consequences. The Managing Officer who treats a grievance as a personal affront rather than a contractual process will both mismanage it and miss the intelligence it contains about what is actually happening in their division.</p>
+
+<h2>The Grievance Ladder — Four Steps</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE GRIEVANCE PROCESS — FOUR-STEP LADDER</span>
+    <div class="ig-title">From Informal Resolution to Binding Arbitration</div>
+    <div class="ig-sub">Most grievances are resolved early in the process — at Step 1 or Step 2. The Managing Officer's performance in the first two steps determines whether the organization resolves disputes efficiently or allows them to compound into expensive arbitration proceedings.</div>
+  </div>
+  <div class="grievance-ladder">
+    <div class="grievance-step">
+      <div class="grievance-num" style="background:rgba(26,92,58,0.12);">
+        <div class="grievance-num-label" style="color:#60D090;">Step</div>
+        <div class="grievance-num-val" style="color:#60D090;">1</div>
+      </div>
+      <div class="grievance-content">
+        <div class="grievance-title">Informal Resolution — Supervisor Level</div>
+        <div class="grievance-desc">The employee or union representative brings the concern to the immediate supervisor (Supervising Officer) for informal resolution. Many issues are resolved here without escalating to a formal written grievance. The supervisor listens, investigates if needed, and responds within the CBA timeframe.</div>
+        <div class="grievance-officer">Managing Officer role: Ensure supervisors understand the CBA provision at issue. Provide guidance on the appropriate response. Review draft Step 1 responses before they are delivered. A poorly worded Step 1 response that inadvertently concedes a point becomes the foundation of a Step 2 grievance argument.</div>
+      </div>
+    </div>
+    <div class="grievance-step">
+      <div class="grievance-num" style="background:rgba(201,168,76,0.1);">
+        <div class="grievance-num-label" style="color:var(--gold);">Step</div>
+        <div class="grievance-num-val" style="color:var(--gold);">2</div>
+      </div>
+      <div class="grievance-content">
+        <div class="grievance-title">Formal Written Grievance — Managing Officer Level</div>
+        <div class="grievance-desc">If Step 1 does not resolve the issue, the employee or union files a formal written grievance citing the specific CBA article alleged to have been violated. The Managing Officer receives the grievance, investigates the facts, and issues a written response within the CBA's defined timeframe. This response becomes part of the arbitration record if the grievance proceeds.</div>
+        <div class="grievance-officer">Managing Officer rule: Read the specific CBA article cited in the grievance. Review the facts against that article — not against what seems fair or reasonable, but against what the contract says. Consult HR before responding to any grievance involving discipline, termination, or novel contract interpretation. Never respond from memory or urgency. Missing the response deadline grants the grievance.</div>
+      </div>
+    </div>
+    <div class="grievance-step">
+      <div class="grievance-num" style="background:rgba(178,34,34,0.1);">
+        <div class="grievance-num-label" style="color:#E87070;">Step</div>
+        <div class="grievance-num-val" style="color:#E87070;">3</div>
+      </div>
+      <div class="grievance-content">
+        <div class="grievance-title">Senior Management Review — Executive Level</div>
+        <div class="grievance-desc">If Step 2 does not resolve the grievance, it escalates to senior management — typically the Executive Officer, HR Director, or their designee. This step may include a formal hearing or conference with union leadership. The Step 3 response is often the last opportunity to resolve the grievance before the expensive, time-consuming arbitration process begins.</div>
+        <div class="grievance-officer">Managing Officer role: Provide complete documentation of all prior steps to Executive leadership. Attend Step 3 meetings when requested. The Managing Officer's documentation quality at Steps 1 and 2 directly determines how defensible the position is at Step 3 and beyond.</div>
+      </div>
+    </div>
+    <div class="grievance-step">
+      <div class="grievance-num" style="background:rgba(100,20,20,0.15);">
+        <div class="grievance-num-label" style="color:#E87070;">Step</div>
+        <div class="grievance-num-val" style="color:#E87070;">4</div>
+      </div>
+      <div class="grievance-content">
+        <div class="grievance-title">Arbitration — Binding Third-Party Decision</div>
+        <div class="grievance-desc">If the grievance is not resolved internally, the union may demand arbitration. A neutral arbitrator — selected jointly by management and the union or from a panel — hears evidence and issues a binding decision. Arbitration is expensive (arbitrators charge $1,500–$3,000+ per day, plus preparation time), slow (often 6–18 months from demand to decision), and unpredictable. Well-documented grievances are won in the first two steps — not at arbitration.</div>
+        <div class="grievance-officer">The Managing Officer's legacy in arbitration: every Step 2 response, every investigation memo, every witness statement becomes exhibit evidence. Officers who documented carefully at Steps 1 and 2 give management counsel something to work with. Officers who responded casually or inconsistently give the union's advocate their best arguments.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most important thing a Managing Officer can do to minimize arbitration exposure: resolve legitimate grievances at Step 2. When the investigation reveals the union is right — the CBA was violated, the process was flawed, or the discipline was inconsistent — settling at Step 2 is not weakness. It is organizational intelligence. A Step 2 settlement costs an hour of meeting time. Arbitration costs tens of thousands of dollars and months of management attention. Winning the principle at arbitration while losing the analysis on cost and disruption is not a victory.</div>
+</div>
+
+<h2>When to Settle, When to Defend</h2>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Settle When</div>
+    <div class="fw-card-title">The Position Is Weak or the Cost Is Disproportionate</div>
+    <div class="fw-card-desc">The investigation reveals the CBA was violated. Progressive discipline was not properly followed. Evidence is insufficient to sustain the discipline. The precedent value of winning is low and the precedent cost of losing is high. Settling is not losing — it is efficient dispute resolution that preserves relationships and organizational resources for disputes worth fighting.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Defend When</div>
+    <div class="fw-card-title">The Position Is Strong and Precedent Matters</div>
+    <div class="fw-card-desc">The documentation is solid, the CBA language supports management's position, and the union's interpretation would create an unacceptable operational precedent if sustained at arbitration. Defending every grievance regardless of merit is as poor a strategy as settling every grievance reflexively — it is expensive and signals that management will always capitulate. The decision to arbitrate should be strategic, not emotional.</div>
+  </div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4-Step Grievance Ladder</span>
+  <div class="sbar-card accent-green"><strong>Step 1 — Informal</strong>Supervisor level. Managing Officer ensures supervisors know the CBA provision and reviews their response before delivery.</div>
+  <div class="sbar-card accent-gold"><strong>Step 2 — Formal Written</strong>Managing Officer level. Read the cited CBA article. Investigate against the contract, not fairness. Consult HR. Never miss the deadline.</div>
+  <div class="sbar-card accent-red"><strong>Step 3 — Senior Review</strong>Executive level. Managing Officer provides complete documentation. Step 1–2 quality determines Step 3 defensibility.</div>
+  <div class="sbar-card accent-red"><strong>Step 4 — Arbitration</strong>Binding. Expensive ($1,500–$3,000+/day). Slow (6–18 months). Every document from Steps 1–2 is exhibit evidence. Win early or pay later.</div>
+  <span class="sbar-label">Grievance Response Rules</span>
+  <div class="sbar-card accent-red"><strong>Deadlines Are Non-Negotiable</strong>Miss the CBA response deadline = grievance granted by default. Calendar it immediately.</div>
+  <div class="sbar-card"><strong>Respond to the Contract</strong>Not to what seems fair. The question is always: what does the CBA article say?</div>
+  <span class="sbar-label">Settle vs. Defend</span>
+  <div class="sbar-card accent-gold"><strong>Settle When Weak</strong>Weak documentation, skipped progressive steps, inconsistent past practice. Settling at Step 2 is efficient. Arbitrating a weak case is expensive.</div>
+  <div class="sbar-card accent-ems"><strong>Defend When Strong + Precedent Matters</strong>Solid documentation, clear CBA support, high precedent value. Strategic decision — not emotional.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← The CBA</button>
+  <div class="lnb-info"><div class="lnb-name">Grievance &amp; Arbitration</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">HR Strategy →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — HR STRATEGY ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 4 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillars 3 &amp; 4</div>
+  <h1 class="lh-title">HR Strategy —<br><em>Hiring, Performance Management, and Protected Class Navigation</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Leading Others · HR Management</span><span class="lh-meta-item">Bucket 1 — Personnel Performance · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>Human resources strategy at the Managing Officer level is not about executing individual HR transactions — it is about designing the people systems that determine the quality, stability, and legal compliance of the workforce. Hiring, onboarding, performance management, and protected class accommodation are four interconnected systems that either work together to build a high-performing, legally compliant workforce or undermine each other when any one is neglected.</p>
+
+<h2>Hiring for the Division — Managing Officer Involvement</h2>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">What Managing Officers Control in Hiring</div>
+    <div class="fw-card-title">Role Definition, Standards, and Selection Criteria</div>
+    <div class="fw-card-desc">Managing Officers typically do not make final hiring decisions in isolation — HR, civil service processes, or CBA provisions shape the process. But Managing Officers define what the role requires, what standards the candidate must meet, and what job-related selection criteria will be used. The Managing Officer who leaves these definitions vague gets a process that produces inconsistent results and discrimination exposure. Job-related criteria, consistently applied, are the legal and operational foundation of effective hiring.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">The Legal Constraint in Hiring</div>
+    <div class="fw-card-title">Protected Classes and Job-Related Standards</div>
+    <div class="fw-card-desc">Title VII (race, color, religion, sex, national origin), the ADA (disability), the ADEA (age 40+), and state equivalents prohibit employment decisions based on protected class membership. Selection criteria that have a disparate impact on a protected class — even without discriminatory intent — are subject to legal challenge unless they can be shown to be job-related and consistent with business necessity. The Managing Officer who sets physical standards, certification requirements, or interview criteria should verify them against legal defensibility with HR before using them.</div>
+  </div>
+</div>
+
+<h2>Protected Class Navigation — Four Federal Laws Every Managing Officer Must Know</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ FEDERAL PROTECTED CLASS LAWS — EMS APPLICATION</span>
+    <div class="ig-title">Four Laws · Managing Officer Obligations and Common Failure Points</div>
+    <div class="ig-sub">These are the minimum federal protections. State law often provides broader protection. Consult HR for state-specific requirements in your jurisdiction.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">Title VII — Civil Rights Act</div>
+      <div class="ig-fw-title">Race, Color, Religion, Sex, National Origin</div>
+      <div class="ig-fw-desc">Prohibits discrimination in all employment actions — hiring, discipline, promotion, termination, scheduling, and working conditions. Applies to employers with 15+ employees. <strong style="color:var(--on-dark-1);">Common EMS failure points:</strong> Inconsistent discipline across racial groups (disparate treatment), sexual harassment by supervisors or coworkers, religious accommodation denials (shift scheduling conflicts with religious observance). <strong style="color:var(--on-dark-1);">Managing Officer requirement:</strong> Apply all employment policies consistently across all groups. Document the job-related rationale for every significant employment decision.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">ADA — Americans with Disabilities Act</div>
+      <div class="ig-fw-title">Qualified Individuals with Disabilities</div>
+      <div class="ig-fw-desc">Requires reasonable accommodation for qualified individuals with disabilities unless the accommodation would cause undue hardship. A provider with a documented disability that can be accommodated without compromising essential job functions must be accommodated — even if the accommodation is inconvenient. <strong style="color:var(--on-dark-1);">Common EMS failure points:</strong> Denying accommodation requests without the required interactive process, regarding a provider as disabled when they are not (perceived disability), failing to maintain confidentiality of medical information. <strong style="color:var(--on-dark-1);">Managing Officer requirement:</strong> Initiate the interactive process for all accommodation requests. Never make ADA determinations without HR.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">FMLA — Family and Medical Leave Act</div>
+      <div class="ig-fw-title">Qualifying Family and Medical Leave</div>
+      <div class="ig-fw-desc">Provides eligible employees up to 12 weeks of unpaid, job-protected leave per year for qualifying medical and family reasons (serious health condition, birth/adoption, military family leave). Intermittent FMLA — leave taken in discrete increments for chronic conditions — is the most operationally complex FMLA situation for EMS managers because it generates scheduling gaps that cannot be addressed through normal attendance management. <strong style="color:var(--on-dark-1);">Managing Officer requirement:</strong> Notify HR whenever an absence appears to qualify for FMLA — even if the employee has not requested it. Disciplining for FMLA-protected absences is interference with a federal right.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">ADEA — Age Discrimination in Employment Act</div>
+      <div class="ig-fw-title">Workers Age 40 and Older</div>
+      <div class="ig-fw-desc">Prohibits age-based employment discrimination against workers 40+. In EMS, the most common ADEA exposure is in physical fitness standard application — mandatory fitness tests applied only to older workers, or physical standards set at levels that screen out older workers without job-related justification. <strong style="color:var(--on-dark-1);">Common EMS failure points:</strong> Encouraging older paramedics to retire, applying physical standards inconsistently by age group, remarks about age in employment decisions. <strong style="color:var(--on-dark-1);">Managing Officer requirement:</strong> Physical standards must be job-related and consistently applied to all ages. Age-related comments in employment decisions create significant liability regardless of intent.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Performance Management — Building a Documented Record</h2>
+<p>Effective performance management is simultaneously the Managing Officer's most important developmental tool and most critical legal protection. The provider whose performance problems are documented clearly, consistently, and in real time is a provider who can be held accountable through progressive discipline when needed — and whose performance improvement is also documented. The provider whose problems are discussed informally, inconsistently, and without documentation is a provider whose termination will be reversed at grievance or lawsuit.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">The SIMPLE Documentation Standard — Applied to Performance Management</span>
+  <p>Every significant performance conversation — positive or negative — deserves documentation. The SIMPLE standard (from Chapter 5's progressive discipline content) applies: <strong>Specific</strong> (what behavior, what date, what impact), <strong>Impact</strong> (how did this affect patient care, team function, or organizational standards), <strong>Measurable</strong> (what specific standard was met or not met), <strong>Plan</strong> (what is expected going forward, what support is available), <strong>Listen</strong> (what did the employee say — document their response), <strong>Evidence</strong> (what documentation exists supporting this assessment). A performance record built on SIMPLE documentation is a record that survives grievance, arbitration, and litigation.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Hiring — Managing Officer Role</span>
+  <div class="sbar-card accent-gold"><strong>Define Job-Related Criteria</strong>Role requirements + selection standards + consistent application = legal defensibility. Vague criteria = inconsistent results + discrimination exposure.</div>
+  <div class="sbar-card"><strong>Disparate Impact Warning</strong>Standards with disparate impact on protected classes require job-related + business necessity justification. Verify with HR before using.</div>
+  <span class="sbar-label">4 Federal Laws</span>
+  <div class="sbar-card accent-red"><strong>Title VII</strong>Race · color · religion · sex · national origin. Consistent policy application across all groups. Document job-related rationale for every significant decision.</div>
+  <div class="sbar-card accent-gold"><strong>ADA</strong>Reasonable accommodation + interactive process. Never make ADA determinations without HR. Medical information stays confidential.</div>
+  <div class="sbar-card accent-ems"><strong>FMLA</strong>Notify HR when absence appears to qualify — even without employee request. Disciplining FMLA-protected absences = federal interference. Intermittent FMLA is the most complex scheduling challenge.</div>
+  <div class="sbar-card accent-green"><strong>ADEA</strong>Age 40+. Physical standards must be job-related and consistently applied across all ages. Age-related comments in employment decisions = liability.</div>
+  <span class="sbar-label">Performance Documentation</span>
+  <div class="sbar-card accent-gold"><strong>SIMPLE Standard</strong>Specific · Impact · Measurable · Plan · Listen · Evidence. Every significant performance conversation documented. What isn't written didn't happen in a grievance proceeding.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Grievance &amp; Arbitration</button>
+  <div class="lnb-info"><div class="lnb-name">HR Strategy</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Workforce Pipeline →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — WORKFORCE PIPELINE ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 5 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Workforce Pipeline &amp; Succession Planning —<br><em>Building the Bench Before It's Empty</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Mentoring &amp; Development · Pillar 3</span><span class="lh-meta-item">Bucket 8 — Mentoring &amp; Development · Bucket 7 — Goal Setting &amp; Vision</span></div>
+</div>
+
+<p>Succession planning is the organizational practice of identifying and developing the next generation of leaders and specialists before vacancies create operational crises. In the current EMS workforce environment — where a national paramedic shortage is intersecting with rising retirements of experienced providers — the Managing Officer who does not have a succession plan has a strategic vulnerability that no amount of excellent quality management or financial stewardship can compensate for. You cannot run Chapter 9's quality system without the paramedics to execute it.</p>
+
+<h2>The EMS Workforce Pipeline — Five Stages</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE EMS WORKFORCE PIPELINE — FIVE STAGES</span>
+    <div class="ig-title">From Community to Clinical Leadership</div>
+    <div class="ig-sub">A Managing Officer who actively manages all five pipeline stages is building organizational resilience. One who recruits only at Stage 3 (certified paramedic) is competing in the most constrained talent market and leaving the earlier stages to chance.</div>
+  </div>
+  <div class="pipeline-grid">
+    <div class="pipeline-row">
+      <div class="pipeline-stage" style="background:rgba(42,96,144,0.1);">
+        <div class="pipeline-stage-label" style="color:var(--ems-text);">Stage 1</div>
+        <div class="pipeline-stage-name" style="color:var(--ems-text);">Community Outreach</div>
+      </div>
+      <div class="pipeline-content">
+        <div class="pipeline-title">Building EMS Awareness Before the Career Decision</div>
+        <div class="pipeline-desc">High school and community college partnerships, career day participation, volunteer EMS programs, Explorer posts, and community health worker pipelines. The Managing Officer who invests in Stage 1 outreach is shaping the applicant pool 3–5 years in the future — and building the community relationships that NEMSMA Pillar 6 identifies as civic responsibility.</div>
+        <div class="pipeline-officer">Managing Officer action: Establish or strengthen at least one community outreach partnership annually. Track how many external hires come from outreach channels over 3 years.</div>
+      </div>
+    </div>
+    <div class="pipeline-row">
+      <div class="pipeline-stage" style="background:rgba(201,168,76,0.08);">
+        <div class="pipeline-stage-label" style="color:var(--gold);">Stage 2</div>
+        <div class="pipeline-stage-name" style="color:var(--gold);">EMT Development</div>
+      </div>
+      <div class="pipeline-content">
+        <div class="pipeline-title">EMT to Paramedic: The Internal Pipeline Investment</div>
+        <div class="pipeline-desc">Identifying high-potential EMTs within the organization and supporting their advancement to paramedic. Agency-sponsored paramedic education — tuition reimbursement, schedule accommodation, mentorship during training — is the most cost-effective paramedic pipeline strategy available to Managing Officers because it leverages existing employees who already know the culture, the protocols, and the community.</div>
+        <div class="pipeline-officer">Managing Officer action: Identify the three EMTs in the division with the highest paramedic potential. Create an individualized development plan for each. Track time-to-paramedic completion and retention post-certification.</div>
+      </div>
+    </div>
+    <div class="pipeline-row">
+      <div class="pipeline-stage" style="background:rgba(26,92,58,0.1);">
+        <div class="pipeline-stage-label" style="color:#60D090;">Stage 3</div>
+        <div class="pipeline-stage-name" style="color:#60D090;">Paramedic Hire and Onboarding</div>
+      </div>
+      <div class="pipeline-content">
+        <div class="pipeline-title">The Critical First 90 Days</div>
+        <div class="pipeline-desc">Hiring certified paramedics from the external market is Stage 3 — the most competitive stage. Onboarding quality determines whether the hiring investment is retained. Research consistently shows that new employees who experience structured, high-quality onboarding are significantly more likely to remain with the organization at 12 and 24 months. Onboarding is not orientation — it is a 60–90 day process of cultural integration, clinical competency validation, relationship building, and expectation alignment.</div>
+        <div class="pipeline-officer">Managing Officer action: Define the division's 90-day onboarding standard. Assign a formal preceptor (not just a random partner). Schedule structured check-ins at 30, 60, and 90 days. Document the onboarding experience and exit survey responses for continuous improvement.</div>
+      </div>
+    </div>
+    <div class="pipeline-row">
+      <div class="pipeline-stage" style="background:rgba(178,34,34,0.1);">
+        <div class="pipeline-stage-label" style="color:#E87070;">Stage 4</div>
+        <div class="pipeline-stage-name" style="color:#E87070;">Supervisory Identification</div>
+      </div>
+      <div class="pipeline-content">
+        <div class="pipeline-title">Spotting Future Officers While They're Still Providers</div>
+        <div class="pipeline-desc">The Supervising Officer pipeline requires identifying high-potential paramedics 2–3 years before supervisory vacancies occur. Indicators: leadership behavior in field situations, willingness to mentor junior providers, quality improvement engagement, professional development initiative, communication effectiveness across the crew. The Managing Officer who identifies these candidates early can invest in their development through mentoring, stretch assignments, and leadership exposure before the promotion process begins.</div>
+        <div class="pipeline-officer">Managing Officer action: Maintain a confidential development candidate list. Provide at least annual developmental feedback conversations with identified candidates. Create opportunities for them to lead projects, facilitate trainings, or represent the division at inter-agency meetings.</div>
+      </div>
+    </div>
+    <div class="pipeline-row">
+      <div class="pipeline-stage" style="background:rgba(100,100,100,0.08);">
+        <div class="pipeline-stage-label" style="color:var(--on-dark-3);">Stage 5</div>
+        <div class="pipeline-stage-name" style="color:var(--on-dark-3);">Officer Development</div>
+      </div>
+      <div class="pipeline-content">
+        <div class="pipeline-title">Developing Supervising Officers into Managing Officers</div>
+        <div class="pipeline-desc">Once supervisors are in role, the Managing Officer's developmental responsibility continues — providing the coaching, stretch assignments, and feedback that develops Supervising Officers into Managing Officer candidates. This is the develop-your-replacement mindset that organizational resilience requires. The Managing Officer who is irreplaceable is not a strategic asset — they are a single point of failure.</div>
+        <div class="pipeline-officer">Managing Officer action: Every supervisor on the division should have a documented development plan with at least one Managing Officer-level stretch assignment active at all times. Define the competencies required for Managing Officer advancement and give supervisors explicit feedback against them.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The succession planning principle that most Managing Officers resist: developing your replacement is not a threat to your position — it is the evidence that you belong in it. The organization that has a bench of ready candidates below every Managing Officer is an organization that can promote its best people confidently, respond to unexpected departures without crisis, and sustain quality across leadership transitions. That is what T·C·H·O·E·D·S Ownership looks like at the strategic level.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">5-Stage Pipeline</span>
+  <div class="sbar-card accent-ems"><strong>Stage 1 — Community Outreach</strong>High schools, explorer posts, volunteer EMS, career fairs. Shapes the applicant pool 3–5 years out. Pillar 6 civic responsibility in action.</div>
+  <div class="sbar-card accent-gold"><strong>Stage 2 — EMT Development</strong>Agency-sponsored paramedic education. Most cost-effective pipeline. Leverages existing culture knowledge. Track time-to-completion and post-certification retention.</div>
+  <div class="sbar-card accent-green"><strong>Stage 3 — Hire and Onboard</strong>External market — most competitive. 90-day structured onboarding. Formal preceptor. 30/60/90-day check-ins. Onboarding ≠ orientation.</div>
+  <div class="sbar-card accent-red"><strong>Stage 4 — Supervisory ID</strong>Identify 2–3 years before vacancies. Leadership behavior, mentoring willingness, QI engagement. Developmental feedback annually.</div>
+  <div class="sbar-card"><strong>Stage 5 — Officer Development</strong>Develop your supervisors into your replacement. Stretch assignments. Managing Officer competency feedback. Being irreplaceable = single point of failure.</div>
+  <span class="sbar-label">The Succession Principle</span>
+  <div class="sbar-card accent-gold"><strong>Develop Your Replacement</strong>Not a threat — evidence you belong in your role. The bench is the org's resilience. TCHOEDS Ownership at strategic scale.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← HR Strategy</button>
+  <div class="lnb-info"><div class="lnb-name">Workforce Pipeline &amp; Succession Planning</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Retention Strategy →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — RETENTION STRATEGY ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 10 · Lesson 6 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 3</div>
+  <h1 class="lh-title">Retention Strategy —<br><em>The Levers That Actually Reduce Turnover</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Leading Others · HR Management</span><span class="lh-meta-item">Bucket 8 — Mentoring &amp; Development · Bucket 1 — Personnel Performance</span></div>
+</div>
+
+<p>Retention is not primarily a compensation problem. EMS providers who leave do so for compensation reasons less often than organizations assume — and more often for reasons that are directly within the Managing Officer's sphere of influence: feeling disrespected, lacking advancement opportunity, experiencing poor leadership, having no voice in decisions that affect their work, and accumulating unaddressed occupational trauma. Understanding why providers actually leave is the prerequisite for designing retention strategies that actually work.</p>
+
+<h2>Why EMS Providers Leave — The Real Drivers</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS TURNOVER DRIVERS — WHAT THE RESEARCH CONSISTENTLY SHOWS</span>
+    <div class="ig-title">Stated Reason vs. Actual Driver — and the Managing Officer's Lever</div>
+    <div class="ig-sub">Exit interview data from EMS agencies consistently reveals a gap between stated reasons (often compensation) and actual drivers (often leadership and culture). The compensation stated reason is often a face-saving framing of an underlying relationship or culture problem that the employee did not feel safe naming on their way out.</div>
+  </div>
+  <div class="retention-grid">
+    <div class="retention-col" style="border-top:3px solid #E87070;">
+      <div class="retention-header" style="color:#E87070;">What Providers SAY When They Leave</div>
+      <div class="retention-item">Better pay at another agency</div>
+      <div class="retention-item">Scheduling incompatible with personal life</div>
+      <div class="retention-item">Wanted a career change</div>
+      <div class="retention-item">Opportunity for advancement elsewhere</div>
+      <div class="retention-item">Physical demands too high over time</div>
+    </div>
+    <div class="retention-col" style="border-top:3px solid var(--gold);">
+      <div class="retention-header" style="color:var(--gold);">What Research Identifies as Actual Drivers</div>
+      <div class="retention-item">Poor direct supervision — feeling unsupported or disrespected by their immediate supervisor</div>
+      <div class="retention-item">Lack of voice — decisions affecting their work made without input or explanation</div>
+      <div class="retention-item">No clear advancement pathway — no visibility into how to grow or what the next step looks like</div>
+      <div class="retention-item">Unaddressed occupational trauma — burnout, compassion fatigue, PTSD accumulation without support</div>
+      <div class="retention-item">Perceived inequity — inconsistent standards, favoritism in scheduling or assignments</div>
+    </div>
+  </div>
+  <div class="ig-callout">The Managing Officer's retention leverage is primarily in the actual drivers column — not the stated reasons column. Pay increases are an Executive and HR-level decision. Supervisor quality, decision transparency, advancement pathway clarity, occupational health support, and perceived equity are all within the Managing Officer's direct sphere of influence. These are the retention levers available now, without a budget increase.</div>
+</div>
+
+<h2>The Managing Officer's Retention Levers</h2>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 1</div>
+    <div class="fw-card-title">Supervisor Development — The Multiplier</div>
+    <div class="fw-card-desc">The most powerful retention lever the Managing Officer controls is the quality of the supervisors who manage providers daily. Research consistently shows that people leave managers, not organizations. A Managing Officer who develops excellent supervisors multiplies their retention impact across every shift. A Managing Officer who tolerates poor supervision exports the attrition problem to their providers.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 2</div>
+    <div class="fw-card-title">Decision Transparency — The Voice Lever</div>
+    <div class="fw-card-desc">Providers who understand why decisions are made — even decisions they disagree with — feel more respected and are more likely to stay than those who experience organizational decisions as arbitrary or opaque. The Managing Officer who explains the reasoning behind scheduling changes, policy updates, resource allocation decisions, and protocol changes is investing in retention every time. "Here is why we are doing this and what it means for you" is free. Attrition from unexplained changes is expensive.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 3</div>
+    <div class="fw-card-title">Advancement Pathways — The Clarity Lever</div>
+    <div class="fw-card-desc">Providers who can see a clear career path within the organization — specialty credentials, community paramedic roles, field training officer, supervisory promotion — are significantly more likely to stay than those who perceive no future. The Managing Officer who makes advancement pathways visible, provides feedback against them, and creates development opportunities is building a reason to stay. The one who lets providers guess about their future is building a reason to explore elsewhere.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 4</div>
+    <div class="fw-card-title">Occupational Health Investment — The Wellbeing Lever</div>
+    <div class="fw-card-desc">Burnout, compassion fatigue, and unaddressed PTSD are among the leading drivers of EMS attrition — particularly for experienced providers whose accumulated clinical trauma load has reached a breaking point. The Managing Officer who normalizes mental health support, ensures providers have access to peer support and CISM resources, and creates space for providers to acknowledge the emotional weight of EMS work is directly addressing one of the most significant retention risk factors in the profession.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 5</div>
+    <div class="fw-card-title">Perceived Equity — The Fairness Lever</div>
+    <div class="fw-card-desc">Perceived inequity — inconsistent discipline, scheduling favoritism, differential standards for different providers — is among the most toxic retention threats in EMS organizations because it is contagious. One provider who observes a colleague receive preferential treatment will share that observation with multiple colleagues. The Managing Officer who applies policies and standards with rigid consistency — even when consistency is inconvenient — is building the perceived fairness that makes people willing to accept difficult organizational decisions.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Lever 6</div>
+    <div class="fw-card-title">The Exit Interview — The Intelligence Lever</div>
+    <div class="fw-card-desc">Exit interviews are the most systematically underused retention intelligence tool in EMS. A structured exit interview — conducted by someone other than the departing employee's direct supervisor — surfaces the actual drivers of departure that operational feedback never will. Managing Officers who analyze exit data for patterns and feed those patterns into their retention strategy are learning from attrition rather than simply replacing it. Every departure that occurs for a preventable reason without the organization learning from it is a doubled loss.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 10 Complete — The Workforce Leadership Foundation</span>
+  <p>You now have the complete workforce leadership architecture for Managing Officer accountability: the four EMS employment environments and their governing frameworks, FLSA's 7(k) exemption and its scheduling implications, the six core CBA provision areas and past practice doctrine, the four-step grievance ladder and the settle-vs.-defend framework, HR strategy across hiring, protected class navigation, and SIMPLE-standard performance documentation, the five-stage workforce pipeline and succession planning model, and the six retention levers within the Managing Officer's direct control. This chapter and Chapter 9 together comprise the complete Phase 2 Managing Officer Track curriculum. Phase 3 — the Executive Officer Track — opens with organizational administration, external relations, and the senior leadership oral board scenarios that test the full integration of everything built in Phases 1 and 2.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal or HR advice. Labor law, collective bargaining rights, FLSA exemption applicability, protected class requirements under Title VII, ADA, FMLA, and ADEA, and state employment law vary significantly by jurisdiction, agency type, and specific organizational context. The 7(k) exemption applicability must be confirmed with qualified legal counsel for each agency's specific situation. Grievance procedures, arbitration processes, and discipline requirements are governed by the specific language of each Collective Bargaining Agreement. Always consult your agency's HR department, labor counsel, and applicable legal and regulatory authority before making employment decisions. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction or employment environment.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Why Providers Actually Leave</span>
+  <div class="sbar-card accent-red"><strong>Stated: Pay</strong>The face-saving answer. Often covers the real driver that didn't feel safe to name.</div>
+  <div class="sbar-card accent-gold"><strong>Actual: Supervision Quality</strong>People leave managers. Supervisor development is the highest-leverage retention investment.</div>
+  <div class="sbar-card"><strong>Actual: No Voice</strong>Unexplained decisions feel disrespectful. Transparency about the why is free.</div>
+  <div class="sbar-card"><strong>Actual: No Pathway</strong>Providers who can't see their future look for one elsewhere.</div>
+  <div class="sbar-card accent-red"><strong>Actual: Burnout + Trauma</strong>Accumulated occupational trauma without support is a leading experienced-provider attrition driver.</div>
+  <div class="sbar-card"><strong>Actual: Perceived Inequity</strong>Inconsistency is contagious. One observed favoritism = multiple conversations.</div>
+  <span class="sbar-label">6 Retention Levers</span>
+  <div class="sbar-card accent-gold"><strong>Supervisor Development</strong>Most powerful. People leave managers. Multiply your impact through excellent supervisors.</div>
+  <div class="sbar-card"><strong>Decision Transparency</strong>Explain the why. Always. Even for decisions they won't like.</div>
+  <div class="sbar-card"><strong>Advancement Clarity</strong>Visible pathways. Regular feedback against them. A reason to stay.</div>
+  <div class="sbar-card accent-ems"><strong>Occupational Health</strong>Normalize mental health support. CISM access. Space to acknowledge the weight of EMS.</div>
+  <div class="sbar-card"><strong>Perceived Equity</strong>Rigid consistency even when inconvenient. The fairness that sustains through hard decisions.</div>
+  <div class="sbar-card accent-gold"><strong>Exit Interview</strong>Structured. Not by direct supervisor. Feed patterns into retention strategy. Learn from every departure.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Workforce Pipeline</button>
+  <div class="lnb-info"><div class="lnb-name">Retention Strategy</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 10 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

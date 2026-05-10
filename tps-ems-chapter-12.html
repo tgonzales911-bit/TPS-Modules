@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 12 — Data Analytics &amp; Performance Management | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8C0E8;--on-dark-3:#9888B8;--on-dark-4:#7060A0;
+  --on-light-1:#1A1428;--on-light-2:#3A2A58;--on-light-3:#6A5A7A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+  --exec:#2D1B4E;--exec2:#4A2D7A;--exec3:#180D30;
+  --exec-gold:#E8C96A;--exec-gold-dim:#A07828;
+  --exec-bg:rgba(74,45,122,0.18);--exec-border:rgba(74,45,122,0.4);--exec-text:#C0A0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+
+/* ── TOP NAV ── */
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(24,13,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,201,106,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--exec-gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(232,201,106,0.2);flex-shrink:0;}
+.nav-exec-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--exec-gold);background:rgba(232,201,106,0.12);border-color:rgba(232,201,106,0.3);}
+
+/* ── PROGRESS BAR ── */
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--exec2),var(--exec-gold));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(74,45,122,0.6);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+
+/* ── HERO ── */
+.module-hero{background:linear-gradient(155deg,var(--exec3) 0%,var(--exec) 55%,#1E0E40 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--exec-gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(232,201,106,0.015) 80px,rgba(232,201,106,0.015) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--exec-gold),var(--exec-gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,45,122,0.25) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--exec-gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(232,201,106,0.07);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+
+/* ── LAYOUT ── */
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F3EFF8;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+
+/* ── LESSON HEADER ── */
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-text);background:var(--exec-bg);border:1px solid var(--exec-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--exec);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--exec-gold-dim);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+
+/* ── CONTENT ── */
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--exec);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--exec);font-weight:600;}
+
+/* ── CALLOUTS ── */
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF7E6;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-exec{background:var(--exec3);border-left:4px solid var(--exec-gold);box-shadow:0 2px 16px rgba(0,0,0,0.3);}
+.callout-exec .callout-label{color:var(--exec-gold);}
+.callout-exec p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+
+/* ── SIDEBAR ── */
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D0E8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--exec);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-exec{border-left:3px solid var(--exec2);}
+.sbar-card.accent-gold{border-left:3px solid var(--exec-gold);}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+
+/* ── LESSON NAV ── */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0D8;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--exec-gold);color:var(--exec-gold-dim);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--exec) 0%,var(--exec2) 100%);color:var(--exec-gold);border-color:var(--exec);box-shadow:0 3px 12px rgba(45,27,78,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,var(--exec2) 0%,#5A3D90 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--exec);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+
+/* ── INFOGRAPHIC WRAP ── */
+.infographic-wrap{background:var(--exec3);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(232,201,106,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(232,201,106,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(232,201,106,0.07);border-left:3px solid var(--exec-gold);font-size:0.9rem;color:#C8A840;line-height:1.65;font-style:italic;}
+
+/* ── IG COMPONENTS — all on dark bg, use on-dark-* colors ── */
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-fw-card{background:var(--exec3);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-map-cell{background:var(--exec3);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+
+/* ── ACRO ── */
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(232,201,106,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2rem;font-weight:800;color:var(--exec-gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-exec{font-size:0.82rem;color:var(--exec-text);font-style:italic;margin-top:5px;}
+
+/* ── LEVEL KEY ── */
+.level-key{background:var(--exec3);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.75rem;display:block;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(232,201,106,0.12);}
+
+/* ── STEP LADDER ── */
+.step-ladder{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,0.08);}
+.step-row{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.step-num{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.step-num-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.step-num-val{font-family:'EB Garamond',serif;font-size:1.6rem;font-weight:800;line-height:1;}
+.step-content{background:var(--exec3);padding:1rem 1.25rem;}
+.step-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.step-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.step-officer{font-size:0.83rem;color:var(--exec-text);font-style:italic;margin-top:5px;}
+
+/* ── TIER GRID ── */
+.tier-grid{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,0.08);}
+.tier-row{display:grid;grid-template-columns:130px 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.tier-stage{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.tier-stage-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.tier-stage-name{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:800;line-height:1.1;}
+.tier-content{background:var(--exec3);padding:0.95rem 1.25rem;}
+.tier-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.tier-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+.tier-officer{font-size:0.82rem;color:var(--exec-text);font-style:italic;margin-top:4px;}
+
+/* ── FW CARDS (light bg) ── */
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D0E8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--exec);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+
+/* ── TABLE — always inside dark infographic-wrap ── */
+.exec-table{width:100%;border-collapse:collapse;font-size:0.9rem;}
+.exec-table th{background:rgba(74,45,122,0.6);color:var(--exec-gold);padding:0.65rem 1rem;text-align:left;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.exec-table td{padding:0.65rem 1rem;border-bottom:1px solid rgba(232,201,106,0.1);vertical-align:top;color:var(--on-dark-2);line-height:1.55;}
+.exec-table td strong{color:var(--on-dark-1);}
+.exec-table tr:nth-child(even) td{background:rgba(74,45,122,0.18);}
+.exec-table tr:hover td{background:rgba(232,201,106,0.07);}
+.tag-hs{display:inline-block;font-family:'Cinzel',serif;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:rgba(232,201,106,0.15);color:var(--exec-gold);border:1px solid rgba(232,201,106,0.3);margin-left:4px;vertical-align:middle;}
+.tag-blue{display:inline-block;font-family:'Cinzel',serif;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:rgba(42,96,144,0.25);color:var(--ems-text);border:1px solid rgba(42,96,144,0.4);margin-left:4px;vertical-align:middle;}
+
+/* ── METRIC CARD GRID ── */
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(232,201,106,0.08);}
+.metric-card{background:var(--exec3);padding:1.1rem 1rem;text-align:center;}
+.metric-name{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.35rem;}
+.metric-value{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;color:var(--on-dark-1);line-height:1;margin-bottom:0.35rem;}
+.metric-unit{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-dark-3);margin-bottom:0.5rem;}
+.metric-desc{font-size:0.82rem;color:var(--on-dark-2);line-height:1.5;}
+
+/* ── DATA FLOW ── */
+.data-flow{display:flex;align-items:stretch;gap:1px;background:rgba(232,201,106,0.08);}
+.df-step{flex:1;background:var(--exec3);padding:1rem 0.85rem;text-align:center;position:relative;}
+.df-step:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--exec-gold);font-size:1rem;z-index:1;}
+.df-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.4rem;}
+.df-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--on-dark-1);margin-bottom:0.4rem;}
+.df-desc{font-size:0.82rem;color:var(--on-dark-2);line-height:1.5;}
+
+/* ── FORMULA BLOCK ── */
+.formula-block{background:rgba(74,45,122,0.25);border:1px solid rgba(232,201,106,0.2);border-radius:4px;padding:1rem 1.25rem;margin:0.75rem 0;font-family:'EB Garamond',serif;font-size:1.15rem;color:var(--on-dark-1);text-align:center;}
+.formula-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.4rem;display:block;}
+.formula-note{font-family:'Crimson Pro',serif;font-size:0.82rem;color:var(--on-dark-3);margin-top:0.4rem;display:block;font-style:italic;}
+
+/* ── DASHBOARD MOCK ── */
+.dashboard-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;padding:1.25rem;}
+.dash-tile{background:rgba(74,45,122,0.2);border:1px solid rgba(232,201,106,0.15);border-radius:6px;padding:1rem;text-align:center;}
+.dash-tile-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-3);margin-bottom:0.3rem;}
+.dash-tile-val{font-family:'EB Garamond',serif;font-size:1.9rem;font-weight:800;line-height:1;margin-bottom:0.2rem;}
+.dash-tile-sub{font-family:'Cinzel',serif;font-size:7px;letter-spacing:1px;color:var(--on-dark-3);}
+.dash-tile.green .dash-tile-val{color:#80E0A0;}
+.dash-tile.gold .dash-tile-val{color:var(--exec-gold);}
+.dash-tile.red .dash-tile-val{color:#E08080;}
+.dash-tile.blue .dash-tile-val{color:var(--ems-text);}
+
+/* ── ERS / STAR-P ── */
+.ers-block{overflow:hidden;}
+.ers-row{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(232,201,106,0.08);margin-bottom:1px;}
+.ers-key{background:var(--exec);padding:1rem;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);display:flex;align-items:center;justify-content:center;text-align:center;}
+.ers-val{background:var(--exec3);padding:1rem 1.25rem;font-size:0.9rem;color:var(--on-dark-2);line-height:1.65;}
+.starp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(232,201,106,0.08);}
+.starp-head{padding:0.65rem 0.5rem;text-align:center;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);}
+.sp-s{background:#1a3a5c;}.sp-t{background:var(--ems);}.sp-a{background:var(--exec);}.sp-r{background:#2A1840;}.sp-p{background:var(--exec2);}
+.starp-body{background:var(--exec3);padding:0.9rem 0.7rem;font-size:0.88rem;color:var(--on-dark-2);line-height:1.55;border-right:1px solid rgba(232,201,106,0.06);}
+.starp-col:last-child .starp-body{border-right:none;}
+
+/* ── QI TOOLS ── */
+.qi-tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.qi-tool{background:var(--exec3);padding:1.1rem;}
+.qi-tool-name{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:6px;}
+.qi-tool-use{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.qi-tool-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.qi-tool-when{font-size:0.82rem;color:var(--exec-text);font-style:italic;margin-top:5px;}
+
+/* ── DEMAND MAP ── */
+.demand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(232,201,106,0.08);}
+.demand-cell{background:var(--exec3);padding:0.9rem 0.75rem;text-align:center;}
+.demand-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.4rem;}
+.demand-title{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--on-dark-1);margin-bottom:0.35rem;}
+.demand-desc{font-size:0.82rem;color:var(--on-dark-2);line-height:1.5;}
+
+/* ── STMT BLOCK ── */
+.stmt-block{border:1px solid rgba(74,45,122,0.2);border-radius:6px;overflow:hidden;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.stmt-head{background:var(--exec);padding:0.7rem 1.2rem;display:flex;align-items:center;gap:0.75rem;}
+.stmt-num{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--exec-gold);width:1.5rem;text-align:center;}
+.stmt-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);}
+.stmt-body{background:white;padding:0.95rem 1.2rem;font-size:0.95rem;color:var(--on-light-1);line-height:1.7;}
+
+/* ── DISCLAIMER ── */
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBF8;border:1px solid #D8D0E8;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-fw-grid,.ig-fw-grid-3,.ig-map-grid,.fw-grid,.fw-grid-3,.metric-grid,.demand-grid,.starp-grid,.qi-tool-grid,.data-flow{grid-template-columns:1fr;flex-direction:column;}.tier-row,.step-row{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-exec-badge">◆ Executive Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Data-Driven EMS</button>
+    <button class="nav-pill" onclick="showLesson(1)">Data Systems</button>
+    <button class="nav-pill" onclick="showLesson(2)">Performance Metrics</button>
+    <button class="nav-pill" onclick="showLesson(3)">QI Analytics</button>
+    <button class="nav-pill" onclick="showLesson(4)">Demand &amp; Deployment</button>
+    <button class="nav-pill" onclick="showLesson(5)">Reporting &amp; Oral Board</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<!-- ── HERO ── -->
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 12 · NEMSMA Pillars 4, 5 &amp; 6 · Phase 3</div>
+    <div class="mh-track-badge">◆ Executive Officer Track · Analytics &amp; Performance</div>
+    <h1 class="mh-title"><em>EMS Data Analytics &amp;</em><br>Performance Management</h1>
+    <p class="mh-sub">The EMS Agenda 2050 is unambiguous: data-driven decision making is not a future aspiration — it is a current professional expectation at every rank, and a core governance obligation at the executive level. The chief who cannot read their own performance data cannot lead their organization forward.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The data-driven EMS organization — why data literacy matters at every rank and what a genuine analytics culture looks like. EMS data systems and infrastructure — CAD, ePCR, NEMSIS, and the data quality problem that undermines every analysis built on bad inputs. Key performance metrics and benchmarking — the measures that matter, how to calculate them correctly, and what national benchmarks exist to compare against. Quality improvement analytics — the tools that turn data into systemic change. Demand analysis and deployment optimization — using call volume data to position resources before the next call, not after. Reporting data to governing authorities and oral board preparation — the executive skill of translating numbers into decisions.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 1 — THE DATA-DRIVEN EMS ORG          -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 1 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 5 &amp; 6</div>
+  <h1 class="lh-title">The Data-Driven EMS Organization —<br><em>Analytics Culture at Every Rank</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Organizational Leadership · Analytics Culture</span><span class="lh-meta-item">NEMSMA Pillar 5 — Leadership · Pillar 6 — Administration</span></div>
+</div>
+
+<p>EMS organizations generate enormous volumes of data — every call produces a CAD record, an ePCR entry, a billing transaction, a response time calculation, and a clinical outcome data point. Most organizations collect this data. Far fewer use it systematically to make better decisions. The gap between data collection and data-driven decision making is where organizational performance improvement lives.</p>
+<p>The EMS Agenda 2050 identifies data-driven decision making as a foundational competency for the profession's future — not a specialty skill for analysts, but a core expectation for every officer at every level. Understanding what data to look at, how to read it critically, and how to turn it into organizational action is a leadership responsibility, not an IT function.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Data Analytics Context</span>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Reads and interprets shift-level data: response times for their crew, documentation completion rates, protocol adherence flags. Uses CAD and ePCR data for daily operational decisions. Reports anomalies upward. Does not generate organizational analytics independently.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Analyzes program-level performance data: monthly QI trends, protocol compliance rates, call volume patterns, workforce data. Conducts root cause analysis on performance deviations. Prepares data summaries for executive review. Manages ePCR data quality within their division.</span>
+    <span class="level-key-badge" style="color:var(--exec-text);background:var(--exec-bg);border:1px solid var(--exec-border);">E</span>
+    <span class="level-key-desc"><strong style="color:var(--exec-text);">Executive EMS Officer ◆ Primary Level This Chapter</strong> — Sets the organizational data strategy. Governs data infrastructure investment. Presents performance data to governing authorities. Uses analytics for strategic resource allocation, contract compliance, and organizational direction. Accountable for data quality across all systems.</span>
+  </div>
+  <div class="level-key-note">Data literacy is one of the most rapidly evolving competency expectations in EMS leadership. Executives who are not conversant in their own agency's data — who cannot read a run chart, interpret a fractile compliance report, or explain their ROSC rate trend — are increasingly visible as professionally underprepared in both internal and external assessments.</div>
+</div>
+
+<h2>The Three Levels of EMS Analytics</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS ANALYTICS HIERARCHY — THREE LEVELS</span>
+    <div class="ig-title">Operational, Tactical, and Strategic — What Each Level Answers</div>
+    <div class="ig-sub">Different questions require different levels of analytics. The executive officer's job is not to perform all three levels — it is to ensure the organization has the capacity to produce all three and to use strategic-level analytics to lead organizational direction.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(42,96,144,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Level 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Operational Analytics</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">What Happened on This Call / This Shift?</div>
+        <div class="tier-desc">Individual call review, crew performance data, shift response time reports, real-time unit status, documentation completion tracking. Consumed primarily at the Supervising Officer level. Time horizon: immediate to shift-level. Used for individual coaching, documentation feedback, and shift-level operational decisions.</div>
+        <div class="tier-officer">Data sources: CAD call records, ePCR entries, dispatch logs, individual protocol compliance flags.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Tactical Analytics</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">What Is This Program / System Producing?</div>
+        <div class="tier-desc">Monthly protocol compliance rates, quarterly clinical outcome trends, year-over-year call volume analysis, crew and unit performance comparisons, workforce productivity metrics. Consumed primarily at the Managing Officer level. Time horizon: monthly to annual. Used for program evaluation, QI process design, and resource planning.</div>
+        <div class="tier-officer">Data sources: Aggregated ePCR data, CAD summary reports, HR workforce data, billing and collections data, benchmarking comparisons.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Strategic Analytics</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Is This Organization Positioned to Succeed?</div>
+        <div class="tier-desc">Multi-year performance trends, demand forecasting, contract compliance trajectory, system-wide clinical outcome benchmarking, financial sustainability modeling, workforce pipeline projections. Consumed at the Executive Officer level. Time horizon: multi-year. Used for strategic planning, contract negotiation, budget requests, governing authority presentations, and long-range resource decisions.</div>
+        <div class="tier-officer">Data sources: All of the above, integrated and trended over time. Requires clean data infrastructure and analytical capacity to produce.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The executive officer's most important analytics obligation is not to perform the analysis — it is to ensure the organization has the infrastructure, talent, and culture to produce reliable analytics at all three levels, and to use strategic-level analytics to lead organizational direction rather than simply to report on what has already happened.</div>
+</div>
+
+<h2>Why EMS Analytics Fail — The Six Most Common Failures</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ANALYTICS FAILURE MODES — SIX PATTERNS</span>
+    <div class="ig-title">Why Data-Rich EMS Organizations Still Make Data-Poor Decisions</div>
+    <div class="ig-sub">Most EMS agencies collect far more data than they effectively use. The failure is rarely a shortage of data — it is a shortage of analytical capacity, data quality discipline, and leadership willingness to act on what the data shows.</div>
+  </div>
+  <div class="ig-fw-grid-3">
+    <div class="ig-fw-card" style="border-top:3px solid #E08080;">
+      <div class="ig-fw-label">Failure 1</div>
+      <div class="ig-fw-title">Garbage In, Garbage Out</div>
+      <div class="ig-fw-desc">Analytics built on poor-quality source data — incomplete ePCRs, miscoded call types, inaccurate CAD timestamps — produce conclusions that appear authoritative but are factually unreliable. Data quality governance is a precondition for useful analytics, not an optional feature. Every analysis is only as credible as the data that feeds it.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Failure 2</div>
+      <div class="ig-fw-title">Metric Confabulation</div>
+      <div class="ig-fw-desc">Measuring what is easy to count rather than what actually matters. Response time to scene is easy to measure; meaningful clinical outcome change is hard. Organizations that optimize for measurable proxies while ignoring harder outcome metrics create a reporting environment that looks strong and performs poorly.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems-text);">
+      <div class="ig-fw-label">Failure 3</div>
+      <div class="ig-fw-title">Snapshot Thinking</div>
+      <div class="ig-fw-desc">Presenting single-period data without trend context. A 91% protocol compliance rate sounds strong — but if the prior six months averaged 96%, that number represents a significant decline. Data without temporal context misleads decision-makers. Every metric presented to a governing authority should include trend information.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E08080;">
+      <div class="ig-fw-label">Failure 4</div>
+      <div class="ig-fw-title">Analysis Paralysis</div>
+      <div class="ig-fw-desc">Collecting and reporting data without using it to make decisions. The organization that generates beautiful monthly dashboards but makes operational decisions based on intuition and institutional tradition has not built an analytics culture — it has built a reporting performance. Data must connect to decisions or it is organizational theater.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Failure 5</div>
+      <div class="ig-fw-title">Siloed Systems</div>
+      <div class="ig-fw-desc">CAD data in one system, ePCR in another, billing in a third, HR workforce data in a fourth — none of them speaking to each other. The integrated picture that answers strategic questions (how does call volume by type relate to unit hour utilization and overtime cost?) is impossible to produce without data integration. Siloed systems produce operational reporting, not strategic intelligence.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems-text);">
+      <div class="ig-fw-label">Failure 6</div>
+      <div class="ig-fw-title">HiPPO Decision-Making</div>
+      <div class="ig-fw-desc">Highest-Paid Person's Opinion overrides what the data shows. When organizational culture values seniority and intuition over analytical evidence, the investment in data infrastructure is wasted. The executive officer who asks for data but then makes decisions based on what they already believed has not built a data-driven culture — they have built an expensive data decoration program.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">Building an Analytics Culture — The Executive's Role</span>
+  <p>Analytics culture is not built by hiring a data analyst. It is built by the executive officer consistently asking data questions in leadership meetings, requiring data evidence for program proposals, calling out decisions made without data support, celebrating when data reveals an uncomfortable truth rather than suppressing it, and visibly using data to make their own decisions. Culture follows what leaders model and what leaders reward. The executive who asks "what does the data show?" every time a recommendation is made will have a data-driven organization within two years.</p>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Three Levels of EMS Analytics</span>
+  <div class="sbar-card accent-ems"><strong>Operational (S Level)</strong>What happened this call / shift? Individual performance, real-time data. Time: immediate.</div>
+  <div class="sbar-card accent-gold"><strong>Tactical (M Level)</strong>What is this program producing? Monthly/quarterly trends. Time: monthly to annual.</div>
+  <div class="sbar-card accent-exec"><strong>Strategic (E Level)</strong>Is this org positioned to succeed? Multi-year trends, forecasting. Time: multi-year.</div>
+  <span class="sbar-label">The 6 Analytics Failure Modes</span>
+  <div class="sbar-card accent-red"><strong>1. Garbage In/Out</strong>Data quality is a precondition for useful analytics. Clean data first.</div>
+  <div class="sbar-card accent-red"><strong>2. Metric Confabulation</strong>Measuring what's easy, not what matters. Easy metrics ≠ meaningful outcomes.</div>
+  <div class="sbar-card accent-red"><strong>3. Snapshot Thinking</strong>91% looks good. Down from 96% is a warning. Always show trend context.</div>
+  <div class="sbar-card accent-red"><strong>4. Analysis Paralysis</strong>Dashboards without decisions = organizational theater.</div>
+  <div class="sbar-card accent-red"><strong>5. Siloed Systems</strong>CAD + ePCR + billing + HR must integrate to answer strategic questions.</div>
+  <div class="sbar-card accent-red"><strong>6. HiPPO</strong>Highest Paid Person's Opinion overriding data. Culture must value evidence over seniority.</div>
+  <span class="sbar-label">Building the Culture</span>
+  <div class="sbar-card accent-gold"><strong>Ask Data Questions — Consistently</strong>Leaders who always ask "what does the data show?" build data-driven organizations. It takes about two years of consistency.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 11</button>
+  <div class="lnb-info"><div class="lnb-name">The Data-Driven EMS Organization</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Data Systems →</button>
+</div>
+</div><!-- /lesson-0 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 2 — EMS DATA SYSTEMS                 -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 2 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">EMS Data Systems &amp;<br><em>Infrastructure</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Information Technology · Data Governance</span><span class="lh-meta-item">NEMSMA Pillar 6 — EMS Administration · NEMSIS Data Standards</span></div>
+</div>
+
+<p>Every EMS agency operates multiple data systems simultaneously — and most of those systems were selected independently, at different points in time, by people focused on operational needs rather than analytical integration. The result is a fragmented data environment in which the information that answers the most important strategic questions is spread across systems that do not naturally communicate with each other.</p>
+<p>The executive officer does not need to be a database administrator. They do need to understand what data each system produces, where that data's limitations lie, and what investment in data infrastructure is required to support the analytical needs of a high-performing EMS organization.</p>
+
+<h2>The EMS Data Ecosystem — Five Core Systems</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS DATA ECOSYSTEM — FIVE CORE SYSTEMS</span>
+    <div class="ig-title">What Each System Captures, What It Misses, and What It Enables</div>
+    <div class="ig-sub">Understanding each system's strengths and gaps is the foundation of data-driven leadership. The executive who knows what each system can and cannot answer will not make strategic decisions based on data the system cannot reliably produce.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.25);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">System 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">CAD</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Computer-Aided Dispatch — The Time Record</div>
+        <div class="tier-desc">Captures: call receipt time, dispatch time, en route time, on-scene time, transport time, hospital arrival time, available time. Call type coding, unit assignment, geographic location, priority assignment. This is the primary source for response time calculations and system status data.</div>
+        <div class="tier-officer">What CAD misses: clinical outcomes, patient demographics, provider-level data, protocol compliance. CAD tells you when units moved — not what happened when they got there. Response time analysis depends entirely on accurate CAD timestamps, which require rigorous dispatcher discipline and regular auditing.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.25);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">System 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">ePCR / NEMSIS</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Electronic Patient Care Record — The Clinical Record</div>
+        <div class="tier-desc">Captures: patient demographics, chief complaint, assessment findings, vital signs, interventions, medications, patient disposition, provider certification level. The National EMS Information System (NEMSIS) establishes a standardized data element taxonomy that enables state and national benchmarking when agencies submit compliant data.</div>
+        <div class="tier-officer">What ePCR misses: patient outcome beyond hospital door (requires hospital data integration), real-time status, financial data. ePCR data quality is entirely dependent on provider documentation discipline — an incomplete ePCR is the most common source of corrupted clinical analytics. Documentation compliance is a governance responsibility, not just a training one.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">System 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Billing / RCM</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Revenue Cycle Management — The Financial Record</div>
+        <div class="tier-desc">Captures: payer type, charges, collections, denial rates, coding compliance, transport mileage, service level billed. Links financial performance to operational call data. Essential for unit economics analysis — cost per call, cost per transport, revenue per unit hour.</div>
+        <div class="tier-officer">What billing data enables strategically: payer mix analysis (Medicare/Medicaid/commercial/self-pay proportions), subsidy requirement modeling, and the financial impact analysis of call volume changes on agency revenue. Most EMS executives underuse this data in strategic planning.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.2);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">System 4</div>
+        <div class="tier-stage-name" style="color:var(--cream);">HRIS / Workforce</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Human Resources Information System — The Workforce Record</div>
+        <div class="tier-desc">Captures: headcount, certifications, hire and separation dates, overtime hours, leave utilization, position vacancies, training completion. When integrated with CAD and billing data, enables unit hour utilization analysis — the connection between workforce availability, unit deployment, and financial cost.</div>
+        <div class="tier-officer">Strategic value: workforce demand modeling (how many FTEs are required to staff the system at defined unit hour levels), overtime driver analysis, and succession pipeline tracking. Most EMS HRIS systems are used only for compliance — their strategic value is largely unrealized.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,92,58,0.2);">
+        <div class="tier-stage-label" style="color:#80D0A0;">System 5</div>
+        <div class="tier-stage-name" style="color:var(--cream);">QA/QI Platform</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Quality Assurance Platform — The Clinical Compliance Record</div>
+        <div class="tier-desc">Captures: case review outcomes, protocol deviation flags, peer review results, corrective action records, credentialing data. May be a dedicated platform or a module within the ePCR system. Links clinical review decisions to provider records for progressive intervention tracking.</div>
+        <div class="tier-officer">What QA platforms enable: identification of systemic protocol compliance patterns versus individual provider issues, trending of intervention quality over time, and defensible documentation of clinical oversight activity for Medical Director accountability and regulatory audit.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>NEMSIS — The National Data Standard</h2>
+<p>The National EMS Information System (NEMSIS) is the national standard for EMS data collection and reporting. NEMSIS Version 3 defines the data elements, coding structure, and submission format that enables state EMS offices and NHTSA to aggregate EMS data nationally. For executive officers, NEMSIS matters for two reasons: it enables your agency to be benchmarked against national and state performance data, and it is increasingly required for grant eligibility and state regulatory compliance.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSIS — WHAT EXECUTIVES NEED TO KNOW</span>
+    <div class="ig-title">National EMS Information System — Executive-Level Obligations</div>
+    <div class="ig-sub">NEMSIS compliance is increasingly a baseline expectation, not an optional enhancement. Agencies that cannot submit compliant NEMSIS data are excluded from national benchmarking, many federal grant programs, and state-level comparative reporting.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">What NEMSIS Enables</div>
+      <div class="ig-fw-title">Benchmarking &amp; Comparative Analysis</div>
+      <div class="ig-fw-desc">NEMSIS data submission allows your agency's performance to be compared against state and national aggregates — cardiac arrest survival rates, response time distributions, treatment protocol compliance patterns, and call volume demographics. This comparison is among the most powerful quality improvement tools available and is unavailable to agencies that do not submit compliant data.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">What NEMSIS Requires</div>
+      <div class="ig-fw-title">Data Element Completeness &amp; Coding Compliance</div>
+      <div class="ig-fw-desc">NEMSIS compliance requires that specific data elements are present, correctly coded, and submitted in the required format. Missing or incorrectly coded elements generate submission errors that degrade the quality of state and national datasets. Agencies with high NEMSIS data element completion rates produce more useful benchmarking comparisons — and demonstrate data governance discipline that supports grant applications and regulatory reviews.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Executive Obligation</div>
+      <div class="ig-fw-title">Data Governance &amp; Submission Infrastructure</div>
+      <div class="ig-fw-desc">The executive officer is responsible for ensuring the agency's ePCR system is NEMSIS-compliant, that submission processes are operational, and that data element completion rates are monitored and maintained. This requires designating accountability — typically the QA/QI officer or a data manager — and building documentation completion discipline into the organizational culture, not treating it as a voluntary technical courtesy.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Colorado Context</div>
+      <div class="ig-fw-title">CDPHE NEMSIS Submission Requirements</div>
+      <div class="ig-fw-desc">CDPHE's Office of Emergency Medical and Trauma Services requires Colorado EMS agencies to submit NEMSIS-compliant data as a condition of agency licensure. The submission window, required elements, and compliance thresholds are defined in Colorado's EMS rules. Agencies that fall below state completion rate thresholds risk licensure issues and are excluded from state-level comparative reporting programs.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Data Quality — The Governance Responsibility</h2>
+<p>Data quality cannot be delegated entirely to providers and supervisors. It must be governed — with defined standards, monitoring processes, feedback loops, and leadership accountability. The executive officer who treats documentation quality as a training problem rather than a governance problem will find that training alone does not sustain the discipline required for reliable analytics.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ DATA QUALITY GOVERNANCE FRAMEWORK</span>
+    <div class="ig-title">Five Dimensions of Data Quality — and Who Is Accountable for Each</div>
+    <div class="ig-sub">Data quality is multidimensional. An organization can have complete data that is inaccurate, or accurate data that is too delayed to be useful. All five dimensions must be managed simultaneously.</div>
+  </div>
+  <div style="padding:0.5rem 1rem 1rem;">
+    <table class="exec-table">
+      <thead><tr><th>Dimension</th><th>What It Means</th><th>Common Failure Mode</th><th>Accountability</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Completeness</strong></td><td>All required data elements are present in every record</td><td>Providers leaving fields blank; partial ePCRs submitted before run is complete</td><td>QA/QI Officer monitors; Supervising Officer enforces at crew level</td></tr>
+        <tr><td><strong>Accuracy</strong></td><td>Data correctly reflects what occurred on the call</td><td>Timestamps entered after the fact; vital signs transcribed incorrectly; call type miscoded at dispatch</td><td>Peer review catches clinical inaccuracies; CAD audit catches timestamp anomalies</td></tr>
+        <tr><td><strong>Timeliness</strong></td><td>Data is available when needed for operational and analytical decisions</td><td>ePCRs not completed within required window; CAD data not synced to analytics platform</td><td>Managing Officer sets completion deadlines; Executive sets systems infrastructure</td></tr>
+        <tr><td><strong>Consistency</strong></td><td>Same event coded the same way across providers, crews, and shifts</td><td>Different providers coding the same chief complaint differently; call type ambiguity in CAD</td><td>Training and protocol standardization; QA review of coding patterns</td></tr>
+        <tr><td><strong>Validity</strong> <span class="tag-hs">High Stakes</span></td><td>Data values fall within expected ranges and are logically coherent</td><td>Vital signs outside physiological range; transport times longer than call times; negative intervals</td><td>ePCR system validation rules (automated); QA review catches outliers that pass system rules</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ig-callout">The executive governance principle: data quality standards must be written, monitored, and enforced — not assumed. Agencies that assume providers will document accurately without defined standards, regular monitoring, and leadership consequence for persistent non-compliance will have neither the data quality nor the analytical reliability that strategic decision-making requires.</div>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">The 5 Core EMS Data Systems</span>
+  <div class="sbar-card accent-ems"><strong>CAD</strong>Time record. Response times, unit status, call type. Does NOT capture clinical outcomes.</div>
+  <div class="sbar-card accent-exec"><strong>ePCR / NEMSIS</strong>Clinical record. Outcomes, interventions, demographics. Quality depends on provider documentation discipline.</div>
+  <div class="sbar-card accent-gold"><strong>Billing / RCM</strong>Financial record. Payer mix, collections, cost per call. Underused in strategic planning.</div>
+  <div class="sbar-card"><strong>HRIS / Workforce</strong>Workforce record. Headcount, OT, certifications. Strategic value for UHU modeling largely unrealized.</div>
+  <div class="sbar-card accent-green"><strong>QA/QI Platform</strong>Clinical compliance record. Protocol deviation patterns, peer review outcomes, corrective action tracking.</div>
+  <span class="sbar-label">NEMSIS — Key Facts</span>
+  <div class="sbar-card accent-exec"><strong>NEMSIS v3 — National Standard</strong>Required for state licensure in Colorado (CDPHE). Required for national benchmarking. Required for many federal grants.</div>
+  <div class="sbar-card accent-red"><strong>Incomplete Submission = Exclusion</strong>Agencies below state completion thresholds are excluded from comparative reporting and some grant programs.</div>
+  <span class="sbar-label">Data Quality — 5 Dimensions</span>
+  <div class="sbar-card accent-gold"><strong>Completeness · Accuracy · Timeliness · Consistency · Validity</strong>All five must be governed simultaneously. Training alone does not sustain data quality — governance does.</div>
+  <div class="sbar-card accent-red"><strong>Validity = Highest Stakes</strong>Logically incoherent data (negative intervals, impossible vital signs) corrupts every downstream analysis. Must be caught at point of entry.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Data-Driven EMS</button>
+  <div class="lnb-info"><div class="lnb-name">EMS Data Systems &amp; Infrastructure</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Performance Metrics →</button>
+</div>
+</div><!-- /lesson-1 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 3 — PERFORMANCE METRICS              -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 3 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 4 &amp; 6</div>
+  <h1 class="lh-title">Key Performance Metrics &amp;<br><em>Benchmarking</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">📘 Clinical Quality · System Performance</span><span class="lh-meta-item">NEMSMA Pillar 4 — Clinical Care · Pillar 6 — Administration</span></div>
+</div>
+
+<p>Not all metrics are created equal. The executive officer who tracks every available data point is as poorly served as the one who tracks nothing — drowning in noise while the signals that matter go unread. The discipline of performance management is choosing the right metrics, calculating them correctly, and knowing what external benchmarks exist to contextualize what you find.</p>
+<p>EMS performance metrics fall into three categories: system performance metrics (how the operational system is functioning), clinical outcome metrics (whether patients are benefiting from the care provided), and organizational health metrics (whether the agency has the resources and workforce to sustain performance). All three are necessary. Tracking only system performance while ignoring clinical outcomes is the most common imbalance in EMS analytics.</p>
+
+<h2>System Performance Metrics</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SYSTEM PERFORMANCE METRICS — CORE SET</span>
+    <div class="ig-title">How the Operational System Is Functioning</div>
+    <div class="ig-sub">System performance metrics answer the question: is the machine working? They describe the operational platform that delivers care — without addressing whether the care itself is effective. Both are necessary; neither substitutes for the other.</div>
+  </div>
+  <div style="padding:0.5rem 1rem 1rem;">
+    <table class="exec-table">
+      <thead><tr><th>Metric</th><th>Definition</th><th>Calculation / Standard</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Response Time — Fractile</strong> <span class="tag-hs">Contract</span></td>
+          <td>The percentage of calls receiving a response within a defined time threshold</td>
+          <td>Calls responded to within X minutes ÷ Total calls × 100. Most high-performance systems target 90% fractile compliance at the P1 standard. Report separately by priority and geographic zone.</td>
+        </tr>
+        <tr>
+          <td><strong>Response Time — Average</strong></td>
+          <td>Mean response time across all calls of a defined priority</td>
+          <td>Sum of all response times ÷ Number of calls. Useful for trend analysis but can be distorted by outliers. Always report with fractile compliance — average alone is insufficient.</td>
+        </tr>
+        <tr>
+          <td><strong>Unit Hour Utilization (UHU)</strong></td>
+          <td>The proportion of available unit hours spent on call activity</td>
+          <td>Total hours committed on calls ÷ Total staffed unit hours. Standard range: 0.20–0.45 for urban systems. Above 0.45 suggests inadequate unit capacity. Below 0.15 suggests over-deployment.</td>
+        </tr>
+        <tr>
+          <td><strong>System Status Reliability</strong></td>
+          <td>The percentage of time the system has the required number of units deployed and available</td>
+          <td>Hours at or above minimum staffing level ÷ Total hours × 100. Tracks system coverage gaps. Links to response time performance and contract compliance risk.</td>
+        </tr>
+        <tr>
+          <td><strong>Call Volume by Type &amp; Priority</strong></td>
+          <td>Count of calls by priority level, chief complaint category, and time period</td>
+          <td>Raw counts from CAD, aggregated by shift, day of week, hour of day, geographic zone. Used for demand forecasting and deployment optimization (Lesson 5).</td>
+        </tr>
+        <tr>
+          <td><strong>Hospital Offload Delay</strong></td>
+          <td>Time from hospital arrival to unit available (time lost to patient handoff delays)</td>
+          <td>Available time − Hospital arrival time, per transport. Track average and distribution. Sustained offload delays above 30 minutes represent significant system capacity loss and require hospital partnership action.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2>Clinical Outcome Metrics</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CLINICAL OUTCOME METRICS — THE MEASURES THAT MATTER MOST</span>
+    <div class="ig-title">Whether Patients Are Benefiting From the Care Provided</div>
+    <div class="ig-sub">Clinical outcome metrics answer the question: is the care working? They are harder to collect, harder to attribute, and harder to benchmark than system metrics — and they are more important. An EMS agency that responds quickly and consistently but provides ineffective care has optimized the wrong metric.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Cardiac Arrest — ROSC &amp; Survival</div>
+      <div class="ig-fw-title">Return of Spontaneous Circulation</div>
+      <div class="ig-fw-desc">ROSC rate: percentage of cardiac arrest patients achieving return of spontaneous circulation prior to hospital arrival. Survival to discharge: percentage surviving to hospital discharge with favorable neurological outcome. The Cardiac Arrest Registry to Enhance Survival (CARES) is the national benchmark platform. National OHCA survival averages approximately 8–10%; high-performing systems achieve 15–20%+. This metric is the single most important clinical outcome indicator in most EMS systems.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems-text);">
+      <div class="ig-fw-label">Stroke — Identification &amp; Transport</div>
+      <div class="ig-fw-title">Pre-Hospital Stroke Protocol Compliance</div>
+      <div class="ig-fw-desc">Stroke scale completion rate: percentage of suspected stroke patients receiving a validated pre-hospital stroke assessment (Cincinnati, LAMS, or equivalent). Appropriate destination compliance: percentage transported to a certified stroke center when within protocol parameters. Time benchmarks: scene time, notification time. Stroke protocol performance directly affects patient neurological outcomes — delays in identification and transport are associated with worse functional recovery.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Pain Management</div>
+      <div class="ig-fw-title">Adequate Analgesia &amp; Reassessment</div>
+      <div class="ig-fw-desc">Percentage of patients with documented pain assessment (pre- and post-intervention). Percentage of patients with significant pain receiving appropriate analgesic intervention. Percentage with documented reassessment after intervention. Pain management compliance is frequently below benchmark in national data — and directly affects patient experience, patient outcomes, and the clinical quality story the agency tells its governing authority.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems-text);">
+      <div class="ig-fw-label">Protocol Compliance Rate</div>
+      <div class="ig-fw-title">Treatment Adherence — Aggregated</div>
+      <div class="ig-fw-desc">Percentage of calls in which the treatment protocol for the primary impression was followed correctly, without documented deviation. Reported by protocol category (cardiac, respiratory, trauma, behavioral). The Medical Director defines what constitutes compliant care for each protocol. This metric connects clinical governance to individual provider accountability and is the primary QA/QI input for case selection and corrective action.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Building the Executive Performance Dashboard</h2>
+<p>The executive performance dashboard is not a data dump — it is a curated selection of the metrics that answer the most important questions about organizational health, presented in a format that enables the executive officer to identify trends, recognize emerging issues, and brief governing authorities with confidence.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EXECUTIVE PERFORMANCE DASHBOARD — SAMPLE STRUCTURE</span>
+    <div class="ig-title">A Balanced View of System, Clinical, and Organizational Health</div>
+    <div class="ig-sub">This is a illustrative structure — specific targets depend on each agency's contract standards, geographic context, and organizational baseline. The principle is balance across all three metric categories, with trend indicators alongside point-in-time values.</div>
+  </div>
+  <div class="dashboard-grid">
+    <div class="dash-tile green">
+      <div class="dash-tile-label">P1 Fractile Compliance</div>
+      <div class="dash-tile-val">93.2%</div>
+      <div class="dash-tile-sub">Target: 90% · Trend: ▲ +1.4%</div>
+    </div>
+    <div class="dash-tile gold">
+      <div class="dash-tile-label">Avg P1 Response Time</div>
+      <div class="dash-tile-val">6:42</div>
+      <div class="dash-tile-sub">Prior Month: 6:58 · Trend: ▼ Improving</div>
+    </div>
+    <div class="dash-tile blue">
+      <div class="dash-tile-label">Unit Hour Utilization</div>
+      <div class="dash-tile-val">0.31</div>
+      <div class="dash-tile-sub">Target: 0.20–0.40 · Status: In Range</div>
+    </div>
+    <div class="dash-tile green">
+      <div class="dash-tile-label">ROSC Rate (OHCA)</div>
+      <div class="dash-tile-val">38%</div>
+      <div class="dash-tile-sub">National Avg: ~35% · Trend: ▲ +3%</div>
+    </div>
+    <div class="dash-tile gold">
+      <div class="dash-tile-label">Protocol Compliance</div>
+      <div class="dash-tile-val">94.1%</div>
+      <div class="dash-tile-sub">Target: 95% · Trend: ▼ –0.8% — Watch</div>
+    </div>
+    <div class="dash-tile red">
+      <div class="dash-tile-label">Avg Hospital Offload</div>
+      <div class="dash-tile-val">34 min</div>
+      <div class="dash-tile-sub">Target: &lt;20 min · Trend: ▲ Worsening</div>
+    </div>
+    <div class="dash-tile blue">
+      <div class="dash-tile-label">NEMSIS Completion</div>
+      <div class="dash-tile-val">97.3%</div>
+      <div class="dash-tile-sub">State Min: 95% · Status: Compliant</div>
+    </div>
+    <div class="dash-tile green">
+      <div class="dash-tile-label">Workforce Fill Rate</div>
+      <div class="dash-tile-val">98.1%</div>
+      <div class="dash-tile-sub">Scheduled shifts covered · OT: 12.3%</div>
+    </div>
+    <div class="dash-tile gold">
+      <div class="dash-tile-label">Monthly Call Volume</div>
+      <div class="dash-tile-val">2,847</div>
+      <div class="dash-tile-sub">Prior Year Same Month: 2,641 · +7.8%</div>
+    </div>
+  </div>
+  <div class="ig-callout">Dashboard design principle: every metric should appear with its target, its trend direction, and a status indicator (on track / watch / action required). A number without context is not information — it is a data point. The executive who presents a 93% compliance rate without indicating the target, the trend, and whether this represents improvement or decline is not communicating performance — they are reciting numbers.</div>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">System Performance — Key Metrics</span>
+  <div class="sbar-card accent-ems"><strong>Fractile Response Time</strong>% of calls within threshold. Report by priority and zone. Most high-performance target: 90% at P1.</div>
+  <div class="sbar-card"><strong>Unit Hour Utilization</strong>Hours on call ÷ Staffed unit hours. Healthy range: 0.20–0.45. Above 0.45 = capacity problem.</div>
+  <div class="sbar-card accent-red"><strong>Hospital Offload Delay</strong>Arrival → available. Track separately. Sustained >30 min = system capacity loss requiring hospital action.</div>
+  <span class="sbar-label">Clinical Outcome — Key Metrics</span>
+  <div class="sbar-card accent-gold"><strong>ROSC Rate (Cardiac Arrest)</strong>Most important clinical metric. National avg ~8–10%. High-performing: 15–20%+. Use CARES for benchmarking.</div>
+  <div class="sbar-card accent-ems"><strong>Stroke Protocol Compliance</strong>Scale completion rate + appropriate destination rate + time benchmarks. Affects neurological outcomes directly.</div>
+  <div class="sbar-card"><strong>Protocol Compliance Rate</strong>By protocol category. Medical Director defines compliance. Primary QA/QI input for corrective action.</div>
+  <span class="sbar-label">Dashboard Principle</span>
+  <div class="sbar-card accent-gold"><strong>Every Metric Needs 3 Things</strong>1. Current value. 2. Target. 3. Trend direction. A number without these three is a data point, not information.</div>
+  <span class="sbar-label">Benchmarking Resources</span>
+  <div class="sbar-card accent-exec"><strong>CARES Registry</strong>National cardiac arrest benchmarking. Free participation. Enables comparison to national, state, and comparable-system cohorts.</div>
+  <div class="sbar-card"><strong>NEMSIS State Reports</strong>Annual state and national aggregate reports. Enables protocol-level benchmarking across all submitted clinical metrics.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Data Systems</button>
+  <div class="lnb-info"><div class="lnb-name">Key Performance Metrics &amp; Benchmarking</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">QI Analytics →</button>
+</div>
+</div><!-- /lesson-2 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 4 — QI ANALYTICS                     -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 4 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Quality Improvement Analytics —<br><em>From Data to Systemic Change</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Clinical Quality Management · Process Improvement</span><span class="lh-meta-item">NEMSMA Pillar 4 — Clinical Care · Chapter 9 Foundation</span></div>
+</div>
+
+<p>Data is the foundation of quality improvement — but data alone does not improve quality. The analytical tools of QI translate data patterns into hypotheses about causes, hypotheses into interventions, and interventions into measurable outcome changes. The executive officer who understands QI analytics can distinguish between a genuine system problem and statistical noise, between an individual provider issue and a systemic protocol gap, and between an intervention that produced real change and one that produced only the appearance of change.</p>
+<p>Chapter 9 established the QI program architecture. This lesson builds the analytical layer on top of that foundation: the specific tools used to analyze performance data, identify root causes, and verify that changes actually improved outcomes.</p>
+
+<h2>QA vs. QI — The Analytical Distinction</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ QA VS. QI — THE CRITICAL DISTINCTION</span>
+    <div class="ig-title">Compliance Review vs. Performance Improvement</div>
+    <div class="ig-sub">Both are necessary. Neither substitutes for the other. Confusing them leads to organizations that are either very good at finding problems or very good at improving outcomes — rarely both.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Quality Assurance (QA)</div>
+      <div class="ig-fw-title">Did We Meet the Standard?</div>
+      <div class="ig-fw-desc">Retrospective review of individual calls against defined protocol and documentation standards. Identifies deviations from expected practice. Produces individual-level feedback, corrective action, and compliance data. QA is surveillance — it tells you where the organization's practice deviates from its standards. It does not, by itself, tell you why those deviations occur or how to systematically reduce them. That is QI's job.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Quality Improvement (QI)</div>
+      <div class="ig-fw-title">How Do We Get Better — Systematically?</div>
+      <div class="ig-fw-desc">Prospective analysis of performance patterns to identify improvement opportunities, root causes, and intervention targets. Uses QA data as an input, combined with outcome data, process data, and benchmarking. QI produces system-level changes: protocol revisions, training curriculum updates, equipment changes, workflow redesigns. QI is change — it uses data to make the organization consistently better at delivering care, not just consistently better at documenting that it tried.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common QI failure in EMS: treating QA as the end product. An organization that reviews cases, generates compliance reports, and delivers individual feedback — but never aggregates that data to identify systemic patterns and make system-level changes — has a QA program, not a QI program. The distinction is consequential: QA finds problems; QI solves them.</div>
+</div>
+
+<h2>The PDCA Cycle in EMS Analytics</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PDCA — PLAN · DO · CHECK · ACT</span>
+    <div class="ig-title">The Analytical Framework for Systematic Quality Improvement</div>
+    <div class="ig-sub">PDCA is the foundational framework for evidence-based quality improvement. Every significant QI intervention in an EMS system should follow this cycle — completing it fully, including the Check phase, before implementing the next change. Skipping the Check phase is the most common reason QI efforts fail to produce sustained improvement.</div>
+  </div>
+  <div class="step-ladder">
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.25);">
+        <div class="step-num-label" style="color:var(--ems-text);">Plan</div>
+        <div class="step-num-val" style="color:var(--cream);">P</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Identify the Problem, Analyze Root Cause, Define the Intervention</div>
+        <div class="step-desc">Use QA data to identify the performance gap. Use root cause analysis tools (below) to understand why the gap exists. Define a specific, measurable intervention. Establish baseline performance data and a target. Identify who is responsible for implementation and over what timeframe. A poorly planned QI intervention produces noise — activity without direction.</div>
+        <div class="step-officer">Analytic tools at this stage: run charts to identify if the problem is real and trending, fishbone diagrams to map potential causes, 5 Whys to drill to root cause, stratification to identify whether the problem is system-wide or localized to a subgroup.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Do</div>
+        <div class="step-num-val" style="color:var(--cream);">D</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Implement the Intervention — on a Defined Scale</div>
+        <div class="step-desc">Implement the intervention as designed, on the defined scale (agency-wide, a single division, a pilot period). Document exactly what was implemented, when, and for whom. Changes made mid-implementation without documentation destroy the ability to evaluate what actually caused any observed change. Discipline in implementation is as important as discipline in analysis.</div>
+        <div class="step-officer">Common failure at this stage: scope creep. The intervention that begins as "revised airway training for all providers" becomes "revised airway training, plus new documentation field, plus protocol amendment" — making it impossible to isolate which component drove any subsequent change.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(45,27,78,0.35);">
+        <div class="step-num-label" style="color:var(--exec-text);">Check</div>
+        <div class="step-num-val" style="color:var(--cream);">C</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Measure the Outcome — Did It Actually Change?</div>
+        <div class="step-desc">Compare post-intervention performance to the pre-intervention baseline using the same metrics. Allow sufficient post-intervention time for the change to stabilize (typically 60–90 days minimum). Use statistical process control concepts — run charts, control charts — to distinguish real improvement from random variation. An organization that claims success after two months of improved data may simply be observing regression to mean.</div>
+        <div class="step-officer">The Check phase is the most frequently skipped in EMS QI programs. Organizations implement changes and immediately move to the next problem without verifying that the previous intervention worked. This produces a cycle of activity without improvement — and leadership that cannot tell governing authorities what their QI program has actually accomplished.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.2);">
+        <div class="step-num-label" style="color:var(--ems-text);">Act</div>
+        <div class="step-num-val" style="color:var(--cream);">A</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Standardize if Successful — Repeat the Cycle if Not</div>
+        <div class="step-desc">If the Check phase confirms the intervention improved performance: standardize it — update policies, protocols, training curricula, and documentation requirements to make the change permanent. If the Check phase shows no improvement or worsening: return to Plan and reconsider root cause analysis. A QI program that is honest about failed interventions is more sophisticated — and more effective over time — than one that only reports its successes.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Root Cause Analysis Tools</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ROOT CAUSE ANALYSIS — FOUR ANALYTICAL TOOLS</span>
+    <div class="ig-title">Moving From "What Happened" to "Why It Happened"</div>
+    <div class="ig-sub">Root cause analysis is the analytical step between identifying a performance gap and designing an intervention. Skipping it — jumping from "our ROSC rate declined" directly to "let's do more CPR training" — produces interventions that address symptoms rather than causes, and improvements that do not last.</div>
+  </div>
+  <div class="qi-tool-grid">
+    <div class="qi-tool">
+      <div class="qi-tool-name">Tool 1</div>
+      <div class="qi-tool-use">The 5 Whys</div>
+      <div class="qi-tool-desc">Ask "why" five times in succession, each time using the answer to the previous question as the starting point. Designed to peel away symptomatic layers to reach the root cause that, if addressed, would prevent recurrence. Works best for single-cause problems with a clear causal chain.</div>
+      <div class="qi-tool-when">Example: Why did ROSC rate decline? → CPR quality decreased. Why? → Providers not using feedback devices. Why? → Devices not stocked on units. Why? → Procurement process failed. Why? → No assigned owner for quarterly device inventory. Root cause: accountability gap in equipment management, not CPR skill decline.</div>
+    </div>
+    <div class="qi-tool">
+      <div class="qi-tool-name">Tool 2</div>
+      <div class="qi-tool-use">Fishbone (Ishikawa) Diagram</div>
+      <div class="qi-tool-desc">A structured brainstorming tool that maps potential causes of a problem across standard categories — in healthcare typically: People, Process, Equipment, Environment, Management, and Information. Produces a visual map of contributing factors for complex, multi-cause problems. Useful when root cause is not obvious and multiple hypothesis categories need to be explored simultaneously.</div>
+      <div class="qi-tool-when">When to use: When a single problem has multiple plausible cause categories and a team needs a structured way to capture and organize hypotheses before selecting which to investigate further.</div>
+    </div>
+    <div class="qi-tool">
+      <div class="qi-tool-name">Tool 3</div>
+      <div class="qi-tool-use">Stratification Analysis</div>
+      <div class="qi-tool-desc">Breaking aggregate performance data into subgroups to identify whether a problem is uniform or localized. Is the protocol compliance decline affecting all providers equally, or concentrated in one shift, one station, or one certification level? Stratification often reveals that a "system problem" is actually a targeted problem — which changes both the diagnosis and the intervention design significantly.</div>
+      <div class="qi-tool-when">When to use: When aggregate metrics show a problem and the team needs to determine whether a system-wide or targeted intervention is appropriate. Almost always the correct first analytical step before root cause analysis.</div>
+    </div>
+    <div class="qi-tool">
+      <div class="qi-tool-name">Tool 4</div>
+      <div class="qi-tool-use">Run Chart / Control Chart</div>
+      <div class="qi-tool-desc">A time-series plot of a performance metric that allows visual identification of trends, shifts, and patterns. A run chart plots data over time against the median. A control chart adds statistically calculated upper and lower control limits to distinguish common cause variation (normal system noise) from special cause variation (a real signal that something has changed). The most important chart type for EMS performance monitoring.</div>
+      <div class="qi-tool-when">When to use: For ongoing monitoring of any key performance metric. The run chart is the primary tool for the Check phase of PDCA — determining whether a post-intervention change is real improvement or statistical noise.</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">QA vs. QI</span>
+  <div class="sbar-card accent-ems"><strong>QA — Did We Meet the Standard?</strong>Retrospective. Individual call review. Compliance surveillance. Identifies deviations.</div>
+  <div class="sbar-card accent-gold"><strong>QI — How Do We Get Systematically Better?</strong>Prospective. Pattern analysis. System-level interventions. Produces lasting change.</div>
+  <div class="sbar-card accent-red"><strong>Most Common Failure</strong>Treating QA as the end product. QA finds problems. QI solves them. Both are required.</div>
+  <span class="sbar-label">PDCA Cycle</span>
+  <div class="sbar-card accent-ems"><strong>Plan</strong>Define the gap. Root cause analysis. Set target. Assign accountability.</div>
+  <div class="sbar-card"><strong>Do</strong>Implement on defined scale. Document exactly what was done. No scope creep.</div>
+  <div class="sbar-card accent-red"><strong>Check (Most Skipped)</strong>Did performance actually change? Allow 60–90 days. Distinguish real change from regression to mean.</div>
+  <div class="sbar-card accent-gold"><strong>Act</strong>Success: standardize. Failure: return to Plan with revised root cause analysis.</div>
+  <span class="sbar-label">Root Cause Analysis Tools</span>
+  <div class="sbar-card accent-gold"><strong>5 Whys</strong>Ask why five times. Best for single-cause problems with clear causal chain.</div>
+  <div class="sbar-card"><strong>Fishbone Diagram</strong>Multi-cause problems. Categories: People, Process, Equipment, Environment, Management, Information.</div>
+  <div class="sbar-card accent-exec"><strong>Stratification</strong>Break aggregate data into subgroups. Often reveals a "system problem" is actually a localized one.</div>
+  <div class="sbar-card accent-exec"><strong>Run / Control Chart</strong>Time-series plot. Distinguishes real signals from statistical noise. Primary tool for PDCA Check phase.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Performance Metrics</button>
+  <div class="lnb-info"><div class="lnb-name">Quality Improvement Analytics</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Demand &amp; Deployment →</button>
+</div>
+</div><!-- /lesson-3 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 5 — DEMAND ANALYSIS & DEPLOYMENT     -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 5 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">Demand Analysis &amp;<br><em>Deployment Optimization</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Systems Deployment · Resource Optimization</span><span class="lh-meta-item">NEMSMA Pillar 6 — EMS Administration · System Status Management</span></div>
+</div>
+
+<p>The most sophisticated response time compliance program in the world cannot compensate for units positioned in the wrong place at the wrong time. Deployment optimization — positioning the right number of units in the right locations during periods of predicted demand — is the single highest-leverage operational intervention available to an EMS executive. It requires no new units, no additional staff, and no increase in budget. It requires data analysis, disciplined deployment planning, and the organizational will to position resources based on evidence rather than tradition.</p>
+
+<h2>Understanding Demand — The Four Dimensions of Call Volume</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CALL DEMAND ANALYSIS — FOUR DIMENSIONS</span>
+    <div class="ig-title">Where Calls Come From, When They Come, and What They Require</div>
+    <div class="ig-sub">Effective deployment begins with comprehensive demand analysis. Most EMS agencies know their total call volume. Far fewer have analyzed all four dimensions of demand — and fewer still use all four dimensions to drive deployment decisions.</div>
+  </div>
+  <div class="demand-grid">
+    <div class="demand-cell">
+      <div class="demand-label">Dimension 1</div>
+      <div class="demand-title">Temporal Demand</div>
+      <div class="demand-desc">When do calls come? Hour of day, day of week, month of year. Most EMS systems show predictable peaks: weekday mornings, Friday and Saturday evenings, Monday mornings. Temporal demand analysis reveals when the system needs the most units available — enabling staffing decisions aligned with actual demand, not administrative convenience.</div>
+    </div>
+    <div class="demand-cell">
+      <div class="demand-label">Dimension 2</div>
+      <div class="demand-title">Geographic Demand</div>
+      <div class="demand-desc">Where do calls come from? Zone-level, street-level, and address-level demand mapping identifies high-density call areas — the ZIP codes, intersections, and facility addresses that generate disproportionate call volume. Positioning units near high-density demand areas before calls occur reduces response times without increasing unit count.</div>
+    </div>
+    <div class="demand-cell">
+      <div class="demand-label">Dimension 3</div>
+      <div class="demand-title">Priority Distribution</div>
+      <div class="demand-desc">What proportion of calls are each priority level? Priority distribution determines the mix of ALS vs. BLS response capability needed, protocol adherence expectations, and the relative risk of resource shortfalls. A system with 40% high-acuity calls has different deployment requirements than one with 15% — even at identical total call volumes.</div>
+    </div>
+    <div class="demand-cell">
+      <div class="demand-label">Dimension 4</div>
+      <div class="demand-title">Call Duration</div>
+      <div class="demand-desc">How long are units committed per call? Scene time, transport time, and hospital offload time together determine how long a unit is unavailable after each call — the "out of service" period that determines concurrent unit availability. Understanding call duration by type and by destination hospital reveals why some periods have units available while others see simultaneous resource shortfalls.</div>
+    </div>
+  </div>
+</div>
+
+<h2>System Status Management — The Data-Driven Deployment Framework</h2>
+<p>System Status Management (SSM) is the methodology for deploying EMS resources dynamically based on real-time and predicted demand, rather than statically from fixed station locations. SSM uses demand analysis data to define deployment configurations — which units should be positioned where, when — and updates those configurations as demand patterns change throughout the day and week.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SYSTEM STATUS MANAGEMENT — CORE CONCEPTS</span>
+    <div class="ig-title">Dynamic Deployment Based on Demand Evidence</div>
+    <div class="ig-sub">SSM is not a system any single vendor owns — it is a methodology. The underlying principle applies regardless of whether an agency uses formal SSM software: deploy where demand is, when demand is there, based on data — not based on where stations happen to be located.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Post Plans</div>
+      <div class="ig-fw-title">Pre-Defined Deployment Configurations</div>
+      <div class="ig-fw-desc">A post plan defines which units should be positioned at which locations during a specific time period (e.g., weekday 0700–1500, Saturday night 2200–0200). Post plans are derived from temporal and geographic demand analysis — the configurations that place units in locations that minimize average response time to predicted demand. Post plans require regular updating as demand patterns evolve. A post plan written in 2018 may no longer reflect where calls actually occur in 2025.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">System Status</div>
+      <div class="ig-fw-title">Real-Time Unit Availability Monitoring</div>
+      <div class="ig-fw-desc">System status tracks how many units are available at any moment and whether the current deployment configuration matches the active post plan. When unit availability drops below a defined threshold (due to simultaneous calls, hospital offload delays, or mechanical issues), the system status protocol triggers moves — repositioning available units to maintain geographic coverage. This is the "dynamic" element of SSM: responding to real-time availability changes with structured deployment adjustments.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Demand Analysis Integration</div>
+      <div class="ig-fw-title">Closing the Analytics Loop</div>
+      <div class="ig-fw-desc">Effective SSM requires regular post-plan review — comparing actual response time performance against the deployment configuration in use during that period. Where response times are underperforming despite SSM compliance, the data indicates either that post plan positioning is wrong (demand pattern has shifted) or that call duration is consuming unit availability faster than the post plan assumes. Both are analytically diagnosable and operationally addressable.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">The Compliance Problem</div>
+      <div class="ig-fw-title">SSM Only Works if Units Move</div>
+      <div class="ig-fw-desc">SSM is entirely dependent on crews following deployment instructions. Units that return to station rather than moving to assigned posts — because it is more comfortable, because the supervisor does not enforce post compliance, or because the post plan has not been communicated effectively — eliminate the analytical advantage of demand-based deployment. Post compliance tracking is a leading indicator of response time performance, and must be monitored and enforced at the Supervising Officer level with Managing Officer oversight.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Demand Forecasting — The Next Level</h2>
+<p>Advanced EMS analytics moves beyond describing historical demand patterns to forecasting future demand — enabling proactive staffing and deployment decisions rather than purely reactive ones. While formal predictive modeling requires analytical infrastructure that many agencies are still building, the foundational elements of demand forecasting are accessible to any organization with clean CAD data and basic analytical capacity.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ DEMAND FORECASTING — THREE LEVELS OF SOPHISTICATION</span>
+    <div class="ig-title">From Pattern Recognition to Predictive Modeling</div>
+    <div class="ig-sub">Not every agency is ready for Level 3 analytics. Every agency can implement Level 1, which alone produces significant deployment improvement over intuition-based positioning. Build from the bottom up — implement each level before investing in the next.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(42,96,144,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Level 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Pattern Analysis</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Historical Pattern Recognition — Accessible to All Agencies</div>
+        <div class="tier-desc">Using 12–24 months of CAD data to identify consistent temporal and geographic demand patterns. Generate heat maps of call origin, time-of-day demand curves, day-of-week variability, and seasonal call volume trends. This level requires only CAD data export and basic spreadsheet or GIS analysis. The output directly informs post plan design.</div>
+        <div class="tier-officer">Practical output: a deployment matrix showing optimal unit count and position by hour of day and day of week, derived from historical demand data. This alone reduces response time variance significantly in most systems.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Trend Projection</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Demand Growth Modeling — Multi-Year Planning</div>
+        <div class="tier-desc">Overlaying population growth data, residential development patterns, and aging demographic projections onto historical call volume data to model future demand. Enables multi-year staffing and unit planning: when will a geographic zone require an additional unit? When will call volume growth require a schedule change to maintain UHU within target range?</div>
+        <div class="tier-officer">Practical output: unit and staffing requirement projections for the next 3–5 years, directly usable in capital planning requests, contract negotiations, and governing authority budget presentations.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Predictive Analytics</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Machine Learning Demand Prediction — Emerging Capability</div>
+        <div class="tier-desc">Using machine learning models trained on historical call data, weather, events, and community variables to predict near-term (next 4–12 hours) demand by geographic zone. Some commercial platforms now offer this capability integrated with CAD. Early adopters in high-volume urban systems have demonstrated measurable response time improvement from predictive positioning.</div>
+        <div class="tier-officer">Executive consideration: Level 3 analytics requires data infrastructure investment, vendor relationships, and analytical staff capacity. It is appropriate for agencies that have fully implemented Levels 1 and 2 and have the CAD data quality and integration to support model training.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Dimensions of Call Demand</span>
+  <div class="sbar-card accent-ems"><strong>Temporal</strong>When do calls come? Hour, day, month. Drives staffing configuration timing.</div>
+  <div class="sbar-card"><strong>Geographic</strong>Where do calls come from? Zone/address heat mapping. Drives unit positioning.</div>
+  <div class="sbar-card"><strong>Priority Distribution</strong>What proportion by acuity? Drives ALS/BLS mix and resource risk assessment.</div>
+  <div class="sbar-card"><strong>Call Duration</strong>How long are units committed? Scene + transport + offload. Drives concurrent availability modeling.</div>
+  <span class="sbar-label">SSM Core Concepts</span>
+  <div class="sbar-card accent-gold"><strong>Post Plans</strong>Demand-derived deployment configurations by time period. Must be updated as demand patterns evolve.</div>
+  <div class="sbar-card accent-exec"><strong>System Status</strong>Real-time unit availability monitoring. Triggers moves to maintain coverage when availability drops.</div>
+  <div class="sbar-card accent-red"><strong>Post Compliance = Prerequisite</strong>SSM only works if units move. Post compliance must be tracked and enforced by supervisors. Non-compliance eliminates the analytical advantage.</div>
+  <span class="sbar-label">Demand Forecasting Levels</span>
+  <div class="sbar-card accent-ems"><strong>Level 1: Pattern Analysis</strong>12–24 mo. CAD data → heat maps + time curves → deployment matrix. Accessible to all agencies. Implement first.</div>
+  <div class="sbar-card accent-exec"><strong>Level 2: Trend Projection</strong>Population + development + demographics → multi-year unit/staffing needs. Feeds capital planning and budget requests.</div>
+  <div class="sbar-card"><strong>Level 3: Predictive Analytics</strong>ML demand prediction. Requires clean data infrastructure + analytical staff. Build Levels 1 and 2 first.</div>
+  <span class="sbar-label">Unit Hour Utilization Formula</span>
+  <div class="sbar-card accent-gold"><strong>UHU = Total Hours on Call ÷ Total Staffed Unit Hours</strong>Target range: 0.20–0.45. Feeds staffing decisions and contract compliance analysis.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← QI Analytics</button>
+  <div class="lnb-info"><div class="lnb-name">Demand Analysis &amp; Deployment Optimization</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Reporting &amp; Oral Board →</button>
+</div>
+</div><!-- /lesson-4 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 6 — REPORTING & ORAL BOARD           -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 12 · Lesson 6 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillars 4–6</div>
+  <h1 class="lh-title">Reporting Data to Decision-Makers &amp;<br><em>Oral Board Preparation</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">📘 Executive Communication · Data Storytelling</span><span class="lh-meta-item">All NEMSMA Pillars · ERS + STAR-P Frameworks Applied</span></div>
+</div>
+
+<p>The most analytically sophisticated EMS organization in the country fails its mission if its leaders cannot communicate what the data shows to the people who make resource and policy decisions. Data presentation to governing authorities, elected officials, and city managers is a distinct executive skill — one that combines analytical literacy with narrative clarity, political awareness, and the ability to make numbers mean something to an audience that thinks in constituent impact, not clinical metrics.</p>
+<p>This lesson builds the bridge between EMS analytics capability and executive communication effectiveness — and applies the ERS and STAR-P frameworks to the data-related questions that appear consistently in executive-level oral boards.</p>
+
+<h2>Data Storytelling — The Executive Communication Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ DATA STORYTELLING — THE FIVE-ELEMENT FRAMEWORK</span>
+    <div class="ig-title">Translating Analytics Into Decisions Your Governing Authority Will Make</div>
+    <div class="ig-sub">Data does not make decisions — people do. The executive officer's job is not to show the governing authority a dashboard. It is to use data to answer the questions the governing authority most needs answered, in a form that enables them to act.</div>
+  </div>
+  <div class="step-ladder">
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Element</div>
+        <div class="step-num-val" style="color:var(--cream);">1</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Start With the Question — Not the Data</div>
+        <div class="step-desc">Every data presentation to a governing authority should begin from their question, not from yours. What is the city council most worried about? Response times in the growing east district. Start there. What is the city manager tracking? Budget variance and overtime costs. Start there. Data that answers the audience's question is persuasive. Data that answers your question — and then requires them to understand why it matters — is frequently ignored.</div>
+        <div class="step-officer">Preparation question: Before every governing authority presentation, ask: what does this audience most need to decide, and what data evidence does that decision require? Build the presentation from that answer, not from what data you happen to have.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(45,27,78,0.35);">
+        <div class="step-num-label" style="color:var(--exec-text);">Element</div>
+        <div class="step-num-val" style="color:var(--cream);">2</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Provide Context — Benchmark and Trend</div>
+        <div class="step-desc">Every number you present to a governing authority should be accompanied by context: what is the national or regional benchmark, what was last year's performance, and is the trend improving or declining? A standalone metric is uninterpretable — the council member who hears "our ROSC rate is 38%" does not know whether to be pleased, alarmed, or neutral without benchmark and trend context. Provide it proactively, or they will ask — or worse, they will form their own uninformed interpretation.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.25);">
+        <div class="step-num-label" style="color:var(--ems-text);">Element</div>
+        <div class="step-num-val" style="color:var(--cream);">3</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Lead With the Conclusion — Support With Evidence</div>
+        <div class="step-desc">Governing authorities are busy, their attention is divided, and their data literacy is variable. Do not make them read through twelve slides of charts before reaching your conclusion. Lead with the most important finding: "Response time performance in Zone 4 has declined 8% over six months and will breach contract threshold within 90 days without intervention. Here is what the data shows, and here is what I am requesting." Then provide the supporting evidence. Bottom-line up front is not just military communication discipline — it is effective executive communication practice.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Element</div>
+        <div class="step-num-val" style="color:var(--cream);">4</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Connect Data to Constituent Impact</div>
+        <div class="step-desc">Elected officials think in constituent terms. "Our UHU is 0.47" means nothing to a city council member. "When our unit utilization exceeds 0.45, we have insufficient reserve capacity to maintain our response time guarantee to the 11,000 residents east of Route 7 — which is where 23% of our cardiac arrest calls originate" is a statement they can act on. Always translate operational metrics into constituent impact — the number of people affected, the service standard at risk, and what it means for the residents they represent.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.2);">
+        <div class="step-num-label" style="color:var(--ems-text);">Element</div>
+        <div class="step-num-val" style="color:var(--cream);">5</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">End With a Decision — Not a Summary</div>
+        <div class="step-desc">Every data presentation to a governing authority should end with a clear decision point or action request, not a summary of what was covered. "We are requesting authorization to add one additional peak-demand unit beginning Q1" is an actionable ending. "We look forward to your questions and continued support" is not. Make it easy for the authority to take the action you need. If the purpose of the presentation is informational rather than decisional, state that explicitly — governing authorities should always know whether they are being asked to decide something.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Oral Board Preparation — Data and Analytics Questions</h2>
+<p>Executive-level oral boards consistently include questions that test the candidate's data literacy, analytical thinking, and ability to use evidence to support decisions. These questions assess not just knowledge of analytics concepts, but the executive judgment to know which data matters, how to present it, and how to act on it when it reveals an uncomfortable organizational truth.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ERS FRAMEWORK — DATA ANALYTICS APPLICATION</span>
+    <div class="ig-title">Sample Question: "How do you use data to drive organizational performance improvement?"</div>
+    <div class="ig-sub">This is among the most common executive board questions in data-mature organizations. The weak answer recites analytics concepts. The strong answer demonstrates that the candidate has actually used data to change something — and can show what changed and why it mattered.</div>
+  </div>
+  <div class="ers-block">
+    <div class="ers-row">
+      <div class="ers-key">Explain</div>
+      <div class="ers-val">Data drives performance improvement when it does three things simultaneously: it identifies what is actually happening (not what we think is happening), it points toward root cause rather than just symptom, and it verifies that the change we made actually worked. My approach is built on the PDCA framework — we don't implement changes based on intuition and hope they work; we design interventions based on root cause analysis, implement them with fidelity, and use post-implementation data to verify the change before we declare success. The Check phase is the one most organizations skip — and it's the only phase that distinguishes real improvement from activity.</div>
+    </div>
+    <div class="ers-row">
+      <div class="ers-key">Recent Example</div>
+      <div class="ers-val">In [year], our QA data showed a decline in cardiac arrest ROSC rates over three consecutive quarters — from 36% to 28%. Rather than immediately scheduling CPR refresher training, we stratified the data and found that the decline was concentrated in evening shift calls and specifically correlated with cases where CPR feedback devices were not documented as used. We traced the root cause to an equipment accountability gap — feedback devices were not being consistently stocked after use. We implemented a simple post-call equipment checklist, assigned accountability to the Supervising Officer, and monitored ROSC rates for 90 days. ROSC returned to 35% within two quarters. The intervention cost nothing. The diagnosis required data.</div>
+    </div>
+    <div class="ers-row">
+      <div class="ers-key">At This Rank</div>
+      <div class="ers-val">At the Chief level, my obligation to data-driven performance is institutional, not just operational. I am responsible for the infrastructure that makes reliable analytics possible — the data quality governance, the analytical capacity, the culture that uses evidence rather than intuition. When I present performance data to City Council, I am accountable for the accuracy of that data and the integrity of the analysis behind it. And I am accountable for acting on what the data shows, even when the findings are uncomfortable. That accountability — to the data and to its implications — is what Ownership means in an analytics context.</div>
+    </div>
+  </div>
+</div>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ STAR-P FRAMEWORK — DATA DECISION SCENARIO</span>
+    <div class="ig-title">Sample Question: "Tell me about a time data revealed a problem you didn't know you had."</div>
+    <div class="ig-sub">This question assesses data literacy, intellectual honesty, and the executive courage to act on findings that contradict existing assumptions. The candidate who says "I always knew what was happening in my organization" has failed the question before they answer it.</div>
+  </div>
+  <div class="starp-grid">
+    <div class="starp-col">
+      <div class="starp-head sp-s">Situation</div>
+      <div class="starp-body">Describe the organizational context — what system was functioning, what assumptions existed about its performance, and why the problem was not visible through normal supervisory channels.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-t">Task</div>
+      <div class="starp-body">Define what triggered the data review — a routine analytical process, a contract reporting requirement, or an anomaly in reported data that prompted deeper investigation. Establish that discovery came from analytical discipline, not from a complaint or incident forcing the issue.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-a">Action</div>
+      <div class="starp-body">Describe the root cause analysis process — how you stratified data to isolate the problem, which analytical tools you used, how you verified the finding before acting, and how you communicated the findings internally and, if necessary, externally. Show executive rigor and intellectual honesty.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-r">Result</div>
+      <div class="starp-body">State the measurable outcome of the intervention — what metric changed, by how much, over what timeframe. Be honest if the correction required difficult organizational action. Quantify the patient or system impact of finding and fixing the problem versus allowing it to continue undetected.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-p">Principle</div>
+      <div class="starp-body">Connect to Humility (data revealed what intuition missed) and Ownership (the executive's responsibility to build systems that surface uncomfortable truths, not just confirm comfortable assumptions). Connect to Service — the patient impact of the analytical discipline that found the problem.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">Common Data Analytics Questions at the Executive Board</span>
+  <p>Boards at the Chief level regularly include these question types: (1) How do you build a data-driven culture in an organization that has historically relied on intuition? (2) Describe how you would respond if your own data revealed a performance problem before your governing authority raised it. (3) What metrics do you consider most important for EMS performance — and why those specifically? (4) How do you ensure data quality across systems you do not personally manage? (5) You receive a NEMSIS compliance notice indicating your data submission is below state threshold — what do you do? For each: prepare one strong ERS or STAR-P response. One well-constructed, data-rich answer beats three vague ones.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. Performance benchmarks (ROSC rates, fractile compliance standards, UHU ranges, NEMSIS completion thresholds) are provided as illustrative reference ranges and national approximations — they are not contractual standards and vary significantly by system type, geographic context, acuity mix, and applicable contracts or state regulations. Colorado-specific references to CDPHE and NEMSIS submission requirements reflect general regulatory context and may not reflect current requirements. Analytical frameworks (PDCA, 5 Whys, fishbone, run charts) are educational tools and do not substitute for training in formal quality management methodology. Always consult your Medical Director, QI leadership, and applicable regulatory authority before implementing clinical performance improvement programs. The Promotional Standard LLC makes no warranty regarding the accuracy of benchmark values cited relative to any specific agency's operational context or contractual obligations.</p>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Data Storytelling — 5 Elements</span>
+  <div class="sbar-card accent-exec"><strong>1. Start with Their Question</strong>Answer what the audience needs to decide, not what data you happen to have.</div>
+  <div class="sbar-card accent-gold"><strong>2. Context — Benchmark + Trend</strong>Every number needs: national benchmark + last year's performance + trend direction. Always.</div>
+  <div class="sbar-card accent-exec"><strong>3. Bottom Line Up Front</strong>Lead with the conclusion. Support with evidence. Don't make them read through 12 slides to find the point.</div>
+  <div class="sbar-card"><strong>4. Constituent Impact</strong>Translate operational metrics into resident impact. Council members think in constituent terms, not UHU.</div>
+  <div class="sbar-card accent-gold"><strong>5. End With a Decision</strong>Every presentation ends with a clear action request or explicit "this is informational." Never just summarize.</div>
+  <span class="sbar-label">Oral Board — Data Question Types</span>
+  <div class="sbar-card accent-exec"><strong>Culture Question</strong>"How do you build a data-driven culture?" → Describe specific leadership behaviors: asking data questions, requiring evidence for proposals, celebrating uncomfortable findings.</div>
+  <div class="sbar-card accent-exec"><strong>Self-Discovery Question</strong>"Tell me about data that revealed a problem you didn't know you had." → Tests intellectual honesty + analytical discipline. Requires STAR-P with PDCA detail.</div>
+  <div class="sbar-card accent-exec"><strong>Metrics Philosophy</strong>"What metrics matter most and why?" → Must demonstrate clinical outcome priority alongside system performance. Candidates who list only response times are scoring below expectation.</div>
+  <div class="sbar-card accent-exec"><strong>Data Quality Scenario</strong>"NEMSIS compliance notice below state threshold — what do you do?" → Root cause analysis + corrective action + proactive communication. Show governance discipline.</div>
+  <span class="sbar-label">The Data-Confident Executive</span>
+  <div class="sbar-card accent-gold"><strong>Three Tests of Executive Data Literacy</strong>1. Can you quote your ROSC rate and trend without looking it up? 2. Can you explain your fractile compliance by zone? 3. Can you describe what your QI program changed last year — and prove it worked? If not, prepare these before any board.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Demand &amp; Deployment</button>
+  <div class="lnb-info"><div class="lnb-name">Reporting &amp; Oral Board Preparation</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 12 Complete ✓</button>
+</div>
+</div><!-- /lesson-5 -->
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 9 — EMS Quality Management | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Temporal QM flow */
+.qm-timeline{padding:1.25rem 1.4rem;display:flex;flex-direction:column;gap:1px;}
+.qm-phase{display:grid;grid-template-columns:120px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.qm-phase-label{padding:1.1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.qm-phase-time{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:5px;}
+.qm-phase-name{font-family:'EB Garamond',serif;font-size:1.4rem;font-weight:800;line-height:1;}
+.qm-phase-content{background:var(--navy-deep);padding:1.1rem 1.25rem;}
+.qm-phase-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:5px;}
+.qm-phase-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.qm-phase-tools{font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* Metrics dashboard */
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.metric-card{background:var(--navy-deep);padding:1.1rem;}
+.metric-category{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.metric-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.metric-desc{font-size:0.85rem;color:var(--on-dark-2);line-height:1.5;}
+.metric-benchmark{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* QI process flow */
+.qi-flow{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.qi-step{display:grid;grid-template-columns:64px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.qi-step-num{padding:0.9rem;display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:1.6rem;font-weight:800;}
+.qi-step-content{background:var(--navy-deep);padding:0.9rem 1.25rem;}
+.qi-step-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.qi-step-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.metrics-grid,.fw-grid,.fw-grid-3{grid-template-columns:1fr;}.qm-phase,.qi-step{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">QA · QI · CQI</button>
+    <button class="nav-pill" onclick="showLesson(1)">Prospective / Concurrent / Retrospective</button>
+    <button class="nav-pill" onclick="showLesson(2)">Building the QA/QI Process</button>
+    <button class="nav-pill" onclick="showLesson(3)">Performance Metrics &amp; NEMSIS</button>
+    <button class="nav-pill" onclick="showLesson(4)">Adult Learning Principles</button>
+    <button class="nav-pill" onclick="showLesson(5)">Clinical Quality Leadership</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 9 · NEMSMA Pillar 7 · Phase 2</div>
+    <div class="mh-track-badge">◆ Managing Officer Track · Clinical Performance</div>
+    <h1 class="mh-title"><em>EMS Quality</em><br>Management</h1>
+    <p class="mh-sub">NEMSMA Pillar 7 is the most EMS-specific content in the entire framework. No fire track equivalent exists. The Managing Officer who owns their quality management system — not just participates in it — is the one whose clinical outcomes data tells the story their patients deserve to hear.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. QA, QI, and CQI defined and distinguished — the three tiers of clinical quality management. Prospective, concurrent, and retrospective QM — the temporal model that organizes every quality intervention. Building the QA/QI process — case selection, review criteria, feedback delivery, and the PDCA cycle. EMS performance metrics and NEMSIS — the dashboard that makes quality visible. Adult learning principles for EMS education — why Andragogy is the foundation of effective QI feedback. Clinical quality leadership in oral boards — Bucket 11 — Clinical Quality from the Managing Officer's seat.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — QA / QI / CQI ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 1 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">QA · QI · CQI —<br><em>Three Tiers of Clinical Quality Management</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Clinical Performance · Pillar 7</span><span class="lh-meta-item">Bucket 11 — Clinical Quality</span></div>
+</div>
+
+<p>Quality Assurance, Quality Improvement, and Continuous Quality Improvement are three related but distinct concepts that most EMS professionals use interchangeably — and incorrectly. In oral board assessments, using these terms precisely signals clinical quality leadership sophistication. Using them loosely signals that the candidate has not thought carefully about the system they are supposed to manage.</p>
+
+<p>NEMSMA Pillar 7 — Clinical Performance — is grounded in this distinction. A Managing Officer who can define all three, describe how they relate, and explain the Managing Officer's specific accountability within each tier is demonstrating the clinical leadership depth that Pillar 7 requires and that most candidates cannot deliver.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Clinical Quality Management Context</span>
+  <p class="level-key-intro">Quality management responsibilities scale significantly across officer levels:</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Reviews QA findings with direct reports. Documents and escalates patterns. Monitors protocol compliance on their shift.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer ◆ Primary Level This Chapter</strong> — Designs and operates the QA/QI system. Builds the performance dashboard. Presents findings to the Medical Director. Uses PDCA to drive improvement cycles.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Ensures the organization has a functioning QA/QI system. Negotiates the Medical Director's clinical standards. Reports organizational clinical performance to boards and regulatory bodies.</span>
+  </div>
+  <div class="level-key-note">Pillar 7 is the most EMS-specific NEMSMA content. Managing and Executive candidates testing for roles with clinical quality oversight should treat this as a core oral board differentiator.</div>
+</div>
+
+<h2>The Three Tiers — Defined Precisely</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ QA · QI · CQI — THE THREE-TIER CLINICAL QUALITY FRAMEWORK</span>
+    <div class="ig-title">Quality Assurance · Quality Improvement · Continuous Quality Improvement</div>
+    <div class="ig-sub">Each tier builds on the one before it. QA without QI is audit without action. QI without CQI is episode-based rather than systemic. All three together produce organizational learning.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.8rem;">QA</div>
+      <div>
+        <div class="ig-acro-word">Quality Assurance — Did We Meet the Standard?</div>
+        <div class="ig-acro-desc">Quality Assurance is the measurement function. It asks: did our clinical performance meet the established standard? QA involves reviewing individual patient care records (PCRs), monitoring protocol compliance rates, tracking medication administration accuracy, and flagging cases that deviate from the standard. QA is backward-looking — it evaluates what already happened.</div>
+        <div class="ig-acro-ems">What QA IS: case review, compliance monitoring, deviation identification, documentation auditing. What QA IS NOT: the action taken to improve — that is QI. QA without QI is measurement for its own sake, which produces reports without outcomes.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.8rem;">QI</div>
+      <div>
+        <div class="ig-acro-word">Quality Improvement — How Do We Get Better?</div>
+        <div class="ig-acro-desc">Quality Improvement is the action function. It takes the findings from QA and converts them into targeted interventions: additional training, protocol revision, process redesign, equipment change, or individual provider coaching. QI is the PDCA cycle applied to clinical quality: Plan the intervention based on QA findings → Do the intervention → Check whether it improved the metric → Act to standardize what worked. QI requires a feedback loop from QA data to operational change and back to QA measurement.</div>
+        <div class="ig-acro-ems">The Managing Officer's QI accountability: every significant QA finding that is not followed by a documented QI intervention is a quality management failure. "We reviewed it" is QA. "We reviewed it and here is what we changed and how we measured the change" is QI.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.8rem;">CQI</div>
+      <div>
+        <div class="ig-acro-word">Continuous Quality Improvement — Is Improvement Ongoing and Systemic?</div>
+        <div class="ig-acro-desc">Continuous Quality Improvement is the cultural and systemic function. It ensures that quality improvement is not an episodic response to specific failures, but an ongoing organizational process of incremental improvement embedded in the operating rhythm of the division. CQI exists when QA/QI cycles run on a defined schedule, when quality data is routinely reviewed at multiple organizational levels, when clinical excellence is recognized and learned from as systematically as clinical errors, and when the Medical Director's clinical standards are integrated into operations rather than imposed from outside.</div>
+        <div class="ig-acro-ems">CQI is what separates an organization that responds to quality problems from an organization that proactively prevents them. It is the Managing Officer's highest-level clinical quality accountability — building and sustaining the system, not just participating in it.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral boards: when Bucket 11 — Clinical Quality questions ask about your approach to clinical quality management, the 4/5 response names all three tiers and describes your role in each. "My QA process tells me whether standards were met. My QI process converts those findings into targeted interventions. And my CQI system ensures that both functions run continuously on a defined schedule — not just when something goes wrong." That three-sentence structure signals systems thinking at the correct Managing Officer level.</div>
+</div>
+
+<h2>The Medical Director's Role — QA/QI Is a Shared Function</h2>
+<p>The Managing Officer does not own QA/QI independently. Clinical quality management is a shared function with the Medical Director, whose clinical authority governs the standards being measured and whose feedback is required for the interventions that follow from QA findings. This partnership has specific operational structure.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Medical Director QA/QI Responsibilities</div>
+    <div class="fw-card-title">Clinical Standards, Case Review, Corrective Action</div>
+    <div class="fw-card-desc">The Medical Director defines the clinical performance standards against which QA measures. Reviews flagged cases for clinical significance. Determines whether clinical deviations warrant protocol-level changes, individual provider feedback, credentialing review, or documentation guidance. The Medical Director's authority is the clinical foundation of the QA/QI system — without it, the system has no clinical legitimacy.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Managing Officer QA/QI Responsibilities</div>
+    <div class="fw-card-title">System Design, Data Management, Operational Integration</div>
+    <div class="fw-card-desc">The Managing Officer builds and operates the infrastructure: PCR review processes, case selection methodology, data tracking, performance dashboards, and the feedback delivery system. Presents QA findings to the Medical Director on a defined schedule. Implements operational interventions based on Medical Director direction. Monitors improvement metrics to close the QI loop. The Managing Officer makes the system work; the Medical Director makes it clinically meaningful.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Critical Boundary — QA/QI vs. Employment Action</span>
+  <p>QA/QI findings and employment disciplinary actions occupy adjacent but legally distinct domains. PCR reviews conducted as part of a QA/QI program are typically protected as healthcare operations under HIPAA and in many states under peer review privilege statutes — meaning they cannot be compelled in litigation. Disciplinary actions taken against a provider following a QA review are employment actions — subject to HR policy, labor agreements, and due process requirements. The Managing Officer who conflates these domains — treating a QA case conference as a disciplinary proceeding, or using QA data as primary evidence in an employment action without HR involvement — creates legal exposure in both directions. Know the boundary. Keep the functions operationally distinct even when they address the same incident.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Three Tiers — Precisely Defined</span>
+  <div class="sbar-card accent-ems"><strong>QA — Quality Assurance</strong>Did we meet the standard? Measurement function. Backward-looking. Case review, compliance tracking, deviation identification.</div>
+  <div class="sbar-card accent-gold"><strong>QI — Quality Improvement</strong>How do we get better? Action function. PDCA applied to clinical quality. Every QA finding needs a documented QI intervention.</div>
+  <div class="sbar-card accent-green"><strong>CQI — Continuous QI</strong>Is improvement ongoing and systemic? Cultural function. Scheduled cycles, multi-level review, clinical excellence recognized alongside errors.</div>
+  <span class="sbar-label">The Distinction That Matters</span>
+  <div class="sbar-card"><strong>"We reviewed it" = QA</strong>"We reviewed it, changed X, and measured the change" = QI. If QA doesn't produce documented QI interventions — it's measurement for its own sake.</div>
+  <span class="sbar-label">Shared Function</span>
+  <div class="sbar-card accent-gold"><strong>Medical Director</strong>Defines standards, reviews flagged cases, authorizes corrective direction. Clinical legitimacy.</div>
+  <div class="sbar-card accent-ems"><strong>Managing Officer</strong>Builds and operates the system. Data infrastructure, dashboards, feedback delivery, QI loop closure.</div>
+  <span class="sbar-label">Legal Boundary</span>
+  <div class="sbar-card accent-red"><strong>QA/QI ≠ Discipline</strong>QA case conference ≠ disciplinary proceeding. Conflating them creates legal exposure in both directions. Keep the functions distinct even when they address the same incident.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 8</button>
+  <div class="lnb-info"><div class="lnb-name">QA · QI · CQI — Three Tiers</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Prospective / Concurrent / Retrospective →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — PROSPECTIVE / CONCURRENT / RETROSPECTIVE ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 2 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Prospective · Concurrent · Retrospective —<br><em>The Temporal QM Model</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Clinical Performance · Pillar 7</span><span class="lh-meta-item">Bucket 11 — Clinical Quality · Bucket 8 — Mentoring &amp; Development</span></div>
+</div>
+
+<p>The temporal model of quality management organizes every clinical quality intervention by when it occurs relative to patient care. Prospective quality management happens before the call. Concurrent quality management happens during the call. Retrospective quality management happens after the call. A complete quality management system operates in all three timeframes simultaneously — because the problems that surface in retrospective review are often best prevented by prospective interventions, and prospective investments are only valuable if concurrent and retrospective monitoring confirms they are working.</p>
+
+<p>This framework is the Apply step in L·E·A·D for Bucket 11 — Clinical Quality scenarios. When a quality-related scenario appears in an oral board, naming which temporal phase the intervention belongs to — and why — signals systematic clinical quality thinking that generalist oral board responses miss entirely.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE TEMPORAL QM MODEL — PROSPECTIVE · CONCURRENT · RETROSPECTIVE</span>
+    <div class="ig-title">Three Timeframes · One Complete System</div>
+    <div class="ig-sub">Each timeframe addresses quality at a different point in the care continuum. A system that operates only in one timeframe is incomplete — and typically the least effective timeframe to choose alone.</div>
+  </div>
+  <div class="qm-timeline">
+    <div class="qm-phase">
+      <div class="qm-phase-label" style="background:rgba(26,92,58,0.12);">
+        <div class="qm-phase-time" style="color:#60D090;">Before</div>
+        <div class="qm-phase-name" style="color:#60D090;">Prospective</div>
+      </div>
+      <div class="qm-phase-content">
+        <div class="qm-phase-title">Building Clinical Competence Before the Call Arrives</div>
+        <div class="qm-phase-desc">Prospective QM intervenes before patient contact to build the clinical competence, knowledge, and system conditions that produce quality care. It is the highest-leverage timeframe — dollars invested in prospective quality management prevent the clinical errors and system failures that generate retrospective review. Prospective interventions are harder to measure because their success is defined by what does not happen.</div>
+        <div class="qm-phase-tools">Tools: Protocol development and distribution · Provider training and continuing education · Credentialing and scope of practice standards · Equipment procurement and maintenance standards · Simulation training for high-acuity low-frequency events · Prospective case conference on complex protocols before they are deployed</div>
+      </div>
+    </div>
+    <div class="qm-phase" style="margin-top:1px;">
+      <div class="qm-phase-label" style="background:rgba(201,168,76,0.1);">
+        <div class="qm-phase-time" style="color:var(--gold);">During</div>
+        <div class="qm-phase-name" style="color:var(--gold);">Concurrent</div>
+      </div>
+      <div class="qm-phase-content">
+        <div class="qm-phase-title">Real-Time Oversight During Active Patient Care</div>
+        <div class="qm-phase-desc">Concurrent QM provides quality oversight while patient care is actively occurring. It is the most direct form of quality management but also the most operationally constrained — the resources available for concurrent oversight are limited by the same operational demands that are generating the calls. Concurrent interventions are the most immediately impactful when a clinical concern arises during a call.</div>
+        <div class="qm-phase-tools">Tools: Online medical direction (physician oversight of specific calls in real time) · Field supervisor ride-alongs and direct observation · Real-time PCR monitoring for time-sensitive interventions (12-lead acquisition, STR to door times) · Supervisor on-scene during complex calls · Real-time dispatch protocol quality monitoring</div>
+      </div>
+    </div>
+    <div class="qm-phase" style="margin-top:1px;">
+      <div class="qm-phase-label" style="background:rgba(178,34,34,0.1);">
+        <div class="qm-phase-time" style="color:#E87070;">After</div>
+        <div class="qm-phase-name" style="color:#E87070;">Retrospective</div>
+      </div>
+      <div class="qm-phase-content">
+        <div class="qm-phase-title">Post-Care Review, Analysis, and System Learning</div>
+        <div class="qm-phase-desc">Retrospective QM reviews completed patient care episodes to assess clinical quality, identify deviations from standards, recognize excellent care, and feed findings into the QI improvement cycle. It is the most common form of quality management in EMS — and the least effective when used in isolation, because it identifies problems after they have already affected patients. Its value is in driving prospective improvements that prevent future occurrences of identified problems.</div>
+        <div class="qm-phase-tools">Tools: PCR review and scoring · Case conferences with providers and Medical Director · Near-miss reporting and analysis · Outcome data review (hospital outcomes linked to EMS care) · NEMSIS data analysis and benchmarking · Complaint and commendation review · Mortality and morbidity review conferences</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common quality management error in EMS: operating almost entirely in the retrospective phase. A QM system that only looks backward — reviewing what went wrong after the patient encounter — is spending its quality resources in the least preventive location in the care continuum. The Managing Officer who builds prospective investments (training, simulation, protocol design) reduces the volume and severity of what retrospective review eventually finds. Prospective QM is the highest ROI quality investment.</div>
+</div>
+
+<h2>Which Phase Belongs to Which Question</h2>
+<p>Oral board quality scenarios can be categorized by which temporal phase they belong to — and the Managing Officer who can identify this in the Apply step of L·E·A·D is showing systematic thinking that differentiates their response.</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Prospective Phase Scenarios</div>
+    <div class="fw-card-title">Prevention and Preparation Questions</div>
+    <div class="fw-card-desc">New protocol is being implemented. Agency is deploying a new cardiac monitor. New providers are completing field training. Agency is expanding scope of practice. Call volume is increasing in a specific call type. <strong>The officer's frame:</strong> "How do we build the competence before the call arrives?"</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Concurrent Phase Scenarios</div>
+    <div class="fw-card-title">Real-Time Oversight Questions</div>
+    <div class="fw-card-desc">Provider needs guidance on an unusual presentation during a call. Medical direction is needed for a protocol deviation. Supervisor is on scene and observing clinical concerns. Field training is in progress. <strong>The officer's frame:</strong> "How do we support quality while patient care is occurring?"</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Retrospective Phase Scenarios</div>
+    <div class="fw-card-title">Review and Improvement Questions</div>
+    <div class="fw-card-desc">QA review flagged multiple documentation errors. A patient complaint was received. Medical director identified a protocol compliance concern in PCR data. A near-miss event was reported. <strong>The officer's frame:</strong> "What does the data tell us, and what does the QI cycle look like to prevent recurrence?"</div>
+  </div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Three Temporal Phases</span>
+  <div class="sbar-card accent-green"><strong>Prospective — Before</strong>Highest ROI. Prevention through training, protocols, credentialing, simulation. Hardest to measure (success = what doesn't happen).</div>
+  <div class="sbar-card accent-gold"><strong>Concurrent — During</strong>Real-time oversight. Online medical direction, supervisor ride-alongs, direct observation. Most constrained by operational demand.</div>
+  <div class="sbar-card accent-red"><strong>Retrospective — After</strong>Most common. Least effective alone. PCR review, case conference, NEMSIS analysis. Value is in driving prospective improvements.</div>
+  <span class="sbar-label">The Core Insight</span>
+  <div class="sbar-card accent-red"><strong>Retrospective-Only = Lowest Leverage</strong>Most EMS agencies operate primarily in the retrospective phase. The Managing Officer who invests in prospective QM reduces the volume and severity of retrospective findings.</div>
+  <span class="sbar-label">Phase Identification in OBs</span>
+  <div class="sbar-card"><strong>Prevention/Preparation → Prospective</strong>New protocol · new equipment · new providers · scope expansion</div>
+  <div class="sbar-card"><strong>Real-Time Oversight → Concurrent</strong>Guidance during call · supervisor on scene · field training</div>
+  <div class="sbar-card"><strong>Review/Improvement → Retrospective</strong>PCR flags · complaints · near-miss · QA data patterns</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← QA · QI · CQI</button>
+  <div class="lnb-info"><div class="lnb-name">Prospective · Concurrent · Retrospective</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Building the QA/QI Process →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — BUILDING THE QA/QI PROCESS ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 3 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Building the QA/QI Process —<br><em>System Design and Feedback Delivery</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Clinical Performance · System Design</span><span class="lh-meta-item">Bucket 11 — Clinical Quality · Bucket 8 — Mentoring &amp; Development</span></div>
+</div>
+
+<p>A functional QA/QI process is not a spreadsheet of PCR scores. It is an organizational system with defined inputs (which cases are reviewed), defined criteria (what is being measured and against what standard), defined outputs (how findings are communicated and to whom), and a defined improvement cycle (what happens with the findings). The Managing Officer who can describe their QA/QI system in these operational terms is demonstrating system design competency. The one who describes a vague "regular review process" is describing the absence of a system.</p>
+
+<h2>The Eight-Step QA/QI Process</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE QA/QI PROCESS — EIGHT-STEP SYSTEM DESIGN</span>
+    <div class="ig-title">From Case Selection to Improvement Cycle Completion</div>
+    <div class="ig-sub">Each step must be defined in writing for the QA/QI process to function consistently across supervisors, shifts, and time periods. A QA/QI process that exists only in practice but not in documentation is vulnerable to individual variation and cannot be evaluated for effectiveness.</div>
+  </div>
+  <div class="qi-flow">
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(42,96,144,0.1);color:var(--ems-text);">1</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Case Selection — Which PCRs Are Reviewed?</div>
+        <div class="qi-step-desc">Define the selection methodology before implementation. Random sampling (e.g., 10% of all calls) ensures broad coverage but may miss low-frequency high-severity events. Targeted selection (all cardiac arrests, all RSI calls, all medication administration calls, all calls involving complaints) ensures high-stakes care is reviewed. Triggered selection (any case flagged by dispatch, hospital, or patient feedback) catches the cases most likely to have clinical significance. Best practice combines all three: random + targeted + triggered.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(42,96,144,0.1);color:var(--ems-text);">2</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Review Criteria — What Are You Measuring?</div>
+        <div class="qi-step-desc">Establish explicit, protocol-referenced criteria for each call type reviewed. Documentation completeness criteria are separate from clinical care criteria — a PCR can be clinically excellent but documentationally incomplete, or documentationally complete but clinically questionable. Each criterion should reference the specific protocol, standard, or benchmark against which it is measured. Criteria set by the Medical Director; reviewed against them by the Managing Officer and supervisors.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(42,96,144,0.1);color:var(--ems-text);">3</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Reviewer Assignment — Who Reviews What?</div>
+        <div class="qi-step-desc">Define who conducts initial PCR review (typically supervisors, quality officers, or the Medical Director's designee). Define escalation criteria — which findings go to the Medical Director for clinical review? Which go to HR for employment review? Which are addressed at the supervisor level? Reviewer training and calibration: all reviewers should score the same case the same way. Regular calibration exercises maintain inter-rater reliability.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(42,96,144,0.1);color:var(--ems-text);">4</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Finding Classification — How Significant Is This?</div>
+        <div class="qi-step-desc">Not all QA findings are equal. A classification system guides response priority. Classification examples: Commendable (care significantly above standard — recognize and share as best practice), Acceptable (meets standard — document, no action required), Improvement Opportunity (below standard but not patient safety risk — feedback + coaching + education), Significant Concern (below standard with potential patient safety impact — Medical Director review + formal feedback + documented follow-up), Critical Event (patient harm or near-miss — immediate Medical Director review + Just Culture analysis + formal corrective action).</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(201,168,76,0.08);color:var(--gold);">5</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Individual Feedback — The Mirror and the Development Plan</div>
+        <div class="qi-step-desc">Individual feedback from QA review follows the Mirror framework from Chapter 5 — specific observation, named standard, impact, forward look. Feedback is delivered privately, in person where possible, within a defined timeframe from the review. The feedback conversation is not a disciplinary proceeding (see the QA/QI vs. discipline boundary from Lesson 1). For improvement opportunities and significant concerns, a development action item is documented: what specifically will change, by when, and how it will be measured.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(201,168,76,0.08);color:var(--gold);">6</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">System-Level Finding Identification — Is This a Pattern?</div>
+        <div class="qi-step-desc">Individual case findings must be aggregated to identify system-level patterns. A single documentation error is an individual feedback opportunity. The same documentation error appearing in 30% of PCRs across multiple providers is a training system failure or protocol ambiguity that requires a system-level QI intervention. The Managing Officer's QA dashboard should make these patterns visible — individual provider data aggregated to identify division-wide trends.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(201,168,76,0.08);color:var(--gold);">7</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">QI Intervention Design — PDCA for Clinical Quality</div>
+        <div class="qi-step-desc">System-level findings drive QI interventions using the PDCA cycle. Plan: define the specific improvement target (e.g., "Reduce time from patient contact to 12-lead acquisition from current average of 7 minutes to 4 minutes within 90 days"). Do: implement the training, process, or equipment intervention. Check: re-measure the metric at 30, 60, and 90 days. Act: standardize what worked and revise what did not. Document the full cycle for the Medical Director's review.</div>
+      </div>
+    </div>
+    <div class="qi-step">
+      <div class="qi-step-num" style="background:rgba(201,168,76,0.08);color:var(--gold);">8</div>
+      <div class="qi-step-content">
+        <div class="qi-step-title">Medical Director Reporting — The Clinical Partnership Deliverable</div>
+        <div class="qi-step-desc">QA/QI findings are reported to the Medical Director on a defined, regular schedule — typically monthly for operational summary data and quarterly for comprehensive trend review. The Medical Director report includes: case review summary statistics, significant findings with individual anonymization where applicable, system-level patterns identified, QI interventions underway with current metrics, and items requiring Medical Director clinical direction or protocol clarification. This is the Managing Officer's primary clinical quality deliverable to the Medical Director relationship.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral boards, describing your QA/QI process at this level of operational specificity — case selection methodology, classification system, the distinction between individual and system-level findings, PDCA for QI, Medical Director reporting schedule — is the 5/5 response to a Bucket 11 — Clinical Quality question. Most candidates describe the concept of QA/QI. The Managing Officer candidate who describes the system demonstrates they have actually built one.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">8-Step QA/QI Process</span>
+  <div class="sbar-card accent-ems"><strong>1 — Case Selection</strong>Random (10%) + Targeted (high-stakes types) + Triggered (complaints/flagged). Best practice combines all three.</div>
+  <div class="sbar-card accent-ems"><strong>2 — Review Criteria</strong>Protocol-referenced. Documentation separate from clinical care. Medical Director sets standards.</div>
+  <div class="sbar-card accent-ems"><strong>3 — Reviewer Assignment</strong>Who reviews what. Escalation criteria. Calibration exercises for inter-rater reliability.</div>
+  <div class="sbar-card accent-ems"><strong>4 — Finding Classification</strong>Commendable · Acceptable · Improvement Opportunity · Significant Concern · Critical Event.</div>
+  <div class="sbar-card accent-gold"><strong>5 — Individual Feedback</strong>Mirror framework. Private. Timely. Not a disciplinary proceeding. Development action item documented.</div>
+  <div class="sbar-card accent-gold"><strong>6 — Pattern Identification</strong>Aggregate individual findings. 30% same error = system problem, not individual problem.</div>
+  <div class="sbar-card accent-gold"><strong>7 — QI Intervention</strong>PDCA applied to the pattern. Specific target, defined timeline, measurement schedule.</div>
+  <div class="sbar-card accent-gold"><strong>8 — Medical Director Report</strong>Monthly operational + quarterly comprehensive. The primary clinical quality deliverable to the Medical Director.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Prospective / Concurrent / Retrospective</button>
+  <div class="lnb-info"><div class="lnb-name">Building the QA/QI Process</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Performance Metrics &amp; NEMSIS →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — PERFORMANCE METRICS AND NEMSIS ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 4 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Performance Metrics &amp; NEMSIS —<br><em>Making Clinical Quality Visible</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Clinical Performance · Data</span><span class="lh-meta-item">Bucket 11 — Clinical Quality · Bucket 7 — Goal Setting &amp; Vision</span></div>
+</div>
+
+<p>A quality management system that generates findings without tracking them systematically cannot demonstrate improvement over time. The performance dashboard is the Managing Officer's primary tool for making clinical quality visible — to providers, to supervisors, to executive leadership, to the Medical Director, and to the communities the agency serves. What gets measured gets managed. What gets displayed gets noticed. What gets noticed gets improved.</p>
+
+<h2>NEMSIS — The National EMS Data Standard</h2>
+<p>The National EMS Information System (NEMSIS) is the standardized data collection and reporting system used by EMS agencies nationwide. Agencies using federally-funded data systems are required to submit NEMSIS-compliant data. NEMSIS enables three functions that directly support the Managing Officer's QM role:</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Function 1</div>
+    <div class="fw-card-title">National Benchmarking</div>
+    <div class="fw-card-desc">NEMSIS data allows your agency's clinical metrics to be compared against state and national aggregates. A ROSC rate of 28% at your agency means little without context. Against a state average of 22% it tells one story; against a national benchmark of 35% it tells another. NEMSIS provides the population context that makes your quality data meaningful.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Function 2</div>
+    <div class="fw-card-title">Outcome Linkage</div>
+    <div class="fw-card-desc">NEMSIS-linked registries (like CARES for cardiac arrest) allow EMS outcome data to be connected to hospital outcome data — showing not just ROSC at scene but survival to hospital discharge and neurologically intact survival. This is the gold standard clinical outcome metric for cardiac arrest care and the one that most directly demonstrates the value of EMS clinical quality investment.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Function 3</div>
+    <div class="fw-card-title">Research and Evidence Generation</div>
+    <div class="fw-card-desc">Aggregated NEMSIS data supports clinical research that drives protocol development nationally. An agency participating in NEMSIS accurately is contributing to the evidence base that improves protocols not just for their patients but for EMS patients nationwide. This is the Pillar 6 (Social Responsibility) dimension of quality data management.</div>
+  </div>
+</div>
+
+<h2>The EMS Clinical Performance Dashboard</h2>
+<p>A Managing Officer's performance dashboard should include metrics from three categories: operational performance (response times and coverage), clinical process measures (are protocols being followed?), and clinical outcome measures (are patients doing better?). The balance between process and outcome metrics is itself a quality management decision — process measures are more actionable but less meaningful; outcome measures are more meaningful but less within the EMS system's direct control.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS PERFORMANCE DASHBOARD — KEY METRICS</span>
+    <div class="ig-title">Three Categories · Operational · Process · Outcome</div>
+    <div class="ig-sub">These metrics represent the core set that a Managing Officer's QM dashboard should track. Specific benchmarks vary by state, payer contract, and Medical Director standards. All metrics should be tracked as trends — current period vs. prior period vs. benchmark.</div>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card" style="border-top:3px solid var(--ems2);">
+      <div class="metric-category">Operational</div>
+      <div class="metric-name">Response Time Compliance</div>
+      <div class="metric-desc">% of calls where unit arrives within the contractual/regulatory response time standard. Tracked by priority level and geographic zone.</div>
+      <div class="metric-benchmark">Common standard: 90% of Priority 1 calls within 8 minutes. Vary significantly by system type and contract.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid var(--ems2);">
+      <div class="metric-category">Operational</div>
+      <div class="metric-name">Unit Hour Utilization (UHU)</div>
+      <div class="metric-desc">Calls per unit per hour of deployment. Measures how efficiently available units are being used. High UHU indicates system stress; low UHU may indicate overprovisioning.</div>
+      <div class="metric-benchmark">Sustainable UHU varies by system. Above 0.40 is typically considered high stress in many system models.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid var(--gold);">
+      <div class="metric-category">Clinical Process</div>
+      <div class="metric-name">12-Lead ECG Acquisition Rate</div>
+      <div class="metric-desc">% of eligible chest pain / STEMI alert calls where a 12-lead ECG was acquired and transmitted prior to hospital arrival. Direct protocol compliance measure.</div>
+      <div class="metric-benchmark">Target typically &gt;90%. Below this threshold indicates training, equipment, or protocol execution gaps.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid var(--gold);">
+      <div class="metric-category">Clinical Process</div>
+      <div class="metric-name">Stroke Recognition Rate</div>
+      <div class="metric-desc">% of confirmed stroke patients who received pre-hospital stroke screen (Cincinnati, FAST-ED, or agency tool), hospital pre-notification, and appropriate destination selection.</div>
+      <div class="metric-benchmark">Each element tracked separately. Pre-notification rate has the strongest evidence for improving door-to-needle outcomes.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid var(--gold);">
+      <div class="metric-category">Clinical Process</div>
+      <div class="metric-name">PCR Completion Rate</div>
+      <div class="metric-desc">% of PCRs completed within the agency's defined timeframe (typically shift end or 24 hours). Separately track critical field completion rate (required fields completed before hospital arrival).</div>
+      <div class="metric-benchmark">Agency-defined. Late PCRs affect billing, hospital continuity of care, and QA review timeliness.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid #E87070;">
+      <div class="metric-category">Clinical Outcome</div>
+      <div class="metric-name">Cardiac Arrest ROSC Rate</div>
+      <div class="metric-desc">Return of Spontaneous Circulation at hospital arrival for all non-traumatic cardiac arrest calls. The primary clinical outcome metric for EMS cardiac arrest care. Tracked by presenting rhythm (VF/VT vs. PEA/Asystole).</div>
+      <div class="metric-benchmark">National average approximately 27–32%. Highly variable by system. CARES registry provides local and national comparison.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid #E87070;">
+      <div class="metric-category">Clinical Outcome</div>
+      <div class="metric-name">Survival to Discharge — Cardiac Arrest</div>
+      <div class="metric-desc">% of cardiac arrest patients who achieve ROSC and subsequently survive to hospital discharge. Requires NEMSIS/CARES linkage to hospital outcome data. The gold standard EMS cardiac outcome metric.</div>
+      <div class="metric-benchmark">Nationally approximately 9–11% for all-rhythm arrest. Neurologically intact survival is the preferred quality endpoint.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid #E87070;">
+      <div class="metric-category">Clinical Outcome</div>
+      <div class="metric-name">Pain Score Improvement</div>
+      <div class="metric-desc">Average reduction in patient-reported pain score from initial assessment to arrival at receiving facility, for patients receiving analgesic treatment. A direct measure of clinical effectiveness of EMS pain management interventions.</div>
+      <div class="metric-benchmark">Track as mean score reduction. Agency-defined target based on Medical Director standards and analgesic protocol.</div>
+    </div>
+    <div class="metric-card" style="border-top:3px solid #60C080;">
+      <div class="metric-category">Quality System</div>
+      <div class="metric-name">QA Review Completion Rate</div>
+      <div class="metric-desc">% of targeted cases (defined by case selection methodology) that are reviewed within the defined review timeframe. Measures the QA/QI system's own operational performance — a QM system that cannot meet its own review schedule is not functioning.</div>
+      <div class="metric-benchmark">Agency-defined target. Monthly reporting to Medical Director. Below target requires process review.</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Dashboard Design Principle — The Trend Is the Story</span>
+  <p>A dashboard that shows only current period metrics gives a snapshot without a story. A dashboard that shows current period vs. prior period vs. benchmark gives context — which is the only form in which quality data is interpretable. Build every metric on the dashboard with at minimum three data points: where we are now, where we were, and where the standard says we should be. The gap between current performance and benchmark is the QI opportunity. The trend between current and prior period is the evidence that the QI intervention is (or is not) working.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">NEMSIS — Three Functions</span>
+  <div class="sbar-card accent-ems"><strong>National Benchmarking</strong>Your metrics in context. ROSC of 28% means something against a national average. Without comparison, it means nothing.</div>
+  <div class="sbar-card accent-ems"><strong>Outcome Linkage</strong>CARES registry connects EMS care to hospital discharge outcomes. The gold standard cardiac arrest quality endpoint.</div>
+  <div class="sbar-card accent-ems"><strong>Research + Evidence</strong>Accurate NEMSIS data contributes to the national evidence base. Pillar 6 — Social Responsibility dimension of QM.</div>
+  <span class="sbar-label">Dashboard — 3 Metric Categories</span>
+  <div class="sbar-card"><strong>Operational</strong>Response time compliance · Unit Hour Utilization. System efficiency metrics.</div>
+  <div class="sbar-card accent-gold"><strong>Clinical Process</strong>12-lead acquisition · Stroke recognition · PCR completion. Are protocols being followed?</div>
+  <div class="sbar-card accent-red"><strong>Clinical Outcome</strong>ROSC rate · Survival to discharge · Pain score improvement. Are patients doing better?</div>
+  <span class="sbar-label">Dashboard Principle</span>
+  <div class="sbar-card accent-gold"><strong>The Trend Is the Story</strong>Current + Prior + Benchmark = context. Three data points minimum per metric. The gap is the QI opportunity. The trend is the evidence the intervention worked.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Building the QA/QI Process</button>
+  <div class="lnb-info"><div class="lnb-name">Performance Metrics &amp; NEMSIS</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Adult Learning Principles →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — ADULT LEARNING PRINCIPLES ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 5 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Adult Learning Principles —<br><em>Why Andragogy Is the Foundation of EMS Education</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Clinical Performance · Education Systems</span><span class="lh-meta-item">Bucket 8 — Mentoring &amp; Development · Bucket 11 — Clinical Quality</span></div>
+</div>
+
+<p>Effective quality improvement depends on effective education. A QI intervention that identifies the right clinical problem and designs the right training response will still fail if the training is delivered in a way that does not match how the target audience learns. EMS providers are adult learners — experienced, time-pressured, clinically self-confident, and deeply motivated by direct relevance to the patients they serve. Training that ignores these characteristics produces compliance without competence.</p>
+
+<p>Malcolm Knowles' theory of Andragogy — adult learning — provides the framework that separates educational interventions that produce lasting clinical behavior change from those that produce only test scores. Every QI training intervention the Managing Officer designs should be built on these six principles.</p>
+
+<h2>The Six Andragogy Principles — Applied to EMS</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ANDRAGOGY — ADULT LEARNING PRINCIPLES IN EMS EDUCATION</span>
+    <div class="ig-title">Six Principles · Malcolm Knowles · Applied to Clinical Quality Training</div>
+    <div class="ig-sub">Each principle describes how adult learners are different from child learners — and what educational designs work (and fail) as a result. A QI training intervention built on these principles produces clinical behavior change. One that ignores them produces temporary compliance.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P1</div>
+      <div>
+        <div class="ig-acro-word">Self-Concept — Adults Are Self-Directed Learners</div>
+        <div class="ig-acro-desc">Adult learners increasingly direct their own learning and resist being treated as passive recipients of information. They want to understand the rationale for what they are learning, and they want some agency over how and when they learn it.</div>
+        <div class="ig-acro-ems">EMS application: Never present QI training as "you're doing it wrong and here's the right way." Present it as "here is what our data shows, here is what the evidence says about better outcomes, and here is what we are changing as a result." Adults who understand the why own the learning. Adults who are told what to do comply only when supervised.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P2</div>
+      <div>
+        <div class="ig-acro-word">Experience — Prior Experience Is the Learning Foundation</div>
+        <div class="ig-acro-desc">Adult learners have accumulated experience that serves as the foundation for new learning — and that must be respected and leveraged, not ignored or invalidated. New learning is integrated into existing knowledge structures, not inserted into an empty one.</div>
+        <div class="ig-acro-ems">EMS application: Start QI education by acknowledging what providers already do well. "Your current practice produces X outcome. Research shows that providers who add Y produce a significantly better outcome. Here is how Y builds on what you already do." The experienced paramedic who hears their current practice dismissed will disengage. The one who hears their current practice validated and built upon will engage.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P3</div>
+      <div>
+        <div class="ig-acro-word">Readiness to Learn — Adults Learn Best When Content Is Immediately Relevant</div>
+        <div class="ig-acro-desc">Adults are most ready to learn when the content addresses a problem or situation they are currently facing. Readiness is triggered by a felt need — something the learner knows they need to be able to do differently.</div>
+        <div class="ig-acro-ems">EMS application: Time QI education to when providers are most likely to face the clinical situation. A 12-lead interpretation update is best delivered when the agency is seeing an unusual pattern of missed STEMI alerts — not on a random training day in the middle of summer when cardiac alert call volume is low. Relevance is not just content — it is timing.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P4</div>
+      <div>
+        <div class="ig-acro-word">Orientation to Learning — Problem-Centered, Not Subject-Centered</div>
+        <div class="ig-acro-desc">Adults learn better through problem-centered approaches (here is a real situation — how do we handle it better?) than through subject-centered approaches (here is a topic — here is what there is to know about it). The case study format works better for EMS providers than the lecture format for exactly this reason.</div>
+        <div class="ig-acro-ems">EMS application: Build QI education around de-identified real cases from your own QA data where possible. "Last quarter we had seven cases where time to 12-lead exceeded six minutes. Here are two of them. What do you see? What would you do differently?" This format is more engaging, more memorable, and more directly applicable than any protocol lecture on 12-lead acquisition.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P5</div>
+      <div>
+        <div class="ig-acro-word">Motivation — Internal Motivators Outlast External Ones</div>
+        <div class="ig-acro-desc">Adults are motivated by internal factors (personal growth, professional pride, patient outcomes) more durably than external ones (compliance requirements, passing a test, avoiding disciplinary action). External motivators produce compliance. Internal motivators produce commitment.</div>
+        <div class="ig-acro-ems">EMS application: Connect QI education to patient outcomes, not protocol compliance. "Providers who acquire the 12-lead within four minutes give the cath lab team an average of 11 additional minutes of preparation time — which research shows is associated with a 15% improvement in door-to-balloon success rate. You are not doing this for the QA report. You are doing this for the person who had a heart attack this morning." That framing activates the internal motivation that sustains change.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.5rem;">P6</div>
+      <div>
+        <div class="ig-acro-word">Need to Know — Adults Must Understand Why Before Engaging with How</div>
+        <div class="ig-acro-desc">Adult learners invest energy in learning only after they have established that the learning is worth their investment. The "why" is not motivational throat-clearing before the real content — it is itself essential content that determines whether everything that follows is retained.</div>
+        <div class="ig-acro-ems">EMS application: Never start a QI educational session with the protocol change. Start with the evidence, the data, and the outcome gap the change is designed to close. "Our ROSC rate is 24%. The national benchmark for comparable systems is 31%. Research on the gap consistently identifies early defibrillation time as the primary variable we can affect. Here is what we know about compressing our time-to-first-shock. And here is the protocol change that addresses it." The why before the what. Every time.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The single most important Andragogy principle for QI education in EMS: Principle 5 — Motivation. Training that is framed as protocol compliance produces compliance. Training that is framed as patient outcome improvement produces commitment. Every QI educational session the Managing Officer designs should answer the question "why does this matter to a patient?" before it answers "what does the protocol require?" The patient outcome answer is always more motivating than the compliance answer — and it is always available.</div>
+</div>
+
+<h2>Simulation and Experiential Learning — Andragogy in Action</h2>
+<p>Simulation-based training is the most effective delivery mechanism for high-acuity low-frequency clinical skills in EMS — precisely because it satisfies all six Andragogy principles simultaneously. It is problem-centered, immediately relevant, experience-building, self-directed (providers learn from their own performance), patient-outcome motivated, and provides the "why" through direct experience of what happens when interventions are delayed.</p>
+
+<div class="callout callout-ems">
+  <span class="callout-label">The Managing Officer's Role in EMS Education Design</span>
+  <p>At the Supervising level, education delivery is the primary role. At the Managing level, education system design is the primary role. The Managing Officer who personally delivers every training session is working at the Supervising level. The Managing Officer who designs the curriculum, selects the delivery methodology, defines the competency validation standard, schedules the training cadence, and ensures supervisors are equipped to deliver the content consistently — is working at the correct Managing level. Build the system. Don't just teach the class.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">6 Andragogy Principles</span>
+  <div class="sbar-card accent-ems"><strong>P1 — Self-Concept</strong>Adults are self-directed. Explain the why. They own what they understand. They comply with what they're told.</div>
+  <div class="sbar-card accent-ems"><strong>P2 — Experience</strong>Prior experience is the foundation. Build on it — don't dismiss it. Validate before you update.</div>
+  <div class="sbar-card accent-ems"><strong>P3 — Readiness</strong>Adults learn when it's immediately relevant. Time QI education to the clinical situation being addressed.</div>
+  <div class="sbar-card accent-ems"><strong>P4 — Orientation</strong>Problem-centered beats subject-centered. Use real de-identified cases. "What would you do differently?" &gt; lecture.</div>
+  <div class="sbar-card accent-gold"><strong>P5 — Motivation ◆ Most Important</strong>Connect to patient outcomes, not protocol compliance. Internal motivation produces commitment. External produces compliance only while supervised.</div>
+  <div class="sbar-card accent-ems"><strong>P6 — Need to Know</strong>Why before how. Every time. Evidence + outcome gap + protocol change. Never start with the protocol.</div>
+  <span class="sbar-label">Managing vs. Supervising</span>
+  <div class="sbar-card accent-gold"><strong>Supervising Level</strong>Delivers training.</div>
+  <div class="sbar-card accent-ems"><strong>Managing Level</strong>Designs the system that delivers training. Curriculum · methodology · competency validation · cadence · supervisor capacity.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Performance Metrics &amp; NEMSIS</button>
+  <div class="lnb-info"><div class="lnb-name">Adult Learning Principles — Andragogy</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Clinical Quality Leadership →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — CLINICAL QUALITY LEADERSHIP IN ORAL BOARDS ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 9 · Lesson 6 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Clinical Quality Leadership —<br><em>Bucket 11 from the Managing Officer's Seat</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Clinical Performance · Oral Board Integration</span><span class="lh-meta-item">Bucket 11 — Clinical Quality · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>Bucket 11 — Clinical Quality is the oral board question category that most directly tests NEMSMA Pillar 7 competency — and the one where Managing Officer candidates have the greatest opportunity to differentiate themselves from candidates who are not yet thinking at the Managing level. At the Supervising Officer level, Bucket 11 — Clinical Quality questions are answered by describing what the officer personally does with a clinical quality concern. At the Managing Officer level, those same questions are answered by describing the system the officer has designed to address clinical quality concerns across the division — before, during, and after they arise.</p>
+
+<h2>Four Bucket 11 — Clinical Quality Scenario Types</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ BUCKET 11 — CLINICAL QUALITY · FOUR SCENARIO TYPES</span>
+    <div class="ig-title">How Clinical Quality Questions Appear in Oral Boards — and the Managing Officer Response Frame</div>
+    <div class="ig-sub">Each scenario type belongs to a specific temporal phase and requires a specific Managing Officer frame. Identifying the phase and the frame before speaking is the L in L·E·A·D for Bucket 11 — Clinical Quality.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Scenario Type 1 — Prospective</div>
+      <div class="ig-fw-title">New Protocol or Equipment Rollout</div>
+      <div class="ig-fw-desc">"A new chest compression feedback device has been approved for deployment across your division. How do you ensure clinical quality during the transition?" <strong style="color:var(--on-dark-1);">Managing Officer frame:</strong> This is a prospective QM challenge. Apply Andragogy Principles P6 (why before how) and P4 (problem-centered simulation). Design a competency validation process before deployment. Define the metrics that will confirm successful adoption. Describe the prospective QI check point at 30 and 90 days post-deployment.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Scenario Type 2 — Retrospective / Pattern</div>
+      <div class="ig-fw-title">QA Data Reveals a Division-Wide Pattern</div>
+      <div class="ig-fw-desc">"Your QA review this quarter shows that 12-lead acquisition time exceeded 5 minutes in 40% of eligible calls. How do you respond?" <strong style="color:var(--on-dark-1);">Managing Officer frame:</strong> This is a retrospective QM finding requiring a QI intervention. Apply PDCA. Conduct root cause analysis (equipment? training? protocol ambiguity? SSM constraints?). Design the Andragogy-based training intervention (P4: case-based, P5: patient outcome-connected). Define the re-measurement metric and timeline. Schedule the Medical Director briefing.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">Scenario Type 3 — Critical Event</div>
+      <div class="ig-fw-title">Individual Clinical Error with Patient Impact</div>
+      <div class="ig-fw-desc">"A paramedic on your division administered the wrong medication dose to a patient. The patient was not seriously harmed but the error was significant. How do you handle it?" <strong style="color:var(--on-dark-1);">Managing Officer frame:</strong> Apply Just Culture analysis (3 U's). Is this Unable, Unaware, or Unwilling? Separate the QA/QI function from the HR/discipline function — they address the same incident through different channels. Medical Director notification and clinical review immediately. Root cause analysis before any corrective action. Document the full process.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Scenario Type 4 — System Design</div>
+      <div class="ig-fw-title">"Tell Me About Your QM Approach"</div>
+      <div class="ig-fw-desc">"Walk me through how you would build and manage a quality management program for your division." <strong style="color:var(--on-dark-1);">Managing Officer frame:</strong> This is the full Bucket 11 — Clinical Quality showcase question. Describe the three-tier system (QA/QI/CQI). Name the temporal phases. Describe your case selection methodology. Name the Medical Director partnership and reporting structure. Reference your performance dashboard and NEMSIS benchmarking. Connect the QI cycle to Andragogy-based education design. Close with the CQI principle: "The goal is not to find and fix clinical errors — it is to build an organization that continuously improves before those errors reach patients."</div>
+    </div>
+  </div>
+</div>
+
+<h2>Just Culture Applied to Clinical Error — The EMS Integration</h2>
+<p>Every significant clinical quality event requires a Just Culture analysis before any corrective action. The intersection of QA/QI findings and the Just Culture / 3 U's framework is where clinical quality leadership becomes personnel leadership — and Managing Officers must be able to move fluently between the two.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Clinical Error + 3 U's</div>
+    <div class="fw-card-title">Which U Drives the Corrective Action?</div>
+    <div class="fw-card-desc"><strong>Unable:</strong> Provider lacked the skill or knowledge — the training system failed. QI response: training redesign + individual skills remediation. <strong>Unaware:</strong> Provider didn't know the protocol had changed or the standard existed — communication failed. QI response: targeted protocol communication + competency check. <strong>Unwilling:</strong> Provider knew the standard and chose not to follow it — accountability required. HR response in addition to QI. Clinical quality actions separate from disciplinary actions but informed by the same root cause analysis.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">System Failure vs. Individual Error</div>
+    <div class="fw-card-title">Just Culture's Primary Clinical Question</div>
+    <div class="fw-card-desc">Before any corrective action: was this a system failure or an individual choice? A medication error caused by an ambiguously labeled medication drawer is a system failure. The same medication error by a provider who bypassed the required two-person verification is an individual choice. Just Culture requires the correct distinction — and both may be true simultaneously in different proportions. The managing officer's clinical quality response addresses both the system and the individual as appropriate.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Bucket 11 — Clinical Quality 4/5 Response Structure</span>
+  <p style="margin-bottom:0.65rem;"><strong style="color:var(--gold);">L — Label:</strong> <span style="color:var(--on-dark-2);">Bucket 11 — Clinical Quality. Identify which temporal phase this belongs to. Identify whether it is an individual or system-level concern.</span></p>
+  <p style="margin-bottom:0.65rem;"><strong style="color:var(--gold);">E — Engage:</strong> <span style="color:var(--on-dark-2);">What do I know? What data exists? Has the Medical Director been notified if required? What is the scope — isolated incident or pattern?</span></p>
+  <p style="margin-bottom:0.65rem;"><strong style="color:var(--gold);">A — Apply:</strong> <span style="color:var(--on-dark-2);">Name the framework: "My approach uses the prospective/concurrent/retrospective model. This is a retrospective finding requiring a QI response using PDCA. The 3 U's analysis tells me whether this requires training, communication, or accountability. My QA/QI process ensures the Medical Director receives this finding in the next reporting cycle."</span></p>
+  <p style="margin-bottom:0;"><strong style="color:var(--gold);">D — Deliver:</strong> <span style="color:var(--on-dark-2);">"Ultimately, every clinical quality decision I make connects to one standard: would I be satisfied having this patient treated by my crew on their worst day? If not, my job is to build the system that closes that gap — not just respond when it surfaces. That is what CQI means in practice."</span></p>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 9 Complete — The Clinical Quality Foundation</span>
+  <p>You now have the complete clinical quality management architecture for the Managing Officer level: the three-tier QA/QI/CQI system with precise definitions, the temporal model that organizes every quality intervention into prospective, concurrent, or retrospective phases, the eight-step QA/QI process with case selection, classification, individual feedback, pattern identification, PDCA cycles, and Medical Director reporting, the EMS performance dashboard with operational, process, and outcome metrics tied to NEMSIS benchmarking, the six Andragogy principles applied to EMS QI education, and the four Bucket 11 — Clinical Quality oral board scenario types with Managing Officer response frames. Chapter 10 continues the Managing Officer Track with Labor Relations, HR Strategy, and Workforce Management — the people systems that determine whether all the quality investments this chapter built actually have the workforce to execute them.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS quality management requirements, Medical Director authority structures, NEMSIS participation obligations, peer review protection statutes, QA/QI legal protections, clinical performance benchmarks, and billing compliance standards vary significantly by state, jurisdiction, agency type, and applicable regulatory framework. Always consult your agency's Medical Director, legal counsel, compliance officer, and applicable state and federal regulations before designing or modifying a quality management program. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction or clinical environment.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Bucket 11 Scenario Types</span>
+  <div class="sbar-card accent-green"><strong>Type 1 — Prospective</strong>New protocol/equipment rollout. Competency validation before deployment. Andragogy-designed training. 30/90-day metric checkpoints.</div>
+  <div class="sbar-card accent-gold"><strong>Type 2 — Retrospective/Pattern</strong>Division-wide QA finding. PDCA. Root cause analysis first. Andragogy-based QI training. Re-measurement timeline. Medical Director briefing.</div>
+  <div class="sbar-card accent-red"><strong>Type 3 — Critical Event</strong>Individual error with patient impact. Just Culture + 3 U's. QA/QI function separate from HR/discipline. Medical Director notification immediately.</div>
+  <div class="sbar-card accent-ems"><strong>Type 4 — System Design</strong>Full showcase question. All three tiers + temporal phases + case selection + Medical Director partnership + dashboard + NEMSIS + Andragogy + CQI close.</div>
+  <span class="sbar-label">Just Culture + Clinical Quality</span>
+  <div class="sbar-card"><strong>Unable → Training redesign</strong>System failed to build the skill. QI response.</div>
+  <div class="sbar-card"><strong>Unaware → Communication fix</strong>Protocol change not received. QI response.</div>
+  <div class="sbar-card accent-red"><strong>Unwilling → Accountability</strong>Knew + chose not to. HR response in addition to QI. Both channels separately.</div>
+  <span class="sbar-label">The 4/5 Close</span>
+  <div class="sbar-card accent-gold"><strong>CQI Principle</strong>"The goal is not to find and fix errors — it is to build an organization that continuously improves before errors reach patients." That is what CQI means in practice.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Adult Learning Principles</button>
+  <div class="lnb-info"><div class="lnb-name">Clinical Quality Leadership in Oral Boards</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 9 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

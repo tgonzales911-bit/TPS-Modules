@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 7 — Strategic Planning &amp; EMS Innovation | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+/* Phase badge */
+.phase-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);padding:6px 14px;margin-bottom:1.25rem;}
+.phase-badge-text{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* SWOT grid */
+.swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.swot-cell{background:var(--navy-deep);padding:1.4rem;}
+.swot-letter{font-family:'EB Garamond',serif;font-size:3rem;font-weight:800;line-height:1;margin-bottom:5px;}
+.swot-word{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.swot-def{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;margin-bottom:8px;}
+.swot-questions{font-size:0.85rem;color:var(--on-dark-3);line-height:1.55;}
+.swot-example{font-size:0.83rem;color:var(--ems-text);font-style:italic;margin-top:6px;}
+/* Change resistance spectrum */
+.change-spectrum{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.change-row{display:grid;grid-template-columns:110px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.change-label{padding:0.95rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.change-label-text{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:3px;}
+.change-label-pct{font-family:'EB Garamond',serif;font-size:1.5rem;font-weight:800;}
+.change-content{background:var(--navy-deep);padding:0.95rem 1.25rem;}
+.change-name{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.change-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+.change-strategy{font-size:0.84rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* Strategy cascade */
+.strategy-cascade{display:flex;flex-direction:column;gap:1px;background:rgba(201,168,76,0.08);}
+.strategy-level{display:grid;grid-template-columns:80px 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.strategy-num{padding:1rem;display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;}
+.strategy-content{background:var(--navy-deep);padding:1rem 1.25rem;}
+.strategy-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.strategy-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.strategy-ems{font-size:0.83rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+/* PESTLE grid */
+.pestle-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.pestle-cell{background:var(--navy-deep);padding:1.1rem;}
+.pestle-letter{font-family:'EB Garamond',serif;font-size:2.4rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px;}
+.pestle-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:6px;}
+.pestle-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.swot-grid,.fw-grid,.fw-grid-3,.pestle-grid{grid-template-columns:1fr;}.change-row,.strategy-level{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Managing Officer Identity</button>
+    <button class="nav-pill" onclick="showLesson(1)">SWOT for EMS</button>
+    <button class="nav-pill" onclick="showLesson(2)">Change Management</button>
+    <button class="nav-pill" onclick="showLesson(3)">EMS Innovation</button>
+    <button class="nav-pill" onclick="showLesson(4)">Environmental Scanning</button>
+    <button class="nav-pill" onclick="showLesson(5)">Strategic Planning</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 7 · NEMSMA Pillar 5 · Phase 2 Begins</div>
+    <div class="mh-track-badge">◆ Managing Officer Track · Innovation</div>
+    <h1 class="mh-title"><em>Strategic Planning</em><br>&amp; EMS Innovation</h1>
+    <p class="mh-sub">Phase 2 opens with the competency that most clearly marks the Managing Officer level: the ability to think beyond the current shift, the current division, and the current year — and to build organizational capacity that did not exist before you arrived.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The Managing Officer identity — the second major shift in the EMS officer journey. SWOT analysis built for EMS contexts. Change management and the resistance spectrum — why EMS organizations resist change and how to lead through it. Innovation at the Managing level. Environmental scanning with the EMS PESTLE framework. Strategic planning — from SWOT to divisional plan to executive presentation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — MANAGING OFFICER IDENTITY ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 1 of 6 · Phase 2</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">The Managing Officer Identity —<br><em>The Second Major Shift</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Identity · Phase 2 Entry</span><span class="lh-meta-item">Bucket 12 — Leadership Philosophy</span></div>
+</div>
+
+<p>The shift from Provider to Officer — covered in Chapter 2 — was the first major identity transformation in the EMS leader's development. The shift from Supervising Officer to Managing Officer is the second. Both require a candidate to see themselves differently before assessors will see them differently. And both are more commonly failed by identity than by knowledge.</p>
+
+<p>Supervising Officers who are promoted to Managing positions frequently underperform in their new role — not because they lack the technical knowledge, but because they continue thinking and operating at the Supervising level. Their radius of accountability expanded. Their mental model did not. The assessment center exists, in part, to identify whether the candidate has made this shift — or is still, mentally, running a shift.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Phase 2 Focus</span>
+  <p class="level-key-intro">This chapter is Managing Officer content. Executive Officer scope is addressed where it diverges significantly.</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Front-line. Crew, shift, scene accountability. EMS Lieutenant, Field Supervisor.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer ◆ Primary Level This Chapter</strong> — Division, program, supervisor accountability. EMS Captain, Operations Manager, Division Chief.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Organization-wide. Strategy and direction. EMS Chief, Director, Deputy Chief.</span>
+  </div>
+  <div class="level-key-note">Phase 2 candidates testing for Managing Officer positions should answer every oral board question through the Managing lens — division-wide accountability, systems thinking, supervisor development, and programmatic responsibility.</div>
+</div>
+
+<h2>What Changes at Managing — The Five Shifts</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE SUPERVISING-TO-MANAGING IDENTITY SHIFT</span>
+    <div class="ig-title">Five Dimensions That Change When You Cross the Line</div>
+    <div class="ig-sub">These are not gradations of the same thing. They are qualitatively different ways of seeing, deciding, and leading. Managing Officer assessors are specifically evaluating which side of each line the candidate is operating from.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Shift 1</div>
+      <div class="ig-fw-title">From Crew Performance to Supervisor Performance</div>
+      <div class="ig-fw-desc">At Supervising: you develop paramedics. At Managing: you develop the officers who develop paramedics. Your crew is now your supervisors. Your performance is measured by how well your supervisors lead — not by how well you would lead their crews if you were in their position. <strong style="color:var(--on-dark-1);">The identity test:</strong> When a Managing Officer candidate talks about a personnel problem, do they describe what they would do with the provider — or what they would do with the supervisor who manages that provider?</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Shift 2</div>
+      <div class="ig-fw-title">From Reactive Supervision to Proactive System Design</div>
+      <div class="ig-fw-desc">Supervising Officers react to what is happening on their shift. Managing Officers design the systems that determine what happens across all shifts. Scheduling systems, training programs, quality improvement cycles, deployment models, equipment rotation schedules — these are the Managing Officer's products. The officer who is still primarily problem-solving individual incidents is functioning at the Supervising level, regardless of their title.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Shift 3</div>
+      <div class="ig-fw-title">From Protocol Compliance to Protocol Development</div>
+      <div class="ig-fw-desc">Supervising Officers enforce protocols. Managing Officers contribute to building and improving them. This means an active relationship with the Medical Director, familiarity with the current clinical evidence base, and the ability to bring QI data into protocol development conversations. The Managing Officer who cannot speak to protocol development is missing a core competency — and assessors at this level will probe for it.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Shift 4</div>
+      <div class="ig-fw-title">From Budget Awareness to Budget Accountability</div>
+      <div class="ig-fw-desc">Supervising Officers are aware of budget constraints. Managing Officers are accountable for a budget. This means understanding line items, justifying expenditures, identifying variances, and making resource allocation decisions that affect the division's financial performance. The Managing Officer who cannot discuss their budget in an oral board — who says "I don't handle the budget, that's above me" — is performing at the Supervising level.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">Shift 5</div>
+      <div class="ig-fw-title">From Shift Accountability to Strategic Accountability</div>
+      <div class="ig-fw-desc">Supervising Officers account for what happened on their shift. Managing Officers account for what is happening — and what will happen — across the division over months and years. This requires the strategic thinking competencies covered in this chapter: SWOT analysis, change management, environmental scanning, and the ability to translate between operational reality and organizational direction.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The identity test for every oral board question at the Managing Officer level: "Am I answering as the officer who does this, or as the officer who builds the system that does this?" Supervising answers describe what you personally would do. Managing answers describe what you would design, implement, measure, and improve at the organizational level. The language signals the level.</div>
+</div>
+
+<h2>Managing Officer Language — What the Confidence Column Sounds Like</h2>
+<p>The Confidence Spectrum recalibrates at every level. At the Managing Officer level, center-column language has a specific vocabulary that Supervising Officer candidates almost never use — because they have not yet made the identity shift.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Supervising Level Language</div>
+    <div class="fw-card-title">Correct for S — Scope Violation at M</div>
+    <div class="fw-card-desc">"I would sit down with the provider and have a conversation..." "My first action would be to respond to the scene..." "I would make sure my crew understood the policy..." These answers demonstrate Supervising-level competence and Supervising-level scope. They are wrong at a Managing Officer assessment center — not because they are incorrect, but because they answer the wrong question.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Managing Level Language</div>
+    <div class="fw-card-title">The Correct Level — Systems, Programs, Division</div>
+    <div class="fw-card-desc">"My first step would be to assess whether this is an isolated incident or a division-wide pattern..." "I would review the supervisory documentation to understand how this situation developed..." "I would design a process that ensures all supervisors in my division are addressing this consistently..." "The PDCA cycle I would run on this problem..." These answers signal system-level thinking.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Managing Officer Identity Audit</span>
+  <p>Before your assessment center, audit five of your recent oral board practice answers. For each one ask: am I answering as the person who does this, or as the person who builds the system that does this? For each answer that sounds Supervising, rewrite it with Managing scope. You are not describing what you would do personally. You are describing what you would design, implement, and measure at the divisional level. Run this audit on every answer until the Managing level is the default frame — not the deliberate adjustment.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Phase 2 — Managing Officer Track</span>
+  <div class="sbar-card accent-gold"><strong>The Scope</strong>Division · programs · supervisors. Not crew · shift · scene. That is Supervising scope.</div>
+  <span class="sbar-label">5 Identity Shifts</span>
+  <div class="sbar-card"><strong>Crew → Supervisor Performance</strong>You develop the officers who develop paramedics. Your supervisors are your crew now.</div>
+  <div class="sbar-card"><strong>Reactive → Proactive System Design</strong>You build the systems. Not solve the incidents.</div>
+  <div class="sbar-card"><strong>Compliance → Development</strong>You contribute to protocol building. Not just enforcement.</div>
+  <div class="sbar-card accent-gold"><strong>Awareness → Accountability</strong>You own a budget. "That's above me" = Supervising-level response at a Managing assessment center.</div>
+  <div class="sbar-card"><strong>Shift → Strategic</strong>Months and years. SWOT, change management, environmental scanning.</div>
+  <span class="sbar-label">The Identity Test</span>
+  <div class="sbar-card accent-gold"><strong>The Question</strong>"Am I answering as the officer who does this — or the officer who builds the system that does this?" Supervising = I do. Managing = I design + implement + measure.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 6</button>
+  <div class="lnb-info"><div class="lnb-name">The Managing Officer Identity</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">SWOT for EMS →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — SWOT FOR EMS ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 2 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">SWOT Analysis<br><em>Built for EMS</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Innovation · Strategic Assessment</span><span class="lh-meta-item">Bucket 7 — Goal Setting &amp; Vision · Bucket 10 — Change Management</span></div>
+</div>
+
+<p>SWOT — Strengths, Weaknesses, Opportunities, Threats — is the most widely taught strategic assessment framework in management education. It is also, in most EMS oral board contexts, the most superficially understood. Candidates who know the acronym and can recite a generic SWOT example score at the 3/5 level. Candidates who can conduct a genuine SWOT analysis of their division or organization — with specific, data-backed entries in each quadrant — score at the 4/5 and 5/5 levels.</p>
+
+<p>This lesson builds the SWOT competency at the level assessors actually expect from Managing Officer candidates: not as a list of generic observations, but as a strategic assessment tool that produces prioritized action.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ SWOT FRAMEWORK — EMS APPLICATION</span>
+    <div class="ig-title">Strengths · Weaknesses · Opportunities · Threats</div>
+    <div class="ig-sub">SWOT is divided into internal factors (Strengths and Weaknesses — within your control) and external factors (Opportunities and Threats — outside your direct control). The analysis only creates value when it produces priorities and action — not just a populated grid.</div>
+  </div>
+  <div class="swot-grid">
+    <div class="swot-cell" style="border-top:3px solid #60C080;">
+      <div class="swot-letter" style="color:#60C080;">S</div>
+      <div class="swot-word" style="color:#60C080;">Strengths — Internal · Within Control</div>
+      <div class="swot-def">What your organization or division does well. Resources, capabilities, and advantages that produce results better than the benchmark or better than comparable organizations.</div>
+      <div class="swot-questions">Questions that surface genuine Strengths: What do your response time data show compared to regional benchmarks? What clinical quality metrics stand out positively? What about your workforce — tenure, certification levels, retention rates? What programs or partnerships are working well?</div>
+      <div class="swot-example">EMS Examples: Paramedic retention rate above regional average · ROSC rate in the top quartile of comparable systems · Strong Medical Director partnership with quarterly protocol review · Fully certified community paramedicine program · Low workers' comp incident rate suggesting strong safety culture.</div>
+    </div>
+    <div class="swot-cell" style="border-top:3px solid #E87070;">
+      <div class="swot-letter" style="color:#E87070;">W</div>
+      <div class="swot-word" style="color:#E87070;">Weaknesses — Internal · Within Control</div>
+      <div class="swot-def">What your organization or division does poorly relative to standards or peers. Resource gaps, capability deficits, and performance areas where improvement is possible through internal action.</div>
+      <div class="swot-questions">Questions that surface genuine Weaknesses: Where does your response time data underperform? What does QA/QI consistently flag? What is your overtime rate telling you about staffing? Where are supervisor development gaps most visible? What equipment is aging past its serviceable life?</div>
+      <div class="swot-example">EMS Examples: Documentation quality below benchmark · Supervisor development program absent or underfunded · Response time compliance below contract threshold in specific geographic areas · Fleet age average above replacement standard · PCR completion rate below Medical Director expectations.</div>
+    </div>
+    <div class="swot-cell" style="border-top:3px solid var(--gold);">
+      <div class="swot-letter" style="color:var(--gold);">O</div>
+      <div class="swot-word" style="color:var(--gold);">Opportunities — External · Outside Direct Control</div>
+      <div class="swot-def">External conditions or trends that, if acted upon, could improve organizational performance, expand the mission, or create competitive advantage. Opportunities do not create themselves — they require organizational initiative to capture.</div>
+      <div class="swot-questions">Questions that surface genuine Opportunities: What is changing in your community's demographics or health profile? What new funding sources (grants, hospital partnerships, value-based care contracts) are available? What regulatory changes are expanding EMS scope? What technology is deployable that you haven't yet adopted?</div>
+      <div class="swot-example">EMS Examples: Hospital readmission penalty environment creating appetite for MIH-CP partnership funding · State grant program for community paramedicine equipment · New mental health co-response grant available · Regional EMS consolidation creating leadership advancement opportunities · Telemedicine integration enabling alternative destination expansion.</div>
+    </div>
+    <div class="swot-cell" style="border-top:3px solid var(--ems2);">
+      <div class="swot-letter" style="color:var(--ems-text);">T</div>
+      <div class="swot-word" style="color:var(--ems-text);">Threats — External · Outside Direct Control</div>
+      <div class="swot-def">External conditions or trends that could harm organizational performance, reduce mission capacity, or create competitive disadvantage if not addressed. Threats must be monitored and planned for — not ignored because they are uncomfortable.</div>
+      <div class="swot-questions">Questions that surface genuine Threats: What is happening to paramedic workforce availability regionally? What competing employers are drawing from the same talent pool? What funding changes are coming from your governmental or private payer environment? What regulatory changes create compliance burden? What community expectations are shifting?</div>
+      <div class="swot-example">EMS Examples: Regional paramedic shortage worsening — competitors offering signing bonuses · Medicare reimbursement rate decrease affecting revenue per transport · New private ambulance competitor entering the service area · Aging community demographics increasing call volume without corresponding budget increase · State scope of practice legislation tightening MIH-CP eligibility.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common SWOT failure in oral boards: all four quadrants are populated with generic observations that any EMS system could claim. "Strength: dedicated staff. Weakness: limited resources. Opportunity: technology. Threat: competition." These are observations, not a SWOT analysis. A genuine SWOT has specific, data-anchored, organization-specific entries that reflect actual knowledge of the system. The Managing Officer candidate who demonstrates this specificity is demonstrating the organizational knowledge their level requires.</div>
+</div>
+
+<h2>From SWOT to Strategic Priorities — The SO/WO/ST/WT Framework</h2>
+<p>A SWOT analysis that does not produce priorities is a waste of effort. The SO/WO/ST/WT framework converts SWOT data into four strategic postures, each corresponding to a different combination of internal and external factors.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">SO — Strength + Opportunity</div>
+    <div class="fw-card-title">Leverage: Use Strength to Capture Opportunity</div>
+    <div class="fw-card-desc">Where your organization is strong AND an external opportunity exists — invest aggressively. EMS example: Strong clinical outcomes data (Strength) + hospital readmission penalty environment creating MIH-CP funding appetite (Opportunity) → invest in building a formal hospital partnership for a post-discharge program. Your strength makes you the credible partner. The opportunity provides the funding rationale.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">WO — Weakness + Opportunity</div>
+    <div class="fw-card-title">Improve: Fix Weakness to Seize Opportunity</div>
+    <div class="fw-card-desc">Where an external opportunity exists but a Weakness prevents you from capturing it — invest in closing the gap first. EMS example: Grant funding available for community paramedicine program (Opportunity) + no certified community paramedics on staff (Weakness) → build a CP certification pipeline before applying for the grant. You cannot capture the opportunity without closing the gap.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">ST — Strength + Threat</div>
+    <div class="fw-card-title">Defend: Use Strength to Mitigate Threat</div>
+    <div class="fw-card-desc">Where a Threat exists but you have a Strength to deploy against it — use the strength as the defense. EMS example: Regional paramedic shortage worsening (Threat) + strong organizational culture and competitive compensation (Strength) → invest in publicizing the culture advantages to attract candidates who are considering other employers. Strength is the competitive differentiation.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">WT — Weakness + Threat</div>
+    <div class="fw-card-title">Avoid or Contingency Plan</div>
+    <div class="fw-card-desc">Where both a Weakness and a Threat align — this is the highest organizational risk quadrant. EMS example: Documentation quality below benchmark (Weakness) + Medicare billing audit risk increasing due to regulatory environment (Threat) → immediate PDCA on documentation quality before an audit occurs. WT intersections require priority attention and contingency planning.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Oral Board Application — Bucket 7 — Goal Setting &amp; Vision and Bucket 10 — Change Management</span>
+  <p>When asked about your vision for a division, your approach to organizational improvement, or how you would identify priorities — SWOT is the Apply step in L·E·A·D. "Before I could establish priorities, I would conduct a thorough SWOT assessment — examining our internal strengths and weaknesses against the external opportunities and threats in our operating environment. That assessment would tell me where to invest, where to defend, and where to close gaps before a vulnerability becomes a crisis." Name the framework. Name the SO/WO/ST/WT strategic postures. Demonstrate that your thinking is analytical, not instinctive.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">SWOT Quadrants</span>
+  <div class="sbar-card accent-green"><strong>S — Strengths</strong>Internal · within control. Data-anchored, specific. Response times · ROSC rates · retention · certifications.</div>
+  <div class="sbar-card accent-red"><strong>W — Weaknesses</strong>Internal · within control. QA flags · supervisor gaps · fleet age · documentation rates · overtime patterns.</div>
+  <div class="sbar-card accent-gold"><strong>O — Opportunities</strong>External · outside direct control. Funding, partnerships, regulation changes, technology, demographics.</div>
+  <div class="sbar-card accent-ems"><strong>T — Threats</strong>External · outside direct control. Workforce shortage, competition, reimbursement changes, community expectations.</div>
+  <span class="sbar-label">SO/WO/ST/WT Postures</span>
+  <div class="sbar-card"><strong>SO — Leverage</strong>Strength + Opportunity = invest aggressively. You have the credentials. The door is open.</div>
+  <div class="sbar-card"><strong>WO — Improve</strong>Weakness + Opportunity = close the gap first. You can't walk through the door until you fix this.</div>
+  <div class="sbar-card"><strong>ST — Defend</strong>Strength + Threat = use what you have to protect against what's coming.</div>
+  <div class="sbar-card accent-red"><strong>WT — Highest Risk</strong>Weakness + Threat = immediate priority. Vulnerability + external pressure = organizational crisis in waiting.</div>
+  <span class="sbar-label">The Oral Board Warning</span>
+  <div class="sbar-card"><strong>Generic SWOT = 3/5</strong>"Dedicated staff" and "limited resources" are not a SWOT analysis. Specific + data-anchored + organization-specific = 4/5 and 5/5.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Managing Officer Identity</button>
+  <div class="lnb-info"><div class="lnb-name">SWOT Analysis Built for EMS</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Change Management →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — CHANGE MANAGEMENT ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 3 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">Change Management —<br><em>Leading Through Resistance</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Innovation · Managing Change</span><span class="lh-meta-item">Bucket 10 — Change Management</span></div>
+</div>
+
+<p>EMS organizations are simultaneously among the most operationally adaptable and culturally change-resistant institutions in public safety. Providers who can improvise clinical solutions in seconds will resist a new documentation form for months. Officers who execute complex MCI operations can shut down a protocol update meeting with a ten-minute argument about why the old way worked fine.</p>
+
+<p>This is not irrational. EMS culture is built on the proven value of trained habit under pressure. The same cognitive architecture that makes a paramedic reliable on a cardiac arrest — automatic execution of deeply practiced protocols — is the architecture that resists changing those protocols. The Managing Officer who understands this dynamic can lead change effectively. The one who is frustrated by resistance is fighting human nature rather than working with it.</p>
+
+<h2>Why EMS Organizations Resist Change</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS CHANGE RESISTANCE — THE MECHANISMS</span>
+    <div class="ig-title">Six Reasons EMS Culture Pushes Back on Change</div>
+    <div class="ig-sub">Each resistance mechanism has a specific leadership response. The officer who can name the mechanism can design the intervention — rather than simply pushing harder against the resistance.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid #E87070;">
+      <div class="ig-fw-label">Mechanism 1</div>
+      <div class="ig-fw-title">Clinical Trust — "We Know What Works"</div>
+      <div class="ig-fw-desc">Experienced providers have personal evidence that their current practice produces good patient outcomes. Asking them to change requires acknowledging that their evidence may be incomplete or outdated. <strong style="color:var(--on-dark-1);">Leadership response:</strong> Present the evidence for the change with the same clinical rigor you expect them to apply. Don't ask them to trust you — give them data they can trust.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Mechanism 2</div>
+      <div class="ig-fw-title">Automation — "I Don't Want to Think About This"</div>
+      <div class="ig-fw-desc">Highly practiced procedures are automated — they do not require conscious effort. Change introduces conscious re-engagement with something that felt settled. In high-stress environments, this feels like a safety risk. <strong style="color:var(--on-dark-1);">Leadership response:</strong> Acknowledge the automation explicitly. "I know this is going to feel wrong at first because your hands know the old way. That is the normal discomfort of learning. It goes away."</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Mechanism 3</div>
+      <div class="ig-fw-title">Trust Deficit — "Why Should We Believe This Will Be Better?"</div>
+      <div class="ig-fw-desc">Organizations with a history of changes that did not deliver promised improvements develop institutional change skepticism. Every new initiative is filtered through "we've heard this before." <strong style="color:var(--on-dark-1);">Leadership response:</strong> Start small, show results fast, and be honest when early results are mixed. Trust is rebuilt through demonstrated follow-through, not through better explanation of the vision.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Mechanism 4</div>
+      <div class="ig-fw-title">Workload — "We're Already Overwhelmed"</div>
+      <div class="ig-fw-desc">EMS systems frequently operate at or near capacity. Change introduces additional cognitive and procedural load at a time when providers are already managing high baseline demand. <strong style="color:var(--on-dark-1);">Leadership response:</strong> Time changes strategically. Sequence the change so implementation happens during lower-volume periods where possible. Be explicit about the transition support that will be provided.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Mechanism 5</div>
+      <div class="ig-fw-title">Identity — "This Changes Who We Are"</div>
+      <div class="ig-fw-desc">Some changes touch professional identity — what it means to be an EMS provider. MIH-CP, alternative destinations, and community paramedicine all challenge the "emergency responder" identity that many providers built their careers around. <strong style="color:var(--on-dark-1);">Leadership response:</strong> Frame the change as an expansion of identity, not a replacement. "We are not becoming less of what we are. We are becoming more."</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #8090B0;">
+      <div class="ig-fw-label">Mechanism 6</div>
+      <div class="ig-fw-title">Past Wounds — "Last Time They Did This, It Failed"</div>
+      <div class="ig-fw-desc">Organizational memory of previous change failures creates specific resistance to similar-appearing changes. The officer who is unaware of this history will replicate the conditions that caused the previous failure. <strong style="color:var(--on-dark-1);">Leadership response:</strong> Surface the history explicitly. "I know we tried something like this three years ago. Here is what was different about how it was implemented then, and what we are doing differently now."</div>
+    </div>
+  </div>
+</div>
+
+<h2>The Change Resistance Spectrum — Who Is in Your Division</h2>
+<p>In any organization, the population distributes across a change resistance spectrum. The Managing Officer's change management strategy must be designed with this distribution in mind — not built around the assumption that everyone will respond the same way to the same message.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE CHANGE RESISTANCE SPECTRUM</span>
+    <div class="ig-title">Five Groups · Different Messages · Different Timelines</div>
+    <div class="ig-sub">The Managing Officer's change leadership strategy is not one speech to the whole division. It is five different conversations with five different groups. Know who is in each group — and what each one needs to move.</div>
+  </div>
+  <div class="change-spectrum">
+    <div class="change-row">
+      <div class="change-label" style="background:rgba(26,92,58,0.15);">
+        <div class="change-label-text" style="color:#60D090;">Early Adopters</div>
+        <div class="change-label-pct" style="color:#60D090;">~15%</div>
+      </div>
+      <div class="change-content">
+        <div class="change-name">Champions — Already Convinced</div>
+        <div class="change-desc">Embrace the change before it is implemented. Value the vision, trust the officer, or personally believe in the direction. Do not need to be persuaded — they need to be deployed.</div>
+        <div class="change-strategy">Leadership strategy: Make them visible change models and informal advocates. Pair them with skeptics during implementation. Their peer credibility is more persuasive than your authority.</div>
+      </div>
+    </div>
+    <div class="change-row">
+      <div class="change-label" style="background:rgba(201,168,76,0.1);">
+        <div class="change-label-text" style="color:var(--gold);">Open Adopters</div>
+        <div class="change-label-pct" style="color:var(--gold);">~30%</div>
+      </div>
+      <div class="change-content">
+        <div class="change-name">Willing — Need Evidence and Clarity</div>
+        <div class="change-desc">Open to the change but not yet convinced. They need clear rationale, evidence that it will work, and reassurance that the transition will be supported. They follow the evidence — not the enthusiasm.</div>
+        <div class="change-strategy">Leadership strategy: Present the clinical and operational case clearly. Address their specific questions directly. Provide training and resources before implementation. This group usually becomes your operational majority.</div>
+      </div>
+    </div>
+    <div class="change-row">
+      <div class="change-label" style="background:rgba(100,100,100,0.12);">
+        <div class="change-label-text" style="color:var(--on-dark-3);">Wait-and-See</div>
+        <div class="change-label-pct" style="color:var(--on-dark-3);">~35%</div>
+      </div>
+      <div class="change-content">
+        <div class="change-name">Neutral — Watching Before Deciding</div>
+        <div class="change-desc">Neither resistant nor enthusiastic. They are watching how the change rolls out, how leadership handles resistance, and whether the organization actually follows through. Their commitment follows evidence of success, not vision of possibility.</div>
+        <div class="change-strategy">Leadership strategy: Deliver visible early wins. Show them the change is working before asking for their buy-in. Consistency and follow-through are the persuaders here — not communication. Show, don't tell.</div>
+      </div>
+    </div>
+    <div class="change-row">
+      <div class="change-label" style="background:rgba(178,34,34,0.1);">
+        <div class="change-label-text" style="color:#E87070;">Skeptics</div>
+        <div class="change-label-pct" style="color:#E87070;">~15%</div>
+      </div>
+      <div class="change-content">
+        <div class="change-name">Resistant — Actively Questioning</div>
+        <div class="change-desc">Publicly questioning the change. Raising objections in meetings and in informal conversations. Often the most vocal group — but not the most numerous. Their concerns may be legitimate and worth hearing, or may reflect one of the six resistance mechanisms.</div>
+        <div class="change-strategy">Leadership strategy: Engage their objections directly and individually. Acknowledge valid concerns publicly when they are raised. Do not dismiss or marginalize them — that inflames resistance. Some skeptics become the most committed advocates when they feel genuinely heard.</div>
+      </div>
+    </div>
+    <div class="change-row">
+      <div class="change-label" style="background:rgba(100,20,20,0.15);">
+        <div class="change-label-text" style="color:#E87070;">Blockers</div>
+        <div class="change-label-pct" style="color:#E87070;">~5%</div>
+      </div>
+      <div class="change-content">
+        <div class="change-name">Entrenched — Actively Undermining</div>
+        <div class="change-desc">Actively working to undermine implementation — not just voicing objections, but recruiting others to resist, refusing to comply, or creating informal systems that circumvent the change. This is not a communication failure. It is a management failure if left unaddressed.</div>
+        <div class="change-strategy">Leadership strategy: Direct, private accountability conversation. "I need you to implement this consistently or we have a different conversation to have." The Blocker who continues active undermining after this conversation is in the progressive discipline framework — not the change management framework.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">The most common Managing Officer change management mistake: spending 80% of energy on the 5% of Blockers while the 35% of Wait-and-See providers drift toward skepticism because they see no visible wins and no follow-through. Win the middle first. Show the Wait-and-See group evidence that the change is working. Their movement pulls the Skeptics toward compliance. Blockers become isolated rather than influential.</div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Change Management Oral Board Response — Bucket 10 — Change Management</span>
+  <p>When Bucket 10 — Change Management scenarios appear, the 4/5 response structure is: (1) Name the change resistance mechanism most relevant to the scenario. (2) Identify where the organization sits on the resistance spectrum. (3) Describe a sequenced change strategy — starting with Early Adopters as visible models, building Open Adopters through evidence, showing Wait-and-See providers early wins, engaging Skeptics directly, and addressing Blockers through accountability. (4) Close with the Managing Change principle: "Change in EMS succeeds when it is led — not announced. My job is to build the conditions where people can succeed with the change, not just mandate the change and expect compliance."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">6 Resistance Mechanisms</span>
+  <div class="sbar-card"><strong>Clinical Trust</strong>They have evidence their way works. Respond with data — not authority.</div>
+  <div class="sbar-card"><strong>Automation</strong>Change feels unsafe. Acknowledge the discomfort explicitly.</div>
+  <div class="sbar-card"><strong>Trust Deficit</strong>History of failed changes. Show results fast. Don't over-promise.</div>
+  <div class="sbar-card"><strong>Workload</strong>Already at capacity. Time changes strategically. Provide transition support.</div>
+  <div class="sbar-card"><strong>Identity</strong>Expansion, not replacement. "We are becoming more, not less."</div>
+  <div class="sbar-card"><strong>Past Wounds</strong>Surface the history. Name what is different this time. Specifically.</div>
+  <span class="sbar-label">Resistance Spectrum</span>
+  <div class="sbar-card accent-green"><strong>Early Adopters (15%)</strong>Deploy as visible models. Their peer credibility &gt; your authority.</div>
+  <div class="sbar-card accent-gold"><strong>Open Adopters (30%)</strong>Give evidence + clarity. Becomes operational majority.</div>
+  <div class="sbar-card"><strong>Wait-and-See (35%)</strong>Show early wins. Consistency + follow-through. Don't tell — show.</div>
+  <div class="sbar-card accent-red"><strong>Skeptics (15%)</strong>Engage directly. Valid concerns acknowledged publicly. Some become your best advocates.</div>
+  <div class="sbar-card accent-red"><strong>Blockers (5%)</strong>Direct accountability. Active undermining = discipline framework, not change management.</div>
+  <span class="sbar-label">The Key Insight</span>
+  <div class="sbar-card accent-gold"><strong>Win the Middle First</strong>80% of energy goes on the 35% of Wait-and-See. Their movement isolates the Blockers. Spending all energy on Blockers loses the middle.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← SWOT for EMS</button>
+  <div class="lnb-info"><div class="lnb-name">Change Management — Leading Through Resistance</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">EMS Innovation →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — EMS INNOVATION ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 4 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">EMS Innovation —<br><em>Creativity and Enterprise at the Managing Level</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Innovation · Pillar 5</span><span class="lh-meta-item">Bucket 10 — Change Management · Bucket 7 — Goal Setting &amp; Vision</span></div>
+</div>
+
+<p>NEMSMA Pillar 5 defines innovation not as technology adoption or program invention, but as a leadership competency with five specific components: Creativity, Enterprising, Integrating Perspectives, Forecasting, and Managing Change. Together they describe a Managing Officer who actively looks for better ways to do things, builds organizational capacity around continuous improvement, and brings diverse perspectives to the design of solutions. This lesson develops the first four components — Managing Change was covered in Lesson 3.</p>
+
+<h2>The Four Innovation Competencies — EMS Application</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA PILLAR 5 — INNOVATION COMPETENCIES</span>
+    <div class="ig-title">Four Components of the Innovative EMS Officer</div>
+    <div class="ig-sub">S = Supervising Officer · M = Managing Officer · E = Executive Officer. Innovation scales from personal practice and encouragement at Supervising to organizational culture and system design at Executive.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">C</div>
+      <div>
+        <div class="ig-acro-word">Creativity — Generating New Approaches</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates creativity in problem-solving and encourages crew members to propose improvements to existing processes.<br><strong style="color:var(--gold);">M:</strong> Develops processes that encourage and capture innovative thinking from across the division. Creates a psychological safety environment where staff feel safe proposing ideas that challenge current practice.<br><strong style="color:#E87070;">E:</strong> Ensures the organization has a formal innovation pipeline — mechanisms for capturing, evaluating, prototyping, and implementing the best ideas from any level of the organization.</div>
+        <div class="ig-acro-ems">EMS application: A Managing Officer who says "bring me your ideas for improving our documentation process" and then acts on what comes back is practicing Creativity at the correct Managing level. The Supervising Officer who solves the documentation problem themselves is practicing Creativity at the Supervising level.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">E</div>
+      <div>
+        <div class="ig-acro-word">Enterprising — Initiative and Opportunity Capture</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Takes initiative to identify and propose operational improvements without waiting to be asked.<br><strong style="color:var(--gold);">M:</strong> Actively identifies and pursues organizational improvement opportunities — including grant funding, partnerships, pilot programs, and technology adoption — before they are identified by executive leadership. Enterprising at the Managing level means proactively building the future rather than reactively managing the present.<br><strong style="color:#E87070;">E:</strong> Creates organizational conditions that make all staff enterprising — incentivizes initiative and protects employees who take calculated risks in service of improvement.</div>
+        <div class="ig-acro-ems">EMS application: The Managing Officer who identifies a grant opportunity, builds the proposal with their team, and presents it to executive leadership is Enterprising. The one who waits for executive leadership to identify grants and bring them down is not.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">I</div>
+      <div>
+        <div class="ig-acro-word">Integrating Perspectives — Diverse Input, Better Solutions</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Actively seeks input from crew members with different experience levels, roles, and perspectives before finalizing decisions.<br><strong style="color:var(--gold);">M:</strong> Builds cross-functional working groups for significant operational decisions — bringing supervisors, line providers, Medical Director input, and where appropriate, community stakeholder perspectives together. The Managing Officer who makes all significant decisions alone is leaving intelligence on the table and creating ownership deficits in implementation.<br><strong style="color:#E87070;">E:</strong> Ensures organizational decision-making processes are formally structured to integrate diverse internal and external perspectives.</div>
+        <div class="ig-acro-ems">In oral boards: "Before I finalize a protocol change recommendation, I would convene a working group that includes supervisors, line paramedics, and our Medical Director's input. The people who implement protocols know things about implementation that the people who design them often don't."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">F</div>
+      <div>
+        <div class="ig-acro-word">Forecasting — Seeing What Is Coming Before It Arrives</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Stays current on clinical evidence, protocol trends, and operational developments in EMS nationally.<br><strong style="color:var(--gold);">M:</strong> Monitors the environmental factors that will affect divisional performance — workforce trends, regulatory changes, technology developments, community health shifts, reimbursement landscape. Uses this monitoring to build strategic plans that anticipate change rather than react to it. Environmental scanning (covered in Lesson 5) is the tool.<br><strong style="color:#E87070;">E:</strong> Positions the organization to be a leader of EMS trends rather than a follower. Engages with national EMS associations, state EMS bureaus, and research institutions to stay at the leading edge.</div>
+        <div class="ig-acro-ems">The Managing Officer who says in an oral board: "Based on national workforce data, I anticipate a significant paramedic shortage within three years in our region. My divisional plan includes [specific retention and pipeline strategies] to get ahead of that." is demonstrating Forecasting at the correct level.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">Innovation in EMS is not primarily about technology. The most impactful innovations in EMS over the past decade have been organizational and clinical: community paramedicine, alternative destination programs, behavioral health co-response, TECC integration, just culture implementation. The Managing Officer who defines innovation as "we're getting new iPads" is missing the level. Innovation is systematic thinking about how the organization can serve patients and communities better than it does today.</div>
+</div>
+
+<h2>PDCA as the Innovation Cycle</h2>
+<p>The PDCA framework introduced in Chapter 4 is not only a problem-solving tool — it is the correct innovation implementation cycle at the Managing Officer level. The distinction between problem-solving PDCA and innovation PDCA is the starting point: problem-solving PDCA starts from a failure. Innovation PDCA starts from a possibility.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Problem-Solving PDCA</div>
+    <div class="fw-card-title">Starts From a Gap</div>
+    <div class="fw-card-desc">Triggered by QA data, performance below benchmark, or a specific failure event. The Plan step begins with root cause analysis. The innovation is reactive — it addresses a known problem. Examples: documentation error rate above threshold, response time compliance below contract level, medication administration error pattern.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Innovation PDCA</div>
+    <div class="fw-card-title">Starts From a Possibility</div>
+    <div class="fw-card-desc">Triggered by an opportunity identified through SWOT, environmental scanning, or creative insight. The Plan step begins with possibility definition: what better state are we trying to create? The innovation is proactive — it builds something new. Examples: MIH-CP post-discharge program, behavioral health co-response pilot, alternative destination expansion, supervisor development curriculum.</div>
+  </div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Innovation Competencies</span>
+  <div class="sbar-card accent-ems"><strong>Creativity</strong>S: solve personally · M: build the system that captures ideas · E: formal innovation pipeline. Are you the solution, or the environment where solutions emerge?</div>
+  <div class="sbar-card accent-ems"><strong>Enterprising</strong>M: proactively identify opportunities, grants, partnerships. Don't wait for executive leadership to bring them down.</div>
+  <div class="sbar-card accent-ems"><strong>Integrating Perspectives</strong>Cross-functional working groups. Supervisors + line providers + Medical Director. Implementation knowledge lives with implementers.</div>
+  <div class="sbar-card accent-ems"><strong>Forecasting</strong>Monitor workforce, regulation, technology, demographics. Build plans that anticipate — not react. Environmental scanning is the tool (Lesson 5).</div>
+  <span class="sbar-label">PDCA Distinction</span>
+  <div class="sbar-card"><strong>Problem-Solving PDCA</strong>Starts from a gap. Reactive. Triggered by failure data.</div>
+  <div class="sbar-card accent-gold"><strong>Innovation PDCA</strong>Starts from a possibility. Proactive. Triggered by opportunity identification.</div>
+  <span class="sbar-label">The Level Signal</span>
+  <div class="sbar-card accent-red"><strong>Innovation ≠ New Technology</strong>The most impactful EMS innovations are organizational and clinical. "New iPads" is not a Managing Officer answer to an innovation question.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Change Management</button>
+  <div class="lnb-info"><div class="lnb-name">EMS Innovation</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Environmental Scanning →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — ENVIRONMENTAL SCANNING ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 5 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">Environmental Scanning —<br><em>Seeing What Is Coming Before It Arrives</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Innovation · Forecasting</span><span class="lh-meta-item">Bucket 10 — Change Management · Bucket 7 — Goal Setting &amp; Vision</span></div>
+</div>
+
+<p>Environmental scanning is the systematic practice of monitoring the forces outside your organization that will affect its performance and direction. It is what converts the T (Threats) and O (Opportunities) quadrants of a SWOT analysis from speculation into intelligence. A Managing Officer who conducts regular environmental scanning has a SWOT that is current, specific, and actionable. One who does not is working from outdated assumptions — and building strategic plans on a landscape that has already changed.</p>
+
+<p>The PESTLE framework — Political, Economic, Social, Technological, Legal, and Environmental — is the standard environmental scanning structure adapted here for EMS leadership contexts.</p>
+
+<h2>The EMS PESTLE Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE EMS PESTLE FRAMEWORK — ENVIRONMENTAL SCANNING</span>
+    <div class="ig-title">Six Categories of External Forces Affecting EMS Performance</div>
+    <div class="ig-sub">A Managing Officer who can speak to specific current developments in at least four of these six categories — with data or concrete examples — is demonstrating environmental awareness at the correct level for strategic leadership.</div>
+  </div>
+  <div class="pestle-grid">
+    <div class="pestle-cell" style="border-top:3px solid #E87070;">
+      <div class="pestle-letter">P</div>
+      <div class="pestle-word">Political</div>
+      <div class="pestle-desc">Government priorities, elected official relationships, interagency politics. Budget advocacy. Local government EMS funding philosophy. State and federal EMS policy direction. City council or county commission priorities that affect EMS budget or mission.</div>
+    </div>
+    <div class="pestle-cell" style="border-top:3px solid var(--gold);">
+      <div class="pestle-letter">E</div>
+      <div class="pestle-word">Economic</div>
+      <div class="pestle-desc">EMS reimbursement landscape — Medicare, Medicaid, and commercial payer rates. Transport cost per call trends. Grant availability. Hospital financial pressures affecting partnership opportunities. Regional economic conditions affecting tax revenue for government EMS funding.</div>
+    </div>
+    <div class="pestle-cell" style="border-top:3px solid var(--ems2);">
+      <div class="pestle-letter">S</div>
+      <div class="pestle-word">Social</div>
+      <div class="pestle-desc">Community demographics — aging population, population growth or decline, income distribution, housing patterns. Social determinants of health driving 911 utilization. Community expectations about EMS response. Mental health and substance use prevalence trends. Public trust in EMS following high-profile incidents nationally or locally.</div>
+    </div>
+    <div class="pestle-cell" style="border-top:3px solid #60C080;">
+      <div class="pestle-letter">T</div>
+      <div class="pestle-word">Technological</div>
+      <div class="pestle-desc">Electronic PCR systems, CAD integration, telemedicine, GPS-based deployment optimization, ePCR analytics for QI, wearable patient monitoring, medication delivery technology, autonomous vehicle potential impact on long-term EMS deployment. AI-assisted dispatch and clinical decision support tools in development.</div>
+    </div>
+    <div class="pestle-cell" style="border-top:3px solid #D0A0E0;">
+      <div class="pestle-letter">L</div>
+      <div class="pestle-word">Legal</div>
+      <div class="pestle-desc">Scope of practice legislation at state level. HIPAA compliance requirements. Labor law — FLSA, FMLA, ADA application to EMS scheduling. Workers' compensation exposure. Alternative destination regulatory requirements. NFPA 3000 compliance requirements. State EMS licensure standards. Credentialing liability.</div>
+    </div>
+    <div class="pestle-cell" style="border-top:3px solid #8090B0;">
+      <div class="pestle-letter">E</div>
+      <div class="pestle-word">Environmental</div>
+      <div class="pestle-desc">Climate-related call volume increases — heat emergencies, severe weather events. Natural disaster planning and surge capacity. Public health emergency preparedness — pandemic surge, mass casualty events, bioterrorism. Geographic and infrastructure changes affecting response times. Air quality trends affecting respiratory emergency volume.</div>
+    </div>
+  </div>
+</div>
+
+<h2>EMS Workforce — The Scanning Priority</h2>
+<p>Of all the PESTLE categories, the Social and Economic forces converging on the EMS workforce represent the most urgent and consequential environmental trend for Managing Officers in the current environment. The national paramedic shortage is not a future problem — it is a present operational reality in most markets, and it is accelerating.</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">The Supply Problem</div>
+    <div class="fw-card-title">Fewer Paramedics Entering the Workforce</div>
+    <div class="fw-card-desc">Paramedic program enrollment has not kept pace with service demand growth. The pipeline from EMT to paramedic takes 1–2 years and significant personal investment. Competing healthcare career pathways (nursing, physician assistant, respiratory therapy) offer better compensation with similar or less demanding conditions, drawing from the same candidate pool.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">The Retention Problem</div>
+    <div class="fw-card-title">Experienced Paramedics Leaving EMS</div>
+    <div class="fw-card-desc">Compensation compression — experienced paramedics earning only marginally more than new graduates — combined with occupational trauma burden and limited career advancement pathways drives attrition of experienced providers. The average EMS provider tenure nationally is declining. When experienced providers leave, they take irreplaceable field knowledge with them.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">The Managing Officer Response</div>
+    <div class="fw-card-title">Retention-Focused Workforce Strategy</div>
+    <div class="fw-card-desc">Managing Officers who are scanning this environment are building retention strategies now: advancement pathways, specialty credentials, flexibility in scheduling, recognition programs, wellness investment, and compensation advocacy to executive leadership. They are also building succession pipelines — identifying high-potential EMTs who can be developed into paramedics and eventually into officers.</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">Scanning Practice — Build Your PESTLE Before Your Assessment Center</span>
+  <p>Before your oral board, complete a genuine PESTLE scan for your agency or division. In each category, identify one to two specific, current, data-backed developments. Then map each one to your SWOT — does it represent an Opportunity, a Threat, or both? A candidate who brings a current PESTLE into their oral board responses — "Based on the workforce trends I've been monitoring, I would prioritize..." — is demonstrating the Forecasting competency with specificity that generic answers cannot match.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">EMS PESTLE</span>
+  <div class="sbar-card accent-red"><strong>Political</strong>Government priorities · budget advocacy · interagency politics · elected official relationships.</div>
+  <div class="sbar-card accent-gold"><strong>Economic</strong>Reimbursement rates · grant landscape · hospital financial pressures · tax revenue trends.</div>
+  <div class="sbar-card accent-ems"><strong>Social</strong>Demographics · social determinants · community expectations · mental health prevalence.</div>
+  <div class="sbar-card accent-green"><strong>Technological</strong>ePCR · CAD · telemedicine · AI dispatch · medication technology · autonomous vehicles (long horizon).</div>
+  <div class="sbar-card"><strong>Legal</strong>Scope of practice · HIPAA · FLSA/FMLA/ADA · alternative destination regs · credentialing liability.</div>
+  <div class="sbar-card"><strong>Environmental</strong>Climate events · disaster surge · public health emergency · air quality → respiratory call volume.</div>
+  <span class="sbar-label">Priority Scanning Area</span>
+  <div class="sbar-card accent-red"><strong>Workforce Crisis</strong>Supply: fewer entering the pipeline. Retention: experienced providers leaving. Managing Officers build retention strategies now — not when the vacancy crisis arrives.</div>
+  <span class="sbar-label">Before Your OB</span>
+  <div class="sbar-card accent-gold"><strong>Build Your PESTLE</strong>1–2 specific current developments per category. Map each to your SWOT. Specificity signals Forecasting competence.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← EMS Innovation</button>
+  <div class="lnb-info"><div class="lnb-name">Environmental Scanning</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Strategic Planning →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — STRATEGIC PLANNING ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 7 · Lesson 6 of 6</div>
+  <div class="lh-track">Managing Officer Track · NEMSMA Pillar 5</div>
+  <h1 class="lh-title">Strategic Planning —<br><em>From SWOT to Divisional Plan</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Innovation · Strategic Planning</span><span class="lh-meta-item">Bucket 7 — Goal Setting &amp; Vision · Bucket 10 — Change Management</span></div>
+</div>
+
+<p>Strategic planning at the Managing Officer level is not the same as strategic planning at the Executive level. Managing Officers do not set organizational direction. They translate organizational direction into divisional execution — taking the vision and mission that Executive leadership has established and building the programs, processes, metrics, and people development that turn that direction into operational reality.</p>
+
+<p>This distinction matters in oral boards. A Managing Officer who answers a strategy question with organization-wide strategic direction is demonstrating scope violation (Overconfidence). A Managing Officer who answers a strategy question with only shift-level operational detail is demonstrating Supervising-level thinking (Limited Confidence). The Confidence column answer shows divisional strategy that connects upward to organizational direction and downward to operational execution.</p>
+
+<h2>The Strategic Planning Cascade</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE STRATEGIC PLANNING CASCADE — MANAGING OFFICER LEVEL</span>
+    <div class="ig-title">From Organizational Vision to Divisional Execution</div>
+    <div class="ig-sub">The Managing Officer works from Step 3 downward — translating organizational direction into divisional goals, programs, and metrics. Steps 1 and 2 are Executive level. The Managing Officer must understand them and align to them, but does not set them.</div>
+  </div>
+  <div class="strategy-cascade">
+    <div class="strategy-level" style="opacity:0.65;">
+      <div class="strategy-num" style="background:rgba(178,34,34,0.1);color:#E87070;">1</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:#E87070;">Organizational Vision and Mission — Executive Level</div>
+        <div class="strategy-desc">The organization's reason for being and long-term destination. Set by Executive leadership, board, or governing authority. The Managing Officer does not create this — they align to it and implement within it.</div>
+        <div class="strategy-ems">Example: "Our mission is to deliver world-class emergency medical care and community health services that improve the health and quality of life of the community we serve."</div>
+      </div>
+    </div>
+    <div class="strategy-level" style="opacity:0.65;">
+      <div class="strategy-num" style="background:rgba(178,34,34,0.1);color:#E87070;">2</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:#E87070;">Organizational Strategic Priorities — Executive Level</div>
+        <div class="strategy-desc">3–5 year strategic priorities that define where the organization is investing and why. Informed by the organizational SWOT and PESTLE. Set by Executive leadership with Managing Officer input through the planning process.</div>
+        <div class="strategy-ems">Example priorities: Expand MIH-CP programs to serve 20% of high-utilizer population by Year 3. Achieve 95th percentile response time compliance in all contract areas. Build a workforce succession pipeline that supports 100% internal promotion for supervisor vacancies.</div>
+      </div>
+    </div>
+    <div class="strategy-level" style="background:rgba(201,168,76,0.04);border-left:3px solid var(--gold);">
+      <div class="strategy-num" style="background:rgba(201,168,76,0.1);color:var(--gold);">3</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:var(--gold);">◆ Divisional SWOT and Gap Analysis — Managing Officer Level</div>
+        <div class="strategy-desc">The Managing Officer conducts a SWOT specific to their division — using PESTLE-informed external data and QI/operational data for internal assessment. This identifies which organizational priorities the division can directly contribute to and where the gaps are between current state and required performance.</div>
+        <div class="strategy-ems">Managing Officer SWOT output: "My division's strength in clinical quality positions us to lead the MIH-CP expansion. Our weakness in supervisor development creates risk for the succession priority. The PESTLE shows workforce shortage as a near-term threat that requires immediate retention investment."</div>
+      </div>
+    </div>
+    <div class="strategy-level" style="background:rgba(201,168,76,0.04);border-left:3px solid var(--gold);">
+      <div class="strategy-num" style="background:rgba(201,168,76,0.1);color:var(--gold);">4</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:var(--gold);">◆ Divisional Strategic Goals — Managing Officer Level</div>
+        <div class="strategy-desc">SMART + HARD goals that close the gaps identified in Step 3 and contribute to the organizational priorities in Step 2. Each goal connects explicitly to an organizational priority and to the divisional SWOT finding that surfaced it. Goals at this level are 12–18 month targets with measurable outcomes.</div>
+        <div class="strategy-ems">Example: "By Q3, achieve 92% PCR completion accuracy across all division units (measured by Medical Director QA criteria), closing the current 78% baseline. This directly supports the medical director partnership priority and the clinical quality strategic direction."</div>
+      </div>
+    </div>
+    <div class="strategy-level" style="background:rgba(201,168,76,0.04);border-left:3px solid var(--gold);">
+      <div class="strategy-num" style="background:rgba(201,168,76,0.1);color:var(--gold);">5</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:var(--gold);">◆ Programs, Processes, and Accountability — Managing Officer Level</div>
+        <div class="strategy-desc">The specific operational investments that will achieve the divisional goals. Programs (new initiatives), processes (system redesigns), and accountability structures (who owns what, how performance is measured, and what the review cycle looks like). This is where PDCA gets embedded as the implementation and learning mechanism.</div>
+        <div class="strategy-ems">Example: Documentation improvement PDCA cycle — (P) Root cause analysis of current errors, training gap identification. (D) Targeted documentation training for identified gap areas. (C) QA data at 60 days. (A) Standardize what worked, revise what didn't. Monthly review with supervisor team.</div>
+      </div>
+    </div>
+    <div class="strategy-level">
+      <div class="strategy-num" style="background:rgba(42,96,144,0.1);color:var(--ems-text);">6</div>
+      <div class="strategy-content">
+        <div class="strategy-title" style="color:var(--ems-text);">Shift-Level Operational Execution — Supervising Officer Level</div>
+        <div class="strategy-desc">The Supervising Officer implements the programs and processes the Managing Officer designed. Enforces standards. Provides the shift-level data that feeds back into the PDCA cycles. This is where the Managing Officer's design work meets daily reality.</div>
+        <div class="strategy-ems">The Managing Officer's accountability: are your supervisors executing the plan? Are the accountability structures working? Is the PDCA data showing the expected improvement trajectory?</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">Managing Officers who present strategic plans to Executive leadership must demonstrate Step 3 downward — not Steps 1 and 2, which are Executive territory. The most common Managing Officer oral board error in strategic questions is either setting organizational vision (Overconfident) or describing shift-level operations (Limited Confidence). The gold is in Steps 3–5: divisional SWOT, divisional goals, divisional programs and accountability. That is the Managing Officer's strategic space.</div>
+</div>
+
+<h2>Presenting the Plan — Translating Strategy for Different Audiences</h2>
+<p>A strategic plan has no value if the people who need to act on it cannot understand it. Managing Officers present strategic plans to two audiences with very different information needs.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Presenting Upward — Executive Leadership</div>
+    <div class="fw-card-title">Connect Division to Organization</div>
+    <div class="fw-card-desc">Executive leadership wants to know: How does your divisional plan advance the organizational priorities? What resources do you need? What are the risks? What are the metrics you will report against? Present the SWOT findings that drove the goals, the goals themselves, the resource requirements, and the accountability metrics. Be specific, be concise, and connect every element to the organizational strategic priorities. Do not bring problems without proposed solutions.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Presenting Downward — Supervisors and Teams</div>
+    <div class="fw-card-title">Translate Strategy to Practice</div>
+    <div class="fw-card-desc">Supervisors and line providers want to know: What does this mean for my job? What do I need to do differently? What support will I receive? How will my performance be measured? Present the goals in operational terms, describe the programs and processes clearly, identify the specific behaviors and outcomes you are asking for, and make the support structures visible. "Here is what success looks like on a daily basis" is the translation they need.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 7 Complete</span>
+  <p>You now have the Managing Officer strategic foundation: the identity shift from Supervising to Managing, SWOT analysis with the SO/WO/ST/WT strategic postures, change management across the resistance spectrum, the four innovation competencies and PDCA as the innovation cycle, environmental scanning with the EMS PESTLE framework, and the six-level strategic planning cascade. Chapter 8 continues the Managing Officer Track with Budget Development and Financial Leadership — the competency that most directly tests whether candidates have completed the identity shift from tactical to strategic accountability.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS strategic planning requirements, budget processes, regulatory environments, and workforce conditions vary by state, jurisdiction, and agency type. Strategic frameworks presented here (SWOT, PESTLE, change resistance models) are educational tools — their application requires knowledge of specific organizational, community, and regulatory contexts. Always consult your agency's leadership, legal counsel, and applicable regulations before implementing organizational programs or changes. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Strategic Planning Cascade</span>
+  <div class="sbar-card accent-red"><strong>Steps 1–2 — Executive</strong>Vision · Mission · Organizational priorities. Managing Officer aligns to these — does not set them.</div>
+  <div class="sbar-card accent-gold"><strong>Step 3 — Div. SWOT</strong>Divisional strengths, weaknesses, gaps. Connects organizational priorities to divisional reality.</div>
+  <div class="sbar-card accent-gold"><strong>Step 4 — Div. Goals</strong>SMART + HARD. 12–18 month targets. Each connects to an org priority and a SWOT finding.</div>
+  <div class="sbar-card accent-gold"><strong>Step 5 — Programs</strong>What you will implement, redesign, and measure. PDCA embedded as the improvement mechanism.</div>
+  <div class="sbar-card accent-ems"><strong>Step 6 — S-Level Execution</strong>Supervisors implement. Their data feeds back into PDCA. Managing Officer accountable for whether the design works.</div>
+  <span class="sbar-label">Presenting the Plan</span>
+  <div class="sbar-card"><strong>Upward</strong>Division → Organization. SWOT, goals, resources, metrics. No problems without solutions.</div>
+  <div class="sbar-card"><strong>Downward</strong>"What does this mean for my job?" Operational translation. Specific behaviors. Visible support.</div>
+  <span class="sbar-label">Oral Board Position</span>
+  <div class="sbar-card accent-gold"><strong>The Managing Scope</strong>Steps 3–5 are your strategic space. Setting organizational vision (Overconfident). Describing shift operations (Limited Confidence). Divisional SWOT → goals → programs → metrics = the Confidence column.</div>
+  <span class="sbar-label">Next Chapter</span>
+  <div class="sbar-card accent-ems"><strong>Chapter 8</strong>Budget Development and Financial Leadership — the identity shift test that separates Managing from Supervising candidates in the final competency assessment.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Environmental Scanning</button>
+  <div class="lnb-info"><div class="lnb-name">Strategic Planning — From SWOT to Divisional Plan</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 7 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 13 — Oral Board Scenario Bank | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0C2340;--gold:#C9A84C;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8C0E8;--on-dark-3:#9888B8;--on-dark-4:#7060A0;
+  --on-light-1:#1A1428;--on-light-2:#3A2A58;--on-light-3:#6A5A7A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+  --exec:#2D1B4E;--exec2:#4A2D7A;--exec3:#180D30;
+  --exec-gold:#E8C96A;--exec-gold-dim:#A07828;
+  --exec-bg:rgba(74,45,122,0.18);--exec-border:rgba(74,45,122,0.4);--exec-text:#C0A0E8;
+  --sup:#1A5C3A;--sup2:#226644;--sup-text:#80E0A0;--sup-bg:rgba(26,92,58,0.12);--sup-border:rgba(26,92,58,0.35);
+  --fire:#C44020;--fire2:#8C2C10;--fire3:#2C0A00;--on-fire-1:#F5E4D0;--on-fire-2:#D8BC98;
+  --fire-bg:rgba(196,64,32,0.12);--fire-border:rgba(196,64,32,0.4);--fire-text:#F0A080;
+  --shared:#7A6010;--shared-bg:rgba(201,168,76,0.12);--shared-border:rgba(201,168,76,0.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+/* NAV */
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(24,13,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,201,106,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--exec-gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(232,201,106,0.2);flex-shrink:0;}
+.nav-exec-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all .2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,.06);}
+.nav-pill.active{color:var(--exec-gold);background:rgba(232,201,106,.12);border-color:rgba(232,201,106,.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--exec2),var(--exec-gold));z-index:199;width:0%;transition:width .15s;box-shadow:0 0 8px rgba(74,45,122,.6);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+/* HERO */
+.module-hero{background:linear-gradient(155deg,var(--exec3) 0%,var(--exec) 55%,#1E0E40 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--exec-gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(232,201,106,.015) 80px,rgba(232,201,106,.015) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--exec-gold),var(--exec-gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,45,122,.25) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:.85rem;text-shadow:0 2px 20px rgba(0,0,0,.5);}
+.mh-title em{font-style:italic;color:var(--exec-gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(232,201,106,.07);border:1px solid rgba(232,201,106,.2);border-left:4px solid var(--exec-gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:6px;}
+.mh-thread-text{font-size:.95rem;color:var(--cream2);line-height:1.7;}
+/* LAYOUT */
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F3EFF8;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-text);background:var(--exec-bg);border:1px solid var(--exec-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--exec);line-height:1.12;margin-bottom:.65rem;}
+.lh-title em{font-style:italic;color:var(--exec-gold-dim);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--exec);margin:3rem 0 1rem;padding-bottom:.6rem;border-bottom:2px solid var(--light);}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--exec);font-weight:600;}
+/* CALLOUTS */
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.6rem;display:block;}
+.callout-gold{background:#FBF7E6;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-exec{background:var(--exec3);border-left:4px solid var(--exec-gold);box-shadow:0 2px 16px rgba(0,0,0,.3);}
+.callout-exec .callout-label{color:var(--exec-gold);}
+.callout-exec p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+/* FIRE FRAMEWORK STYLING */
+.tps-advantage-banner{background:linear-gradient(135deg,var(--fire3),#3C1000);border:1px solid var(--fire-border);border-left:5px solid var(--fire);padding:1rem 1.5rem;margin:2rem 0;display:flex;align-items:center;gap:1rem;}
+.tps-adv-icon{font-size:1.5rem;flex-shrink:0;}
+.tps-adv-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--fire-text);margin-bottom:3px;}
+.tps-adv-text{font-size:.97rem;color:var(--on-fire-1);line-height:1.7;}
+.fire-framework-panel{background:var(--fire3);border:1px solid var(--fire-border);border-left:4px solid var(--fire);margin:1.25rem 0;overflow:hidden;}
+.ffp-header{background:rgba(196,64,32,.2);padding:.7rem 1.1rem;border-bottom:1px solid var(--fire-border);display:flex;align-items:center;gap:.75rem;}
+.ffp-badge{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;background:var(--fire);color:white;padding:3px 8px;border-radius:3px;}
+.ffp-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--fire-text);}
+.ffp-body{padding:.9rem 1.1rem;}
+.ffp-acro{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:800;color:var(--fire-text);letter-spacing:3px;margin-bottom:.4rem;}
+.ffp-expand{font-size:.97rem;color:var(--on-fire-1);line-height:1.68;}
+.ffp-apply{font-size:.93rem;color:var(--on-fire-2);font-style:italic;margin-top:.6rem;}
+.dual-role-callout{background:linear-gradient(135deg,rgba(196,64,32,.08),rgba(74,45,122,.08));border:1px solid rgba(196,64,32,.2);border-radius:6px;padding:1rem 1.25rem;margin:1rem 0;}
+.drc-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--fire);margin-bottom:.4rem;}
+.drc-text{font-size:.88rem;color:var(--on-light-2);line-height:1.6;}
+/* SIDEBAR */
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D0E8;border-radius:8px;padding:1rem 1.15rem;margin-bottom:8px;font-size:.93rem;color:var(--on-light-2);line-height:1.65;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.sbar-card strong{color:var(--exec);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-exec{border-left:3px solid var(--exec2);}
+.sbar-card.accent-gold{border-left:3px solid var(--exec-gold);}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid var(--sup);}
+.sbar-card.accent-fire{border-left:3px solid var(--fire);background:#FFF8F5;}
+.sbar-card.accent-fire strong{color:var(--fire2);}
+/* NAV BAR */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0D8;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all .2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--exec-gold);color:var(--exec-gold-dim);}
+.lnb-btn:disabled{opacity:.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--exec) 0%,var(--exec2) 100%);color:var(--exec-gold);border-color:var(--exec);box-shadow:0 3px 12px rgba(45,27,78,.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,var(--exec2) 0%,#5A3D90 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--exec);}
+.lnb-num{font-size:.78rem;color:var(--on-light-3);margin-top:2px;}
+/* INFOGRAPHIC WRAP */
+.infographic-wrap{background:var(--exec3);border:1px solid rgba(232,201,106,.2);border-left:4px solid var(--exec-gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.3);}
+.ig-header{background:rgba(232,201,106,.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(232,201,106,.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:.97rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-callout{margin:.6rem 1.4rem 1.1rem;padding:1rem 1.25rem;background:rgba(232,201,106,.07);border-left:3px solid var(--exec-gold);font-size:.97rem;color:#D4B050;line-height:1.7;font-style:italic;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,.08);}
+.ig-fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(232,201,106,.08);}
+.ig-fw-card{background:var(--exec3);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:.97rem;color:var(--on-dark-2);line-height:1.65;}
+.tier-grid{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,.08);}
+.tier-row{display:grid;grid-template-columns:130px 1fr;gap:1px;background:rgba(232,201,106,.08);}
+.tier-stage{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.tier-stage-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.tier-stage-name{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:800;line-height:1.1;}
+.tier-content{background:var(--exec3);padding:.95rem 1.25rem;}
+.tier-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.tier-desc{font-size:.97rem;color:var(--on-dark-2);line-height:1.65;}
+.tier-officer{font-size:.93rem;color:var(--exec-text);font-style:italic;margin-top:6px;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D0E8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.05);}
+.fw-card.fire-card{background:#FFF8F5;border-color:rgba(196,64,32,.25);border-top:3px solid var(--fire);}
+.fw-card.ems-card{background:#F5F8FF;border-color:rgba(42,96,144,.25);border-top:3px solid var(--ems2);}
+.fw-card.shared-card{background:#FDFAF0;border-color:rgba(201,168,76,.3);border-top:3px solid var(--gold);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:7px;}
+.fw-card.fire-card .fw-card-label{color:var(--fire2);}
+.fw-card.ems-card .fw-card-label{color:var(--ems);}
+.fw-card.shared-card .fw-card-label{color:var(--shared);}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--exec);margin-bottom:7px;}
+.fw-card-desc{font-size:.95rem;color:var(--on-light-2);line-height:1.7;}
+/* TABLE (dark context) */
+.exec-table{width:100%;border-collapse:collapse;font-size:.9rem;}
+.exec-table th{background:rgba(74,45,122,.6);color:var(--exec-gold);padding:.65rem 1rem;text-align:left;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.exec-table td{padding:.65rem 1rem;border-bottom:1px solid rgba(232,201,106,.1);vertical-align:top;color:var(--on-dark-2);line-height:1.55;}
+.exec-table td strong{color:var(--on-dark-1);}
+.exec-table tr:nth-child(even) td{background:rgba(74,45,122,.18);}
+.exec-table tr:hover td{background:rgba(232,201,106,.07);}
+/* SCORING TABLE */
+.score-table{width:100%;border-collapse:collapse;font-size:.95rem;}
+.score-table th{background:var(--exec);color:var(--exec-gold);padding:.6rem .9rem;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;text-align:left;}
+.score-table td{padding:.75rem 1rem;border-bottom:1px solid rgba(232,201,106,.1);color:var(--on-dark-2);vertical-align:top;line-height:1.6;}
+.score-table td strong{color:var(--on-dark-1);}
+.score-5{background:rgba(26,92,58,.25)!important;}
+.score-4{background:rgba(42,96,144,.2)!important;}
+.score-3{background:rgba(74,45,122,.2)!important;}
+.score-2{background:rgba(140,60,20,.2)!important;}
+.score-1{background:rgba(178,34,34,.2)!important;}
+.score-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.85rem;font-weight:700;width:2rem;text-align:center;}
+/* SCENARIO CARD */
+.scenario-card{background:white;border:1px solid #D8D0E8;border-radius:10px;overflow:hidden;margin:2.5rem 0;box-shadow:0 3px 18px rgba(45,27,78,.1);}
+.scenario-header{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+.scenario-header.sup-header{background:linear-gradient(135deg,var(--sup),var(--sup2));}
+.scenario-header.mgr-header{background:linear-gradient(135deg,#7A6010,#A08028);}
+.scenario-header.exec-header{background:linear-gradient(135deg,var(--exec),var(--exec2));}
+.scenario-header.eth-header{background:linear-gradient(135deg,#5C1A1A,#8C2828);}
+.scenario-badge{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.9);white-space:nowrap;}
+.scenario-num{font-family:'EB Garamond',serif;font-size:1.4rem;font-weight:800;color:rgba(255,255,255,.5);margin-left:auto;}
+.scenario-prompt-block{padding:1.25rem 1.5rem;background:#FDFBFF;border-bottom:1px solid #E8E0F0;}
+.scenario-prompt-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:.5rem;display:block;}
+.scenario-prompt-text{font-family:'EB Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--exec);line-height:1.45;font-style:italic;}
+.scenario-meta{display:flex;gap:0;border-bottom:1px solid #E8E0F0;}
+.scenario-meta-cell{flex:1;padding:.75rem 1rem;border-right:1px solid #E8E0F0;}
+.scenario-meta-cell:last-child{border-right:none;}
+.scenario-meta-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:3px;}
+.scenario-meta-val{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1px;color:var(--exec2);font-weight:700;}
+.scenario-body{padding:1.25rem 1.5rem;}
+/* ERS & STAR-P */
+.ers-block{overflow:hidden;}
+.ers-row{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(232,201,106,.08);margin-bottom:1px;}
+.ers-key{background:var(--exec);padding:1rem;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);display:flex;align-items:center;justify-content:center;text-align:center;}
+.ers-val{background:var(--exec3);padding:1.1rem 1.4rem;font-size:.97rem;color:var(--on-dark-2);line-height:1.72;}
+.starp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(232,201,106,.08);}
+.starp-head{padding:.65rem .5rem;text-align:center;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);}
+.sp-s{background:#1a3a5c;}.sp-t{background:var(--ems);}.sp-a{background:var(--exec);}.sp-r{background:#2A1840;}.sp-p{background:var(--exec2);}
+.starp-body{background:var(--exec3);padding:1rem .85rem;font-size:.94rem;color:var(--on-dark-2);line-height:1.65;border-right:1px solid rgba(232,201,106,.06);}
+.starp-col:last-child .starp-body{border-right:none;}
+/* AVOID BLOCK */
+.avoid-block{background:#FFF5F5;border:1px solid rgba(178,34,34,.2);border-left:4px solid #B22222;padding:1rem 1.25rem;margin:1rem 0;}
+.avoid-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:#B22222;margin-bottom:.5rem;display:block;}
+.avoid-text{font-size:.9rem;color:#5A1A1A;line-height:1.65;}
+/* TCHOEDS TAG */
+.tchoeds-tag{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:4px 10px;border-radius:20px;margin:.5rem .25rem 0 0;}
+.tchoeds-tag.green{background:var(--sup-bg);border-color:var(--sup-border);color:var(--sup-text);}
+.tchoeds-tag.gold{background:var(--shared-bg);border-color:var(--shared-border);color:#C09020;}
+/* FRAMEWORK QUICK REF */
+.framework-quick{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,.08);}
+.fq-card{background:var(--exec3);padding:1rem;}
+.fq-card.fq-fire{background:var(--fire3);}
+.fq-card.fq-shared{background:#1A1800;}
+.fq-name{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:4px;}
+.fq-card.fq-fire .fq-name{color:var(--fire-text);}
+.fq-card.fq-shared .fq-name{color:#C8A840;}
+.fq-letters{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:800;color:var(--on-dark-1);margin-bottom:6px;letter-spacing:3px;}
+.fq-expand{font-size:.93rem;color:var(--on-dark-2);line-height:1.68;}.fq-card.fq-fire .fq-expand{color:var(--on-fire-1)!important;}
+.fq-use{font-size:.8rem;color:var(--exec-text);font-style:italic;margin-top:4px;}
+.fq-card.fq-fire .fq-use{color:var(--fire-text);}
+/* CHECKLIST */
+.checklist{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,.08);}
+.check-row{display:grid;grid-template-columns:40px 1fr;gap:1px;background:rgba(232,201,106,.08);}
+.check-box{background:rgba(26,92,58,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--sup-text);}
+.check-content{background:var(--exec3);padding:1rem 1.25rem;font-size:.97rem;color:var(--on-dark-2);line-height:1.7;}
+.check-content strong{color:var(--on-dark-1);}
+
+/* NEMSMA CONFIDENCE SPECTRUM */
+.confidence-spectrum{display:flex;flex-direction:column;gap:2px;padding:.75rem 1.25rem 1rem;}
+.cs-row{display:flex;align-items:stretch;gap:1px;border-radius:3px;overflow:hidden;}
+.cs-level{min-width:130px;padding:.7rem 1rem;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:white;display:flex;align-items:center;flex-shrink:0;}
+.cs-body{flex:1;padding:.75rem 1rem;font-size:.95rem;color:var(--on-dark-2);line-height:1.65;background:rgba(255,255,255,.04);}
+.cs-over{background:#8C2C10;}.cs-target{background:var(--sup);}.cs-under{background:#1A3A5C;}
+/* YERKES-DODSON */
+.yd-bar{display:flex;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-bottom:1px solid rgba(232,201,106,.08);}
+.yd-zone{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;min-width:140px;color:var(--on-dark-1);}
+.yd-indicator{flex:1;height:8px;border-radius:4px;}
+.yd-desc{font-size:.95rem;color:var(--on-dark-2);line-height:1.65;flex:2;}
+/* QUOTE */
+.tps-quote{background:var(--exec3);border-left:4px solid var(--exec-gold);padding:1.25rem 1.5rem;margin:2rem 0;}
+.tps-quote-text{font-family:'EB Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--cream);line-height:1.6;margin-bottom:.4rem;}
+.tps-quote-attr{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);}
+/* DISCLAIMER */
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBF8;border:1px solid #D8D0E8;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:.5rem;display:block;}
+.legal-disclaimer p{font-size:.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+/* RESPONSIVE */
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-fw-grid,.ig-fw-grid-3,.fw-grid,.fw-grid-3,.framework-quick,.starp-grid{grid-template-columns:1fr;}.tier-row{grid-template-columns:1fr;}.scenario-meta{flex-direction:column;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-exec-badge">◆ Capstone · All Phases</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Preparation Strategy</button>
+    <button class="nav-pill" onclick="showLesson(1)">Supervising Officer</button>
+    <button class="nav-pill" onclick="showLesson(2)">Managing Officer</button>
+    <button class="nav-pill" onclick="showLesson(3)">Executive Officer</button>
+    <button class="nav-pill" onclick="showLesson(4)">Ethical Dilemmas</button>
+    <button class="nav-pill" onclick="showLesson(5)">Pre-Board Capstone</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 13 · All NEMSMA Pillars · Phase 3 Capstone</div>
+    <div class="mh-track-badge">◆ All Ranks · Integration &amp; Application · TPS Complete Framework Library</div>
+    <h1 class="mh-title"><em>Oral Board Scenario Bank —</em><br>The Capstone</h1>
+    <p class="mh-sub">Twelve chapters of frameworks, identity shifts, clinical content, governance architecture, and analytical tools converge in this one. The oral board is the moment of integration — everything built across Phases 1, 2, and 3 is tested not through written recall but through live, pressured, structured conversation. This chapter gives you the complete TPS framework library across both the EMS and Fire Service lines, the scoring systems evaluators use, the scenarios calibrated to every rank, and the preparation architecture that makes it all executable under pressure.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The complete TPS preparation strategy — how boards work at each rank, the TPS 1/5–5/5 scoring scale with score caps, the NEMSMA Confidence Spectrum, the SPARR practice methodology, and the integrated framework library spanning both the EMS and Fire Service lines. Supervising Officer scenarios — four situations covering crew performance, interpersonal conflict, field leadership, and leadership philosophy. Managing Officer scenarios — four situations covering QI analysis, budget advocacy, labor relations, and strategic planning. Executive Officer scenarios — four situations covering contract compliance, crisis communications, budget reduction, and EMS advocacy. Ethical dilemma scenarios — four cross-rank situations where the right answer requires courage, not comfort. The pre-board capstone — the 13 Question Buckets, the Yerkes-Dodson arousal curve, the Four-Step Reset Protocol, Five Recovery Protocols, and the 48-hour preparation system.</div>
+    </div>
+  </div>
+</div>
+<!-- LESSON 1 — PREPARATION STRATEGY -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 1 of 6</div>
+  <div class="lh-track">All Ranks · Capstone Preparation · All Phases</div>
+  <h1 class="lh-title">Preparation Strategy —<br><em>Frameworks, Scoring &amp; Board Architecture</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 All NEMSMA Pillars · All Phases</span><span class="lh-meta-item">ERS · STAR-P · TCHOEDS · L·E·A·D · CALM · CLEAR · 3 U's · SBI · Glasl · Heifetz</span></div>
+</div>
+
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · Complete Framework Integration</div>
+    <div class="tps-adv-text">Most people prepare with one framework system. As a TPS-trained fire/EMS dual-role candidate, you arrive at the board with every framework from both platforms — fire service tactical and leadership frameworks alongside the complete EMS-specific library. When you can diagnose using the 3 U's, frame feedback with SBI, close with TCHOEDS, and identify the Glasl escalation stage of a conflict, you're operating at a level no single-track preparation can produce. <strong style="color:var(--fire-text);">Fire Service frameworks are identified in orange throughout this chapter.</strong> EMS-primary frameworks appear in purple. Shared frameworks appear in gold.</div>
+  </div>
+</div>
+
+<h2>How Boards Work at Each Rank</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ ORAL BOARD FORMAT — THREE RANK LEVELS</span><div class="ig-title">The Board Experience Changes as Rank Increases</div><div class="ig-sub">Testing for a Captain position while answering like a Lieutenant is one of the most common ways well-prepared people underperform. Know the format for the rank you're testing for — not the rank you currently hold.</div></div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,92,58,.2);"><div class="tier-stage-label" style="color:var(--sup-text);">Phase 1</div><div class="tier-stage-name" style="color:var(--cream);">Supervising Officer</div></div>
+      <div class="tier-content"><div class="tier-title">Lieutenant / Shift Supervisor Level</div><div class="tier-desc">Panel tests crew leadership, field decisions, personnel supervision, and documentation discipline. Scenarios are operationally grounded. Time horizon is shift-level. Correct answer scope: crew decisions, shift authority, escalation to Managing Officer when appropriate.</div><div class="tier-officer">Score cap trigger: Answering at strategic/organizational scope when crew-level is the target = 3/5 maximum regardless of framework quality.</div></div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(201,168,76,.15);"><div class="tier-stage-label" style="color:#C09020;">Phase 2</div><div class="tier-stage-name" style="color:var(--cream);">Managing Officer</div></div>
+      <div class="tier-content"><div class="tier-title">Captain / Operations Chief Level</div><div class="tier-desc">Panel tests program management, QI, budget, labor relations, and systemic thinking. Scenarios involve system-level problems. Time horizon is monthly-to-annual. Correct scope: division ownership, data-driven analysis, CBA navigation, escalation to Executive when appropriate.</div><div class="tier-officer">Score cap trigger: Answering at crew level when managing officer scope is required = 3/5 maximum. The board is assessing identity shift, not just knowledge.</div></div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,.25);"><div class="tier-stage-label" style="color:var(--exec-text);">Phase 3</div><div class="tier-stage-name" style="color:var(--cream);">Executive Officer</div></div>
+      <div class="tier-content"><div class="tier-title">Chief / Director Level</div><div class="tier-desc">Panel includes city/county leadership, elected officials, HR director. Tests strategic vision, political intelligence, governance judgment, crisis communications, and external representation. Scenarios involve multi-stakeholder complexity and public accountability. Correct scope: organization-wide, multi-year direction, governing authority relationships.</div></div>
+    </div>
+  </div>
+</div>
+
+<h2>The TPS Scoring Scale</h2>
+<p>Every response you deliver in a board room exists on a behavioral performance continuum. The TPS 1/5–5/5 scale defines what each level looks and sounds like — and the score caps are what keep technically correct answers from reaching the top scores when critical elements are missing. Know these before you walk in.</p>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ TPS SCORING SCALE — 1/5 THROUGH 5/5</span><div class="ig-title">Behavioral Definitions and Score Caps</div><div class="ig-sub">The score caps are as important as the frameworks themselves. A brilliant analysis that omits the TCHOEDS close cannot reach 5/5. An answer with the right framework but no application cannot reach 4/5. These aren't penalties — they're the definitions of what those scores require. Build your responses to clear them.</div></div>
+  <div style="padding:.5rem 1rem 1rem;">
+    <table class="score-table">
+      <thead><tr><th>Score</th><th>Label</th><th>Behavioral Definition</th></tr></thead>
+      <tbody>
+        <tr class="score-5"><td><span class="score-badge" style="color:#80E0A0;">5/5</span></td><td><strong>Exceeds Standard</strong></td><td>Multiple frameworks integrated. Identity visible in every sentence. The TCHOEDS close is earned through the narrative, not appended. You already have the rank — the board senses it before your answer ends.</td></tr>
+        <tr class="score-4"><td><span class="score-badge" style="color:#80C0E8;">4/5</span></td><td><strong>Above Standard</strong></td><td>Correct diagnosis + principled response. Framework named and fully applied. Action section 40–50%+. TCHOEDS close present and connected. Rank-calibrated throughout. This is the target minimum for competitive candidates.</td></tr>
+        <tr class="score-3"><td><span class="score-badge" style="color:var(--exec-text);">3/5</span></td><td><strong>Meets Standard</strong></td><td>Technically correct but no leadership depth visible. Framework mentioned but not applied. Instinct response without structure. <em>Where most studied candidates land.</em> Most people who "know the material" score here.</td></tr>
+        <tr class="score-2"><td><span class="score-badge" style="color:#E09060;">2/5</span></td><td><strong>Below Standard</strong></td><td>Avoids the difficult element of the scenario. No framework named or applied. Correct instinct, wrong scope. Response trails off without conclusion or TCHOEDS close.</td></tr>
+        <tr class="score-1"><td><span class="score-badge" style="color:#E08080;">1/5</span></td><td><strong>Counterproductive</strong></td><td>Wrong diagnosis, harmful intervention, rank scope error, or ethical failure. The answer makes things worse than saying nothing. Boards mark down hard for ethical failures at any score level.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ig-callout">Score caps — structural, non-negotiable: Rank scope error → 3/5 maximum regardless of framework quality. Framework listed without application → 3/5 maximum. Action section below 40% of response time (oral board) → cannot reach 4/5. Missing TCHOEDS close → cannot reach 5/5. These are not penalties — they are definitions of what those scores require.</div>
+</div>
+
+<h2>The NEMSMA Confidence Spectrum</h2>
+<p>The NEMSMA framework evaluates EMS leadership responses on a <strong>Confidence Spectrum</strong> — assessing how clearly and deliberately you demonstrate evidence-based, standard-anchored judgment. This is distinct from personality confidence. What the spectrum measures is whether your answer is grounded in specific standards, stated with appropriate certainty, and delivered without unnecessary hedging. Understanding where your responses land on this spectrum is part of knowing how EMS promotional environments evaluate leadership readiness.</p>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ NEMSMA CONFIDENCE SPECTRUM — LEADERSHIP JUDGMENT EVALUATION</span><div class="ig-title">Where Your Responses Land — and What That Signals to Evaluators</div><div class="ig-sub">Three levels. Confident is the target — standard-anchored, clear, appropriately certain. Overconfident overshoots: authority without substance. Underconfident undershoots: hesitation about things you should know at your rank. Preparation closes the gap between where you are and Confident.</div></div>
+  <div class="confidence-spectrum">
+    <div class="cs-row"><div class="cs-level cs-over">Overconfident</div><div class="cs-body">The response overstates certainty — asserting positions beyond what the evidence supports, dismissing legitimate complexity, or projecting authority without the substance to back it up. Overconfidence reads as clinical or organizational arrogance to evaluators. It signals poor self-awareness, a pattern that creates real risk at every rank. The officer who is overconfident in the board room is the one who is overconfident on scene and in governance decisions.</div></div>
+    <div class="cs-row"><div class="cs-level cs-target">Confident ✓ Target</div><div class="cs-body">This is where you want to land on every response. Your answer is anchored to specific standards — clinical protocols, NEMSMA pillars, organizational policy, or named frameworks. Judgment is delivered clearly, with appropriate acknowledgment of complexity where it genuinely exists, without hedging things that should not be hedged. You know the standard, you know the answer, and you say so. Evidence and principle are both present. The evaluator has no doubt about your command presence or readiness for the rank being tested.</div></div>
+    <div class="cs-row"><div class="cs-level cs-under">Underconfident</div><div class="cs-body">The response reveals hesitation about things you should know at this rank. Excessive qualification, "it depends" framing without defining what it depends on, inability to state a clear recommendation. Underconfidence signals to evaluators that you may not be able to hold a standard under pressure — which is precisely the condition that leadership scenarios are designed to test. The antidote is not personality — it is preparation. When you know the framework and have practiced the response, confidence follows.</div></div>
+  </div>
+  <div class="ig-callout">The TPS 1/5–5/5 scale and the NEMSMA Confidence Spectrum reward the same behaviors — because they are measuring the same thing from two angles. A 5/5 TPS response is almost always Highly Confident on the NEMSMA spectrum. Named framework, full application, TCHOEDS close, rank-calibrated delivery: that is both 5/5 and Highly Confident. Prepare for one and you've prepared for both.</div>
+</div>
+
+
+<h2>The SPARR Practice Methodology</h2>
+<p>Framework knowledge without practice automaticity produces 3/5 responses. SPARR is the system that builds L·E·A·D — your TPS pre-response execution sequence — to the point where it runs in ten seconds without conscious effort, even when the pressure in the room is high.</p>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ SPARR — THE TPS DELIBERATE PRACTICE METHODOLOGY</span><div class="ig-title">Building L·E·A·D to Automaticity</div></div>
+  <div class="ig-fw-grid-3">
+    <div class="ig-fw-card"><div class="ig-fw-label">S — Spot</div><div class="ig-fw-title">Identify Type &amp; Framework</div><div class="ig-fw-desc">Before answering: identify the question bucket and primary TPS framework. This is the L and E of L·E·A·D running in real time. Takes 10 seconds. Cannot be skipped without sacrificing structure.</div></div>
+    <div class="ig-fw-card"><div class="ig-fw-label">P — Picture</div><div class="ig-fw-title">Visualize the 5/5 Response</div><div class="ig-fw-desc">Before speaking: mentally see the complete response — opening framework label, action content (50%+), TCHOEDS close. What does 5/5 sound like for this specific question? Build it in your mind before it leaves your mouth.</div></div>
+    <div class="ig-fw-card"><div class="ig-fw-label">A — Actively Practice</div><div class="ig-fw-title">Run the Full Rep</div><div class="ig-fw-desc">Deliver the complete response with full structure — aloud, timed. Not in your head. The voice, the pace, the pause at the TCHOEDS close — all of it must be practiced out loud to build automaticity.</div></div>
+    <div class="ig-fw-card"><div class="ig-fw-label">R — Run It Live</div><div class="ig-fw-title">Simulate Board Conditions</div><div class="ig-fw-desc">Timed. Observed (by a peer, mentor, or camera). Standing or seated as you will be in the actual board. The arousal level of observation is what the Yerkes-Dodson curve requires for transfer to actual performance. Practice in comfort does not prepare for performance under pressure.</div></div>
+    <div class="ig-fw-card"><div class="ig-fw-label">R — Repeat</div><div class="ig-fw-title">One Specific Adjustment</div><div class="ig-fw-desc">Immediate repetition of the same question with one specific change — the CLEAR growth edge from the previous rep. Not a complete redo — a targeted adjustment. This is how the reps compound: not volume, but deliberate correction.</div></div>
+    <div class="ig-fw-card"><div class="ig-fw-label">SPARR Loop</div><div class="ig-fw-title">Five Reps per Session</div><div class="ig-fw-desc">Five full SPARR reps per practice session (different questions each time) builds more preparation value than reading frameworks for an hour. The framework must become automatic. SPARR is the architecture that makes that happen within 2–3 weeks of consistent practice.</div></div>
+  </div>
+</div>
+
+<h2>The Complete TPS Framework Library — Visual Integration Map</h2>
+<p>Every named framework in the TPS system is mapped below by platform origin. If you're a dual-role fire/EMS candidate, you should be conversant in all three columns. If you're coming from a single-platform EMS background, know the EMS and Shared columns completely and the fire service frameworks at awareness level — integrated departments and assessment center panels sometimes draw from both.</p>
+<div class="fw-grid-3">
+  <div class="fw-card fire-card">
+    <div class="fw-card-label">🔥 Fire Service Primary</div>
+    <div class="fw-card-title">Fire-Origin Frameworks</div>
+    <div class="fw-card-desc" style="line-height:2.1;">COAL WAS WEALTH · RECEO-VS · SLICERS · LCES · Two-In Two-Out · LUNAR · CAN Report · PAR · Flow Path · OODA Loop · ICS/NIMS (fire application) · NFPA 1021 Levels · NFPA 1710 Benchmarks · Standards of Cover · CFAI Accreditation · TPS Six-Element Size-Up · Rescue Priority P1–P4</div>
+  </div>
+  <div class="fw-card ems-card">
+    <div class="fw-card-label">◆ EMS Primary</div>
+    <div class="fw-card-title">EMS-Origin Frameworks</div>
+    <div class="fw-card-desc" style="line-height:2.1;">NEMSMA Seven Pillars · NEMSMA Confidence Spectrum · ERS (Explain/Recent/State) · STAR-P · SAMPLE · ABCDE · START Triage · Medical Direction Reporting Loop · QA/QI PDCA cycle · NEMSIS Data Standards · CARES Registry benchmarking · UHU calculation · Fractile compliance · Community paramedicine frameworks</div>
+  </div>
+  <div class="fw-card shared-card">
+    <div class="fw-card-label">◈ Shared Across Both Lines</div>
+    <div class="fw-card-title">Cross-Platform Frameworks</div>
+    <div class="fw-card-desc" style="line-height:2.1;">TCHOEDS · L·E·A·D (pre-response + personnel) · CALM · CLEAR · 3 U's Diagnostic · SBI · Four-P Opening · Five-Phase Counseling · Skill/Will Matrix · Glasl Escalation · Heifetz Adaptive/Technical · Kotter 8-Step · Tuckman · Lencioni · Edmondson · Schein · SWOT · PESTLE · McKinsey 7-S · Eisenhower Matrix · Monroe's · Five-Para Formula · SPARR · STAR-P (fire uses same structure)</div>
+  </div>
+</div>
+
+<h2>The Thirteen Question Buckets — Complete TPS Classification</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ TPS CANONICAL 13 QUESTION BUCKETS</span><div class="ig-title">Every Board Question Maps to One of These Thirteen Categories</div><div class="ig-sub">Prepare one strong framework-disciplined response in each bucket at your target rank. The board may phrase it a hundred different ways — but it will always land in one of these thirteen. One solid, calibrated response per bucket and you're board-ready.</div></div>
+  <div style="padding:.5rem 1rem 1rem;">
+    <table class="exec-table">
+      <thead><tr><th>#</th><th>Bucket</th><th>Primary Frameworks</th><th>Score Target</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td><strong>Personnel Issue</strong></td><td>3 U's Diagnostic → Skill/Will → SBI → Four-P → CLEAR</td><td>4/5: framework named + diagnosis explicit</td></tr>
+        <tr><td><strong>2</strong></td><td><strong>Conflict Resolution</strong></td><td>Glasl (stage diagnosis) → IBR → CALM or ERS</td><td>4/5: Glasl stage identified before intervention</td></tr>
+        <tr><td><strong>3</strong></td><td><strong>Ethics &amp; Integrity</strong></td><td>TCHOEDS → Newspaper Test → Three Ethical Frameworks</td><td>5/5: courage cost acknowledged + unconditional</td></tr>
+        <tr><td><strong>4</strong></td><td><strong>Leadership Philosophy</strong></td><td>TCHOEDS → Identity Anchor → Locus of Control</td><td>5/5: authentic example, identity visible</td></tr>
+        <tr><td><strong>5</strong></td><td><strong>Change Management</strong></td><td>Heifetz (Adaptive/Technical) → Kotter 8-Step → RACI</td><td>4/5: Heifetz diagnosis first</td></tr>
+        <tr><td><strong>6</strong></td><td><strong>Development &amp; Mentoring</strong></td><td>70-20-10 → SBI → Kolb → Skill/Will</td><td>4/5: developmental prescription matches diagnosis</td></tr>
+        <tr><td><strong>7</strong></td><td><strong>Strategic &amp; Organizational</strong></td><td>SWOT → PESTLE → McKinsey 7-S → OKRs</td><td>4/5: multi-tool integration, rank-calibrated scope</td></tr>
+        <tr><td><strong>8</strong></td><td><strong>Communication &amp; Interpersonal</strong></td><td>STAR-P → DESC → STATE → Bias Check</td><td>4/5: structure visible, empathy + standard both present</td></tr>
+        <tr><td><strong>9</strong></td><td><strong>In-Basket &amp; Priority</strong></td><td>Eisenhower Matrix → RACI → 3 U's</td><td>4/5: explicit Eisenhower quadrant assignment</td></tr>
+        <tr><td><strong>10</strong></td><td><strong>Team Building</strong></td><td>Tuckman (stage) → Lencioni (dysfunction) → Edmondson (PS)</td><td>4/5: stage/dysfunction diagnosed before intervention</td></tr>
+        <tr><td><strong>11</strong></td><td><strong>Operational Command</strong> 🔥</td><td>COAL WAS WEALTH → ICS/NIMS → Rescue Priority → Size-Up</td><td>4/5: COAL WAS WEALTH demonstrated; life safety first</td></tr>
+        <tr><td><strong>12</strong></td><td><strong>EMS Leadership</strong></td><td>3 U's (clinical) → Medical Direction Reporting Loop → QA/QI</td><td>4/5: clinical + administrative tracks both addressed</td></tr>
+        <tr><td><strong>13</strong></td><td><strong>Safety &amp; Compliance</strong></td><td>NFPA 1500/1521 → Two-In Two-Out 🔥 → Near-Miss Reporting</td><td>4/5: non-negotiable safety standard stated unambiguously</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2>Framework Quick Reference — All Six Response Structures</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ RESPONSE STRUCTURE QUICK REFERENCE</span><div class="ig-title">Which Tool to Reach For — Immediately, Under Pressure</div></div>
+  <div class="framework-quick">
+    <div class="fq-card ems-card" style="background:var(--exec3);">
+      <div class="fq-name" style="color:var(--ems-text);">◆ EMS Primary · Knowledge Questions</div>
+      <div class="fq-letters">ERS</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">E</strong>xplain · <strong style="color:var(--on-dark-1);">R</strong>ecent Example · <strong style="color:var(--on-dark-1);">S</strong>tate at rank</div>
+      <div class="fq-use">Use when: "What is your approach to X?" / "Describe your philosophy on Y."</div>
+    </div>
+    <div class="fq-card">
+      <div class="fq-name">◈ Shared · Behavioral Questions</div>
+      <div class="fq-letters">STAR-P</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">S</strong>ituation · <strong style="color:var(--on-dark-1);">T</strong>ask · <strong style="color:var(--on-dark-1);">A</strong>ction (50%) · <strong style="color:var(--on-dark-1);">R</strong>esult · <strong style="color:var(--on-dark-1);">P</strong>rinciple</div>
+      <div class="fq-use">Use when: "Tell me about a time..." / "Give me an example of..."</div>
+    </div>
+    <div class="fq-card">
+      <div class="fq-name">◈ Shared · Feedback &amp; Coaching</div>
+      <div class="fq-letters">CLEAR</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">C</strong>ommend · <strong style="color:var(--on-dark-1);">L</strong>imitations · <strong style="color:var(--on-dark-1);">E</strong>xamples · <strong style="color:var(--on-dark-1);">A</strong>djust · <strong style="color:var(--on-dark-1);">R</strong>epeat/Rank</div>
+      <div class="fq-use">Use when: describing corrective feedback, performance coaching, performance review conversation.</div>
+    </div>
+    <div class="fq-card">
+      <div class="fq-name">◈ Shared · Conflict &amp; Counseling</div>
+      <div class="fq-letters">CALM</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">C</strong>larify · <strong style="color:var(--on-dark-1);">A</strong>cknowledge · <strong style="color:var(--on-dark-1);">L</strong>ead · <strong style="color:var(--on-dark-1);">M</strong>onitor</div>
+      <div class="fq-use">Use when: interpersonal conflict, grievance conversation, hostile subordinate or stakeholder.</div>
+    </div>
+    <div class="fq-card fq-fire" style="background:var(--fire3);">
+      <div class="fq-name" style="color:var(--fire-text);">🔥 Fire Primary · Pre-Response Sequence</div>
+      <div class="fq-letters" style="color:var(--fire-text);">L·E·A·D</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">L</strong>abel bucket + framework · <strong style="color:var(--on-dark-1);">E</strong>ngage structure · <strong style="color:var(--on-dark-1);">A</strong>pply at target rank · <strong style="color:var(--on-dark-1);">D</strong>eliver with TCHOEDS close</div>
+      <div class="fq-use" style="color:var(--fire-text);">The 10-second pre-response execution sequence. Runs silently before the first word of every answer at every rank.</div>
+    </div>
+    <div class="fq-card">
+      <div class="fq-name">◈ Shared · Values Anchor</div>
+      <div class="fq-letters">TCHOEDS</div>
+      <div class="fq-expand"><strong style="color:var(--on-dark-1);">T</strong>rust · <strong style="color:var(--on-dark-1);">C</strong>ourage · <strong style="color:var(--on-dark-1);">H</strong>umility · <strong style="color:var(--on-dark-1);">O</strong>wnership · <strong style="color:var(--on-dark-1);">E</strong>mpathy · <strong style="color:var(--on-dark-1);">D</strong>edication · <strong style="color:var(--on-dark-1);">S</strong>ervice</div>
+      <div class="fq-use">The Principle that closes every STAR-P and grounds every ERS. Never omit it. Missing TCHOEDS = cannot reach 5/5.</div>
+    </div>
+  </div>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">TPS Scoring — Score Caps</span>
+  <div class="sbar-card accent-red"><strong>Rank Scope Error → 3/5 Max</strong>Answering at the wrong level regardless of framework quality.</div>
+  <div class="sbar-card accent-red"><strong>Framework Listed, Not Applied → 3/5 Max</strong>Naming STAR-P without using it = 3/5 ceiling.</div>
+  <div class="sbar-card accent-red"><strong>Action Below 40% → Cannot Reach 4/5</strong>The Action section is where 4/5 and 5/5 live.</div>
+  <div class="sbar-card accent-red"><strong>No TCHOEDS Close → Cannot Reach 5/5</strong>The Principle element is structural, not optional.</div>
+
+  <span class="sbar-label">NEMSMA Confidence Spectrum</span>
+  <div class="sbar-card accent-red"><strong>Overconfident</strong>Authority without substance. Certainty beyond what the evidence supports. Reads as arrogance — signals poor self-awareness at any rank.</div>
+  <div class="sbar-card accent-green"><strong>Confident ✓ Target</strong>Standard-anchored. Named framework. Clear recommendation. Appropriate acknowledgment of real complexity — no hedging on things that should not be hedged. This is 5/5 and NEMSMA Confident simultaneously.</div>
+  <div class="sbar-card accent-ems"><strong>Underconfident</strong>Excessive qualification. Hesitation about things you should know at this rank. Signals you may not hold the standard under pressure — exactly what leadership scenarios test.</div>
+  <span class="sbar-label">SPARR Practice</span>
+  <div class="sbar-card accent-exec"><strong>Spot → Picture → Actively Practice → Run Live → Repeat</strong>5 reps/session. Observed + timed. One specific adjustment per rep. SPARR builds L·E·A·D to automaticity in 2–3 weeks.</div>
+  <span class="sbar-label">Framework Color Code</span>
+  <div class="sbar-card accent-fire"><strong>🔥 Orange = Fire Service Primary</strong>COAL WAS WEALTH, RECEO-VS, L·E·A·D (pre-response), ICS/NIMS tactical application.</div>
+  <div class="sbar-card accent-ems"><strong>◆ Purple = EMS Primary</strong>ERS (Explain/Recent/State), NEMSMA Pillars, clinical and QI frameworks.</div>
+  <div class="sbar-card accent-gold"><strong>◈ Gold = Shared</strong>TCHOEDS, CALM, CLEAR, STAR-P, 3 U's, SBI, Glasl, Heifetz, Kotter, Tuckman.</div>
+  <span class="sbar-label">Response Timing</span>
+  <div class="sbar-card accent-gold"><strong>Supervising: 2–3 min · Managing: 3–4 min · Executive: 4–5 min</strong>Under 90 sec = insufficient depth. Over 7 min = lost the board.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 12</button>
+  <div class="lnb-info"><div class="lnb-name">Preparation Strategy &amp; Framework Library</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Supervising Officer Scenarios →</button>
+</div>
+</div><!-- /lesson-0 -->
+<!-- LESSON 2 — SUPERVISING OFFICER SCENARIOS -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 2 of 6</div>
+  <div class="lh-track">Phase 1 · Lieutenant / Shift Supervisor · Fire &amp; EMS Framework Integration</div>
+  <h1 class="lh-title">Supervising Officer Scenarios —<br><em>Crew, Field &amp; Personnel</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 20 min</span><span class="lh-meta-item">📘 Chapters 1–6 Integration</span><span class="lh-meta-item">L·E·A·D · CLEAR · CALM · STAR-P · 3 U's · SBI · Skill/Will · Glasl · TCHOEDS</span></div>
+</div>
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · Supervising Officer Level</div>
+    <div class="tps-adv-text">Each Supervising Officer scenario integrates fire-line diagnostic frameworks — the 3 U’s Diagnostic, SBI, Four-P Opening, Skill/Will Matrix, and Glasl Escalation Ladder — alongside the core EMS response structures. These are the tools that transform a technically correct answer into a 4/5 or 5/5 response, because the board is assessing <em>how you diagnosed the problem</em>, not just what you did about it.</div>
+  </div>
+</div>
+
+<!-- S-1 -->
+<div class="scenario-card">
+  <div class="scenario-header sup-header"><span class="scenario-badge">Supervising Officer · Personnel Performance</span><span class="scenario-num">S–1</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"You have a paramedic on your crew who is technically skilled but consistently late submitting ePCRs. You've mentioned it informally twice. It hasn't changed. How do you handle it?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">3 U's → L·E·A·D → CLEAR</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Ownership · Trust · Courage</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Diagnostic discipline · Escalation · Documentation</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">3 U's Diagnostic — Run This Before Any Personnel Action</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">UNAWARE · UNABLE · UNWILLING</div>
+        <div class="ffp-expand">The 3 U's is the single most important diagnostic tool in the TPS personnel library. It determines the correct intervention category before any action is taken. <strong style="color:var(--fire-text);">Unaware:</strong> does not know the behavior is a problem → communicate clearly, not discipline. <strong style="color:var(--fire-text);">Unable:</strong> knows but lacks skill/resources → coach, train, support, not discipline. <strong style="color:var(--fire-text);">Unwilling:</strong> knows, can, chooses not to → the only situation where discipline applies.</div>
+        <div class="ffp-apply">Applied to S–1: Two informal mentions have been given. If the behavior continues, the 3 U's diagnosis is Unwilling — the provider knows the standard and is choosing not to meet it. This diagnosis unlocks the formal accountability response. A Supervising Officer who cannot name the diagnosis before naming the intervention is answering at 3/5.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — 3 U's → L·E·A·D → CLEAR</span><div class="ig-title">Diagnosing Before Acting</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Diagnose (3 U's)</div><div class="ers-val">Before I take any action, I run the 3 U's. Two informal mentions means Unaware and Unable are off the table — this provider knows the expectation. The continued behavior indicates Unwilling, which is the only diagnosis that activates formal accountability. This diagnosis determines everything that follows.</div></div>
+        <div class="ers-row"><div class="ers-key">Label (L·E·A·D)</div><div class="ers-val">I open the conversation by naming the observable behavior specifically — not interpretation, not character: "Your ePCRs for the last three shifts were submitted more than 24 hours after the call closed, which is outside our policy standard." The SBI model: Situation, Behavior, Impact. I state all three.</div></div>
+        <div class="ers-row"><div class="ers-key">Engage &amp; Apply</div><div class="ers-val">Using CALM: I Clarify, Ask, and Listen before directing. Even with an Unwilling diagnosis, I confirm I haven't missed something that changes the picture. Then I Apply the CLEAR structure: Commend genuine strengths, state Limitations with specific Examples, define the Adjustment required, and connect to Rank — "as a paramedic, your documentation is a patient safety record, not an administrative courtesy."</div></div>
+        <div class="ers-row"><div class="ers-key">Deliver &amp; Document</div><div class="ers-val">I document the conversation — date, content, expectation stated. I set a 30-day checkpoint and communicate it explicitly. I name the next step: if compliance does not change, the next conversation involves HR and a written corrective action. Two informal conversations have ended. This conversation opens the formal accountability phase. I say that clearly.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response to Avoid (3/5 ceiling)</span><div class="avoid-text">"I'd have another conversation and explain why documentation matters." Fails on two dimensions: (1) no 3 U's diagnosis — the answer jumps to action without identifying why the behavior continues; (2) a third informal conversation signals avoidance of the formal accountability step. The board is specifically testing whether this supervisor escalates appropriately when informal approaches fail.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag green">Ownership</span><span class="tchoeds-tag green">Courage</span><span class="tchoeds-tag green">Trust</span></div>
+    <div class="dual-role-callout"><div class="drc-label">🔥 Dual-Role Integration</div><div class="drc-text">The fire service candidate applying the 3 U's here is using the same diagnostic tool they would use for a firefighter who understands turnout requirements but consistently misses the standard. The framework is identical — the platform changes, the diagnostic logic does not. A dual-role candidate who names the 3 U's diagnosis and the SBI structure in the same response is demonstrating integrated framework fluency that single-track candidates cannot match.</div></div>
+  </div>
+</div>
+
+<!-- S-2 -->
+<div class="scenario-card">
+  <div class="scenario-header sup-header"><span class="scenario-badge">Supervising Officer · Interpersonal Conflict</span><span class="scenario-num">S–2</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"Two members of your crew have a personal conflict that is creating tension at the station and affecting the crew's working relationship. How do you handle it?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">Glasl → CALM → L·E·A·D</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Empathy · Service · Trust</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Conflict stage diagnosis · Fairness · Crew welfare</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Glasl Escalation Ladder — Diagnose Before Intervening</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">PHASE 1: Win-Win · PHASE 2: Win-Lose · PHASE 3: Lose-Lose</div>
+        <div class="ffp-expand">Glasl maps nine conflict escalation stages across three phases. <strong style="color:var(--fire-text);">The critical principle:</strong> the phase determines the intervention. Applying Phase 2 tools to a Phase 1 conflict escalates it. The Supervising Officer's first task is to identify where on the ladder the conflict currently sits — before choosing the intervention. A Phase 1 conflict (hardening, debate, actions) is addressable through direct conversation and conduct standard-setting. A Phase 2 conflict (image formation, coalitions, face-saving) requires more structured intervention. Phase 3 requires HR escalation immediately.</div>
+        <div class="ffp-apply">Applied to S–2: Station tension without described policy violations suggests Phase 1 or early Phase 2. The CALM intervention is appropriate. If the conflict has produced harassment allegations, documentation of falsehoods, or crew coalition formation, the diagnosis shifts to Phase 2 and HR must be involved from the outset.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — GLASL → CALM</span><div class="ig-title">Stage the Conflict Before Intervening</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Glasl Diagnosis</div><div class="ers-val">My first step is to determine the conflict phase. Based on the scenario — station tension, affected working relationship — I am operating in Phase 1 (Win-Win territory). There is no described policy violation, no coalition formation, no documented safety impact. This determines that direct supervisory intervention through CALM is appropriate without immediate HR escalation. I note this assessment can change rapidly.</div></div>
+        <div class="ers-row"><div class="ers-key">CALM — Individual First</div><div class="ers-val">I meet with each crew member privately before any joint conversation — never together first. Clarify the facts from each perspective without accepting either narrative as complete. Acknowledge the experience genuinely — not to take sides, but to demonstrate that each person has been heard before any expectation is set. CALM governs both conversations: Clarify, Acknowledge, Lead, Monitor.</div></div>
+        <div class="ers-row"><div class="ers-key">L·E·A·D Standard</div><div class="ers-val">After individual conversations, I Apply the professional conduct standard using L·E·A·D: Label the behavior (tension that affects crew function), Engage with genuine curiosity about what's driving it, Apply the standard equally to both — personal conflict is private; professional conduct on this crew is non-negotiable regardless of personal feelings. Deliver: I set a checkpoint and document both conversations.</div></div>
+        <div class="ers-row"><div class="ers-key">Escalation Trigger</div><div class="ers-val">If the conflict has produced any conduct that could constitute harassment, hostile work environment, or safety risk, I escalate to HR immediately regardless of the parties' preferences. The Glasl Phase 2 trigger — coalition formation, public face-saving, documented manipulation — is a non-discretionary HR referral at the supervisory level.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response to Avoid</span><div class="avoid-text">"I'd get them together and have them work it out." No Glasl diagnosis. No individual conversations first. No documentation. Boards immediately recognize this as an escalation risk, not a resolution technique.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag green">Empathy</span><span class="tchoeds-tag green">Service</span><span class="tchoeds-tag green">Trust</span></div>
+  </div>
+</div>
+
+<!-- S-3 -->
+<div class="scenario-card">
+  <div class="scenario-header sup-header"><span class="scenario-badge">Supervising Officer · Field Leadership</span><span class="scenario-num">S–3</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"You arrive on scene to support your crew on a difficult behavioral health call. Your paramedic is managing the patient but appears frustrated and is using a tone that is escalating the patient's agitation. What do you do?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · Skill/Will Matrix</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Courage · Service · Humility</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Patient safety priority · Provider coaching · Scene leadership</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Skill/Will Matrix — Determines Post-Scene Coaching Approach</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">HIGH SKILL / HIGH WILL · HIGH SKILL / LOW WILL · LOW SKILL / HIGH WILL · LOW SKILL / LOW WILL</div>
+        <div class="ffp-expand">After the scene is stabilized, the Skill/Will Matrix determines what the debrief conversation looks like. Your paramedic is technically skilled — High Skill — but displaying a situational Will failure under stress — not a knowledge deficit. <strong style="color:var(--fire-text);">High Skill / Low Will = Motivate, not Coach.</strong> The debrief does not re-teach behavioral health communication techniques — it addresses what happened emotionally and motivationally on this call that produced the behavior. Very different conversation.</div>
+        <div class="ffp-apply">Applied to S–3: Combining 3 U's with Skill/Will — technically skilled = not Unable, behavior continues = likely Unwilling in the moment (stress-driven). The coaching response is: acknowledge the difficulty of the call, redirect to the patient impact of tone, apply the standard, and confirm the expectation. Not a skills refresher — a standards conversation.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — STAR-P</span></div>
+      <div class="starp-grid">
+        <div class="starp-col"><div class="starp-head sp-s">Situation</div><div class="starp-body">My technically skilled paramedic is using a tone that is escalating an already agitated behavioral health patient. Patient safety is the immediate priority — secondary is the coaching opportunity. The scene comes before the debrief, always.</div></div>
+        <div class="starp-col"><div class="starp-head sp-t">Task</div><div class="starp-body">As Supervising Officer, I have both the authority and the obligation to intervene. I cannot correct a provider in front of a patient — that destabilizes the scene and destroys the therapeutic relationship. Intervention must be smooth and immediate.</div></div>
+        <div class="starp-col"><div class="starp-head sp-a">Action</div><div class="starp-body">I step in directly: "I've got this one." Lower tone, slower pace, de-escalation posture. After transport and before end of shift, I use the Skill/Will Matrix: High Skill/Low Will — this is a motivational conversation, not a training one. CALM structure: Clarify what happened for them emotionally on the call, Acknowledge the difficulty, Lead to the standard, Monitor with a defined checkpoint. Document.</div></div>
+        <div class="starp-col"><div class="starp-head sp-r">Result</div><div class="starp-body">Patient safety protected immediately. Provider receives coaching in a form that develops rather than humiliates — because I've diagnosed the problem correctly (motivation, not skill) before prescribing the intervention.</div></div>
+        <div class="starp-col"><div class="starp-head sp-p">Principle</div><div class="starp-body">Courage to intervene when a provider needs it. Humility to let them lead when safe. Service — the patient's safety and dignity are the standard every action is measured against, unconditionally.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag green">Courage</span><span class="tchoeds-tag green">Service</span><span class="tchoeds-tag green">Humility</span></div>
+  </div>
+</div>
+
+<!-- S-4 -->
+<div class="scenario-card">
+  <div class="scenario-header sup-header"><span class="scenario-badge">Supervising Officer · Leadership Philosophy</span><span class="scenario-num">S–4</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"Tell me about a leadership moment that changed how you think about supervision — and what it taught you."</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · Four-P Opening</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Humility · Dedication · Ownership</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Self-awareness · Authentic growth · Leadership voice</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Four-P Opening — The Structure for Developmental Conversations</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">PURPOSE · PROBLEM · POSITION · PLAN</div>
+        <div class="ffp-expand">The Four-P Opening is the structure for every formal counseling and coaching conversation: Purpose (why we are here), Problem (the specific observable behavior), Position (your role and responsibility as the officer), Plan (what this conversation will accomplish). It is most visible in the counseling context — but it also models how to frame <em>this board response</em>: open with purpose (what changed), identify the problem you faced, state your position (what you believed at the time), describe the plan that emerged from the learning. The parallel is exact.</div>
+        <div class="ffp-apply">Applied to S–4: Structure your leadership narrative with the Four-P architecture. This gives the board a clear frame for your story — and models the very supervisory discipline they are assessing you for. Answering a leadership philosophy question using the same structure you'd use in a formal counseling conversation is demonstrating identity, not just knowledge.</div>
+      </div>
+    </div>
+    <p style="font-size:.95rem;color:var(--on-light-1);line-height:1.75;">This question requires a genuine personal example — the structure is here, but the content has to come from your actual experience. The board is assessing authenticity, self-awareness, and growth orientation. A formulaic answer that doesn't reflect real reflection will be recognized within about thirty seconds. Use something real.</p>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ STAR-P STRUCTURE FOR S–4</span><div class="ig-title">What Each Component Must Accomplish at the Supervising Level</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Situation</div><div class="ers-val">Describe a real situation where you were wrong, missed something, or learned something unexpected about your own approach. The moment of genuine learning must be identifiable — "a time I supervised well" is not what this question asks for. It asks for change in you.</div></div>
+        <div class="ers-row"><div class="ers-key">Task + Action</div><div class="ers-val">Describe what you did — including the thing that turned out to be wrong, incomplete, or needing revision. Intellectual honesty is a 5/5 signal. If you can't describe your own leadership failures, the board will sense you haven't grown from them.</div></div>
+        <div class="ers-row"><div class="ers-key">Result + Principle</div><div class="ers-val">State specifically what changed in how you supervise because of this moment: "After that, I always run the 3 U's before I assume someone is unwilling" or "I stopped leading with discipline before I confirmed the diagnosis." The TCHOEDS Principle should name Humility or Ownership — and should feel earned by the story, not appended.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response to Avoid</span><div class="avoid-text">"My crew came together on a tough call and reminded me of the importance of teamwork." Describes a positive outcome, not a learning moment. It doesn't show change in you. Answering the safer question rather than the one asked is one of the clearest signs of a board-unprepared response.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag green">Humility</span><span class="tchoeds-tag green">Dedication</span><span class="tchoeds-tag green">Ownership</span></div>
+  </div>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Fire Framework Integration — Supervising</span>
+  <div class="sbar-card accent-fire"><strong>🔥 3 U's Diagnostic</strong>Unaware → Unable → Unwilling. Run before any personnel action. Only Unwilling unlocks discipline. This is the diagnostic that separates 4/5 from 3/5.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 SBI Feedback Model</strong>Situation · Behavior · Impact. Observable facts only. No interpretation or character attribution in the Behavior statement.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Glasl Escalation Ladder</strong>Phase 1 (Win-Win) → Phase 2 (Win-Lose) → Phase 3 (Lose-Lose). Phase determines intervention. Wrong phase = escalation. Diagnose before intervening.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Skill/Will Matrix</strong>High Skill/Low Will = Motivate, not coach. Determines the coaching conversation type post-scene. Mismatched intervention = 3/5 ceiling.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Four-P Opening</strong>Purpose · Problem · Position · Plan. Opens every formal counseling session. Also models the narrative structure of leadership philosophy responses.</div>
+  <span class="sbar-label">Original Frameworks — Retained</span>
+  <div class="sbar-card accent-gold"><strong>L·E·A·D → CLEAR</strong>Label behavior · Engage with curiosity · Apply standard · Deliver expectation. CLEAR delivers the feedback structure within the Apply step.</div>
+  <div class="sbar-card"><strong>CALM</strong>Clarify · Acknowledge · Lead · Monitor. Governs conflict and counseling conversations after Glasl stage is confirmed.</div>
+  <span class="sbar-label">Supervising — Score Triggers</span>
+  <div class="sbar-card accent-red"><strong>3 U's skipped → 3/5 Max</strong>Jumping to action without diagnosis = 3/5 ceiling at the Supervising level.</div>
+  <div class="sbar-card accent-red"><strong>No documentation → Never 5/5</strong>Any personnel conversation without documentation is incomplete. Boards notice the omission.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Preparation Strategy</button>
+  <div class="lnb-info"><div class="lnb-name">Supervising Officer Scenarios</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Managing Officer Scenarios →</button>
+</div>
+</div><!-- /lesson-1 -->
+<!-- LESSON 3 — MANAGING OFFICER SCENARIOS -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 3 of 6</div>
+  <div class="lh-track">Phase 2 · Captain / Operations Chief · Heifetz · Kotter · Tuckman · Lencioni</div>
+  <h1 class="lh-title">Managing Officer Scenarios —<br><em>Systems, Programs &amp; Workforce</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 20 min</span><span class="lh-meta-item">📘 Chapters 7–10 Integration</span><span class="lh-meta-item">ERS · STAR-P · PDCA · Heifetz · Kotter · Tuckman · Lencioni · CBA · Budget</span></div>
+</div>
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · Managing Officer Level</div>
+    <div class="tps-adv-text">Each Managing Officer scenario integrates Heifetz Adaptive/Technical, Kotter’s 8-Step, Tuckman Team Development, and Lencioni’s Five Dysfunctions alongside the core EMS frameworks. These systemic-thinking tools separate officers who answer operationally from those who answer strategically — and that distinction is exactly what the Managing Officer identity shift requires.</div>
+  </div>
+</div>
+
+<!-- M-1 -->
+<div class="scenario-card">
+  <div class="scenario-header mgr-header"><span class="scenario-badge">Managing Officer · Quality Improvement</span><span class="scenario-num">M–1</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"Your QI data shows a three-month decline in cardiac arrest ROSC rates — from 36% to 27%. How do you investigate and respond?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">Heifetz → ERS + PDCA</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Ownership · Service · Dedication</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Adaptive vs. Technical diagnosis · Root cause · PDCA discipline</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Heifetz Adaptive vs. Technical — The Most Important Managing Officer Distinction</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">TECHNICAL: Known solution · ADAPTIVE: Requires learning + behavior change</div>
+        <div class="ffp-expand"><strong style="color:var(--fire-text);">Technical problems</strong> have known solutions — apply expertise. The equipment is broken: fix it. The protocol is unclear: clarify it. <strong style="color:var(--fire-text);">Adaptive challenges</strong> require learning, behavior change, and sometimes identity work — and cannot be solved by expertise alone. Most culture and QI failures result from applying technical solutions to adaptive problems. A ROSC decline could be technical (equipment availability problem — solvable with accountability) or adaptive (culture problem — providers not believing the data or not prioritizing feedback device use). The diagnosis determines the entire response architecture.</div>
+        <div class="ffp-apply">Applied to M–1: Before designing any intervention, diagnose whether this is a technical problem (equipment, process) or adaptive challenge (behavior, culture). CPR training alone is always a technical solution. If the root cause is adaptive — providers who know what to do but deprioritize it — training will produce no measurable change. The Heifetz diagnosis must precede the PDCA Plan phase.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — HEIFETZ → ERS + PDCA</span><div class="ig-title">Diagnose the Problem Type Before Designing the Intervention</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">A 9-point ROSC decline over three months exceeds normal variation and requires a structured response. But before I design any intervention, I apply the Heifetz diagnostic: is this a technical problem or an adaptive challenge? The answer changes everything. If it's technical — equipment, process, data quality — I can solve it with expertise. If it's adaptive — behavioral, cultural, motivational — expertise alone will fail. I run the stratification analysis before I answer that question.</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">In a comparable situation, stratification revealed the decline was concentrated in evening shift cases and correlated with non-use of CPR feedback devices. The Heifetz diagnosis: technical (equipment accountability failure, not culture failure). Root cause: feedback devices not restocked after maintenance. Intervention: post-call equipment checklist with supervisory accountability. ROSC returned to 34% within two quarters. The intervention cost nothing. The lesson: Heifetz diagnosis before PDCA Plan phase — always.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">At the Managing Officer level, I own this program's performance. I am responsible for the Heifetz diagnosis, the PDCA architecture, and the post-intervention verification. I brief the Medical Director as partner and the Executive Officer as chain of command — proactively, before either asks. Ownership means I do not wait for the problem to be surfaced by someone above me.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response (3/5) — No Heifetz Diagnosis</span><div class="avoid-text">"I'd schedule a CPR refresher for all providers." This is a technical solution applied without diagnosing whether the problem is technical or adaptive. If the root cause is behavioral/cultural (adaptive), a training intervention produces zero sustainable outcome improvement — at significant organizational cost. Failing to demonstrate Heifetz awareness caps this response at 3/5.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag gold">Ownership</span><span class="tchoeds-tag gold">Service</span><span class="tchoeds-tag gold">Dedication</span></div>
+  </div>
+</div>
+
+<!-- M-2 -->
+<div class="scenario-card">
+  <div class="scenario-header mgr-header"><span class="scenario-badge">Managing Officer · Budget Leadership</span><span class="scenario-num">M–2</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"You need to present a budget request for two additional peak-demand units. How do you build and present the case?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Monroe's Motivated Sequence</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Service · Courage · Trust</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Data-driven advocacy · Budget literacy · Political awareness</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Monroe's Motivated Sequence — The Presentation Architecture</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">ATTENTION · NEED · SATISFACTION · VISUALIZATION · ACTION</div>
+        <div class="ffp-expand">Monroe's is the presentation structure for any request requiring a decision-maker's buy-in. <strong style="color:var(--fire-text);">Attention:</strong> hook that earns the right to be heard. <strong style="color:var(--fire-text);">Need:</strong> the problem — using constituent impact language. <strong style="color:var(--fire-text);">Satisfaction:</strong> the solution. <strong style="color:var(--fire-text);">Visualization:</strong> what success looks like. <strong style="color:var(--fire-text);">Action:</strong> the specific ask with a timeline. Applied to budget requests: lead with the constituent impact (Need), not the UHU number. Translate operational data into the language the decision-maker already cares about.</div>
+        <div class="ffp-apply">Applied to M–2: "UHU is 0.47 during 1400–2200" is a Need statement for an EMS audience. "12,000 residents in the northeast district experience response times four minutes longer than the citywide standard during weekday evenings" is a Need statement for a City Manager. Monroe's forces you to translate. That translation is the difference between a request that gets funded and one that gets deferred.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">Data-Driven Budget Advocacy with Monroe's Architecture</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">A budget request without data is a wish. A budget request built on Monroe's structure — Need defined in constituent terms, Satisfaction supported by UHU and fractile data, Visualization of the compliance outcome, Action with a specific dollar figure and timeline — is an organizational argument. My approach starts with assembling the evidence and then translating it into the decision-maker's language. The question to answer is not "do you need units?" but "what happens to constituents if we don't fund this?"</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">I built a capital request showing UHU above 0.47 during the 1400–2200 window, correlating with a 12-point fractile compliance gap in the northeast zone. I compared the three-year unit cost against projected penalty exposure under our franchise agreement. The Monroe's structure: Need (12,000 residents at risk) → Satisfaction (two peak-demand units) → Visualization (compliance returns to 93%+, penalty exposure eliminated) → Action ($X in capital, funded by Q1). The request was approved.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">At the Managing Officer level, every budget request I make reflects my analytical credibility. A well-evidenced request that is denied still demonstrates my value. A poorly evidenced request that is approved undermines every future request. The quality of the argument matters independently of the outcome.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag gold">Courage</span><span class="tchoeds-tag gold">Service</span><span class="tchoeds-tag gold">Trust</span></div>
+  </div>
+</div>
+
+<!-- M-3 -->
+<div class="scenario-card">
+  <div class="scenario-header mgr-header"><span class="scenario-badge">Managing Officer · Labor Relations</span><span class="scenario-num">M–3</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"A senior paramedic has filed a formal grievance claiming you violated the CBA when you assigned them mandatory overtime. How do you respond?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · Weingarten Rights awareness</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Trust · Ownership · Courage</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">CBA literacy · Due process discipline · Non-defensive response</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Weingarten Rights + Temporal Proximity — Labor Law Awareness</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">WEINGARTEN: Right to representation · TEMPORAL PROXIMITY: Timing creates presumption</div>
+        <div class="ffp-expand"><strong style="color:var(--fire-text);">Weingarten Rights:</strong> an employee's right to union representation during investigatory interviews that may result in discipline. Must be invoked by the employee — cannot be waived by the supervisor. If the grievance process involves an investigatory conversation with the grievant, and they invoke Weingarten, representation must be provided. <strong style="color:var(--fire-text);">Temporal Proximity:</strong> discipline administered within close time proximity to a grievance filing, union activity, or protected conduct creates a legal presumption of retaliation — regardless of actual intent. The Managing Officer must be aware of both and consult HR before any responsive action.</div>
+        <div class="ffp-apply">Applied to M–3: If the grievant is a union member and any part of your Step 2 response process involves an interview that could lead to discipline, Weingarten applies. Separately, if any corrective action against this individual is being contemplated while the grievance is pending, temporal proximity risk is live. HR consultation is not optional — it is standard practice.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — STAR-P</span><div class="ig-title">Grievance Response — Process-Disciplined, Non-Defensive</div></div>
+      <div class="starp-grid">
+        <div class="starp-col"><div class="starp-head sp-s">Situation</div><div class="starp-body">A formal grievance has been filed. This triggers a defined contractual process. My first obligation is to the process — not to my defense of the original decision.</div></div>
+        <div class="starp-col"><div class="starp-head sp-t">Task</div><div class="starp-body">I am responsible for the Step 2 response. I must investigate the specific CBA article cited, review the facts, and respond within the defined CBA timeframe. Weingarten awareness: if any investigatory interview is part of this process, representation must be provided upon request.</div></div>
+        <div class="starp-col"><div class="starp-head sp-a">Action</div><div class="starp-body">Pull the CBA and read the specific overtime assignment provisions immediately. Review my documentation of the assignment decision — who was contacted, in what order, on what date. Consult HR before drafting any response. Temporal proximity check: is there any pending action against this individual that needs separation from this grievance timeline? If I made an error, I settle at Step 2 with HR guidance. If process was correct, I respond with the specific contractual basis, in writing, within the required timeframe.</div></div>
+        <div class="starp-col"><div class="starp-head sp-r">Result</div><div class="starp-body">A documented, process-disciplined response — whether sustaining or denying the grievance — that protects the agency and demonstrates CBA literacy to both the union and executive leadership.</div></div>
+        <div class="starp-col"><div class="starp-head sp-p">Principle</div><div class="starp-body">Ownership — if I made an error, I own it and correct it at Step 2. Trust — settling a legitimate grievance at Step 2 is organizational intelligence, not weakness. Defending an error to avoid looking wrong destroys far more trust than the original error ever would.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response (1/5 — Counterproductive)</span><div class="avoid-text">"I'd explain to them why I made the right decision and fight the grievance." Demonstrates both CBA illiteracy and Weingarten unawareness. A grievance is a contractual assertion, not a personal attack. Fighting an error to avoid looking wrong at Step 2 will lose at Step 3, Step 4, and arbitration — at escalating organizational cost and credibility damage each time.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag gold">Trust</span><span class="tchoeds-tag gold">Ownership</span><span class="tchoeds-tag gold">Courage</span></div>
+  </div>
+</div>
+
+<!-- M-4 -->
+<div class="scenario-card">
+  <div class="scenario-header mgr-header"><span class="scenario-badge">Managing Officer · Strategic Planning</span><span class="scenario-num">M–4</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"Describe your approach to strategic planning in your division. How do you connect daily operations to long-term organizational direction?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Tuckman · Lencioni</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Dedication · Service · Ownership</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Identity shift to managing officer · Systems thinking · Team health awareness</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Tuckman + Lencioni — Team Health as a Strategic Variable</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">TUCKMAN: Forming → Storming → Norming → Performing · LENCIONI: Trust → Conflict → Commitment → Accountability → Results</div>
+        <div class="ffp-expand"><strong style="color:var(--fire-text);">Tuckman:</strong> Every crew entering a new officer's leadership moves through Forming/Storming before reaching Norming and Performing. Strategic planning at the Managing level must account for where each team is in this cycle — a Storming team cannot execute ambitious strategic goals that require high trust and collaborative execution. <strong style="color:var(--fire-text);">Lencioni's Five Dysfunctions</strong> must be addressed bottom-up: Trust is the foundation. Without it, conflict is avoided, commitment is performative, accountability is one-directional, and results are compromised. The managing officer who builds a strategic plan without diagnosing the team's Lencioni dysfunction level is building on sand.</div>
+        <div class="ffp-apply">Applied to M–4: Strategic planning at the Managing level requires both the plan (SWOT, OKRs, metrics) and a diagnosis of the team's ability to execute it (Tuckman stage, Lencioni dysfunction level). Mentioning both demonstrates the systems-thinking identity of a genuine Managing Officer.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">Strategic Planning + Team Health Integration</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">Strategic planning at the Managing Officer level is the translation layer between organizational direction and operational execution. I start with two parallel analyses: where is the organization going (SWOT, OKRs), and what is the current health of the team that must execute it (Tuckman stage, Lencioni dysfunction inventory). A team in Storming with an unresolved trust deficit cannot execute an ambitious QI plan — the plan will produce conflict, not results. Both analyses are required before the planning can begin.</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">When our organization committed to a three-year cardiac arrest survival improvement goal, I ran a Tuckman/Lencioni assessment on my division before building the QI plan. I found a trust deficit (Lencioni Level 1) between two crew supervisors that had been generating artificial harmony in QI meetings — the data was being agreed to but not acted upon. I addressed the trust issue first through individual conversations and restructured the QI review process to require real disagreement before decisions were finalized. The QI plan launched six weeks later — on a foundation that could actually carry it.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">The Managing Officer who says they are "too busy for strategy" has not made the identity shift the role requires. Strategic planning is a discipline of reserving time for work whose results arrive over quarters — not shifts. Tuckman and Lencioni are not abstract academic frameworks. They are diagnostic tools that tell me whether my team can execute the strategy I am building. That diagnosis is part of the plan itself.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag gold">Dedication</span><span class="tchoeds-tag gold">Service</span><span class="tchoeds-tag gold">Ownership</span></div>
+  </div>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Fire Framework Integration — Managing</span>
+  <div class="sbar-card accent-fire"><strong>🔥 Heifetz Adaptive/Technical</strong>Diagnose problem type before designing intervention. Technical = expertise solves it. Adaptive = behavior/culture change required. Most QI failures = technical solution to an adaptive problem.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Monroe's Motivated Sequence</strong>Attention → Need → Satisfaction → Visualization → Action. The presentation architecture for budget requests. Translates operational data into constituent-impact language.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Tuckman + Lencioni</strong>Team health is a strategic variable. Tuckman stage and Lencioni dysfunction level determine whether a team can execute a strategic plan. Diagnose before building.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Weingarten + Temporal Proximity</strong>Weingarten: right to representation in investigatory interviews. Temporal Proximity: discipline near protected activity = presumption of retaliation. Consult HR before any responsive action.</div>
+  <span class="sbar-label">Managing — Score Triggers</span>
+  <div class="sbar-card accent-red"><strong>No Heifetz Diagnosis → 3/5 Max (M–1)</strong>Prescribing training without diagnosing technical vs. adaptive = 3/5 ceiling.</div>
+  <div class="sbar-card accent-red"><strong>Defending a Grievance Without CBA Review → 1/5</strong>The most common disqualifying response at the Managing level.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Supervising Officer</button>
+  <div class="lnb-info"><div class="lnb-name">Managing Officer Scenarios</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Executive Officer Scenarios →</button>
+</div>
+</div><!-- /lesson-2 -->
+<!-- LESSON 4 — EXECUTIVE OFFICER SCENARIOS -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 4 of 6</div>
+  <div class="lh-track">Phase 3 · Chief / Director Level · Schein · PESTLE · McKinsey 7-S</div>
+  <h1 class="lh-title">Executive Officer Scenarios —<br><em>Governance, Advocacy &amp; Crisis</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 20 min</span><span class="lh-meta-item">📘 Chapters 11–12 Integration</span><span class="lh-meta-item">ERS · STAR-P · Schein · PESTLE · McKinsey 7-S · Governance · Advocacy · Crisis Comms</span></div>
+</div>
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · Executive Officer Level</div>
+    <div class="tps-adv-text">Each Executive Officer scenario integrates Schein’s Three Levels of Organizational Culture, the PESTLE external environment scan, and McKinsey 7-S alongside the core governance and crisis frameworks. These organizational intelligence tools separate executives who see the whole system from those managing individual components — and at this level, the board is specifically assessing which one you are.</div>
+  </div>
+</div>
+
+<!-- E-1 -->
+<div class="scenario-card">
+  <div class="scenario-header exec-header"><span class="scenario-badge">Executive Officer · Contract Compliance</span><span class="scenario-num">E–1</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"Your response time compliance in Zone 4 has been declining for six months and will breach your franchise contract threshold within 90 days if the trend continues. What do you do?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · McKinsey 7-S</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Trust · Courage · Ownership</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Proactive governance · Chain of command communication · Strategic response</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">McKinsey 7-S — Diagnosing a System Alignment Failure</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">STRATEGY · STRUCTURE · SYSTEMS · SHARED VALUES · SKILLS · STYLE · STAFF</div>
+        <div class="ffp-expand">McKinsey 7-S is the executive-level tool for diagnosing organizational alignment failures. A sustained Zone 4 compliance decline that cannot be explained by demand growth alone is often a 7-S misalignment problem. <strong style="color:var(--fire-text);">Hard elements:</strong> Is the deployment Strategy correct for current demand? Are Structures (chain of command, accountability) functioning? Are Systems (CAD, post plan compliance tracking) producing accurate signals? <strong style="color:var(--fire-text);">Soft elements:</strong> Do Staff have the Skills required? Does leadership Style reinforce compliance standards? Are Shared Values aligned with post plan discipline? A compliance decline that persists through operational interventions almost always indicates a soft element failure — culture, values, or style.</div>
+        <div class="ffp-apply">Applied to E–1: The executive who diagnoses a compliance decline only through hard-element analysis (deploy more units, change post plans) and misses the soft-element failure (supervisors not enforcing post compliance, shared values misaligned with system status discipline) will see the problem recur after every operational fix. McKinsey 7-S surfaces the complete picture.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — STAR-P</span><div class="ig-title">Proactive Governance — Brief Before the Crisis, Not After</div></div>
+      <div class="starp-grid">
+        <div class="starp-col"><div class="starp-head sp-s">Situation</div><div class="starp-body">Six-month declining trend with a 90-day breach horizon. This is simultaneously an operational problem, a governance communication obligation, and potentially a 7-S alignment issue. All three tracks open immediately.</div></div>
+        <div class="starp-col"><div class="starp-head sp-t">Task</div><div class="starp-body">Three simultaneous obligations: root cause analysis (7-S diagnostic + demand data), proactive governing authority communication before the breach occurs, and contract management — specifically whether the circumstances warrant a renegotiation conversation.</div></div>
+        <div class="starp-col"><div class="starp-head sp-a">Action</div><div class="starp-body">Day one: I brief the City Manager directly — with facts, trend, 90-day projection, and a commitment to a corrective action plan within two weeks. Not after the solution is developed — before. Simultaneously, I direct a McKinsey 7-S compliance analysis of Zone 4. If call volume growth is outpacing unit availability (hard element), I begin the resource request. If post compliance culture is the failure (soft element), I direct the Operations Chief to address the accountability failure structurally, not just operationally.</div></div>
+        <div class="starp-col"><div class="starp-head sp-r">Result</div><div class="starp-body">The governing authority learns about the problem from me, before threshold breach, with a documented corrective action plan in progress. Whether or not the breach is prevented, the relationship — and therefore the franchise — is protected long-term.</div></div>
+        <div class="starp-col"><div class="starp-head sp-p">Principle</div><div class="starp-body">Trust: built by telling the governing authority before they find out otherwise. Courage: briefing a problem before a solution exists. Ownership: the Chief owns every compliance metric in this organization, regardless of where the operational failure originated.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Weak Response (2/5) — Wrong Sequence</span><div class="avoid-text">"I'd figure out the fix first, then present it to the City Manager." Gets the sequence exactly wrong. At the executive level, the governing authority learns about problems from you — before the solution is ready. The chief who waits for a complete solution before communicating a problem loses the most important institutional relationship they manage.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Trust</span><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Ownership</span></div>
+  </div>
+</div>
+
+<!-- E-2 -->
+<div class="scenario-card">
+  <div class="scenario-header exec-header"><span class="scenario-badge">Executive Officer · Crisis Communications</span><span class="scenario-num">E–2</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"A video of one of your crews behaving inappropriately at a scene has gone viral on social media before you were aware of the incident. Local media is calling. How do you respond?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Schein Level 1 awareness</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Trust · Courage · Ownership</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Crisis comms discipline · Sequence of communication · Composure</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">Schein's Three Levels — Why the Video Exists (The Culture Diagnosis)</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">LEVEL 1: Artifacts (visible) · LEVEL 2: Espoused Values (stated) · LEVEL 3: Basic Assumptions (actual)</div>
+        <div class="ffp-expand">Schein's framework is the executive's tool for understanding why behavioral incidents occur systemically, not just individually. <strong style="color:var(--fire-text);">Level 1 artifacts</strong> are visible: the video. <strong style="color:var(--fire-text);">Level 2 espoused values:</strong> what the agency says about professional conduct. <strong style="color:var(--fire-text);">Level 3 basic assumptions:</strong> what the crew actually believed was acceptable behavior — and where that belief came from. The executive who addresses only the Level 1 artifact (discipline the crew members in the video) without examining Level 3 (what organizational assumptions produced this behavior) will see the next incident in six months. In the recovery phase of a public crisis, the governing authority needs to hear the executive address all three levels.</div>
+        <div class="ffp-apply">Applied to E–2: In your recovery statement and corrective action plan, Schein gives you the architecture for demonstrating systemic accountability rather than individual accountability alone. "We have addressed the individuals involved" is Level 1. "We are examining the organizational culture and supervisory environment that allowed this to occur" is Level 3. Level 3 is what rebuilds institutional trust.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">Crisis Communications — The First Two Hours + Schein Recovery</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">The sequence is non-negotiable: chain of command before media, facts before statements. I brief the City Manager first — not to return media calls. Then I issue an acknowledgment statement: we are aware of the video, we take any concern about our personnel's conduct seriously, we are conducting an immediate review, and we will provide a full statement at a specific time. One spokesperson from that moment forward. No speculation, no premature judgment, no defensiveness.</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">In a comparable situation, the initial 48-hour response preserved the City Manager's trust by ensuring she was never surprised by media calls she wasn't prepared for. The recovery phase applied Schein's framework: we addressed the Level 1 incident through HR, and we publicly committed to a Level 3 examination — a culture audit of the supervisory environment in that division. The governing authority response was significantly more supportive because the corrective narrative addressed systemic accountability, not just individual consequence.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">At the Chief level, my response in the first two hours determines whether we enter the recovery phase with credibility intact or spend six months rebuilding it. Schein reminds me: discipline is Level 1. The governing authority needs to see me address Level 3 — the organizational assumptions that enabled this — to believe the problem won't recur.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Trust</span><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Ownership</span></div>
+  </div>
+</div>
+
+<!-- E-3 -->
+<div class="scenario-card">
+  <div class="scenario-header exec-header"><span class="scenario-badge">Executive Officer · Budget Reduction</span><span class="scenario-num">E–3</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"The City Manager has informed you that EMS must reduce its budget by 12% for the coming fiscal year. How do you respond?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · PESTLE awareness</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Courage · Service · Humility</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Budget governance · Courageous advisory obligation · Service delivery accountability</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="fire-framework-panel">
+      <div class="ffp-header"><span class="ffp-badge">🔥 Fire Framework</span><span class="ffp-title">PESTLE — Reading the External Environment Behind the Budget Pressure</span></div>
+      <div class="ffp-body">
+        <div class="ffp-acro">POLITICAL · ECONOMIC · SOCIAL · TECHNOLOGICAL · LEGAL · ENVIRONMENTAL</div>
+        <div class="ffp-expand">PESTLE is the executive's external environment scan tool. A 12% budget reduction directive does not arrive in a vacuum — it is produced by a PESTLE environment: Political (election cycle, budget priorities), Economic (revenue decline, inflation, pension obligations), Social (community priorities shifting), Legal (union contract constraints on how cuts can be made). The executive who understands which PESTLE forces are driving the City Manager's directive can frame their response strategically — addressing the actual pressures rather than arguing against a budget number in isolation. This is the organizational intelligence that separates executive-level advocacy from managing-level compliance.</div>
+        <div class="ffp-apply">Applied to E–3: A PESTLE analysis might reveal that the budget pressure is primarily Economic (revenue shortfall) and Political (council budget priority shift). That context shapes the response: the argument that protects EMS funding is tied to service delivery consequences for constituents during an economically difficult period — not to the internal EMS operational argument.</div>
+      </div>
+    </div>
+    <div class="infographic-wrap" style="margin:1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">The Courageous Advisory Response to a Budget Cut Directive</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">My first response is analysis and honest communication — not compliance. I run a PESTLE analysis to understand what external forces are driving this directive. Then I model the 12% against major cost categories and produce three scenarios: a cut that preserves service delivery by eliminating non-operational programs; a cut requiring staffing reduction with documented response time impact; and a hybrid. The City Manager needs to make this decision with full information about what each path produces for constituents.</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">Facing a significant reduction request, I presented three scenarios with full service delivery consequence documentation. I explicitly stated — in writing — that Scenario 2 (staffing reduction) would breach our franchise agreement compliance standard with an 18-month probability. The City Manager selected Scenario 1. The key: she made an informed decision. I was prepared to recommend against any scenario I believed placed the public at unacceptable risk, on the record, even if it was politically uncomfortable.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">Courage at the Executive level means telling the City Manager that a directive will produce outcomes the agency cannot defend — and being willing to put that in writing. A chief who silently complies with a budget directive that will breach a franchise agreement has not served the City Manager. They have protected their own comfort at the organization's long-term expense. That is not Service.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Service</span><span class="tchoeds-tag">Trust</span></div>
+  </div>
+</div>
+
+<!-- E-4 -->
+<div class="scenario-card">
+  <div class="scenario-header exec-header"><span class="scenario-badge">Executive Officer · EMS Advocacy</span><span class="scenario-num">E–4</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"How would you approach advocating for EMS at the state legislative level? What are the current issues and how do you build influence?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Stakeholder Map · Coalition Building</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Service · Dedication · Courage</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Legislative awareness · Coalition thinking · Professional advocacy identity</div></div>
+  </div>
+  <div class="scenario-body">
+    <div class="infographic-wrap" style="margin:0 0 1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">State-Level EMS Advocacy — PESTLE-Informed, Coalition-Driven</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">State advocacy requires three things an individual agency cannot provide alone: coalition weight, message architecture that translates operational reality into legislative language, and relationships built before they are needed. I use a Stakeholder Map to identify every party with influence over the legislative priority — their power level, current position, and what shared interest connects them to EMS. Advocacy built on shared interest is durable. Advocacy built on "EMS needs help" is not.</div></div>
+        <div class="ers-row"><div class="ers-key">Recent Example</div><div class="ers-val">On a scope of practice modernization bill, my agency provided outcome data, coordinated with three peer chiefs for a unified position, and met with legislative staff before the committee hearing. The bill passed with EMS-proposed provisions — not because of individual agency influence, but because we presented a coordinated, data-backed, multi-agency position that made legislative staff's job easier. Current Colorado priorities: Medicaid reimbursement alignment, community paramedicine enabling legislation, rural EMS workforce sustainability. Federal: Medicare ambulance add-on payment permanence, No Surprises Act implementation.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">An EMS Chief who cannot name current legislative priorities at both state and federal level is not yet operating at the full scope of executive leadership. Advocacy is not separate from the job. CEMSA membership, CEMTAC engagement, CDPHE relationship, and Congressional delegation contact are all standing executive obligations — not special projects.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Service</span><span class="tchoeds-tag">Dedication</span><span class="tchoeds-tag">Courage</span></div>
+  </div>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Fire Framework Integration — Executive</span>
+  <div class="sbar-card accent-fire"><strong>🔥 McKinsey 7-S</strong>Hard elements (Strategy, Structure, Systems) + Soft elements (Shared Values, Skills, Style, Staff). Sustained compliance failures are almost always soft-element failures. Both must be diagnosed.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Schein's Three Levels</strong>Artifacts (visible) · Espoused Values (stated) · Basic Assumptions (actual). Crisis recovery must address Level 3 — the organizational culture that produced the incident — not just Level 1 discipline.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 PESTLE</strong>Political · Economic · Social · Technological · Legal · Environmental. The executive's external environment scan. A budget cut or legislative challenge has a PESTLE context — understanding it shapes the response strategy.</div>
+  <span class="sbar-label">Executive — Score Triggers</span>
+  <div class="sbar-card accent-red"><strong>Solution Before Communication → 2/5 (E–1)</strong>Waiting for an answer before telling the governing authority about the problem is the error that ends executive careers.</div>
+  <div class="sbar-card accent-red"><strong>Only Level 1 Response (E–2)</strong>Discipline alone without Schein Level 3 examination signals the executive is managing an incident rather than governing an organization.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Managing Officer</button>
+  <div class="lnb-info"><div class="lnb-name">Executive Officer Scenarios</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Ethical Dilemmas →</button>
+</div>
+</div><!-- /lesson-3 -->
+<!-- LESSON 5 — ETHICAL DILEMMAS -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 5 of 6</div>
+  <div class="lh-track">All Ranks · TCHOEDS Under Pressure · Three Ethical Frameworks · Newspaper Test</div>
+  <h1 class="lh-title">Ethical Dilemma Scenarios —<br><em>Courage When It Costs Something</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 18 min</span><span class="lh-meta-item">📘 All Chapters · Values Integration</span><span class="lh-meta-item">TCHOEDS: Courage · Ownership · Trust · Service · Three Ethical Frameworks · Newspaper Test</span></div>
+</div>
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · Ethical Dilemma Scenarios</div>
+    <div class="tps-adv-text">This lesson integrates the Three Ethical Frameworks (Deontological, Consequentialist, Virtue Ethics) and the Newspaper Test to each ethical dilemma scenario. These tools let you articulate <em>why</em> the right answer is right — not just what it is. When a board asks "why did you make that decision?", you need an ethical reasoning framework, not just a values statement. Naming the framework that governs your ethical conclusion is what 5/5 looks like.</div>
+  </div>
+</div>
+
+<div class="infographic-wrap" style="margin:0 0 2rem 0;">
+  <div class="ig-header"><span class="ig-eyebrow">◆ THREE ETHICAL FRAMEWORKS — THE REASONING ARCHITECTURE</span><div class="ig-title">Every Ethical Dilemma Can Be Analyzed Through Three Lenses</div><div class="ig-sub">A 5/5 ethical dilemma response doesn't just state the right action — it articulates the ethical reasoning behind it. Name the framework. Apply it explicitly. The board is assessing whether this candidate's ethical conclusions are principled or merely instinctual.</div></div>
+  <div class="ig-fw-grid-3">
+    <div class="ig-fw-card" style="border-top:3px solid var(--fire);">
+      <div class="ig-fw-label">🔥 Deontological (Kantian)</div>
+      <div class="ig-fw-title">Rules, Duties, Rights</div>
+      <div class="ig-fw-desc">Some actions are inherently wrong regardless of consequences. The duty to report misconduct, to tell the truth, and to follow lawful policy exists independent of whether it produces a good outcome. "What is the rule? What is my duty?" This framework is strongest when defending non-negotiable standards that must hold even when the outcome is uncertain.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">◈ Consequentialist (Utilitarian)</div>
+      <div class="ig-fw-title">Outcomes, Greatest Good</div>
+      <div class="ig-fw-desc">Outcomes matter. The action that produces the greatest benefit for the greatest number of stakeholders is the right one. "What produces the best result?" This framework is most useful when evaluating competing goods — resource allocation decisions, triage ethics, disclosure decisions where multiple parties are affected differently by different choices.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">◆ Virtue Ethics</div>
+      <div class="ig-fw-title">Character, Identity, Integrity</div>
+      <div class="ig-fw-desc">The right action is what a person of good character would do. "What would an officer of integrity do in this situation?" This framework is the closest to TCHOEDS — it asks not what the rules require or what the outcomes produce, but what kind of officer you are revealing yourself to be through this decision. It is the foundation of the Identity Anchor.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The Newspaper Test: "Would I be comfortable if this decision appeared on the front page of tomorrow's newspaper?" This is not a reputation-management tool — it is an integrity diagnostic that forces you to see your decision from the perspective of the constituents you serve. An answer that passes the Newspaper Test under public scrutiny is usually the right answer. An answer that only works in private is usually not.</div>
+</div>
+
+<!-- X-1 -->
+<div class="scenario-card">
+  <div class="scenario-header eth-header"><span class="scenario-badge">All Ranks · Documentation Integrity</span><span class="scenario-num">X–1</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"A provider you supervise reports to you that a peer has been systematically backdating ePCR timestamps to make response times appear compliant. How do you handle it?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · Deontological Ethics</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Trust · Courage · Ownership</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Integrity non-negotiability · Investigative discipline · Escalation obligation</div></div>
+  </div>
+  <div class="scenario-body">
+    <p style="font-size:.95rem;color:var(--on-light-1);line-height:1.75;margin-bottom:1rem;"><strong>Ethical Framework Applied:</strong> This is a Deontological scenario — your duty to report and preserve evidence exists regardless of who the subject is, how well-liked they are, or what the social cost of reporting is. Run the Newspaper Test right now: "An EMS supervisor knew about systematic data fraud and gave the subject time to quietly correct it." That headline ends careers for a reason. There is no gray area here.</p>
+    <div class="infographic-wrap" style="margin:0 0 1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — STAR-P</span><div class="ig-title">Documentation Fraud — Preserve, Report, Escalate. In That Order.</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Action</div><div class="ers-val">The allegation must be treated as potentially credible from the moment it is reported — regardless of the subject's seniority, relationships, or past performance. My first action is to preserve and secure the relevant ePCR records and CAD timestamps before any notification reaches the subject. Not to give an opportunity for additional alteration. I immediately report the allegation to my supervisor and HR simultaneously. This is not a situation I investigate independently — it involves potential data fraud, possible contract compliance misrepresentation, and patient record integrity. All three require institutional response.</div></div>
+        <div class="ers-row"><div class="ers-key">What I Do Not Do</div><div class="ers-val">I do not confront the accused before securing records. I do not ask the reporting provider to keep it quiet while I "look into it quietly." I do not delay reporting because the accused is long-tenured, popular, or a personal ally. None of those factors change what the allegation is — or what the Deontological duty requires. The duty to report exists unconditionally. The moment I make it conditional — based on who is involved — I have become complicit in the institutional integrity failure.</div></div>
+        <div class="ers-row"><div class="ers-key">Principle</div><div class="ers-val">Trust is the foundation of every data-dependent process in this organization. Allowing selective integrity — where the standard applies to some providers but is quietly managed for others — destroys the foundation of every system that depends on accurate data. Deontological ethics is clear: the duty to report this does not depend on the outcome. Courage is what TCHOEDS names for this moment. Newspaper Test: passed, clearly.</div></div>
+      </div>
+    </div>
+    <div class="avoid-block"><span class="avoid-label">Fatal Response (1/5 — Counterproductive)</span><div class="avoid-text">"I'd have a quiet conversation with the provider first and give them a chance to correct it." This response alerts the subject, creates an opportunity for additional alteration, and documents the officer's knowledge of the fraud without reporting it — making the officer legally complicit. Boards will immediately recognize this as an ethics failure, regardless of how diplomatically it is framed. This is a career-ending answer at any rank.</div></div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Trust</span><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Ownership</span></div>
+  </div>
+</div>
+
+<!-- X-2 -->
+<div class="scenario-card">
+  <div class="scenario-header eth-header"><span class="scenario-badge">Managing / Executive · Regulatory Compliance</span><span class="scenario-num">X–2</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"During a policy review, you discover that a long-standing operational practice in your agency violates current state EMS regulations — and has been in place for years. How do you proceed?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Virtue Ethics + Consequentialist</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Courage · Ownership · Trust</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Regulatory integrity · Voluntary disclosure judgment · Institutional courage</div></div>
+  </div>
+  <div class="scenario-body">
+    <p style="font-size:.95rem;color:var(--on-light-1);line-height:1.75;margin-bottom:1rem;"><strong>Ethical Framework Applied:</strong> Both Virtue Ethics and Consequentialist analysis point the same direction here. Virtue Ethics asks: what would an officer of integrity do? Disclose. Consequentialist analysis: proactive disclosure produces a cooperative regulatory response; concealment produces an adversarial enforcement action when it's discovered — and it will be discovered. Run the Newspaper Test: "Agency discovered violation and self-reported" versus "Agency concealed known violation for two years." Those are different careers.</p>
+    <div class="infographic-wrap" style="margin:0 0 1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Explain</div><div class="ers-val">Discovering a regulatory violation internally — before the regulator finds it — is a moment of institutional character. The organization that quietly corrects the practice without disclosure is making a calculation: can we fix it before anyone notices? The organization that proactively discloses and corrects is building the regulatory relationship that will matter in every future interaction. Both Virtue Ethics and Consequentialist analysis support disclosure. My approach is always disclosure.</div></div>
+        <div class="ers-row"><div class="ers-key">Immediate Steps</div><div class="ers-val">Stop the non-compliant practice immediately. Document when discovered, by whom, and what the specific violation is. Brief legal counsel. Brief the City Manager before any external communication. Contact CDPHE proactively — describe the violation, confirm it has been stopped, present the corrective action plan, and request guidance on any additional remediation. This approach nearly always produces a cooperative regulatory response. Concealment produces adversarial enforcement.</div></div>
+        <div class="ers-row"><div class="ers-key">At This Rank</div><div class="ers-val">Ownership means the violation that happened on my watch — even if it predates my tenure — is mine to correct. The cover-up is always worse than the discovery. Every regulatory relationship I need in the future is built or destroyed in exactly this kind of moment. The Newspaper Test is unambiguous here.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Ownership</span><span class="tchoeds-tag">Trust</span></div>
+  </div>
+</div>
+
+<!-- X-3 -->
+<div class="scenario-card">
+  <div class="scenario-header eth-header"><span class="scenario-badge">Executive · Political Pressure on Data</span><span class="scenario-num">X–3</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"The City Manager asks you to present your response time data in a way that emphasizes the positive trend while omitting the zone-specific decline that will generate council questions. How do you respond?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">STAR-P · All Three Ethical Frameworks</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Courage · Trust · Service</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Data integrity under political pressure · Upward courage · Diplomatic firmness</div></div>
+  </div>
+  <div class="scenario-body">
+    <p style="font-size:.95rem;color:var(--on-light-1);line-height:1.75;margin-bottom:1rem;"><strong>Ethical Framework — all three applied:</strong> Deontological: your duty to present accurate data to a governing authority exists regardless of political inconvenience. Consequentialist: a council member who discovers the omission through another source — media, CAD report, a constituent complaint — creates an outcome far worse than the zone data ever would have. Virtue Ethics: what does an officer of integrity do when asked to mislead? Run the Newspaper Test: "EMS Chief omitted Zone 4 data from Council presentation at City Manager's direction." That's a career-ending headline for both of you.</p>
+    <div class="infographic-wrap" style="margin:0 0 1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — STAR-P</span><div class="ig-title">Saying No to a Political Request — With Respect, Firmness, and an Alternative</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">Response</div><div class="ers-val">I would not omit the Zone 4 data. I would say that respectfully and directly — not as a refusal to cooperate, but as a professional obligation: "I understand the concern about council questions, and I want to help you manage that conversation well. But if I omit the Zone 4 data and a council member has seen it through another channel, we are in a far worse position than if we present it with context and a corrective plan." I am not refusing to manage the presentation — I am refusing to falsify it. All three ethical frameworks align here.</div></div>
+        <div class="ers-row"><div class="ers-key">The Alternative</div><div class="ers-val">I offer to present the complete data with framing that leads with the six-month system-wide improvement, contextualizes Zone 4 decline within call volume growth data, and presents a specific corrective action plan already underway. This gives the City Manager something to defend proactively at council — not something to explain reactively after the omission is discovered. The best answer to a difficult data question is almost always a well-prepared honest answer, not a suppressed one.</div></div>
+        <div class="ers-row"><div class="ers-key">Principle</div><div class="ers-val">Courage at the executive level means occasionally telling the person above you that the direction they are pointing will create more problems than it solves — with respect, with an alternative, and with the organizational interest clearly framed. The City Manager who is initially frustrated by my response will, after the council meeting where the complete data is well-received, understand why the honest path was the right one. Trust compounds over time — and so does its destruction.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Trust</span><span class="tchoeds-tag">Service</span></div>
+  </div>
+</div>
+
+<!-- X-4 -->
+<div class="scenario-card">
+  <div class="scenario-header eth-header"><span class="scenario-badge">Managing / Executive · Promotion Decision</span><span class="scenario-num">X–4</span></div>
+  <div class="scenario-prompt-block"><span class="scenario-prompt-label">Board Question</span><div class="scenario-prompt-text">"You have two equally qualified finalists for a supervisory promotion. One is a 15-year veteran who is well-liked but has had documented performance coaching in the past two years. The other is a 4-year employee with outstanding performance and strong leadership potential but no seniority. How do you decide — and how do you communicate the decision to the one not selected?"</div></div>
+  <div class="scenario-meta">
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Framework</div><div class="scenario-meta-val">ERS · Virtue Ethics + Consequentialist</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">TCHOEDS Anchor</div><div class="scenario-meta-val">Service · Courage · Humility</div></div>
+    <div class="scenario-meta-cell"><div class="scenario-meta-label">Board Is Evaluating</div><div class="scenario-meta-val">Decision integrity · Bias awareness · Courageous communication</div></div>
+  </div>
+  <div class="scenario-body">
+    <p style="font-size:.95rem;color:var(--on-light-1);line-height:1.75;margin-bottom:1rem;"><strong>Ethical Framework Applied:</strong> Virtue Ethics asks: what does an officer of integrity do when institutional relationships and social comfort pull toward the familiar choice? Consequentialist analysis: which decision produces the best outcome for the crew being supervised, the patients they serve, and the organization long-term? Both frameworks point to the evidence — not seniority, not social comfort. Run the Newspaper Test: "EMS agency selected the lower-performing candidate based on seniority." That's not a headline that protects anyone, including you.</p>
+    <div class="infographic-wrap" style="margin:0 0 1rem 0;">
+      <div class="ig-header"><span class="ig-eyebrow">◆ MODELED RESPONSE — ERS</span><div class="ig-title">Performance Over Seniority — The Virtue Ethics Standard</div></div>
+      <div class="ers-block">
+        <div class="ers-row"><div class="ers-key">The Decision</div><div class="ers-val">The question the organization is asking in a promotion decision is: who will best serve the people this organization is responsible for — the crew they will supervise and the patients those crews serve? That question is answered by performance evidence, not by seniority, familiarity, or social comfort. Based on the scenario — outstanding performance versus documented performance coaching in the recent period — the evidence points toward the four-year employee. Seniority is not a performance criterion. If it were, the system would select on longevity, not leadership.</div></div>
+        <div class="ers-row"><div class="ers-key">The Communication</div><div class="ers-val">To the person not selected, I have an obligation that goes beyond "you weren't selected." My conversation includes: specific recognition of what they bring, honest explanation of what distinguished the selected candidate — calibrated to what is appropriate to share — and a concrete development conversation: what would prepare them for the next opportunity, with a timeline I am willing to hold to. This is Courage in communication — telling someone a difficult truth in a way that respects their dignity and gives them something actionable.</div></div>
+        <div class="ers-row"><div class="ers-key">Principle</div><div class="ers-val">Service drives the decision — the question is always who best serves the mission. Courage drives the communication — giving honest developmental feedback rather than comfortable vagueness. Humility in acknowledging that the longer-tenured candidate's experience is real and valued, even though the evidence pointed elsewhere. All three ethical frameworks agree on the answer. So does the Newspaper Test.</div></div>
+      </div>
+    </div>
+    <div style="margin-top:.75rem;"><span class="tchoeds-tag">Service</span><span class="tchoeds-tag">Courage</span><span class="tchoeds-tag">Humility</span></div>
+  </div>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Fire Framework Integration — Ethical Dilemmas</span>
+  <div class="sbar-card accent-fire"><strong>🔥 Deontological Ethics</strong>Rules and duties exist independent of outcomes. Reporting misconduct is a duty regardless of consequence. Strongest framework for non-negotiable standards.</div>
+  <div class="sbar-card accent-gold"><strong>◈ Consequentialist Ethics</strong>Greatest good for greatest number. Best outcome wins. Strongest for competing-goods scenarios. Often aligns with Deontological at 5/5.</div>
+  <div class="sbar-card accent-ems"><strong>◆ Virtue Ethics</strong>"What would an officer of integrity do?" Closest to TCHOEDS. The Identity Anchor question. Foundation of the 5/5 ethical response.</div>
+  <div class="sbar-card accent-gold"><strong>🗞️ Newspaper Test</strong>Would this decision appear defensible on the front page? A practical ethics diagnostic that forces public accountability framing.</div>
+  <span class="sbar-label">Ethical Dilemma — Core Principle</span>
+  <div class="sbar-card accent-red"><strong>TCHOEDS values that cost nothing are not being tested.</strong>These scenarios test what you do when the right answer is personally, politically, or professionally uncomfortable. The comfortable answer is always available. The correct one requires Courage.</div>
+  <span class="sbar-label">Scenario Anchors</span>
+  <div class="sbar-card accent-red"><strong>X–1: Data Fraud</strong>Preserve records first. Report to supervisor + HR immediately. No quiet confrontation. Deontological: duty unconditional.</div>
+  <div class="sbar-card accent-red"><strong>X–2: Regulatory Violation</strong>Stop. Document. Brief chain of command. Voluntary disclosure to CDPHE. Both Virtue and Consequentialist analysis support disclosure.</div>
+  <div class="sbar-card accent-red"><strong>X–3: Political Data Pressure</strong>Refuse with respect and an alternative. All three ethical frameworks align. Newspaper Test unambiguous.</div>
+  <div class="sbar-card accent-red"><strong>X–4: Promotion Decision</strong>Performance evidence over seniority/social comfort. Honest developmental communication to non-selected candidate is required.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Executive Officer</button>
+  <div class="lnb-info"><div class="lnb-name">Ethical Dilemma Scenarios</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Pre-Board Capstone →</button>
+</div>
+</div><!-- /lesson-4 -->
+<!-- LESSON 6 — PRE-BOARD CAPSTONE -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 13 · Lesson 6 of 6</div>
+  <div class="lh-track">All Ranks · Final Integration · Yerkes-Dodson · Four-Step Reset · Five Recovery Protocols</div>
+  <h1 class="lh-title">The Pre-Board Capstone —<br><em>Preparation, Execution &amp; Complete Integration</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 18 min</span><span class="lh-meta-item">📘 All 13 Chapters · Complete Curriculum Integration</span><span class="lh-meta-item">SPARR · Yerkes-Dodson · Four-Step Reset · Five Recovery Protocols · 13 Buckets · TPS Anchor Quotes</span></div>
+</div>
+<div class="tps-advantage-banner">
+  <div class="tps-adv-icon">🔥</div>
+  <div>
+    <div class="tps-adv-label">TPS Advantage · The Pre-Board Capstone</div>
+    <div class="tps-adv-text">This lesson adds three elements that exist nowhere else in EMS promotional preparation: the Yerkes-Dodson arousal-performance curve applied to board-day execution; the Four-Step Reset Protocol for recovering in real time from in-assessment disruptions; and the Five Recovery Protocols for the most common board room failure modes. These are the tools that protect your performance when preparation meets pressure — the moment where knowing the material either translates into execution or collapses under anxiety.</div>
+  </div>
+</div>
+
+<h2>Yerkes-Dodson — Managing Arousal for Peak Performance</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ YERKES-DODSON CURVE — THE AROUSAL-PERFORMANCE RELATIONSHIP</span><div class="ig-title">Why "Calm Yourself Down" Is Usually Wrong Advice</div><div class="ig-sub">The Yerkes-Dodson inverted-U describes the relationship between your physiological arousal and your performance. Too little arousal and you underperform through lack of engagement. Too much and anxiety collapses your cognitive access to the frameworks you've built. The target is moderate arousal — alert, present, activated but not overwhelmed. This isn't "calm yourself down." It's "get yourself to optimal."</div></div>
+  <div style="padding:.75rem 1.25rem 1rem;">
+    <div class="yd-bar"><div class="yd-zone">Low Arousal</div><div class="yd-indicator" style="background:linear-gradient(90deg,rgba(42,96,144,.4),rgba(42,96,144,.2));"></div><div class="yd-desc">Underperformance. Not enough activation to access full recall or execute structured responses. Causes: treating the board as low-stakes, insufficient practice arousal (preparing alone vs. observed). The SPARR "Run It Live" step exists specifically to address this zone.</div></div>
+    <div class="yd-bar"><div class="yd-zone">Optimal Zone ✓</div><div class="yd-indicator" style="background:linear-gradient(90deg,rgba(26,92,58,.6),rgba(26,92,58,.8),rgba(26,92,58,.6));"></div><div class="yd-desc">Peak performance. Full recall accessible. Framework automaticity engaged. Your presence and identity are visible to the panel. You're alert, energized, and focused — not calm. Get yourself into this zone before the first question is asked. The Reset Protocol brings you back here when disrupted.</div></div>
+    <div class="yd-bar"><div class="yd-zone">High Arousal</div><div class="yd-indicator" style="background:linear-gradient(90deg,rgba(178,34,34,.2),rgba(178,34,34,.6));"></div><div class="yd-desc">Anxiety-induced performance collapse. Framework access degrades. Rambling replaces structure. Candidates begin monitoring themselves ("how am I doing?") instead of executing. The Four-Step Reset Protocol exists for this zone — to recover framework access within seconds.</div></div>
+  </div>
+  <div class="ig-callout">If you've been preparing only in low-arousal conditions — reading alone, thinking through responses in your head — you will underperform under board arousal, even if you know every framework cold. SPARR's "Run It Live" step — observed, timed, standing — isn't optional. It's the only preparation that actually trains at the arousal level the board produces.</div>
+</div>
+
+<h2>The Four-Step Reset Protocol</h2>
+<p>At some point during your board, you will lose your place. The mind goes blank, a question catches you off-guard, or anxiety spikes mid-response. It happens to everyone. The Four-Step Reset Protocol is the recovery sequence that returns you to framework execution within seconds — if you've practiced it beforehand.</p>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ FOUR-STEP RESET PROTOCOL — IN-ASSESSMENT RECOVERY</span><div class="ig-title">When You Lose Your Place — The Recovery Sequence</div><div class="ig-sub">This protocol is practiced in SPARR reps until it runs automatically. If you've never practiced recovery, you'll improvise — and improvisation under high arousal produces rambling. If you've rehearsed the Reset Protocol, you'll recover in four steps that take approximately three seconds.</div></div>
+  <div class="checklist">
+    <div class="check-row"><div class="check-box">1</div><div class="check-content"><strong>Breath</strong> — One controlled, visible exhale. This is not metaphorical — it is physiological regulation. One breath lowers arousal from the collapse zone back toward optimal. It also signals to the board that you are composing yourself deliberately, which reads as confidence rather than panic.</div></div>
+    <div class="check-row"><div class="check-box">2</div><div class="check-content"><strong>L·E·A·D</strong> — Run the four questions internally in silence: What is the question bucket? What is the primary framework? Am I answering at the correct rank? What TCHOEDS value will close this? This takes three to five seconds. The panel interprets this pause as thoughtfulness. It is. Let them.</div></div>
+    <div class="check-row"><div class="check-box">3</div><div class="check-content"><strong>First Sentence</strong> — Commit to one opening sentence that names the framework and signals the structure: "I'd approach this using the 3 U's Diagnostic before any action — let me walk through that." Once the first sentence is out, the structure carries the response. The panic is almost always in the gap before the first sentence, not in the content that follows.</div></div>
+    <div class="check-row"><div class="check-box">4</div><div class="check-content"><strong>Trust the Structure</strong> — Execute the framework and stop monitoring yourself. "How am I doing?" is the question that destroys performance. The answer is: follow the structure you have practiced. The board is not evaluating your self-assessment in real time — they are evaluating your response. Be in the response.</div></div>
+  </div>
+</div>
+
+<h2>The Five Recovery Protocols</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ FIVE RECOVERY PROTOCOLS — IN-ASSESSMENT DISRUPTIONS</span><div class="ig-title">Specific Responses to the Most Common Board Room Failures</div><div class="ig-sub">Each disruption type requires a different recovery. Treating all five with the same "I need a moment to think" response leaves performance on the table. Know the specific protocol for each disruption type — and practice them in SPARR reps until they are automatic.</div></div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Protocol 1 — The Blank</div>
+      <div class="ig-fw-title">Mind Goes Empty</div>
+      <div class="ig-fw-desc">Run the Four-Step Reset. Open with the framework name: "Let me start with the 3 U's Diagnostic — I'll walk through the diagnosis before any action." The framework name is the re-entry point. Once you name the framework, the structure carries you. The blank is almost always pre-framework. Framework access is the cure.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Protocol 2 — The Don't Know</div>
+      <div class="ig-fw-title">Genuine Knowledge Gap</div>
+      <div class="ig-fw-desc">State it directly and pivot: "I don't have the specific number for that standard in front of me — what I can tell you is the principle that governs my decision here: [name the principle and apply it]." Boards forgive honest uncertainty acknowledged directly. They do not forgive fabrication or evasion. A principled answer without the specific fact scores higher than a specific fact without a principle.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Protocol 3 — The Partial</div>
+      <div class="ig-fw-title">Incomplete Answer</div>
+      <div class="ig-fw-desc">Acknowledge the limitation explicitly and expand: "I've covered the immediate response and the documentation piece — the element I want to add is the follow-through, which is where accountability actually lives." Naming what you're adding signals structure and self-awareness. It also often scores the TCHOEDS close that incomplete responses miss.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Protocol 4 — The Supplemental Pivot</div>
+      <div class="ig-fw-title">Follow-Up Changes Direction</div>
+      <div class="ig-fw-desc">When a follow-up question challenges your answer or takes the scenario in a new direction, use the transition: "That's an important dimension I want to address — let me apply the [framework] to this new element." This signals analytical flexibility — the ability to extend structure to a new variable — which is an executive-level communication skill the board is watching for.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Protocol 5 — The Time Request</div>
+      <div class="ig-fw-title">Need More Thinking Time</div>
+      <div class="ig-fw-desc">It is always acceptable to say: "I want to take just a moment to organize this — I want to give you a complete answer." Then run L·E·A·D internally. Boards grant this without penalty — it reads as preparation discipline, not confusion. Rushing an unstructured answer to avoid the pause will score lower than taking five seconds to open with a framework.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">All Five — Common Thread</div>
+      <div class="ig-fw-title">Framework Re-Entry Is Always the Solution</div>
+      <div class="ig-fw-desc">Every recovery protocol returns you to a named framework. The framework is the re-entry point because it is the structure that carries the response. When you practice recovery protocols in SPARR reps will find them automatic under board arousal. If you read about them but never practice them, you’ll improvise — and improvisation under high arousal rarely produces 4/5 or 5/5 responses.</div>
+    </div>
+  </div>
+</div>
+
+<h2>The 48-Hour Pre-Board System</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ PRE-BOARD PREPARATION — THE 48-HOUR SYSTEM</span><div class="ig-title">What to Do in the 48 Hours Before the Board</div><div class="ig-sub">The 48 hours before the board are not for learning new content — that phase is done. This is about activating what you've already built: confirming your examples, practicing your delivery, and walking in at optimal Yerkes-Dodson arousal. Alert and ready, not exhausted and anxious.</div></div>
+  <div class="checklist">
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Verify your 13 bucket examples.</strong> For each of the 13 question buckets, confirm you have one real, specific example at the target rank level. Write the STAR-P or ERS outline for each — not the full response, just the structure. Verify the TCHOEDS Principle connection for each.</div></div>
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Speak two responses aloud, timed.</strong> Pick your two highest-stakes buckets and deliver them aloud to a timer. If you exceed target time (2–3 min S, 3–4 min M, 4–5 min E), identify what to cut. If under 90 seconds, identify the depth that's missing. Adjust and run one more SPARR rep.</div></div>
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Practice the Four-Step Reset once.</strong> Intentionally blank yourself mid-response and run the Reset Protocol through to framework re-entry. One practice rep is enough to make it accessible under board arousal. If you’ve never practiced it, you’ll improvise at the worst possible moment.</div></div>
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Review TCHOEDS at your rank.</strong> Not memorization — values confirmation. Before you walk in, name each value and state what it means at the role you are testing for. This anchors your voice in purpose rather than performance.</div></div>
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Know your current performance data and one legislative issue at each level.</strong> For all ranks: fractile compliance, ROSC rate, current QI focus area. For Managing and Executive: one Colorado state EMS priority issue and one federal EMS priority issue. If you can't name these, you're not yet operating at the full scope of the role you're testing for.</div></div>
+    <div class="check-row"><div class="check-box">✓</div><div class="check-content"><strong>Rest, then enter at optimal arousal.</strong> A full night's sleep before the board is not comfort advice — it is Yerkes-Dodson application. Rested candidates access frameworks more reliably, speak more clearly, and listen more accurately. Exhausted candidates operate from the low end of the arousal curve. Sleep is preparation.</div></div>
+  </div>
+</div>
+
+<h2>The Curriculum Integration — What These 13 Chapters Built</h2>
+<div class="infographic-wrap">
+  <div class="ig-header"><span class="ig-eyebrow">◆ CURRICULUM INTEGRATION — THIRTEEN CHAPTERS, THREE PHASES</span><div class="ig-title">The Complete TPS EMS Leadership Curriculum with Fire Framework Overlay</div><div class="ig-sub">Each chapter built a specific layer of leadership capability. The fire service framework overlay is integrated throughout — showing where the two lines connect and where dual-role candidates gain the deepest advantage. TCHOEDS runs through all of it as the values spine.</div></div>
+  <div style="padding:.5rem 1rem 1rem;">
+    <table class="exec-table">
+      <thead><tr><th>Chapter</th><th>Core Contribution</th><th>Fire Framework Integration</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ch. 1 — EMS Officer System</strong></td><td>Identity shift framework; TCHOEDS introduction; first shift from provider to supervisor</td><td>L·E·A·D pre-response sequence; SPARR practice methodology</td></tr>
+        <tr><td><strong>Ch. 2 — Self Attributes</strong></td><td>Emotional intelligence, self-awareness, internal leadership baseline</td><td>Locus of Control; Identity Anchor; Bank of Leadership</td></tr>
+        <tr><td><strong>Ch. 3 — Leading Others</strong></td><td>L·E·A·D personnel, CLEAR, CALM frameworks</td><td>3 U's Diagnostic; SBI Feedback Model; Four-P Opening; Five-Phase Counseling Arc</td></tr>
+        <tr><td><strong>Ch. 4 — Field Supervision</strong></td><td>Scene leadership, situational authority, crew-level decisions</td><td>Skill/Will Matrix; OODA Loop; Recognition-Primed Decision Model</td></tr>
+        <tr><td><strong>Ch. 5 — EMS Personnel Leadership</strong></td><td>Workforce dynamics, difficult conversations, progressive discipline</td><td>Glasl Escalation Ladder; IBR; DESC Script; STATE Skills</td></tr>
+        <tr><td><strong>Ch. 6 — EMS Scene Leadership</strong></td><td>Multi-agency coordination, command presence, patient-safety-first decisions</td><td>COAL WAS WEALTH; ICS/NIMS; Rescue Priority; Two-In Two-Out; LUNAR</td></tr>
+        <tr><td><strong>Ch. 7 — Strategic Planning</strong></td><td>Second identity shift; managing-level strategic thinking</td><td>Heifetz Adaptive/Technical; Kotter 8-Step; RACI Matrix; OKRs</td></tr>
+        <tr><td><strong>Ch. 8 — Budget Development</strong></td><td>Budget cycle, data-driven request building, financial stewardship</td><td>Monroe's Motivated Sequence; Eisenhower Matrix (In-Basket)</td></tr>
+        <tr><td><strong>Ch. 9 — EMS Quality Management</strong></td><td>QI program architecture, PDCA, Medical Director partnership</td><td>Heifetz (Adaptive/Technical) applied to QI failures; Pareto Principle</td></tr>
+        <tr><td><strong>Ch. 10 — Labor Relations</strong></td><td>CBA literacy, grievance process, FLSA, HR strategy</td><td>Weingarten Rights; Temporal Proximity Test; ULP framework; Information Request Protocol</td></tr>
+        <tr><td><strong>Ch. 11 — Executive Officer Track</strong></td><td>Third identity shift; governance, contracts, advocacy, crisis comms</td><td>McKinsey 7-S; PESTLE; Schein Three Levels; Political Acumen Framework</td></tr>
+        <tr><td><strong>Ch. 12 — Data Analytics</strong></td><td>Analytics culture, NEMSIS, performance metrics, deployment optimization</td><td>Pareto (80-20) for analytics prioritization; AAR as learning tool; Kolb Cycle</td></tr>
+        <tr><td><strong>Ch. 13 — Scenario Bank</strong></td><td>Complete integration: both platform frameworks, all three scoring systems</td><td>All fire service frameworks applied; Three Ethical Frameworks; Yerkes-Dodson; Four-Step Reset; Five Recovery Protocols</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ig-callout">The measure of this curriculum is not recall. It's application — under pressure, in a real board room, in front of a panel that has seen hundreds of candidates. When you lead with TCHOEDS unconditionally, diagnose with the 3 U's before acting, apply Heifetz before designing interventions, and recover from disruptions with the Four-Step Reset — that's who these thirteen chapters were built to develop. That's you, walking in ready.</div>
+</div>
+
+<h2>TPS Anchor Quotes</h2>
+<div class="tps-quote"><div class="tps-quote-text">"Interview for the job you want, not the job you have."</div><div class="tps-quote-attr">TPS Coaching · The Promotional Standard</div></div>
+<div class="tps-quote"><div class="tps-quote-text">"You supervise people. You manage time and resources. You lead hearts."</div><div class="tps-quote-attr">TPS Coaching · The Promotional Standard</div></div>
+<div class="tps-quote"><div class="tps-quote-text">"You manage things, you lead people. We went overboard on management and forgot about leadership."</div><div class="tps-quote-attr">Admiral Grace Murray Hopper · Rear Admiral, United States Navy</div></div>
+<div class="tps-quote"><div class="tps-quote-text">"Culture is not what organizations say they value. Culture is what they actually do — especially when doing the right thing is costly, inconvenient, or unpopular."</div><div class="tps-quote-attr">After Edgar Schein · MIT Sloan · Organizational Culture and Leadership</div></div>
+<div class="tps-quote"><div class="tps-quote-text">"I coach you to LEAD — not just to pass the promotional assessment center."</div><div class="tps-quote-attr">TPS Coaching · The Promotional Standard</div></div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter and throughout the TPS EMS Leadership Curriculum (Chapters 1–13) is provided for professional development and educational purposes only. Scenario modeled responses are educational examples illustrating framework application — they are not legal, HR, or operational advice for specific workplace situations. Labor law, CBA provisions, FLSA applicability, HIPAA obligations, state regulatory requirements, and applicable civil service or HR policies vary significantly by jurisdiction and agency. Always consult your agency's HR department, legal counsel, union representative, Medical Director, and applicable regulatory authority before making personnel, clinical, financial, or governance decisions. The Promotional Standard LLC makes no warranty that any response strategy or scenario outcome described herein is appropriate, sufficient, or legally compliant for any specific agency's context. The Promotional Standard LLC · Colorado LLC · thepromotionalstandard.com</p>
+</div>
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Capstone Frameworks</span>
+  <div class="sbar-card accent-fire"><strong>🔥 Yerkes-Dodson</strong>Inverted-U: too little arousal = underperformance. Too much = collapse. Target: moderate/optimal zone. SPARR "Run It Live" trains at board arousal level.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Four-Step Reset</strong>Breath → L·E·A·D (internal) → First Sentence → Trust the Structure. Recovers framework access within 3 seconds. Practice this in SPARR reps.</div>
+  <div class="sbar-card accent-fire"><strong>🔥 Five Recovery Protocols</strong>The Blank · The Don't Know · The Partial · The Supplemental Pivot · The Time Request. Framework re-entry is the solution for all five. Know which protocol applies to which disruption.</div>
+  <span class="sbar-label">48-Hour Checklist</span>
+  <div class="sbar-card accent-gold"><strong>6 Items</strong>Verify 13 bucket examples → Speak 2 aloud timed → Practice Four-Step Reset once → Review TCHOEDS at rank → Know current data + legislative issues → Rest (Yerkes-Dodson application).</div>
+  <span class="sbar-label">Day-Of Execution</span>
+  <div class="sbar-card"><strong>Enter at Optimal Arousal</strong>Alert, not calm. Activated, not anxious. Yerkes-Dodson optimal zone is the target.</div>
+  <div class="sbar-card"><strong>Name the Framework First</strong>Opening sentence names the framework. This is L of L·E·A·D in real time. It signals structure to the board and gives you the re-entry point if you lose your place.</div>
+  <div class="sbar-card accent-gold"><strong>Never Omit the Principle</strong>TCHOEDS close is structural, not optional. Missing it = cannot reach 5/5. It is what makes the response a leadership demonstration, not a story.</div>
+  <div class="sbar-card"><strong>Hold Under Challenge</strong>Pause. Acknowledge. Respond analytically. Neither capitulate nor escalate. Composure under challenge is an executive-level communication signal.</div>
+  <span class="sbar-label">TPS + NEMSMA + Fire Integration</span>
+  <div class="sbar-card accent-gold"><strong>Three Frameworks, One Preparation</strong>TPS 1/5–5/5 scale + NEMSMA Confidence Spectrum + board panel’s holistic judgment all reward the same behaviors: named framework, full application, TCHOEDS close, rank-calibrated, composure under pressure.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Ethical Dilemmas</button>
+  <div class="lnb-info"><div class="lnb-name">Pre-Board Capstone &amp; Complete Integration</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Curriculum Complete ✓</button>
+</div>
+</div><!-- /lesson-5 -->
+</main>
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){ls.forEach(l=>l.classList.remove('active'));ps.forEach(p=>p.classList.remove('active'));ls[i].classList.add('active');ps[i].classList.add('active');cur=i;window.scrollTo({top:0,behavior:'smooth'});document.getElementById('prog').style.width='0%';}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{const s=document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-window.innerHeight;if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

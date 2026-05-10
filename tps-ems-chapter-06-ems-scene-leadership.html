@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 6 — EMS Scene Leadership | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   TPS EMS TRACK — LOCKED DESIGN SYSTEM v2.0
+   ============================================================ */
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8DCF0;--on-dark-3:#98B8D0;--on-dark-4:#6A90A8;
+  --on-light-1:#1A2E42;--on-light-2:#3A5068;--on-light-3:#6A7A8A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,24,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(201,168,76,0.2);flex-shrink:0;}
+.nav-ems-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--gold);background:rgba(201,168,76,0.12);border-color:rgba(201,168,76,0.3);}
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(201,168,76,0.5);}
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+.module-hero{background:linear-gradient(155deg,var(--navy-deep) 0%,var(--navy) 55%,#112840 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.018) 80px,rgba(201,168,76,0.018) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ems-bg);border:1px solid var(--ems-border);color:var(--ems-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F7F3EC;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--gold);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main h3{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--navy);margin:2.25rem 0 0.75rem;}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul,.lesson-main ol{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--navy);font-weight:600;}
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF5E4;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-navy{background:var(--navy);border-left:4px solid var(--gold);box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.callout-navy .callout-label{color:var(--gold);}
+.callout-navy p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D2C8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--navy);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-gold{border-left:3px solid var(--gold);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D2C8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+/* INFOGRAPHIC SYSTEM */
+.infographic-wrap{background:var(--navy-deep);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(201,168,76,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(201,168,76,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);font-size:0.9rem;color:#C0A030;line-height:1.65;font-style:italic;}
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:800;color:var(--gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-ems{font-size:0.82rem;color:var(--ems-text);font-style:italic;margin-top:5px;}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-map-cell{background:var(--navy-deep);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-fw-card{background:var(--navy-deep);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.08);}
+.ig-stage{background:var(--navy-deep);padding:1.1rem;}
+.ig-stage-num{font-family:'EB Garamond',serif;font-size:1.8rem;font-weight:800;margin-bottom:4px;}
+.ig-stage-name{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ig-stage-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.08);}
+.ig-compare-col{background:var(--navy-deep);padding:1.25rem;}
+.ig-compare-header{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:5px;}
+.ig-compare-sub{font-size:0.88rem;font-style:italic;margin-bottom:12px;line-height:1.45;}
+.ig-compare-items{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.ig-compare-item{font-size:0.9rem;color:var(--on-dark-1);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);line-height:1.5;}
+.ig-compare-result{font-size:0.87rem;font-weight:600;padding:9px 11px;border:1px solid;margin-top:8px;line-height:1.45;}
+/* Level Key */
+.level-key{background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block;}
+.level-key-intro{font-size:0.92rem;color:var(--on-dark-2);margin-bottom:0.9rem;line-height:1.6;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(201,168,76,0.12);}
+/* Nav bar */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0B0;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--gold);color:var(--gold);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--navy) 0%,#1A3A5C 100%);color:var(--gold);border-color:var(--navy);box-shadow:0 3px 12px rgba(12,35,64,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,#1A3A5C 0%,#224870 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--navy);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBE1;border:1px solid #D8D0C4;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-map-grid,.ig-fw-grid,.ig-stage-grid,.ig-compare,.fw-grid,.fw-grid-3{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-ems-badge">◆ EMS Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">Fire-EMS Integration</button>
+    <button class="nav-pill" onclick="showLesson(1)">Online Med Direction</button>
+    <button class="nav-pill" onclick="showLesson(2)">Medical Director Relationship</button>
+    <button class="nav-pill" onclick="showLesson(3)">MIH-CP</button>
+    <button class="nav-pill" onclick="showLesson(4)">Alternative Destinations</button>
+    <button class="nav-pill" onclick="showLesson(5)">Community Health</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 6 · NEMSMA Pillars 4 &amp; 6</div>
+    <div class="mh-track-badge">◆ EMS Officer Track · Scene Leadership</div>
+    <h1 class="mh-title"><em>EMS Scene</em><br>Leadership</h1>
+    <p class="mh-sub">EMS officers rarely operate in a purely EMS environment. They work at the intersection of fire, law enforcement, hospital systems, medical directors, public health agencies, and the communities they serve. This chapter builds the operational and relational competencies that make an EMS officer effective in that complex landscape.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. Fire-EMS integration — the cultural and authority tensions at joint scenes. Online medical direction — real-time physician oversight and when providers and physicians disagree. The Medical Director relationship — offline direction, protocol development, and navigating disagreement at all three officer levels. Community Paramedicine and Mobile Integrated Healthcare — the expanding EMS mission. Alternative destinations — treat-and-release and the clinical and legal landscape. The EMS officer as community health partner — NEMSMA Pillar 6 and civic responsibility in practice.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== LESSON 1 — FIRE-EMS INTEGRATION ======================== -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 1 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Fire-EMS Integration —<br><em>Culture, Authority, and the Joint Scene</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Task Management · ICS Applied</span><span class="lh-meta-item">Bucket 13 — Situational / Scene</span></div>
+</div>
+
+<p>Most EMS promotional candidates understand ICS. Far fewer understand the cultural and authority dynamics that govern how EMS actually functions within fire-dominated incident command structures. These dynamics are not covered in ICS-100 or NIMS compliance training. They are learned — sometimes painfully — in the field. The EMS officer who enters an assessment center having thought carefully about these dynamics has a significant advantage over the candidate who can recite ICS principles but has never considered what happens when a fire IC makes a patient care decision that an EMS officer believes is clinically wrong.</p>
+
+<p>That situation — and the officer's response to it — is exactly what assessors probe in Bucket 13 — Situational / Scene questions involving multi-agency incidents.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — How to Read NEMSMA Competency Descriptions</span>
+  <p class="level-key-intro">Throughout this chapter, NEMSMA competencies are described at three officer levels:</p>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Front-line supervisor. EMS Lieutenant, Field Supervisor, Shift Supervisor.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Middle management. EMS Captain, Operations Manager, Division Chief.</span>
+    <span class="level-key-badge" style="color:#E87070;background:rgba(178,34,34,0.12);border:1px solid rgba(178,34,34,0.25);">E</span>
+    <span class="level-key-desc"><strong style="color:#E87070;">Executive EMS Officer</strong> — Senior leadership. EMS Chief, Director, Deputy Chief.</span>
+  </div>
+  <div class="level-key-note">This chapter includes content relevant to all three levels. Fire-EMS integration is primarily Supervising and Managing content. Medical Director relationship and community health leadership are Managing and Executive content.</div>
+</div>
+
+<h2>The Two Authority Systems on a Joint Scene</h2>
+<p>On any scene involving both fire and EMS, two distinct authority systems are simultaneously active. Understanding the boundary between them — and knowing when they conflict — is the core competency this lesson develops.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ DUAL AUTHORITY ON JOINT SCENES</span>
+    <div class="ig-title">Incident Command Authority vs. Medical Authority</div>
+    <div class="ig-sub">These two authority systems operate simultaneously at every joint EMS/fire scene. They usually align. When they don't, the EMS officer must know which authority governs which decision — and how to navigate the conflict professionally.</div>
+  </div>
+  <div class="ig-compare">
+    <div class="ig-compare-col" style="border-top:3px solid #E87070;">
+      <div class="ig-compare-header" style="color:#E87070;">Incident Command Authority</div>
+      <div class="ig-compare-sub" style="color:#D08060;">Governs operational, tactical, and resource decisions</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Who has command of the scene</div>
+        <div class="ig-compare-item">Resource deployment and staging</div>
+        <div class="ig-compare-item">Scene safety, access, and perimeter</div>
+        <div class="ig-compare-item">Communications structure and channels</div>
+        <div class="ig-compare-item">Scene expansion or contraction</div>
+        <div class="ig-compare-item">Unified Command establishment</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(139,26,26,0.12);border-color:#E87070;color:#E87070;">Held by: Incident Commander. In fire-primary incidents, typically a fire officer.</div>
+    </div>
+    <div class="ig-compare-col" style="border-top:3px solid var(--ems2);">
+      <div class="ig-compare-header" style="color:var(--ems-text);">Medical Authority</div>
+      <div class="ig-compare-sub" style="color:#6090B0;">Governs clinical, patient care, and transport decisions</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Patient assessment and treatment protocols</div>
+        <div class="ig-compare-item">Transport destination determination</div>
+        <div class="ig-compare-item">Level of care required for each patient</div>
+        <div class="ig-compare-item">Online medical direction consultation</div>
+        <div class="ig-compare-item">Refusal of care documentation</div>
+        <div class="ig-compare-item">Clinical resource allocation at MCIs</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(42,96,144,0.12);border-color:var(--ems-border);color:var(--ems-text);">Held by: EMS Branch / Medical authority. Always an EMS officer or Medical Director, not a fire officer.</div>
+    </div>
+  </div>
+  <div class="ig-callout">Medical authority at a scene does not transfer to the Incident Commander when the IC is a fire officer. A fire IC can tell the EMS branch where to stage, when to move, and how to communicate — but cannot override a paramedic's clinical judgment or direct specific patient care protocols. The EMS officer who understands this boundary can navigate it professionally. The one who doesn't either defers when they shouldn't or escalates when they don't need to.</div>
+</div>
+
+<h2>The Cultural Friction Points</h2>
+<p>Fire and EMS cultures developed separately and have genuine differences in organizational values, operational norms, and professional identity. An EMS officer who enters a joint scene without awareness of these friction points will generate unnecessary conflict at moments when the focus should be entirely on patient care.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Friction Point 1</div>
+    <div class="fw-card-title">Scene Control vs. Patient Access</div>
+    <div class="fw-card-desc">Fire culture prioritizes scene control and safety. EMS culture prioritizes rapid patient access. At a structure fire, the fire IC may restrict EMS entry until the scene is declared safe. EMS officers who demand immediate patient access before safety clearance are creating unnecessary conflict and potentially endangering their crews. The professional response: advocate for earliest safe access, document the delay if it affects patient outcomes, and do not confront the IC publicly.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Friction Point 2</div>
+    <div class="fw-card-title">First Responder Care vs. ALS Standards</div>
+    <div class="fw-card-desc">Fire-based first responders often provide BLS care before EMS arrival. Quality and protocol compliance vary. When ALS crews arrive and find patient care that does not meet EMS protocol standards, the EMS officer must manage the transition professionally — correcting the clinical situation without humiliating fire personnel who were trying to help. The patient comes first. The professional relationship is a long-term asset.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Friction Point 3</div>
+    <div class="fw-card-title">Transport Timing Decisions</div>
+    <div class="fw-card-desc">Fire ICs sometimes pressure EMS officers to transport patients faster than clinical stability warrants — to clear the scene, to free resources, or because the IC's operational priorities are driving the timeline. The EMS officer's response: "Transport timing is a medical decision governed by the patient's clinical status and our protocols. I will transport as soon as it is safe to do so." State it once, clearly, and document it. Do not negotiate clinical decisions under operational pressure.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Friction Point 4</div>
+    <div class="fw-card-title">Unified Command Seat at the Table</div>
+    <div class="fw-card-desc">At large incidents with unified command, EMS must have a seat in the command post. Agencies where EMS is a lower-status discipline are often de facto excluded from command decisions. Managing and Executive EMS officers who have built the inter-agency relationships before the incident happens are the ones who get called to the command table when the incident begins. Relationship capital is operational infrastructure.</div>
+  </div>
+</div>
+
+<h2>Advocating Within Command — The EMS Officer's Voice</h2>
+<p>The EMS officer in a fire-dominated ICS structure is not powerless. They have specific professional authority, specific reporting relationships, and specific communication channels. The key is using all three correctly — rather than either deferring silently or creating a command conflict.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Professional Advocacy Response — Bucket 13 — Situational / Scene</span>
+  <p>When a Bucket 13 — Situational / Scene scenario involves a conflict between EMS clinical judgment and a fire IC's operational directive, the Confidence column response follows this sequence: (1) State your clinical concern clearly and once to the IC through the correct ICS channel. (2) Document your concern in writing at the earliest opportunity. (3) If the IC's decision creates immediate patient safety risk, escalate to your medical director or to the next ICS level above the IC. (4) Do not confront the IC publicly, do not argue repeatedly, and do not abandon clinical standards under operational pressure. The EMS officer who knows these four steps cold never freezes in this scenario — and never overreacts.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Two Authority Systems</span>
+  <div class="sbar-card accent-red"><strong>Incident Command Authority</strong>Operational, tactical, resource decisions. Held by IC — often fire at joint scenes.</div>
+  <div class="sbar-card accent-ems"><strong>Medical Authority</strong>Clinical, patient care, transport decisions. Always EMS/Medical Director. Does not transfer to fire IC.</div>
+  <span class="sbar-label">4 Friction Points</span>
+  <div class="sbar-card"><strong>Scene Control vs. Access</strong>Advocate for earliest safe access. Don't confront IC publicly. Document delays that affect outcomes.</div>
+  <div class="sbar-card"><strong>First Responder Care</strong>Correct the clinical situation professionally. Long-term relationship is an asset.</div>
+  <div class="sbar-card"><strong>Transport Timing</strong>"Transport timing is a medical decision." State it once. Document it. Don't negotiate clinical standards under operational pressure.</div>
+  <div class="sbar-card"><strong>Unified Command Seat</strong>Build relationships before the incident. Coalition building is operational infrastructure.</div>
+  <span class="sbar-label">Advocacy Response</span>
+  <div class="sbar-card accent-gold"><strong>4-Step Sequence</strong>State once through correct channel → Document → Escalate if immediate safety risk → Never confront publicly. Know these cold for Bucket 13 — Situational / Scene.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 5</button>
+  <div class="lnb-info"><div class="lnb-name">Fire-EMS Integration</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Online Medical Direction →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 2 — ONLINE MEDICAL DIRECTION ======================== -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 2 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">Online Medical Direction —<br><em>Real-Time Physician Oversight</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Clinical Performance · EMS-Specific</span><span class="lh-meta-item">Bucket 11 — Clinical Quality · Bucket 4 — Policy &amp; Ethics</span></div>
+</div>
+
+<p>Medical direction is the unique feature of EMS that distinguishes it from every other public safety discipline. EMS providers practice medicine under the license and authority of a physician Medical Director. Every clinical decision — every protocol followed, every medication administered, every patient transported or not transported — happens within a framework of physician oversight. Understanding how that oversight operates, and what an EMS officer's responsibilities are within it, is foundational clinical leadership knowledge.</p>
+
+<p>Medical direction operates in two modes: <strong>online</strong> (real-time physician consultation during a call) and <strong>offline</strong> (prospective protocols, training standards, and retrospective quality review). This lesson covers online medical direction. The Medical Director relationship as a whole is covered in Lesson 3.</p>
+
+<h2>Online vs. Offline Medical Direction</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ONLINE AND OFFLINE MEDICAL DIRECTION — DEFINED</span>
+    <div class="ig-title">Two Modes of Physician Oversight in EMS</div>
+    <div class="ig-sub">Both modes are expressions of the Medical Director's authority. The EMS officer must understand the obligations and limits of each — and how they interact at the supervising, managing, and executive levels.</div>
+  </div>
+  <div class="ig-compare">
+    <div class="ig-compare-col" style="border-top:3px solid var(--gold);">
+      <div class="ig-compare-header" style="color:var(--gold);">Online Medical Direction</div>
+      <div class="ig-compare-sub" style="color:var(--on-dark-3);">Real-time. Call-specific. Patient-specific physician authority.</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Direct physician contact during an active patient care situation</div>
+        <div class="ig-compare-item">Required for specific interventions in most state protocols</div>
+        <div class="ig-compare-item">Physician can order interventions not in standing orders</div>
+        <div class="ig-compare-item">Physician can modify or override provider's treatment plan</div>
+        <div class="ig-compare-item">Conversations are recorded and become part of the patient record</div>
+        <div class="ig-compare-item">Provider must clearly identify themselves and the patient</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.3);color:var(--gold);">Authority: The online physician has authority over this specific patient at this moment. Their orders are binding within protocol limits.</div>
+    </div>
+    <div class="ig-compare-col" style="border-top:3px solid var(--ems2);">
+      <div class="ig-compare-header" style="color:var(--ems-text);">Offline Medical Direction</div>
+      <div class="ig-compare-sub" style="color:var(--on-dark-3);">Prospective and retrospective. Protocol-based. System-wide physician authority.</div>
+      <div class="ig-compare-items">
+        <div class="ig-compare-item">Written protocols and standing orders</div>
+        <div class="ig-compare-item">Training curriculum and competency standards</div>
+        <div class="ig-compare-item">Quality assurance and improvement review</div>
+        <div class="ig-compare-item">Credentialing and scope of practice determinations</div>
+        <div class="ig-compare-item">PCR review and feedback to providers</div>
+        <div class="ig-compare-item">Corrective action for clinical deficiencies</div>
+      </div>
+      <div class="ig-compare-result" style="background:rgba(42,96,144,0.12);border-color:var(--ems-border);color:var(--ems-text);">Authority: The Medical Director's authority as expressed in written protocols governs every call, every provider, every day.</div>
+    </div>
+  </div>
+</div>
+
+<h2>The EMS Officer's Role in Online Medical Direction</h2>
+<p>The Supervising EMS Officer is not typically the one making the online medical direction contact — that is the treating provider's responsibility. But the officer has specific accountability obligations when online medical direction is involved in a call they are supervising.</p>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Before the Call</div>
+    <div class="fw-card-title">Ensure Your Crew Knows When to Call</div>
+    <div class="fw-card-desc">The Supervising Officer ensures all providers under supervision know the protocol triggers that require online medical direction contact — and are not hesitating to make that contact out of uncertainty, reluctance, or cultural norms that discourage "bothering the doctor." If providers are systematically avoiding required online medical direction contacts, that is a clinical quality failure with officer-level accountability.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">During the Call</div>
+    <div class="fw-card-title">Support the Contact — Don't Override It</div>
+    <div class="fw-card-desc">When an officer is on scene during an online medical direction call, their role is to support the provider's contact — not to take over the communication, second-guess the provider in real time, or signal disagreement in front of the patient. If the officer has a concern about the physician's order, that concern is raised offline, after the call, through appropriate channels — not during the patient interaction.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">After the Call</div>
+    <div class="fw-card-title">Document and Review</div>
+    <div class="fw-card-desc">The officer ensures the online medical direction contact is documented accurately in the PCR — including who was contacted, what was communicated, what orders were given, and what was administered. If the online physician's orders deviated from standing protocols, the officer ensures the provider documents the rationale and notifies the appropriate clinical quality channels.</div>
+  </div>
+</div>
+
+<h2>When the Provider and the Online Physician Disagree</h2>
+<p>This is the highest-stakes online medical direction scenario — and it is exactly the kind of situation oral board assessors use in Bucket 11 — Clinical Quality and Bucket 4 — Policy &amp; Ethics questions. The protocol is specific and the EMS officer must know it cold.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PROVIDER-PHYSICIAN DISAGREEMENT — THE PROTOCOL</span>
+    <div class="ig-title">What Happens When the Provider Believes the Order Is Wrong</div>
+    <div class="ig-sub">This scenario tests clinical ethics, chain of command knowledge, and the officer's ability to support both the provider and the medical authority structure simultaneously. There is a specific, correct response sequence. Know it.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">01</div>
+      <div>
+        <div class="ig-acro-word">Follow the Order Unless It Would Cause Clear Patient Harm</div>
+        <div class="ig-acro-desc">The online physician has authority over this patient. A provider who disagrees with the physician's clinical judgment — but cannot identify a specific protocol or patient safety basis for that disagreement — follows the order. Professional disagreement is not clinical justification for non-compliance. The online physician has information the provider may not have, training the provider may not have, and accountability the provider does not carry. Follow the order.</div>
+        <div class="ig-acro-ems">The one exception: a clear, specific, patient safety-based belief that the order will cause harm. This is a high bar — not "I would have done it differently" but "this order will injure or kill this patient."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">02</div>
+      <div>
+        <div class="ig-acro-word">State the Concern Clearly and Once — Then Follow Unless Harm Is Certain</div>
+        <div class="ig-acro-desc">If the provider has a specific clinical concern about the order, they state it clearly, once, to the online physician. "Doctor, I want to make sure you have [specific clinical information]. Given that, is your order to [X] still correct?" If the physician confirms the order with that information, the provider follows it. The provider does not repeatedly challenge, debate, or override the physician's decision-making authority.</div>
+        <div class="ig-acro-ems">In oral boards: "I would state my clinical concern clearly to the physician once, ensure they had all relevant patient information, and then follow their confirmed order — documenting the full conversation in the PCR."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">03</div>
+      <div>
+        <div class="ig-acro-word">Document the Full Interaction — Including the Disagreement</div>
+        <div class="ig-acro-desc">The PCR must capture the full online medical direction interaction — including the provider's stated concern, the physician's response, the final order, and what was administered. Documentation of disagreement is not insubordination. It is the clinical record of what happened. Omitting the disagreement from the record is a documentation integrity failure that creates future liability for the provider and the organization.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.6rem;">04</div>
+      <div>
+        <div class="ig-acro-word">Report After the Call — Through Clinical Quality Channels</div>
+        <div class="ig-acro-desc">If the provider believes the physician's order was clinically inappropriate, that concern is reported after the call through the agency's quality assurance process — to the EMS supervisor, then to the Medical Director through the quality improvement channel. The concern does not get litigated on scene, in the hospital, or in front of the patient. It goes through the system designed to review it. This is what the QI process exists for.</div>
+        <div class="ig-acro-ems">The EMS officer's role after the call: support the provider in making this report, ensure the documentation is complete, and escalate to the Medical Director if the clinical concern warrants it.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">In oral boards, the scenario where a provider wants to refuse an online physician's order is a test of whether you understand the medical authority structure of EMS — not whether you can demonstrate clinical boldness. The correct response is never "I would have the provider refuse the order." The correct response is always: state the concern, follow the confirmed order, document everything, report through QI channels after the call.</div>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Online vs. Offline Direction</span>
+  <div class="sbar-card accent-gold"><strong>Online</strong>Real-time. Call-specific. Physician orders are binding within protocol limits. Conversations are recorded.</div>
+  <div class="sbar-card accent-ems"><strong>Offline</strong>Written protocols, training, QA/QI review, credentialing. Governs every call, every day, without the physician present.</div>
+  <span class="sbar-label">Officer's Role</span>
+  <div class="sbar-card"><strong>Before</strong>Ensure crew knows when to call. No cultural avoidance of required contacts.</div>
+  <div class="sbar-card"><strong>During</strong>Support the contact. Don't override or signal disagreement in front of the patient.</div>
+  <div class="sbar-card"><strong>After</strong>Accurate documentation — including any deviation from standing protocols with documented rationale.</div>
+  <span class="sbar-label">Disagreement Protocol</span>
+  <div class="sbar-card accent-gold"><strong>1. Follow</strong>Unless clear, specific patient harm. Professional disagreement ≠ clinical non-compliance.</div>
+  <div class="sbar-card accent-gold"><strong>2. State Once</strong>Give physician all relevant info. If they confirm — follow the confirmed order.</div>
+  <div class="sbar-card accent-gold"><strong>3. Document</strong>Full interaction including disagreement. Omitting it is a documentation integrity failure.</div>
+  <div class="sbar-card accent-gold"><strong>4. Report After</strong>QI channel. Officer supports the report. Not on scene, not in hospital, not in front of patient.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Fire-EMS Integration</button>
+  <div class="lnb-info"><div class="lnb-name">Online Medical Direction</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Medical Director Relationship →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 3 — MEDICAL DIRECTOR RELATIONSHIP ======================== -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 3 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">The Medical Director Relationship —<br><em>Offline Direction and Clinical Partnership</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Clinical Performance · Pillar 7</span><span class="lh-meta-item">Bucket 11 — Clinical Quality</span></div>
+</div>
+
+<p>The Medical Director is the physician who holds ultimate clinical authority for an EMS system. Every EMS provider's scope of practice flows from the Medical Director's delegation. Every protocol reflects the Medical Director's clinical judgment. Every quality improvement finding is ultimately accountable to the Medical Director's standards. For the EMS officer — especially at the Managing and Executive levels — the Medical Director is the single most important external relationship in the organization.</p>
+
+<p>Most EMS officers never think about this relationship until something goes wrong. The ones who manage it proactively — who build genuine clinical partnership with their Medical Director before a controversy arises — are the ones who can navigate protocol disputes, quality improvement findings, and credentialing decisions constructively rather than adversarially.</p>
+
+<h2>The Medical Director's Authority — What It Covers at Each Level</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ MEDICAL DIRECTOR AUTHORITY — ACROSS OFFICER LEVELS</span>
+    <div class="ig-title">What the Medical Director Controls — and How Officers Engage It</div>
+    <div class="ig-sub">S = Supervising Officer · M = Managing Officer · E = Executive Officer. The Medical Director's authority does not change by level — but how the EMS officer engages it does.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Protocol and Scope of Practice</div>
+      <div class="ig-fw-title">The Clinical Rulebook</div>
+      <div class="ig-fw-desc"><strong style="color:var(--ems-text);">S:</strong> Enforces protocol compliance among supervised providers. Escalates protocol questions to the Medical Director through proper channels — does not interpret protocols independently.<br><strong style="color:var(--gold);">M:</strong> Participates in protocol review processes. Brings QI data and operational feedback to Medical Director's attention for protocol improvement.<br><strong style="color:#E87070;">E:</strong> Co-develops protocols with the Medical Director. Negotiates protocol changes based on system performance data, evidence-based practice updates, and resource realities.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Provider Credentialing</div>
+      <div class="ig-fw-title">Who Practices and at What Level</div>
+      <div class="ig-fw-desc"><strong style="color:var(--ems-text);">S:</strong> Ensures providers under supervision maintain current certification, complete required CME, and have no active credentialing restrictions. Reports credentialing concerns to the Medical Director.<br><strong style="color:var(--gold);">M:</strong> Manages the credentialing process for the division. Coordinates with Medical Director on providers whose clinical performance raises credentialing questions.<br><strong style="color:#E87070;">E:</strong> Maintains the agency's Medical Director agreement. Ensures the credentialing system is functional and that the Medical Director has what they need to make informed credentialing decisions.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Quality Assurance and Improvement</div>
+      <div class="ig-fw-title">Clinical Performance Accountability</div>
+      <div class="ig-fw-desc"><strong style="color:var(--ems-text);">S:</strong> Reviews QA findings with direct reports. Documents and escalates patterns to the Managing Officer.<br><strong style="color:var(--gold);">M:</strong> Operates the QA/QI process for the division. Presents findings to the Medical Director on a defined schedule. Builds improvement plans from QA data using PDCA.<br><strong style="color:#E87070;">E:</strong> Ensures the agency has a functioning QA/QI system that provides the Medical Director with the data needed to fulfill their legal and clinical responsibilities.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Corrective Clinical Action</div>
+      <div class="ig-fw-title">When the Medical Director Acts on Performance</div>
+      <div class="ig-fw-desc"><strong style="color:var(--ems-text);">S:</strong> Provides complete, accurate documentation when the Medical Director initiates clinical corrective action. Does not make independent credentialing or scope-of-practice decisions.<br><strong style="color:var(--gold);">M:</strong> Coordinates between the Medical Director's clinical authority and the agency's HR/personnel processes. These two systems must align — clinical restriction and employment discipline are separate but related actions.<br><strong style="color:#E87070;">E:</strong> Manages the intersection of Medical Director authority and organizational legal liability when clinical corrective action involves employment consequences.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Navigating Protocol Disagreement — The Officer's Approach</h2>
+<p>EMS officers at the Managing and Executive levels will eventually encounter a situation where they believe a protocol is clinically suboptimal, operationally infeasible, or resource-inappropriate. How this disagreement is raised and resolved is a test of both political acumen and clinical leadership. The NEMSMA Pillar 5 (Innovation) competency of Integrating Perspectives applies directly here.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">The Wrong Approach</div>
+    <div class="fw-card-title">Operational Override</div>
+    <div class="fw-card-desc">An EMS officer who allows providers to routinely deviate from Medical Director protocols because the officer personally disagrees with them has made a unilateral clinical decision that belongs to the Medical Director. This creates patient safety risk, legal exposure for the organization, and a credentialing crisis if the deviation is discovered. Protocol disputes are resolved through the protocol revision process — not through informal operational workarounds.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">The Right Approach</div>
+    <div class="fw-card-title">Data-Driven Advocacy</div>
+    <div class="fw-card-desc">Present the case for protocol revision to the Medical Director with QI data, evidence-based practice references, and operational impact analysis. "Our QI data over the last six months shows [finding]. Current literature suggests [alternative]. The operational impact of the current protocol on our system is [impact]. I would like to discuss a protocol review." That is clinical partnership. It respects the Medical Director's authority while bringing the officer's operational and clinical perspective into the process.</div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">HIPAA and the Medical Director's QI Role</span>
+  <p>Quality improvement review of patient care records is explicitly protected under HIPAA's "Treatment, Payment, and Healthcare Operations" provisions. The Medical Director reviewing PCRs for QI purposes does not require individual patient authorization. However, the disclosure of QI findings outside the healthcare operations context — to a patient, to the media, to another agency's personnel — requires full HIPAA compliance. The EMS officer who manages the QI process is responsible for ensuring that case-specific information stays within appropriate channels. HIPAA violations in the QI context are among the most common EMS regulatory compliance failures at the Managing Officer level.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Medical Director Authority Areas</span>
+  <div class="sbar-card accent-gold"><strong>Protocols &amp; Scope</strong>S enforces · M participates in review · E co-develops. Never interpret independently at S level.</div>
+  <div class="sbar-card accent-ems"><strong>Credentialing</strong>S maintains current certs · M manages process · E maintains the Medical Director agreement.</div>
+  <div class="sbar-card accent-green"><strong>QA/QI</strong>S reviews with direct reports · M operates the process · E ensures the system functions and feeds the Medical Director.</div>
+  <div class="sbar-card accent-red"><strong>Corrective Clinical Action</strong>S provides documentation · M coordinates clinical + HR alignment · E manages legal intersection.</div>
+  <span class="sbar-label">Protocol Disagreement</span>
+  <div class="sbar-card accent-red"><strong>Never: Operational Override</strong>Allowing systematic protocol deviation because you disagree is a unilateral clinical decision that belongs to the Medical Director. Creates patient safety risk + legal exposure.</div>
+  <div class="sbar-card accent-gold"><strong>Always: Data-Driven Advocacy</strong>QI data + evidence + operational impact analysis. Request a protocol review. Respect the authority while bringing your perspective.</div>
+  <span class="sbar-label">HIPAA Key Point</span>
+  <div class="sbar-card"><strong>QI is Protected</strong>Medical Director reviewing PCRs for QI = Healthcare Operations = no patient authorization required. But QI findings outside that context = full HIPAA compliance required.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Online Medical Direction</button>
+  <div class="lnb-info"><div class="lnb-name">The Medical Director Relationship</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Community Paramedicine →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 4 — MIH-CP ======================== -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 4 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">Community Paramedicine —<br><em>Mobile Integrated Healthcare</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Social Responsibility · EMS-Specific</span><span class="lh-meta-item">Bucket 5 — Community &amp; Public</span></div>
+</div>
+
+<p>Community Paramedicine and Mobile Integrated Healthcare (MIH-CP) represent the most significant expansion of the EMS mission in the past two decades. Where traditional EMS responded to acute emergencies and transported patients to emergency departments, MIH-CP programs extend EMS into the community health ecosystem — providing chronic disease management support, post-discharge follow-up, high-utilizer intervention, behavioral health response, and community health needs assessment.</p>
+
+<p>For EMS officers, MIH-CP is both an operational reality and an oral board opportunity. It directly expresses NEMSMA Pillar 6 — Social Responsibility — particularly the Civic Responsibility and Community Relations competencies. The EMS officer who understands MIH-CP programs and can articulate their clinical rationale, operational requirements, and outcome metrics is demonstrating the community health leadership that separates Managing and Executive officer candidates.</p>
+
+<h2>MIH-CP Program Models</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ MIH-CP PROGRAM MODELS — FOUR COMMON DESIGNS</span>
+    <div class="ig-title">Mobile Integrated Healthcare in Practice</div>
+    <div class="ig-sub">MIH-CP programs are not one-size-fits-all. Community need, available resources, and existing healthcare partnerships determine which model is most appropriate. EMS officers at the Managing and Executive levels should understand all four.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Model 1</div>
+      <div class="ig-fw-title">High-Utilizer Intervention</div>
+      <div class="ig-fw-desc">Identifies patients who generate a disproportionate number of 911 calls — often due to chronic conditions, social determinants of health, or mental health crises. Community paramedics make scheduled home visits, connect patients with primary care and social services, and address the underlying conditions driving 911 utilization. <strong style="color:var(--on-dark-1);">Outcome metrics:</strong> Reduction in 911 call volume, reduction in ED visits, connection to primary care. <strong style="color:var(--on-dark-1);">Stakeholders:</strong> Hospitals, primary care practices, social services agencies, behavioral health.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Model 2</div>
+      <div class="ig-fw-title">Post-Discharge Follow-Up</div>
+      <div class="ig-fw-desc">Community paramedics visit patients at home within 24–72 hours of hospital discharge — particularly for high-risk conditions like CHF, COPD, and pneumonia. They assess medication compliance, identify early signs of deterioration, and connect patients with follow-up care before a readmission event occurs. <strong style="color:var(--on-dark-1);">Outcome metrics:</strong> Hospital readmission rates within 30 days. <strong style="color:var(--on-dark-1);">Stakeholders:</strong> Hospital case management, primary care, health insurance payers, ACOs.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Model 3</div>
+      <div class="ig-fw-title">Behavioral Health Response</div>
+      <div class="ig-fw-desc">Co-response models that pair EMS paramedics with behavioral health clinicians to respond to mental health crises — diverting appropriate calls from emergency department transport to community mental health resources. <strong style="color:var(--on-dark-1);">Outcome metrics:</strong> Diversion from ED for mental health calls, connection to ongoing behavioral health services, reduction in repeat crisis calls. <strong style="color:var(--on-dark-1);">Stakeholders:</strong> Mental health agencies, law enforcement, hospitals, peer support specialists.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Model 4</div>
+      <div class="ig-fw-title">Community Health Needs Assessment</div>
+      <div class="ig-fw-desc">EMS data (911 call locations, chief complaint patterns, demographic distribution) is used to identify community health needs not being addressed by existing healthcare infrastructure. The EMS agency partners with public health, hospitals, and community organizations to address identified gaps. <strong style="color:var(--on-dark-1);">Outcome metrics:</strong> Community health indicators, partnership deliverables, program uptake. <strong style="color:var(--on-dark-1);">Stakeholders:</strong> Public health departments, hospitals, community organizations, elected officials.</div>
+    </div>
+  </div>
+  <div class="ig-callout">MIH-CP programs are not self-funding in most jurisdictions. The EMS officer who can articulate a business case — connecting program outcomes to hospital readmission penalties, ED diversion value, insurer cost savings, and community health impact — is the one who gets programs funded and sustained. This is where Bucket 5 — Community &amp; Public oral board questions about the role of EMS in community health live.</div>
+</div>
+
+<h2>The EMS Officer's MIH-CP Responsibilities by Level</h2>
+
+<div class="fw-grid-3">
+  <div class="fw-card">
+    <div class="fw-card-label">Supervising Officer</div>
+    <div class="fw-card-title">Program Compliance and Quality</div>
+    <div class="fw-card-desc">Ensures community paramedics under supervision are following MIH-CP protocols, documenting encounters correctly, completing required follow-up visits, and communicating with partner healthcare providers per program requirements. Identifies and escalates clinical concerns in MIH-CP encounters to the Medical Director. MIH-CP providers need a different kind of supervision than emergency response providers — the officer must understand the unique clinical environment.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Managing Officer</div>
+    <div class="fw-card-title">Program Design and Outcomes</div>
+    <div class="fw-card-desc">Develops and manages MIH-CP program protocols in collaboration with the Medical Director. Manages stakeholder relationships with hospital partners, primary care, behavioral health, and social services. Reviews outcome data using PDCA to improve program performance. Presents program outcomes to the Executive Officer and to external partners. Manages the community paramedic certification pipeline.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Executive Officer</div>
+    <div class="fw-card-title">Strategy and Community Partnership</div>
+    <div class="fw-card-desc">Develops the organizational strategy for MIH-CP investment. Negotiates program funding through hospital partnerships, health system agreements, and grant opportunities. Represents the EMS agency at community health planning tables. Ensures MIH-CP programs align with the agency's mission, the Medical Director's clinical vision, and the community's documented health needs. Reports outcomes to boards, elected officials, and the public.</div>
+  </div>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Oral Board Application — Bucket 5 — Community &amp; Public</span>
+  <p>When a Bucket 5 — Community &amp; Public question asks about EMS's role in community health, addressing the community's needs beyond emergency response, or building partnerships outside the agency, MIH-CP is the framework. The 4/5 response names a specific MIH-CP model, identifies the relevant stakeholders, describes an outcome metric, and closes with the NEMSMA Pillar 6 Social Responsibility principle: "The role of an EMS officer is not limited to emergency response. It extends to the health of the community we serve — and that means being proactive about the conditions that drive 911 calls, not just responsive to them when they occur."</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 MIH-CP Models</span>
+  <div class="sbar-card accent-gold"><strong>High-Utilizer Intervention</strong>Scheduled home visits. Connect to primary care + social services. Metric: reduce 911 volume + ED visits.</div>
+  <div class="sbar-card accent-ems"><strong>Post-Discharge Follow-Up</strong>24–72 hrs after hospital discharge. CHF, COPD, pneumonia focus. Metric: 30-day readmission rate reduction.</div>
+  <div class="sbar-card accent-green"><strong>Behavioral Health Response</strong>Paramedic + behavioral health clinician co-response. Divert MH calls from ED. Metric: diversion rate + connection to ongoing services.</div>
+  <div class="sbar-card"><strong>Community Health Needs Assessment</strong>Use EMS data to identify healthcare gaps. Partner with public health + hospitals. Metric: community health indicators.</div>
+  <span class="sbar-label">By Level</span>
+  <div class="sbar-card"><strong>S</strong>Protocol compliance · documentation · clinical escalation.</div>
+  <div class="sbar-card"><strong>M</strong>Program design · stakeholder relationships · PDCA outcomes review.</div>
+  <div class="sbar-card"><strong>E</strong>Strategy · funding · community health planning tables.</div>
+  <span class="sbar-label">NEMSMA Connection</span>
+  <div class="sbar-card accent-ems"><strong>Pillar 6 — Social Responsibility</strong>Civic Responsibility + Community Relations competencies. "Proactive about conditions that drive 911 calls — not just responsive to them."</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Medical Director Relationship</button>
+  <div class="lnb-info"><div class="lnb-name">Community Paramedicine — MIH-CP</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Alternative Destinations →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 5 — ALTERNATIVE DESTINATIONS ======================== -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 5 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 4</div>
+  <h1 class="lh-title">Alternative Destinations —<br><em>Beyond the Emergency Department</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Task Management · EMS-Specific</span><span class="lh-meta-item">Bucket 4 — Policy &amp; Ethics · Bucket 11 — Clinical Quality</span></div>
+</div>
+
+<p>The assumption that every EMS patient ends up in an emergency department is increasingly outdated. Alternative destination programs — which route appropriate patients to urgent care centers, primary care clinics, behavioral health facilities, detoxification centers, or home with follow-up — are among the fastest-growing operational changes in EMS systems nationally. They reduce ED overcrowding, improve patient experience, lower system costs, and match patients to the level of care their clinical condition actually requires.</p>
+
+<p>For EMS officers, alternative destinations create a set of clinical, ethical, and legal responsibilities that are distinct from traditional transport. The officer who understands these responsibilities — and can speak to them in an oral board setting — is demonstrating clinical leadership depth that most candidates lack.</p>
+
+<h2>The Alternative Destination Framework</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ALTERNATIVE DESTINATIONS — CLINICAL AND OPERATIONAL FRAMEWORK</span>
+    <div class="ig-title">Four Destination Categories and Officer Responsibilities</div>
+    <div class="ig-sub">Each alternative destination type has specific clinical criteria, protocol requirements, and officer accountability points. Know the framework — not just the concept.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Destination 1</div>
+      <div class="ig-fw-title">Urgent Care / Primary Care Clinic</div>
+      <div class="ig-fw-desc">For patients with non-life-threatening complaints that do not require emergency department resources. Criteria: stable vital signs, no acute life threat, complaint appropriate for urgent care scope, facility must be open and accepting. <strong style="color:var(--on-dark-1);">Officer responsibility:</strong> Ensure protocol criteria are met before approval. The officer is not making the transport decision — the provider is, with Medical Director authority — but the officer is accountable for the quality of the clinical decision and the completeness of the documentation.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Destination 2</div>
+      <div class="ig-fw-title">Behavioral Health Facility</div>
+      <div class="ig-fw-desc">For patients in mental health crisis who do not have a medical emergency requiring emergency department evaluation. Criteria vary by jurisdiction — typically requires the patient to have capacity to consent to the alternative destination, no medical instability, and a receiving facility that is appropriate for the patient's specific needs. <strong style="color:var(--on-dark-1);">Officer responsibility:</strong> This destination carries the highest liability exposure of any alternative destination. Capacity assessment documentation must be meticulous. If there is any clinical uncertainty, the patient goes to the ED.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #60C080;">
+      <div class="ig-fw-label">Destination 3</div>
+      <div class="ig-fw-title">Treat-and-Release / Leave on Scene</div>
+      <div class="ig-fw-desc">For patients who are assessed and treated but do not require transport — because they refused transport with informed consent, because the clinical condition does not warrant it, or because the patient's condition was addressed at scene. <strong style="color:var(--on-dark-1);">Officer responsibility:</strong> Treat-and-release is NOT synonymous with "the patient refused." Every treat-and-release requires clinical assessment documentation, informed consent for refusal where applicable, and a follow-up safety net (instructions for when to call again, who to contact). Half-completed refusal documentation is one of the highest EMS liability exposure points.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid #D0A0E0;">
+      <div class="ig-fw-label">Destination 4</div>
+      <div class="ig-fw-title">Specialty Destination (Stroke Center, STEMI Center, Trauma Center)</div>
+      <div class="ig-fw-desc">For patients whose clinical condition is best served by a specialized receiving facility rather than the closest emergency department. Criteria are typically defined by protocol — stroke alert criteria, STEMI catheterization lab activation, trauma triage criteria. <strong style="color:var(--on-dark-1);">Officer responsibility:</strong> Ensure providers are applying specialty destination criteria correctly and consistently. Missed STEMI or stroke criteria that result in a patient being taken to a general ED instead of a specialty center is a clinical quality and potential liability failure.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The liability landscape for alternative destinations is still evolving. Most state EMS regulations have specific provisions for alternative destinations — some require Medical Director approval for new programs, some require specific documentation standards, and some limit which providers can participate. The EMS officer who implements or supervises an alternative destination program without verifying the applicable state regulatory requirements has created an organizational compliance risk regardless of how strong the clinical rationale is.</div>
+</div>
+
+<h2>The Informed Consent and Refusal Standard</h2>
+<p>Patient autonomy in alternative destination decisions is governed by the same informed consent principles that govern medical treatment generally — with EMS-specific documentation requirements. The EMS officer supervising treat-and-release or alternative destination calls must understand this standard at a level that allows them to ensure documentation quality and recognize when documentation is inadequate.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Informed Consent Elements</div>
+    <div class="fw-card-title">What Must Be Present for a Valid Refusal</div>
+    <div class="fw-card-desc">The patient must: have decision-making capacity at the time of refusal, be informed of their diagnosis and clinical condition in terms they can understand, be told what treatment or transport is being recommended and why, be told the risks of refusing, and sign or verbally decline with a witness. A provider who obtains a "signature on the refusal form" without completing this informed consent process has created an unenforceable refusal.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Capacity Assessment</div>
+    <div class="fw-card-title">The Clinical Threshold</div>
+    <div class="fw-card-desc">A patient has decision-making capacity if they can: state what is happening to them, describe the treatment being offered, articulate the consequence of refusing, and make a stable, consistent decision. Capacity is not the same as legal competence. It is assessed in the moment by the treating provider. An intoxicated patient may lack capacity. A patient with dementia may or may not have capacity depending on the decision. The officer who understands this distinction can identify documentation failures before they become liability events.</div>
+  </div>
+</div>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Refusal Documentation Non-Negotiable</span>
+  <p>Every refusal PCR must document: capacity assessment findings, specific information given to the patient, the patient's stated understanding, the risk of refusal as communicated, the safety net instructions provided (when to call back, who to contact), and the provider's clinical impression that supports the refusal as valid. A refusal PCR that says only "patient refused transport, signed form" is inadequate documentation that will not withstand legal challenge. The EMS officer who reviews PCRs and allows inadequate refusal documentation to pass without correction is contributing to the agency's liability exposure.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">4 Alternative Destination Types</span>
+  <div class="sbar-card accent-gold"><strong>Urgent Care / Primary Care</strong>Non-life-threatening, stable, appropriate scope, facility open and accepting. Officer: protocol criteria met + documentation complete.</div>
+  <div class="sbar-card accent-red"><strong>Behavioral Health Facility</strong>Highest liability. Capacity documentation must be meticulous. Uncertainty = ED. No exceptions.</div>
+  <div class="sbar-card accent-green"><strong>Treat-and-Release</strong>Not synonymous with refusal. Clinical assessment + informed consent + safety net instructions. Half-completed = highest liability point.</div>
+  <div class="sbar-card accent-ems"><strong>Specialty Destination</strong>Stroke / STEMI / Trauma criteria. Missed criteria = clinical quality failure + potential liability. Officer: ensure consistent application.</div>
+  <span class="sbar-label">Informed Consent Elements</span>
+  <div class="sbar-card"><strong>Capacity Assessment</strong>States what's happening · describes treatment · articulates consequence of refusing · makes stable decision. In the moment. Not legal competence.</div>
+  <div class="sbar-card accent-red"><strong>Refusal Documentation</strong>Capacity assessment + information given + patient's stated understanding + risk communicated + safety net. "Signed form" alone = inadequate.</div>
+  <span class="sbar-label">Regulatory Reminder</span>
+  <div class="sbar-card"><strong>Verify State Regs</strong>Alternative destination programs have state-specific regulatory requirements. Implementing without verifying = compliance risk regardless of clinical rationale.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Community Paramedicine</button>
+  <div class="lnb-info"><div class="lnb-name">Alternative Destinations</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Community Health Leadership →</button>
+</div>
+</div>
+
+<!-- ======================== LESSON 6 — COMMUNITY HEALTH LEADERSHIP ======================== -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 6 · Lesson 6 of 6</div>
+  <div class="lh-track">EMS Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">The EMS Officer as<br><em>Community Health Partner</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Social Responsibility · All Levels</span><span class="lh-meta-item">Bucket 5 — Community &amp; Public · Bucket 12 — Leadership Philosophy</span></div>
+</div>
+
+<p>NEMSMA Pillar 6 — Social Responsibility — is where EMS leadership connects to its purpose. The technical skills covered in Chapters 4, 5, and 6 are means. The community health outcomes those skills produce are the end. The EMS officer who cannot articulate their agency's role in the community health ecosystem — who sees EMS as purely reactive, purely operational, purely procedural — is missing the highest level of what this profession offers and what assessors at the Managing and Executive levels are looking for.</p>
+
+<p>This lesson covers the NEMSMA Pillar 6 competencies in operational terms, the EMS officer's civic responsibilities, community relations management, and the leadership philosophy response that ties the entire chapter together.</p>
+
+<h2>NEMSMA Pillar 6 — Social Responsibility Competencies</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ NEMSMA PILLAR 6 — SOCIAL RESPONSIBILITY</span>
+    <div class="ig-title">Seven Competency Areas · Community, Ethics, and Integrity in EMS Leadership</div>
+    <div class="ig-sub">S = Supervising Officer · M = Managing Officer · E = Executive Officer. Pillar 6 scales from personal ethical behavior at Supervising to organizational culture and community partnership at Executive.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">CR</div>
+      <div>
+        <div class="ig-acro-word">Civic Responsibility — EMS as Community Institution</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Demonstrates civic responsibility in daily operations — professional behavior that reflects positively on the agency and the profession.<br><strong style="color:var(--gold);">M:</strong> Represents the agency in civic partnerships. Participates in community health planning processes.<br><strong style="color:#E87070;">E:</strong> Positions the EMS agency as a community health institution — not just an emergency response service. Builds formal partnerships with community stakeholders that extend the agency's health impact beyond 911 response.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">SK</div>
+      <div>
+        <div class="ig-acro-word">Social Knowledge — Understanding the Community's Health Landscape</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Understands the social determinants of health that affect the patients served on their shift.<br><strong style="color:var(--gold);">M:</strong> Uses EMS call data to identify community health patterns and social determinants driving 911 utilization.<br><strong style="color:#E87070;">E:</strong> Ensures the agency is a sophisticated user of community health data — contributing to and learning from the broader community health intelligence system.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">EP</div>
+      <div>
+        <div class="ig-acro-word">Ethical Processes — Consistency, Fairness, and Accountability</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Follows the agency's ethical guidelines and models ethical behavior for their crew.<br><strong style="color:var(--gold);">M:</strong> Develops processes that ensure ethical decision-making is embedded in operations — not just in policy documents.<br><strong style="color:#E87070;">E:</strong> Builds an organizational culture where ethical behavior is expected, modeled, and reinforced — not just required by policy. The difference between a compliant organization and an ethical one is culture, not rules.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter" style="font-size:1.4rem;">HS</div>
+      <div>
+        <div class="ig-acro-word">Health and Safety — Provider Wellbeing as Organizational Responsibility</div>
+        <div class="ig-acro-desc"><strong style="color:var(--ems-text);">S:</strong> Ensures workplace safety standards are followed. Addresses unsafe conditions immediately.<br><strong style="color:var(--gold);">M:</strong> Develops and maintains workplace health and safety programs. Ensures providers have access to occupational health resources.<br><strong style="color:#E87070;">E:</strong> Ensures the organization treats provider health and safety as a strategic priority — connecting provider wellbeing to patient care outcomes, retention, and organizational sustainability.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ig-callout">Pillar 6 is where the most memorable oral board Deliver step language lives. The Bucket 12 — Leadership Philosophy question asks what kind of leader you are. The officer who answers with Pillar 6 language — "I believe EMS is one of the most important community health institutions we have, and my responsibility as an officer is to make sure we are investing in the health of this community as aggressively as we respond to its emergencies" — is giving the answer that lasts in an assessor's memory long after the session ends.</div>
+</div>
+
+<h2>Public Communication and Community Relations</h2>
+<p>At the Managing and Executive levels, community relations management is a direct officer responsibility. The EMS officer who is unprepared for public-facing communication — with media, with elected officials, with community members — creates organizational risk every time a significant incident or controversy arises.</p>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Media Relations Principle</div>
+    <div class="fw-card-title">Accurate, Timely, Compassionate</div>
+    <div class="fw-card-desc">The media relations standard for EMS officers at any level: say what you know, acknowledge what you don't know, and express genuine compassion for those affected. Do not speculate. Do not blame. Do not release patient information under HIPAA. "We responded to a call at [location] at [time]. Our crews provided care and transported the patient. Out of respect for the patient's privacy I cannot discuss clinical details. Our thoughts are with the family." That is a complete media statement that protects the organization and the patient.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">Elected Official Relations</div>
+    <div class="fw-card-title">Translate Clinical to Community Value</div>
+    <div class="fw-card-desc">Elected officials and board members are not clinical experts. The EMS officer who brings them data about response times, patient outcomes, MIH-CP program results, and community health impact in language they can use — and in terms that connect EMS performance to constituent wellbeing — is building the political capital that protects the agency's budget and mission. Data that is only legible to clinicians never moves elected officials. Data that connects to the community they represent always does.</div>
+  </div>
+</div>
+
+<h2>The Leadership Philosophy Response — Tying It Together</h2>
+<p>Bucket 12 — Leadership Philosophy questions are among the most powerful oral board questions because they invite the candidate to articulate their entire professional identity in two minutes. This lesson provides the framework for an EMS-specific leadership philosophy response that integrates everything the candidate has learned across Chapters 1 through 6.</p>
+
+<div class="callout callout-navy">
+  <span class="callout-label">The Leadership Philosophy Response — EMS Track Integration</span>
+  <p style="margin-bottom:0.75rem;color:var(--on-dark-2);font-size:0.95rem;">A complete Bucket 12 — Leadership Philosophy response for an EMS officer candidate integrates four dimensions:</p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">The Values Dimension (T·C·H·O·E·D·S):</strong> <span style="color:var(--on-dark-1);">"The values that guide my leadership are Trust, Courage, Humility, Ownership, Empathy, Dedication, and Service. Not as a list — as the way I try to show up every day for the people I lead."</span></p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">The People Dimension (3 U's · CALM · Development):</strong> <span style="color:var(--on-dark-1);">"My first job as a leader is to understand what my people need — whether they are Unable and need development, Unaware and need a mirror, or Unwilling and need accountability. I meet each person where they are."</span></p>
+  <p style="margin-bottom:0.5rem;"><strong style="color:var(--gold);">The Clinical Dimension (Medical Direction · Quality · Patient Outcomes):</strong> <span style="color:var(--on-dark-1);">"My standard for clinical leadership is simple: every patient who encounters my system should receive care that I would be proud to defend to the Medical Director, to the patient's family, and to any quality reviewer."</span></p>
+  <p style="margin-bottom:0;"><strong style="color:var(--gold);">The Community Dimension (Pillar 6 · Social Responsibility):</strong> <span style="color:var(--on-dark-1);">"And ultimately, I believe EMS is one of the most trusted community health institutions we have. My responsibility as an officer is to make sure we are investing in this community's health as aggressively as we respond to its emergencies — because the best EMS system is the one its community never needs to use."</span></p>
+</div>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Chapter 6 Complete — Phase 1 Complete</span>
+  <p>Chapters 1 through 6 complete Phase 1 of the TPS EMS Officer Track — the Supervising Officer foundation. You now have the full architecture: the L·E·A·D framework and Confidence Spectrum, the NEMSMA Seven Pillars mapped to TPS frameworks, field supervision fundamentals including ICS, SSM, and ASHER operations, EMS personnel leadership with the 3 U's Diagnostic, and EMS scene leadership across fire integration, medical direction, community paramedicine, and civic responsibility. Phase 2 begins with the Managing Officer track — Section 3, Chapter 7: Strategic Planning and EMS Innovation.</p>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only. It is not legal, medical, or clinical advice. EMS protocols, medical direction requirements, alternative destination regulations, HIPAA provisions, MIH-CP program requirements, and community paramedicine regulations vary significantly by state, jurisdiction, and agency. Always consult your agency's policies, medical director, legal counsel, and applicable state and federal regulations before making operational decisions or implementing programs. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction.</p>
+</div>
+
+</div>
+<div class="lesson-sidebar">
+  <span class="sbar-label">Pillar 6 Competency Areas</span>
+  <div class="sbar-card accent-ems"><strong>Civic Responsibility</strong>S: professional behavior · M: civic partnerships · E: EMS as community health institution.</div>
+  <div class="sbar-card accent-ems"><strong>Social Knowledge</strong>S: social determinants on shift · M: data patterns · E: community health intelligence contributor.</div>
+  <div class="sbar-card accent-gold"><strong>Ethical Processes</strong>S: model + follow · M: embed in operations · E: build the culture. Compliant ≠ ethical.</div>
+  <div class="sbar-card accent-green"><strong>Health and Safety</strong>Provider wellbeing = patient care quality = organizational sustainability. Strategic priority at E.</div>
+  <span class="sbar-label">Community Relations</span>
+  <div class="sbar-card"><strong>Media</strong>Accurate · timely · compassionate. No speculation. No HIPAA. "Our thoughts are with the family." Complete.</div>
+  <div class="sbar-card"><strong>Elected Officials</strong>Translate clinical to community value. Data that connects to constituents moves budgets. Clinical jargon doesn't.</div>
+  <span class="sbar-label">Leadership Philosophy</span>
+  <div class="sbar-card accent-gold"><strong>4 Dimensions</strong>Values (TCHOEDS) · People (3 U's) · Clinical (Medical Direction/QI) · Community (Pillar 6). All four in under 2 minutes = the complete Bucket 12 — Leadership Philosophy response.</div>
+  <span class="sbar-label">Phase 1 Complete</span>
+  <div class="sbar-card accent-ems"><strong>Next: Phase 2</strong>Managing Officer Track. Chapter 7: Strategic Planning and EMS Innovation. NEMSMA Pillar 5 — full coverage.</div>
+</div>
+</div>
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Alternative Destinations</button>
+  <div class="lnb-info"><div class="lnb-name">The EMS Officer as Community Health Partner</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 6 Complete ✓</button>
+</div>
+</div>
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>

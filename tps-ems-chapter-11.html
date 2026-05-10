@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EMS Chapter 11 — The Executive Officer Track | The Promotional Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Crimson+Pro:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:#0C2340;--navy2:#0F2A4A;--navy-deep:#071828;
+  --gold:#C9A84C;--gold-light:#E4C97A;--gold-dim:#8B6914;
+  --cream:#F5F0E8;--cream2:#EDE4D0;--offwhite:#F9F6F0;--light:#EAE5DC;
+  --on-dark-1:#F0E8D8;--on-dark-2:#C8C0E8;--on-dark-3:#9888B8;--on-dark-4:#7060A0;
+  --on-light-1:#1A1428;--on-light-2:#3A2A58;--on-light-3:#6A5A7A;
+  --ems:#1A4A6B;--ems2:#2A6090;--ems-bg:rgba(42,96,144,0.12);--ems-border:rgba(42,96,144,0.35);--ems-text:#80C0E8;
+  --exec:#2D1B4E;--exec2:#4A2D7A;--exec3:#180D30;
+  --exec-gold:#E8C96A;--exec-gold-dim:#A07828;
+  --exec-bg:rgba(74,45,122,0.18);--exec-border:rgba(74,45,122,0.4);--exec-text:#C0A0E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--offwhite);color:var(--on-light-1);font-size:18px;line-height:1.8;}
+
+/* ── TOP NAV ── */
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(24,13,48,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,201,106,0.25);height:68px;display:flex;align-items:center;padding:0 2rem;gap:1rem;}
+.nav-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+.nav-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:1.8px;color:var(--cream);line-height:1.3;white-space:nowrap;}
+.nav-brand span{display:block;font-size:8px;color:var(--exec-gold);letter-spacing:2.5px;}
+.nav-divider{width:1px;height:28px;background:rgba(232,201,106,0.2);flex-shrink:0;}
+.nav-exec-badge{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 11px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.nav-pills{display:flex;gap:4px;flex:2;justify-content:center;overflow-x:auto;scrollbar-width:none;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.nav-pill{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--on-dark-4);padding:7px 13px;border-radius:20px;cursor:pointer;transition:all 0.2s;border:1px solid transparent;background:transparent;white-space:nowrap;}
+.nav-pill:hover{color:var(--cream);background:rgba(255,255,255,0.06);}
+.nav-pill.active{color:var(--exec-gold);background:rgba(232,201,106,0.12);border-color:rgba(232,201,106,0.3);}
+
+/* ── PROGRESS BAR ── */
+.progress-bar{position:fixed;top:68px;left:0;height:3px;background:linear-gradient(90deg,var(--exec2),var(--exec-gold));z-index:199;width:0%;transition:width 0.15s;box-shadow:0 0 8px rgba(74,45,122,0.6);}
+
+/* ── LESSON VIEW ── */
+.lesson-view{display:none;}.lesson-view.active{display:block;}
+
+/* ── MODULE HERO ── */
+.module-hero{background:linear-gradient(155deg,var(--exec3) 0%,var(--exec) 55%,#1E0E40 100%);padding:5rem 3rem 4rem;margin-top:68px;position:relative;overflow:hidden;border-bottom:3px solid var(--exec-gold);}
+.module-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(232,201,106,0.015) 80px,rgba(232,201,106,0.015) 81px);}
+.module-hero::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--exec-gold),var(--exec-gold-dim));}
+.hero-glow{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(74,45,122,0.25) 0%,transparent 70%);pointer-events:none;}
+.mh-inner{max-width:920px;position:relative;z-index:2;}
+.mh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.5rem;}
+.mh-track-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;background:var(--exec-bg);border:1px solid var(--exec-border);color:var(--exec-text);padding:5px 12px;border-radius:4px;margin-bottom:1.25rem;}
+.mh-title{font-family:'EB Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;color:var(--cream);line-height:1.08;margin-bottom:0.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.mh-title em{font-style:italic;color:var(--exec-gold);}
+.mh-sub{font-size:1.1rem;color:var(--on-dark-2);max-width:680px;line-height:1.75;margin-bottom:2rem;}
+.mh-thread{background:rgba(232,201,106,0.07);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);padding:1.1rem 1.6rem;max-width:680px;}
+.mh-thread-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:6px;}
+.mh-thread-text{font-size:0.95rem;color:var(--cream2);line-height:1.7;}
+
+/* ── LESSON LAYOUT ── */
+.lesson-container{display:grid;grid-template-columns:1fr 320px;gap:0;}
+.lesson-main{padding:3rem 3.5rem;border-right:1px solid var(--light);min-height:70vh;}
+.lesson-sidebar{padding:2rem 1.75rem;background:#F3EFF8;position:sticky;top:68px;height:calc(100vh - 68px);overflow-y:auto;}
+
+/* ── LESSON HEADER ── */
+.lesson-header{margin-bottom:2.5rem;padding-bottom:1.75rem;border-bottom:2px solid var(--light);}
+.lh-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.5rem;}
+.lh-track{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-text);background:var(--exec-bg);border:1px solid var(--exec-border);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:0.65rem;}
+.lh-title{font-family:'EB Garamond',serif;font-size:clamp(1.9rem,3vw,2.55rem);font-weight:800;color:var(--exec);line-height:1.12;margin-bottom:0.65rem;}
+.lh-title em{font-style:italic;color:var(--exec-gold-dim);}
+.lh-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.25rem;}
+.lh-meta-item{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--on-light-3);}
+
+/* ── LESSON CONTENT ── */
+.lesson-main h2{font-family:'EB Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--exec);margin:3rem 0 1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--light);}
+.lesson-main p{margin-bottom:1.35rem;color:var(--on-light-1);line-height:1.85;font-size:1rem;}
+.lesson-main ul{margin:0 0 1.35rem 1.6rem;color:var(--on-light-1);}
+.lesson-main li{margin-bottom:0.65rem;line-height:1.75;}
+.lesson-main strong{color:var(--exec);font-weight:600;}
+
+/* ── CALLOUTS ── */
+.callout{padding:1.5rem 1.75rem;margin:2.25rem 0;}
+.callout-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.6rem;display:block;}
+.callout-gold{background:#FBF7E6;border-left:4px solid var(--gold);}
+.callout-gold .callout-label{color:var(--gold-dim);}
+.callout-gold p{color:#4A3A10;font-size:1rem;line-height:1.8;}
+.callout-exec{background:var(--exec3);border-left:4px solid var(--exec-gold);box-shadow:0 2px 16px rgba(0,0,0,0.3);}
+.callout-exec .callout-label{color:var(--exec-gold);}
+.callout-exec p{color:var(--on-dark-1);font-size:1rem;line-height:1.8;}
+.callout-ems{background:rgba(26,74,107,0.07);border-left:4px solid var(--ems2);}
+.callout-ems .callout-label{color:var(--ems2);}
+.callout-ems p{color:var(--on-light-1);font-size:1rem;line-height:1.8;}
+
+/* ── SIDEBAR ── */
+.sbar-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:0.7rem;margin-top:1.75rem;display:block;}
+.sbar-label:first-child{margin-top:0;}
+.sbar-card{background:white;border:1px solid #D8D0E8;border-radius:8px;padding:0.95rem 1.1rem;margin-bottom:8px;font-size:0.88rem;color:var(--on-light-2);line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.sbar-card strong{color:var(--exec);display:block;margin-bottom:4px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+.sbar-card.accent-exec{border-left:3px solid var(--exec2);}
+.sbar-card.accent-gold{border-left:3px solid var(--exec-gold);}
+.sbar-card.accent-ems{border-left:3px solid var(--ems2);}
+.sbar-card.accent-red{border-left:3px solid #B22222;}
+.sbar-card.accent-green{border-left:3px solid #1A7A4A;}
+
+/* ── LESSON NAV BAR ── */
+.lesson-nav-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;border-top:2px solid var(--light);background:white;box-shadow:0 -2px 12px rgba(0,0,0,0.07);}
+.lnb-btn{background:transparent;border:1.5px solid #C8C0D8;padding:12px 28px;font-family:'Cinzel',serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:6px;color:var(--on-light-2);transition:all 0.2s;min-width:160px;}
+.lnb-btn:hover:not(:disabled){border-color:var(--exec-gold);color:var(--exec-gold-dim);}
+.lnb-btn:disabled{opacity:0.35;cursor:default;}
+.lnb-btn.primary{background:linear-gradient(135deg,var(--exec) 0%,var(--exec2) 100%);color:var(--exec-gold);border-color:var(--exec);box-shadow:0 3px 12px rgba(45,27,78,0.3);}
+.lnb-btn.primary:hover{background:linear-gradient(135deg,var(--exec2) 0%,#5A3D90 100%);}
+.lnb-btn.complete{background:linear-gradient(135deg,#1A5C3A 0%,#226644 100%);color:#80E0A0;border-color:#1A5C3A;cursor:default;box-shadow:0 3px 12px rgba(26,92,58,0.3);}
+.lnb-info{text-align:center;}
+.lnb-name{font-family:'EB Garamond',serif;font-size:1rem;font-weight:600;color:var(--exec);}
+.lnb-num{font-size:0.78rem;color:var(--on-light-3);margin-top:2px;}
+
+/* ── INFOGRAPHIC WRAP ── */
+.infographic-wrap{background:var(--exec3);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);margin:2.25rem 0;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+.ig-header{background:rgba(232,201,106,0.07);padding:1.1rem 1.4rem 1rem;border-bottom:1px solid rgba(232,201,106,0.15);}
+.ig-eyebrow{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:var(--exec-gold);display:block;margin-bottom:5px;}
+.ig-title{font-family:'EB Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--cream);margin-bottom:4px;}
+.ig-sub{font-size:0.92rem;color:var(--on-dark-2);line-height:1.55;}
+.ig-callout{margin:0.6rem 1.4rem 1.1rem;padding:0.9rem 1.1rem;background:rgba(232,201,106,0.07);border-left:3px solid var(--exec-gold);font-size:0.9rem;color:#C8A840;line-height:1.65;font-style:italic;}
+
+/* ── IG GRID COMPONENTS ── */
+.ig-fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-fw-card{background:var(--exec3);padding:1.1rem;}
+.ig-fw-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:5px;}
+.ig-fw-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-fw-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.ig-fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.ig-map-cell{background:var(--exec3);padding:1.1rem;}
+.ig-map-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:5px;}
+.ig-map-title{font-family:'EB Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--on-dark-1);margin-bottom:5px;}
+.ig-map-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+
+/* ── ACRO ROWS ── */
+.ig-acro{padding:0.75rem 1.25rem;display:flex;flex-direction:column;gap:2px;}
+.ig-acro-row{display:grid;grid-template-columns:44px 1fr;gap:0.85rem;padding:0.9rem;border-bottom:1px solid rgba(232,201,106,0.08);align-items:start;}
+.ig-acro-row:last-child{border-bottom:none;}
+.ig-acro-letter{font-family:'EB Garamond',serif;font-size:2rem;font-weight:800;color:var(--exec-gold);text-align:center;line-height:1;}
+.ig-acro-word{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.ig-acro-desc{font-size:0.92rem;color:var(--on-dark-2);line-height:1.65;}
+.ig-acro-exec{font-size:0.82rem;color:var(--exec-text);font-style:italic;margin-top:5px;}
+
+/* ── LEVEL KEY ── */
+.level-key{background:var(--exec3);border:1px solid rgba(232,201,106,0.2);border-left:4px solid var(--exec-gold);padding:1.25rem 1.5rem;margin:0 0 2.25rem;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
+.level-key-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--exec-gold);margin-bottom:0.75rem;display:block;}
+.level-key-grid{display:grid;grid-template-columns:auto 1fr;gap:0.65rem 1rem;align-items:center;}
+.level-key-badge{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:4px 13px;border-radius:3px;text-align:center;white-space:nowrap;}
+.level-key-desc{font-size:0.92rem;color:var(--on-dark-1);line-height:1.5;}
+.level-key-desc strong{font-weight:600;}
+.level-key-note{font-size:0.8rem;color:var(--on-dark-3);margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid rgba(232,201,106,0.12);}
+
+/* ── STEP LADDER ── */
+.step-ladder{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,0.08);}
+.step-row{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.step-num{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.step-num-label{font-family:'Cinzel',serif;font-size:7px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.step-num-val{font-family:'EB Garamond',serif;font-size:1.6rem;font-weight:800;line-height:1;}
+.step-content{background:var(--exec3);padding:1rem 1.25rem;}
+.step-title{font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.step-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.6;}
+.step-officer{font-size:0.83rem;color:var(--exec-text);font-style:italic;margin-top:5px;}
+
+/* ── PIPELINE / TIER GRID ── */
+.tier-grid{display:flex;flex-direction:column;gap:1px;background:rgba(232,201,106,0.08);}
+.tier-row{display:grid;grid-template-columns:130px 1fr;gap:1px;background:rgba(232,201,106,0.08);}
+.tier-stage{padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.tier-stage-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+.tier-stage-name{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:800;line-height:1.1;}
+.tier-content{background:var(--exec3);padding:0.95rem 1.25rem;}
+.tier-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);font-weight:700;margin-bottom:4px;}
+.tier-desc{font-size:0.9rem;color:var(--on-dark-2);line-height:1.55;}
+.tier-officer{font-size:0.82rem;color:var(--exec-text);font-style:italic;margin-top:4px;}
+
+/* ── FW CARDS ── */
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.75rem 0;}
+.fw-card{background:white;border:1px solid #D8D0E8;padding:1.35rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.fw-card-label{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold-dim);margin-bottom:7px;}
+.fw-card-title{font-family:'EB Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--exec);margin-bottom:7px;}
+.fw-card-desc{font-size:0.88rem;color:var(--on-light-2);line-height:1.65;}
+
+/* ── TABLE ── */
+.exec-table{width:100%;border-collapse:collapse;font-size:0.9rem;}
+.exec-table th{background:rgba(74,45,122,0.6);color:var(--exec-gold);padding:0.65rem 1rem;text-align:left;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;}
+/* ── TABLE CELLS: always on dark bg (inside infographic-wrap) ── */
+.exec-table td{padding:0.65rem 1rem;border-bottom:1px solid rgba(232,201,106,0.1);vertical-align:top;color:var(--on-dark-2);line-height:1.55;}
+.exec-table td strong{color:var(--on-dark-1);}
+.exec-table tr:nth-child(even) td{background:rgba(74,45,122,0.18);}
+.exec-table tr:hover td{background:rgba(232,201,106,0.07);}
+/* ── HIGH-STAKES TAG: light text on dark bg ── */
+.tag-hs{display:inline-block;font-family:'Cinzel',serif;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:3px;background:rgba(232,201,106,0.15);color:var(--exec-gold);border:1px solid rgba(232,201,106,0.3);margin-left:4px;vertical-align:middle;}
+
+/* ── CRISIS PHASES ── */
+.crisis-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(232,201,106,0.08);}
+.crisis-col{}
+.crisis-head{padding:0.7rem 0.6rem;text-align:center;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);}
+.crisis-head.c1{background:#1A3A5C;}
+.crisis-head.c2{background:var(--ems);}
+.crisis-head.c3{background:var(--exec);}
+.crisis-head.c4{background:#3A2060;}
+.crisis-head.c5{background:var(--exec2);}
+.crisis-body{background:var(--exec3);padding:0.85rem 0.7rem;}
+.crisis-body li{list-style:none;font-size:0.82rem;color:var(--on-dark-2);padding:0.2rem 0 0.2rem 0.9rem;position:relative;line-height:1.5;border-bottom:1px solid rgba(232,201,106,0.06);}
+.crisis-body li:last-child{border-bottom:none;}
+.crisis-body li::before{content:'·';position:absolute;left:0;color:var(--exec-gold);font-weight:700;}
+
+/* ── SBAR / STATEMENT BLOCKS ── */
+.stmt-block{border:1px solid rgba(74,45,122,0.2);border-radius:6px;overflow:hidden;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.stmt-head{background:var(--exec);padding:0.7rem 1.2rem;display:flex;align-items:center;gap:0.75rem;}
+.stmt-num{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--exec-gold);width:1.5rem;text-align:center;}
+.stmt-title{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--on-dark-1);}
+.stmt-body{background:white;padding:0.95rem 1.2rem;font-size:0.95rem;color:var(--on-light-1);line-height:1.7;font-style:italic;}
+
+/* ── STAR-P GRID ── */
+.starp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(232,201,106,0.08);}
+.starp-col{}
+.starp-head{padding:0.65rem 0.5rem;text-align:center;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream);}
+.sp-s{background:#1a3a5c;}
+.sp-t{background:var(--ems);}
+.sp-a{background:var(--exec);}
+.sp-r{background:#2A1840;}
+.sp-p{background:var(--exec2);}
+.starp-body{background:var(--exec3);padding:0.9rem 0.7rem;font-size:0.88rem;color:var(--on-dark-2);line-height:1.55;border-right:1px solid rgba(232,201,106,0.06);}
+.starp-col:last-child .starp-body{border-right:none;}
+
+/* ── ERS BLOCK ── */
+.ers-block{overflow:hidden;border-radius:0;}
+.ers-row{display:grid;grid-template-columns:90px 1fr;gap:1px;background:rgba(232,201,106,0.08);margin-bottom:1px;}
+.ers-key{background:var(--exec);padding:1rem;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--exec-gold);display:flex;align-items:center;justify-content:center;text-align:center;}
+.ers-val{background:var(--exec3);padding:1rem 1.25rem;font-size:0.9rem;color:var(--on-dark-2);line-height:1.65;}
+
+/* ── DISCLAIMER ── */
+.legal-disclaimer{margin:3rem 0 0;padding:1.25rem 1.5rem;background:#F0EBF8;border:1px solid #D8D0E8;border-top:3px solid var(--light);}
+.legal-disclaimer-label{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--on-light-3);margin-bottom:0.5rem;display:block;}
+.legal-disclaimer p{font-size:0.8rem!important;color:var(--on-light-3)!important;line-height:1.65!important;margin-bottom:0!important;font-style:italic;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){.lesson-container{grid-template-columns:1fr;}.lesson-sidebar{position:relative;height:auto;}.lesson-main{padding:2rem 1.5rem;}.lesson-nav-bar{padding:1.25rem 1.5rem;}.lnb-btn{min-width:120px;padding:10px 18px;}}
+@media(max-width:700px){.ig-fw-grid,.ig-fw-grid-3,.ig-map-grid,.fw-grid,.fw-grid-3,.crisis-grid,.starp-grid{grid-template-columns:1fr;}.tier-row,.step-row{grid-template-columns:1fr;}.module-hero{padding:4rem 1.5rem 3rem;}}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="nav-brand">The Promotional Standard<span>Coaching Lab</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-exec-badge">◆ Executive Officer Track</div>
+  </div>
+  <div class="nav-pills">
+    <button class="nav-pill active" onclick="showLesson(0)">The Identity Shift</button>
+    <button class="nav-pill" onclick="showLesson(1)">Contract Management</button>
+    <button class="nav-pill" onclick="showLesson(2)">Governance</button>
+    <button class="nav-pill" onclick="showLesson(3)">External Relations</button>
+    <button class="nav-pill" onclick="showLesson(4)">EMS Advocacy</button>
+    <button class="nav-pill" onclick="showLesson(5)">Crisis Communications</button>
+  </div>
+</nav>
+<div class="progress-bar" id="prog"></div>
+
+<main>
+<!-- ── HERO ── -->
+<div class="module-hero">
+  <div class="hero-glow"></div>
+  <div class="mh-inner">
+    <div class="mh-eyebrow">EMS Chapter 11 · NEMSMA Pillars 5, 6 &amp; 7 · Phase 3</div>
+    <div class="mh-track-badge">◆ Executive Officer Track · Governance &amp; Advocacy</div>
+    <h1 class="mh-title"><em>The Executive Officer Track —</em><br>Governance, Advocacy &amp; Authority</h1>
+    <p class="mh-sub">Phase 3 opens with a categorical shift. The skills that made an effective Managing Officer are necessary but not sufficient at the executive level. What changes is not just scope — it is identity, time horizon, and the nature of the work itself.</p>
+    <div class="mh-thread">
+      <div class="mh-thread-label">Chapter Thread</div>
+      <div class="mh-thread-text">Six lessons. The third identity shift — what changes categorically when a Managing Officer becomes an Executive Officer. Contract management and service delivery agreements — reading, executing, and governing the legal frameworks that define your agency's performance obligations. Organizational governance and policy architecture — how decisions are made, documented, and defended. External relations and coalition building — the stakeholder universe beyond your walls and how to build durable alliances. EMS advocacy at the state and federal level — translating operational reality into legislative influence. Executive crisis communications — managing the public narrative under pressure, in real time, with incomplete information.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 1 — THE IDENTITY SHIFT               -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view active" id="lesson-0">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 1 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillars 5–7</div>
+  <h1 class="lh-title">The Third Identity Shift —<br><em>From Managing to Executive</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 15 min</span><span class="lh-meta-item">📘 Organizational Leadership · Executive Role</span><span class="lh-meta-item">NEMSMA Pillar 5 — Leadership · Pillar 7 — EMS &amp; Society</span></div>
+</div>
+
+<p>Every significant promotion in EMS leadership demands more than a title change — it demands a fundamental reorientation of identity. The paramedic learns to follow. The Lieutenant learns to lead people. The Captain learns to lead programs and systems. The Chief, Director, or Executive Officer must learn something categorically harder: to lead the <em>organization itself</em> — across time horizons that extend beyond any single incident, budget cycle, or personnel decision.</p>
+<p>This is the third identity shift. It is not an expansion of the Managing Officer role. It is a change in kind, not just degree.</p>
+
+<div class="level-key">
+  <span class="level-key-label">Level Key — Executive Track Context</span>
+  <div class="level-key-grid">
+    <span class="level-key-badge" style="color:var(--ems-text);background:var(--ems-bg);border:1px solid var(--ems-border);">S</span>
+    <span class="level-key-desc"><strong style="color:var(--ems-text);">Supervising EMS Officer</strong> — Operates within the organization's mission. Executes as directed. Understands the executive role in order to communicate organizational decisions intelligibly to crews and to escalate appropriately.</span>
+    <span class="level-key-badge" style="color:var(--gold);background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);">M</span>
+    <span class="level-key-desc"><strong style="color:var(--gold);">Managing EMS Officer</strong> — Implements executive strategy within their functional area. Provides accurate upward information that executive leaders depend on. Understands the executive layer well enough to prepare for it and to communicate decisions from it.</span>
+    <span class="level-key-badge" style="color:var(--exec-text);background:var(--exec-bg);border:1px solid var(--exec-border);">E</span>
+    <span class="level-key-desc"><strong style="color:var(--exec-text);">Executive EMS Officer ◆ Primary Level This Chapter</strong> — Sets organizational direction, manages governance frameworks, represents the agency externally, and is accountable to the public and governing authority for everything that occurs within the organization.</span>
+  </div>
+  <div class="level-key-note">The executive officer content in this chapter is the primary focus. Supervising and Managing Officers benefit from understanding the executive perspective — both to prepare for advancement and to contextualize decisions that come down through the chain of command.</div>
+</div>
+
+<h2>The Three Identity Shifts in EMS Leadership</h2>
+<p>Understanding where the executive shift begins requires understanding the full arc of the three shifts that define EMS leadership development. Each shift demands the officer let go of the identity that made them successful at the previous level — one of the hardest things any leader is asked to do.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE THREE IDENTITY SHIFTS — EMS LEADERSHIP PROGRESSION</span>
+    <div class="ig-title">What Changes at Each Level — Identity, Time Horizon, and Authority</div>
+    <div class="ig-sub">Each shift is categorical, not incremental. The officer who tries to perform the next level while holding onto the previous identity will struggle at both. The shift must be made deliberately.</div>
+  </div>
+  <div class="ig-fw-grid-3">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Shift One · Phase 1</div>
+      <div class="ig-fw-title">Supervising Officer</div>
+      <div class="ig-fw-desc">Leads people through daily operations. Identity centered on <strong style="color:var(--on-dark-1);">crew and call</strong>. Time horizon is shift-to-shift. Authority is positional and immediate — derived from rank and presence. The work is visible, physical, and feedback arrives quickly. The shift: from provider who does the work to supervisor who ensures the work gets done well.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--gold);">
+      <div class="ig-fw-label">Shift Two · Phase 2</div>
+      <div class="ig-fw-title">Managing Officer</div>
+      <div class="ig-fw-desc">Leads programs and systems. Identity centered on <strong style="color:var(--on-dark-1);">process and performance</strong>. Time horizon is quarterly to annual. Authority is functional and institutional — derived from scope and accountability. The work is less visible, often administrative, and feedback arrives slowly. The shift: from supervisor of people to manager of systems that produce outcomes.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Shift Three · Phase 3</div>
+      <div class="ig-fw-title">Executive Officer</div>
+      <div class="ig-fw-desc">Leads the organization and its external environment. Identity centered on <strong style="color:var(--on-dark-1);">mission and legacy</strong>. Time horizon is multi-year to generational. Authority is relational and political — derived from trust built over time. The work is abstract, strategic, and feedback may not arrive for years. The shift: from manager of systems to steward of the organization's future.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The executive officer's most common failure mode is not incompetence — it is attachment. Officers promoted to executive rank who remain operationally focused, who still want to run calls, manage grievances personally, or be the smartest clinical voice in the room, have not made the shift. The work they cling to is real and comfortable. The work they need to do is abstract and uncertain. The shift requires deliberately releasing the former to claim the latter.</div>
+</div>
+
+<h2>What Changes: Managing Officer vs. Executive Officer</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE EXECUTIVE SHIFT — WHAT CHANGES AND WHAT DOESN'T</span>
+    <div class="ig-title">Managing Officer Mindset vs. Executive Officer Mindset</div>
+    <div class="ig-sub">Both levels require intelligence, discipline, and commitment to the mission. What changes is the direction of attention — inward and downward at the managing level, outward and forward at the executive level.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Managing Officer</div>
+      <div class="ig-fw-title">Leading Within the Organization</div>
+      <div class="ig-fw-desc" style="line-height:2;">
+        Executes strategy handed down from executive leadership<br>
+        Manages budget within approved parameters<br>
+        Responds to workforce issues as they arise<br>
+        Interfaces with partner departments on operational matters<br>
+        Reports outcomes upward to executive leadership<br>
+        Builds the team within the existing organizational structure<br>
+        Focuses on what is working and what isn't right now<br>
+        Authority is specific to a program, shift, or functional area
+      </div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Executive Officer</div>
+      <div class="ig-fw-title">Leading the Organization and Its Future</div>
+      <div class="ig-fw-desc" style="line-height:2;">
+        Creates and defends the organization's strategy<br>
+        Secures resources that don't yet exist in the budget<br>
+        Builds workforce culture before problems emerge<br>
+        Represents EMS to the external world: officials, media, partners<br>
+        Is accountable to the public and the governing authority<br>
+        Builds alliances beyond the organization's walls<br>
+        Focuses on where the organization must go in three to ten years<br>
+        Authority is organization-wide and externally recognized
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>The Executive Officer's Stakeholder Universe</h2>
+<p>At the supervising level, the primary stakeholder relationship is with the crew. At the managing level, it expands to include the workforce and a handful of institutional partners. At the executive level, the stakeholder universe expands dramatically — and every relationship in it requires cultivation, because every one of them will matter at a moment the executive officer cannot predict.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EXECUTIVE STAKEHOLDER UNIVERSE — FOUR CATEGORIES</span>
+    <div class="ig-title">Every Relationship Is a Future Asset or a Future Vulnerability</div>
+    <div class="ig-sub">The executive officer who only manages internal relationships will always be surprised by external ones. The one who only manages external relationships will lose their organization from the inside. Both dimensions must be actively managed.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Internal</div>
+      <div class="ig-fw-title">The Organization Itself</div>
+      <div class="ig-fw-desc">Operations staff, supervisors, administrative team, QA/QI personnel, union representatives, training division. The executive officer's visibility here should be intentional and cultural — not micromanagement, but presence that reinforces values and communicates direction. Internal trust is the foundation everything else is built on.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Governmental</div>
+      <div class="ig-fw-title">The Authority Structure</div>
+      <div class="ig-fw-desc">City or County Manager, elected officials and their staff, Budget and Finance office, state EMS regulatory body (CDPHE in Colorado), NHTSA and HRSA at the federal level. These relationships determine the organization's resource base, regulatory environment, and political vulnerability. Neglecting them is not neutral — it creates a vacuum others will fill.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Clinical &amp; Partner</div>
+      <div class="ig-fw-title">The Healthcare Ecosystem</div>
+      <div class="ig-fw-desc">Medical Director, hospital systems and ED leadership, fire and law enforcement leadership, public health departments, mutual aid partners. These relationships define clinical quality, system coordination, and emergency response effectiveness. They also generate letters of support, joint grant applications, and coalition partners when the executive needs them.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Community &amp; Media</div>
+      <div class="ig-fw-title">The Public Trust Environment</div>
+      <div class="ig-fw-desc">Local news media, community organizations, faith communities, patient advocacy groups, neighborhood associations, school systems, business community. These relationships constitute the agency's public trust reserve. An executive who has invested in community relationships enters every crisis with more credibility than one who appears only in adverse coverage.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The executive officer's primary currency is trust — not the trust of their crew in their clinical competence, but the trust of elected officials, governing authorities, partner organizations, and the community that EMS exists to serve. Trust is built slowly, through demonstrated integrity, transparent communication, and consistent follow-through over years. It can be destroyed in a single press conference managed poorly.</div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">The Identity Shift in Plain Language</span>
+  <p>The Supervising Officer asks: <em>Did my crew perform well today?</em> The Managing Officer asks: <em>Is this system producing the outcomes we need?</em> The Executive Officer asks: <em>Is this organization positioned to fulfill its mission — not just this year, but in ten years — and am I building the relationships and conditions that make that possible?</em></p>
+</div>
+
+</div><!-- /lesson-main -->
+
+<div class="lesson-sidebar">
+  <span class="sbar-label">The Three Shifts — Quick Reference</span>
+  <div class="sbar-card accent-ems"><strong>Shift 1 · Supervisor</strong>Identity: crew and call. Time: shift-to-shift. Authority: positional, immediate.</div>
+  <div class="sbar-card accent-gold"><strong>Shift 2 · Manager</strong>Identity: process and performance. Time: quarterly to annual. Authority: functional, institutional.</div>
+  <div class="sbar-card accent-exec"><strong>Shift 3 · Executive</strong>Identity: mission and legacy. Time: multi-year to generational. Authority: relational, political.</div>
+  <span class="sbar-label">Common Executive Failure Mode</span>
+  <div class="sbar-card accent-red"><strong>Attachment to Prior Identity</strong>Officers who cling to operational identity after promotion to executive rank perform neither role well. The shift must be deliberate.</div>
+  <span class="sbar-label">Stakeholder Categories</span>
+  <div class="sbar-card accent-exec"><strong>Internal</strong>Workforce, supervisors, admin, QA, union. Cultural trust is the foundation.</div>
+  <div class="sbar-card"><strong>Governmental</strong>City/County Manager, elected officials, state and federal regulators. Controls resources and authority.</div>
+  <div class="sbar-card accent-ems"><strong>Clinical &amp; Partner</strong>Medical Director, hospitals, fire, law enforcement, public health. System coordination and coalition.</div>
+  <div class="sbar-card accent-gold"><strong>Community &amp; Media</strong>News, neighborhoods, faith, schools. Public trust reserve — built before it's needed.</div>
+  <span class="sbar-label">The Executive's Primary Currency</span>
+  <div class="sbar-card accent-gold"><strong>Trust — Institutional, Not Operational</strong>Not crew trust in your clinical competence. Official and public trust in your integrity, transparency, and follow-through. Built over years; destroyed in a press conference.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" disabled>← Chapter 10</button>
+  <div class="lnb-info"><div class="lnb-name">The Third Identity Shift</div><div class="lnb-num">Lesson 1 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Contract Management →</button>
+</div>
+</div><!-- /lesson-0 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 2 — CONTRACT MANAGEMENT              -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-1">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 2 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">Contract Management &amp;<br><em>Service Delivery Agreements</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 16 min</span><span class="lh-meta-item">📘 Organizational Administration · Legal Frameworks</span><span class="lh-meta-item">NEMSMA Pillar 6 — EMS Administration · Bucket 3 — Organizational Culture</span></div>
+</div>
+
+<p>At the executive level, EMS organizations do not simply provide service — they negotiate, execute, and manage formal agreements that define the terms of that service. Whether your agency operates under a municipal ordinance, a county franchise agreement, a third-service contract, or an interlocal agreement, the executive officer must understand how these agreements work, what they protect, and where they create vulnerability.</p>
+<p>The Managing Officer implements contract terms. The Executive Officer owns them — negotiates them, governs compliance, and manages the relationships within which they operate.</p>
+
+<div class="callout callout-gold">
+  <span class="callout-label">Why This Matters Below the Chief Rank</span>
+  <p>Captains and Operations Chiefs are routinely responsible for implementing contract terms in daily operations — managing response time compliance, tracking performance metrics, and briefing front-line personnel. Understanding contract structure ensures you enforce correctly, escalate before violations compound, and never make unilateral decisions that inadvertently expose your agency to legal liability or penalty triggers.</p>
+</div>
+
+<h2>Types of EMS Service Delivery Agreements</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS SERVICE DELIVERY AGREEMENTS — FIVE TYPES</span>
+    <div class="ig-title">How EMS Systems Are Authorized, Funded, and Governed</div>
+    <div class="ig-sub">No two EMS agencies operate under identical legal frameworks. The executive officer must know which type of agreement governs their agency — and what each type's specific vulnerabilities are.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.15);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Type 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Municipal SDA</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">City or County Direct Operation</div>
+        <div class="tier-desc">Government directly funds and directs EMS operations. Performance metrics, staffing levels, and service area are defined in the annual budget ordinance or a dedicated service agreement approved by City Council. The chief reports to a city manager or department director. Changes require budget amendment or council action.</div>
+        <div class="tier-officer">Executive rule: Build your relationships with the City Manager's office before budget season begins. The executive who explains their needs at budget time is already too late.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.15);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Type 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Franchise Agreement</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Exclusive Franchise Grant</div>
+        <div class="tier-desc">A governing authority (county, regional district) grants an exclusive franchise to operate EMS within a defined service area. The agreement specifies response time requirements, equipment standards, reporting obligations, and often financial penalties for non-compliance. Most common in high-performance EMS systems. The franchise can be lost — and has been, in multiple U.S. systems — for sustained non-compliance.</div>
+        <div class="tier-officer">Executive rule: Know your penalty trigger thresholds cold. Track compliance daily, not quarterly. The first month you learn about a penalty should never be from a cure notice.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,92,58,0.15);">
+        <div class="tier-stage-label" style="color:#80D0A0;">Type 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Interlocal Agreement</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Mutual Aid / ILA</div>
+        <div class="tier-desc">Interlocal Agreements govern the terms under which jurisdictions provide resources to one another — response protocols, cost recovery methodology, liability allocation, and command authority during shared operations. ILAs must be reviewed by legal counsel whenever operational practices change. An ILA written for 2010 call volumes and system configurations will contain incorrect assumptions by 2025.</div>
+        <div class="tier-officer">Executive rule: Schedule an ILA review every three to five years minimum. Operational changes that outrun the written agreement create liability exposure for both parties.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(200,80,20,0.12);">
+        <div class="tier-stage-label" style="color:#E0A070;">Type 4</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Medical Direction Agreement</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Physician Medical Direction</div>
+        <div class="tier-desc">The formal agreement between the EMS agency and its Medical Director defining scope of practice authority, protocol oversight obligations, QI participation requirements, and the Medical Director's right to restrict or revoke provider certification. This is among the most legally sensitive documents the executive officer manages. The Medical Director's authority over clinical matters is statutory in most states — not merely contractual.</div>
+        <div class="tier-officer">Executive rule: The Medical Director is not a subordinate — they are an authority within their defined domain. Build the relationship as a genuine partnership, not a reporting relationship.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(42,96,144,0.15);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Type 5</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Hospital / Health System SLA</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Service Level Agreements</div>
+        <div class="tier-desc">Agreements with receiving hospitals may govern data sharing protocols, diversions, cardiac arrest follow-up, community paramedicine arrangements, and training partnerships. As EMS integrates more deeply into the healthcare ecosystem — through mobile integrated health programs, treat-and-refer pathways, and behavioral health co-response — these agreements become increasingly operationally significant.</div>
+        <div class="tier-officer">Executive rule: Hospital SLAs often receive less attention than franchise agreements but can generate significant operational disruption when violated. Assign a point of contact on both sides and review annually.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Core Elements of an EMS Service Delivery Agreement</h2>
+<p>Regardless of agreement type, the executive officer must be fluent in the elements that define every EMS service contract. These provisions establish the legal and operational boundaries within which the agency functions — and the points at which the agency becomes vulnerable to penalties, audit, or loss of franchise.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ CONTRACT ANATOMY — CORE ELEMENTS EVERY EXECUTIVE MUST KNOW</span>
+    <div class="ig-title">Eight Provisions That Govern EMS Performance Obligations</div>
+    <div class="ig-sub">Know these provisions in your own contract well enough to quote them from memory. The executive who must look up their response time standard before a council question is the executive who loses credibility.</div>
+  </div>
+  <div style="padding:0.5rem 1rem 1rem;">
+    <table class="exec-table">
+      <thead><tr><th>Provision</th><th>What It Establishes</th><th>Executive Obligation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Service Area</strong></td><td>Geographic boundaries, exclusivity provisions, and mutual aid coverage zones</td><td>Confirm operations match boundaries; negotiate boundary changes through proper channels before acting on them operationally</td></tr>
+        <tr><td><strong>Response Time Standards</strong> <span class="tag-hs">High Stakes</span></td><td>Fractile or average response time requirements by call priority, geographic zone, and time of day</td><td>Monitor compliance continuously; know your penalty triggers and cure provisions; never be surprised by your own data</td></tr>
+        <tr><td><strong>Unit Hour Utilization</strong></td><td>Minimum staffed unit hours required per reporting period</td><td>Ensure scheduling meets minimums; document coverage decisions; track exceptions systematically</td></tr>
+        <tr><td><strong>Clinical Standards</strong></td><td>Minimum certification levels, protocol compliance rates, and QI program thresholds</td><td>Ensure QA program produces required compliance data; partnership with Medical Director is the engine of this provision</td></tr>
+        <tr><td><strong>Financial Terms</strong> <span class="tag-hs">High Stakes</span></td><td>Subsidy levels, billing rights, penalty structures, and renegotiation triggers</td><td>Manage budget to terms; escalate projected shortfalls before they become violations; document all financial deviations</td></tr>
+        <tr><td><strong>Reporting Obligations</strong></td><td>Required reports, frequency, format, recipients, and submission deadlines</td><td>Establish administrative infrastructure capable of producing required data on schedule; missed reports are technical defaults in many agreements</td></tr>
+        <tr><td><strong>Term &amp; Renewal</strong></td><td>Contract duration, automatic renewal conditions, and required notice periods</td><td>Maintain a contract calendar; begin renewal discussions 12–18 months before expiration; never negotiate from a lapsed contract</td></tr>
+        <tr><td><strong>Default &amp; Remedy</strong> <span class="tag-hs">High Stakes</span></td><td>What constitutes a breach, cure periods, and remedies available to each party</td><td>Know every default trigger by memory; never be surprised by a cure notice; document corrective action proactively</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h2>Response Time Compliance — Executive Governance</h2>
+<p>Response time agreements create real financial and legal exposure. In high-performance EMS systems, penalties can reach thousands of dollars per non-compliant call. A pattern of sustained non-compliance can trigger contract renegotiation, public scrutiny, or loss of franchise. The executive officer must lead — not delegate — the organization's response time governance program.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ RESPONSE TIME GOVERNANCE CYCLE — EXECUTIVE FRAMEWORK</span>
+    <div class="ig-title">Five Practices That Prevent Compliance Crises</div>
+    <div class="ig-sub">Response time compliance is not primarily an operational problem — it is an executive governance problem. The operational levers (deployment, unit positioning, dispatch protocols) are managed at the supervising and managing level. The executive's job is to ensure those levers are being pulled correctly, consistently, and before a penalty trigger is reached.</div>
+  </div>
+  <div class="step-ladder">
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.15);">
+        <div class="step-num-label" style="color:var(--ems-text);">Practice</div>
+        <div class="step-num-val" style="color:var(--cream);">1</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Real-Time Awareness</div>
+        <div class="step-desc">Someone in your organization must own daily compliance tracking — and that person must have a line to the executive before any external party sees the data. Executive officers should not learn about compliance trends from auditors, city managers, or journalists. Build the internal reporting chain that ensures you are always the first to know your own numbers.</div>
+        <div class="step-officer">Operational note: Weekly compliance dashboards reviewed by the Chief are the minimum. Daily review during periods when performance is trending adverse.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.15);">
+        <div class="step-num-label" style="color:var(--exec-text);">Practice</div>
+        <div class="step-num-val" style="color:var(--cream);">2</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Root Cause Analysis Before Operational Response</div>
+        <div class="step-desc">When compliance dips, act analytically before acting operationally. Is this a system deployment issue? A dispatch processing time problem? A specific geographic zone where demand patterns no longer match unit positioning? Treating a systemic demand-supply mismatch with overtime adds cost without solving the underlying problem.</div>
+        <div class="step-officer">Executive rule: The presenting problem is rarely the root cause. Data drives the remedy. A month of root cause analysis is worth more than a year of symptomatic response.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(45,27,78,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Practice</div>
+        <div class="step-num-val" style="color:var(--cream);">3</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Corrective Action Documentation</div>
+        <div class="step-desc">Document what you found, what you decided, and when you implemented changes. This record protects the agency when penalties are disputed — it demonstrates good-faith compliance effort and a systematic organizational response. Documentation created after the fact carries far less weight than documentation created contemporaneously with the corrective action.</div>
+        <div class="step-officer">Legal note: A well-documented good-faith compliance program does not eliminate penalties but frequently mitigates them and always strengthens the agency's negotiating position.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.15);">
+        <div class="step-num-label" style="color:var(--ems-text);">Practice</div>
+        <div class="step-num-val" style="color:var(--cream);">4</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Proactive Governing Authority Communication</div>
+        <div class="step-desc">When trends suggest a compliance issue is emerging, brief your governing authority before the penalty notice arrives. Officials who learn about problems from you first remain partners. Those who learn about problems from audits or media become adversaries. This principle — brief up before the news travels up — is one of the most important disciplines in executive leadership.</div>
+        <div class="step-officer">Communication rule: Your City Manager and Council liaison should never read about your agency's performance in the newspaper before receiving a call from you.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.15);">
+        <div class="step-num-label" style="color:var(--exec-text);">Practice</div>
+        <div class="step-num-val" style="color:var(--cream);">5</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Proactive Contract Language Review</div>
+        <div class="step-desc">Annually review performance standards against operational reality. If standards have become operationally unachievable due to changed circumstances — population growth, call volume increases, geographic expansion, infrastructure changes — initiate renegotiation with data, not with apologies. A request to renegotiate a standard that is no longer realistic is a sign of mature contract management, not weakness.</div>
+        <div class="step-officer">Negotiation principle: Negotiate what you can actually measure. Performance standards your CAD cannot accurately track create audit liability regardless of actual performance.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">SDA Types — Quick Reference</span>
+  <div class="sbar-card accent-ems"><strong>Municipal SDA</strong>Budget-driven. Council authority. Build City Manager relationships before budget season.</div>
+  <div class="sbar-card accent-exec"><strong>Franchise Agreement</strong>Highest-stakes. Penalty triggers. Know your compliance thresholds cold.</div>
+  <div class="sbar-card"><strong>Interlocal Agreement</strong>Review every 3–5 years. Operational drift outrunning written terms = liability.</div>
+  <div class="sbar-card accent-red"><strong>Medical Direction Agreement</strong>Most legally sensitive. Medical Director authority is statutory, not just contractual.</div>
+  <div class="sbar-card accent-ems"><strong>Hospital / Health System SLA</strong>Growing importance. Assign bilateral point of contact. Review annually.</div>
+  <span class="sbar-label">High-Stakes Contract Provisions</span>
+  <div class="sbar-card accent-red"><strong>Response Time Standards</strong>Know your fractile thresholds by memory. Monitor daily. Never surprise yourself.</div>
+  <div class="sbar-card accent-red"><strong>Financial Terms</strong>Track penalty triggers continuously. Escalate projected shortfalls early.</div>
+  <div class="sbar-card accent-red"><strong>Default &amp; Remedy</strong>Know every default trigger. Document corrective action proactively.</div>
+  <span class="sbar-label">Compliance Governance Principles</span>
+  <div class="sbar-card accent-gold"><strong>Brief Up First</strong>Your governing authority should never learn about your compliance problems before you tell them. Always.</div>
+  <div class="sbar-card accent-exec"><strong>Root Cause Over Symptom</strong>Overtime doesn't fix a demand-deployment mismatch. Analyze before you spend.</div>
+  <div class="sbar-card accent-gold"><strong>Document Contemporaneously</strong>After-the-fact records carry far less legal weight than real-time documentation.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Identity Shift</button>
+  <div class="lnb-info"><div class="lnb-name">Contract Management &amp; Service Delivery Agreements</div><div class="lnb-num">Lesson 2 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Governance →</button>
+</div>
+</div><!-- /lesson-1 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 3 — ORGANIZATIONAL GOVERNANCE        -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-2">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 3 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 6</div>
+  <h1 class="lh-title">Organizational Governance &amp;<br><em>Policy Architecture</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Public Administration · Policy Management</span><span class="lh-meta-item">NEMSMA Pillar 6 — EMS Administration · Bucket 3 — Organizational Culture</span></div>
+</div>
+
+<p>Governance is how an organization makes decisions — who has authority to decide what, how those decisions are documented, and how accountability flows to the people the organization serves. For public EMS agencies, governance is not abstract or theoretical: it is the legal and ethical framework within which every operational and administrative decision is made and must be defensible.</p>
+<p>The executive officer does not simply operate within the governance structure — at this level, they help build and maintain it. This includes policy architecture, board and commission relationships, reporting frameworks, and the formal processes that ensure decisions are transparent and accountable.</p>
+
+<h2>The EMS Governance Architecture</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ PUBLIC EMS GOVERNANCE ARCHITECTURE — FIVE LAYERS</span>
+    <div class="ig-title">Authority, Accountability, and the Executive Officer's Position</div>
+    <div class="ig-sub">Understanding where each layer begins and ends — and where the executive officer's authority is bounded — is fundamental to effective governance. Acting outside your authority layer creates institutional damage; acting below it creates organizational stagnation.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Layer 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Legislative Authority</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">City Council / County Commission</div>
+        <div class="tier-desc">Enacts ordinances that create the EMS function, appropriates budgets, and holds final authority over major policy. The executive officer communicates with this body through the City or County Manager, or directly during formal presentations and budget hearings. Ordinances cannot be overridden by administrative action — when they conflict with operational need, the path forward is amendment through the legislative process.</div>
+        <div class="tier-officer">Executive rule: Council members who understand EMS are allies. Invest time in educating them before they form opinions from other sources.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Layer 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Executive Authority</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">City Manager / County Administrator</div>
+        <div class="tier-desc">The EMS Chief's direct or near-direct supervisor in most governmental models. Provides administrative oversight, mediates inter-departmental resource conflicts, and represents EMS interests in executive-level budget processes. The executive officer's relationship with the City Manager is among the most important they manage — it is the conduit for every resource request, every policy change requiring administrative approval, and every crisis communication that must reach elected officials.</div>
+        <div class="tier-officer">Relationship principle: The City Manager should trust that they will never be surprised by EMS. That trust is built one proactive communication at a time.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Layer 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Advisory Bodies</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">EMS Advisory Committees / Regional Councils</div>
+        <div class="tier-desc">EMS Advisory Committees, Regional EMS Councils, Medical Direction Oversight Committees, and Trauma Advisory Boards. These bodies provide formal input and may have specific statutory authority over licensure, protocol approval, or system designation. In Colorado, the Emergency Medical and Trauma Advisory Council (CEMTAC) exercises significant advisory authority over state EMS system design. Executive officers cultivate these relationships strategically — advisory bodies that support your direction amplify your influence; those that oppose it create significant friction.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.2);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Layer 4</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Departmental Administration</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">EMS Chief / Director and Direct Reports</div>
+        <div class="tier-desc">The executive officer and their direct reports — Operations Chiefs, Administrative Officers, QA/QI leadership, Training Director. Responsible for policy implementation, budget execution, and operational decisions within the authority delegated from the layers above. This is the layer where the executive officer exercises full authority and is accountable for everything that flows from it. Every decision made at this layer can be reviewed by the layers above.</div>
+        <div class="tier-officer">Executive discipline: Exercise your authority fully within your layer. Avoid seeking approval for decisions that are legitimately yours to make — it signals weakness upward and uncertainty downward.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.12);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Layer 5</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Operations</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Officers, Crews, and Administrative Staff</div>
+        <div class="tier-desc">Execute within the policy and operational framework established by the layers above. The executive officer's visibility at this layer should be intentional and meaningful — station visits that reinforce culture, recognition that acknowledges values-aligned behavior, presence during significant operational events. Not micromanagement. Not absenteeism. Deliberate, culturally purposeful presence.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Policy Architecture — From Ordinance to Post Order</h2>
+<p>A well-constructed policy architecture is one of the most powerful governance tools available to the executive officer. Policies are not just rules — they are the documented expression of the organization's values, risk tolerance, and decision-making logic. Poorly written policies create liability. Missing policies create chaos. Policies that exist on paper but are not followed create the most dangerous condition: an organization that cannot defend its decisions in court or before a review board.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ POLICY HIERARCHY — FIVE LEVELS</span>
+    <div class="ig-title">From Legislative Ordinance to Tactical Field Guide</div>
+    <div class="ig-sub">Each level derives its authority from the level above it. The executive officer is responsible for ensuring alignment across all five levels — that what the ordinance authorizes, the policy implements, the SOG operationalizes, the protocol clinically governs, and the post order tactically directs are all consistent and mutually reinforcing.</div>
+  </div>
+  <div class="step-ladder">
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Level</div>
+        <div class="step-num-val" style="color:var(--cream);">1</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Ordinance / Statute — Legislative Authority</div>
+        <div class="step-desc">Created by the legislative body. Establishes the EMS function, defines its authority, and sets the boundaries within which all subordinate policy operates. The executive officer cannot override an ordinance — when ordinance language conflicts with operational need, the path is formal amendment through the legislative process, not administrative workaround.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(45,27,78,0.35);">
+        <div class="step-num-label" style="color:var(--exec-text);">Level</div>
+        <div class="step-num-val" style="color:var(--cream);">2</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Administrative Policy — Executive Authority</div>
+        <div class="step-desc">Issued by the EMS Director or Chief. Governs agency-wide decisions: hiring standards, leave administration, disciplinary framework, fleet management, and high-level operational standards. These carry the full weight of the executive officer's authority and are reviewed for legal compliance before issuance. Administrative policy should not be changed casually — each change affects the entire organization and creates a documentation obligation in personnel files, training records, and operational logs.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.2);">
+        <div class="step-num-label" style="color:var(--ems-text);">Level</div>
+        <div class="step-num-val" style="color:var(--cream);">3</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Standard Operating Guidelines — Operational Authority</div>
+        <div class="step-desc">Govern specific operational procedures: unit deployment, scene management, documentation standards, equipment maintenance protocols. SOGs translate policy intent into field-level behavior. Supervising Officers enforce SOGs and are responsible for knowing when field conditions require deviation — and for documenting that deviation appropriately. SOGs that cannot be complied with as written are a policy architecture failure, not a field discipline failure.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.15);">
+        <div class="step-num-label" style="color:var(--ems-text);">Level</div>
+        <div class="step-num-val" style="color:var(--cream);">4</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Medical Protocols — Clinical Authority</div>
+        <div class="step-desc">Issued under the authority of the Medical Director. Govern clinical decision-making by scope of practice and certification level. The executive officer does not override or amend protocols — but does ensure the infrastructure (training, equipment, QA) supports consistent protocol compliance. Protocols exist at the intersection of administrative and clinical authority and require careful coordination between the executive officer and Medical Director to maintain.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(42,96,144,0.15);">
+        <div class="step-num-label" style="color:var(--ems-text);">Level</div>
+        <div class="step-num-val" style="color:var(--cream);">5</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Post Orders / Field Guides — Tactical Authority</div>
+        <div class="step-desc">Deployment guidance, resource positioning documents, and field reference materials. Updated frequently based on system demand analysis and supervisor input. These are the documents most visible to front-line staff — and the ones most likely to drift from current policy without a systematic review process. The executive officer is ultimately responsible for ensuring that what is in the field guide reflects what the organization's policy actually requires.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">The Policy Gap — The Most Dangerous Governance Condition</span>
+  <p>A "policy gap" occurs when organizational behavior has drifted from written policy — and no one has updated the documentation. This is among the most dangerous conditions in a public EMS agency. When an incident triggers investigation or litigation, auditors examine three things: what your policies said, what your training records show, and what your supervisors actually did. The gaps between these three are where liability lives. Closing those gaps — proactively, on a defined schedule, before an incident forces the issue — is core executive governance work.</p>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Governance Architecture</span>
+  <div class="sbar-card accent-exec"><strong>Layer 1: Legislative</strong>Ordinances. Cannot be overridden. Change requires legislative process.</div>
+  <div class="sbar-card accent-exec"><strong>Layer 2: Executive Admin</strong>City/County Manager. Most critical relationship for resource access.</div>
+  <div class="sbar-card accent-ems"><strong>Layer 3: Advisory Bodies</strong>CEMTAC, regional councils. May hold statutory authority. Cultivate strategically.</div>
+  <div class="sbar-card accent-gold"><strong>Layer 4: Department Admin</strong>Chief and direct reports. Full executive authority. Exercise it — don't defer upward unnecessarily.</div>
+  <div class="sbar-card"><strong>Layer 5: Operations</strong>Executive presence here = intentional and culturally purposeful. Not micromanagement.</div>
+  <span class="sbar-label">Policy Hierarchy</span>
+  <div class="sbar-card accent-exec"><strong>Ordinance → Admin Policy → SOG → Protocol → Post Order</strong>Each level derives authority from above. Misalignment between levels creates institutional liability.</div>
+  <span class="sbar-label">The Policy Gap</span>
+  <div class="sbar-card accent-red"><strong>Written policy ≠ actual practice</strong>When these diverge, the gap is where liability lives. Close gaps proactively — on a schedule, not reactively after an incident.</div>
+  <div class="sbar-card accent-red"><strong>Three Things Auditors Check</strong>1. What your policies say. 2. What training records show. 3. What supervisors actually did. All three must align.</div>
+  <span class="sbar-label">Transparency Obligations</span>
+  <div class="sbar-card"><strong>Open Records / CORA</strong>Most government EMS agencies operate under open records laws. Know what is — and is not — subject to public disclosure before a request arrives.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Contract Management</button>
+  <div class="lnb-info"><div class="lnb-name">Organizational Governance &amp; Policy Architecture</div><div class="lnb-num">Lesson 3 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">External Relations →</button>
+</div>
+</div><!-- /lesson-2 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 4 — EXTERNAL RELATIONS               -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-3">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 4 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">External Relations &amp;<br><em>Coalition Building</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 13 min</span><span class="lh-meta-item">📘 Stakeholder Management · Interagency Relations</span><span class="lh-meta-item">NEMSMA Pillar 7 — EMS &amp; Society · Bucket 5 — Community Relationships</span></div>
+</div>
+
+<p>The executive officer who works exclusively within their own agency will always be limited by what that agency can accomplish alone. The chief who builds strong external relationships can leverage resources, influence, and support that no internal budget line can produce. External relations — with government partners, healthcare systems, community organizations, media, and peer agencies — is not peripheral at the executive level. It is core work.</p>
+<p>A network is a collection of relationships. A coalition is a network that has been activated around a shared purpose. The executive who knows how to build coalitions can accomplish things that would be impossible to achieve unilaterally.</p>
+
+<h2>The External Stakeholder Landscape</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EXTERNAL STAKEHOLDER CATEGORIES — STRATEGIC VALUE AND CULTIVATION APPROACH</span>
+    <div class="ig-title">Four Domains of External Relationship — Each With Distinct Strategic Value</div>
+    <div class="ig-sub">Different external stakeholders provide different forms of value — and require different cultivation approaches. Treating all external relationships with the same generic engagement approach is ineffective. Map each relationship to the specific value it provides and the specific investment it requires.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Government Partners</div>
+      <div class="ig-fw-title">Authority and Resource Access</div>
+      <div class="ig-fw-desc">City and county administration, elected officials and their staff, fire and law enforcement leadership, public health departments, emergency management agencies. These relationships determine the agency's resource base, political environment, and inter-departmental coordination capacity. Strategic value: budget authority, policy alignment, mutual aid frameworks, shared capital infrastructure, and political insulation during adverse events. Investment required: consistent communication, proactive briefings, demonstrated responsiveness.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Healthcare Partners</div>
+      <div class="ig-fw-title">Clinical Integration and Coalition</div>
+      <div class="ig-fw-desc">Hospital system leadership, ED medical directors, Medical Director network, community health organizations, behavioral health providers, long-term care facilities. These relationships govern clinical alignment, data integration, community paramedicine pathways, and MIH program development. Strategic value: clinical outcome improvement, grant partnership, community health impact, and healthcare system advocacy support. Investment required: regular joint review, shared data, collaborative QI processes.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Peer EMS Agencies</div>
+      <div class="ig-fw-title">Benchmarking and Political Coalition</div>
+      <div class="ig-fw-desc">Regional EMS councils, state EMS directors association, national professional organizations (NEMSMA, NAEMSP, NAEMSE), mutual aid partners, collaborative training and research partners. These relationships provide operational benchmarking, professional development resources, workforce pipeline options, and collective political voice for EMS advocacy. Strategic value: shared intelligence, collaborative grant applications, legislative coalition weight, workforce sharing.</div>
+    </div>
+    <div class="ig-fw-card">
+      <div class="ig-fw-label">Community and Media</div>
+      <div class="ig-fw-title">Public Trust and Political Capital</div>
+      <div class="ig-fw-desc">Neighborhood and civic organizations, faith communities, local news media, schools and youth programs, business and chamber of commerce. These relationships constitute the agency's public trust reserve — the credibility reservoir that determines how the public and elected officials respond when the agency faces scrutiny. Strategic value: political insulation, positive narrative generation, recruitment pipeline, community health impact, and the face-saving margin that allows officials to support EMS during difficult periods.</div>
+    </div>
+  </div>
+  <div class="ig-callout">The most important rule in external relations: cultivate relationships before you need them. The executive officer who meets the County Commissioner for the first time when requesting a budget increase is already at a disadvantage. The one who has briefed that commissioner on EMS performance quarterly for two years is a trusted partner making a supported request. Relationship capital compounds over time — but only if the investment begins before the withdrawal is needed.</div>
+</div>
+
+<h2>Coalition Building — From Network to Action</h2>
+<p>A coalition is not a committee. It is not a regular meeting or a memorandum of understanding. A coalition is a group of aligned stakeholders who have agreed — explicitly or through demonstrated behavior — to act together when a specific objective requires collective effort. Building effective coalitions is one of the highest-leverage skills at the executive level.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE COALITION BUILDING CYCLE — FIVE DISCIPLINES</span>
+    <div class="ig-title">Building Durable Alliances That Activate When Needed</div>
+    <div class="ig-sub">Coalitions are built in quiet periods and activated in consequential ones. The executive officer who waits until they need a coalition to start building one will find themselves working alone at the moment it matters most.</div>
+  </div>
+  <div class="step-ladder">
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.2);">
+        <div class="step-num-label" style="color:var(--exec-text);">Step</div>
+        <div class="step-num-val" style="color:var(--cream);">1</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Identify the Shared Interest</div>
+        <div class="step-desc">Coalitions form around interests, not relationships. What does the hospital system want that also requires strong EMS performance? What does the City Manager need from the public safety budget that EMS can help deliver? What does the neighborhood association want that EMS community programs can support? Map your objective to what others already care about — then build the coalition around the intersection.</div>
+        <div class="step-officer">Coalition principle: Find the overlap between your need and their existing priority. Asking people to care about something they don't yet care about is hard. Showing them it connects to something they already care about is much easier.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(45,27,78,0.3);">
+        <div class="step-num-label" style="color:var(--exec-text);">Step</div>
+        <div class="step-num-val" style="color:var(--cream);">2</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Cultivate Relationships Before You Need Them</div>
+        <div class="step-desc">The worst time to introduce yourself to a County Commissioner is when you need their vote on your capital budget. The executive officer invests in external relationships during operationally quiet periods specifically because they will need those relationships during difficult ones. Introduce yourself. Brief regularly. Find opportunities to provide value before asking for it. The relationship account must be in surplus before the withdrawal is made.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.2);">
+        <div class="step-num-label" style="color:var(--ems-text);">Step</div>
+        <div class="step-num-val" style="color:var(--cream);">3</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Define a Specific, Actionable Ask</div>
+        <div class="step-desc">Vague coalitions produce vague outcomes. When the moment comes to activate your network, know exactly what you are asking each partner to do — a phone call to an official, a letter of support, testimony at a budget hearing, a joint press statement, co-authorship on a grant application. The more specific the ask, the more likely the partner will fulfill it. "Please support EMS" produces nothing. "Please call the City Manager this week and express support for the cardiac response unit replacement" produces a call.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(74,45,122,0.2);">
+        <div class="step-num-label" style="color:var(--exec-text);">Step</div>
+        <div class="step-num-val" style="color:var(--cream);">4</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Deliver on Your Commitments</div>
+        <div class="step-desc">Coalitions are sustained by reciprocity. When a hospital partner supported your budget request, look for ways to support theirs. When a peer agency chief needs EMS outcome data for a state grant, provide it quickly and completely. When a council member who championed your capital request faces a difficult vote on another matter, show up if you appropriately can. Trust compounds over time. So does its absence.</div>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num" style="background:rgba(26,74,107,0.15);">
+        <div class="step-num-label" style="color:var(--ems-text);">Step</div>
+        <div class="step-num-val" style="color:var(--cream);">5</div>
+      </div>
+      <div class="step-content">
+        <div class="step-title">Protect the Coalition's Credibility</div>
+        <div class="step-desc">Do not activate your coalition for small or low-stakes asks. Partners who are mobilized for routine matters learn to treat your requests as routine. Reserve collective action for objectives that genuinely require it. An executive whose asks are always strategic, well-timed, and proportionate to the relationship investment builds coalitions that last for years. An executive who overdraws the relationship account exhausts their allies.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-ems">
+  <span class="callout-label">Media Relationships at the Executive Level</span>
+  <p>At the Supervising Officer level, media interaction is primarily reactive — responding to incidents on scene. At the Managing Officer level, it is limited and escalated upward. At the executive level, media relationships are strategic assets. The executive who has cultivated a relationship with local reporters will find their side of a controversial story more fairly represented than the executive who only appears in news during crises. Be proactively accessible. Share positive stories. Return calls promptly. These habits do not guarantee favorable coverage — but they build a foundation of credibility that matters during difficult news cycles.</p>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">External Stakeholder Value Map</span>
+  <div class="sbar-card accent-exec"><strong>Government Partners</strong>Budget authority, policy alignment, mutual aid, infrastructure. Build before budget season.</div>
+  <div class="sbar-card accent-ems"><strong>Healthcare Partners</strong>Clinical integration, MIH pathways, data sharing, grant coalition. Joint QI process builds trust.</div>
+  <div class="sbar-card"><strong>Peer Agencies</strong>Benchmarking, shared intelligence, legislative coalition weight. Regional councils matter.</div>
+  <div class="sbar-card accent-gold"><strong>Community &amp; Media</strong>Public trust reserve. Political insulation. Recruitment pipeline. Invest before crisis.</div>
+  <span class="sbar-label">Coalition Building Principles</span>
+  <div class="sbar-card accent-gold"><strong>Shared Interest First</strong>Coalitions form around interests, not relationships. Find the intersection with what they already care about.</div>
+  <div class="sbar-card accent-exec"><strong>Invest Before Withdrawal</strong>Relationship account must be in surplus before the moment of need. There are no emergency deposits.</div>
+  <div class="sbar-card"><strong>Specific Asks Only</strong>"Support EMS" = nothing. "Call the City Manager this week about unit replacement" = actionable.</div>
+  <div class="sbar-card accent-gold"><strong>Reciprocity Builds Duration</strong>Coalitions are sustained by mutual value. Support your partners' priorities when you can.</div>
+  <div class="sbar-card accent-red"><strong>Protect Coalition Credibility</strong>Don't activate for small asks. Reserve collective action for objectives that genuinely require it.</div>
+  <span class="sbar-label">Media Strategy</span>
+  <div class="sbar-card"><strong>Proactive &gt; Reactive</strong>Relationships built before crisis provide credibility margin during it. Be accessible in quiet periods.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← Governance</button>
+  <div class="lnb-info"><div class="lnb-name">External Relations &amp; Coalition Building</div><div class="lnb-num">Lesson 4 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">EMS Advocacy →</button>
+</div>
+</div><!-- /lesson-3 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 5 — EMS ADVOCACY                     -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-4">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 5 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillar 7</div>
+  <h1 class="lh-title">EMS Advocacy —<br><em>State &amp; Federal Influence</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 14 min</span><span class="lh-meta-item">📘 Legislative Relations · Professional Advocacy</span><span class="lh-meta-item">NEMSMA Pillar 7 — EMS &amp; Society · Bucket 5 — Community Relationships</span></div>
+</div>
+
+<p>EMS advocacy is the organized effort to influence legislation, regulation, and policy in ways that advance the mission, resources, and recognition of EMS as an essential public health and safety service. It is not partisan politics — it is professional stewardship. Every major funding source that supports EMS operations today, from PSAP infrastructure grants to Medicaid supplemental reimbursement to federal preparedness funding, exists because EMS advocates made the case for it before legislators and regulators who would not have acted otherwise.</p>
+<p>The executive officer who does not engage in advocacy is not neutral — they are leaving the advocacy space to others whose interests may not align with EMS. That vacuum will be filled.</p>
+
+<h2>The EMS Advocacy Landscape — Local to Federal</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EMS ADVOCACY LANDSCAPE — FOUR LEVELS OF INFLUENCE</span>
+    <div class="ig-title">Where EMS Policy Is Made and How Executive Officers Engage</div>
+    <div class="ig-sub">Effective advocacy requires understanding which level governs which issue — and which relationships, organizations, and strategies are appropriate at each level. Local advocacy and federal advocacy require entirely different approaches.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(42,96,144,0.18);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Level 1</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Local Government</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">Budget Hearings, City Council, Department Head Meetings</div>
+        <div class="tier-desc">Focus areas: unit staffing levels, fleet replacement cycles, compensation parity with comparable public safety, capital infrastructure investment. The executive officer is the primary advocate — these relationships are managed through the chain of command and the annual budget process. Local advocacy is the most direct and the most continuously active. It never stops.</div>
+        <div class="tier-officer">Key skill: Translate operational need into constituent impact. "We need two additional units" becomes "without two additional units, 14,000 residents in the northeast district will experience response times four minutes longer than the citywide standard."</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Level 2</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Regional / County</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">County Commission, Regional EMS Councils, Trauma Committees</div>
+        <div class="tier-desc">Focus areas: mutual aid frameworks, regional system designation, shared training resources, consolidated dispatch, regional grant coordination. Coalition work is essential at the regional level — no single agency has sufficient standing to act alone. The executive officer's value here is as both an individual advocate and a coalition organizer.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 3</div>
+        <div class="tier-stage-name" style="color:var(--cream);">State Level</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">State Legislature, CDPHE, CEMTAC, Governor's Office</div>
+        <div class="tier-desc">Focus areas: EMS licensure reform, Medicaid reimbursement rate improvement, state grant program funding, scope of practice modernization, community paramedicine and MIH enabling legislation, rural EMS sustainability programs. Work through the Colorado EMS Association (CEMSA) and the Emergency Medical and Trauma Advisory Council (CEMTAC). Individual agency testimony carries weight but coordinated organizational positions carry more.</div>
+        <div class="tier-officer">Colorado note: CDPHE Office of Emergency Medical and Trauma Services is the primary regulatory contact. Build that relationship proactively — it matters in rulemaking, licensure issues, and emergency waivers.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Level 4</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Federal Level</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-title">U.S. Congress, NHTSA, CMS, HRSA, DHS/FEMA</div>
+        <div class="tier-desc">Focus areas: EMS Agenda 2050 implementation framework, Medicare ambulance add-on payment sustainability, No Surprises Act implementation affecting EMS billing, rural EMS sustainability and workforce programs, FEMA preparedness grant programs. Work through NEMSMA, the National EMS Advisory Council (NEMSAC), American Ambulance Association, and state Congressional delegations. Individual agency contact with Congressional offices — particularly during appropriations season — is effective and underused by most EMS agencies.</div>
+        <div class="tier-officer">Federal rule: Congressional staff do constituent meetings. Your U.S. Representative's health policy staff will take a meeting with an EMS Chief from their district. Request it. Bring data. Come with a specific ask. Follow up within 48 hours.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>The EMS Advocacy Message Framework</h2>
+<p>Effective advocacy at any level requires one core skill: translating operational realities into the language of the audience. Legislators and commissioners do not think in clinical or operational terms — they think in constituent impact, cost, and political risk. The executive officer who can frame the EMS need in those terms is far more effective than one who presents operational metrics without context.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ADVOCACY MESSAGE ARCHITECTURE — FOUR COMPONENTS</span>
+    <div class="ig-title">Translating Operational Reality Into Legislative Language</div>
+    <div class="ig-sub">Every effective advocacy message contains these four components. Missing any one of them weakens the case significantly. Prepare all four before any legislative or governing authority meeting.</div>
+  </div>
+  <div class="ig-fw-grid">
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Component 1</div>
+      <div class="ig-fw-title">The Problem Statement</div>
+      <div class="ig-fw-desc">What is the specific challenge — in terms the audience will understand? Who is affected and how many people? What does the current data show? What has already been done, and why is it insufficient? What happens to constituents if this problem is not addressed? Quantify everything that can be quantified. Numbers provide political cover for supporting your position.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Component 2</div>
+      <div class="ig-fw-title">The Solution</div>
+      <div class="ig-fw-desc">What specific action are you requesting — a vote, a funding allocation, a regulatory change, a pilot program authorization? What will it cost, and over what timeline? Who else supports it? Is there precedent in comparable jurisdictions? What is the implementation path? Vague solutions generate vague responses. Specific requests generate specific decisions.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--exec-gold);">
+      <div class="ig-fw-label">Component 3</div>
+      <div class="ig-fw-title">Constituent Impact</div>
+      <div class="ig-fw-desc">How many people are affected, and what does it mean in everyday terms? Can you attach a human face to the policy question — a patient whose outcome was affected, a family who experienced the problem firsthand, a provider whose career was shaped by the issue? Data moves analysis. Stories move decisions. The most effective advocacy combines both — the number that establishes scale, and the story that makes it real.</div>
+    </div>
+    <div class="ig-fw-card" style="border-top:3px solid var(--ems2);">
+      <div class="ig-fw-label">Component 4</div>
+      <div class="ig-fw-title">The Ask</div>
+      <div class="ig-fw-desc">Be specific: vote yes on HB 1234, co-sponsor the Rural EMS Stabilization Act, include $400,000 in the supplemental budget for unit replacement. Give a timeline — when is the vote, when does the budget close, when do comments on the proposed rule close? Make it as easy as possible to say yes. Follow up within 48 hours of every meeting, every letter, every testimony. Advocates who follow up win more than those who don't.</div>
+    </div>
+  </div>
+</div>
+
+<h2>Key Organizations and Current Federal Issues</h2>
+
+<div class="fw-grid">
+  <div class="fw-card">
+    <div class="fw-card-label">Colorado — State Organizations</div>
+    <div class="fw-card-title">Colorado EMS Advocacy Infrastructure</div>
+    <div class="fw-card-desc">Colorado EMS Association (CEMSA) — primary state professional organization. Colorado Emergency Medical and Trauma Advisory Council (CEMTAC) — statutory advisory body with regulatory influence. CDPHE Office of Emergency Medical and Trauma Services — primary regulatory contact. Colorado Fire Chiefs Association — allied advocacy partner on shared legislative priorities.</div>
+  </div>
+  <div class="fw-card">
+    <div class="fw-card-label">National Organizations</div>
+    <div class="fw-card-title">Federal EMS Advocacy Partners</div>
+    <div class="fw-card-desc">National EMS Management Association (NEMSMA) — executive officer professional home. National Assoc. of EMS Physicians (NAEMSP). National EMS Advisory Council (NEMSAC) — federal advisory body to NHTSA. American Ambulance Association (AAA) — billing and reimbursement advocacy leader. IAFC EMS Section — fire-based EMS advocacy. Membership in at least one national organization is a baseline expectation at the executive level.</div>
+  </div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">Current Federal EMS Policy Issues — Executive Awareness Required</span>
+  <p>The Medicare Ambulance Add-On Payment has been a recurring temporary extension that provides supplemental reimbursement to EMS systems — its periodic expiration cycle creates system budget instability and requires ongoing Congressional action to maintain. The No Surprises Act continues to affect EMS billing practices and collections in ways that vary significantly by system type and payer mix. Rural EMS sustainability — workforce shortages, financial non-viability, and service gaps — remains a chronic national challenge with growing Congressional attention. Executive officers should be conversant in all three and prepared to brief their Congressional delegation on local implications.</p>
+</div>
+
+</div><!-- /lesson-main -->
+<div class="lesson-sidebar">
+  <span class="sbar-label">Advocacy by Level</span>
+  <div class="sbar-card accent-ems"><strong>Local</strong>Budget hearings, council presentations. Executive officer is primary advocate. Never stops.</div>
+  <div class="sbar-card"><strong>Regional</strong>County commission, regional councils. Coalition work essential — no single agency has enough standing alone.</div>
+  <div class="sbar-card accent-exec"><strong>State (Colorado)</strong>CDPHE, CEMTAC, legislature. Work through CEMSA. Build CDPHE relationship proactively.</div>
+  <div class="sbar-card accent-exec"><strong>Federal</strong>NHTSA, CMS, Congress. Congressional staff take constituent meetings. Request one. Bring data and a specific ask.</div>
+  <span class="sbar-label">Advocacy Message — 4 Components</span>
+  <div class="sbar-card accent-gold"><strong>1. Problem Statement</strong>Quantify everything. Numbers provide political cover for supporting your position.</div>
+  <div class="sbar-card"><strong>2. Solution</strong>Specific action requested. Cost and timeline. Precedent in comparable jurisdictions.</div>
+  <div class="sbar-card"><strong>3. Constituent Impact</strong>Data establishes scale. Story makes it real. Use both.</div>
+  <div class="sbar-card accent-gold"><strong>4. The Ask</strong>Specific. Deadline-anchored. Easy to say yes. Follow up within 48 hours. Always.</div>
+  <span class="sbar-label">Current Federal Issues</span>
+  <div class="sbar-card accent-red"><strong>Medicare Add-On Payment</strong>Recurring expiration cycle. Know your system's reimbursement exposure. Brief your Congressional delegation.</div>
+  <div class="sbar-card accent-red"><strong>No Surprises Act</strong>Affects billing and collections. Impacts vary by system and payer mix. Know yours.</div>
+  <div class="sbar-card"><strong>Rural EMS Sustainability</strong>Workforce and financial viability crisis in rural systems. Growing Congressional attention.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← External Relations</button>
+  <div class="lnb-info"><div class="lnb-name">EMS Advocacy — State &amp; Federal</div><div class="lnb-num">Lesson 5 of 6</div></div>
+  <button class="lnb-btn primary" onclick="nextLesson()">Crisis Communications →</button>
+</div>
+</div><!-- /lesson-4 -->
+
+
+<!-- ════════════════════════════════════════════ -->
+<!-- LESSON 6 — CRISIS COMMUNICATIONS + OB PREP  -->
+<!-- ════════════════════════════════════════════ -->
+<div class="lesson-view" id="lesson-5">
+<div class="lesson-container">
+<div class="lesson-main">
+
+<div class="lesson-header">
+  <div class="lh-eyebrow">EMS Chapter 11 · Lesson 6 of 6</div>
+  <div class="lh-track">Executive Officer Track · NEMSMA Pillars 5–7</div>
+  <h1 class="lh-title">Executive Crisis Communications &amp;<br><em>Oral Board Preparation</em></h1>
+  <div class="lh-meta"><span class="lh-meta-item">⏱ 18 min</span><span class="lh-meta-item">📘 Public Communications · Executive Leadership</span><span class="lh-meta-item">All NEMSMA Pillars · ERS + STAR-P Frameworks · TCHOEDS Applied</span></div>
+</div>
+
+<p>At the Supervising Officer level, crisis communications means managing the immediate scene and keeping crews informed. At the Managing Officer level, it means situation reports, briefing command, and escalating appropriately. At the Executive Officer level, crisis communications means something entirely different: managing the organization's <em>public narrative</em> during events that threaten its credibility, mission, or relationships — in real time, under intense scrutiny, with incomplete information, while simultaneously coordinating internal response.</p>
+<p>This is among the hardest skills in executive leadership. The executive who handles a public crisis well may not prevent organizational damage — but they protect the organization's long-term credibility. The one who handles it poorly can convert a manageable incident into a career-defining failure.</p>
+
+<h2>What Constitutes an Executive-Level Crisis</h2>
+
+<div class="callout callout-exec">
+  <span class="callout-label">Defining the Executive Communications Event</span>
+  <p>Not every incident is an executive communications event. A missed response time, a clinical near-miss, or a routine personnel grievance is managed through internal processes. An executive communications event is one that has entered — or is likely to enter — the public domain in a way that requires the organization to speak with one voice. This includes: patient deaths likely to generate media inquiry, allegations of personnel misconduct or use of force, mass casualty events, contract or performance controversies, significant data breaches, and any incident that an elected official, city manager, or journalist is likely to ask about directly.</p>
+</div>
+
+<h2>Crisis Communications — Five Phases</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ EXECUTIVE CRISIS COMMUNICATIONS — FIVE-PHASE MODEL</span>
+    <div class="ig-title">From Pre-Crisis Preparation Through Post-Crisis Learning</div>
+    <div class="ig-sub">Every phase of a crisis communications event requires a different posture, different priorities, and different outputs. The executive who tries to be in the acute phase before completing the initial response phase will make errors. Sequence matters.</div>
+  </div>
+  <div class="crisis-grid">
+    <div class="crisis-col">
+      <div class="crisis-head c1">Pre-Crisis</div>
+      <div class="crisis-body">
+        <ul>
+          <li>Build media relationships before needed</li>
+          <li>Develop agency communications plan</li>
+          <li>Designate PIO or spokesperson</li>
+          <li>Train leadership on messaging</li>
+          <li>Identify likely scenarios; pre-draft responses</li>
+          <li>Establish internal notification protocols</li>
+        </ul>
+      </div>
+    </div>
+    <div class="crisis-col">
+      <div class="crisis-head c2">Initial (0–2 hrs)</div>
+      <div class="crisis-body">
+        <ul>
+          <li>Confirm facts before any public statement</li>
+          <li>Brief chain of command first — always</li>
+          <li>Issue acknowledgment statement only</li>
+          <li>Establish single spokesperson</li>
+          <li>Do NOT speculate on cause or fault</li>
+          <li>Set a defined time for next update</li>
+        </ul>
+      </div>
+    </div>
+    <div class="crisis-col">
+      <div class="crisis-head c3">Acute (2–48 hrs)</div>
+      <div class="crisis-body">
+        <ul>
+          <li>Regular briefings on defined schedule</li>
+          <li>Update as confirmed facts develop</li>
+          <li>Address public concern directly, factually</li>
+          <li>Coordinate all statements with legal</li>
+          <li>Document every statement made</li>
+          <li>Monitor media and social coverage</li>
+        </ul>
+      </div>
+    </div>
+    <div class="crisis-col">
+      <div class="crisis-head c4">Recovery (2–30 days)</div>
+      <div class="crisis-body">
+        <ul>
+          <li>Share findings when review complete</li>
+          <li>Announce specific corrective actions</li>
+          <li>Rebuild stakeholder trust actively</li>
+          <li>Respond to ongoing media inquiries</li>
+          <li>Support affected personnel visibly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="crisis-col">
+      <div class="crisis-head c5">Post-Crisis</div>
+      <div class="crisis-body">
+        <ul>
+          <li>After-action on communications process</li>
+          <li>Update communications plan with lessons</li>
+          <li>Debrief executive leadership team</li>
+          <li>Capture for leadership training</li>
+          <li>Monitor long-tail media coverage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>The Acknowledgment Statement — Structure and Use</h2>
+<p>The hardest moment in executive crisis communications is the first public statement — made when facts are still emerging, emotions are high, and the pressure to say something is intense. Speaking without facts risks statements that must be retracted, which is more damaging than the original event. Saying nothing appears evasive and signals guilt. The correct response is the <strong>acknowledgment statement</strong>: confirm the event, express appropriate concern, state what is being done, and commit to a specific follow-up time.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ THE ACKNOWLEDGMENT STATEMENT — FOUR-PART STRUCTURE</span>
+    <div class="ig-title">What to Say Before You Have All the Facts</div>
+    <div class="ig-sub">The acknowledgment statement buys time, establishes credibility, and signals organizational competence — without making any statement that must later be retracted. Every executive should be able to deliver this template from memory.</div>
+  </div>
+  <div style="padding:1rem;">
+    <div class="stmt-block">
+      <div class="stmt-head"><div class="stmt-num">1</div><div class="stmt-title">Confirm the Event — Only What Is Confirmed</div></div>
+      <div class="stmt-body">"Our agency responded to an incident this [morning/afternoon/evening] involving [general nature of event, e.g., 'a patient transport that resulted in a serious injury']. We can confirm that [only the specific facts you have verified: location, time, general circumstances]."</div>
+    </div>
+    <div class="stmt-block">
+      <div class="stmt-head"><div class="stmt-num">2</div><div class="stmt-title">Express Appropriate Concern — Genuine, Not Performative</div></div>
+      <div class="stmt-body">"The safety and wellbeing of the patients we serve — and of our personnel — is our highest priority. We take this event seriously, and we are committed to understanding fully what occurred."</div>
+    </div>
+    <div class="stmt-block">
+      <div class="stmt-head"><div class="stmt-num">3</div><div class="stmt-title">State What You Are Doing Right Now</div></div>
+      <div class="stmt-body">"We are conducting a thorough review of this incident. [When appropriate: We are cooperating fully with [oversight body / law enforcement / regulatory agency].] [If personnel are involved: We are providing support to the personnel involved.]"</div>
+    </div>
+    <div class="stmt-block">
+      <div class="stmt-head"><div class="stmt-num">4</div><div class="stmt-title">Commit to a Specific Follow-Up — With a Time</div></div>
+      <div class="stmt-body">"We will provide an updated statement at [specific time today]. We appreciate the public's patience as we gather complete and accurate information. I am [name, title], and I am the point of contact for further inquiries."</div>
+    </div>
+  </div>
+  <div class="ig-callout">What this statement does: It establishes that the organization knows about the event, is in control of its response, is concerned about impact, and will provide more information at a defined time. What it does not do: speculate on cause, assign blame, make legal admissions, or provide information that may later require correction. Both elements are equally important.</div>
+</div>
+
+<div class="callout callout-exec">
+  <span class="callout-label">What Never to Say in Executive Crisis Communications</span>
+  <p>"No comment" — reads as evasion, amplifies suspicion, creates a narrative vacuum someone else will fill. Speculation on cause or liability before investigation is complete — these statements will appear in litigation. Attacks on media, critics, or complainants — they reframe the story as being about your defensiveness. Contradictions of prior statements — document every statement made; all spokespersons must have the same information. Briefing your governing authority after the media has already called them — they must always hear it from you first.</p>
+</div>
+
+<h2>Oral Board Preparation — The Executive Level</h2>
+<p>The executive-level oral board evaluates fundamentally different competencies than boards at the Supervising or Managing Officer level. The panel is not looking for deeper knowledge of operational frameworks — they are assessing executive judgment: the ability to navigate political complexity, hold strategic clarity under pressure, communicate with authority and composure, and articulate a credible organizational vision.</p>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ WHAT EXECUTIVE ORAL BOARDS ARE ACTUALLY EVALUATING</span>
+    <div class="ig-title">Five Dimensions of Executive Assessment</div>
+    <div class="ig-sub">These dimensions are assessed simultaneously through every answer — not through separate questions for each. The candidate who understands what is being evaluated can craft every response to demonstrate all five, not just the one the question appears to target.</div>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.25);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Dimension</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Strategic Vision</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-desc">Can this candidate see beyond today's operational state? Do they demonstrate awareness of where EMS is heading — regionally, nationally, clinically — and have credible ideas about how to position this organization for that future? Do they speak in terms of multi-year direction, not quarterly metrics?</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(45,27,78,0.3);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Dimension</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Political Intelligence</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-desc">Does this candidate understand how government and public organizations actually work — budget cycles, governing authority dynamics, inter-departmental politics, media relationships, public trust? Do they demonstrate the relational sophistication that the executive level requires?</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.2);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Dimension</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Composure Under Pressure</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-desc">How does the candidate respond to a difficult question, a challenge to their answer, or an unexpected scenario? Executive officers face high-stakes communications moments regularly — the board is testing directly for this. Candidates who become defensive, over-explain, or lose their analytical frame under pressure communicate executive fragility.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(74,45,122,0.2);">
+        <div class="tier-stage-label" style="color:var(--exec-text);">Dimension</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Values-Based Leadership</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-desc">TCHOEDS and L·E·A·D are not frameworks to recite — they must be embodied in how the candidate speaks, frames situations, and describes their leadership philosophy. Candidates who can name frameworks but cannot connect them to concrete experience are performing knowledge, not demonstrating leadership. The board wants to hear TCHOEDS through behavior, not quotation.</div>
+      </div>
+    </div>
+    <div class="tier-row">
+      <div class="tier-stage" style="background:rgba(26,74,107,0.12);">
+        <div class="tier-stage-label" style="color:var(--ems-text);">Dimension</div>
+        <div class="tier-stage-name" style="color:var(--cream);">Organizational Humility</div>
+      </div>
+      <div class="tier-content">
+        <div class="tier-desc">Does the candidate speak positively about the organization, acknowledge its challenges without disparagement, and demonstrate genuine commitment to the mission? Do they show self-awareness about their own limitations and a willingness to surround themselves with excellent staff who complement them? Executives who claim individual omnipotence are red flags. Those who describe building strong teams are credible.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>STAR-P at the Executive Level</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ STAR-P RESPONSE ARCHITECTURE — EXECUTIVE LEVEL</span>
+    <div class="ig-title">Sample Question: "Describe a time you made a decision that was politically unpopular but organizationally necessary."</div>
+    <div class="ig-sub">At the executive level, STAR-P responses must reflect executive-scope situations — system-wide decisions, multi-stakeholder navigation, budget authority, governing body dynamics. Crew-level scenarios in a Chief-level answer demonstrate that the candidate is thinking at the wrong level.</div>
+  </div>
+  <div class="starp-grid">
+    <div class="starp-col">
+      <div class="starp-head sp-s">Situation</div>
+      <div class="starp-body">Set the organizational context — what was at stake, who the key stakeholders were, and why this decision had political dimensions. 2–3 sentences. Establish that this was an executive-level situation, not an operational one.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-t">Task</div>
+      <div class="starp-body">Define your specific role and the decision that needed to be made. Establish that the authority and accountability rested with you — and that you understood the stakes involved before you acted.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-a">Action</div>
+      <div class="starp-body">Describe the deliberative process: who you consulted, what data you reviewed, how you weighted competing stakeholder interests. Show executive rigor — this is not a quick decision, it is a considered one. Include how you communicated the decision and why you chose that approach.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-r">Result</div>
+      <div class="starp-body">State the measurable outcome — operationally, financially, politically. Be honest if there was short-term political cost. Show the long-term organizational benefit was worth it. Quantify where possible. Acknowledge what you would do differently if anything.</div>
+    </div>
+    <div class="starp-col">
+      <div class="starp-head sp-p">Principle</div>
+      <div class="starp-body">Name the specific TCHOEDS value that guided the decision — Courage, Ownership, Service. Connect explicitly to your stated leadership philosophy. This is what separates a story from a leadership response.</div>
+    </div>
+  </div>
+</div>
+
+<h2>ERS Framework — Executive Application</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ ERS FRAMEWORK — EXECUTIVE APPLICATION</span>
+    <div class="ig-title">Sample Question: "What is your philosophy on organizational governance and how do you ensure policy integrity?"</div>
+    <div class="ig-sub">At the executive level, ERS responses must reflect policy-level thinking, not operational preference. The example must be one where the candidate exercised executive authority — not where they managed a shift or a program. The "what it means at this rank" component is where the response must clearly demonstrate executive-level accountability.</div>
+  </div>
+  <div class="ers-block">
+    <div class="ers-row">
+      <div class="ers-key">Explain</div>
+      <div class="ers-val">Governance is not compliance — it is the architecture that allows an organization to make accountable decisions at every level. My philosophy starts with alignment: the ordinance, the policy, the SOG, the protocol, and the post order must all point in the same direction. When they don't, the gap between them is where liability, confusion, and institutional failure live. My job as an executive officer is to close those gaps proactively — on a schedule, not reactively after an incident forces the issue.</div>
+    </div>
+    <div class="ers-row">
+      <div class="ers-key">Recent Example</div>
+      <div class="ers-val">In [year], I conducted a policy architecture review and discovered that three administrative policies had not been updated since [year], creating significant divergence from current state regulatory requirements and our actual operational practice. Rather than simply updating the documents, I convened a cross-functional review — involving HR, the Medical Director, Operations Chiefs, and legal counsel — to ensure the revision process itself reflected the input of the people who would be implementing the policies. We completed the full update in 90 days, trained supervisors on the changes, and built an annual review calendar to prevent the same drift from occurring again.</div>
+    </div>
+    <div class="ers-row">
+      <div class="ers-key">At This Rank</div>
+      <div class="ers-val">At the Chief level, governance is ultimately about accountability to the public. Every policy decision I make will eventually be subject to scrutiny — by an auditor, by legal counsel, by a council member, or by the press. My standard is simple: I must be able to defend every policy decision I have made on the merits, in public, at any time. That standard shapes how I approach every governance question — not as a compliance exercise, but as an accountability commitment. That is what Ownership means at this level.</div>
+    </div>
+  </div>
+</div>
+
+<h2>TCHOEDS at the Executive Level — Applied Definitions</h2>
+
+<div class="infographic-wrap">
+  <div class="ig-header">
+    <span class="ig-eyebrow">◆ TCHOEDS — EXECUTIVE OFFICER APPLICATION</span>
+    <div class="ig-title">The Same Framework, Applied at a Different Level of Authority and Accountability</div>
+    <div class="ig-sub">TCHOEDS applies at every rank — but what each value means in practice changes with the level of authority. At the executive level, these are not crew-relationship values — they are institutional and public accountability values. The candidate who recites TCHOEDS without demonstrating this distinction is still thinking at the Managing Officer level.</div>
+  </div>
+  <div class="ig-acro">
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">T</div>
+      <div>
+        <div class="ig-acro-word">Trust — Commend</div>
+        <div class="ig-acro-desc">Building institutional credibility with governing authorities, the public, and your own workforce through consistent honesty and follow-through — especially when the truth is inconvenient. At the executive level, trust is built over years through every interaction in which you tell the truth to power, follow through on commitments, and brief up before bad news travels up on its own.</div>
+        <div class="ig-acro-exec">Executive application: "I brief the City Manager about emerging compliance issues before she asks. The day I wait for her to find out from someone else is the day I lose the most important institutional relationship I manage."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">C</div>
+      <div>
+        <div class="ig-acro-word">Courage — Limitations</div>
+        <div class="ig-acro-desc">Making decisions that are right for the organization and the public even when they are politically costly. Speaking truth to power within your chain of command when operational reality conflicts with institutional preference. At the executive level, courage often looks like telling the City Manager that the budget they have approved is insufficient to deliver the service standard they have promised the public — and being willing to put that in writing.</div>
+        <div class="ig-acro-exec">Executive application: "I have recommended against policies I was asked to implement, on the record, when the data showed they would harm service delivery. I document those recommendations whether they are accepted or not."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">H</div>
+      <div>
+        <div class="ig-acro-word">Humility — Examples</div>
+        <div class="ig-acro-desc">Surrounding yourself with people who are better than you in specific domains. Crediting organizational successes to the team and the organization. Owning failures personally and publicly. At the executive level, humility is not self-deprecation — it is the demonstrated willingness to build excellent staff, defer to domain expertise, and take public ownership of organizational failures regardless of where within the organization they originated.</div>
+        <div class="ig-acro-exec">Executive application: "When we had a sustained QA failure, I briefed council personally. I did not name the individuals involved. I took ownership for the system that produced the failure, and I described what I was changing."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">O</div>
+      <div>
+        <div class="ig-acro-word">Ownership — Adjust</div>
+        <div class="ig-acro-desc">Accepting that everything that happens within the organization — every outcome, every failure, every success — reflects on executive leadership. There is no one to pass accountability to at the top. Ownership at the executive level means that the chief who says "my supervisors didn't execute" has not accepted executive accountability — they have described an executive governance failure for which they are responsible.</div>
+        <div class="ig-acro-exec">Executive application: "I don't tell the council that a program failed because of a supervisor's decisions. I tell them what the system I designed and managed produced — and what I am changing."</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">E</div>
+      <div>
+        <div class="ig-acro-word">Empathy — Rank</div>
+        <div class="ig-acro-desc">Understanding the pressures on your workforce, the concerns of the community, and the political reality your governing authority faces — and using that understanding to lead more effectively. At the executive level, empathy is not softness — it is the situational intelligence that allows you to navigate stakeholder complexity without creating unnecessary resistance.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">D</div>
+      <div>
+        <div class="ig-acro-word">Dedication — Service</div>
+        <div class="ig-acro-desc">Committing to the long work of organizational improvement whose results arrive over years, not shifts. The executive's job often produces visible results slowly. Dedication at the executive level means staying the strategic course when progress is slow, resisting the temptation to generate visible short-term activity at the expense of long-term organizational direction.</div>
+      </div>
+    </div>
+    <div class="ig-acro-row">
+      <div class="ig-acro-letter">S</div>
+      <div>
+        <div class="ig-acro-word">Service — Commend</div>
+        <div class="ig-acro-desc">Grounding every governance decision, every contract negotiation, every policy choice, and every budget request in the question: does this serve the patients and community this organization exists for? Service is the executive officer's ultimate accountability — and the ultimate answer to every question about why any of the preceding values matter.</div>
+        <div class="ig-acro-exec">Executive application: "The measure I return to when any executive decision becomes difficult is the simplest one: if the patient we served this morning could evaluate this decision, would they recognize it as being made in their interest?"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="legal-disclaimer">
+  <span class="legal-disclaimer-label">Educational Disclaimer</span>
+  <p>The content in this chapter is provided for professional development and educational purposes only and does not constitute legal, communications, legislative, or governance advice. Contract provisions, governance structures, legislative procedures, open records obligations, and advocacy strategies vary significantly by jurisdiction, agency type, and applicable state and federal law. Crisis communications guidance does not substitute for consultation with qualified public relations professionals and legal counsel during an actual event. Colorado-specific references to CDPHE, CEMTAC, CEMSA, and CORA are provided for educational context and may not reflect current organizational structures or statutory requirements. Always consult your agency's legal counsel, HR department, and governing authority before acting on any governance, contractual, or legislative matter. The Promotional Standard LLC makes no warranty regarding the accuracy or completeness of this material relative to your specific jurisdiction or organizational context.</p>
+</div>
+
+</div><!-- /lesson-main -->
+
+<div class="lesson-sidebar">
+  <span class="sbar-label">Executive Crisis — 5 Phases</span>
+  <div class="sbar-card"><strong>Pre-Crisis</strong>Build relationships. Designate spokesperson. Pre-draft likely scenarios. Establish notification chain.</div>
+  <div class="sbar-card accent-ems"><strong>Initial (0–2 hrs)</strong>Acknowledgment statement only. Brief chain first. No speculation. Commit to a follow-up time.</div>
+  <div class="sbar-card accent-exec"><strong>Acute (2–48 hrs)</strong>Regular briefings on schedule. Coordinate with legal. Document everything.</div>
+  <div class="sbar-card"><strong>Recovery</strong>Share findings. Announce corrective action. Support affected personnel visibly.</div>
+  <div class="sbar-card"><strong>Post-Crisis</strong>After-action on communications. Update plan. Capture for training.</div>
+  <span class="sbar-label">Acknowledgment Statement Structure</span>
+  <div class="sbar-card accent-gold"><strong>1. Confirm the Event</strong>Only what is confirmed. No speculation.</div>
+  <div class="sbar-card accent-gold"><strong>2. Express Concern</strong>Genuine, not performative.</div>
+  <div class="sbar-card accent-gold"><strong>3. State Current Action</strong>"We are conducting a thorough review."</div>
+  <div class="sbar-card accent-gold"><strong>4. Commit to Follow-Up</strong>Specific time. Named spokesperson. Never "no comment."</div>
+  <span class="sbar-label">Executive Board — 5 Dimensions</span>
+  <div class="sbar-card accent-exec"><strong>Strategic Vision</strong>Multi-year direction. Where is EMS heading? How are you positioning the organization?</div>
+  <div class="sbar-card accent-exec"><strong>Political Intelligence</strong>Governing authority dynamics. Budget cycles. Stakeholder navigation.</div>
+  <div class="sbar-card accent-exec"><strong>Composure Under Pressure</strong>The board tests this directly. Analytical frame under challenge = executive credibility.</div>
+  <div class="sbar-card accent-exec"><strong>Values-Based Leadership</strong>TCHOEDS through behavior, not quotation. Concrete examples required.</div>
+  <div class="sbar-card accent-exec"><strong>Organizational Humility</strong>Strong team-builder. Public ownership of failures. No omnipotence claims.</div>
+  <span class="sbar-label">Oral Board — Common Question Areas</span>
+  <div class="sbar-card accent-gold"><strong>7 Domains</strong>Strategic vision · Budget under constraint · Political conflict navigation · Senior personnel situations · Public crisis communications · System performance diagnosis · Leadership philosophy with examples. One STAR-P response per domain = board-ready preparation.</div>
+</div>
+</div><!-- /lesson-container -->
+<div class="lesson-nav-bar">
+  <button class="lnb-btn" onclick="prevLesson()">← EMS Advocacy</button>
+  <div class="lnb-info"><div class="lnb-name">Crisis Communications &amp; Oral Board Preparation</div><div class="lnb-num">Lesson 6 of 6</div></div>
+  <button class="lnb-btn complete" disabled>Chapter 11 Complete ✓</button>
+</div>
+</div><!-- /lesson-5 -->
+
+</main>
+
+<script>
+let cur=0;
+const ls=document.querySelectorAll('.lesson-view');
+const ps=document.querySelectorAll('.nav-pill');
+function showLesson(i){
+  ls.forEach(l=>l.classList.remove('active'));
+  ps.forEach(p=>p.classList.remove('active'));
+  ls[i].classList.add('active');
+  ps[i].classList.add('active');
+  cur=i;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('prog').style.width='0%';
+}
+function nextLesson(){if(cur<ls.length-1)showLesson(cur+1);}
+function prevLesson(){if(cur>0)showLesson(cur-1);}
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  if(h>0)document.getElementById('prog').style.width=Math.min(100,(s/h*100))+'%';
+});
+document.addEventListener('DOMContentLoaded',()=>showLesson(0));
+</script>
+</body>
+</html>
